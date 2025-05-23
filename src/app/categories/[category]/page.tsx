@@ -34,6 +34,19 @@ import {
   SlidersHorizontal,
   ArrowUpDown,
   Info,
+  Code,
+  ShieldCheck,
+  Smartphone,
+  FileText,
+  RefreshCw,
+  BarChart,
+  LineChart,
+  Pencil,
+  Mail,
+  Users,
+  Clock,
+  Search,
+  Headphones,
 } from "lucide-react";
 import { useParams } from "next/navigation";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -46,113 +59,89 @@ import {
 } from "@/components/ui/select";
 import { projects } from "@/lib/projects";
 import { Navbar } from "@/components/Navbar";
+import _ from "lodash";
 
-// Categories with Lucide icons and descriptions - matching the categories page
-const categories = [
-  {
-    name: "Productivity",
-    icon: <CheckCircle className="w-5 h-5" />,
-    color: "blue",
-    count: 42,
-    description:
-      "Task management, note-taking, document editing and collaboration tools",
-    examples: ["Nextcloud", "OnlyOffice", "Standard Notes"],
-  },
-  {
-    name: "File Storage",
-    icon: <FolderArchive className="w-5 h-5" />,
-    color: "amber",
-    count: 18,
-    description:
-      "Cloud storage, file synchronization, and document management solutions",
-    examples: ["Nextcloud", "Seafile", "Syncthing"],
-  },
-  {
-    name: "Communication",
-    icon: <MessageSquare className="w-5 h-5" />,
-    color: "violet",
-    count: 25,
-    description:
-      "Chat, messaging, video conferencing and team collaboration tools",
-    examples: ["Mattermost", "Element", "Jitsi Meet"],
-  },
-  {
-    name: "Development",
-    icon: <Wrench className="w-5 h-5" />,
-    color: "emerald",
-    count: 37,
-    description:
-      "Code repositories, IDEs, CI/CD platforms and development tools",
-    examples: ["Gitea", "GitLab", "Jenkins"],
-  },
-  {
-    name: "Media",
-    icon: <Film className="w-5 h-5" />,
-    color: "red",
-    count: 21,
-    description: "Media streaming, photo management, and content libraries",
-    examples: ["Jellyfin", "Plex", "Photoprism"],
-  },
-  {
-    name: "Analytics",
-    icon: <BarChart3 className="w-5 h-5" />,
-    color: "purple",
-    count: 14,
-    description:
-      "Website tracking, dashboards, and business intelligence tools",
-    examples: ["Umami", "Metabase", "Grafana"],
-  },
-  {
-    name: "Security",
-    icon: <LockKeyhole className="w-5 h-5" />,
-    color: "green",
-    count: 23,
-    description: "Password managers, authentication, and encryption solutions",
-    examples: ["Bitwarden", "Vaultwarden", "Authelia"],
-  },
-  {
-    name: "Automation",
-    icon: <Settings className="w-5 h-5" />,
-    color: "orange",
-    count: 19,
-    description:
-      "Home automation, workflow automation, and scheduled task tools",
-    examples: ["Home Assistant", "n8n", "Node-RED"],
-  },
-  {
-    name: "Infrastructure",
-    icon: <Server className="w-5 h-5" />,
-    color: "slate",
-    count: 30,
-    description: "Server management, virtualization, and infrastructure tools",
-    examples: ["Proxmox", "Docker", "Kubernetes"],
-  },
-  {
-    name: "Databases",
-    icon: <Database className="w-5 h-5" />,
-    color: "cyan",
-    count: 16,
-    description:
-      "SQL and NoSQL database solutions for storing and retrieving data",
-    examples: ["PostgreSQL", "MongoDB", "MariaDB"],
-  },
-  {
-    name: "Web",
-    icon: <Globe className="w-5 h-5" />,
-    color: "sky",
-    count: 27,
-    description: "Content management systems, blogs, and web hosting solutions",
-    examples: ["WordPress", "Ghost", "Nginx"],
-  },
-  {
-    name: "IoT",
-    icon: <Zap className="w-5 h-5" />,
-    color: "fuchsia",
-    count: 12,
-    description:
-      "Internet of Things platforms for smart home and connected devices",
-    examples: ["Home Assistant", "ESPHome", "Mosquitto"],
-  },
+// Icon mapping for categories
+const categoryIcons: Record<string, React.ReactNode> = {
+  "Developer Tools": <Code className="w-5 h-5" />,
+  Communication: <MessageSquare className="w-5 h-5" />,
+  Database: <Database className="w-5 h-5" />,
+  Cybersecurity: <ShieldCheck className="w-5 h-5" />,
+  "E-commerce": <Smartphone className="w-5 h-5" />,
+  Automation: <Settings className="w-5 h-5" />,
+  Documentation: <FileText className="w-5 h-5" />,
+  Video: <Film className="w-5 h-5" />,
+  Analytics: <BarChart3 className="w-5 h-5" />,
+  Notetaking: <Pencil className="w-5 h-5" />,
+  Design: <Pencil className="w-5 h-5" />,
+  CMS: <Globe className="w-5 h-5" />,
+  "Social Media": <Users className="w-5 h-5" />,
+  "Project Management": <Clock className="w-5 h-5" />,
+  "Auth & SSO": <LockKeyhole className="w-5 h-5" />,
+  "Internal Tools": <Wrench className="w-5 h-5" />,
+  "Product Management": <RefreshCw className="w-5 h-5" />,
+  "Password Managers": <LockKeyhole className="w-5 h-5" />,
+  CRM: <Users className="w-5 h-5" />,
+  "Enterprise Search": <Search className="w-5 h-5" />,
+  "API Platform": <Code className="w-5 h-5" />,
+  "Platform as a Service": <Server className="w-5 h-5" />,
+  Monitoring: <LineChart className="w-5 h-5" />,
+  Deployment: <RefreshCw className="w-5 h-5" />,
+  Gaming: <Headphones className="w-5 h-5" />,
+  Community: <Users className="w-5 h-5" />,
+  Music: <Headphones className="w-5 h-5" />,
+  "Backend Service": <Server className="w-5 h-5" />,
+  Utilities: <Wrench className="w-5 h-5" />,
+  Finances: <BarChart className="w-5 h-5" />,
+  Scheduling: <Clock className="w-5 h-5" />,
+  Cloud: <Globe className="w-5 h-5" />,
+  "Visual Database": <Database className="w-5 h-5" />,
+  "ML Ops": <LineChart className="w-5 h-5" />,
+  "ETL/ELT": <RefreshCw className="w-5 h-5" />,
+  "3D Modelling": <Pencil className="w-5 h-5" />,
+  IoT: <Zap className="w-5 h-5" />,
+  "Email Marketing": <Mail className="w-5 h-5" />,
+  // Add more common category mappings
+  business: <BarChart className="w-5 h-5" />,
+  finance: <BarChart className="w-5 h-5" />,
+  accounting: <BarChart className="w-5 h-5" />,
+  invoicing: <FileText className="w-5 h-5" />,
+  media: <Film className="w-5 h-5" />,
+  storage: <Database className="w-5 h-5" />,
+  backup: <Server className="w-5 h-5" />,
+  encryption: <LockKeyhole className="w-5 h-5" />,
+  containers: <Server className="w-5 h-5" />,
+  registry: <Database className="w-5 h-5" />,
+  security: <ShieldCheck className="w-5 h-5" />,
+  devops: <Wrench className="w-5 h-5" />,
+  monitoring: <LineChart className="w-5 h-5" />,
+  observability: <BarChart3 className="w-5 h-5" />,
+  visualization: <BarChart3 className="w-5 h-5" />,
+  collaboration: <Users className="w-5 h-5" />,
+  automation: <Settings className="w-5 h-5" />,
+  workflow: <Settings className="w-5 h-5" />,
+  social: <Users className="w-5 h-5" />,
+  messenger: <MessageSquare className="w-5 h-5" />,
+  chat: <MessageSquare className="w-5 h-5" />,
+  streaming: <Film className="w-5 h-5" />,
+  photos: <Film className="w-5 h-5" />,
+  photography: <Film className="w-5 h-5" />,
+};
+
+// Default colors for categories
+const categoryColors = [
+  "blue",
+  "violet",
+  "cyan",
+  "green",
+  "amber",
+  "orange",
+  "sky",
+  "red",
+  "purple",
+  "slate",
+  "fuchsia",
+  "emerald",
 ];
 
 // Color utility function
@@ -258,23 +247,40 @@ const getColorClasses = (color: string) => {
 export default function CategoryPage() {
   const params = useParams();
   const categorySlug = params.category as string;
-  const categoryName =
-    categorySlug.charAt(0).toUpperCase() + categorySlug.slice(1);
 
-  const category = categories.find(
-    (cat) => cat.name.toLowerCase() === categorySlug.toLowerCase()
+  // Convert slug back to category name (reverse the slug transformation)
+  const categoryName = categorySlug.replace(/-/g, " ");
+
+  // Generate categories dynamically from project data
+  const allCategories = _.chain(projects)
+    .flatMap((project) => project.categories)
+    .uniq()
+    .map((cat, index) => ({
+      name: cat,
+      icon: categoryIcons[cat] || <Code className="w-5 h-5" />,
+      color: categoryColors[index % categoryColors.length],
+      description: `Projects in the ${cat} category`,
+    }))
+    .value();
+
+  // Find the current category by matching the slug
+  const category = allCategories.find(
+    (cat) => cat.name.toLowerCase().replace(/\s+/g, "-") === categorySlug
   );
+
   const colors = category
     ? getColorClasses(category.color)
     : getColorClasses("blue");
 
-  // Filter projects by the current category
-
+  // Filter projects by the current category (matching original category names)
   const categoryProjects = projects.filter((p) =>
-    p.categories.includes(categorySlug)
+    p.categories.some(
+      (cat) => cat.toLowerCase().replace(/\s+/g, "-") === categorySlug
+    )
   );
 
-  if (categoryProjects.length === 0) {
+  // Handle case where category doesn't exist
+  if (!category) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
         <Navbar />
@@ -327,7 +333,9 @@ export default function CategoryPage() {
               </div>
             </div>
             <div>
-              <h1 className="text-3xl font-bold mb-2">{category.name}</h1>
+              <h1 className="text-3xl font-bold mb-2 capitalize">
+                {category.name}
+              </h1>
               <p className="text-neutral-600 dark:text-neutral-400 mb-4 max-w-2xl">
                 {category.description}
               </p>
@@ -400,18 +408,28 @@ export default function CategoryPage() {
           )}
         </div>
 
-        {/* Alternative Categories */}
+        {/* Related Categories */}
         <div className="mb-8">
           <h2 className="text-xl font-bold mb-4">Related Categories</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {categories
+            {allCategories
               .filter((cat) => cat.name !== category.name)
-              .slice(0, 4)
+              .slice(0, 8)
               .map((relatedCat) => {
                 const catColors = getColorClasses(relatedCat.color);
+                const relatedSlug = relatedCat.name
+                  .toLowerCase()
+                  .replace(/\s+/g, "-");
+                const relatedProjectCount = projects.filter((p) =>
+                  p.categories.some(
+                    (cat) =>
+                      cat.toLowerCase().replace(/\s+/g, "-") === relatedSlug
+                  )
+                ).length;
+
                 return (
                   <Link
-                    href={`/categories/${relatedCat.name.toLowerCase()}`}
+                    href={`/categories/${relatedSlug}`}
                     key={relatedCat.name}
                   >
                     <Card
@@ -429,11 +447,11 @@ export default function CategoryPage() {
                             </div>
                           </div>
                           <div>
-                            <h3 className="font-medium text-sm">
+                            <h3 className="font-medium text-sm capitalize">
                               {relatedCat.name}
                             </h3>
                             <div className="text-xs text-neutral-500">
-                              {relatedCat.count} projects
+                              {relatedProjectCount} projects
                             </div>
                           </div>
                         </div>
@@ -449,7 +467,7 @@ export default function CategoryPage() {
         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-lg p-6 mb-8">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <div className="sm:flex-1">
-              <h2 className="text-xl font-bold mb-2">
+              <h2 className="text-xl font-bold mb-2 capitalize">
                 Know a great {category.name} project?
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400">

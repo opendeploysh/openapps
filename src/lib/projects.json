@@ -55,6 +55,37 @@
     }
   },
   {
+    "slug": "activepieces",
+    "name": "Activepieces",
+    "description": "Activepieces is an open-source, no-code business automation platform that connects different services and applications to automate workflows. It's a self-hosted alternative to Zapier and other automation tools.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/109176738?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/109176738?s=64&v=4"
+    },
+    "categories": [
+      "automation",
+      "workflow",
+      "no-code",
+      "integration"
+    ],
+    "github": "activepieces/activepieces",
+    "websiteUrl": "https://www.activepieces.com",
+    "license": "MIT",
+    "openSource": true,
+    "alternatives": [
+      "zapier",
+      "n8n",
+      "huginn",
+      "make"
+    ],
+    "stars": 10000,
+    "language": "TypeScript",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Docker-based deployment with multiple containers including database and queue workers. Requires proper configuration of environment variables and optional external services for production use."
+    }
+  },
+  {
     "slug": "adguard-home",
     "name": "AdGuard Home",
     "description": "AdGuard Home is a network-wide DNS server that blocks ads, trackers, and malicious domains while providing detailed analytics and customizable filtering rules.\n",
@@ -114,6 +145,37 @@
     "deployment": {
       "difficulty": "Medium",
       "justification": "Standard web application deployment requiring PHP, web server, and database. Installation wizard simplifies setup but proper configuration needed for production use."
+    }
+  },
+  {
+    "slug": "archivebox",
+    "name": "ArchiveBox",
+    "description": "ArchiveBox is an open-source, self-hosted web archiving solution that lets you create HTML and screenshot archives of websites from your bookmarks, browsing history, RSS feeds, or other sources.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/46334901?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/46334901?s=64&v=4"
+    },
+    "categories": [
+      "archiving",
+      "backup",
+      "preservation",
+      "web"
+    ],
+    "github": "ArchiveBox/ArchiveBox",
+    "websiteUrl": "https://archivebox.io/",
+    "license": "MIT",
+    "openSource": true,
+    "alternatives": [
+      "wayback-machine",
+      "internet-archive",
+      "perma-cc",
+      "wallabag"
+    ],
+    "stars": 21000,
+    "language": "Python",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Python application with multiple dependencies for different archive formats. Requires proper configuration of external tools like Chrome/Chromium for screenshots. Docker deployment simplifies setup."
     }
   },
   {
@@ -207,6 +269,37 @@
     "deployment": {
       "difficulty": "Medium",
       "justification": "Web application requiring PHP environment and database setup. Mobile app provides additional complexity but Docker deployment simplifies installation process."
+    }
+  },
+  {
+    "slug": "dashy",
+    "name": "Dashy",
+    "description": "Dashy is a highly customizable dashboard for self-hosted services and homelab management, featuring a beautiful interface and powerful configuration options.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/1862727?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/1862727?s=64&v=4"
+    },
+    "categories": [
+      "dashboard",
+      "homelab",
+      "monitoring",
+      "interface"
+    ],
+    "github": "lissy93/dashy",
+    "websiteUrl": "https://dashy.to/",
+    "license": "MIT",
+    "openSource": true,
+    "alternatives": [
+      "homer",
+      "heimdall",
+      "organizr",
+      "flame"
+    ],
+    "stars": 17000,
+    "language": "JavaScript",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Docker deployment with YAML configuration. No database required and easy customization through config files."
     }
   },
   {
@@ -359,6 +452,68 @@
     "deployment": {
       "difficulty": "Easy",
       "justification": "Offers a well-documented Docker setup that requires minimal configuration. The installer handles database setup, and there's an option to use a pre-configured Docker Compose file that sets up the application and all required dependencies in one step."
+    }
+  },
+  {
+    "slug": "freshrss",
+    "name": "FreshRSS",
+    "description": "FreshRSS is a self-hosted RSS feed aggregator that offers a clean interface, powerful features, and extensive customization for managing your news and content feeds.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/6187073?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/6187073?s=64&v=4"
+    },
+    "categories": [
+      "rss",
+      "news",
+      "feeds",
+      "content-aggregation"
+    ],
+    "github": "FreshRSS/FreshRSS",
+    "websiteUrl": "https://freshrss.org/",
+    "license": "AGPL-3.0",
+    "openSource": true,
+    "alternatives": [
+      "miniflux",
+      "tiny-tiny-rss",
+      "feedly",
+      "inoreader"
+    ],
+    "stars": 9500,
+    "language": "PHP",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple PHP application with Docker support. Web-based setup wizard and minimal configuration required."
+    }
+  },
+  {
+    "slug": "ghost",
+    "name": "Ghost",
+    "description": "Ghost is a modern, open-source content management system and blogging platform designed for professional publishing. It offers a clean writing experience, powerful SEO tools, and built-in membership and subscription features.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/1029712?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/1029712?s=64&v=4"
+    },
+    "categories": [
+      "blogging",
+      "cms",
+      "publishing",
+      "content-management"
+    ],
+    "github": "TryGhost/Ghost",
+    "websiteUrl": "https://ghost.org/",
+    "license": "MIT",
+    "openSource": true,
+    "alternatives": [
+      "wordpress",
+      "medium",
+      "substack",
+      "jekyll"
+    ],
+    "stars": 47000,
+    "language": "JavaScript",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Node.js application requiring proper server configuration, database setup, and SSL certificates. Production deployment benefits from understanding of Node.js hosting and performance optimization."
     }
   },
   {
@@ -531,6 +686,37 @@
     "deployment": {
       "difficulty": "Medium",
       "justification": "Requires a web server setup (Go, PostgreSQL), has specific server requirements for optimal performance, and needs occasional maintenance for updates and database optimization."
+    }
+  },
+  {
+    "slug": "healthchecks",
+    "name": "Healthchecks",
+    "description": "Healthchecks is a simple and effective monitoring service that listens for pings from your services and sends alerts when pings are late, helping you monitor cron jobs, scheduled tasks, and service uptime.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/3778377?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/3778377?s=64&v=4"
+    },
+    "categories": [
+      "monitoring",
+      "alerting",
+      "uptime",
+      "cron"
+    ],
+    "github": "healthchecks/healthchecks",
+    "websiteUrl": "https://healthchecks.io/",
+    "license": "BSD-3-Clause",
+    "openSource": true,
+    "alternatives": [
+      "uptimerobot",
+      "pingdom",
+      "deadmanssnitch",
+      "cronitor"
+    ],
+    "stars": 8000,
+    "language": "Python",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Django application with straightforward setup and minimal dependencies. Well-documented deployment process with Docker support and simple database requirements."
     }
   },
   {
@@ -831,6 +1017,37 @@
     }
   },
   {
+    "slug": "metabase",
+    "name": "Metabase",
+    "description": "Metabase is an open-source business intelligence and data visualization platform that makes it easy for everyone in your company to ask questions and learn from data, regardless of technical skill level.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/20503023?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/20503023?s=64&v=4"
+    },
+    "categories": [
+      "analytics",
+      "business-intelligence",
+      "data-visualization",
+      "dashboard"
+    ],
+    "github": "metabase/metabase",
+    "websiteUrl": "https://metabase.com/",
+    "license": "AGPL-3.0",
+    "openSource": true,
+    "alternatives": [
+      "superset",
+      "grafana",
+      "tableau",
+      "power-bi"
+    ],
+    "stars": 38000,
+    "language": "Clojure",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Java-based application with straightforward setup. Requires database configuration and proper resource allocation. Docker deployment is well-documented but may need tuning for production use."
+    }
+  },
+  {
     "slug": "mlflow",
     "name": "MLflow",
     "description": "MLflow is an open-source platform for managing machine learning lifecycles, including experimentation, reproducibility, deployment, and model registry.\n",
@@ -1017,6 +1234,37 @@
     }
   },
   {
+    "slug": "owncast",
+    "name": "Owncast",
+    "description": "Owncast is a self-hosted live streaming platform that provides complete control over your streaming experience, offering an alternative to Twitch and YouTube Live.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/65648245?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/65648245?s=64&v=4"
+    },
+    "categories": [
+      "streaming",
+      "live-video",
+      "broadcasting",
+      "entertainment"
+    ],
+    "github": "owncast/owncast",
+    "websiteUrl": "https://owncast.online/",
+    "license": "MIT",
+    "openSource": true,
+    "alternatives": [
+      "twitch",
+      "youtube-live",
+      "obs-studio",
+      "restream"
+    ],
+    "stars": 9400,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires streaming software setup and network configuration for optimal performance. Simple binary deployment but streaming workflow needs planning."
+    }
+  },
+  {
     "slug": "pfsense",
     "name": "pfSense",
     "description": "pfSense is an open-source firewall and router platform based on FreeBSD that provides enterprise-grade security, VPN, and network management capabilities.\n",
@@ -1079,6 +1327,37 @@
     }
   },
   {
+    "slug": "plausible-analytics",
+    "name": "Plausible Analytics",
+    "description": "Plausible Analytics is a simple, lightweight (< 1 KB), and privacy-friendly web analytics tool. It provides essential insights about your website visitors without violating their privacy or compromising on performance.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/50370009?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/50370009?s=64&v=4"
+    },
+    "categories": [
+      "analytics",
+      "privacy",
+      "monitoring",
+      "web"
+    ],
+    "github": "plausible/analytics",
+    "websiteUrl": "https://plausible.io/",
+    "license": "AGPL-3.0",
+    "openSource": true,
+    "alternatives": [
+      "matomo",
+      "umami",
+      "google-analytics",
+      "goatcounter"
+    ],
+    "stars": 20000,
+    "language": "Elixir",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Elixir/Phoenix environment setup and PostgreSQL database. Docker deployment simplifies installation but still requires proper configuration for production use."
+    }
+  },
+  {
     "slug": "plex",
     "name": "Plex Media Server",
     "description": "Plex is a powerful media server that organizes your movies, TV shows, music, and photos, streaming them to any device with a beautiful, easy-to-use interface.\n",
@@ -1137,6 +1416,39 @@
     "deployment": {
       "difficulty": "Easy",
       "justification": "Extremely simple deployment as a single Docker container. No complex configuration required, connects automatically to Docker daemon."
+    }
+  },
+  {
+    "slug": "posthog",
+    "name": "PostHog",
+    "description": "PostHog is an all-in-one product analytics platform that combines product analytics, session recording, feature flags, A/B testing, and user surveys in a single, self-hostable solution.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/53781789?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/53781789?s=64&v=4"
+    },
+    "categories": [
+      "analytics",
+      "product-analytics",
+      "feature-flags",
+      "ab-testing",
+      "monitoring"
+    ],
+    "github": "posthog/posthog",
+    "websiteUrl": "https://posthog.com",
+    "license": "MIT",
+    "openSource": true,
+    "alternatives": [
+      "mixpanel",
+      "amplitude",
+      "heap",
+      "hotjar",
+      "optimizely"
+    ],
+    "stars": 21000,
+    "language": "Python",
+    "deployment": {
+      "difficulty": "Hard",
+      "justification": "Complex application requiring multiple services including PostgreSQL, Redis, ClickHouse, and message queues. Production deployment requires careful configuration of data processing pipelines and monitoring."
     }
   },
   {
@@ -1316,6 +1628,37 @@
     }
   },
   {
+    "slug": "superset",
+    "name": "Apache Superset",
+    "description": "Apache Superset is a modern data exploration and visualization platform that enables users to create interactive dashboards and perform ad-hoc analysis with a rich set of visualizations and an intuitive interface.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/47359?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/47359?s=64&v=4"
+    },
+    "categories": [
+      "analytics",
+      "business-intelligence",
+      "data-visualization",
+      "dashboard"
+    ],
+    "github": "apache/superset",
+    "websiteUrl": "http://superset.apache.org/",
+    "license": "Apache-2.0",
+    "openSource": true,
+    "alternatives": [
+      "metabase",
+      "grafana",
+      "tableau",
+      "power-bi"
+    ],
+    "stars": 62000,
+    "language": "Python",
+    "deployment": {
+      "difficulty": "Hard",
+      "justification": "Complex Python application requiring careful configuration of multiple components including Redis, database, and web server. Production deployment requires understanding of security, caching, and performance optimization."
+    }
+  },
+  {
     "slug": "tautulli",
     "name": "Tautulli",
     "description": "Tautulli is a monitoring and analytics application for Plex Media Server that provides detailed statistics, notifications, and user activity tracking.\n",
@@ -1342,6 +1685,37 @@
     "deployment": {
       "difficulty": "Easy",
       "justification": "Simple installation process with Docker support. Connects easily to existing Plex server with minimal configuration required."
+    }
+  },
+  {
+    "slug": "umami",
+    "name": "Umami",
+    "description": "Umami is a simple, fast, privacy-focused alternative to Google Analytics. It provides essential website analytics without cookies, tracking, or compromising visitor privacy.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/63722030?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/63722030?s=64&v=4"
+    },
+    "categories": [
+      "analytics",
+      "privacy",
+      "monitoring",
+      "web"
+    ],
+    "github": "umami-software/umami",
+    "websiteUrl": "https://umami.is/",
+    "license": "MIT",
+    "openSource": true,
+    "alternatives": [
+      "plausible-analytics",
+      "matomo",
+      "google-analytics",
+      "goatcounter"
+    ],
+    "stars": 22000,
+    "language": "JavaScript",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Node.js application with straightforward setup. Supports multiple databases and has excellent Docker support for quick deployment."
     }
   },
   {
@@ -1376,6 +1750,37 @@
     }
   },
   {
+    "slug": "uptime-kuma",
+    "name": "Uptime Kuma",
+    "description": "Uptime Kuma is a self-hosted website monitoring tool that provides real-time monitoring for websites, APIs, and services with beautiful dashboards and instant notifications.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/76865055?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/76865055?s=64&v=4"
+    },
+    "categories": [
+      "monitoring",
+      "uptime",
+      "alerts",
+      "status"
+    ],
+    "github": "louislam/uptime-kuma",
+    "websiteUrl": "https://uptime.kuma.pet/",
+    "license": "MIT",
+    "openSource": true,
+    "alternatives": [
+      "pingdom",
+      "uptime-robot",
+      "status-cake",
+      "better-uptime"
+    ],
+    "stars": 58000,
+    "language": "JavaScript",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Docker deployment with web-based configuration. No complex setup required and includes built-in database."
+    }
+  },
+  {
     "slug": "urbackup",
     "name": "UrBackup",
     "description": "UrBackup is an easy-to-setup open-source client/server backup system with web interface that provides automated file and image backups for Windows, Linux, and macOS.\n",
@@ -1407,6 +1812,67 @@
     }
   },
   {
+    "slug": "vaultwarden",
+    "name": "Vaultwarden",
+    "description": "Vaultwarden is an unofficial, lightweight Bitwarden server implementation written in Rust, perfect for self-hosting password management with full client compatibility.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/77072743?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/77072743?s=64&v=4"
+    },
+    "categories": [
+      "security",
+      "passwords",
+      "self-hosted",
+      "bitwarden"
+    ],
+    "github": "dani-garcia/vaultwarden",
+    "license": "GPL-3.0",
+    "openSource": true,
+    "alternatives": [
+      "bitwarden",
+      "keepass",
+      "1password",
+      "lastpass"
+    ],
+    "stars": 39000,
+    "language": "Rust",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single Docker container deployment with minimal resource requirements. Simple configuration and automatic database setup."
+    }
+  },
+  {
+    "slug": "wallabag",
+    "name": "Wallabag",
+    "description": "Wallabag is a self-hosted read-later application that allows you to save articles and web pages to read them later with improved readability, offline access, and powerful organization features.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/2962051?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/2962051?s=64&v=4"
+    },
+    "categories": [
+      "reading",
+      "bookmarks",
+      "productivity",
+      "offline"
+    ],
+    "github": "wallabag/wallabag",
+    "websiteUrl": "https://www.wallabag.org",
+    "license": "MIT",
+    "openSource": true,
+    "alternatives": [
+      "pocket",
+      "instapaper",
+      "readwise",
+      "matter"
+    ],
+    "stars": 10000,
+    "language": "PHP",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "PHP web application requiring web server configuration and database setup. Multiple configuration options available but requires proper server environment setup for production use."
+    }
+  },
+  {
     "slug": "watchtower",
     "name": "Watchtower",
     "description": "Watchtower is a container-based solution for automating Docker container base image updates, ensuring your containerized applications stay current with security patches and updates.\n",
@@ -1434,6 +1900,37 @@
     "deployment": {
       "difficulty": "Easy",
       "justification": "Single container deployment with minimal configuration. Works out of the box with sensible defaults and optional fine-tuning."
+    }
+  },
+  {
+    "slug": "wiki-js",
+    "name": "Wiki.js",
+    "description": "Wiki.js is a modern, lightweight wiki platform built with Node.js that offers powerful editing, beautiful themes, and Git-based storage for collaborative knowledge management.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/15522395?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/15522395?s=64&v=4"
+    },
+    "categories": [
+      "wiki",
+      "documentation",
+      "knowledge-management",
+      "collaboration"
+    ],
+    "github": "Requarks/wiki",
+    "websiteUrl": "https://js.wiki/",
+    "license": "AGPL-3.0",
+    "openSource": true,
+    "alternatives": [
+      "bookstack",
+      "dokuwiki",
+      "tiddlywiki",
+      "notion"
+    ],
+    "stars": 24000,
+    "language": "JavaScript",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires database setup and Node.js environment. Docker deployment available but configuration can be complex for advanced features."
     }
   }
 ]

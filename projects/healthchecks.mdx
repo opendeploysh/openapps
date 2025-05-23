@@ -1,0 +1,100 @@
+---
+slug: healthchecks
+name: Healthchecks
+description: |
+  Healthchecks is a simple and effective monitoring service that listens for pings from your services and sends alerts when pings are late, helping you monitor cron jobs, scheduled tasks, and service uptime.
+logo:
+  dark: https://avatars.githubusercontent.com/u/3778377?s=64&v=4
+  light: https://avatars.githubusercontent.com/u/3778377?s=64&v=4
+categories: [monitoring, alerting, uptime, cron]
+github: healthchecks/healthchecks
+websiteUrl: https://healthchecks.io/
+license: BSD-3-Clause
+openSource: true
+alternatives: [uptimerobot, pingdom, deadmanssnitch, cronitor]
+stars: 8000
+language: Python
+deployment:
+  difficulty: "Easy"
+  justification: "Django application with straightforward setup and minimal dependencies. Well-documented deployment process with Docker support and simple database requirements."
+---
+
+Healthchecks is a simple but powerful monitoring service designed to watch over your cron jobs, scheduled tasks, and services. It works by listening for HTTP requests, emails, or other signals from your systems and alerting you when expected signals don't arrive on time.
+
+With Healthchecks, you can:
+
+- Monitor cron jobs and scheduled tasks for failures
+- Get instant alerts when services go down or tasks fail
+- Track service uptime and response times
+- Receive notifications via email, SMS, Slack, and more
+- View detailed logs and status history
+- Set up custom monitoring schedules and grace periods
+- Monitor both simple heartbeats and complex service checks
+
+## Key Features
+
+### Dead Simple Monitoring
+
+Healthchecks uses a "dead man's switch" approach - your services ping Healthchecks when they're working correctly. If a ping doesn't arrive when expected, you get an alert. No complex configuration or agent installation required.
+
+### Multiple Check Types
+
+Support for various monitoring patterns including HTTP/HTTPS requests, email pings, shell commands, and custom signals. Monitor everything from simple cron jobs to complex distributed services.
+
+### Flexible Scheduling
+
+Configure monitoring schedules with various options including periodic intervals, cron expressions, and one-time checks. Set grace periods to account for normal variations in execution time.
+
+### Comprehensive Alerting
+
+Get notified through multiple channels including email, SMS, Slack, Discord, PagerDuty, Webhooks, and dozens of other integrations. Set up escalation rules and different notification preferences for different checks.
+
+### Visual Status Dashboard
+
+Clean, intuitive dashboard showing the status of all your checks at a glance. Color-coded indicators make it easy to spot problems quickly, with detailed status history for each check.
+
+### Detailed Logging
+
+Complete log history showing when pings were received, missed, or late. Track patterns over time and identify recurring issues or trends in your monitored services.
+
+### Team Collaboration
+
+Share checks with team members, set up different notification preferences per person, and collaborate on monitoring responsibilities across your organization.
+
+### API Integration
+
+Full REST API enables programmatic management of checks, retrieval of status information, and integration with existing tools and workflows.
+
+### Mobile Access
+
+Responsive web interface works perfectly on mobile devices, and mobile apps are available for iOS and Android to check status and manage alerts on the go.
+
+### Custom Integrations
+
+Extensive webhook support and integration options allow you to connect Healthchecks with virtually any notification system or workflow automation tool.
+
+### Pause and Maintenance Modes
+
+Temporarily pause checks during maintenance windows or scheduled downtime without triggering false alerts. Resume monitoring automatically when maintenance is complete.
+
+### Multi-timezone Support
+
+Configure checks and schedules for different timezones, perfect for distributed teams and services running across multiple regions.
+
+### Badge and Status Pages
+
+Generate status badges for README files and create public status pages to share service availability information with users or customers.
+
+### Data Export and Backup
+
+Export your monitoring data and configuration for backup purposes or migration to other systems. Your monitoring setup isn't locked into the platform.
+
+### Self-hosted Privacy
+
+When self-hosted, Healthchecks keeps all your monitoring data private and under your control. No external dependencies or data sharing with third-party services.
+
+### Lightweight and Efficient
+
+Minimal resource requirements make Healthchecks suitable for deployment on small VPS instances or alongside other services without significant overhead.
+
+Healthchecks excels at providing reliable, no-nonsense monitoring for the automated tasks and services that keep your systems running. Whether you're monitoring a single server's cron jobs or complex distributed systems across multiple environments, Healthchecks gives you confidence that you'll know immediately when something goes wrong.

@@ -1,0 +1,96 @@
+---
+slug: vaultwarden
+name: Vaultwarden
+description: |
+  Vaultwarden is an unofficial, lightweight Bitwarden server implementation written in Rust, perfect for self-hosting password management with full client compatibility.
+logo:
+  dark: https://avatars.githubusercontent.com/u/77072743?s=64&v=4
+  light: https://avatars.githubusercontent.com/u/77072743?s=64&v=4
+categories: [security, passwords, self-hosted, bitwarden]
+github: dani-garcia/vaultwarden
+license: GPL-3.0
+openSource: true
+alternatives: [bitwarden, keepass, 1password, lastpass]
+stars: 39000
+language: Rust
+deployment:
+  difficulty: "Easy"
+  justification: "Single Docker container deployment with minimal resource requirements. Simple configuration and automatic database setup."
+---
+
+Vaultwarden is a lightweight, resource-efficient implementation of the Bitwarden
+server API written in Rust. It provides full compatibility with official
+Bitwarden clients while using significantly fewer system resources than the
+official server.
+
+This implementation is perfect for individuals, families, and small organizations
+who want to self-host their password management solution without the complexity
+and resource requirements of the full Bitwarden server stack.
+
+## Key Features
+
+### Full Bitwarden Client Compatibility
+
+Use any official Bitwarden client including web vault, browser extensions,
+desktop applications, and mobile apps. All features work seamlessly with
+Vaultwarden as the backend.
+
+### Lightweight Resource Usage
+
+Runs efficiently on minimal hardware with very low memory and CPU requirements.
+Perfect for Raspberry Pi, VPS instances, or shared hosting environments.
+
+### Complete Password Management
+
+Store and sync passwords, secure notes, payment cards, and identity information
+across all your devices. Generate strong passwords and check for compromised
+credentials.
+
+### Organization Support
+
+Create organizations to share passwords and secure information with team members.
+Manage user permissions, groups, and collections for organized credential sharing.
+
+### Two-Factor Authentication
+
+Secure your vault with multiple 2FA options including TOTP apps, YubiKey,
+Duo Security, and email verification for enhanced account protection.
+
+### Secure File Attachments
+
+Store and sync encrypted file attachments with your vault items. Share secure
+documents and files alongside your password data.
+
+### Emergency Access
+
+Set up emergency access for trusted contacts who can request access to your
+vault in case of emergency. Configure approval delays and access levels.
+
+### Simple Backup & Migration
+
+Easy data backup with standard database dumps. Migrate from official Bitwarden
+or other password managers using built-in import tools.
+
+### Advanced Security Features
+
+Benefit from secure password sharing, breach monitoring, password strength
+analysis, and encrypted export capabilities.
+
+### Flexible Database Support
+
+Supports SQLite for simple deployments or PostgreSQL/MySQL for production
+environments. Automatic database migrations handle updates seamlessly.
+
+### HTTPS & Reverse Proxy Ready
+
+Built-in HTTPS support or easy integration with reverse proxies like Nginx,
+Traefik, or Caddy for secure external access.
+
+### Web Vault Included
+
+Self-contained deployment includes the full Bitwarden web vault interface,
+eliminating external dependencies for complete functionality.
+
+Vaultwarden delivers enterprise-grade password management capabilities in a
+lightweight package that anyone can self-host. Enjoy the full Bitwarden
+experience while maintaining complete control over your sensitive data.
