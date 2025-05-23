@@ -6,8 +6,8 @@ import { notFound } from "next/navigation";
 
 export const projectsPath = "projects";
 
-const getSourcePath = (slug: string[]) =>
-  path.join(process.cwd(), projectsPath, slug.join("/")) + ".mdx";
+const getSourcePath = (slug: string) =>
+  path.join(process.cwd(), projectsPath, slug) + ".mdx";
 
 export const useCompile = async (file: string) => {
   const components = useMDXComponents({});
@@ -43,7 +43,7 @@ export const useCompile = async (file: string) => {
   };
 };
 
-export const useCompileFromSlug = (slug: string[]) => {
+export const useCompileFromSlug = (slug: string) => {
   const source = getSourcePath(slug)!;
   return useCompile(source);
 };

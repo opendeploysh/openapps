@@ -1,6 +1,7 @@
 ---
 slug: n8n
 name: n8n
+image: https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-screenshot-readme.png
 description: |
   n8n is an extendable workflow automation tool that allows you to connect 
   various services and applications to automate tasks without coding.
@@ -14,6 +15,7 @@ license: Apache-2.0
 alternatives: [zapier, make, integromat, apache-airflow]
 stars: 35000
 language: TypeScript
+recommendedFor: [personal, startup, enterprise]
 deployment:
   difficulty: "Easy"
   justification: "Can be installed with npm in one command, has an official Docker image, and works with SQLite by default requiring no external database. Initial setup is straightforward with minimal configuration needed to start building workflows."
@@ -30,9 +32,12 @@ hosting:
     - name: "NPM"
       description: "Direct installation via npm for Node.js environments"
       url: "https://www.npmjs.com/package/n8n"
+    - name: "Docker Compose"
+      description: "Deploy n8n to any Docker Compose environment with manifest files."
+      url: "https://github.com/n8n-io/n8n-hosting/blob/main/docker-compose/README.md"
     - name: "Kubernetes"
-      description: "Official Helm charts available for Kubernetes deployment"
-      url: "https://github.com/n8n-io/n8n/tree/master/docker/helm"
+      description: "Deploy n8n to any Kubernetes cluster with manifest files."
+      url: "https://github.com/n8n-io/n8n-hosting/blob/main/kubernetes/README.md"
   managed:
     - name: "n8n Cloud"
       description: "Official cloud hosting solution with managed infrastructure"

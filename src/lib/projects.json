@@ -2,10 +2,11 @@
   {
     "slug": "13feet",
     "name": "13Feet",
+    "image": "/images/13feet/image.png",
     "description": "13Feet is a simple tool that bypasses paywalls by using Google's cache to access articles, \nproviding a clean reading experience without any ads or popups.\n",
     "logo": {
-      "dark": "https://avatars.githubusercontent.com/u/69827559?s=200&v=4",
-      "light": "https://avatars.githubusercontent.com/u/69827559?s=200&v=4"
+      "dark": "https://avatars.githubusercontent.com/u/63045920?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/63045920?s=64&v=4"
     },
     "categories": [
       "tools",
@@ -70,6 +71,7 @@
     "github": "AdguardTeam/AdGuardHome",
     "websiteUrl": "https://adguard.com/adguard-home",
     "license": "GPL-3.0",
+    "openSource": true,
     "alternatives": [
       "pi-hole",
       "unbound",
@@ -100,6 +102,7 @@
     "github": "akaunting/akaunting",
     "websiteUrl": "https://akaunting.com",
     "license": "GPL-3.0",
+    "openSource": true,
     "alternatives": [
       "invoice-ninja",
       "crater",
@@ -145,10 +148,11 @@
   {
     "slug": "bookstack",
     "name": "BookStack",
+    "image": "https://www.bookstackapp.com/images/bookstack-hero-screenshot.webp",
     "description": "BookStack is a self-hosted platform for organizing and storing information in a book-like structure, perfect for documentation, wikis, and knowledge management.\n",
     "logo": {
-      "dark": "https://avatars.githubusercontent.com/u/20252628?s=200&v=4",
-      "light": "https://avatars.githubusercontent.com/u/20252628?s=200&v=4"
+      "dark": "https://styles.redditmedia.com/t5_kpvyn/styles/communityIcon_11tdwdddqqg41.png",
+      "light": "https://styles.redditmedia.com/t5_kpvyn/styles/communityIcon_11tdwdddqqg41.png"
     },
     "categories": [
       "productivity",
@@ -159,6 +163,7 @@
     "github": "BookStackApp/BookStack",
     "websiteUrl": "https://www.bookstackapp.com",
     "license": "MIT",
+    "openSource": true,
     "alternatives": [
       "outline",
       "notion",
@@ -175,10 +180,11 @@
   {
     "slug": "crater",
     "name": "Crater",
+    "discord": "https://discord.gg/nyTstm6",
     "description": "Crater is a web and mobile application for tracking expenses and payments, perfect for freelancers and small businesses to manage their invoicing and financial operations.\n",
     "logo": {
-      "dark": "https://avatars.githubusercontent.com/u/37308010?s=200&v=4",
-      "light": "https://avatars.githubusercontent.com/u/37308010?s=200&v=4"
+      "dark": "https://avatars.githubusercontent.com/u/79325907?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/79325907?s=64&v=4"
     },
     "categories": [
       "business",
@@ -189,6 +195,7 @@
     "github": "crater-invoice/crater",
     "websiteUrl": "https://craterapp.com",
     "license": "AGPL-3.0",
+    "openSource": true,
     "alternatives": [
       "invoice-ninja",
       "akaunting",
@@ -219,6 +226,7 @@
     "github": "distribution/distribution",
     "websiteUrl": "https://docs.docker.com/registry",
     "license": "Apache-2.0",
+    "openSource": true,
     "alternatives": [
       "harbor",
       "quay",
@@ -249,6 +257,7 @@
     "github": "harness/drone",
     "websiteUrl": "https://www.drone.io",
     "license": "Apache-2.0",
+    "openSource": true,
     "alternatives": [
       "jenkins",
       "gitlab-ci",
@@ -279,6 +288,7 @@
     "github": "duplicati/duplicati",
     "websiteUrl": "https://www.duplicati.com",
     "license": "LGPL-2.1",
+    "openSource": true,
     "alternatives": [
       "restic",
       "borg-backup",
@@ -294,11 +304,12 @@
   },
   {
     "slug": "emby",
-    "name": "Emby Server",
+    "name": "Emby",
+    "image": "https://raw.github.com/MediaBrowser/MediaBrowser.Resources/master/apps/dashboard.png",
     "description": "Emby is a personal media server that organizes your media collection and streams it to any device with advanced features for families and media enthusiasts.\n",
     "logo": {
-      "dark": "https://github.com/MediaBrowser/Emby.Resources/raw/master/images/logos/emby.png",
-      "light": "https://github.com/MediaBrowser/Emby.Resources/raw/master/images/logos/emby.png"
+      "dark": "https://avatars.githubusercontent.com/u/3607473?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/3607473?s=64&v=4"
     },
     "categories": [
       "media",
@@ -397,6 +408,7 @@
     "github": "gitlabhq/gitlabhq",
     "websiteUrl": "https://about.gitlab.com",
     "license": "MIT",
+    "openSource": true,
     "alternatives": [
       "github",
       "gitea",
@@ -409,6 +421,25 @@
       "difficulty": "Hard",
       "justification": "Complex installation requiring significant resources, database setup, and careful configuration. Multiple components need coordination for optimal performance."
     }
+  },
+  {
+    "slug": "google-gcr",
+    "name": "Google Container Registry",
+    "description": "Harbor is an open-source container registry that secures artifacts with role-based access control, scans images for vulnerabilities, and signs images as trusted.\n",
+    "logo": {
+      "dark": "/images/google-logo-icon.png",
+      "light": "/images/google-logo-icon.png"
+    },
+    "categories": [
+      "containers",
+      "registry",
+      "security",
+      "devops"
+    ],
+    "github": "google-containers/container-registry",
+    "websiteUrl": "https://cloud.google.com/container-registry",
+    "license": "Proprietary",
+    "openSource": false
   },
   {
     "slug": "grafana",
@@ -427,6 +458,7 @@
     "github": "grafana/grafana",
     "websiteUrl": "https://grafana.com",
     "license": "AGPL-3.0",
+    "openSource": true,
     "alternatives": [
       "kibana",
       "datadog",
@@ -443,6 +475,7 @@
   {
     "slug": "harbor",
     "name": "Harbor",
+    "image": "/images/harbor/screenshot.png",
     "description": "Harbor is an open-source container registry that secures artifacts with role-based access control, scans images for vulnerabilities, and signs images as trusted.\n",
     "logo": {
       "dark": "https://avatars.githubusercontent.com/u/21667947?s=200&v=4",
@@ -457,6 +490,7 @@
     "github": "goharbor/harbor",
     "websiteUrl": "https://goharbor.io",
     "license": "Apache-2.0",
+    "openSource": true,
     "alternatives": [
       "docker-registry",
       "quay",
@@ -572,6 +606,7 @@
     "github": "invoiceninja/invoiceninja",
     "websiteUrl": "https://invoiceninja.org",
     "license": "Elastic-2.0",
+    "openSource": true,
     "alternatives": [
       "akaunting",
       "crater",
@@ -659,6 +694,7 @@
     "github": "laurent22/joplin",
     "websiteUrl": "https://joplinapp.org",
     "license": "AGPL-3.0",
+    "openSource": true,
     "alternatives": [
       "standard-notes-server",
       "trilium",
@@ -674,10 +710,11 @@
   {
     "slug": "mastodon",
     "name": "Mastodon",
+    "image": "https://techcrunch.com/wp-content/uploads/2023/09/Search-Popout.png",
     "description": "Mastodon is a decentralized social media platform that provides Twitter-like microblogging with federation, privacy controls, and community-focused moderation.\n",
     "logo": {
-      "dark": "https://avatars.githubusercontent.com/u/23211827?s=200&v=4",
-      "light": "https://avatars.githubusercontent.com/u/23211827?s=200&v=4"
+      "dark": "https://avatars.githubusercontent.com/u/24979032?s=64&v=4",
+      "light": "https://avatars.githubusercontent.com/u/24979032?s=64&v=4"
     },
     "categories": [
       "social-media",
@@ -688,6 +725,7 @@
     "github": "mastodon/mastodon",
     "websiteUrl": "https://joinmastodon.org",
     "license": "AGPL-3.0",
+    "openSource": true,
     "alternatives": [
       "pleroma",
       "misskey",
@@ -747,6 +785,7 @@
     "github": "matrix-org/synapse",
     "websiteUrl": "https://matrix.org",
     "license": "Apache-2.0",
+    "openSource": true,
     "alternatives": [
       "rocket-chat",
       "mattermost",
@@ -777,6 +816,7 @@
     "github": "mattermost/mattermost",
     "websiteUrl": "https://mattermost.com",
     "license": "MIT",
+    "openSource": true,
     "alternatives": [
       "slack",
       "rocket-chat",
@@ -791,8 +831,40 @@
     }
   },
   {
+    "slug": "mlflow",
+    "name": "MLflow",
+    "description": "MLflow is an open-source platform for managing machine learning lifecycles, including experimentation, reproducibility, deployment, and model registry.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/39938107?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/39938107?s=200&v=4"
+    },
+    "categories": [
+      "machine-learning",
+      "data-science",
+      "mlops",
+      "experimentation"
+    ],
+    "github": "mlflow/mlflow",
+    "websiteUrl": "https://mlflow.org",
+    "license": "Apache-2.0",
+    "openSource": true,
+    "alternatives": [
+      "kubeflow",
+      "wandb",
+      "neptune",
+      "clearml"
+    ],
+    "stars": 18000,
+    "language": "Python",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Python environment and database setup for tracking server. Docker deployment available but proper configuration needed for production use with authentication and storage backends."
+    }
+  },
+  {
     "slug": "n8n",
     "name": "n8n",
+    "image": "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-screenshot-readme.png",
     "description": "n8n is an extendable workflow automation tool that allows you to connect \nvarious services and applications to automate tasks without coding.\n",
     "logo": {
       "dark": "https://avatars.githubusercontent.com/u/45487711?s=200&v=4",
@@ -814,9 +886,75 @@
     ],
     "stars": 35000,
     "language": "TypeScript",
+    "recommendedFor": [
+      "personal",
+      "startup",
+      "enterprise"
+    ],
     "deployment": {
       "difficulty": "Easy",
       "justification": "Can be installed with npm in one command, has an official Docker image, and works with SQLite by default requiring no external database. Initial setup is straightforward with minimal configuration needed to start building workflows."
+    },
+    "openSource": true,
+    "hosting": {
+      "podlify": [
+        {
+          "name": "Podlify",
+          "description": "Deploy n8n to Podlify with 1-click",
+          "url": "https://podlify.com/apps/n8n"
+        }
+      ],
+      "selfHosted": [
+        {
+          "name": "Docker",
+          "description": "Official Docker image available for easy containerized deployment",
+          "url": "https://hub.docker.com/r/n8nio/n8n"
+        },
+        {
+          "name": "NPM",
+          "description": "Direct installation via npm for Node.js environments",
+          "url": "https://www.npmjs.com/package/n8n"
+        },
+        {
+          "name": "Docker Compose",
+          "description": "Deploy n8n to any Docker Compose environment with manifest files.",
+          "url": "https://github.com/n8n-io/n8n-hosting/blob/main/docker-compose/README.md"
+        },
+        {
+          "name": "Kubernetes",
+          "description": "Deploy n8n to any Kubernetes cluster with manifest files.",
+          "url": "https://github.com/n8n-io/n8n-hosting/blob/main/kubernetes/README.md"
+        }
+      ],
+      "managed": [
+        {
+          "name": "n8n Cloud",
+          "description": "Official cloud hosting solution with managed infrastructure",
+          "url": "https://www.n8n.cloud/",
+          "monthlyCost": {
+            "EUR": 28
+          },
+          "updatedAt": "2024-01-15"
+        },
+        {
+          "name": "Digital Ocean",
+          "description": "1-Click App deployment on Digital Ocean",
+          "url": "https://marketplace.digitalocean.com/apps/n8n",
+          "monthlyCost": {
+            "USD": 5
+          },
+          "updatedAt": "2024-01-15"
+        },
+        {
+          "name": "Heroku",
+          "description": "Deploy directly to Heroku platform",
+          "url": "https://github.com/sarveshpro/n8n-heroku",
+          "monthlyCost": {
+            "EUR": 20
+          },
+          "updatedAt": "2024-01-15"
+        }
+      ]
     }
   },
   {
@@ -864,6 +1002,7 @@
     "github": "outline/outline",
     "websiteUrl": "https://www.getoutline.com",
     "license": "BSD-3-Clause",
+    "openSource": true,
     "alternatives": [
       "notion",
       "bookstack",
@@ -894,6 +1033,7 @@
     "github": "pfsense/pfsense",
     "websiteUrl": "https://www.pfsense.org",
     "license": "Apache-2.0",
+    "openSource": true,
     "alternatives": [
       "opnsense",
       "openwrt",
@@ -924,6 +1064,7 @@
     "github": "pi-hole/pi-hole",
     "websiteUrl": "https://pi-hole.net",
     "license": "EUPL-1.2",
+    "openSource": true,
     "alternatives": [
       "adguard-home",
       "unbound",
@@ -964,7 +1105,8 @@
     "deployment": {
       "difficulty": "Easy",
       "justification": "Simple Docker deployment with automatic media detection and organization. Well-documented setup process with extensive community support."
-    }
+    },
+    "popularity": 100
   },
   {
     "slug": "portainer",
@@ -983,6 +1125,7 @@
     "github": "portainer/portainer",
     "websiteUrl": "https://www.portainer.io",
     "license": "Zlib",
+    "openSource": true,
     "alternatives": [
       "rancher",
       "docker-desktop",
@@ -1013,6 +1156,7 @@
     "github": "prometheus/prometheus",
     "websiteUrl": "https://prometheus.io",
     "license": "Apache-2.0",
+    "openSource": true,
     "alternatives": [
       "influxdb",
       "nagios",
@@ -1069,6 +1213,7 @@
     "github": "restic/restic",
     "websiteUrl": "https://restic.net",
     "license": "BSD-2-Clause",
+    "openSource": true,
     "alternatives": [
       "duplicati",
       "borg-backup",
@@ -1099,6 +1244,7 @@
     "github": "RocketChat/Rocket.Chat",
     "websiteUrl": "https://rocket.chat",
     "license": "MIT",
+    "openSource": true,
     "alternatives": [
       "mattermost",
       "slack",
@@ -1156,6 +1302,7 @@
     "github": "standardnotes/server",
     "websiteUrl": "https://standardnotes.com",
     "license": "AGPL-3.0",
+    "openSource": true,
     "alternatives": [
       "joplin-server",
       "trilium",
@@ -1214,6 +1361,7 @@
     "github": "jacobalberty/unifi-docker",
     "websiteUrl": "https://ui.com",
     "license": "Proprietary",
+    "openSource": false,
     "alternatives": [
       "omada-controller",
       "meraki",
@@ -1244,6 +1392,7 @@
     "github": "uroni/urbackup_backend",
     "websiteUrl": "https://www.urbackup.org",
     "license": "AGPL-3.0",
+    "openSource": true,
     "alternatives": [
       "bacula",
       "amanda",
@@ -1274,6 +1423,7 @@
     "github": "containrrr/watchtower",
     "websiteUrl": "https://containrrr.dev/watchtower",
     "license": "Apache-2.0",
+    "openSource": true,
     "alternatives": [
       "ouroboros",
       "shepherd",

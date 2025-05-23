@@ -38,6 +38,8 @@ import {
   Headphones,
   MoveRight,
 } from "lucide-react";
+import { Navbar } from "@/components/Navbar";
+import _ from "lodash";
 
 // Icon mapping for categories
 const categoryIcons: Record<string, React.ReactNode> = {
@@ -219,49 +221,37 @@ const getColorClasses = (color: string) => {
   return colorMap[color] || colorMap.blue;
 };
 
+const categories = _.chain(projects)
+  .flatMap((project) => project.categories)
+
+  .value();
+
+const categoryCount = _.chain(projects)
+  .flatMap((project) => project.categories)
+  .countBy()
+  .value();
+
+const sortedCategories = _.chain(categoryCount)
+  .entries()
+  .map(([name, count]) => ({
+    name,
+    count,
+    icon: categoryIcons[name] || <Code className="w-4 h-4" />,
+    color: categoryColors[Math.floor(Math.random() * categoryColors.length)],
+  }))
+  .orderBy(["count"], ["desc"])
+  .value();
+
+const mainCats = sortedCategories.slice(0, 20);
+const additionalCats = sortedCategories.slice(20);
+
+// Group main categories into 4 columns (5 items each)
+const mainCategoriesGrouped = _.chunk(mainCats, 5);
+
 export default function CategoriesPage() {
-  // Process categories from project data
-  const { mainCategories, additionalCategories } = useMemo(() => {
-    // Count occurrences of each category
-    const categoryCounts: Record<string, number> = {};
-
-    projects.forEach((project) => {
-      project.categories.forEach((category) => {
-        categoryCounts[category] = (categoryCounts[category] || 0) + 1;
-      });
-    });
-
-    // Convert to array and sort by count (descending)
-    const sortedCategories = Object.entries(categoryCounts)
-      .map(([name, count]) => ({
-        name,
-        count,
-        icon: categoryIcons[name] || <Code className="w-4 h-4" />,
-        color:
-          categoryColors[Math.floor(Math.random() * categoryColors.length)],
-      }))
-      .sort((a, b) => b.count - a.count);
-
-    // Split into main categories (top 20) and additional categories
-    const mainCats = sortedCategories.slice(0, 20);
-    const additionalCats = sortedCategories.slice(20);
-
-    // Group main categories into 4 columns (5 items each)
-    const mainCategoriesGrouped = [
-      mainCats.slice(0, 5),
-      mainCats.slice(5, 10),
-      mainCats.slice(10, 15),
-      mainCats.slice(15, 20),
-    ];
-
-    return {
-      mainCategories: mainCategoriesGrouped,
-      additionalCategories: additionalCats,
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
+      <Navbar />
       <div className="container max-w-5xl mx-auto px-4 py-8">
         {/* Back to home link */}
         <Link href="/">
@@ -283,24 +273,24 @@ export default function CategoriesPage() {
             </Badge>
           </div>
           <h1 className="text-4xl font-bold mb-4">
-            Open Source Alternatives by Category
+            Open Source Projects by Category
           </h1>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-6">
-            Discover self-hostable open source alternatives for your favorite
+            Discover self-hostable open source projects for your favorite
             software categories.
           </p>
         </div>
 
         <div className="grid grid-cols-3">
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold mb-6">Main Categories</h2>
+            <h2 className="text-2xl font-bold mb-6">Top Categories</h2>
           </div>
         </div>
 
         {/* Main Categories Section */}
         <div className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
-            {mainCategories.map((categoryGroup, groupIndex) => (
+            {mainCategoriesGrouped.map((categoryGroup, groupIndex) => (
               <div key={groupIndex} className="space-y-6">
                 {categoryGroup.map((category) => (
                   <Link
@@ -333,7 +323,7 @@ export default function CategoriesPage() {
                       </div>
                       <div className="flex items-center gap-2">
                         <Badge variant="outline">
-                          {category.count} alternatives
+                          {category.count} projects
                         </Badge>
                         <MoveRight className="h-4 w-4 text-neutral-400 dark:text-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
@@ -346,11 +336,11 @@ export default function CategoriesPage() {
         </div>
 
         {/* Additional Categories */}
-        {additionalCategories.length > 0 && (
+        {additionalCats.length > 0 && (
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-6">More Categories</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {additionalCategories.map((category) => (
+              {additionalCats.map((category) => (
                 <Link
                   href={`/categories/${category.name
                     .toLowerCase()

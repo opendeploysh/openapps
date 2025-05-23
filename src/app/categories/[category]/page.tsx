@@ -45,6 +45,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { projects } from "@/lib/projects";
+import { Navbar } from "@/components/Navbar";
 
 // Categories with Lucide icons and descriptions - matching the categories page
 const categories = [
@@ -261,23 +262,22 @@ export default function CategoryPage() {
     categorySlug.charAt(0).toUpperCase() + categorySlug.slice(1);
 
   const category = categories.find(
-    (cat) => cat.name.toLowerCase() === categorySlug
+    (cat) => cat.name.toLowerCase() === categorySlug.toLowerCase()
   );
   const colors = category
     ? getColorClasses(category.color)
     : getColorClasses("blue");
 
   // Filter projects by the current category
-  const categoryProjects = projects.filter((project) =>
-    project.categories.some(
-      (cat) => cat.toLowerCase() === categorySlug.toLowerCase()
-    )
+
+  const categoryProjects = projects.filter((p) =>
+    p.categories.includes(categorySlug)
   );
 
-  // If category not found
-  if (!category) {
+  if (categoryProjects.length === 0) {
     return (
       <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
+        <Navbar />
         <div className="container max-w-5xl mx-auto px-4 py-8">
           <Link href="/categories">
             <Button variant="ghost" size="sm" className="mb-6">
@@ -306,6 +306,7 @@ export default function CategoryPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
+      <Navbar />
       <div className="container max-w-5xl mx-auto px-4 py-8">
         {/* Back to categories link */}
         <Link href="/categories">
