@@ -1,0 +1,80 @@
+---
+slug: prometheus
+name: Prometheus
+description: |
+  Prometheus is an open-source systems monitoring and alerting toolkit with a dimensional data model, powerful query language, and efficient time series database.
+logo:
+  dark: https://avatars.githubusercontent.com/u/3380462?s=200&v=4
+  light: https://avatars.githubusercontent.com/u/3380462?s=200&v=4
+categories: [monitoring, observability, time-series, metrics]
+github: prometheus/prometheus
+websiteUrl: https://prometheus.io
+license: Apache-2.0
+openSource: true
+alternatives: [influxdb, nagios, zabbix, datadog]
+stars: 54000
+language: Go
+deployment:
+  difficulty: "Medium"
+  justification: "Requires understanding of metrics collection, service discovery configuration, and PromQL. Setting up comprehensive monitoring needs careful planning of scrape targets and retention policies."
+---
+
+Prometheus is a powerful open-source monitoring system and time series database built for reliability and scalability. It collects and stores metrics as time series data, providing a flexible query language and alerting capabilities for modern infrastructure monitoring.
+
+## Key Features
+
+### Time Series Database
+
+- Efficient storage of time series data
+- Configurable retention policies
+- Automatic data compaction and compression
+- High-performance queries with PromQL
+- Multi-dimensional data model with labels
+- Built-in data federation capabilities
+
+### Metrics Collection
+
+- Pull-based metric collection model
+- Service discovery for dynamic environments
+- Support for custom exporters and integrations
+- Push gateway for short-lived jobs
+- Client libraries for multiple programming languages
+- Automatic target health monitoring
+
+### Query Language (PromQL)
+
+- Powerful functional query language
+- Time series selection and aggregation
+- Mathematical operations and functions
+- Rate calculations and trend analysis
+- Histogram and summary support
+- Vector matching and grouping
+
+### Service Discovery
+
+- Native Kubernetes integration
+- AWS, GCP, and Azure cloud provider support
+- Consul, Eureka, and DNS discovery
+- File-based static configuration
+- Custom service discovery mechanisms
+- Dynamic target reconfiguration
+
+### Alerting Integration
+
+- Alert rule definition and evaluation
+- Integration with Alertmanager
+- Flexible alert routing and grouping
+- Silence and inhibition capabilities
+- Webhook and notification integrations
+- Alert history and tracking
+
+### Ecosystem & Integrations
+
+- Extensive exporter ecosystem (Node, MySQL, Redis, etc.)
+- Grafana integration for visualization
+- Remote storage adapters
+- Federation for multi-cluster setups
+- Third-party tool integrations
+- Active community and development
+
+Prometheus is designed for reliability and operates well in distributed environments, making it an excellent choice for monitoring cloud-native applications, microservices, and traditional infrastructure.

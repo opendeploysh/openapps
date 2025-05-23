@@ -1,0 +1,107 @@
+---
+slug: mlflow
+name: MLflow
+description: |
+  MLflow is an open-source platform for managing machine learning lifecycles, including experimentation, reproducibility, deployment, and model registry.
+logo:
+  dark: https://avatars.githubusercontent.com/u/39938107?s=200&v=4
+  light: https://avatars.githubusercontent.com/u/39938107?s=200&v=4
+categories: [machine-learning, data-science, mlops, experimentation]
+github: mlflow/mlflow
+websiteUrl: https://mlflow.org
+license: Apache-2.0
+openSource: true
+alternatives: [kubeflow, wandb, neptune, clearml]
+stars: 18000
+language: Python
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Python environment and database setup for tracking server. Docker deployment available but proper configuration needed for production use with authentication and storage backends."
+---
+
+MLflow is a comprehensive open-source platform designed to manage the complete machine learning lifecycle. It provides tools for experiment tracking, model packaging, deployment, and model registry, making it easier for data scientists and ML engineers to collaborate and productionize machine learning models.
+
+## Key Features
+
+### Experiment Tracking
+
+- Log and query experiments with metrics, parameters, and artifacts
+- Compare runs across different experiments
+- Visualize metrics with built-in plotting capabilities
+- Track code versions, data versions, and environment details
+- Organize experiments with tags and notes
+- Search and filter experiments efficiently
+
+### Model Registry
+
+- Centralized model store with versioning
+- Model lifecycle management (staging, production, archived)
+- Model lineage and metadata tracking
+- Approval workflows for model promotion
+- REST API for programmatic access
+- Integration with CI/CD pipelines
+
+### Model Deployment
+
+- Deploy models to multiple platforms (REST API, batch, streaming)
+- Support for real-time and batch inference
+- Integration with cloud platforms (AWS, Azure, GCP)
+- Kubernetes and Docker deployment options
+- Model serving with autoscaling capabilities
+- A/B testing and canary deployments
+
+### Project Packaging
+
+- Reproducible ML projects with MLproject format
+- Environment management with conda and Docker
+- Parameter specification and validation
+- Entry point definition for different workflows
+- Version control integration
+- Cross-platform project execution
+
+### Model Formats
+
+- Support for multiple ML frameworks (scikit-learn, TensorFlow, PyTorch, etc.)
+- Standardized model packaging with MLmodel format
+- Custom model flavors for specialized use cases
+- Model signature and input/output schema validation
+- Automatic dependency management
+- Model artifact storage and versioning
+
+### Integration Capabilities
+
+- Native integration with popular ML frameworks
+- REST API and Python/R/Java client libraries
+- Integration with Jupyter notebooks and IDEs
+- Support for distributed training frameworks
+- Database backends (SQLite, MySQL, PostgreSQL)
+- Cloud storage integration (S3, Azure Blob, GCS)
+
+### User Interface
+
+- Web-based UI for experiment visualization
+- Model comparison and analysis tools
+- Real-time metric monitoring
+- Artifact visualization and download
+- Search and filtering capabilities
+- Customizable dashboards
+
+### Security & Governance
+
+- Authentication and authorization controls
+- Role-based access control (RBAC)
+- Audit logging and compliance tracking
+- Model approval workflows
+- Data lineage and provenance tracking
+- Integration with enterprise security systems
+
+### Scalability Features
+
+- Distributed experiment tracking
+- High-availability deployment options
+- Horizontal scaling for model serving
+- Load balancing and auto-scaling
+- Performance monitoring and optimization
+- Enterprise-grade reliability
+
+MLflow addresses the complex challenges of machine learning operations by providing a unified platform that scales from individual data scientists to large enterprise ML teams, ensuring reproducibility, collaboration, and efficient model lifecycle management.

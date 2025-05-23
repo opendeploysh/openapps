@@ -1,0 +1,89 @@
+---
+slug: watchtower
+name: Watchtower
+description: |
+  Watchtower is a container-based solution for automating Docker container base image updates, ensuring your containerized applications stay current with security patches and updates.
+logo:
+  dark: https://avatars.githubusercontent.com/u/2631269?s=200&v=4
+  light: https://avatars.githubusercontent.com/u/2631269?s=200&v=4
+categories: [automation, containers, docker, updates]
+github: containrrr/watchtower
+websiteUrl: https://containrrr.dev/watchtower
+license: Apache-2.0
+openSource: true
+alternatives: [ouroboros, shepherd, docker-rollout]
+stars: 18000
+language: Go
+deployment:
+  difficulty: "Easy"
+  justification: "Single container deployment with minimal configuration. Works out of the box with sensible defaults and optional fine-tuning."
+---
+
+Watchtower is an automated Docker container update service that monitors running containers and automatically updates them when new versions of their base images become available. It helps maintain security and functionality by keeping containerized applications current.
+
+## Key Features
+
+### Automatic Updates
+
+- Monitors Docker containers for image updates
+- Pulls new images automatically
+- Graceful container recreation with new images
+- Preserves container configuration and volumes
+- Scheduled update intervals
+- One-time update execution mode
+
+### Update Strategies
+
+- Rolling updates for zero-downtime deployments
+- Parallel updates for faster processing
+- Container lifecycle hooks for custom actions
+- Cleanup of old images after updates
+- Update ordering and dependencies
+- Rollback capabilities on failure
+
+### Monitoring & Control
+
+- Container include/exclude filtering
+- Label-based container selection
+- Registry authentication support
+- Update notification system
+- Dry-run mode for testing
+- Container health checking
+
+### Notification Integration
+
+- Email notifications for update events
+- Slack and Discord webhook support
+- Generic webhook notifications
+- Custom notification formatting
+- Success and failure reporting
+- Update summary statistics
+
+### Security Features
+
+- Registry credential management
+- Image signature verification
+- Private registry support
+- Secure communication protocols
+- Authentication token handling
+- Network isolation options
+
+### Configuration Options
+
+- Environment variable configuration
+- Command-line argument support
+- Container label-based settings
+- Schedule customization (cron-like)
+- Timezone-aware scheduling
+- Debug and logging controls
+
+### Advanced Features
+
+- Multiple registry support
+- Image tag monitoring (beyond 'latest')
+- Custom image update policies
+- Container dependency management
+- Resource usage optimization
+- Integration with CI/CD pipelines
+
+Watchtower eliminates the manual overhead of keeping Docker containers updated, providing a set-and-forget solution for maintaining current and secure containerized applications in production environments.

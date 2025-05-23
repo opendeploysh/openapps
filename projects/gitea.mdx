@@ -1,0 +1,68 @@
+---
+slug: gitea
+name: Gitea
+description: |
+  Gitea is a painless self-hosted Git service that provides a lightweight, 
+  fast and customizable alternative to GitHub and GitLab.
+logo:
+  dark: https://avatars.githubusercontent.com/u/12724356?s=200&v=4
+  light: https://avatars.githubusercontent.com/u/12724356?s=200&v=4
+categories: [developer-tools, collaboration, version-control]
+github: go-gitea/gitea
+websiteUrl: https://gitea.io
+license: MIT
+alternatives: [github, gitlab, gogs, bitbucket]
+stars: 38700
+language: Go
+deployment:
+  difficulty: "Easy"
+  justification: "Distributed as a single binary with minimal dependencies, has Docker support, and requires basic configuration. No complex database setup needed as it works with SQLite out of the box."
+---
+
+Gitea is a lightweight, self-hosted Git service that provides everything you
+need for collaborative development. It's designed to be fast, easy to install,
+and runs efficiently even on low-powered hardware like a Raspberry Pi or small
+VPS.
+
+## Key Features
+
+### Version Control
+
+- Complete Git repository management with web interface
+- Repository file editing and browsing
+- Multiple organization support
+- Flexible branch protection rules
+- Webhooks and Git hooks
+- SSH and HTTP/HTTPS protocols
+
+### Collaboration
+
+- Issue tracking with labels, milestones, and assignments
+- Pull requests with code review and inline comments
+- Wiki for project documentation
+- Activity timeline and notifications
+- Project boards for tracking tasks
+- Team management and permissions
+
+### Integration & Deployment
+
+- Compatible with GitHub Actions via Gitea Actions
+- Package registry supporting multiple formats (npm, Maven, Docker, etc.)
+- Webhooks for service integration
+- API for automation and custom clients
+- Container registry
+- OAuth2 provider
+
+### Administration
+
+- User management and authentication (LDAP, OAuth, etc.)
+- Repository migration from other platforms
+- Easy backup and restore
+- Customizable UI with light and dark themes
+- Email notifications
+- Monitoring and statistics
+
+Gitea provides a smooth, familiar Git workflow without the resource intensity
+of larger platforms. Its small memory footprint and quick setup process make it
+ideal for teams and individuals wanting to keep their code on their own
+infrastructure.

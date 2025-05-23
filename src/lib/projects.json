@@ -1,0 +1,1289 @@
+[
+  {
+    "slug": "13feet",
+    "name": "13Feet",
+    "description": "13Feet is a simple tool that bypasses paywalls by using Google's cache to access articles, \nproviding a clean reading experience without any ads or popups.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/69827559?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/69827559?s=200&v=4"
+    },
+    "categories": [
+      "tools",
+      "privacy"
+    ],
+    "github": "wasi-master/13ft",
+    "websiteUrl": "https://github.com/wasi-master/13ft",
+    "license": "MIT",
+    "alternatives": [
+      "12ft",
+      "archive.is",
+      "outline"
+    ],
+    "stars": 3200,
+    "lastUpdated": "2024-10-22T00:00:00.000Z",
+    "language": "Python",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Python application that can be deployed using standard web servers like nginx. Minimal configuration required and straightforward setup process."
+    }
+  },
+  {
+    "slug": "2fauth",
+    "name": "2FAuth",
+    "description": "2FAuth is a web-based self-hosted two-factor authentication (2FA) manager that allows you to securely store and manage your 2FA tokens in one place.\n",
+    "logo": {
+      "dark": "https://raw.githubusercontent.com/Bubka/2FAuth/master/public/img/2fauth.png",
+      "light": "https://raw.githubusercontent.com/Bubka/2FAuth/master/public/img/2fauth.png"
+    },
+    "categories": [
+      "security",
+      "authentication"
+    ],
+    "github": "Bubka/2FAuth",
+    "websiteUrl": "https://docs.2fauth.app",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "authy",
+      "google-authenticator"
+    ],
+    "stars": 1200,
+    "language": "PHP",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple deployment via Docker or traditional web server setup. Comes with clear documentation and straightforward configuration options."
+    }
+  },
+  {
+    "slug": "adguard-home",
+    "name": "AdGuard Home",
+    "description": "AdGuard Home is a network-wide DNS server that blocks ads, trackers, and malicious domains while providing detailed analytics and customizable filtering rules.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/5947035?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/5947035?s=200&v=4"
+    },
+    "categories": [
+      "network",
+      "dns",
+      "ad-blocking",
+      "privacy"
+    ],
+    "github": "AdguardTeam/AdGuardHome",
+    "websiteUrl": "https://adguard.com/adguard-home",
+    "license": "GPL-3.0",
+    "alternatives": [
+      "pi-hole",
+      "unbound",
+      "blocky",
+      "technitium"
+    ],
+    "stars": 24000,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single binary deployment with web-based setup wizard. Cross-platform compatibility and Docker support make installation straightforward on various systems."
+    }
+  },
+  {
+    "slug": "akaunting",
+    "name": "Akaunting",
+    "description": "Akaunting is a free online accounting software designed for small businesses and freelancers, providing invoicing, expense tracking, and financial reporting.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/18650335?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/18650335?s=200&v=4"
+    },
+    "categories": [
+      "business",
+      "finance",
+      "accounting",
+      "invoicing"
+    ],
+    "github": "akaunting/akaunting",
+    "websiteUrl": "https://akaunting.com",
+    "license": "GPL-3.0",
+    "alternatives": [
+      "invoice-ninja",
+      "crater",
+      "gnucash",
+      "odoo"
+    ],
+    "stars": 7900,
+    "language": "PHP",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Standard web application deployment requiring PHP, web server, and database. Installation wizard simplifies setup but proper configuration needed for production use."
+    }
+  },
+  {
+    "slug": "bitwarden",
+    "name": "Bitwarden",
+    "description": "Bitwarden is an open-source password management solution that helps you store, \ngenerate, and secure your passwords across all devices and platforms.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/15990069?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/15990069?s=200&v=4"
+    },
+    "categories": [
+      "security",
+      "password-manager",
+      "productivity"
+    ],
+    "github": "bitwarden/server",
+    "websiteUrl": "https://bitwarden.com/",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "1password",
+      "lastpass",
+      "keepass",
+      "dashlane"
+    ],
+    "stars": 14500,
+    "language": "C#",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires setting up multiple components including web server, database, and supporting services. The Docker deployment simplifies this, but proper configuration for security and high availability requires careful planning and technical knowledge."
+    }
+  },
+  {
+    "slug": "bookstack",
+    "name": "BookStack",
+    "description": "BookStack is a self-hosted platform for organizing and storing information in a book-like structure, perfect for documentation, wikis, and knowledge management.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/20252628?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/20252628?s=200&v=4"
+    },
+    "categories": [
+      "productivity",
+      "documentation",
+      "knowledge-base",
+      "wiki"
+    ],
+    "github": "BookStackApp/BookStack",
+    "websiteUrl": "https://www.bookstackapp.com",
+    "license": "MIT",
+    "alternatives": [
+      "outline",
+      "notion",
+      "tiddlywiki",
+      "dokuwiki"
+    ],
+    "stars": 14000,
+    "language": "PHP",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires web server, PHP, and MySQL/MariaDB setup. Well-documented installation process with Docker options available."
+    }
+  },
+  {
+    "slug": "crater",
+    "name": "Crater",
+    "description": "Crater is a web and mobile application for tracking expenses and payments, perfect for freelancers and small businesses to manage their invoicing and financial operations.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/37308010?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/37308010?s=200&v=4"
+    },
+    "categories": [
+      "business",
+      "finance",
+      "invoicing",
+      "mobile"
+    ],
+    "github": "crater-invoice/crater",
+    "websiteUrl": "https://craterapp.com",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "invoice-ninja",
+      "akaunting",
+      "freshbooks",
+      "wave"
+    ],
+    "stars": 7800,
+    "language": "PHP",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Web application requiring PHP environment and database setup. Mobile app provides additional complexity but Docker deployment simplifies installation process."
+    }
+  },
+  {
+    "slug": "docker-registry",
+    "name": "Docker Registry",
+    "description": "Docker Registry is the official storage and distribution service for Docker images, providing a simple and scalable way to store and share container images privately.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/5429470?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/5429470?s=200&v=4"
+    },
+    "categories": [
+      "containers",
+      "registry",
+      "storage",
+      "distribution"
+    ],
+    "github": "distribution/distribution",
+    "websiteUrl": "https://docs.docker.com/registry",
+    "license": "Apache-2.0",
+    "alternatives": [
+      "harbor",
+      "quay",
+      "amazon-ecr",
+      "nexus"
+    ],
+    "stars": 8600,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Docker container deployment with minimal configuration. Basic setup works out of the box, with optional advanced features for production use."
+    }
+  },
+  {
+    "slug": "drone",
+    "name": "Drone CI",
+    "description": "Drone is a modern continuous integration platform built on container technology that automates software testing and deployment with simple YAML configuration.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/2181346?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/2181346?s=200&v=4"
+    },
+    "categories": [
+      "development",
+      "ci-cd",
+      "automation",
+      "containers"
+    ],
+    "github": "harness/drone",
+    "websiteUrl": "https://www.drone.io",
+    "license": "Apache-2.0",
+    "alternatives": [
+      "jenkins",
+      "gitlab-ci",
+      "github-actions",
+      "buildkite"
+    ],
+    "stars": 32000,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Straightforward Docker deployment but requires proper runner configuration and integration with version control systems. Documentation is comprehensive."
+    }
+  },
+  {
+    "slug": "duplicati",
+    "name": "Duplicati",
+    "description": "Duplicati is a backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/3043412?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/3043412?s=200&v=4"
+    },
+    "categories": [
+      "backup",
+      "storage",
+      "encryption",
+      "cloud"
+    ],
+    "github": "duplicati/duplicati",
+    "websiteUrl": "https://www.duplicati.com",
+    "license": "LGPL-2.1",
+    "alternatives": [
+      "restic",
+      "borg-backup",
+      "rclone",
+      "duplicity"
+    ],
+    "stars": 11000,
+    "language": "C#",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple installation with cross-platform support. Web-based configuration interface makes setup straightforward with minimal technical knowledge required."
+    }
+  },
+  {
+    "slug": "emby",
+    "name": "Emby Server",
+    "description": "Emby is a personal media server that organizes your media collection and streams it to any device with advanced features for families and media enthusiasts.\n",
+    "logo": {
+      "dark": "https://github.com/MediaBrowser/Emby.Resources/raw/master/images/logos/emby.png",
+      "light": "https://github.com/MediaBrowser/Emby.Resources/raw/master/images/logos/emby.png"
+    },
+    "categories": [
+      "media",
+      "streaming",
+      "entertainment"
+    ],
+    "github": "MediaBrowser/Emby",
+    "websiteUrl": "https://emby.media",
+    "license": "GPL-2.0",
+    "openSource": true,
+    "alternatives": [
+      "plex",
+      "jellyfin",
+      "kodi"
+    ],
+    "stars": 3900,
+    "language": "C#",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Straightforward installation with Docker support and comprehensive documentation. Setup wizard guides through initial configuration."
+    }
+  },
+  {
+    "slug": "firefly-iii",
+    "name": "Firefly III",
+    "description": "Firefly III is a modern, self-hosted personal finance manager that helps you track \nexpenses, income, budgets and manage your financial life.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/14716158?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/14716158?s=200&v=4"
+    },
+    "categories": [
+      "finance",
+      "money-management",
+      "productivity"
+    ],
+    "github": "firefly-iii/firefly-iii",
+    "websiteUrl": "https://www.firefly-iii.org/",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "ynab",
+      "mint",
+      "gnucash",
+      "quickbooks"
+    ],
+    "stars": 11300,
+    "language": "PHP",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Offers a well-documented Docker setup that requires minimal configuration. The installer handles database setup, and there's an option to use a pre-configured Docker Compose file that sets up the application and all required dependencies in one step."
+    }
+  },
+  {
+    "slug": "gitea",
+    "name": "Gitea",
+    "description": "Gitea is a painless self-hosted Git service that provides a lightweight, \nfast and customizable alternative to GitHub and GitLab.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/12724356?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/12724356?s=200&v=4"
+    },
+    "categories": [
+      "developer-tools",
+      "collaboration",
+      "version-control"
+    ],
+    "github": "go-gitea/gitea",
+    "websiteUrl": "https://gitea.io",
+    "license": "MIT",
+    "alternatives": [
+      "github",
+      "gitlab",
+      "gogs",
+      "bitbucket"
+    ],
+    "stars": 38700,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Distributed as a single binary with minimal dependencies, has Docker support, and requires basic configuration. No complex database setup needed as it works with SQLite out of the box."
+    }
+  },
+  {
+    "slug": "gitlab",
+    "name": "GitLab",
+    "description": "GitLab is a complete DevOps platform that provides Git repository management, CI/CD pipelines, issue tracking, and collaboration tools in a single application.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/1086321?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/1086321?s=200&v=4"
+    },
+    "categories": [
+      "development",
+      "devops",
+      "git",
+      "ci-cd",
+      "collaboration"
+    ],
+    "github": "gitlabhq/gitlabhq",
+    "websiteUrl": "https://about.gitlab.com",
+    "license": "MIT",
+    "alternatives": [
+      "github",
+      "gitea",
+      "forgejo",
+      "sourcehut"
+    ],
+    "stars": 23000,
+    "language": "Ruby",
+    "deployment": {
+      "difficulty": "Hard",
+      "justification": "Complex installation requiring significant resources, database setup, and careful configuration. Multiple components need coordination for optimal performance."
+    }
+  },
+  {
+    "slug": "grafana",
+    "name": "Grafana",
+    "description": "Grafana is an open-source observability platform for monitoring and analyzing metrics, logs, and traces with beautiful, customizable dashboards and alerting capabilities.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/7195757?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/7195757?s=200&v=4"
+    },
+    "categories": [
+      "monitoring",
+      "observability",
+      "analytics",
+      "visualization"
+    ],
+    "github": "grafana/grafana",
+    "websiteUrl": "https://grafana.com",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "kibana",
+      "datadog",
+      "new-relic",
+      "prometheus-ui"
+    ],
+    "stars": 62000,
+    "language": "TypeScript",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Straightforward installation but requires proper data source configuration. Advanced features like alerting and authentication need additional setup."
+    }
+  },
+  {
+    "slug": "harbor",
+    "name": "Harbor",
+    "description": "Harbor is an open-source container registry that secures artifacts with role-based access control, scans images for vulnerabilities, and signs images as trusted.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/21667947?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/21667947?s=200&v=4"
+    },
+    "categories": [
+      "containers",
+      "registry",
+      "security",
+      "devops"
+    ],
+    "github": "goharbor/harbor",
+    "websiteUrl": "https://goharbor.io",
+    "license": "Apache-2.0",
+    "alternatives": [
+      "docker-registry",
+      "quay",
+      "amazon-ecr",
+      "google-gcr"
+    ],
+    "stars": 23000,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires proper SSL configuration, database setup, and integration with authentication systems. Docker Compose deployment simplifies setup but production needs careful planning."
+    }
+  },
+  {
+    "slug": "headscale",
+    "name": "Headscale",
+    "description": "Headscale is an open source, self-hosted implementation of the Tailscale control server that allows you to build and manage your own private network.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/85033701?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/85033701?s=200&v=4"
+    },
+    "categories": [
+      "networking",
+      "security",
+      "vpn"
+    ],
+    "github": "juanfont/headscale",
+    "websiteUrl": "https://github.com/juanfont/headscale",
+    "license": "BSD-3-Clause",
+    "alternatives": [
+      "tailscale",
+      "zerotier",
+      "nebula",
+      "netmaker"
+    ],
+    "stars": 15800,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires a web server setup (Go, PostgreSQL), has specific server requirements for optimal performance, and needs occasional maintenance for updates and database optimization."
+    }
+  },
+  {
+    "slug": "home-assistant",
+    "name": "Home Assistant",
+    "description": "Home Assistant is an open-source home automation platform that puts local control \nand privacy first, with a powerful integration ecosystem for smart home devices.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/13844975?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/13844975?s=200&v=4"
+    },
+    "categories": [
+      "home-automation",
+      "iot",
+      "smart-home"
+    ],
+    "github": "home-assistant/core",
+    "websiteUrl": "https://www.home-assistant.io/",
+    "license": "Apache-2.0",
+    "alternatives": [
+      "openhab",
+      "hubitat",
+      "smartthings"
+    ],
+    "stars": 62400,
+    "language": "Python",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "While Home Assistant OS and supervised installations are straightforward, achieving optimal functionality often requires additional configuration for integrations, networking setup for devices, and occasional troubleshooting for complex automations."
+    }
+  },
+  {
+    "slug": "immich",
+    "name": "Immich",
+    "description": "Immich is a high-performance, self-hosted photo and video backup solution \ndesigned as an alternative to Google Photos and Apple Photos.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/97614458?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/97614458?s=200&v=4"
+    },
+    "categories": [
+      "photos",
+      "backup",
+      "media-management"
+    ],
+    "github": "immich-app/immich",
+    "websiteUrl": "https://immich.app/",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "google-photos",
+      "photoprism",
+      "apple-photos"
+    ],
+    "stars": 20500,
+    "language": "TypeScript",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Installation is streamlined with Docker Compose, which sets up all required components automatically. A detailed getting started guide walks users through the simple setup process, and the web interface provides intuitive configuration options after installation."
+    }
+  },
+  {
+    "slug": "invoice-ninja",
+    "name": "Invoice Ninja",
+    "description": "Invoice Ninja is a powerful invoicing and billing platform that helps businesses create professional invoices, track payments, and manage client relationships.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/8300080?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/8300080?s=200&v=4"
+    },
+    "categories": [
+      "business",
+      "finance",
+      "invoicing",
+      "accounting"
+    ],
+    "github": "invoiceninja/invoiceninja",
+    "websiteUrl": "https://invoiceninja.org",
+    "license": "Elastic-2.0",
+    "alternatives": [
+      "akaunting",
+      "crater",
+      "freshbooks",
+      "quickbooks"
+    ],
+    "stars": 8100,
+    "language": "PHP",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires web server, PHP, and database setup. Docker deployment available but needs proper configuration for email, payments, and security features."
+    }
+  },
+  {
+    "slug": "jellyfin",
+    "name": "Jellyfin",
+    "description": "Jellyfin is a free and open source media server that puts you in control of \nmanaging and streaming your media collection.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/45698031?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/45698031?s=200&v=4"
+    },
+    "categories": [
+      "media",
+      "entertainment",
+      "streaming"
+    ],
+    "github": "jellyfin/jellyfin",
+    "websiteUrl": "https://jellyfin.org",
+    "license": "GPL-2.0",
+    "alternatives": [
+      "plex",
+      "emby",
+      "kodi"
+    ],
+    "stars": 24500,
+    "language": "C#",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Offers simple installation options including Docker, package managers, and pre-built binaries. Setup wizard guides users through initial configuration, and media library scanning is automated."
+    }
+  },
+  {
+    "slug": "jellyseerr",
+    "name": "Jellyseerr",
+    "description": "Jellyseerr is a request management and media discovery tool for Jellyfin and Emby media servers, allowing users to request movies and TV shows with approval workflows.\n",
+    "logo": {
+      "dark": "https://github.com/Fallenbagel/jellyseerr/raw/develop/public/logo_full.svg",
+      "light": "https://github.com/Fallenbagel/jellyseerr/raw/develop/public/logo_full.svg"
+    },
+    "categories": [
+      "media",
+      "automation",
+      "request-management"
+    ],
+    "github": "Fallenbagel/jellyseerr",
+    "websiteUrl": "https://github.com/Fallenbagel/jellyseerr",
+    "license": "MIT",
+    "openSource": true,
+    "alternatives": [
+      "overseerr",
+      "ombi",
+      "petio"
+    ],
+    "stars": 3600,
+    "language": "TypeScript",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires integration with media servers and download clients. Configuration involves multiple services but is well-documented with Docker support."
+    }
+  },
+  {
+    "slug": "joplin-server",
+    "name": "Joplin Server",
+    "description": "Joplin Server is a self-hosted synchronization server for Joplin, the open-source note-taking application, providing secure note synchronization across devices.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/33705167?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/33705167?s=200&v=4"
+    },
+    "categories": [
+      "productivity",
+      "notes",
+      "synchronization",
+      "knowledge-management"
+    ],
+    "github": "laurent22/joplin",
+    "websiteUrl": "https://joplinapp.org",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "standard-notes-server",
+      "trilium",
+      "obsidian-sync"
+    ],
+    "stars": 45000,
+    "language": "TypeScript",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires PostgreSQL database setup and proper configuration. Docker deployment available but needs environment configuration for optimal performance."
+    }
+  },
+  {
+    "slug": "mastodon",
+    "name": "Mastodon",
+    "description": "Mastodon is a decentralized social media platform that provides Twitter-like microblogging with federation, privacy controls, and community-focused moderation.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/23211827?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/23211827?s=200&v=4"
+    },
+    "categories": [
+      "social-media",
+      "federation",
+      "communication",
+      "microblogging"
+    ],
+    "github": "mastodon/mastodon",
+    "websiteUrl": "https://joinmastodon.org",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "pleroma",
+      "misskey",
+      "diaspora",
+      "friendica"
+    ],
+    "stars": 47000,
+    "language": "Ruby",
+    "deployment": {
+      "difficulty": "Hard",
+      "justification": "Complex deployment requiring PostgreSQL, Redis, Elasticsearch, object storage, and email configuration. Resource-intensive with significant maintenance overhead."
+    }
+  },
+  {
+    "slug": "matomo",
+    "name": "Matomo",
+    "description": "Matomo is a powerful open source web analytics platform that gives you \ncomplete data ownership and privacy compliance without compromising on features.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/991698?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/991698?s=200&v=4"
+    },
+    "categories": [
+      "analytics",
+      "privacy",
+      "marketing"
+    ],
+    "github": "matomo-org/matomo",
+    "websiteUrl": "https://matomo.org",
+    "license": "GPL-3.0",
+    "alternatives": [
+      "google-analytics",
+      "fathom",
+      "plausible",
+      "umami"
+    ],
+    "stars": 17800,
+    "language": "PHP",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires a web server setup (PHP, MySQL/MariaDB), has specific server requirements for optimal performance, and needs occasional maintenance for updates and database optimization."
+    }
+  },
+  {
+    "slug": "matrix-synapse",
+    "name": "Matrix Synapse",
+    "description": "Matrix Synapse is the reference homeserver implementation for the Matrix protocol, providing decentralized real-time communication with end-to-end encryption.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/8418310?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/8418310?s=200&v=4"
+    },
+    "categories": [
+      "communication",
+      "messaging",
+      "federation",
+      "privacy"
+    ],
+    "github": "matrix-org/synapse",
+    "websiteUrl": "https://matrix.org",
+    "license": "Apache-2.0",
+    "alternatives": [
+      "rocket-chat",
+      "mattermost",
+      "element",
+      "discord"
+    ],
+    "stars": 11000,
+    "language": "Python",
+    "deployment": {
+      "difficulty": "Hard",
+      "justification": "Complex setup requiring database configuration, federation setup, and proper SSL certificates. Performance tuning and security hardening require expertise."
+    }
+  },
+  {
+    "slug": "mattermost",
+    "name": "Mattermost",
+    "description": "Mattermost is an open-source team collaboration platform that provides secure messaging, file sharing, and workflow automation for enterprises and development teams.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/9828093?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/9828093?s=200&v=4"
+    },
+    "categories": [
+      "communication",
+      "collaboration",
+      "team-chat",
+      "enterprise"
+    ],
+    "github": "mattermost/mattermost",
+    "websiteUrl": "https://mattermost.com",
+    "license": "MIT",
+    "alternatives": [
+      "slack",
+      "rocket-chat",
+      "microsoft-teams",
+      "discord"
+    ],
+    "stars": 30000,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Straightforward installation with Docker support, but requires database setup and proper configuration for enterprise features and high availability."
+    }
+  },
+  {
+    "slug": "n8n",
+    "name": "n8n",
+    "description": "n8n is an extendable workflow automation tool that allows you to connect \nvarious services and applications to automate tasks without coding.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/45487711?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/45487711?s=200&v=4"
+    },
+    "categories": [
+      "automation",
+      "productivity",
+      "integration"
+    ],
+    "github": "n8n-io/n8n",
+    "websiteUrl": "https://n8n.io/",
+    "license": "Apache-2.0",
+    "alternatives": [
+      "zapier",
+      "make",
+      "integromat",
+      "apache-airflow"
+    ],
+    "stars": 35000,
+    "language": "TypeScript",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Can be installed with npm in one command, has an official Docker image, and works with SQLite by default requiring no external database. Initial setup is straightforward with minimal configuration needed to start building workflows."
+    }
+  },
+  {
+    "slug": "nextcloud",
+    "name": "Nextcloud",
+    "description": "Nextcloud offers on-premises file sync, sharing and collaboration \nplatform with advanced security and privacy features.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/19211038?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/19211038?s=200&v=4"
+    },
+    "categories": [
+      "storage",
+      "collaboration",
+      "security"
+    ],
+    "github": "nextcloud/server",
+    "websiteUrl": "https://nextcloud.com",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "owncloud",
+      "syncthing",
+      "filebrowser",
+      "filestash",
+      "seafile",
+      "standstore"
+    ],
+    "stars": 10000,
+    "language": "PHP",
+    "deploymentDifficulty": "Advanced"
+  },
+  {
+    "slug": "outline",
+    "name": "Outline",
+    "description": "Outline is a team knowledge base and wiki that combines the best of Google Docs and Notion with a focus on speed, collaboration, and elegant design.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/28698253?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/28698253?s=200&v=4"
+    },
+    "categories": [
+      "productivity",
+      "collaboration",
+      "documentation",
+      "knowledge-base"
+    ],
+    "github": "outline/outline",
+    "websiteUrl": "https://www.getoutline.com",
+    "license": "BSD-3-Clause",
+    "alternatives": [
+      "notion",
+      "bookstack",
+      "tiddlywiki",
+      "dokuwiki"
+    ],
+    "stars": 26000,
+    "language": "TypeScript",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires PostgreSQL, Redis, and S3-compatible storage setup. OAuth configuration needed for authentication. Docker deployment available but needs proper environment configuration."
+    }
+  },
+  {
+    "slug": "pfsense",
+    "name": "pfSense",
+    "description": "pfSense is an open-source firewall and router platform based on FreeBSD that provides enterprise-grade security, VPN, and network management capabilities.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/16814735?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/16814735?s=200&v=4"
+    },
+    "categories": [
+      "network",
+      "firewall",
+      "router",
+      "security"
+    ],
+    "github": "pfsense/pfsense",
+    "websiteUrl": "https://www.pfsense.org",
+    "license": "Apache-2.0",
+    "alternatives": [
+      "opnsense",
+      "openwrt",
+      "untangle",
+      "fortigate"
+    ],
+    "stars": 4800,
+    "language": "PHP",
+    "deployment": {
+      "difficulty": "Hard",
+      "justification": "Complex network appliance requiring dedicated hardware or virtualization. Network configuration, firewall rules, and VPN setup require significant networking knowledge."
+    }
+  },
+  {
+    "slug": "pi-hole",
+    "name": "Pi-hole",
+    "description": "Pi-hole is a network-level advertisement and internet tracker blocking application that acts as a DNS sinkhole to protect your entire network from unwanted content.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/17050070?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/17050070?s=200&v=4"
+    },
+    "categories": [
+      "network",
+      "dns",
+      "ad-blocking",
+      "privacy"
+    ],
+    "github": "pi-hole/pi-hole",
+    "websiteUrl": "https://pi-hole.net",
+    "license": "EUPL-1.2",
+    "alternatives": [
+      "adguard-home",
+      "unbound",
+      "blocky",
+      "technitium"
+    ],
+    "stars": 48000,
+    "language": "Shell",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple one-line installation script works on most Linux distributions. Raspberry Pi optimized but runs on various hardware with minimal configuration."
+    }
+  },
+  {
+    "slug": "plex",
+    "name": "Plex Media Server",
+    "description": "Plex is a powerful media server that organizes your movies, TV shows, music, and photos, streaming them to any device with a beautiful, easy-to-use interface.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/2118708?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/2118708?s=200&v=4"
+    },
+    "categories": [
+      "media",
+      "streaming",
+      "entertainment"
+    ],
+    "github": "plexinc/pms-docker",
+    "websiteUrl": "https://www.plex.tv",
+    "license": "Proprietary",
+    "openSource": false,
+    "alternatives": [
+      "jellyfin",
+      "emby",
+      "kodi"
+    ],
+    "stars": 2800,
+    "language": "Docker",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Docker deployment with automatic media detection and organization. Well-documented setup process with extensive community support."
+    }
+  },
+  {
+    "slug": "portainer",
+    "name": "Portainer",
+    "description": "Portainer is a lightweight management UI for Docker, Docker Swarm, Kubernetes, and ACI that simplifies container management through an intuitive web interface.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/22225832?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/22225832?s=200&v=4"
+    },
+    "categories": [
+      "containers",
+      "management",
+      "docker",
+      "kubernetes"
+    ],
+    "github": "portainer/portainer",
+    "websiteUrl": "https://www.portainer.io",
+    "license": "Zlib",
+    "alternatives": [
+      "rancher",
+      "docker-desktop",
+      "lazydocker",
+      "dockstation"
+    ],
+    "stars": 30000,
+    "language": "TypeScript",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Extremely simple deployment as a single Docker container. No complex configuration required, connects automatically to Docker daemon."
+    }
+  },
+  {
+    "slug": "prometheus",
+    "name": "Prometheus",
+    "description": "Prometheus is an open-source systems monitoring and alerting toolkit with a dimensional data model, powerful query language, and efficient time series database.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/3380462?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/3380462?s=200&v=4"
+    },
+    "categories": [
+      "monitoring",
+      "observability",
+      "time-series",
+      "metrics"
+    ],
+    "github": "prometheus/prometheus",
+    "websiteUrl": "https://prometheus.io",
+    "license": "Apache-2.0",
+    "alternatives": [
+      "influxdb",
+      "nagios",
+      "zabbix",
+      "datadog"
+    ],
+    "stars": 54000,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires understanding of metrics collection, service discovery configuration, and PromQL. Setting up comprehensive monitoring needs careful planning of scrape targets and retention policies."
+    }
+  },
+  {
+    "slug": "radarr",
+    "name": "Radarr",
+    "description": "Radarr is a movie collection manager for Usenet and BitTorrent users that can monitor multiple RSS feeds for new movies and interface with clients and indexers to grab, sort, and rename them.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/25025331?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/25025331?s=200&v=4"
+    },
+    "categories": [
+      "media",
+      "automation"
+    ],
+    "github": "Radarr/Radarr",
+    "websiteUrl": "https://radarr.video",
+    "license": "GPL-3.0",
+    "alternatives": [
+      "couchpotato",
+      "watcher"
+    ],
+    "stars": 7200,
+    "language": "C#",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Similar to Sonarr, Radarr provides multiple installation methods including Docker containers and native packages. Setup is straightforward through the web interface with an initial configuration wizard and broad support for popular download clients."
+    }
+  },
+  {
+    "slug": "restic",
+    "name": "Restic",
+    "description": "Restic is a modern backup program that provides fast, secure, and efficient backups with deduplication, encryption, and verification across multiple storage backends.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/10818542?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/10818542?s=200&v=4"
+    },
+    "categories": [
+      "backup",
+      "storage",
+      "encryption",
+      "command-line"
+    ],
+    "github": "restic/restic",
+    "websiteUrl": "https://restic.net",
+    "license": "BSD-2-Clause",
+    "alternatives": [
+      "duplicati",
+      "borg-backup",
+      "duplicity",
+      "kopia"
+    ],
+    "stars": 26000,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single binary deployment with no dependencies. Command-line interface is well-documented and straightforward for both basic and advanced usage."
+    }
+  },
+  {
+    "slug": "rocket-chat",
+    "name": "Rocket.Chat",
+    "description": "Rocket.Chat is an open-source team communication platform that provides messaging, video conferencing, and collaboration tools with extensive customization options.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/12508788?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/12508788?s=200&v=4"
+    },
+    "categories": [
+      "communication",
+      "collaboration",
+      "team-chat",
+      "video-conferencing"
+    ],
+    "github": "RocketChat/Rocket.Chat",
+    "websiteUrl": "https://rocket.chat",
+    "license": "MIT",
+    "alternatives": [
+      "mattermost",
+      "slack",
+      "matrix-element",
+      "discord"
+    ],
+    "stars": 40000,
+    "language": "TypeScript",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Docker deployment available with good documentation. Requires MongoDB setup and proper configuration for scalability and advanced features."
+    }
+  },
+  {
+    "slug": "sonarr",
+    "name": "Sonarr",
+    "description": "Sonarr is a smart PVR for newsgroup and bittorrent users that automatically \ndownloads and organizes your TV shows.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/1082903?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/1082903?s=200&v=4"
+    },
+    "categories": [
+      "media",
+      "automation"
+    ],
+    "github": "Sonarr/Sonarr",
+    "websiteUrl": "https://sonarr.tv",
+    "license": "GPL-3.0",
+    "alternatives": [
+      "sickrage",
+      "sickbeard",
+      "medusa"
+    ],
+    "stars": 8800,
+    "language": "C#",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Offers installation options for all major platforms including Docker, package managers, and standalone binaries. The web interface handles most configuration with a setup wizard, and many popular download clients are supported out of the box."
+    }
+  },
+  {
+    "slug": "standard-notes",
+    "name": "Standard Notes Server",
+    "description": "Standard Notes Server is a self-hosted backend for the Standard Notes application, providing encrypted note-taking with complete privacy and data ownership.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/15885620?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/15885620?s=200&v=4"
+    },
+    "categories": [
+      "productivity",
+      "notes",
+      "privacy",
+      "encryption"
+    ],
+    "github": "standardnotes/server",
+    "websiteUrl": "https://standardnotes.com",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "joplin-server",
+      "trilium",
+      "obsidian"
+    ],
+    "stars": 5100,
+    "language": "TypeScript",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires database setup (MySQL/MariaDB) and Redis. Docker deployment available with comprehensive documentation, but proper configuration needed for production use."
+    }
+  },
+  {
+    "slug": "tautulli",
+    "name": "Tautulli",
+    "description": "Tautulli is a monitoring and analytics application for Plex Media Server that provides detailed statistics, notifications, and user activity tracking.\n",
+    "logo": {
+      "dark": "https://github.com/Tautulli/Tautulli/raw/master/data/interfaces/default/images/logo-circle.png",
+      "light": "https://github.com/Tautulli/Tautulli/raw/master/data/interfaces/default/images/logo-circle.png"
+    },
+    "categories": [
+      "monitoring",
+      "analytics",
+      "media"
+    ],
+    "github": "Tautulli/Tautulli",
+    "websiteUrl": "https://tautulli.com",
+    "license": "GPL-3.0",
+    "openSource": true,
+    "alternatives": [
+      "plexpy",
+      "varken",
+      "grafana-plex-dashboard"
+    ],
+    "stars": 5100,
+    "language": "Python",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple installation process with Docker support. Connects easily to existing Plex server with minimal configuration required."
+    }
+  },
+  {
+    "slug": "unifi-controller",
+    "name": "UniFi Network Application",
+    "description": "The UniFi Network Application is a powerful network management platform for UniFi devices, providing centralized configuration, monitoring, and control of enterprise networking equipment.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/8191761?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/8191761?s=200&v=4"
+    },
+    "categories": [
+      "network",
+      "management",
+      "enterprise",
+      "wifi"
+    ],
+    "github": "jacobalberty/unifi-docker",
+    "websiteUrl": "https://ui.com",
+    "license": "Proprietary",
+    "alternatives": [
+      "omada-controller",
+      "meraki",
+      "cisco-prime",
+      "aruba-central"
+    ],
+    "stars": 1200,
+    "language": "Java",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Java runtime and MongoDB database. Docker deployment available but needs proper configuration for device discovery and SSL certificates."
+    }
+  },
+  {
+    "slug": "urbackup",
+    "name": "UrBackup",
+    "description": "UrBackup is an easy-to-setup open-source client/server backup system with web interface that provides automated file and image backups for Windows, Linux, and macOS.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/2648717?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/2648717?s=200&v=4"
+    },
+    "categories": [
+      "backup",
+      "client-server",
+      "automation",
+      "enterprise"
+    ],
+    "github": "uroni/urbackup_backend",
+    "websiteUrl": "https://www.urbackup.org",
+    "license": "AGPL-3.0",
+    "alternatives": [
+      "bacula",
+      "amanda",
+      "duplicati",
+      "veeam"
+    ],
+    "stars": 700,
+    "language": "C++",
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Server setup requires database configuration and network planning. Client deployment is straightforward, but proper configuration for enterprise environments needs careful planning."
+    }
+  },
+  {
+    "slug": "watchtower",
+    "name": "Watchtower",
+    "description": "Watchtower is a container-based solution for automating Docker container base image updates, ensuring your containerized applications stay current with security patches and updates.\n",
+    "logo": {
+      "dark": "https://avatars.githubusercontent.com/u/2631269?s=200&v=4",
+      "light": "https://avatars.githubusercontent.com/u/2631269?s=200&v=4"
+    },
+    "categories": [
+      "automation",
+      "containers",
+      "docker",
+      "updates"
+    ],
+    "github": "containrrr/watchtower",
+    "websiteUrl": "https://containrrr.dev/watchtower",
+    "license": "Apache-2.0",
+    "alternatives": [
+      "ouroboros",
+      "shepherd",
+      "docker-rollout"
+    ],
+    "stars": 18000,
+    "language": "Go",
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single container deployment with minimal configuration. Works out of the box with sensible defaults and optional fine-tuning."
+    }
+  }
+]

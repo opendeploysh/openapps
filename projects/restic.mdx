@@ -1,0 +1,107 @@
+---
+slug: restic
+name: Restic
+description: |
+  Restic is a modern backup program that provides fast, secure, and efficient backups with deduplication, encryption, and verification across multiple storage backends.
+logo:
+  dark: https://avatars.githubusercontent.com/u/10818542?s=200&v=4
+  light: https://avatars.githubusercontent.com/u/10818542?s=200&v=4
+categories: [backup, storage, encryption, command-line]
+github: restic/restic
+websiteUrl: https://restic.net
+license: BSD-2-Clause
+openSource: true
+alternatives: [duplicati, borg-backup, duplicity, kopia]
+stars: 26000
+language: Go
+deployment:
+  difficulty: "Easy"
+  justification: "Single binary deployment with no dependencies. Command-line interface is well-documented and straightforward for both basic and advanced usage."
+---
+
+Restic is a fast, secure, and cross-platform backup program designed with modern storage backends in mind. It provides robust data protection through encryption, deduplication, and verification while maintaining excellent performance and ease of use.
+
+## Key Features
+
+### Security & Encryption
+
+- Strong encryption using AES-256 in CBC mode
+- Poly1305-AES for authenticated encryption
+- Client-side encryption with user-controlled keys
+- Cryptographic integrity verification
+- Secure key derivation with scrypt
+- Repository-level access control
+
+### Storage Backend Support
+
+- Local directories and network storage
+- Amazon S3 and S3-compatible services
+- Microsoft Azure Blob Storage
+- Google Cloud Storage
+- Backblaze B2 cloud storage
+- SFTP and REST server protocols
+
+### Backup Efficiency
+
+- Content-defined chunking for deduplication
+- Incremental backups with space efficiency
+- Fast backup operations
+- Compression and optimization
+- Parallel processing support
+- Resume capability for interrupted backups
+
+### Data Integrity
+
+- Automatic verification of backup data
+- Checksum validation during restore
+- Repository consistency checking
+- Error detection and reporting
+- Self-healing capabilities
+- Redundant metadata storage
+
+### Command-Line Interface
+
+- Simple and intuitive commands
+- Comprehensive help system
+- Scriptable and automatable
+- Progress reporting and statistics
+- Flexible filtering and selection
+- Tab completion support
+
+### Restore Operations
+
+- Fast file and directory restoration
+- Mount backups as filesystems (FUSE)
+- Selective restore capabilities
+- Point-in-time recovery
+- Cross-platform restore support
+- Streaming restore operations
+
+### Repository Management
+
+- Multiple snapshot retention policies
+- Repository statistics and analysis
+- Pruning and cleanup operations
+- Repository migration tools
+- Backup catalog browsing
+- Multi-repository support
+
+### Performance Features
+
+- Parallel upload and download
+- Bandwidth limiting
+- Memory usage optimization
+- CPU-efficient operations
+- Cache management
+- Network optimization
+
+### Cross-Platform Support
+
+- Linux, macOS, Windows, and FreeBSD
+- ARM and x86 architecture support
+- Docker container compatibility
+- Portable single binary
+- No external dependencies
+- System integration capabilities
+
+Restic excels in environments where reliability, security, and performance are critical, making it an excellent choice for both personal backups and enterprise data protection strategies.
