@@ -1,14 +1,21 @@
 import projectData from "../../.next/cache/projects.json";
 import { primaryCategories } from "./categories";
+import { HostingType } from "./hosting-type";
 import githubData from "./projects-github.json";
 
 import { RestEndpointMethodTypes } from "@octokit/rest";
 import { z } from "zod";
+import { PricingModel } from "./pricing-model";
 
 export const mdxProjectData = z.object({
   slug: z.string(),
   name: z.string(),
   description: z.string(),
+
+  license: z.string().optional(),
+  hostingType: z.nativeEnum(HostingType).optional(),
+  pricingModel: z.nativeEnum(PricingModel).optional(),
+
   logo: z.string(),
   heroImage: z
     .string()
@@ -29,7 +36,6 @@ export const mdxProjectData = z.object({
   websiteUrl: z.string().url().optional(),
   discord: z.string().url().optional(),
 
-  license: z.string().optional(),
   alternatives: z.object({
     selfHosted: z.array(z.string()).optional(),
     nonSelfHosted: z.array(z.string()).optional(),

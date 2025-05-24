@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+  TooltipProvider,
+} from "@/components/ui/tooltip";
+import {
   ChevronLeft,
   Github,
   ExternalLink,
@@ -12,6 +18,8 @@ import {
   Shield,
   Info,
   CheckCircle,
+  DollarSign,
+  Server,
 } from "lucide-react";
 import {
   projects,
@@ -23,6 +31,8 @@ import { Footer } from "@/components/Footer";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SameCategoryProjects } from "./_components/SameCategoryProjects";
 import { Metadata } from "next";
+import { pricingModelInfo } from "@/lib/pricing-model";
+import { hostingTypeInfo } from "@/lib/hosting-type";
 
 interface AlternativesPageProps {
   params: Promise<{
@@ -49,8 +59,6 @@ export async function generateMetadata({
     };
   }
 
-  const githubData = projectsWithGitHubData[project.slug];
-
   // Count alternatives for description
   const selfHostedCount = projects.filter((p) => {
     const selfHostedAlts = p.alternatives?.selfHosted || [];
@@ -66,7 +74,6 @@ export async function generateMetadata({
     );
   }).length;
 
-  const proprietaryCount = project.alternatives?.nonSelfHosted?.length || 0;
   const sameCategoryCount =
     projects.filter((p) => p.primaryCategory === project.primaryCategory)
       .length - 1;
@@ -313,6 +320,62 @@ export default async function AlternativesPage({
                 >
                   {project.deployment.difficulty}
                 </Badge>
+              </div>
+            )}
+
+            {project.pricingModel && (
+              <div className="flex items-center gap-2">
+                <DollarSign className="h-4 w-4 text-neutral-500" />
+                <span className="text-neutral-600 dark:text-neutral-400">
+                  Pricing:
+                </span>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Badge
+                        variant="outline"
+                        className={`text-xs border-none ${
+                          pricingModelInfo[project.pricingModel].color
+                        } cursor-help`}
+                      >
+                        {project.pricingModel}
+                      </Badge>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-sm max-w-xs">
+                        {pricingModelInfo[project.pricingModel].description}
+                      </p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
+            )}
+
+            {project.hostingType && (
+              <div className="flex items-center gap-2">
+                <Server className="h-4 w-4 text-neutral-500" />
+                <span className="text-neutral-600 dark:text-neutral-400">
+                  Hosting:
+                </span>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Badge
+                        variant="outline"
+                        className={`text-xs border-none ${
+                          hostingTypeInfo[project.hostingType].color
+                        } cursor-help`}
+                      >
+                        {project.hostingType}
+                      </Badge>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-sm max-w-xs">
+                        {hostingTypeInfo[project.hostingType].description}
+                      </p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </div>
             )}
           </div>

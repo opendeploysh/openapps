@@ -25,22 +25,22 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import Image from "next/image";
+
 import {
   getProjectPopularity,
   ProjectMeta,
   projectsWithGitHubData,
 } from "@/lib/projects";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-  TooltipProvider,
-} from "@/components/ui/tooltip";
+
 import Link from "next/link";
+import { PricingModel } from "@/lib/pricing-model";
+import { HostingType } from "@/lib/hosting-type";
+import { OpennessIndicator } from "./OpennessIndicator";
 
 interface ProjectCardProps extends ProjectMeta {
   showLicense?: boolean;
+  pricingModel?: PricingModel;
+  hostingType?: HostingType;
 }
 
 export const ProjectCard = ({
@@ -52,6 +52,8 @@ export const ProjectCard = ({
   slug,
   license,
   showLicense = false,
+  pricingModel,
+  hostingType,
 }: ProjectCardProps) => {
   const serviceDeployment = {
     available: false,
@@ -64,13 +66,6 @@ export const ProjectCard = ({
     { name: "Kubernetes", url: "#" },
   ];
 
-  // Define difficulty colors
-  const difficultyColor = {
-    Easy: "text-green-600 dark:text-green-400",
-    Medium: "text-yellow-600 dark:text-yellow-400",
-    Advanced: "text-red-600 dark:text-red-400",
-  };
-
   const githubData = projectsWithGitHubData[slug];
   const stars = githubData?.stargazers_count ?? 0;
   const projectLicense = license ?? githubData?.license?.spdx_id ?? "Unknown";
@@ -80,7 +75,7 @@ export const ProjectCard = ({
       <Card
         className={`flex flex-col border overflow-hidden shadow-none ${
           showLicense ? "h-[330px]" : "h-[300px]"
-        } gap-0 hover:shadow-md transition-shadow cursor-pointer group`}
+        } gap-0 hover:shadow-md transition-shadow cursor-pointer group relative`}
       >
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -90,6 +85,12 @@ export const ProjectCard = ({
             <span className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               {name}
             </span>
+
+            <div className="flex-grow" />
+            <OpennessIndicator
+              pricingModel={pricingModel}
+              hostingType={hostingType}
+            />
           </CardTitle>
 
           <CardDescription className="text-sm line-clamp-3">

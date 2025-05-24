@@ -22,6 +22,8 @@ import {
 } from "@/lib/projects";
 import { SiDiscord } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
+import { pricingModelInfo } from "@/lib/pricing-model";
+import { hostingTypeInfo } from "@/lib/hosting-type";
 
 const difficultyColors = {
   Easy: "text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20",
@@ -206,6 +208,40 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
               <span className="text-xs text-muted-foreground">/ 100</span>
             </span>
           </div>
+
+          {project.pricingModel && (
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
+                <span>Pricing Model</span>
+              </div>
+
+              <div className="border-t flex-grow" />
+              <span
+                className={`font-medium px-2 py-0.5 rounded-full text-sm ${
+                  pricingModelInfo[project.pricingModel].color
+                }`}
+              >
+                {project.pricingModel}
+              </span>
+            </div>
+          )}
+
+          {project.hostingType && (
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
+                <span>Hosting Type</span>
+              </div>
+
+              <div className="border-t flex-grow" />
+              <span
+                className={`font-medium px-2 py-0.5 rounded-full text-sm ${
+                  hostingTypeInfo[project.hostingType].color
+                }`}
+              >
+                {project.hostingType}
+              </span>
+            </div>
+          )}
 
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
