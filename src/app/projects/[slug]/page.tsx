@@ -25,6 +25,7 @@ import { RelatedProjects } from "./_components/RelatedProjects";
 import { useCompileFromSlug } from "@/mdx/render-projects";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
+import { Metadata } from "next";
 
 interface ProjectPageProps {
   params: {
@@ -34,6 +35,72 @@ interface ProjectPageProps {
 
 export async function generateStaticParams() {
   return projects;
+}
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const { slug } = params;
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+      description: "The requested project could not be found.",
+    };
+  }
+
+  const title = `${project.name} - Self-Hosted Open Source ${project.primaryCategory}`;
+  const description = `${project.description} Learn how to deploy ${
+    project.name
+  }, view documentation, and explore alternatives in the ${project.primaryCategory.toLowerCase()} category.`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      project.name.toLowerCase(),
+      `${project.name.toLowerCase()} self-hosted`,
+      `${project.name.toLowerCase()} open source`,
+      `${project.name.toLowerCase()} deployment`,
+      `${project.name.toLowerCase()} docker`,
+      `${project.name.toLowerCase()} installation`,
+      project.primaryCategory.toLowerCase(),
+      ...project.categories.map((cat) => cat.toLowerCase()),
+      ...(project.language ? [project.language.toLowerCase()] : []),
+      ...(project.license ? [project.license.toLowerCase()] : []),
+      "self-hosted",
+      "open source",
+      "privacy",
+      "deployment",
+    ].join(", "),
+    authors: [{ name: "OSS Finder" }],
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      url: `/projects/${project.slug}`,
+      images: project.heroImage
+        ? [
+            {
+              url: project.heroImage,
+              width: 1200,
+              height: 630,
+              alt: `${project.name} screenshot`,
+            },
+          ]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: project.heroImage ? [project.heroImage] : undefined,
+    },
+    alternates: {
+      canonical: `/projects/${project.slug}`,
+    },
+  };
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
