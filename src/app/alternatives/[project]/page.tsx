@@ -5,17 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   ChevronLeft,
-  ArrowRightLeft,
   Github,
   ExternalLink,
   Star,
-  Users,
   Code,
   Shield,
-  Zap,
   Info,
   CheckCircle,
-  ChevronRight,
 } from "lucide-react";
 import {
   projects,
@@ -26,11 +22,12 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SameCategoryProjects } from "./_components/SameCategoryProjects";
+import { Metadata } from "next";
 
 interface AlternativesPageProps {
-  params: {
+  params: Promise<{
     project: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -39,8 +36,78 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function AlternativesPage({ params }: AlternativesPageProps) {
-  const { project: projectSlug } = params;
+export async function generateMetadata({
+  params,
+}: AlternativesPageProps): Promise<Metadata> {
+  const { project: projectSlug } = await params;
+  const project = projects.find((p) => p.slug === projectSlug);
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+      description: "The requested project could not be found.",
+    };
+  }
+
+  const githubData = projectsWithGitHubData[project.slug];
+
+  // Count alternatives for description
+  const selfHostedCount = projects.filter((p) => {
+    const selfHostedAlts = p.alternatives?.selfHosted || [];
+    const projectVariations = [
+      project.name.toLowerCase(),
+      project.slug.toLowerCase(),
+      project.name.toLowerCase().replace(/\s+/g, "-"),
+    ];
+    return selfHostedAlts.some(
+      (alt) =>
+        projectVariations.includes(alt.toLowerCase()) ||
+        projectVariations.includes(alt.toLowerCase().replace(/\s+/g, "-"))
+    );
+  }).length;
+
+  const proprietaryCount = project.alternatives?.nonSelfHosted?.length || 0;
+  const sameCategoryCount =
+    projects.filter((p) => p.primaryCategory === project.primaryCategory)
+      .length - 1;
+
+  const title = `Alternatives to ${project.name} - Open Source & Self-Hosted Options`;
+  const description = `Discover ${
+    selfHostedCount + sameCategoryCount
+  }+ open source alternatives to ${
+    project.name
+  }. Find self-hosted solutions and compare features, licenses, and deployment options for ${project.primaryCategory.toLowerCase()} projects.`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      `${project.name} alternatives`,
+      `${project.name} open source`,
+      `self-hosted ${project.name}`,
+      `${project.primaryCategory.toLowerCase()} software`,
+      "open source",
+      "self-hosted",
+      "alternatives",
+      project.primaryCategory.toLowerCase(),
+      ...(project.alternatives?.nonSelfHosted || []).map(
+        (alt) => `${alt} alternative`
+      ),
+    ].join(", "),
+    authors: [{ name: "OSS Finder" }],
+    creator: "OSS Finder",
+    publisher: "OSS Finder",
+    robots: "index, follow",
+    alternates: {
+      canonical: `/alternatives/${project.slug}`,
+    },
+  };
+}
+
+export default async function AlternativesPage({
+  params,
+}: AlternativesPageProps) {
+  const { project: projectSlug } = await params;
 
   const project = projects.find((p) => p.slug === projectSlug);
 
