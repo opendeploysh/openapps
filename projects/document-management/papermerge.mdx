@@ -1,0 +1,106 @@
+---
+slug: papermerge
+name: Papermerge
+heroImage: https://papermerge.com/_next/static/media/pmg-bw.8b10d27c.png
+description: |
+  Papermerge is an open-source document management system focused on scanned documents and digital archives, featuring OCR text extraction, full-text search, document versioning, and metadata management with a desktop-like web interface.
+logo: https://papermerge.com/_next/static/media/logo_light_mode.571176a0.png
+primaryCategory: document-management
+categories: [document-management, ocr, archival]
+github: ciur/papermerge
+websiteUrl: https://papermerge.com
+alternatives:
+  selfHosted: [paperless-ngx, mayan-edms, teedy]
+  nonSelfHosted: [docstar, m-files]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires setup of Python environment and database. Docker deployment available but needs configuration."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core Features
+    features:
+      - name: Focus
+        value: Digital archive management
+      - name: Target Use Case
+        value: Organizations with scanned documents
+      - name: Architecture
+        value: Python + Django
+  - name: Document Management
+    features:
+      - name: File Organization
+      - name: Document Versioning
+      - name: Tag Management
+      - name: Custom Metadata Fields
+      - name: Full-text Search
+  - name: Processing Features
+    features:
+      - name: OCR Processing
+      - name: Text Overlay
+      - name: Page Management
+      - name: Multi-format Support
+      - name: Document Types
+  - name: Integration
+    features:
+      - name: REST API
+      - name: Multi-user Support
+      - name: Role-based Access
+      - name: Document Sharing
+      - name: Custom Fields
+---
+
+Papermerge is an open-source document management system specifically designed for handling scanned documents and digital archives. It provides a modern, desktop-like interface for organizing and searching documents with powerful OCR capabilities and metadata management.
+
+## Key Features
+
+- **Document Processing**:
+
+  - OCR text extraction
+  - Text overlay capabilities
+  - Multiple format support (PDF, TIFF, JPEG, PNG)
+  - Page management and reordering
+  - Document versioning
+
+- **Organization & Search**:
+
+  - Hierarchical folder structure
+  - Document tagging system
+  - Full-text search
+  - Custom document types
+  - Metadata fields
+
+- **User Interface**:
+
+  - Desktop-like experience
+  - Dual panel document browser
+  - Drag and drop functionality
+  - Document preview
+  - Page manipulation tools
+
+- **Integration & Security**:
+  - OpenAPI compliant REST API
+  - Multi-user support
+  - Access control
+  - Document sharing
+  - Audit trails
+
+## Who Should Use Papermerge
+
+Papermerge is ideal for:
+
+- **Organizations** with large volumes of scanned documents
+- **Businesses** needing digital archive management
+- **Teams** requiring document collaboration
+- **Users** seeking paperless document organization
+
+## Getting Started
+
+Papermerge can be deployed using Docker or installed manually. Requirements include:
+
+- Python environment
+- PostgreSQL database
+- OCR dependencies (Tesseract)
+- Web server (nginx/Apache)
+
+The platform provides comprehensive documentation for both Docker and manual installation methods.

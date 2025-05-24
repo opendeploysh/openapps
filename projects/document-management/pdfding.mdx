@@ -1,0 +1,109 @@
+---
+slug: pdfding
+name: PdfDing
+description: |
+  PdfDing is a self-hosted PDF manager, viewer and editor offering seamless reading experience across devices, with features like multi-level tagging, annotations, highlighting, and progress tracking.
+logo: https://avatars.githubusercontent.com/u/188248364?s=64&v=4
+primaryCategory: document-management
+categories: [document-management, pdf-tools, annotation]
+github: mrmn2/PdfDing
+websiteUrl: https://github.com/mrmn2/PdfDing
+alternatives:
+  selfHosted: [paperless-ngx, mayan-edms]
+  nonSelfHosted: [adobe-acrobat, foxit]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple deployment using Docker with minimal configuration required"
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core Features
+    features:
+      - name: Focus
+        value: PDF reading and management
+      - name: Target Use Case
+        value: Personal and team PDF libraries
+      - name: Architecture
+        value: Python + Web UI
+  - name: Document Management
+    features:
+      - name: Multi-level Tagging
+      - name: Progress Tracking
+      - name: Starring & Archiving
+      - name: Reading Position Memory
+      - name: Document Sharing
+  - name: PDF Features
+    features:
+      - name: PDF Viewing
+      - name: Annotations
+      - name: Highlighting
+      - name: Drawing Tools
+      - name: Comment Management
+  - name: Integration
+    features:
+      - name: SSO via OIDC
+      - name: Dark Mode Support
+      - name: Custom Themes
+      - name: Markdown Notes
+      - name: QR Code Sharing
+---
+
+PdfDing is a lightweight, self-hosted PDF management system focused on providing
+an optimal reading experience across devices. It combines document organization
+capabilities with annotation and highlighting features while maintaining a
+clean, intuitive interface.
+
+## Key Features
+
+- **Reading Experience**:
+
+  - Cross-device position sync
+  - Progress tracking bars
+  - Multiple layout options
+  - Dark and inverted color modes
+  - Custom theme colors
+
+- **Document Organization**:
+
+  - Multi-level tagging system
+  - Star and archive functions
+  - Reading progress tracking
+  - Markdown note support
+  - Document sharing via links/QR
+
+- **PDF Interaction**:
+
+  - In-browser PDF viewing
+  - Comment annotations
+  - Text highlighting
+  - Drawing capabilities
+  - Highlight/comment export
+
+- **Integration & Security**:
+  - OIDC single sign-on
+  - Access control options
+  - Share link management
+  - Custom theming support
+  - Docker deployment
+
+## Who Should Use PdfDing
+
+PdfDing is ideal for:
+
+- **Individuals** managing personal PDF libraries
+- **Students** organizing study materials
+- **Researchers** annotating papers
+- **Teams** sharing and collaborating on documents
+
+## Getting Started
+
+PdfDing can be quickly deployed using Docker with minimal configuration:
+
+- Docker environment
+- Storage for SQLite database
+- Media storage volume
+- Basic environment variables
+
+The platform provides Docker Compose files and Helm charts for various
+deployment scenarios.

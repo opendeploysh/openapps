@@ -1,0 +1,59 @@
+---
+slug: docking
+name: DocKing
+description: |
+  DocKing is a document management service/microservice that handles templates and renders them in PDF format, providing a centralized solution for PDF generation and template management.
+logo: https://docking.shipsaas.tech/~gitbook/image?url=https%3A%2F%2F4001454994-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F35WpFfbPjsx7AT7mEjwk%252Fuploads%252FUogszAbEBIxqgDnay7Zt%252Fimage.png%3Falt%3Dmedia%26token%3D240fbee8-d933-4859-b738-8d47b1c44cf3&width=768&dpr=2&quality=100&sign=581039e4&sv=2
+primaryCategory: document-management
+categories: [document-management, pdf, management]
+github: shipsaas/docking
+websiteUrl: https://docking.shipsaas.tech
+alternatives:
+  selfHosted: [gotenberg, wkhtmltopdf, mpdf]
+  nonSelfHosted: [renderpdf.io]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires PHP environment and database setup. Docker deployment available but needs configuration for PDF engines and storage."
+---
+
+DocKing is a modern document management service that centralizes template management
+and PDF generation capabilities. Built as a microservice, it provides a robust
+solution for handling document templates and rendering them into PDFs, making it
+ideal for organizations with diverse document generation needs.
+
+## Key Features
+
+- **Centralized Template Management**: Store and manage all document templates in
+  one place, ensuring consistency and easy maintenance across your organization.
+
+- **Multiple PDF Engine Support**: Choose from industry-standard PDF engines
+  including Gotenberg, wkHTMLtoPDF, and mPDF, allowing flexibility in rendering
+  approaches.
+
+- **Sync & Async Processing**: Support for both synchronous and asynchronous PDF
+  generation with webhook notifications, accommodating various use cases and load
+  patterns.
+
+- **Built-in Management Console**: A powerful UI console for template management,
+  preview, and collaboration, making it easy for teams to work together.
+
+- **Scalable Architecture**: Designed for horizontal scaling to handle high
+  traffic loads, with support for multiple database backends.
+
+## Who Should Use DocKing
+
+DocKing is perfect for:
+
+- **Enterprise Organizations** needing centralized document template management
+- **SaaS Providers** requiring PDF generation capabilities
+- **Development Teams** looking for a reliable PDF microservice
+- **Businesses** with high-volume document generation needs
+
+## Getting Started
+
+DocKing can be deployed using Docker or installed directly on a PHP 8.2
+environment. It supports MySQL, PostgreSQL, or SQLite databases, with MySQL 8
+being the recommended choice.
+
+The platform provides comprehensive documentation and a demo instance at
+https://docking-demo.shipsaas.tech/ for evaluation purposes.

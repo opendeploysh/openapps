@@ -1,0 +1,73 @@
+---
+slug: everydocs
+name: EveryDocs
+description: |
+  EveryDocs is a simple Document Management System (DMS) for private use, offering basic functionality to organize documents digitally with features like folder organization, full-text search, and encrypted storage.
+logo: https://raw.githubusercontent.com/jonashellmann/everydocs-core/refs/heads/master/public/favicon.ico
+primaryCategory: document-management
+categories: [document-management, organization, pdf]
+github: jonashellmann/everydocs-core
+websiteUrl: https://github.com/jonashellmann/everydocs-core
+alternatives:
+  selfHosted: [paperless-ngx, docspell, teedy]
+  nonSelfHosted: [evernote, google-drive]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple Docker Compose deployment available with good documentation. Manual installation also possible but not recommended."
+---
+
+EveryDocs is a lightweight document management system designed for personal use,
+providing essential features for digital document organization. It consists of a
+server-side core component and a web interface, making document management
+accessible and straightforward.
+
+## Key Features
+
+- **Document Management**:
+
+  - PDF document uploads with metadata (title, description, creation date)
+  - Folder and subfolder organization
+  - Person and processing state assignments
+  - Full-text search capabilities
+  - Encrypted storage of PDF files
+
+- **Security Features**:
+
+  - Automatic encryption for new users
+  - Optional encryption for existing users
+  - JWT-based authentication
+  - Secure document storage
+
+- **Interface & Integration**:
+
+  - Mobile-friendly web interface
+  - REST API for CRUD operations
+  - Document content extraction
+  - Comprehensive search functionality
+
+- **Organization Tools**:
+  - Custom folder hierarchies
+  - Document metadata management
+  - Processing state tracking
+  - Person assignments
+
+## Who Should Use EveryDocs
+
+EveryDocs is ideal for:
+
+- **Individual Users** seeking personal document organization
+- **Small Teams** needing basic document management
+- **Privacy-Conscious Users** wanting encrypted storage
+- **Developers** looking for a lightweight DMS solution
+
+## Getting Started
+
+The recommended deployment method is using Docker Compose, which sets up:
+
+- Database container
+- EveryDocs Core (API)
+- Web interface
+
+The platform requires minimal configuration and can be deployed with basic
+Docker commands. For those preferring manual installation, Ruby and Rails
+setup instructions are provided in the documentation.
