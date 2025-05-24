@@ -66,7 +66,7 @@ export const SearchFilters = ({
               defaultValue="relevance"
               onValueChange={(value) => setSortOrder(value)}
             >
-              <SelectTrigger className="h-10 w-[140px]">
+              <SelectTrigger className="w-[170px] !h-10">
                 <div className="flex items-center gap-1">
                   <ArrowUpDown className="h-3.5 w-3.5 text-neutral-500" />
                   <SelectValue placeholder="Sort by" />

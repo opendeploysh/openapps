@@ -6,38 +6,11 @@ import { ProjectMeta, projects } from "@/lib/projects";
 import { Navbar } from "@/components/Navbar";
 import { HeroHeader } from "./_components/HeroHeader";
 import { SearchFilters } from "./_components/SearchFilters";
-import { SearchResults } from "./_components/SearchResults";
+
 import { ProjectsGrid } from "./_components/ProjectsGrid";
 import { DeploymentGuide } from "./_components/DeploymentGuide";
 import { RequestCTA } from "./_components/RequestCTA";
 import { Footer } from "./_components/Footer";
-
-// type SoftwareProject = {
-//   name: string;
-//   description: string;
-//   stars: string;
-//   language: string;
-//   alternatives?: string[];
-//   deploymentDifficulty?: "Easy" | "Medium" | "Advanced";
-//   categories?: string[];
-//   price?: {
-//     free?: boolean;
-//     startingAt?: string;
-//     supportPlans?: Array<{ name: string; price: string }>;
-//   };
-//   deployOptions?: Array<{ name: string; url: string }>;
-//   serviceDeployment?: {
-//     available: boolean;
-//     cost: string;
-//     setupFee?: string;
-//   };
-//   managedSolution?: {
-//     available: boolean;
-//     name: string;
-//     url: string;
-//     cost: string;
-//   };
-// };
 
 export default function Home() {
   const [searchResults, setSearchResults] = useState<null | ProjectMeta[]>(
@@ -46,7 +19,6 @@ export default function Home() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const [sortOrder, setSortOrder] = useState("relevance");
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 12;
@@ -193,14 +165,6 @@ export default function Home() {
           setSortOrder={setSortOrder}
         />
 
-        {searchResults && (
-          <SearchResults
-            searchResults={searchResults}
-            activeFilter={activeFilter}
-            onClearFilters={clearSearchAndFilters}
-          />
-        )}
-
         <ProjectsGrid
           currentProjects={currentProjects}
           searchResults={searchResults}
@@ -211,6 +175,7 @@ export default function Home() {
           indexOfLastProject={indexOfLastProject}
           activeProjectsLength={activeProjects.length}
           setCurrentPage={setCurrentPage}
+          onClearFilters={clearSearchAndFilters}
         />
 
         <DeploymentGuide />
