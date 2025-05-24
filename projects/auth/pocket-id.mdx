@@ -1,0 +1,78 @@
+---
+slug: pocket-id
+name: Pocket ID
+heroImage: https://private-user-images.githubusercontent.com/58886915/360964787-96ac549d-b897-404a-8811-f42b16ea58e2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDgxMTkzODIsIm5iZiI6MTc0ODExOTA4MiwicGF0aCI6Ii81ODg4NjkxNS8zNjA5NjQ3ODctOTZhYzU0OWQtYjg5Ny00MDRhLTg4MTEtZjQyYjE2ZWE1OGUyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA1MjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNTI0VDIwMzgwMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTczMmI1NTE0YzYwMzc4YjRhZWVkNTA4YzIyOTAzMTYwZjI1YzRjNTNmMGM5NWIyZmM3NTlmNzU0OTAyM2IzZTEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.rUj2hAgNnUabdurg9kWlja4polf9cQpjNBv_VM5zHpM
+description: |
+  Pocket ID is a simple OIDC provider focused on passkey authentication, allowing users to securely access services without passwords. It provides a streamlined alternative to more complex identity providers.
+logo: https://avatars.githubusercontent.com/u/197418917?s=64&v=4
+primaryCategory: auth
+categories: [auth, identity, oauth2, sso, security]
+github: pocket-id/pocket-id
+websiteUrl: https://pocket-id.org/
+alternatives:
+  selfHosted: [keycloak, authentik]
+  nonSelfHosted: []
+deployment:
+  difficulty: "Easy"
+  justification: "Simple deployment via Docker with good documentation and minimal configuration needed."
+pricingModel: Free
+hostingType: Self-Hosted
+---
+
+Pocket ID is a lightweight OpenID Connect (OIDC) provider that focuses on simplicity and passkey-based authentication. It offers a streamlined alternative to more complex identity providers while maintaining strong security through modern authentication methods.
+
+## Key Features
+
+- **Authentication Methods**:
+
+  - Passkey authentication
+  - Physical security key support
+  - FIDO2/WebAuthn
+  - No password requirements
+  - Biometric authentication support
+  - Device-based authentication
+
+- **Identity Management**:
+
+  - User management
+  - Role-based access control
+  - Simple administration interface
+  - Multi-tenant support
+  - Self-service registration
+  - Profile management
+
+- **Integration Capabilities**:
+
+  - OpenID Connect support
+  - OAuth 2.0 compatibility
+  - Multiple client support
+  - API access
+  - Docker deployment
+  - Reverse proxy integration
+
+- **Security Features**:
+  - Passwordless security
+  - Strong authentication
+  - Session management
+  - Audit logging
+  - TLS support
+  - Rate limiting
+
+## Who Should Use Pocket ID
+
+Pocket ID is ideal for:
+
+- Organizations seeking simple OIDC implementation
+- Teams wanting passwordless authentication
+- Projects requiring modern security standards
+- Self-hosted service environments
+- Privacy-focused deployments
+- Users preferring physical security keys
+
+## Installation Requirements
+
+- Docker and Docker Compose
+- Reverse proxy
+- TLS certificate
+- Modern web browsers
+- Domain name

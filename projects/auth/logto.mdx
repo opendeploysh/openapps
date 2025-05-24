@@ -1,0 +1,142 @@
+---
+slug: logto
+name: Logto
+description: |
+  Logto is a modern, open-source authentication infrastructure focused on SaaS and AI applications. It provides multi-tenancy, enterprise SSO, and RBAC capabilities while simplifying OIDC and OAuth 2.1 implementation.
+logo: https://avatars.githubusercontent.com/u/84981374?s=64&v=4
+primaryCategory: auth
+categories: [auth, identity, oauth2, sso, security]
+github: logto-io/logto
+websiteUrl: https://logto.io/
+alternatives:
+  selfHosted: [keycloak, authentik]
+  nonSelfHosted: []
+deployment:
+  difficulty: "Medium"
+  justification: "Offers multiple deployment options including Docker Compose and Node.js, requires understanding of auth concepts."
+pricingModel: Freemium
+hostingType: Hybrid
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Developer-first, modern apps
+      - name: Target Use Case
+        value: SaaS & AI applications
+      - name: Architecture
+        value: Multi-tenant SaaS platform
+  - name: Authentication Methods
+    features:
+      - name: Password login
+      - name: Social login
+      - name: MFA support
+      - name: Passwordless
+        value: WebAuthn, passkeys, magic links
+      - name: Enterprise SSO
+        value: SAML, OIDC connectors
+      - name: Google One Tap
+  - name: Protocols & Standards
+    features:
+      - name: OIDC
+      - name: OAuth 2.1
+        value: Latest security standards
+      - name: SAML
+      - name: JWT
+        value: Secure token handling
+  - name: Multi-Tenancy
+    features:
+      - name: Organizations
+        value: Native multi-tenant architecture
+      - name: Team Management
+        value: Member invitations, JIT provisioning
+      - name: Custom Branding
+        value: Per-tenant customization
+      - name: Isolation
+        value: Cross-tenant data separation
+  - name: Developer Experience
+    features:
+      - name: SDKs
+        value: 30+ frameworks supported
+      - name: APIs
+        value: RESTful design
+      - name: UI Components
+        value: Customizable, modern
+      - name: Documentation
+        value: Developer-focused
+      - name: CLI Tool
+  - name: Management
+    features:
+      - name: Admin Console
+      - name: Webhooks
+        value: Real-time event notifications
+      - name: Custom Connectors
+      - name: RBAC
+        value: Resource-based permissions
+  - name: Deployment
+    features:
+      - name: Docker
+      - name: Kubernetes
+---
+
+Logto is an open-source authentication platform designed specifically for modern
+SaaS and AI applications. It simplifies the implementation of complex
+authentication protocols while providing enterprise-grade features like
+multi-tenancy and SSO.
+
+## Key Features
+
+- **Authentication Methods**:
+
+  - Username/password authentication
+  - Social login providers
+  - Enterprise SSO
+  - Passwordless authentication
+  - Multi-factor authentication
+  - Google One Tap
+  - OIDC/OAuth 2.1
+  - SAML support
+
+- **Multi-Tenancy Features**:
+
+  - Organization management
+  - Role-based access control
+  - Member invitations
+  - Just-in-time provisioning
+  - Custom branding
+  - Team management
+
+- **Developer Tools**:
+
+  - SDKs for 30+ frameworks
+  - RESTful APIs
+  - Customizable UI components
+  - Extensive documentation
+  - Multiple deployment options
+  - Docker support
+
+- **Integration Capabilities**:
+  - Identity provider connections
+  - API authentication
+  - Machine-to-machine auth
+  - CLI tool support
+  - Model Context Protocol
+  - Agent-based architectures
+
+## Who Should Use Logto
+
+Logto is ideal for:
+
+- SaaS applications requiring multi-tenancy
+- AI platforms and agent-based systems
+- Teams needing enterprise SSO capabilities
+- Projects requiring modern auth infrastructure
+- Applications with complex RBAC needs
+- Both cloud and self-hosted deployments
+
+## Installation Requirements
+
+- PostgreSQL database
+- Node.js runtime
+- Docker (optional)
+- Reverse proxy (recommended)
+- TLS certificates

@@ -1,0 +1,109 @@
+---
+slug: authelia
+name: Authelia
+description: |
+  Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion for reverse proxies.
+logo: https://avatars.githubusercontent.com/u/59122411?s=64&v=4
+primaryCategory: auth
+categories: [auth, identity, oauth2, sso, 2fa, security]
+github: authelia/authelia
+websiteUrl: https://www.authelia.com/
+alternatives:
+  selfHosted: []
+  nonSelfHosted: []
+deployment:
+  difficulty: "Medium"
+  justification: "Requires configuration of reverse proxy and understanding of authentication concepts."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Reverse proxy companion
+      - name: Target Use Case
+        value: Home labs & SMB
+  - name: Authentication Methods
+    features:
+      - name: Password login
+      - name: MFA support
+      - name: WebAuthn/FIDO2
+      - name: TOTP
+      - name: Mobile push notifications
+      - name: Passwordless authentication
+  - name: Identity Federation
+    features:
+      - name: OIDC
+      - name: OpenID Connect
+      - name: LDAP
+  - name: Management & Extensibility
+    features:
+      - name: Admin UI
+      - name: API
+      - name: Security headers
+  - name: Deployment Methods
+    features:
+      - name: Docker
+      - name: Reverse proxy integration
+---
+
+Authelia is a comprehensive authentication and authorization server that
+provides single sign-on (SSO) and two-factor authentication for web
+applications. It integrates with reverse proxies to secure access to your
+services through a modern web portal.
+
+## Key Features
+
+- **Authentication Methods**:
+
+  - Username/password authentication
+  - Two-factor authentication (2FA)
+  - WebAuthn/FIDO2 support
+  - Time-based One-Time Passwords (TOTP)
+  - Mobile push notifications via Duo
+  - Passwordless authentication with Passkeys
+
+- **Access Control**:
+
+  - Fine-grained access rules
+  - Domain-based policies
+  - User/group based restrictions
+  - Network-level controls
+  - One-factor vs two-factor policy options
+
+- **Integration Capabilities**:
+
+  - OpenID Connect 1.0 provider
+  - OAuth 2.0 support
+  - Reverse proxy compatibility
+  - LDAP integration
+  - Multiple storage backends
+  - REST API access
+
+- **Security Features**:
+  - Brute force protection
+  - Password reset with email verification
+  - Session management
+  - Secure cookie handling
+  - TLS support
+  - Security headers
+
+## Who Should Use Authelia
+
+Authelia is ideal for:
+
+- Organizations requiring self-hosted authentication
+- Teams needing SSO capabilities
+- Environments requiring 2FA/MFA
+- Security-conscious deployments
+- Multi-service infrastructures
+- Privacy-focused implementations
+
+## Installation Requirements
+
+- Reverse proxy (nginx, Traefik, etc.)
+- Storage backend (SQL database)
+- SMTP server for notifications
+- Redis (optional, for high availability)
+- Docker (recommended)

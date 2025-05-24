@@ -7,6 +7,17 @@ import { RestEndpointMethodTypes } from "@octokit/rest";
 import { z } from "zod";
 import { PricingModel } from "./pricing-model";
 
+export const feature = z.object({
+  name: z.string(),
+  description: z.string().optional(),
+  value: z.string().optional(),
+});
+
+export const featureGroup = z.object({
+  name: z.string(),
+  features: z.array(feature),
+});
+
 export const mdxProjectData = z.object({
   slug: z.string(),
   name: z.string(),
@@ -47,6 +58,8 @@ export const mdxProjectData = z.object({
   popularity: z.number().optional(),
 
   language: z.string().optional(),
+
+  featureGroups: z.array(featureGroup).optional(),
 });
 
 export type ProjectMeta = z.infer<typeof mdxProjectData>;

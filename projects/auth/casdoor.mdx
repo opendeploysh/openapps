@@ -1,0 +1,82 @@
+---
+slug: casdoor
+name: Casdoor
+description: |
+  Casdoor is an open-source Identity and Access Management (IAM) / Single-Sign-On (SSO) platform with a web UI supporting multiple authentication protocols including OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, and more.
+logo: https://avatars.githubusercontent.com/u/72992104?s=64&v=4
+primaryCategory: auth
+categories: [auth, identity, oauth2, sso, security]
+github: casdoor/casdoor
+websiteUrl: https://casdoor.org/
+alternatives:
+  selfHosted: [keycloak, authentik]
+  nonSelfHosted: []
+deployment:
+  difficulty: "Medium"
+  justification: "Requires understanding of identity concepts but has good documentation and Docker support for easier deployment."
+pricingModel: Free
+hostingType: Self-Hosted
+---
+
+Casdoor is a comprehensive open-source Identity and Access Management platform that provides a user-friendly web interface and supports multiple authentication protocols. It focuses on being UI-first while maintaining extensive protocol support and flexibility.
+
+## Key Features
+
+- **Authentication Methods**:
+
+  - Username/password authentication
+  - OAuth 2.0/OpenID Connect
+  - SAML
+  - CAS
+  - LDAP integration
+  - WebAuthn
+  - TOTP/MFA
+  - Face ID
+  - RADIUS
+  - Social login providers
+
+- **Identity Management**:
+
+  - User management
+  - Role-based access control
+  - Organization management
+  - Permission system
+  - Group management
+  - SCIM support
+  - Active Directory integration
+
+- **Security Features**:
+
+  - Multi-factor authentication
+  - Session management
+  - Audit logging
+  - Rate limiting
+  - Captcha support
+  - Password policies
+
+- **Integration Capabilities**:
+  - RESTful APIs
+  - Multiple SDKs
+  - Swagger documentation
+  - Webhooks
+  - Custom themes
+  - Extensible architecture
+
+## Who Should Use Casdoor
+
+Casdoor is ideal for:
+
+- Organizations needing a self-hosted identity solution
+- Teams requiring comprehensive IAM features
+- Projects needing multiple protocol support
+- Applications requiring flexible authentication
+- Privacy-focused implementations
+- Both small and large-scale deployments
+
+## Installation Requirements
+
+- Go runtime
+- Node.js (for web UI)
+- Database (MySQL/PostgreSQL)
+- Docker support (optional)
+- Reverse proxy (recommended)

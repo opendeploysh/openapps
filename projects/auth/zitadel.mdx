@@ -1,0 +1,83 @@
+---
+slug: zitadel
+name: ZITADEL
+description: |
+  ZITADEL is an open-source identity and access management platform with built-in multi-tenancy, providing authentication, authorization, and user management capabilities. It offers both self-hosted and cloud options with features like SSO, OIDC, SAML, and passkey support.
+logo: https://avatars.githubusercontent.com/u/72992104?s=64&v=4
+primaryCategory: auth
+categories: [auth, identity, oauth2, sso, security]
+github: zitadel/zitadel
+websiteUrl: https://zitadel.com/
+alternatives:
+  selfHosted: [keycloak, authentik]
+  nonSelfHosted: [auth0, okta]
+deployment:
+  difficulty: "Medium"
+  justification: "Offers multiple deployment options with good documentation, but requires understanding of identity concepts and infrastructure setup."
+pricingModel: OpenCore
+hostingType: Hybrid
+---
+
+ZITADEL is a comprehensive identity and access management platform that combines the flexibility of self-hosted solutions with the convenience of cloud offerings. It focuses on providing a robust multi-tenant architecture while maintaining simplicity in setup and management.
+
+## Key Features
+
+- **Authentication Methods**:
+
+  - Passkeys (FIDO2/WebAuthn)
+  - Username/password authentication
+  - Multi-factor authentication (OTP, U2F)
+  - Social login providers
+  - LDAP integration
+  - Single sign-on (SSO)
+  - OAuth 2.0/OpenID Connect
+  - SAML 2.0
+  - Device authorization
+  - Custom sessions
+
+- **Multi-Tenancy Features**:
+
+  - Identity brokering
+  - Domain discovery
+  - Customizable B2B onboarding
+  - Delegated role management
+  - Organization management
+  - Team management
+  - Branding customization
+
+- **Integration Capabilities**:
+
+  - gRPC and REST APIs
+  - SCIM 2.0 server
+  - Webhooks
+  - Custom actions
+  - Multiple SDKs
+  - Role-based access control
+  - Audit logging
+
+- **Self-Service Features**:
+  - User registration and verification
+  - Profile management
+  - Password reset
+  - Organization management
+  - Administrative console
+  - Custom workflows
+
+## Who Should Use ZITADEL
+
+ZITADEL is ideal for:
+
+- Organizations requiring multi-tenant user management
+- Teams needing comprehensive IAM features
+- Projects requiring flexible authentication options
+- Applications with B2B requirements
+- Privacy-focused implementations
+- Both cloud and self-hosted deployments
+
+## Installation Requirements
+
+- PostgreSQL (version 14+)
+- Docker support
+- Kubernetes (optional)
+- Reverse proxy
+- TLS certificates
