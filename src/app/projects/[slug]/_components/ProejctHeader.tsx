@@ -43,11 +43,9 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
     <div className="space-y-8">
       <div className="flex flex-col gap-4">
         <div className="flex gap-2 items-center">
-          <Image
-            src={project.logo.dark}
+          <img
+            src={project.logo}
             alt={project.name}
-            width={64}
-            height={64}
             className="object-cover rounded-lg w-10 h-10"
           />
           <h1 className="text-3xl font-bold">{project.name}</h1>
@@ -103,7 +101,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
         <div className="space-y-2">
           <div className="font-semibold">Self-hosted alternative to:</div>
           <div className="flex flex-wrap gap-2">
-            {project.alternatives.map((alternative) => {
+            {project.alternatives.nonSelfHosted?.map((alternative) => {
               const project = projects.find(
                 (p) => p.slug.toLowerCase() === alternative.toLowerCase()
               );
@@ -117,11 +115,9 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
                     className: "text-sm flex items-center gap-2",
                   })}
                 >
-                  <Image
-                    src={project?.logo.dark}
+                  <img
+                    src={project.logo}
                     alt={project?.name}
-                    width={16}
-                    height={16}
                     className="rounded-full"
                   />
                   {project?.name}
@@ -215,7 +211,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
 
             <div className="border-t flex-grow" />
             <span className="font-medium">
-              {githubData.license?.spdx_id ?? project.license ?? "Proprietary"}
+              {project.license ?? githubData.license?.spdx_id ?? "Proprietary"}
             </span>
           </div>
           {project.deployment && (

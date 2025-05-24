@@ -3,19 +3,16 @@ slug: superset
 name: Apache Superset
 description: |
   Apache Superset is a modern data exploration and visualization platform that enables users to create interactive dashboards and perform ad-hoc analysis with a rich set of visualizations and an intuitive interface.
-logo:
-  dark: https://avatars.githubusercontent.com/u/47359?s=64&v=4
-  light: https://avatars.githubusercontent.com/u/47359?s=64&v=4
+image: https://avatars.githubusercontent.com/u/47359?s=64&v=4
 categories: [analytics, business-intelligence, data-visualization, dashboard]
 github: apache/superset
 websiteUrl: http://superset.apache.org/
 license: Apache-2.0
-openSource: true
-alternatives: [metabase, grafana, tableau, power-bi]
-stars: 62000
-language: Python
+alternatives:
+  selfHosted: [metabase, grafana, tableau, power-bi]
+  nonSelfhosted: [metabase, grafana, tableau, power-bi]
 deployment:
-  difficulty: "Hard"
+  difficulty: "Advanced"
   justification: "Complex Python application requiring careful configuration of multiple components including Redis, database, and web server. Production deployment requires understanding of security, caching, and performance optimization."
 ---
 

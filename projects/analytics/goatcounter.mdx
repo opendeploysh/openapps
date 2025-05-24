@@ -1,0 +1,93 @@
+---
+slug: goatcounter
+name: GoatCounter
+description: |
+  GoatCounter is an open source web analytics platform available as a hosted service or self-hosted app. It aims to offer easy to use and meaningful privacy-friendly web analytics as an alternative to Google Analytics or Matomo.
+logo: https://static.zgo.at/logo.svg
+primaryCategory: analytics
+categories: [analytics, monitoring]
+github: arp242/goatcounter
+websiteUrl: https://www.goatcounter.com/
+alternatives:
+  selfHosted: [matomo, plausible]
+  nonSelfHosted: [google-analytics, cloudflare-analytics]
+deployment:
+  difficulty: "Easy"
+  justification: "Single binary deployment with minimal configuration required. Supports both SQLite and PostgreSQL databases."
+---
+
+GoatCounter is a privacy-focused web analytics platform that provides meaningful
+insights without tracking personal data. Available as both a hosted service and
+self-hosted solution, it offers a lightweight alternative to traditional analytics
+tools.
+
+## Key Features
+
+- **Privacy-First Analytics**:
+
+  - No personal data collection
+  - No unique user tracking
+  - GDPR-compliant by design
+  - No cookie notices required
+  - Configurable data collection
+  - Anonymous visitor counting
+
+- **Lightweight Integration**:
+
+  - ~3.5KB JavaScript snippet
+  - No-JavaScript tracking pixel option
+  - Backend middleware integration
+  - Log file importing
+  - Multiple tracking methods
+  - Minimal performance impact
+
+- **Comprehensive Statistics**:
+
+  - Browser information
+  - Geographic location
+  - Screen size metrics
+  - Referrer tracking
+  - Campaign monitoring
+  - Custom event tracking
+
+- **User-Friendly Features**:
+  - Simple, clean interface
+  - Accessibility focused
+  - Easy data export
+  - API access
+  - Multi-site support
+  - Custom domains
+
+## Who Should Use GoatCounter
+
+GoatCounter is ideal for:
+
+- **Privacy-Conscious Users** seeking GDPR-compliant analytics
+- **Developers** wanting lightweight site monitoring
+- **Organizations** requiring self-hosted solutions
+- **Website Owners** needing simple, effective analytics
+
+## Getting Started
+
+GoatCounter offers multiple deployment options:
+
+1. **Hosted Service**:
+
+   - Sign up at goatcounter.com
+   - Add tracking code to site
+   - Start collecting data
+
+2. **Self-Hosted**:
+
+   ```bash
+   # Download and run binary
+   ./goatcounter serve
+
+   # Create initial site
+   ./goatcounter db create site \
+     -vhost stats.example.com \
+     -user.email me@example.com
+   ```
+
+The platform provides immediate analytics capabilities while maintaining strong
+privacy standards and offering flexible deployment options.

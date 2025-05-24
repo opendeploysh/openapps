@@ -1,0 +1,86 @@
+---
+slug: offen
+name: Offen
+description: |
+  Offen is a privacy-focused web analytics platform that gives users full access to their data while providing website operators with essential insights. It's lightweight, self-hosted, and emphasizes transparency and user consent.
+logo: https://avatars.githubusercontent.com/u/47735043?s=64&v=4
+primaryCategory: analytics
+categories: [analytics, monitoring, privacy]
+github: offen/offen
+websiteUrl: https://www.offen.dev/
+alternatives:
+  selfHosted: [matomo, plausible]
+  nonSelfHosted: [google-analytics, fathom]
+license: Apache-2.0
+deployment:
+  difficulty: "Easy"
+  justification: "Single binary deployment with automatic SSL certificate management. Docker deployment also available."
+---
+
+Offen is an open source web analytics platform focused on privacy, transparency and
+user consent. It provides website operators with essential insights while giving users
+complete access and control over their data through end-to-end encryption.
+
+## Key Features
+
+- **Privacy-First Design**:
+
+  - Opt-in only data collection
+  - End-to-end encryption
+  - No IP or user agent tracking
+  - First-party cookies only
+  - GDPR compliant
+  - 6-month data retention
+
+- **User Transparency**:
+
+  - Full data access for users
+  - Clear metric explanations
+  - Data deletion controls
+  - Usage insights dashboard
+  - Consent management
+  - Privacy-focused analytics
+
+- **Operator Features**:
+
+  - Multi-site tracking
+  - Team collaboration
+  - Essential metrics
+  - Custom filtering
+  - UTM tracking
+  - Landing page analytics
+
+- **Deployment Options**:
+  - Single binary install
+  - Docker deployment
+  - Automatic SSL setup
+  - SQLite database option
+  - Easy configuration
+  - Lightweight footprint
+
+## Who Should Use Offen
+
+Offen is ideal for:
+
+- **Privacy-Focused Organizations** needing transparent analytics
+- **Website Operators** wanting ethical user insights
+- **Teams** requiring collaborative analytics access
+- **Developers** seeking lightweight self-hosted solutions
+
+## Getting Started
+
+Offen offers simple deployment options:
+
+1. **Single Binary**:
+
+   ```bash
+   curl https://get.offen.dev | bash
+   ```
+
+2. **Docker**:
+   ```bash
+   docker run -p 80:80 offen/offen:latest
+   ```
+
+The platform provides immediate analytics capabilities while maintaining strong
+privacy standards and user transparency.

@@ -1,0 +1,88 @@
+---
+slug: shynet
+name: Shynet
+description: |
+  Shynet is a modern, privacy-friendly and cookie-free web analytics platform that provides detailed insights without compromising visitor privacy. It works without JavaScript and can be self-hosted.
+logo: https://github.com/milesmcc/shynet/blob/master/images/slogo.png?raw=true
+primaryCategory: analytics
+categories: [analytics, monitoring, privacy]
+github: milesmcc/shynet
+websiteUrl: https://github.com/milesmcc/shynet
+alternatives:
+  selfHosted: [matomo, plausible]
+  nonSelfHosted: [google-analytics, fathom]
+license: Apache-2.0
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Docker or Kubernetes setup with database configuration. Multiple deployment options available but needs proper setup."
+---
+
+Shynet is a privacy-focused web analytics platform designed to provide meaningful
+insights without compromising visitor privacy. It works without cookies or JavaScript
+and can be self-hosted for complete data control.
+
+## Key Features
+
+- **Privacy-First Analytics**:
+
+  - No cookies required
+  - JavaScript-optional tracking
+  - DNT signal respect
+  - Self-hosted control
+  - Minimal data collection
+  - GDPR-friendly design
+
+- **Comprehensive Tracking**:
+
+  - Page view analytics
+  - Session monitoring
+  - Load time metrics
+  - Bounce rate tracking
+  - Referrer analysis
+  - Geographic insights
+
+- **Technical Capabilities**:
+
+  - Multi-user support
+  - Service sharing
+  - API access
+  - Redis caching
+  - Kubernetes ready
+  - Horizontal scaling
+
+- **Advanced Features**:
+  - Custom integrations
+  - Role-based access
+  - Data portability
+  - Multiple sites
+  - Detailed reporting
+  - Real-time updates
+
+## Who Should Use Shynet
+
+Shynet is ideal for:
+
+- **Privacy-Conscious Organizations** needing analytics
+- **Developers** wanting self-hosted solutions
+- **Website Owners** seeking cookie-free tracking
+- **Teams** requiring collaborative analytics
+
+## Getting Started
+
+Shynet offers multiple deployment options:
+
+1. **Docker Deployment**:
+
+   ```bash
+   docker run -d --name shynet \
+     -p 8080:8080 \
+     milesmcc/shynet:latest
+   ```
+
+2. **Kubernetes**:
+   ```bash
+   kubectl apply -f kubernetes/
+   ```
+
+The platform provides detailed documentation and flexible deployment options while
+maintaining strong privacy standards and analytics capabilities.

@@ -1,0 +1,85 @@
+---
+slug: liwan
+name: Liwan
+description: |
+  Liwan is a lightweight, privacy-first web analytics platform written in Rust. It provides accurate real-time analytics with a single self-contained binary and no database requirements.
+logo: https://raw.githubusercontent.com/explodingcamera/liwan/refs/heads/main/web/public/favicon.ico
+primaryCategory: analytics
+categories: [analytics, monitoring]
+github: explodingcamera/liwan
+websiteUrl: https://liwan.dev/
+alternatives:
+  selfHosted: [plausible, umami]
+  nonSelfHosted: [google-analytics, cloudflare-analytics]
+deployment:
+  difficulty: "Easy"
+  justification: "Single binary deployment with no database required. Simple tracking script integration."
+---
+
+Liwan is a lightweight web analytics platform focused on privacy and simplicity.
+Written in Rust using tokio for async I/O, it provides accurate real-time analytics
+while being efficient enough to run on minimal hardware.
+
+## Key Features
+
+- **Simple Deployment**:
+
+  - Single self-contained binary
+  - No database required
+  - Minimal resource requirements
+  - Quick setup process
+  - Docker support
+  - Easy migration
+
+- **Privacy-Focused**:
+
+  - No cookies used
+  - No cross-site tracking
+  - No persistent identifiers
+  - Self-hosted data storage
+  - GDPR-compliant
+  - Bot filtering
+
+- **Analytics Capabilities**:
+
+  - Real-time visitor tracking
+  - Page view analytics
+  - Referrer tracking
+  - Geographic data
+  - Automated bot detection
+  - Custom event support
+
+- **Developer-Friendly**:
+  - Sub-1KB tracking script
+  - Universal website compatibility
+  - API access
+  - Open source codebase
+  - Extensible architecture
+  - Performance optimized
+
+## Who Should Use Liwan
+
+Liwan is ideal for:
+
+- **Privacy-Conscious Users** seeking cookie-free analytics
+- **Developers** wanting simple self-hosted tracking
+- **Website Owners** needing lightweight analytics
+- **Organizations** requiring efficient analytics solutions
+
+## Getting Started
+
+Liwan offers straightforward deployment:
+
+1. **Download & Run Binary**:
+
+   ```bash
+   ./liwan
+   ```
+
+2. **Add Tracking Script**:
+   ```html
+   <script async src="https://your-domain/script.js"></script>
+   ```
+
+The platform provides immediate analytics capabilities while maintaining minimal
+resource usage and strong privacy standards.

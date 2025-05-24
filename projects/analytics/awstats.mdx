@@ -1,0 +1,91 @@
+---
+slug: awstats
+name: AWStats
+description: |
+  AWStats is a powerful, full-featured web server logfile analyzer that shows detailed web statistics including visitors, pages, hits, search engines, keywords, and more.
+logo: https://avatars.githubusercontent.com/u/883887?s=64&v=4
+primaryCategory: analytics
+categories: [analytics, monitoring]
+github: eldy/awstats
+websiteUrl: https://www.awstats.org/
+alternatives:
+  selfHosted: [matomo, goaccess]
+  nonSelfHosted: [google-analytics, cloudflare-analytics]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires web server configuration and Perl setup. Some technical knowledge needed for proper configuration."
+---
+
+AWStats is a comprehensive open-source web analytics tool that analyzes server log
+files to provide detailed statistics about website traffic and usage patterns. It
+supports multiple server types and offers both command-line and web-based
+interfaces.
+
+## Key Features
+
+- **Comprehensive Analytics**:
+
+  - Visitor tracking and unique visitor counts
+  - Page views and hit statistics
+  - Bandwidth usage monitoring
+  - Entry and exit pages
+  - Visit duration tracking
+  - Authenticated user tracking
+
+- **Technical Information**:
+
+  - Browser and OS detection
+  - Screen size statistics
+  - Robot/crawler identification
+  - HTTP error tracking
+  - Compression statistics
+  - DNS lookup support
+
+- **Search Analytics**:
+
+  - Search engine referrers
+  - Keywords and phrases tracking
+  - External referrer analysis
+  - Entry/exit page tracking
+  - Download statistics
+
+- **Advanced Features**:
+  - Multi-site support
+  - Custom report generation
+  - Plugin system
+  - Multiple language support
+  - Export capabilities
+  - Access control options
+
+## Who Should Use AWStats
+
+AWStats is ideal for:
+
+- **System Administrators** needing detailed server statistics
+- **Website Owners** wanting comprehensive traffic analysis
+- **Organizations** requiring self-hosted analytics
+- **Developers** needing technical visitor data
+
+## Getting Started
+
+Basic setup involves:
+
+1. **Installation**:
+
+   ```bash
+   # Install via package manager
+   apt-get install awstats
+
+   # Configure web server log format
+   # Create initial configuration
+   perl awstats.pl -config=mysite.com
+   ```
+
+2. **Configuration**:
+   - Set up log file location
+   - Configure web server settings
+   - Define update frequency
+   - Set access permissions
+
+The platform provides extensive customization options while maintaining
+compatibility with most web server configurations and operating systems.

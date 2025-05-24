@@ -1,0 +1,93 @@
+---
+slug: ckan
+name: CKAN
+description: |
+  CKAN is an open source data management system that makes it easy to publish, share and work with data. It powers many government and organizational data portals with features for cataloging, storing and accessing datasets.
+logo: https://avatars.githubusercontent.com/u/1630326?s=64&v=4
+primaryCategory: archiving
+categories: [data-management, open-data, data-catalog]
+github: ckan/ckan
+websiteUrl: https://ckan.org
+license: AGPL-3.0
+alternatives:
+  selfHosted: [udata, dkan]
+  nonSelfHosted: [socrata, opendatasoft]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Python environment setup and database configuration. Docker deployment available but setup needed for production use."
+---
+
+CKAN is a powerful open source data management system designed for building data
+portals and catalogs. It provides a robust platform for publishing, sharing and
+accessing datasets with extensive API support and visualization capabilities.
+
+## Key Features
+
+- **Data Publishing & Management**:
+
+  - Dataset hosting and cataloging
+  - Rich metadata support
+  - Dataset versioning
+  - Access control and permissions
+  - Data preview and visualization
+  - Full-text search
+
+- **API & Integration**:
+
+  - Comprehensive REST API
+  - Harvesting from other portals
+  - Extensions framework
+  - Custom workflows
+  - OAuth2 support
+  - DataStore API
+
+- **Organization Features**:
+
+  - Multi-tenant architecture
+  - User management
+  - Activity streams
+  - Dataset analytics
+  - Custom branding
+  - Multilingual support
+
+- **Data Discovery**:
+  - Faceted search
+  - Spatial search
+  - Dataset relationships
+  - Data previews
+  - Custom metadata
+  - RSS feeds
+
+## Who Should Use CKAN
+
+CKAN is ideal for:
+
+- **Government Agencies** publishing open data
+- **Research Organizations** sharing datasets
+- **Enterprises** managing internal data catalogs
+- **NGOs** distributing public information
+
+## Getting Started
+
+CKAN can be installed via package or Docker:
+
+1. **Package Installation**:
+
+   ```bash
+   # Install system dependencies
+   sudo apt-get install python3-dev postgresql libpq-dev
+
+   # Create virtualenv and install CKAN
+   python3 -m venv /usr/lib/ckan/default
+   pip install -e 'git+https://github.com/ckan/ckan.git#egg=ckan'
+   ```
+
+2. **Docker Installation**:
+   ```bash
+   git clone https://github.com/ckan/ckan
+   cd ckan
+   docker-compose up -d
+   ```
+
+The platform provides extensive documentation and an active community to help
+users get started with data portal management.

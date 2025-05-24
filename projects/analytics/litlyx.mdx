@@ -1,0 +1,95 @@
+---
+slug: litlyx
+name: Litlyx
+description: |
+  Litlyx is a modern, developer-friendly, cookie-free analytics tool that provides powerful web analytics capabilities. It offers a simple setup process and can be self-hosted with Docker as an alternative to Google Analytics, Matomo, and other analytics platforms.
+logo: https://avatars.githubusercontent.com/u/171151316?s=64&v=4
+primaryCategory: analytics
+categories: [analytics, monitoring, data-visualization]
+github: litlyx/litlyx
+websiteUrl: https://litlyx.com/
+alternatives:
+  selfHosted: [matomo, umami, plausible]
+  nonSelfHosted: [google-analytics, mixpanel]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple deployment via Docker with minimal configuration required. Cloud version available with 30-second setup."
+---
+
+Litlyx is a modern web analytics platform focused on providing a developer-friendly,
+cookie-free solution for tracking website metrics. It offers both cloud-hosted and
+self-hosted options with quick setup and comprehensive analytics capabilities.
+
+## Key Features
+
+- **Easy Integration**:
+
+  - 30-second setup process
+  - Universal script tag installation
+  - NPM package support
+  - Framework-agnostic implementation
+  - WordPress compatibility
+  - Custom event tracking
+
+- **Core Analytics**:
+
+  - Page visit tracking
+  - Real-time user monitoring
+  - Unique visitor counting
+  - Bounce rate analysis
+  - Session duration metrics
+  - Geographic data
+
+- **Advanced Capabilities**:
+
+  - Custom event tracking
+  - Metadata support
+  - API access
+  - Multiple deployment options
+  - Framework integrations
+  - Real-time dashboard
+
+- **Privacy Features**:
+  - Cookie-free tracking
+  - GDPR compliance
+  - Self-hosting option
+  - Data ownership
+  - Configurable tracking
+  - Privacy-first design
+
+## Who Should Use Litlyx
+
+Litlyx is ideal for:
+
+- **Developers** seeking simple analytics integration
+- **Organizations** requiring privacy-focused tracking
+- **Website Owners** wanting comprehensive metrics
+- **Teams** needing real-time analytics
+
+## Getting Started
+
+Litlyx offers multiple implementation options:
+
+1. **Script Tag Integration**:
+
+   ```html
+   <script
+     defer
+     data-project="your_project_id"
+     src="https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js"
+   ></script>
+   ```
+
+2. **NPM Installation**:
+
+   ```bash
+   npm i litlyx-js
+   ```
+
+3. **Self-Hosted Docker**:
+   ```bash
+   docker-compose up
+   ```
+
+The platform provides immediate analytics capabilities while maintaining
+flexibility for both cloud and self-hosted deployments.

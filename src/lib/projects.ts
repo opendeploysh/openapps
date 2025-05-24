@@ -1,31 +1,152 @@
-import projectData from "./projects.json";
+import projectData from "../../.next/cache/projects.json";
 import githubData from "./projects-github.json";
+
 import { RestEndpointMethodTypes } from "@octokit/rest";
+import { z } from "zod";
 
-export type ProjectMeta = {
-  slug: string;
-  name: string;
-  description: string;
-  image: string;
-  categories: string[];
-  github: string;
-  websiteUrl: string;
-  discord?: string;
+export const primaryCategories = [
+  "communication",
+  "email-complete",
+  "email-delivery",
+  "email-transfer",
+  "email-lists",
+  "email-webmail",
+  "irc",
+  "sip",
+  "social",
+  "video-chat",
+  "xmpp-servers",
+  "xmpp-clients",
+  "blogging",
+  "docs",
+  "ebooks",
+  "digital-library",
+  "library-systems",
+  "media",
+  "streaming",
+  "audio",
+  "multimedia",
+  "video",
+  "photos",
+  "recipes",
+  "static-sites",
+  "wikis",
+  "calendar",
+  "groupware",
+  "notes",
+  "office",
+  "dashboards",
+  "polls",
+  "tasks",
+  "time-tracking",
+  "backup",
+  "booking",
+  "crm",
+  "fitness",
+  "hr",
+  "identity",
+  "inventory",
+  "knowledge",
+  "planning",
+  "ticketing",
+  "finance",
+  "analytics",
+  "automation",
+  "dev",
+  "api",
+  "ci-cd",
+  "serverless",
+  "feature-flags",
+  "ide",
+  "localization",
+  "low-code",
+  "dev-projects",
+  "testing",
+  "monitoring",
+  "remote",
+  "search",
+  "self-hosting",
+  "status",
+  "web-servers",
+  "archiving",
+  "database",
+  "dns",
+  "filesync",
+  "filesystems",
+  "object-storage",
+  "p2p",
+  "file-upload",
+  "file-manager",
+  "pastebin",
+  "auth",
+  "passwords",
+  "proxy",
+  "vpn",
+  "learning",
+  "genealogy",
+  "conferences",
+  "ecommerce",
+  "csa",
+  "manufacturing",
+  "iot",
+  "genai",
+  "maps",
+  "bookmarks",
+  "short-links",
+  "games",
+  "game-tools",
+  "misc",
+  "surveillance",
+] as const;
 
-  license: string;
-  alternatives: string[];
-  logo: {
-    dark: string;
-    light: string;
-  };
-  stars: number;
-  language: string;
-  deployment?: {
-    difficulty: "Easy" | "Medium" | "Advanced";
-    justification: string;
-  };
-  popularity?: number;
-};
+export const mdxProjectData = z.object({
+  slug: z.string(),
+  name: z.string(),
+  description: z.string(),
+  logo: z.string(),
+  heroImage: z
+    .string()
+    .optional()
+    .refine((val) => {
+      if (!val) {
+        console.warn("Project hero image not set");
+        return true;
+      }
+      return true;
+    }),
+
+  primaryCategory: z.enum(primaryCategories),
+  categories: z.array(z.string()),
+
+  github: z.string().regex(/^[^/]+\/[^/]+$/),
+
+  websiteUrl: z.string().url().optional(),
+  discord: z.string().url().optional(),
+
+  license: z.string().optional(),
+  alternatives: z.object({
+    selfHosted: z.array(z.string()).optional(),
+    nonSelfHosted: z.array(z.string()).optional(),
+  }),
+  deployment: z.object({
+    difficulty: z.enum(["Easy", "Medium", "Advanced"]),
+    justification: z.string(),
+  }),
+  popularity: z.number().optional(),
+
+  language: z.string().optional(),
+});
+
+export type ProjectMeta = z.infer<typeof mdxProjectData>;
+
+export const githubProjectData = z.object({
+  lastCommitDate: z.string().transform((str) => new Date(str)),
+  languages: z.record(z.string(), z.number()),
+  stars: z.number(),
+  forks: z.number(),
+  watchers: z.number(),
+  issues: z.number(),
+});
 
 export const projects = projectData as unknown as Array<ProjectMeta>;
 export const projectsWithGitHubData = githubData as unknown as Record<

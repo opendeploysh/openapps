@@ -1,0 +1,87 @@
+---
+slug: rudderstack
+name: RudderStack
+description: |
+  RudderStack is an open source Customer Data Platform (CDP) that provides data pipelines to collect data from applications, websites and SaaS platforms, then activate it in your warehouse and business tools.
+logo: https://avatars.githubusercontent.com/u/52480567?s=64&v=4
+primaryCategory: analytics
+categories: [analytics, data-integration, customer-data-platform]
+github: rudderlabs/rudder-server
+websiteUrl: https://www.rudderstack.com
+alternatives:
+  selfHosted: [jitsu, snowplow]
+  nonSelfHosted: [segment, mparticle]
+license: ELv2
+deployment:
+  difficulty: "Medium"
+  justification: "Requires PostgreSQL database setup and configuration. Docker and Kubernetes deployments available but need proper setup for production use."
+---
+
+RudderStack is an open source Customer Data Platform (CDP) focused on providing data
+pipelines that connect your entire customer data stack. It enables collecting data
+from any source and activating it in your data warehouse and business tools.
+
+## Key Features
+
+- **Data Collection & Integration**:
+
+  - SDK support for multiple platforms
+  - Cloud source integrations
+  - Event streaming capabilities
+  - API-first architecture
+  - Warehouse-first approach
+  - Segment API compatibility
+
+- **Data Transformation**:
+
+  - JavaScript transformation framework
+  - Custom enrichment options
+  - Data filtering capabilities
+  - Event modification
+  - Identity resolution
+  - Data validation
+
+- **Warehouse Integration**:
+
+  - Real-time syncing
+  - Schema management
+  - Incremental updates
+  - Custom table mapping
+  - Historical data import
+  - Data deduplication
+
+- **Enterprise Features**:
+  - High availability
+  - Privacy controls
+  - Role-based access
+  - Audit logging
+  - Error handling
+  - Unlimited events
+
+## Who Should Use RudderStack
+
+RudderStack is ideal for:
+
+- **Data Teams** needing unified customer data pipelines
+- **Organizations** wanting data warehouse ownership
+- **Developers** requiring API-first architecture
+- **Companies** seeking Segment alternatives
+
+## Getting Started
+
+RudderStack offers multiple deployment options:
+
+1. **Docker Deployment**:
+
+   ```bash
+   docker-compose up
+   ```
+
+2. **Kubernetes**:
+   ```bash
+   helm repo add rudderstack https://helm.rudderstack.com
+   helm install rudderstack rudderstack/rudderstack
+   ```
+
+The platform provides extensive documentation and community support while
+maintaining strong data privacy and warehouse-first architecture.

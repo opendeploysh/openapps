@@ -4,16 +4,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
 
-    b: (props) => (
-      <strong {...props} className="text-white">
-        {props.children}
-      </strong>
-    ),
-    strong: (props) => (
-      <strong {...props} className="text-white">
-        {props.children}
-      </strong>
-    ),
+    b: (props) => <strong {...props}>{props.children}</strong>,
+    strong: (props) => <strong {...props}>{props.children}</strong>,
     pre: (props) => <pre {...props} className="bg-neutral-900" />,
 
     a: (props) => (

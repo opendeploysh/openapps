@@ -1,0 +1,89 @@
+---
+slug: middleware
+name: Middleware
+description: |
+  Middleware is an open-source tool designed to help engineering leaders measure and analyze the effectiveness of their teams using the DORA metrics.
+logo: https://avatars.githubusercontent.com/u/99589860?s=64&v=4
+primaryCategory: analytics
+categories: [analytics, monitoring, devops]
+github: middlewarehq/middleware
+websiteUrl: https://middlewarehq.com/
+alternatives:
+  selfHosted: [metabase, grafana]
+  nonSelfHosted: [linearb, athenian]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple deployment via Docker with minimal configuration required."
+---
+
+Middleware is an open-source platform designed to help engineering leaders measure and
+analyze team effectiveness using DORA metrics. It provides automated collection and
+visualization of key software delivery performance indicators through integration
+with various development tools.
+
+## Key Features
+
+- **DORA Metrics Analysis**:
+
+  - Deployment Frequency tracking
+  - Lead Time for Changes measurement
+  - Mean Time to Restore monitoring
+  - Change Failure Rate calculation
+  - Automated data collection
+
+- **Development Tool Integration**:
+
+  - CI/CD platform connectivity
+  - Git repository analysis
+  - Project management tool integration
+  - Custom data source support
+  - Real-time metric updates
+
+- **Visualization & Reporting**:
+
+  - Customizable dashboards
+  - Team performance metrics
+  - Trend analysis
+  - Comparative benchmarks
+  - Export capabilities
+
+- **Team Management**:
+  - Multi-team support
+  - Role-based access control
+  - Team configuration options
+  - Repository grouping
+  - Custom metric thresholds
+
+## Who Should Use Middleware
+
+Middleware is ideal for:
+
+- **Engineering Leaders** seeking data-driven insights
+- **Development Teams** wanting to improve delivery metrics
+- **Organizations** implementing DevOps practices
+- **Managers** tracking team performance
+
+## Getting Started
+
+Middleware offers simple deployment options:
+
+1. **Docker Installation**:
+
+   ```bash
+   docker volume create middleware_postgres_data
+   docker volume create middleware_keys
+   docker run --name middleware \
+              -p 3333:3333 \
+              -v middleware_postgres_data:/var/lib/postgresql/data \
+              -v middleware_keys:/app/keys \
+              -d middlewareeng/middleware:latest
+   ```
+
+2. **Development Setup**:
+   - Clone repository
+   - Configure environment
+   - Run development servers
+   - Access via web interface
+
+The platform provides immediate visibility into engineering metrics while
+maintaining flexibility for custom configurations and integrations.

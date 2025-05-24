@@ -1,0 +1,95 @@
+---
+slug: wayback
+name: Wayback
+description: |
+  An archiving tool with an IM-style interface that prioritizes privacy and accessibility, integrated with various archival services including Internet Archive, archive.today, Ghostarchive, IPFS, Telegraph, and file systems.
+logo: https://avatars.githubusercontent.com/u/66000339?s=64&v=4
+primaryCategory: archiving
+categories: [archiving, web-archiving, content-preservation]
+github: wabarc/wayback
+websiteUrl: https://docs.wabarc.eu.org
+license: GPL-3.0
+alternatives:
+  selfHosted: [archivebox, archivy]
+  nonSelfHosted: [archive.org, archive.today]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Go environment setup and configuration. Docker deployment available but setup needed for production use."
+---
+
+Wayback is a versatile web archiving tool that provides multiple ways to capture and preserve web content. It features an IM-style interface for archiving and playback, along with extensive integration options for various archival services and social platforms.
+
+## Key Features
+
+- **Multiple Archiving Services**:
+
+  - Internet Archive integration
+  - archive.today support
+  - IPFS storage
+  - Telegraph publishing
+  - Local file system storage
+  - Ghostarchive integration
+
+- **Communication Interfaces**:
+
+  - Telegram bot
+  - Discord bot
+  - Matrix bot
+  - IRC support
+  - XMPP integration
+  - Mastodon integration
+  - Web interface
+
+- **Advanced Capabilities**:
+
+  - Tor hidden service support
+  - Prometheus metrics
+  - Cross-platform compatibility
+  - Batch URL processing
+  - CLI tool included
+  - Streaming media download
+  - Search and playback
+
+- **Publishing Options**:
+  - Telegram channel publishing
+  - Mastodon posting
+  - GitHub Issues integration
+  - Multiple export formats
+
+## Who Should Use Wayback
+
+Wayback is ideal for:
+
+- **Web Archivists** preserving online content
+- **Researchers** collecting web resources
+- **Organizations** needing content preservation
+- **Privacy-conscious Users** seeking anonymous archiving
+- **Developers** building archival integrations
+
+## Getting Started
+
+Wayback can be installed through multiple methods:
+
+1. **Package Managers**:
+
+   ```bash
+   # Via Homebrew
+   brew tap wabarc/wayback
+   brew install wayback
+
+   # Via Snapcraft
+   sudo snap install wayback
+   ```
+
+2. **Direct Installation**:
+
+   ```bash
+   # From source
+   go install github.com/wabarc/wayback/cmd/wayback@latest
+
+   # Using install script
+   curl -fsSL https://get.wabarc.eu.org | sh
+   ```
+
+The platform provides extensive documentation and configuration options to help users
+get started with web content archiving.

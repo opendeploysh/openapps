@@ -1,0 +1,77 @@
+---
+slug: gitit
+name: Gitit
+description: |
+  Gitit is a wiki program written in Haskell that uses Happstack for the web server and pandoc for markup processing, with pages stored in git, darcs, or mercurial repositories.
+logo: https://avatars.githubusercontent.com/u/3044?s=64&v=4
+primaryCategory: wikis
+categories: [documentation, knowledge-management, collaboration]
+github: jgm/gitit
+websiteUrl: https://github.com/jgm/gitit
+alternatives:
+  selfHosted: [wiki-js, bookstack, mediawiki]
+  nonSelfHosted: [confluence, notion]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Haskell environment setup and database configuration. Docker deployment available but configuration needed for advanced features."
+---
+
+Gitit is a powerful wiki platform written in Haskell that combines traditional
+wiki functionality with modern version control systems. It uses Happstack for
+the web server and pandoc for markup processing, allowing pages to be stored in
+git, darcs, or mercurial repositories.
+
+## Key Features
+
+- **Flexible Markup Support**: Gitit supports multiple markup formats including:
+
+  - Pandoc's extended markdown
+  - reStructuredText
+  - LaTeX
+  - HTML
+  - DocBook
+  - Emacs Org-mode
+
+- **Version Control Integration**:
+
+  - Pages stored in git, darcs, or mercurial repositories
+  - Full version history and rollback capabilities
+  - Command-line or web interface modification
+  - Repository synchronization support
+
+- **Advanced Formatting**:
+
+  - TeX math rendering support
+  - Syntax highlighting for source code
+  - Multiple themes and customization options
+  - Page metadata and categories
+
+- **Enterprise Features**:
+  - Plugin system for extending functionality
+  - Caching for improved performance
+  - Authentication options including HTTP and OAuth
+  - Access control and user management
+  - Atom feeds for site-wide and per-page updates
+
+## Who Should Use Gitit
+
+Gitit is ideal for:
+
+- **Development Teams** needing technical documentation with version control
+- **Organizations** requiring secure, collaborative documentation
+- **Academic Institutions** looking for math and LaTeX support
+- **Teams** wanting direct repository access to documentation
+
+## Getting Started
+
+Gitit can be deployed through several methods:
+
+- Direct installation via cabal/stack
+- Manual source compilation
+- Docker container deployment
+- Integration as a library in Happstack applications
+
+The platform provides extensive configuration options and plugin support,
+making it highly customizable for different use cases. Whether you're
+building technical documentation, team wikis, or academic content, Gitit
+offers a robust platform with strong version control integration.

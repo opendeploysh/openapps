@@ -3,11 +3,22 @@ import fs from "node:fs";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { useMDXComponents } from "@/mdx-components";
 import { notFound } from "next/navigation";
+import { projects } from "@/lib/projects";
 
 export const projectsPath = "projects";
 
-const getSourcePath = (slug: string) =>
-  path.join(process.cwd(), projectsPath, slug) + ".mdx";
+const getSourcePath = (slug: string) => {
+  const project = projects.find((p) => p.slug === slug);
+  if (!project) notFound();
+  return (
+    path.join(
+      process.cwd(),
+      "projects",
+      project.primaryCategory,
+      project.slug
+    ) + ".mdx"
+  );
+};
 
 export const useCompile = async (file: string) => {
   const components = useMDXComponents({});

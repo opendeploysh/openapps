@@ -1,0 +1,90 @@
+---
+slug: xwiki
+name: XWiki
+logo: https://www.xwiki.org/xwiki/resources/icons/xwiki/favicon144.png
+description: |
+  XWiki is an advanced open source enterprise wiki platform written in Java. It features a powerful WYSIWYG editor, strong rights management, and extensive customization capabilities through its extension system.
+primaryCategory: wikis
+categories: [documentation, knowledge-management, collaboration]
+github: xwiki/xwiki-platform
+websiteUrl: https://www.xwiki.org/
+alternatives:
+  selfHosted: [mediawiki, confluence, wiki-js]
+  nonSelfHosted: [confluence, notion]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Java environment setup and database configuration. Docker deployment available but setup needed for advanced features."
+---
+
+XWiki is a powerful enterprise wiki platform written in Java that combines traditional
+wiki features with application development capabilities. It offers extensive
+customization options through its extension system while maintaining enterprise-grade
+security and scalability.
+
+## Key Features
+
+- **Rich Content Creation**:
+
+  - Advanced WYSIWYG editor
+  - Powerful wiki syntax
+  - Real-time collaborative editing
+  - Document versioning
+  - Content organization with spaces
+  - Multi-language support
+
+- **Enterprise Features**:
+
+  - Strong rights management
+  - LDAP/OAuth integration
+  - Database clustering
+  - Full-text search
+  - REST API
+  - Extensive security options
+
+- **Application Platform**:
+
+  - App Within Minutes builder
+  - Scripting support (Groovy, Velocity)
+  - Structured data
+  - Custom application development
+  - Extension system
+  - Template engine
+
+- **Advanced Capabilities**:
+  - Responsive design
+  - Document import/export
+  - Office document integration
+  - PDF export
+  - Over 900 extensions available
+  - Custom workflows
+
+## Who Should Use XWiki
+
+XWiki is ideal for:
+
+- **Large Organizations** needing a customizable knowledge platform
+- **Development Teams** requiring wiki-based applications
+- **Enterprises** seeking a Confluence alternative
+- **Organizations** needing strong access control
+- **Teams** wanting extensible documentation
+
+## Getting Started
+
+XWiki offers multiple deployment options:
+
+1. **Traditional Installation**:
+
+   - Requires Java environment
+   - Database setup (MySQL/PostgreSQL)
+   - Web server configuration
+   - WAR file deployment
+
+2. **Docker Deployment**:
+   ```bash
+   docker run -d -p 8080:8080 xwiki:stable-mysql
+   ```
+
+The platform provides extensive configuration options and a rich ecosystem
+of extensions. Whether building a simple wiki or complex collaborative
+applications, XWiki offers the flexibility and features needed for
+enterprise deployments.

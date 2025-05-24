@@ -1,0 +1,75 @@
+---
+slug: amusewiki
+name: AmuseWiki
+description: |
+  AmuseWiki is a library-oriented wiki engine and publishing platform focused on high-quality text archiving and printing capabilities, with support for multiple output formats including PDF and EPUB.
+logo: https://amusewiki.org/favicon.ico
+primaryCategory: wikis
+categories: [documentation, publishing, archiving]
+github: melmothx/amusewiki
+websiteUrl: https://amusewiki.org
+license: GPL-1.0
+alternatives:
+  selfHosted: [wiki-js, bookstack, mediawiki]
+  nonSelfHosted: [gitbook]
+deployment:
+  difficulty: "Advanced"
+  justification: "Requires Perl environment setup, database configuration, and understanding of LaTeX for advanced features. More complex than typical wiki platforms."
+---
+
+AmuseWiki is a specialized wiki engine and publishing platform designed for
+libraries and organizations that need robust text archiving and high-quality
+printing capabilities. It combines traditional wiki functionality with advanced
+publishing features, making it particularly suitable for maintaining and
+publishing collections of texts.
+
+## Key Features
+
+- **Advanced Publishing Capabilities**: AmuseWiki excels at producing
+  high-quality publications with support for multiple output formats including
+  PDF (via LaTeX), EPUB, and HTML. The platform offers professional-grade
+  printing features including imposition and crop marks.
+
+- **Git-Based Version Control**: All texts are stored under Git version control,
+  enabling robust tracking of changes, offline editing capabilities, and
+  reliable long-term archiving of content.
+
+- **User-Friendly Markup**: The platform uses a simplified markup language
+  borrowed from Emacs Muse, making it accessible while maintaining powerful
+  formatting capabilities. It also supports importing HTML documents while
+  preserving logical markup.
+
+- **Multisite Support**: A single AmuseWiki instance can host multiple
+  independent sites, making it efficient for organizations managing multiple
+  collections or archives.
+
+- **Comprehensive Search**: Features fast and accurate full-text search with
+  extensive configuration options to help users find specific content within
+  large text collections.
+
+## Who Should Use AmuseWiki
+
+AmuseWiki is ideal for:
+
+- **Libraries** needing a platform for digital text archiving and publishing
+- **Academic Institutions** requiring high-quality document production
+- **Publishing Organizations** looking for a robust text management system
+- **Archives** seeking long-term text preservation with version control
+- **Organizations** needing professional-grade PDF output capabilities
+
+## Getting Started
+
+AmuseWiki is packaged for Debian systems with all dependencies included. For
+other systems, installation requires setting up a Perl environment and
+configuring the necessary dependencies including LaTeX for PDF generation. The
+platform provides detailed documentation for installation and configuration.
+
+The system supports multiple deployment models:
+
+- Read-only archive
+- Moderated wiki
+- Fully open wiki
+
+Whether you're building a digital library, managing an archive, or need a
+publishing platform with professional output capabilities, AmuseWiki provides a
+robust foundation for text-focused content management.

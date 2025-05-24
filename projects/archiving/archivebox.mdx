@@ -1,0 +1,91 @@
+---
+slug: archivebox
+name: ArchiveBox
+description: |
+  ArchiveBox is a self-hosted web archiving solution that lets you preserve content from websites in multiple formats like HTML, PDF, screenshots, and more. It supports importing from browser history, bookmarks, RSS feeds, and other sources.
+logo: https://avatars.githubusercontent.com/u/74894248?s=64&v=4
+primaryCategory: archiving
+categories: [archiving, bookmarks, documentation]
+github: ArchiveBox/ArchiveBox
+websiteUrl: https://archivebox.io/
+alternatives:
+  selfHosted: [wallabag, shaarli]
+  nonSelfHosted: [archive-org, pocket]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires setup of dependencies like Chrome and yt-dlp. Docker deployment available but configuration needed for production use."
+---
+
+ArchiveBox is an open source self-hosted web archiving platform that preserves web
+content in multiple redundant formats. It allows you to save copies of websites,
+social media, and other online content while maintaining complete control over your
+archived data.
+
+## Key Features
+
+- **Comprehensive Archiving**:
+
+  - Multiple backup formats per URL
+  - HTML with CSS/JS preservation
+  - PDF and PNG screenshots
+  - Media downloads (video/audio)
+  - Full-text extraction
+  - WARC format support
+  - Git repository cloning
+
+- **Flexible Input Sources**:
+
+  - Browser bookmarks/history
+  - RSS/Atom feeds
+  - Pocket/Pinboard exports
+  - Browser extension
+  - Command line interface
+  - Web UI for management
+  - API access
+
+- **Privacy-Focused Design**:
+
+  - Self-hosted control
+  - No tracking or analytics
+  - Optional archive.org backup
+  - Cookie/login support
+  - Configurable extractors
+  - Data ownership
+
+- **Advanced Capabilities**:
+  - Scheduled archiving
+  - Full-text search
+  - Tag organization
+  - Multi-user support
+  - REST API access
+  - Extensible architecture
+
+## Who Should Use ArchiveBox
+
+ArchiveBox is ideal for:
+
+- **Researchers** preserving web content
+- **Organizations** maintaining archives
+- **Individuals** saving personal content
+- **Developers** building archival tools
+
+## Getting Started
+
+ArchiveBox can be deployed via Docker or pip:
+
+1. **Docker**:
+
+   ```bash
+   docker run -v $PWD:/data archivebox/archivebox init
+   docker run -v $PWD:/data archivebox/archivebox add 'https://example.com'
+   ```
+
+2. **Python/pip**:
+   ```bash
+   pip install archivebox
+   archivebox init
+   archivebox add 'https://example.com'
+   ```
+
+The platform provides extensive documentation and an active community to help users
+get started with web archiving.

@@ -81,14 +81,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <ProjectHeader {...project} />
         </div>
 
-        <img
-          loading="lazy"
-          src={project.image}
-          alt={`${project.name} screenshot`}
-          className="w-full rounded-lg my-14 shadow-2xl"
-        />
+        {project.heroImage && (
+          <img
+            loading="lazy"
+            src={project.heroImage}
+            alt={`${project.name} screenshot`}
+            className="w-full rounded-lg my-14 shadow-2xl"
+          />
+        )}
 
-        <div className="prose prose-neutral dark:prose-invert max-w-none">
+        <div className="prose prose-neutral dark:prose-invert max-w-none mt-14">
           {mdxData?.content}
         </div>
 

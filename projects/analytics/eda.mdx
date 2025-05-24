@@ -1,0 +1,84 @@
+---
+slug: eda
+name: Enterprise Data Analytics
+description: |
+  EDA is an open-source analytics and business intelligence platform focused on simplicity and ease of use, allowing users to create dashboards and reports without technical knowledge.
+logo: https://avatars.githubusercontent.com/u/1340212?s=64&v=4
+primaryCategory: analytics
+categories: [analytics, business-intelligence, data-visualization]
+github: jortilles/EDA
+websiteUrl: http://edadoc.jortilles.com/
+alternatives:
+  selfHosted: [metabase, redash]
+  nonSelfHosted: [tableau, powerbi]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple deployment via Docker with minimal configuration required. One-click deploy options available."
+---
+
+Enterprise Data Analytics (EDA) is an open-source business intelligence and analytics
+platform designed with simplicity as its core principle. It enables users to create
+powerful dashboards and reports without requiring technical expertise, while still
+providing advanced capabilities for power users.
+
+## Key Features
+
+- **User-Friendly Analytics**:
+
+  - No-code dashboard creation
+  - Intuitive visual interface
+  - Tree mode for complex queries
+  - KPI definition and alerts
+  - Parent-child report relationships
+
+- **Advanced Capabilities**:
+
+  - SQL support for advanced users
+  - Row Level Security
+  - Public dashboard sharing
+  - Interactive dashboard embedding
+  - Email alert system
+
+- **Data Management**:
+
+  - Centralized data organization
+  - Complex data model support
+  - Tree-based query builder
+  - Multiple data source support
+  - Custom KPI definitions
+
+- **Enterprise Features**:
+  - Role-based access control
+  - Public/private dashboard options
+  - Dashboard embedding capabilities
+  - Email notifications
+  - Custom branding options
+
+## Who Should Use EDA
+
+EDA is ideal for:
+
+- **Business Users** needing simple analytics tools
+- **Organizations** wanting accessible BI solutions
+- **Teams** requiring shareable dashboards
+- **Companies** seeking open-source analytics
+
+## Getting Started
+
+EDA offers multiple deployment options:
+
+1. **Docker Deployment**:
+
+   ```bash
+   docker run -p 80:80 jortilles/eda:latest
+   ```
+
+2. **Manual Setup**:
+   - Clone repository
+   - Configure MongoDB connection
+   - Set up backend URL
+   - Install dependencies
+   - Start services
+
+The platform provides immediate analytics capabilities while maintaining
+flexibility for both basic and advanced use cases.

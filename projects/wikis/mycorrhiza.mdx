@@ -1,0 +1,80 @@
+---
+slug: mycorrhiza
+name: Mycorrhiza Wiki
+description: |
+  Mycorrhiza Wiki is a lightweight file-system wiki engine that uses Git for keeping history. It stores content in plain files and features a unique markup language called Mycomarkup.
+logo: https://mycorrhiza.wiki/static/favicon.ico
+primaryCategory: wikis
+categories: [documentation, knowledge-management, collaboration]
+github: bouncepaw/mycorrhiza
+websiteUrl: https://mycorrhiza.wiki/
+alternatives:
+  selfHosted: [wiki-js, gitit, gollum]
+  nonSelfHosted: [notion, confluence]
+deployment:
+  difficulty: "Easy"
+  justification: "No database required, uses filesystem storage. Simple installation with single binary or Docker."
+---
+
+Mycorrhiza Wiki is a lightweight, file-system based wiki engine written in Go that
+uses Git for version control. It offers a unique approach to wiki organization
+through "hyphae" - content units that can be interlinked to form rich hypertext
+networks.
+
+## Key Features
+
+- **File-System Storage**:
+
+  - No database required - all content stored in plain files
+  - Direct file system access to content
+  - Easy backup and migration
+  - Git-based version control
+
+- **Hyphae Content System**:
+
+  - Flexible content units for text, images, and media
+  - Transclusion support between hyphae
+  - Rich interlinking capabilities
+  - Nested organization support
+
+- **Mycomarkup Language**:
+
+  - Custom markup designed for clarity and ease of use
+  - Unambiguous syntax
+  - Built specifically for wiki content
+  - Simple learning curve
+
+- **Organization Tools**:
+
+  - Category system without hierarchy restrictions
+  - Optional nested content structure
+  - Interwiki support
+  - Open Graph meta tag integration
+
+- **User Experience**:
+  - Keyboard-driven navigation
+  - Multiple authentication options including Telegram login
+  - Web feeds (RSS, Atom, JSON Feed)
+  - Full change history through Git
+
+## Who Should Use Mycorrhiza
+
+Mycorrhiza Wiki is ideal for:
+
+- **Independent Writers** seeking a lightweight personal wiki
+- **Development Teams** wanting Git-integrated documentation
+- **Small Organizations** needing simple, file-based knowledge management
+- **Digital Gardeners** building interconnected knowledge bases
+
+## Getting Started
+
+Mycorrhiza offers multiple deployment options:
+
+- Single binary installation
+- Docker container deployment
+- Package manager installation on supported systems
+- Manual compilation from source
+
+The system requires minimal setup - just run the binary and start creating
+content. Advanced features like authentication and custom styling can be
+configured through simple configuration files.

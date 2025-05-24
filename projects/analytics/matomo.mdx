@@ -1,0 +1,93 @@
+---
+slug: matomo
+name: Matomo
+description: |
+  Matomo (formerly Piwik) is a leading open source web analytics platform that gives you complete control over your data. It's a privacy-focused alternative to Google Analytics with comprehensive tracking and reporting capabilities.
+logo: https://avatars.githubusercontent.com/u/698038?s=64&v=4
+primaryCategory: analytics
+categories: [analytics, monitoring, privacy]
+github: matomo-org/matomo
+websiteUrl: https://matomo.org/
+alternatives:
+  selfHosted: [plausible, umami]
+  nonSelfHosted: [google-analytics, mixpanel]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires PHP and MySQL setup. Docker deployment available but configuration needed for production use."
+---
+
+Matomo is a powerful open source web analytics platform focused on privacy and data
+ownership. As a full-featured alternative to Google Analytics, it provides comprehensive
+tracking capabilities while keeping you in complete control of your analytics data.
+
+## Key Features
+
+- **Complete Analytics Platform**:
+
+  - Real-time visitor tracking
+  - Goal conversion monitoring
+  - E-commerce analytics
+  - Campaign tracking
+  - Custom reports
+  - Heatmaps and session recordings
+
+- **Privacy-Focused Design**:
+
+  - Self-hosted data control
+  - GDPR compliance tools
+  - Data anonymization options
+  - Cookie-less tracking
+  - Privacy-safe analytics
+  - Configurable data retention
+
+- **Enterprise Capabilities**:
+
+  - Multi-site tracking
+  - Team collaboration tools
+  - Role-based access control
+  - White label options
+  - API access
+  - Custom dimensions
+
+- **Advanced Features**:
+  - A/B testing
+  - Form analytics
+  - Media tracking
+  - Custom alerts
+  - Scheduled reports
+  - Log analytics
+
+## Who Should Use Matomo
+
+Matomo is ideal for:
+
+- **Organizations** needing data ownership
+- **Privacy-Conscious Companies** seeking GDPR compliance
+- **Enterprises** wanting comprehensive analytics
+- **Developers** requiring flexible integration options
+
+## Getting Started
+
+Matomo offers multiple deployment options:
+
+1. **Traditional Installation**:
+
+   ```bash
+   # Download and extract Matomo
+   wget https://builds.matomo.org/matomo.zip
+   unzip matomo.zip
+
+   # Configure web server and database
+   # Run web-based installer
+   ```
+
+2. **Docker Deployment**:
+   ```bash
+   docker run -d --name matomo \
+     -p 8080:80 \
+     -v matomo:/var/www/html \
+     matomo:latest
+   ```
+
+The platform provides extensive documentation and community support while
+maintaining strong privacy standards and analytics capabilities.

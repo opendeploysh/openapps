@@ -1,0 +1,87 @@
+---
+slug: wallabag
+name: wallabag
+description: |
+  wallabag is a self-hosted web application for saving web pages to read later. It extracts and stores content without distractions like ads, allowing offline reading across devices.
+logo: https://avatars.githubusercontent.com/u/4143872?s=64&v=4
+primaryCategory: archiving
+categories: [archiving, bookmarks, reading]
+github: wallabag/wallabag
+websiteUrl: https://wallabag.org/
+alternatives:
+  selfHosted: [archivebox, shaarli]
+  nonSelfHosted: [pocket, instapaper]
+license: MIT
+deployment:
+  difficulty: "Medium"
+  justification: "Requires PHP/MySQL environment setup and configuration. Docker deployment available but setup needed for production use."
+---
+
+wallabag is a self-hosted read-it-later application that allows you to save web pages
+for later reading in a clean, distraction-free format. It extracts content from web
+pages and makes them available across multiple devices and platforms.
+
+## Key Features
+
+- **Content Management**:
+
+  - Clean content extraction
+  - Tagging and categorization
+  - Full-text search
+  - Reading time estimates
+  - Article sharing
+  - Export capabilities
+
+- **Reading Experience**:
+
+  - Distraction-free reading mode
+  - Dark/light themes
+  - Custom CSS support
+  - Offline access
+  - Mobile-friendly interface
+  - Multiple languages
+
+- **Integration Options**:
+
+  - Browser extensions
+  - Mobile apps (Android/iOS)
+  - RSS feeds
+  - REST API
+  - Import from other services
+  - Email-to-wallabag
+
+- **Advanced Capabilities**:
+  - Multi-user support
+  - OAuth authentication
+  - Custom tags
+  - Article annotations
+  - Reading statistics
+  - Automated tagging
+
+## Who Should Use wallabag
+
+wallabag is ideal for:
+
+- **Readers** wanting distraction-free content
+- **Researchers** collecting web resources
+- **Privacy-conscious users** seeking self-hosted solutions
+- **Teams** needing shared bookmarking tools
+
+## Getting Started
+
+wallabag can be deployed via:
+
+1. **Docker**:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+2. **Manual Installation**:
+   ```bash
+   git clone https://github.com/wallabag/wallabag.git
+   cd wallabag && make install
+   ```
+
+The platform provides extensive documentation and an active community to help users
+get started with content archiving.

@@ -67,13 +67,7 @@ export const ProjectCard = ({
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <div className="w-7 h-7 rounded border p-0.5">
-              <Image
-                src={logo.dark}
-                alt={name}
-                width={32}
-                height={32}
-                className="object-cover rounded"
-              />
+              <img src={logo} alt={name} className="object-cover rounded" />
             </div>
             <span className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               {name}

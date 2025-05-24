@@ -1,0 +1,70 @@
+---
+slug: django-wiki
+name: Django Wiki
+description: |
+  Django Wiki is a mature wiki system built for Django that offers complex functionality with simple integration and a superb interface, using Django models as its foundation.
+logo: https://avatars.githubusercontent.com/u/7289936?s=64&v=4
+primaryCategory: wikis
+categories: [documentation, knowledge-management, collaboration]
+github: django-wiki/django-wiki
+websiteUrl: https://demo.django-wiki.org
+demoUrl: https://demo.django-wiki.org
+alternatives:
+  selfHosted: [wiki-js, bookstack, mediawiki]
+  nonSelfHosted: [confluence]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Django environment setup and database configuration. Docker deployment available but configuration can be complex for advanced features."
+---
+
+Django Wiki is a mature and feature-rich wiki system built specifically for
+Django applications. It provides complex functionality while maintaining simple
+integration capabilities and an excellent user interface, all built on Django's
+powerful model system.
+
+## Key Features
+
+- **Django-Native Architecture**: Built from the ground up for Django, making it
+  a natural choice for Django-based projects. Uses Django models for data
+  storage and integrates seamlessly with Django's authentication and permission
+  systems.
+
+- **Hierarchical Structure**: Implements a tree structure for wiki pages using
+  django-mptt, allowing for efficient organization of content with unlimited
+  nesting levels and fast database operations.
+
+- **Plugin System**: Features a robust plugin architecture that allows the wiki
+  to grow in a structured way. Plugins can extend functionality without
+  modifying the core system.
+
+- **Markdown-Based**: Uses Markdown for content formatting, providing a simple
+  yet powerful way to create and edit content while maintaining readability.
+
+- **Revision Control**: Built-in revision system tracks all changes, allowing
+  for content history viewing and rollbacks. Designed for scalability without
+  relying on third-party revision control.
+
+## Who Should Use Django Wiki
+
+Django Wiki is ideal for:
+
+- **Django Developers** who need a wiki system that integrates naturally with
+  their existing Django applications
+- **Organizations** requiring a customizable wiki platform with enterprise
+  features
+- **Development Teams** looking for a wiki with strong version control and
+  collaboration features
+- **Educational Institutions** needing a robust platform for knowledge sharing
+
+## Getting Started
+
+Django Wiki can be deployed through various methods:
+
+- Direct installation via pip
+- Docker container deployment
+- Manual installation for customized setups
+
+The platform supports multiple Django versions and provides comprehensive
+documentation for setup and configuration. Whether you're building a small team
+wiki or a large-scale knowledge base, Django Wiki offers the flexibility and
+features needed for successful implementation.

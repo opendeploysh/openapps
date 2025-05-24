@@ -1,0 +1,90 @@
+---
+slug: druid
+name: Apache Druid
+description: |
+  Apache Druid is a high performance, real-time analytics database that delivers sub-second OLAP queries on streaming and batch data at scale and under load.
+logo: https://druid.apache.org/img/favicon.png
+primaryCategory: analytics
+categories: [analytics, databases, big-data]
+github: apache/druid
+websiteUrl: https://druid.apache.org/
+alternatives:
+  selfHosted: [clickhouse, pinot]
+  nonSelfHosted: [snowflake, bigquery]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires configuration of multiple components and understanding of architecture. Docker deployment available but setup needed for production use."
+---
+
+Apache Druid is a high-performance real-time analytics database designed for large-scale
+streaming data applications. It excels at sub-second OLAP queries on both streaming
+and batch data, making it ideal for operational analytics at scale.
+
+## Key Features
+
+- **High Performance Analytics**:
+
+  - Sub-second OLAP query execution
+  - Support for high-cardinality data
+  - Real-time streaming ingestion
+  - Columnar storage format
+  - Automatic data optimization
+  - Distributed query processing
+
+- **Scalable Architecture**:
+
+  - Horizontally scalable components
+  - Tiered storage architecture
+  - Quality of service controls
+  - Multi-tenant support
+  - Elastic deployment options
+  - Cloud-native design
+
+- **Real-time Capabilities**:
+
+  - Native Kafka/Kinesis integration
+  - Query-on-arrival functionality
+  - Low latency ingestion
+  - Guaranteed consistency
+  - Real-time aggregations
+  - Stream processing
+
+- **Enterprise Features**:
+  - SQL support
+  - Security controls
+  - High availability
+  - Data replication
+  - Monitoring tools
+  - REST APIs
+
+## Who Should Use Druid
+
+Druid is ideal for:
+
+- **Data-Driven Companies** needing real-time analytics
+- **Organizations** handling large-scale streaming data
+- **Teams** requiring sub-second query performance
+- **Applications** serving high-concurrency analytics
+
+## Getting Started
+
+Druid offers multiple deployment options:
+
+1. **Single Server Deployment**:
+
+   ```bash
+   curl -O https://dlcdn.apache.org/druid/27.0.0/apache-druid-27.0.0-bin.tar.gz
+   tar -xzf apache-druid-27.0.0-bin.tar.gz
+   cd apache-druid-27.0.0
+   ./bin/start-micro-quickstart
+   ```
+
+2. **Production Setup**:
+   - Configure cluster components
+   - Set up deep storage
+   - Configure metadata storage
+   - Deploy monitoring
+   - Scale as needed
+
+The platform provides extensive configuration options while maintaining
+high performance and reliability for large-scale analytics workloads.

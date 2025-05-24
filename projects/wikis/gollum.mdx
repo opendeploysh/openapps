@@ -1,0 +1,74 @@
+---
+slug: gollum
+name: Gollum
+description: |
+  Gollum is a simple Git-based wiki system that allows for human-editable text/markup files, flexible organization, and support for multiple markup languages.
+logo: https://avatars.githubusercontent.com/u/3840027?s=64&v=4
+primaryCategory: wikis
+categories: [documentation, knowledge-management, collaboration]
+github: gollum/gollum
+websiteUrl: https://github.com/gollum/gollum
+alternatives:
+  selfHosted: [wiki-js, bookstack, gitit]
+  nonSelfHosted: [confluence, notion]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Ruby/JRuby environment setup and Git configuration. Docker deployment available but some setup needed for advanced features."
+---
+
+Gollum is a lightweight wiki system built directly on top of Git, allowing for
+version-controlled documentation using simple text and markup files. It provides
+a clean web interface while leveraging Git's powerful versioning capabilities.
+
+## Key Features
+
+- **Git Integration**:
+
+  - Wiki content stored directly in Git repositories
+  - Full version history and rollback support
+  - Branch-specific content viewing
+  - Compatible with GitHub and GitLab wikis
+
+- **Flexible Markup Support**:
+
+  - Multiple markup formats including Markdown, RDoc
+  - Optional support for AsciiDoc, Creole, MediaWiki
+  - Diagrams via Mermaid and PlantUML
+  - Mathematics rendering with KaTeX or MathJax
+
+- **Rich Content Features**:
+
+  - BibTeX and citation support
+  - Annotations using CriticMarkup
+  - Custom macros and redirects
+  - RSS feed for changes
+  - File uploads and image support
+
+- **Development-Friendly**:
+  - Edit with any text editor or web interface
+  - Syntax highlighting for code
+  - API access for automation
+  - Customizable templates and styling
+
+## Who Should Use Gollum
+
+Gollum is ideal for:
+
+- **Development Teams** wanting Git-integrated documentation
+- **Technical Writers** who prefer working with markup and version control
+- **Open Source Projects** needing simple but powerful documentation
+- **Organizations** requiring version-controlled knowledge management
+
+## Getting Started
+
+Gollum can be deployed through several methods:
+
+- Ruby gem installation: `gem install gollum`
+- Docker container deployment
+- Java-based web application (.war file)
+- Source code compilation
+
+Basic setup requires minimal configuration - just point Gollum at a Git
+repository and start the server. Advanced features like authentication,
+custom markup support, and styling can be configured through command line
+options or configuration files.

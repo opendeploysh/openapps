@@ -8,8 +8,9 @@
     "build": "pnpm generate && next build",
     "start": "pnpm generate && next start",
     "lint": "next lint",
-    "generate": "node scripts/generate-projects.js",
-    "get-github-data": "node scripts/get-github-data.js"
+    "generate": "tsx scripts/generate-projects.ts",
+    "get-github-data": "node scripts/get-github-data.js",
+    "scrape-for-projects": "tsx scripts/scrape-for-projects.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -39,6 +40,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "date-fns": "^4.1.0",
+    "dotenv": "^16.5.0",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "lucide-react": "^0.511.0",
@@ -65,9 +67,13 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "axios": "^1.9.0",
+    "cheerio": "^1.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
+    "openai": "^4.103.0",
     "tailwindcss": "^4",
+    "tsx": "^4.19.4",
     "tw-animate-css": "^1.3.0",
     "typescript": "^5"
   }

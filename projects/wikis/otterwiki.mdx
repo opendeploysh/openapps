@@ -1,0 +1,85 @@
+---
+slug: otterwiki
+name: OtterWiki
+logo: https://otterwiki.com/static/img/otterhead.png
+description: |
+  An Otter Wiki is a minimalistic Python-based wiki software that stores content in git repositories and uses Markdown for markup. Built with Flask and featuring a clean interface with dark mode support.
+primaryCategory: wikis
+categories: [documentation, knowledge-management, collaboration]
+github: redimp/otterwiki
+websiteUrl: https://otterwiki.com/
+alternatives:
+  selfHosted: [wiki-js, gollum, gitit]
+  nonSelfHosted: [notion, confluence]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple deployment via Docker Compose with minimal configuration required. Git-based storage requires no database setup."
+---
+
+OtterWiki is a minimalistic Python-based wiki engine that combines the simplicity
+of Markdown with Git-based version control. Built using the Flask microframework,
+it offers a clean, modern interface while maintaining powerful collaboration
+features.
+
+## Key Features
+
+- **Clean, Modern Interface**:
+
+  - Minimalistic design focused on content
+  - Dark mode support
+  - Responsive layout
+  - Customizable sidebar with menu and page index
+  - CodeMirror-based editor with syntax highlighting
+
+- **Git Integration**:
+
+  - All content stored in Git repositories
+  - Complete changelog and page history
+  - Experimental Git HTTP server for clone/pull/push
+  - Version control for all content changes
+  - Branch management support
+
+- **Enhanced Markdown Support**:
+
+  - Table formatting
+  - Footnotes
+  - Fancy blocks and alerts
+  - Mermaid diagram integration
+  - Extended syntax features
+  - Wiki-style linking
+
+- **Collaboration Tools**:
+  - User authentication system
+  - File attachments
+  - Page revision tracking
+  - Multi-user editing
+  - Access control options
+
+## Who Should Use OtterWiki
+
+OtterWiki is ideal for:
+
+- **Small Teams** needing a lightweight documentation solution
+- **Developers** wanting Git-integrated knowledge management
+- **Organizations** seeking a simple, maintainable wiki platform
+- **Projects** requiring version-controlled documentation
+- **Users** who prefer Markdown-based content creation
+
+## Getting Started
+
+OtterWiki offers straightforward deployment options:
+
+1. **Docker Compose** (Recommended):
+
+   - Create a docker-compose.yml file
+   - Configure basic settings
+   - Run with `docker-compose up -d`
+
+2. **Manual Installation**:
+   - Python environment setup
+   - Package installation via pip
+   - Configuration file customization
+
+The first registered user becomes an administrator, allowing immediate
+access to system settings and configuration options. The platform requires
+minimal maintenance while providing robust documentation capabilities.
