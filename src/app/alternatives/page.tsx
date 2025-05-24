@@ -14,7 +14,6 @@ import {
   Star,
   Users,
   Zap,
-  Github,
   ExternalLink,
   CheckCircle,
   ArrowRightLeft,
@@ -269,9 +268,27 @@ export default function AlternativesPage() {
               </Button>
             </Link>
           </div>
+          <p className="text-neutral-600 dark:text-neutral-400 mb-6">
+            Click on any project to see what services it replaces and discover
+            related alternatives.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredAlternatives.map((project) => (
-              <ProjectCard key={project.slug} {...project} />
+              <div key={project.slug} className="relative">
+                <ProjectCard {...project} />
+                <div className="absolute -top-2 -right-2">
+                  <Link href={`/alternatives/${project.slug}`}>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="bg-white dark:bg-neutral-900 border-2 border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 h-8 px-2 text-xs"
+                    >
+                      <ArrowRightLeft className="h-3 w-3 mr-1" />
+                      Alternatives
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
         </div>

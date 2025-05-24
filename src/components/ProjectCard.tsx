@@ -7,7 +7,14 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Badge, badgeVariants } from "@/components/ui/badge";
-import { Star, ServerCog, ExternalLink, Heart } from "lucide-react";
+import {
+  Star,
+  ServerCog,
+  ExternalLink,
+  Heart,
+  ArrowRightLeft,
+  Shield,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -32,6 +39,10 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 
+interface ProjectCardProps extends ProjectMeta {
+  showLicense?: boolean;
+}
+
 export const ProjectCard = ({
   name,
   description,
@@ -39,7 +50,9 @@ export const ProjectCard = ({
   categories,
   logo,
   slug,
-}: ProjectMeta) => {
+  license,
+  showLicense = false,
+}: ProjectCardProps) => {
   const serviceDeployment = {
     available: false,
     cost: "$12",
@@ -60,10 +73,15 @@ export const ProjectCard = ({
 
   const githubData = projectsWithGitHubData[slug];
   const stars = githubData?.stargazers_count ?? 0;
+  const projectLicense = license ?? githubData?.license?.spdx_id ?? "Unknown";
 
   return (
     <Link href={`/projects/${slug}`} className="block">
-      <Card className="flex flex-col border overflow-hidden shadow-none h-[300px] gap-0 hover:shadow-md transition-shadow cursor-pointer group">
+      <Card
+        className={`flex flex-col border overflow-hidden shadow-none ${
+          showLicense ? "h-[330px]" : "h-[300px]"
+        } gap-0 hover:shadow-md transition-shadow cursor-pointer group`}
+      >
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <div className="w-7 h-7 rounded border p-0.5">
@@ -114,6 +132,17 @@ export const ProjectCard = ({
               <span className="text-xs text-muted-foreground">/ 100</span>
             </span>
           </div>
+
+          {showLicense && (
+            <div className="flex items-center gap-4 text-xs w-full">
+              <div className="flex items-center gap-1">
+                <Shield className="w-3 h-3 mr-0.5 text-blue-500 flex-shrink-0" />
+                License
+              </div>
+              <div className="flex-grow border-t" />
+              <span className="flex-shrink-0">{projectLicense}</span>
+            </div>
+          )}
 
           {/* Deploy button with dialog */}
           <Dialog>
@@ -207,6 +236,12 @@ export const ProjectCard = ({
                     <Button variant="outline" size="sm" className="gap-1">
                       View Full Details
                       <ExternalLink className="h-3 w-3" />
+                    </Button>
+                  </Link>
+                  <Link href={`/alternatives/${slug}`}>
+                    <Button variant="outline" size="sm" className="gap-1 ml-2">
+                      See Alternatives
+                      <ArrowRightLeft className="h-3 w-3" />
                     </Button>
                   </Link>
                 </div>
