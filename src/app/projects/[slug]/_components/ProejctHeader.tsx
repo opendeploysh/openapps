@@ -126,72 +126,75 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
             })}
           </div>
         </div>
-        <div className="space-y-2">
-          <div className="font-semibold">Repository activity:</div>
+        {githubData && (
+          <div className="space-y-2">
+            <div className="font-semibold">Repository activity:</div>
 
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <Star className="w-4 h-4 text-yellow-500" />
-              Stars
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
+                <Star className="w-4 h-4 text-yellow-500" />
+                Stars
+              </div>
+
+              <div className="border-t flex-grow" />
+              <span className="font-medium">
+                {githubData.stargazers_count?.toLocaleString() ?? 0}
+              </span>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
+                <GitFork className="w-4 h-4 text-green-500" />
+                Forks
+              </div>
+
+              <div className="border-t flex-grow" />
+              <span className="font-medium">
+                {githubData.forks?.toLocaleString() ?? 0}
+              </span>
             </div>
 
-            <div className="border-t flex-grow" />
-            <span className="font-medium">
-              {githubData.stargazers_count?.toLocaleString() ?? 0}
-            </span>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <GitFork className="w-4 h-4 text-green-500" />
-              Forks
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
+                <Eye className="w-4 h-4 text-purple-500" />
+                Watchers
+              </div>
+
+              <div className="border-t flex-grow" />
+              <span className="font-medium">
+                {githubData.subscribers_count?.toLocaleString() ?? 0}
+              </span>
             </div>
 
-            <div className="border-t flex-grow" />
-            <span className="font-medium">
-              {githubData.forks?.toLocaleString() ?? 0}
-            </span>
-          </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
+                <AlertCircle className="w-4 h-4 text-red-500" />
+                Open Issues
+              </div>
 
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <Eye className="w-4 h-4 text-purple-500" />
-              Watchers
+              <div className="border-t flex-grow" />
+              <span className="font-medium">
+                {githubData.open_issues_count?.toLocaleString() ?? 0}
+              </span>
             </div>
 
-            <div className="border-t flex-grow" />
-            <span className="font-medium">
-              {githubData.subscribers_count?.toLocaleString() ?? 0}
-            </span>
-          </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
+                <Clock className="w-4 h-4 text-blue-500" />
+                Last commit
+              </div>
 
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <AlertCircle className="w-4 h-4 text-red-500" />
-              Open Issues
+              <div className="border-t flex-grow" />
+              <span className="font-medium">
+                {githubData.lastCommitDate
+                  ? formatDistanceToNow(new Date(githubData.lastCommitDate), {
+                      addSuffix: true,
+                    })
+                  : "Unknown"}
+              </span>
             </div>
-
-            <div className="border-t flex-grow" />
-            <span className="font-medium">
-              {githubData.open_issues_count?.toLocaleString() ?? 0}
-            </span>
           </div>
+        )}
 
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4 text-blue-500" />
-              Last commit
-            </div>
-
-            <div className="border-t flex-grow" />
-            <span className="font-medium">
-              {githubData.lastCommitDate
-                ? formatDistanceToNow(new Date(githubData.lastCommitDate), {
-                    addSuffix: true,
-                  })
-                : "Unknown"}
-            </span>
-          </div>
-        </div>
         <div className="space-y-2">
           <div className="font-semibold">Details:</div>
           <div className="flex items-center gap-4">
@@ -211,7 +214,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
 
             <div className="border-t flex-grow" />
             <span className="font-medium">
-              {project.license ?? githubData.license?.spdx_id ?? "Proprietary"}
+              {project.license ?? githubData?.license?.spdx_id ?? "Proprietary"}
             </span>
           </div>
           {project.deployment && (
@@ -233,7 +236,9 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
             </div>
 
             <div className="border-t flex-grow" />
-            <span className="font-medium">{githubData.language}</span>
+            <span className="font-medium">
+              {project.language ?? githubData?.language ?? "Unknown"}
+            </span>
           </div>
         </div>
       </div>

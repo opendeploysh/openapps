@@ -32,6 +32,8 @@ import {
   BarChart3,
   Server,
   Globe,
+  Scale,
+  GitCompare,
 } from "lucide-react";
 
 // Define basic categories for the navigation menu
@@ -54,7 +56,6 @@ export const Navbar = () => {
       <nav className="border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 sticky top-0 z-40">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="flex h-14 items-center justify-between">
-            {/* Logo and brand */}
             <Link href="/" className="flex items-center gap-1">
               <div className="mr-1 flex items-center justify-center h-8 w-8 rounded-md bg-blue-600">
                 <Container className="h-4 w-4 text-white" />
@@ -75,6 +76,7 @@ export const Navbar = () => {
                     <ChevronDown className="h-3 w-3 opacity-50" />
                   </Button>
                 </DropdownMenuTrigger>
+
                 <DropdownMenuContent align="start" className="w-[220px]">
                   <DropdownMenuLabel>Discover</DropdownMenuLabel>
                   <DropdownMenuSeparator />
@@ -109,6 +111,7 @@ export const Navbar = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
+
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="sm" className="h-9 gap-1.5">
@@ -145,22 +148,25 @@ export const Navbar = () => {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Link href="/self-host">
+
+              <Link href="/alternatives">
                 <Button variant="ghost" size="sm" className="h-9 gap-1.5">
-                  <HardDrive className="h-4 w-4" />
-                  Self-Host
+                  <ArrowUpDown className="h-4 w-4" />
+                  Alternatives
                 </Button>
               </Link>
-              <Link href="/open-source">
+
+              <Link href="/compare">
                 <Button variant="ghost" size="sm" className="h-9 gap-1.5">
-                  <Github className="h-4 w-4" />
-                  Open Source
+                  <GitCompare className="h-4 w-4" />
+                  Compare
                 </Button>
               </Link>
-              <Link href="/community">
+
+              <Link href="/licenses">
                 <Button variant="ghost" size="sm" className="h-9 gap-1.5">
-                  <Heart className="h-4 w-4" />
-                  Community
+                  <Scale className="h-4 w-4" />
+                  Licenses
                 </Button>
               </Link>
             </div>
@@ -281,36 +287,36 @@ export const Navbar = () => {
               ))}
             </div>
 
-            <Link href="/self-host" className="w-full">
+            <Link href="/alternatives" className="w-full">
               <Button
                 variant="ghost"
                 size="sm"
                 className="w-full justify-start h-10 gap-2"
               >
-                <HardDrive className="h-4 w-4" />
-                Self-Host
+                <ArrowUpDown className="h-4 w-4" />
+                Alternatives
               </Button>
             </Link>
 
-            <Link href="/open-source" className="w-full">
+            <Link href="/compare" className="w-full">
               <Button
                 variant="ghost"
                 size="sm"
                 className="w-full justify-start h-10 gap-2"
               >
-                <Github className="h-4 w-4" />
-                Open Source
+                <GitCompare className="h-4 w-4" />
+                Compare
               </Button>
             </Link>
 
-            <Link href="/community" className="w-full">
+            <Link href="/licenses" className="w-full">
               <Button
                 variant="ghost"
                 size="sm"
                 className="w-full justify-start h-10 gap-2"
               >
-                <Heart className="h-4 w-4" />
-                Community
+                <Scale className="h-4 w-4" />
+                Licenses
               </Button>
             </Link>
           </div>

@@ -1,0 +1,72 @@
+---
+slug: airflow
+name: Apache Airflow
+heroImage: https://airflow.apache.org/docs/apache-airflow/stable/_images/demo_graph_and_code_view.png
+description: |
+  Apache Airflow is a platform to programmatically author, schedule, and monitor workflows. When workflows are defined as code, they become more maintainable, versionable, testable, and collaborative.
+logo: https://airflow.apache.org/favicons/android-icon-192x192.png
+primaryCategory: automation
+categories: [automation, workflow, integration]
+github: apache/airflow
+websiteUrl: https://airflow.apache.org/
+alternatives:
+  selfHosted: [prefect, dagster]
+  nonSelfHosted: [aws-step-functions, google-cloud-composer]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Python environment setup and database configuration. Docker deployment available but needs proper configuration for production use."
+---
+
+Apache Airflow is a platform for programmatically authoring, scheduling and monitoring workflows. It allows you to define your workflows as Python code, making them maintainable, versionable, testable, and collaborative.
+
+## Key Features
+
+- **Workflow Authoring**:
+
+  - Define workflows as Python DAGs (Directed Acyclic Graphs)
+  - Rich set of operators and hooks for various integrations
+  - Extensible through custom operators and hooks
+  - Jinja templating support for dynamic configuration
+
+- **Scheduling & Monitoring**:
+
+  - Flexible scheduling with cron-like syntax
+  - Backfilling and catchup for historical runs
+  - Rich UI for monitoring workflow status
+  - REST API for programmatic control
+  - Notifications and alerts
+
+- **Execution & Scaling**:
+
+  - Multiple executor types (Local, Celery, Kubernetes)
+  - Horizontal scaling with worker nodes
+  - Task retries and error handling
+  - Resource management and queueing
+
+- **Enterprise Features**:
+  - Role-based access control (RBAC)
+  - Audit logging
+  - REST API authentication
+  - External authentication support
+  - Database backend support (PostgreSQL, MySQL)
+
+## Who Should Use Airflow
+
+Airflow is ideal for:
+
+- **Data Engineers** building ETL/ELT pipelines
+- **ML Engineers** orchestrating training workflows
+- **DevOps Teams** automating infrastructure tasks
+- **Analytics Teams** scheduling report generation
+- **Organizations** needing workflow orchestration at scale
+
+## Getting Started
+
+Airflow can be installed via pip or deployed using Docker. For production environments, it's recommended to:
+
+1. Use a supported database backend (PostgreSQL recommended)
+2. Configure appropriate executor (Celery/Kubernetes for scaling)
+3. Set up proper authentication and access control
+4. Plan for monitoring and maintenance
+
+The platform provides extensive documentation and an active community to help users get started with workflow automation.

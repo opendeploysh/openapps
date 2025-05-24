@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -59,6 +59,9 @@ import {
 } from "@/components/ui/select";
 import { projects } from "@/lib/projects";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { ProjectFilters, FilterOption } from "@/components/filters";
+import { matchSorter } from "match-sorter";
 import _ from "lodash";
 
 // Icon mapping for categories
@@ -248,6 +251,15 @@ export default function CategoryPage() {
   const params = useParams();
   const categorySlug = params.category as string;
 
+  // Filter state
+  const [searchResults, setSearchResults] = useState<typeof projects | null>(
+    null
+  );
+  const [activeDifficultyFilters, setActiveDifficultyFilters] = useState<
+    string[]
+  >([]);
+  const [sortOrder, setSortOrder] = useState("stars");
+
   // Convert slug back to category name (reverse the slug transformation)
   const categoryName = categorySlug.replace(/-/g, " ");
 
@@ -273,11 +285,108 @@ export default function CategoryPage() {
     : getColorClasses("blue");
 
   // Filter projects by the current category (matching original category names)
-  const categoryProjects = projects.filter((p) =>
+  const baseCategoryProjects = projects.filter((p) =>
     p.categories.some(
       (cat) => cat.toLowerCase().replace(/\s+/g, "-") === categorySlug
     )
   );
+
+  // Difficulty filters based on available projects in this category
+  const difficultyFilters: FilterOption[] = [
+    { value: "Easy", label: "Easy" },
+    { value: "Medium", label: "Medium" },
+    { value: "Advanced", label: "Advanced" },
+  ];
+
+  // Apply search and filters
+  const getFilteredProjects = () => {
+    let filteredProjects = searchResults || baseCategoryProjects;
+
+    // Apply difficulty filters
+    if (activeDifficultyFilters.length > 0) {
+      filteredProjects = filteredProjects.filter((project) =>
+        activeDifficultyFilters.includes(
+          project.deployment?.difficulty || "Medium"
+        )
+      );
+    }
+
+    return filteredProjects;
+  };
+
+  // Sort projects
+  const getSortedProjects = (projectList: typeof projects) => {
+    const sorted = [...projectList];
+    switch (sortOrder) {
+      case "name":
+        return sorted.sort((a, b) => a.name.localeCompare(b.name));
+      case "stars":
+        return sorted.sort((a, b) => {
+          const aPopularity = a.popularity || 0;
+          const bPopularity = b.popularity || 0;
+          return bPopularity - aPopularity;
+        });
+      case "difficulty-asc":
+        const difficultyOrder = { Easy: 1, Medium: 2, Advanced: 3 };
+        return sorted.sort((a, b) => {
+          const aDiff = difficultyOrder[a.deployment?.difficulty || "Medium"];
+          const bDiff = difficultyOrder[b.deployment?.difficulty || "Medium"];
+          return aDiff - bDiff;
+        });
+      case "difficulty-desc":
+        const difficultyOrderDesc = { Easy: 3, Medium: 2, Advanced: 1 };
+        return sorted.sort((a, b) => {
+          const aDiff =
+            difficultyOrderDesc[a.deployment?.difficulty || "Medium"];
+          const bDiff =
+            difficultyOrderDesc[b.deployment?.difficulty || "Medium"];
+          return bDiff - aDiff;
+        });
+      default:
+        return sorted;
+    }
+  };
+
+  const filteredProjects = getFilteredProjects();
+  const sortedProjects = getSortedProjects(filteredProjects);
+
+  // Handle search within category
+  const handleSearch = (query: string) => {
+    if (!query.trim()) {
+      setSearchResults(null);
+      return;
+    }
+
+    const searchResults = matchSorter(baseCategoryProjects, query, {
+      keys: [
+        { key: "name", threshold: matchSorter.rankings.WORD_STARTS_WITH },
+        {
+          key: "description",
+          threshold: matchSorter.rankings.WORD_STARTS_WITH,
+        },
+        {
+          key: "alternatives.nonSelfHosted",
+          threshold: matchSorter.rankings.CONTAINS,
+        },
+        { key: "language", threshold: matchSorter.rankings.CONTAINS },
+        { key: "license", threshold: matchSorter.rankings.CONTAINS },
+      ],
+    });
+
+    setSearchResults(searchResults);
+  };
+
+  // Handle sorting
+  const handleSort = (sortValue: string) => {
+    setSortOrder(sortValue);
+  };
+
+  // Handle filtering
+  const handleFilterChange = (filterType: string, values: string[]) => {
+    if (filterType === "difficulty") {
+      setActiveDifficultyFilters(values);
+    }
+  };
 
   // Handle case where category doesn't exist
   if (!category) {
@@ -306,6 +415,7 @@ export default function CategoryPage() {
             </Link>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -342,7 +452,7 @@ export default function CategoryPage() {
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary" className="gap-1">
                   <Star className="h-3 w-3" />
-                  {categoryProjects.length} projects
+                  {baseCategoryProjects.length} projects
                 </Badge>
                 <Badge variant="outline">Open Source</Badge>
                 <Badge variant="outline">Self-Hostable</Badge>
@@ -351,58 +461,40 @@ export default function CategoryPage() {
           </div>
         </div>
 
-        {/* Filters and Sorting */}
-        <div className="mb-6 flex flex-col sm:flex-row gap-3 justify-between">
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              Filters:
-            </span>
-            <Badge variant="outline" className="gap-1 cursor-pointer">
-              Free Only
-              <FilterX className="h-3 w-3 ml-1" />
-            </Badge>
-            <Badge variant="outline" className="gap-1 cursor-pointer">
-              Easy Deployment
-              <FilterX className="h-3 w-3 ml-1" />
-            </Badge>
-            <Button variant="ghost" size="sm" className="h-7 gap-1">
-              <SlidersHorizontal className="h-3 w-3" />
-              More Filters
-            </Button>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-neutral-500 dark:text-neutral-400">
-              Sort:
-            </span>
-            <Select defaultValue="stars">
-              <SelectTrigger className="h-8 w-[180px]">
-                <SelectValue placeholder="Sort by" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="stars">Most Stars</SelectItem>
-                <SelectItem value="name">Name (A-Z)</SelectItem>
-                <SelectItem value="difficulty-asc">Easiest First</SelectItem>
-                <SelectItem value="difficulty-desc">Advanced First</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
+        {/* Filters */}
+        <ProjectFilters
+          onSearch={handleSearch}
+          onSort={handleSort}
+          onFilterChange={handleFilterChange}
+          sortValue={sortOrder}
+          searchPlaceholder={`Search ${category.name.toLowerCase()} projects...`}
+          difficultyFilters={difficultyFilters}
+          activeDifficultyFilters={activeDifficultyFilters}
+          showCategoryFilters={false}
+          showPopularAlternatives={false}
+        />
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {categoryProjects.length > 0 ? (
-            categoryProjects.map((project) => (
+          {sortedProjects.length > 0 ? (
+            sortedProjects.map((project) => (
               <ProjectCard key={project.slug} {...project} />
             ))
           ) : (
             <div className="col-span-3 py-12 text-center">
               <h3 className="text-xl font-medium mb-2">No projects found</h3>
               <p className="text-neutral-600 dark:text-neutral-400 mb-4">
-                We don't have any projects listed for this category yet.
+                Try adjusting your filters or search query.
               </p>
-              <Button variant="outline" size="sm">
-                Request a Project
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  setSearchResults(null);
+                  setActiveDifficultyFilters([]);
+                }}
+              >
+                Clear Filters
               </Button>
             </div>
           )}
@@ -484,6 +576,7 @@ export default function CategoryPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

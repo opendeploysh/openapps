@@ -7,10 +7,15 @@ import { Search } from "lucide-react";
 
 type SearchBarProps = {
   onSearch: (query: string) => void;
+  placeholder?: string;
   className?: string;
 };
 
-export const SearchBar = ({ onSearch, className = "" }: SearchBarProps) => {
+export const SearchBar = ({
+  onSearch,
+  placeholder = "Search for self-hostable alternatives...",
+  className = "",
+}: SearchBarProps) => {
   const [query, setQuery] = useState("");
 
   const handleSearch = () => {
@@ -34,7 +39,7 @@ export const SearchBar = ({ onSearch, className = "" }: SearchBarProps) => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="Search for self-hostable alternatives..."
+        placeholder={placeholder}
         className="w-full h-10 px-3 pl-8 rounded-md text-sm"
       />
     </div>

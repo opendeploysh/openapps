@@ -2,7 +2,7 @@ import { Container } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="mt-12 pt-6 border-t border-neutral-200 dark:border-neutral-800 text-center">
+    <footer className="mt-12 border-t border-neutral-200 dark:border-neutral-800 text-center py-10">
       <div className="flex flex-col items-center">
         <div className="flex items-center gap-1.5 mb-4">
           <div className="w-6 h-6 rounded-md bg-blue-600 flex items-center justify-center">

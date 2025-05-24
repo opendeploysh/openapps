@@ -31,6 +31,8 @@ import {
   FileCode,
   Coffee,
 } from "lucide-react";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const projects = [
   {
@@ -93,7 +95,7 @@ const projects = [
 export default function OpenSourcePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
-      {/* Navigation bar would be here if shared across pages */}
+      <Navbar />
 
       <div className="container max-w-5xl mx-auto px-4 py-8">
         {/* Back to home link */}
@@ -388,6 +390,8 @@ export default function OpenSourcePage() {
           </Button>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

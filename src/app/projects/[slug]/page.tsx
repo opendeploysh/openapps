@@ -14,10 +14,12 @@ import {
   BookOpen,
   Play,
   Info,
+  GitCompare,
 } from "lucide-react";
 import { projects } from "@/lib/projects";
 
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { ProjectHeader } from "./_components/ProejctHeader";
 import { RelatedProjects } from "./_components/RelatedProjects";
 import { useCompileFromSlug } from "@/mdx/render-projects";
@@ -58,6 +60,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </Link>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -117,6 +120,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     View on GitHub
                   </Link>
                 </Button>
+                <Button variant="outline" size="lg" className="gap-2" asChild>
+                  <Link href={`/compare?project1=${project.slug}`}>
+                    <GitCompare className="w-5 h-5" />
+                    Compare Projects
+                  </Link>
+                </Button>
               </div>
             </div>
           </CardContent>
@@ -156,6 +165,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,80 @@
+---
+slug: healthchecks
+name: Healthchecks
+heroImage: https://github.com/healthchecks/healthchecks/raw/master/static/img/my_checks.png?raw=true
+description: |
+  Healthchecks is an open source cron job monitoring service that listens for HTTP requests and email messages from your scheduled tasks and sends alerts when jobs don't check in on time.
+logo: https://avatars.githubusercontent.com/u/13053880?s=64&v=4
+primaryCategory: automation
+categories: [automation, monitoring, devops]
+github: healthchecks/healthchecks
+websiteUrl: https://healthchecks.io
+alternatives:
+  selfHosted: [uptime-kuma]
+  nonSelfHosted: [cronitor, betteruptime]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Python environment setup and database configuration. Multiple processes need to be managed."
+language: Python
+license: BSD-3-Clause
+---
+
+Healthchecks is an open source cron job and background task monitoring service
+that helps ensure your scheduled tasks are running on time. It provides a simple
+way to monitor automated jobs by expecting HTTP requests or emails within
+configured time windows.
+
+## Key Features
+
+- **Job Monitoring**:
+
+  - HTTP and email-based monitoring
+  - Configurable periods and grace times
+  - Cron expression support
+  - Live status dashboard
+  - Detailed event logs
+  - Status badges
+
+- **Notification Channels**:
+
+  - Email alerts
+  - Slack integration
+  - Discord notifications
+  - Telegram messages
+  - PagerDuty integration
+  - Many other integrations
+
+- **Team Features**:
+
+  - Multi-user projects
+  - Team member management
+  - Read-only access
+  - Monthly reports
+  - WebAuthn 2FA support
+
+- **Developer Tools**:
+  - REST API
+  - Ping endpoints
+  - Custom HTTP headers
+  - Request body logging
+  - Metrics and monitoring
+
+## Who Should Use Healthchecks
+
+Healthchecks is ideal for:
+
+- **DevOps Teams** monitoring infrastructure jobs
+- **Developers** tracking automated tasks
+- **System Administrators** ensuring cron jobs run
+- **Organizations** requiring job monitoring
+- **Teams** wanting self-hosted solutions
+
+## Getting Started
+
+The platform can be deployed via Docker or directly on a Python environment. It
+supports PostgreSQL, MySQL and MariaDB databases and provides comprehensive
+documentation for setup and configuration.
+
+Whether you're monitoring simple cron jobs or complex automated workflows,
+Healthchecks provides the monitoring infrastructure needed to ensure your
+scheduled tasks are running reliably.

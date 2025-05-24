@@ -39,6 +39,7 @@ import {
   MoveRight,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import _ from "lodash";
 
 // Icon mapping for categories
@@ -392,6 +393,7 @@ export default function CategoriesPage() {
           </Button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
