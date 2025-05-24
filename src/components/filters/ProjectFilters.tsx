@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { SearchBar } from "@/components/SearchBar";
 import { SortSelect } from "./SortSelect";
@@ -15,13 +16,23 @@ export interface ProjectFiltersProps {
   searchPlaceholder?: string;
   categoryFilters?: FilterOption[];
   difficultyFilters?: FilterOption[];
+  pricingFilters?: FilterOption[];
+  hostingFilters?: FilterOption[];
   popularAlternatives?: string[];
   activeCategoryFilters?: string[];
   activeDifficultyFilters?: string[];
+  activePricingFilters?: string[];
+  activeHostingFilters?: string[];
   showCategoryFilters?: boolean;
   showDifficultyFilters?: boolean;
+  showPricingFilters?: boolean;
+  showHostingFilters?: boolean;
   showPopularAlternatives?: boolean;
   className?: string;
+  // URL sync props
+  enableUrlSync?: boolean;
+  defaultSort?: string;
+  initialSearchQuery?: string;
 }
 
 export const ProjectFilters = ({
@@ -32,38 +43,266 @@ export const ProjectFilters = ({
   searchPlaceholder = "Search projects...",
   categoryFilters = [],
   difficultyFilters = [],
+  pricingFilters = [],
+  hostingFilters = [],
   popularAlternatives = [],
   activeCategoryFilters = [],
   activeDifficultyFilters = [],
+  activePricingFilters = [],
+  activeHostingFilters = [],
   showCategoryFilters = true,
   showDifficultyFilters = true,
+  showPricingFilters = true,
+  showHostingFilters = true,
   showPopularAlternatives = true,
   className = "",
+  enableUrlSync = false,
+  defaultSort = "relevance",
+  initialSearchQuery = "",
 }: ProjectFiltersProps) => {
   const [showFilters, setShowFilters] = useState(false);
 
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+
+  // Helper function to update URL with current filter state
+  const updateURL = (
+    categories: string[],
+    difficulties: string[],
+    pricing: string[],
+    hosting: string[],
+    sort: string,
+    query?: string
+  ) => {
+    if (!enableUrlSync) return;
+
+    const params = new URLSearchParams();
+
+    if (categories.length > 0) params.set("categories", categories.join(","));
+    if (difficulties.length > 0)
+      params.set("difficulties", difficulties.join(","));
+    if (pricing.length > 0) params.set("pricing", pricing.join(","));
+    if (hosting.length > 0) params.set("hosting", hosting.join(","));
+    if (sort !== defaultSort) params.set("sort", sort);
+    if (query && query.trim()) params.set("q", query.trim());
+
+    const url = params.toString()
+      ? `${pathname}?${params.toString()}`
+      : pathname;
+    router.replace(url, { scroll: false });
+  };
+
+  // Helper function to read initial values from URL
+  const getInitialFilters = () => {
+    if (!enableUrlSync) {
+      return {
+        categories: activeCategoryFilters || [],
+        difficulties: activeDifficultyFilters || [],
+        pricing: activePricingFilters || [],
+        hosting: activeHostingFilters || [],
+        sort: sortValue || defaultSort,
+        query: initialSearchQuery,
+      };
+    }
+
+    const categories =
+      searchParams.get("categories")?.split(",").filter(Boolean) ||
+      activeCategoryFilters ||
+      [];
+    const difficulties =
+      searchParams.get("difficulties")?.split(",").filter(Boolean) ||
+      activeDifficultyFilters ||
+      [];
+    const pricing =
+      searchParams.get("pricing")?.split(",").filter(Boolean) ||
+      activePricingFilters ||
+      [];
+    const hosting =
+      searchParams.get("hosting")?.split(",").filter(Boolean) ||
+      activeHostingFilters ||
+      [];
+    const sort = searchParams.get("sort") || sortValue || defaultSort;
+    const query = searchParams.get("q") || initialSearchQuery;
+
+    return { categories, difficulties, pricing, hosting, sort, query };
+  };
+
+  // Internal state for URL-synced filters
+  const [internalCategoryFilters, setInternalCategoryFilters] = useState<
+    string[]
+  >([]);
+  const [internalDifficultyFilters, setInternalDifficultyFilters] = useState<
+    string[]
+  >([]);
+  const [internalPricingFilters, setInternalPricingFilters] = useState<
+    string[]
+  >([]);
+  const [internalHostingFilters, setInternalHostingFilters] = useState<
+    string[]
+  >([]);
+  const [internalSortValue, setInternalSortValue] =
+    useState<string>(defaultSort);
+  const [internalSearchQuery, setInternalSearchQuery] = useState<string>("");
+
+  // Initialize from URL on mount
+  useEffect(() => {
+    if (enableUrlSync) {
+      const { categories, difficulties, pricing, hosting, sort, query } =
+        getInitialFilters();
+
+      setInternalCategoryFilters(categories);
+      setInternalDifficultyFilters(difficulties);
+      setInternalPricingFilters(pricing);
+      setInternalHostingFilters(hosting);
+      setInternalSortValue(sort);
+      setInternalSearchQuery(query);
+
+      // Notify parent components of initial state
+      onFilterChange?.("category", categories);
+      onFilterChange?.("difficulty", difficulties);
+      onFilterChange?.("pricing", pricing);
+      onFilterChange?.("hosting", hosting);
+      onSort?.(sort);
+      if (query) {
+        onSearch?.(query);
+      }
+    }
+  }, []);
+
+  // Use internal state when URL sync is enabled, otherwise use props
+  const currentCategoryFilters = enableUrlSync
+    ? internalCategoryFilters
+    : activeCategoryFilters || [];
+  const currentDifficultyFilters = enableUrlSync
+    ? internalDifficultyFilters
+    : activeDifficultyFilters || [];
+  const currentPricingFilters = enableUrlSync
+    ? internalPricingFilters
+    : activePricingFilters || [];
+  const currentHostingFilters = enableUrlSync
+    ? internalHostingFilters
+    : activeHostingFilters || [];
+  const currentSortValue = enableUrlSync
+    ? internalSortValue
+    : sortValue || defaultSort;
+
   const handleCategoryFilterToggle = (category: string) => {
-    const updatedFilters = activeCategoryFilters.includes(category)
-      ? activeCategoryFilters.filter((f) => f !== category)
-      : [...activeCategoryFilters, category];
+    const updatedFilters = currentCategoryFilters.includes(category)
+      ? currentCategoryFilters.filter((f) => f !== category)
+      : [...currentCategoryFilters, category];
     onFilterChange?.("category", updatedFilters);
+    updateURL(
+      updatedFilters,
+      currentDifficultyFilters,
+      currentPricingFilters,
+      currentHostingFilters,
+      currentSortValue
+    );
   };
 
   const handleDifficultyFilterToggle = (difficulty: string) => {
-    const updatedFilters = activeDifficultyFilters.includes(difficulty)
-      ? activeDifficultyFilters.filter((f) => f !== difficulty)
-      : [...activeDifficultyFilters, difficulty];
+    const updatedFilters = currentDifficultyFilters.includes(difficulty)
+      ? currentDifficultyFilters.filter((f) => f !== difficulty)
+      : [...currentDifficultyFilters, difficulty];
     onFilterChange?.("difficulty", updatedFilters);
+    updateURL(
+      currentCategoryFilters,
+      updatedFilters,
+      currentPricingFilters,
+      currentHostingFilters,
+      currentSortValue
+    );
+  };
+
+  const handlePricingFilterToggle = (pricing: string) => {
+    const updatedFilters = currentPricingFilters.includes(pricing)
+      ? currentPricingFilters.filter((f) => f !== pricing)
+      : [...currentPricingFilters, pricing];
+    onFilterChange?.("pricing", updatedFilters);
+    updateURL(
+      currentCategoryFilters,
+      currentDifficultyFilters,
+      updatedFilters,
+      currentHostingFilters,
+      currentSortValue
+    );
+  };
+
+  const handleHostingFilterToggle = (hosting: string) => {
+    const updatedFilters = currentHostingFilters.includes(hosting)
+      ? currentHostingFilters.filter((f) => f !== hosting)
+      : [...currentHostingFilters, hosting];
+    onFilterChange?.("hosting", updatedFilters);
+    updateURL(
+      currentCategoryFilters,
+      currentDifficultyFilters,
+      currentPricingFilters,
+      updatedFilters,
+      currentSortValue
+    );
   };
 
   const handleClearAllFilters = () => {
     onFilterChange?.("category", []);
     onFilterChange?.("difficulty", []);
+    onFilterChange?.("pricing", []);
+    onFilterChange?.("hosting", []);
     setShowFilters(false);
+    updateURL([], [], [], [], currentSortValue);
   };
 
   const hasActiveFilters =
-    activeCategoryFilters.length > 0 || activeDifficultyFilters.length > 0;
+    currentCategoryFilters.length > 0 ||
+    currentDifficultyFilters.length > 0 ||
+    currentPricingFilters.length > 0 ||
+    currentHostingFilters.length > 0;
+
+  // Enhanced handlers that sync with URL
+  const handleSearchWithUrlSync = (query: string) => {
+    onSearch?.(query);
+    if (enableUrlSync) {
+      setInternalSearchQuery(query);
+      updateURL(
+        currentCategoryFilters,
+        currentDifficultyFilters,
+        currentPricingFilters,
+        currentHostingFilters,
+        currentSortValue,
+        query
+      );
+    }
+  };
+
+  const handleSortWithUrlSync = (sortValue: string) => {
+    onSort?.(sortValue);
+    if (enableUrlSync) {
+      setInternalSortValue(sortValue);
+      updateURL(
+        currentCategoryFilters,
+        currentDifficultyFilters,
+        currentPricingFilters,
+        currentHostingFilters,
+        sortValue,
+        internalSearchQuery
+      );
+    }
+  };
+
+  // Update internal state when filter changes are triggered
+  useEffect(() => {
+    if (enableUrlSync) {
+      setInternalCategoryFilters(currentCategoryFilters);
+      setInternalDifficultyFilters(currentDifficultyFilters);
+      setInternalPricingFilters(currentPricingFilters);
+      setInternalHostingFilters(currentHostingFilters);
+    }
+  }, [
+    activeCategoryFilters,
+    activeDifficultyFilters,
+    activePricingFilters,
+    activeHostingFilters,
+  ]);
 
   return (
     <section className={`mb-4 ${className}`}>
@@ -72,12 +311,17 @@ export const ProjectFilters = ({
         <div className="flex gap-2 mb-3 items-center">
           <div className="flex-1">
             <SearchBar
-              onSearch={onSearch || (() => {})}
+              onSearch={handleSearchWithUrlSync}
               placeholder={searchPlaceholder}
             />
           </div>
           <div className="flex gap-2 flex-shrink-0">
-            {onSort && <SortSelect value={sortValue} onValueChange={onSort} />}
+            {onSort && (
+              <SortSelect
+                value={currentSortValue}
+                onValueChange={handleSortWithUrlSync}
+              />
+            )}
             <Button
               variant="outline"
               size="icon"
@@ -114,7 +358,7 @@ export const ProjectFilters = ({
               <FilterBadges
                 title="Categories"
                 filters={categoryFilters}
-                activeFilters={activeCategoryFilters}
+                activeFilters={currentCategoryFilters}
                 onFilterToggle={handleCategoryFilterToggle}
                 onClearAll={() => onFilterChange?.("category", [])}
               />
@@ -125,9 +369,33 @@ export const ProjectFilters = ({
               <FilterBadges
                 title="Difficulty"
                 filters={difficultyFilters}
-                activeFilters={activeDifficultyFilters}
+                activeFilters={currentDifficultyFilters}
                 onFilterToggle={handleDifficultyFilterToggle}
                 onClearAll={() => onFilterChange?.("difficulty", [])}
+                variant="outline"
+              />
+            )}
+
+            {/* Pricing filters */}
+            {showPricingFilters && pricingFilters.length > 0 && (
+              <FilterBadges
+                title="Pricing"
+                filters={pricingFilters}
+                activeFilters={currentPricingFilters}
+                onFilterToggle={handlePricingFilterToggle}
+                onClearAll={() => onFilterChange?.("pricing", [])}
+                variant="outline"
+              />
+            )}
+
+            {/* Hosting filters */}
+            {showHostingFilters && hostingFilters.length > 0 && (
+              <FilterBadges
+                title="Hosting"
+                filters={hostingFilters}
+                activeFilters={currentHostingFilters}
+                onFilterToggle={handleHostingFilterToggle}
+                onClearAll={() => onFilterChange?.("hosting", [])}
                 variant="outline"
               />
             )}
@@ -144,7 +412,9 @@ export const ProjectFilters = ({
                     variant="outline"
                     size="sm"
                     className="h-6 text-xs px-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                    onClick={() => onSearch?.(alternative)}
+                    onClick={() => {
+                      handleSearchWithUrlSync(alternative);
+                    }}
                   >
                     {alternative}
                   </Button>

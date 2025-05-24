@@ -38,11 +38,15 @@ export const FilterBadges = ({
 
       {filters.map((filter) => {
         const isActive = activeFilters.includes(filter.value);
+        const hoverClass = isActive
+          ? "hover:bg-neutral-700 dark:hover:bg-neutral-600"
+          : "hover:bg-neutral-100 dark:hover:bg-neutral-800";
+
         return (
           <Badge
             key={filter.value}
             variant={isActive ? "default" : variant}
-            className="px-2 py-0.5 text-sm cursor-pointer flex items-center gap-1 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            className={`px-2 py-0.5 text-sm cursor-pointer flex items-center gap-1 ${hoverClass} transition-colors`}
             onClick={() => onFilterToggle(filter.value)}
           >
             {filter.icon && <div className="w-3 h-3">{filter.icon}</div>}

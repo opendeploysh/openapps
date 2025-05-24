@@ -26,13 +26,13 @@ export const pricingModelInfo: Record<PricingModel, PricingModelInfo> = {
   [PricingModel.Freemium]: {
     type: PricingModel.Freemium,
     description:
-      "Basic features are free, but advanced features require payment",
+      "Basic features free, premium features paid. Cannot be modified or redistributed.",
     color: "bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300",
   },
   [PricingModel.OpenCore]: {
     type: PricingModel.OpenCore,
     description:
-      "Core functionality is open source and free, with proprietary premium features",
+      "Core is open source and free, premium features paid. You can view and sometimes modify the core code.",
     color:
       "bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300",
   },

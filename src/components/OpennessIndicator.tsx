@@ -13,6 +13,7 @@ import {
   CheckCircle,
   AlertTriangle,
   Lock,
+  Check,
 } from "lucide-react";
 import { PricingModel, pricingModelInfo } from "@/lib/pricing-model";
 import { HostingType, hostingTypeInfo } from "@/lib/hosting-type";
@@ -22,7 +23,7 @@ const getPricingScore = (pricing: PricingModel): number => {
   const scores = {
     [PricingModel.Free]: 0,
     [PricingModel.Donationware]: 0,
-    [PricingModel.Freemium]: 1,
+    [PricingModel.Freemium]: 2,
     [PricingModel.OpenCore]: 1,
     [PricingModel.Trialware]: 2,
     [PricingModel.Subscription]: 2,
@@ -95,9 +96,9 @@ const getCombinedOpenness = (pricing?: PricingModel, hosting?: HostingType) => {
   if (totalScore <= 1) {
     // Very good openness
     return {
-      icon: CheckCircle,
+      icon: Check,
       color: "text-green-500 hover:text-green-600",
-      label: "Very Open",
+      label: "Open",
       description: "Mostly free with good hosting flexibility",
     };
   }
@@ -236,7 +237,7 @@ export const OpennessIndicator: React.FC<OpennessIndicatorProps> = ({
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-3 h-3 text-green-500" />
-                  <span>Very Open - Mostly accessible</span>
+                  <span>Open - Mostly accessible</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <AlertTriangle className="w-3 h-3 text-yellow-500" />

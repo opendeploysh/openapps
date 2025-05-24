@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -48,7 +48,7 @@ import {
   Search,
   Headphones,
 } from "lucide-react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { ProjectCard } from "@/components/ProjectCard";
 import {
   Select,
@@ -57,7 +57,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { projects } from "@/lib/projects";
+import { projects, projectsWithGitHubData } from "@/lib/projects";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ProjectFilters, FilterOption } from "@/components/filters";
@@ -250,6 +250,8 @@ const getColorClasses = (color: string) => {
 export default function CategoryPage() {
   const params = useParams();
   const categorySlug = params.category as string;
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   // Filter state
   const [searchResults, setSearchResults] = useState<typeof projects | null>(
@@ -258,7 +260,20 @@ export default function CategoryPage() {
   const [activeDifficultyFilters, setActiveDifficultyFilters] = useState<
     string[]
   >([]);
+  const [activePricingFilters, setActivePricingFilters] = useState<string[]>(
+    []
+  );
+  const [activeHostingFilters, setActiveHostingFilters] = useState<string[]>(
+    []
+  );
   const [sortOrder, setSortOrder] = useState("stars");
+
+  // Filter projects by the current category (matching original category names)
+  const baseCategoryProjects = projects.filter((p) =>
+    p.categories.some(
+      (cat) => cat.toLowerCase().replace(/\s+/g, "-") === categorySlug
+    )
+  );
 
   // Convert slug back to category name (reverse the slug transformation)
   const categoryName = categorySlug.replace(/-/g, " ");
@@ -284,18 +299,26 @@ export default function CategoryPage() {
     ? getColorClasses(category.color)
     : getColorClasses("blue");
 
-  // Filter projects by the current category (matching original category names)
-  const baseCategoryProjects = projects.filter((p) =>
-    p.categories.some(
-      (cat) => cat.toLowerCase().replace(/\s+/g, "-") === categorySlug
-    )
-  );
-
   // Difficulty filters based on available projects in this category
   const difficultyFilters: FilterOption[] = [
     { value: "Easy", label: "Easy" },
     { value: "Medium", label: "Medium" },
     { value: "Advanced", label: "Advanced" },
+  ];
+
+  // Pricing filters
+  const pricingFilters: FilterOption[] = [
+    { value: "Open Source", label: "Open Source" },
+    { value: "Open-Core", label: "Open-Core" },
+    { value: "Freemium", label: "Freemium" },
+    { value: "Commercial", label: "Commercial" },
+  ];
+
+  // Hosting filters
+  const hostingFilters: FilterOption[] = [
+    { value: "Self-hosted", label: "Self-hosted" },
+    { value: "Cloud", label: "Cloud" },
+    { value: "Hybrid", label: "Hybrid" },
   ];
 
   // Apply search and filters
@@ -311,6 +334,20 @@ export default function CategoryPage() {
       );
     }
 
+    // Apply pricing filters
+    if (activePricingFilters.length > 0) {
+      filteredProjects = filteredProjects.filter((project) =>
+        activePricingFilters.includes(project.pricingModel || "Open Source")
+      );
+    }
+
+    // Apply hosting filters
+    if (activeHostingFilters.length > 0) {
+      filteredProjects = filteredProjects.filter((project) =>
+        activeHostingFilters.includes(project.hostingType || "Self-hosted")
+      );
+    }
+
     return filteredProjects;
   };
 
@@ -322,9 +359,11 @@ export default function CategoryPage() {
         return sorted.sort((a, b) => a.name.localeCompare(b.name));
       case "stars":
         return sorted.sort((a, b) => {
-          const aPopularity = a.popularity || 0;
-          const bPopularity = b.popularity || 0;
-          return bPopularity - aPopularity;
+          const aGithubData = projectsWithGitHubData[a.slug];
+          const bGithubData = projectsWithGitHubData[b.slug];
+          const aStars = aGithubData?.stargazers_count || 0;
+          const bStars = bGithubData?.stargazers_count || 0;
+          return bStars - aStars;
         });
       case "difficulty-asc":
         const difficultyOrder = { Easy: 1, Medium: 2, Advanced: 3 };
@@ -385,6 +424,10 @@ export default function CategoryPage() {
   const handleFilterChange = (filterType: string, values: string[]) => {
     if (filterType === "difficulty") {
       setActiveDifficultyFilters(values);
+    } else if (filterType === "pricing") {
+      setActivePricingFilters(values);
+    } else if (filterType === "hosting") {
+      setActiveHostingFilters(values);
     }
   };
 
@@ -466,12 +509,20 @@ export default function CategoryPage() {
           onSearch={handleSearch}
           onSort={handleSort}
           onFilterChange={handleFilterChange}
-          sortValue={sortOrder}
           searchPlaceholder={`Search ${category.name.toLowerCase()} projects...`}
           difficultyFilters={difficultyFilters}
+          pricingFilters={pricingFilters}
+          hostingFilters={hostingFilters}
           activeDifficultyFilters={activeDifficultyFilters}
+          activePricingFilters={activePricingFilters}
+          activeHostingFilters={activeHostingFilters}
           showCategoryFilters={false}
+          showDifficultyFilters={true}
+          showPricingFilters={true}
+          showHostingFilters={true}
           showPopularAlternatives={false}
+          enableUrlSync={true}
+          defaultSort="stars"
         />
 
         {/* Projects Grid */}
@@ -492,6 +543,8 @@ export default function CategoryPage() {
                 onClick={() => {
                   setSearchResults(null);
                   setActiveDifficultyFilters([]);
+                  setActivePricingFilters([]);
+                  setActiveHostingFilters([]);
                 }}
               >
                 Clear Filters
