@@ -44,6 +44,7 @@
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "lucide-react": "^0.511.0",
+    "match-sorter": "^8.0.2",
     "next": "15.3.2",
     "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
