@@ -1,0 +1,47 @@
+---
+slug: prefect
+name: Prefect
+description: |
+  Prefect is a modern workflow orchestration framework for Python that enables data teams to build, schedule and monitor resilient data pipelines with features like retries, caching, and event-based automation.
+logo: https://avatars.githubusercontent.com/u/39270919?s=64&v=4
+primaryCategory: automation
+categories: [data-engineering, workflow-orchestration, python]
+github: PrefectHQ/prefect
+websiteUrl: https://www.prefect.io
+alternatives:
+  selfHosted: [airflow, dagster, luigi, n8n]
+  nonSelfHosted: [astronomer, databricks]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Python environment setup and understanding of workflow concepts. Docker deployment available but configuration needed for production use."
+---
+
+Prefect is a powerful workflow orchestration framework that helps data teams transform Python scripts into production-ready data pipelines. It provides the tools and visibility needed to build resilient, automated workflows that can handle complex dependencies, retries, and monitoring requirements.
+
+## Key Features
+
+- **Simple Python-Native Workflows**: Prefect uses decorators to transform regular Python functions into observable workflows. The `@flow` and `@task` decorators make it easy to define and orchestrate complex pipelines while maintaining pure Python syntax.
+
+- **Robust Error Handling**: Built-in support for retries, timeouts, and failure notifications helps ensure workflow reliability. Workflows can automatically recover from transient failures and notify teams when intervention is needed.
+
+- **Flexible Scheduling & Triggers**: Workflows can be scheduled using cron expressions or triggered by events. The platform supports complex scheduling patterns and event-driven execution.
+
+- **Comprehensive Monitoring**: The Prefect UI provides real-time visibility into workflow execution, logs, and metrics. Teams can track workflow health and troubleshoot issues through a modern dashboard interface.
+
+- **Cloud or Self-Hosted**: Choose between Prefect Cloud for a managed experience or self-host the Prefect server for complete control. Both options provide the same core orchestration capabilities.
+
+## Who Should Use Prefect
+
+Prefect is ideal for:
+
+- **Data Engineers** building ETL pipelines and data workflows
+- **Data Scientists** automating model training and deployment
+- **MLOps Teams** orchestrating machine learning workflows
+- **Analytics Engineers** scheduling data transformations
+- **DevOps Teams** automating infrastructure tasks
+
+## Getting Started
+
+Prefect can be installed via pip and requires Python 3.9+. The platform provides a local development server for testing and a production server for deployment. Basic workflows can be created with just a few lines of code:
+
+Whether you're building simple data pipelines or complex ML workflows, Prefect provides the orchestration capabilities needed for modern data stack automation while maintaining the simplicity of pure Python.
