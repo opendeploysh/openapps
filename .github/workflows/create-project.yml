@@ -10,25 +10,7 @@ on:
       category:
         description: "Optional: Override category for folder placement (leave empty for AI to determine)"
         required: false
-        type: choice
-        options:
-          - ""
-          - analytics
-          - auth
-          - automation
-          - backup
-          - communication
-          - crm
-          - database
-          - database-management
-          - dev
-          - file-storage
-          - media
-          - monitoring
-          - productivity
-          - security
-          - other
-
+        type: string
 jobs:
   create-project:
     runs-on: ubuntu-latest
