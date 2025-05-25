@@ -39,6 +39,7 @@ const difficultyIcons = {
 };
 
 export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
+  console.log(project, projectsWithGitHubData);
   const githubData = projectsWithGitHubData[project.slug];
 
   return (

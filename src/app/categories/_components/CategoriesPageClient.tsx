@@ -34,9 +34,14 @@ import {
   Keyboard,
   Headphones,
   MoveRight,
+  Info,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import {
+  GitHubEditButton,
+  GitHubContributeButton,
+} from "@/components/GitHubEditButton";
 import _ from "lodash";
 
 // Icon mapping for tags
@@ -252,13 +257,15 @@ export function CategoriesPageClient() {
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
       <Navbar />
       <div className="container max-w-5xl mx-auto px-4 py-8">
-        {/* Back to home link */}
-        <Link href="/">
-          <Button variant="ghost" size="sm" className="mb-6">
-            <ChevronLeft className="h-4 w-4 mr-1" />
-            Back to Home
-          </Button>
-        </Link>
+        {/* Back to home link and edit button */}
+        <div className="flex items-center justify-between mb-6">
+          <Link href="/">
+            <Button variant="ghost" size="sm">
+              <ChevronLeft className="h-4 w-4 mr-1" />
+              Back to Home
+            </Button>
+          </Link>
+        </div>
 
         {/* Hero Section */}
         <div className="text-center mb-12">
@@ -374,6 +381,40 @@ export function CategoriesPageClient() {
           </div>
         )}
 
+        {/* Contribution section */}
+        <div className="mb-8 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+          <div className="flex items-start gap-3">
+            <Info className="h-5 w-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+            <div className="flex-1">
+              <h4 className="font-medium text-green-900 dark:text-green-100 mb-1">
+                Missing a category?
+              </h4>
+              <p className="text-sm text-green-700 dark:text-green-300 mb-3">
+                Categories are automatically generated from project tags. To add
+                a new category, contribute a project with new tags or suggest
+                improvements to existing projects.
+              </p>
+              <div className="flex gap-2">
+                <GitHubContributeButton
+                  variant="default"
+                  size="sm"
+                  className="bg-green-600 hover:bg-green-700 text-white"
+                >
+                  Add a project
+                </GitHubContributeButton>
+                <GitHubEditButton
+                  filePath="src/lib/categories.ts"
+                  variant="outline"
+                  size="sm"
+                  className="border-green-300 text-green-700 hover:bg-green-100 dark:border-green-600 dark:text-green-300 dark:hover:bg-green-900/30"
+                >
+                  Edit categories
+                </GitHubEditButton>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Request new category */}
         <div className="bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 rounded-lg p-6 text-center mb-8">
           <h2 className="text-xl font-bold mb-2">
@@ -383,10 +424,9 @@ export function CategoriesPageClient() {
             If you need a specific category that's not listed here, let us know
             and we'll consider adding it to our collection.
           </p>
-          <Button size="sm" className="gap-1">
+          <GitHubContributeButton size="sm" className="gap-1">
             Request a Category
-            <ArrowRight className="h-3 w-3" />
-          </Button>
+          </GitHubContributeButton>
         </div>
       </div>
       <Footer />

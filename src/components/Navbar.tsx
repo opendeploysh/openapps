@@ -32,11 +32,13 @@ import {
   Scale,
   GitCompare,
   FolderOpen,
+  Github,
 } from "lucide-react";
 import {
   SiOpensourceinitiative,
   SiOpensourceinitiativeHex,
 } from "@icons-pack/react-simple-icons";
+import { GitHubContributeButton } from "./GitHubEditButton";
 
 // Define basic tags for the navigation menu
 const navCategories = [
@@ -70,50 +72,6 @@ export const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-1">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="h-9 gap-1.5">
-                    <Compass className="h-4 w-4" />
-                    Discover
-                    <ChevronDown className="h-3 w-3 opacity-50" />
-                  </Button>
-                </DropdownMenuTrigger>
-
-                <DropdownMenuContent align="start" className="w-[220px]">
-                  <DropdownMenuLabel>Discover</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded flex items-center justify-center bg-blue-100 dark:bg-blue-900">
-                      <CheckCircle className="h-3 w-3 text-blue-600 dark:text-blue-400" />
-                    </div>
-                    <span>Featured Alternatives</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded flex items-center justify-center bg-teal-100 dark:bg-teal-900">
-                      <ArrowUpDown className="h-3 w-3 text-teal-600 dark:text-teal-400" />
-                    </div>
-                    <span>Trending Projects</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded flex items-center justify-center bg-amber-100 dark:bg-amber-900">
-                      <Star className="h-3 w-3 text-amber-600 dark:text-amber-400" />
-                    </div>
-                    <span>Most Popular</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="flex items-center gap-2">
-                    <div className="h-5 w-5 rounded flex items-center justify-center bg-violet-100 dark:bg-violet-900">
-                      <Sparkles className="h-3 w-3 text-violet-600 dark:text-violet-400" />
-                    </div>
-                    <span>Recently Added</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem className="flex items-center gap-2">
-                    <Search className="h-4 w-4 mr-1" />
-                    <span>Advanced Search</span>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="sm" className="h-9 gap-1.5">
@@ -178,7 +136,14 @@ export const Navbar = () => {
               <Button variant="ghost" size="icon" className="h-9 w-9 md:hidden">
                 <Search className="h-4 w-4" />
               </Button>
-              <Button size="sm" className="h-9 hidden md:flex">
+              <GitHubContributeButton
+                variant="ghost"
+                size="sm"
+                className="h-9 hidden md:flex"
+              >
+                Contribute
+              </GitHubContributeButton>
+              <Button size="sm" className="h-9 hidden lg:flex">
                 Get Started
               </Button>
               <Button
@@ -321,6 +286,18 @@ export const Navbar = () => {
                 Licenses
               </Button>
             </Link>
+
+            {/* Mobile GitHub contribute button */}
+            <div className="pt-4 border-t border-neutral-200 dark:border-neutral-800">
+              <GitHubContributeButton
+                variant="ghost"
+                size="sm"
+                className="w-full justify-start h-10 gap-2"
+              >
+                <Github className="h-4 w-4" />
+                Contribute on GitHub
+              </GitHubContributeButton>
+            </div>
           </div>
 
           <div className="mt-6">

@@ -48,5 +48,5 @@ const projectMatter = getAllProjectMdxFiles()
   .filter((result) => result.success)
   .map((result) => result.data);
 
-const outputPath = path.join(process.cwd(), ".next", "cache", "projects.json");
+const outputPath = path.join(process.cwd(), "src", "lib", "projects.json");
 fs.writeFileSync(outputPath, JSON.stringify(projectMatter, null, 2));

@@ -1,4 +1,4 @@
-import projectData from "../../.next/cache/projects.json";
+import projectData from "./projects.json";
 import { categories } from "./categories";
 import { HostingType } from "./hosting-type";
 import githubData from "./projects-github.json";

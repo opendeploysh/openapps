@@ -9,18 +9,29 @@ import { projects } from "@/lib/projects";
 import { CompareClient } from "./CompareClient";
 import { FeatureComparisonServer } from "./FeatureComparisonServer";
 import { useSearchParams } from "next/navigation";
+import { GitHubEditButton } from "@/components/GitHubEditButton";
 
 // Server component for static header
 function CompareHeader() {
   return (
     <>
-      {/* Back to home link */}
-      <Link href="/">
-        <Button variant="ghost" size="sm" className="mb-6">
-          <ChevronLeft className="h-4 w-4 mr-1" />
-          Back to Home
-        </Button>
-      </Link>
+      {/* Back to home link and edit button */}
+      <div className="flex items-center justify-between mb-6">
+        <Link href="/">
+          <Button variant="ghost" size="sm">
+            <ChevronLeft className="h-4 w-4 mr-1" />
+            Back to Home
+          </Button>
+        </Link>
+
+        <GitHubEditButton
+          filePath="src/app/compare/page.tsx"
+          variant="outline"
+          size="sm"
+        >
+          Improve comparison
+        </GitHubEditButton>
+      </div>
 
       {/* Header */}
       <div className="text-center mb-6">

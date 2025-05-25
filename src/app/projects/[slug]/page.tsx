@@ -2,20 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  ChevronLeft,
-  Github,
-  ServerCog,
-  Code,
-  Shield,
-  Zap,
-  CheckCircle,
-  AlertCircle,
-  BookOpen,
-  Play,
-  Info,
-  GitCompare,
-} from "lucide-react";
+import { ChevronLeft, Github, Play, Info, GitCompare } from "lucide-react";
 import { projects } from "@/lib/projects";
 
 import { Navbar } from "@/components/Navbar";
@@ -23,9 +10,12 @@ import { Footer } from "@/components/Footer";
 import { ProjectHeader } from "./_components/ProejctHeader";
 import { RelatedProjects } from "./_components/RelatedProjects";
 import { useCompileFromSlug } from "@/mdx/render-projects";
-import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
+import {
+  GitHubEditButton,
+  GitHubViewButton,
+} from "@/components/GitHubEditButton";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -132,17 +122,39 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   const mdxData = await useCompileFromSlug(slug);
 
+  // Determine the project file path based on category and slug
+  const projectFilePath = `projects/${project.category
+    .toLowerCase()
+    .replace(/\s+/g, "-")}/${slug}.mdx`;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
       <Navbar />
 
       <div className="container max-w-5xl mx-auto px-4 py-8">
-        <Link href="/">
-          <Button variant="ghost" size="sm" className="mb-6">
-            <ChevronLeft className="h-4 w-4 mr-1" />
-            Back to Projects
-          </Button>
-        </Link>
+        <div className="flex items-center justify-between mb-6">
+          <Link href="/">
+            <Button variant="ghost" size="sm">
+              <ChevronLeft className="h-4 w-4 mr-1" />
+              Back to Projects
+            </Button>
+          </Link>
+
+          <div className="flex gap-2">
+            <GitHubViewButton
+              filePath={projectFilePath}
+              variant="ghost"
+              size="sm"
+            />
+            <GitHubEditButton
+              filePath={projectFilePath}
+              variant="outline"
+              size="sm"
+            >
+              Improve this page
+            </GitHubEditButton>
+          </div>
+        </div>
 
         {/* Project Header */}
         <div className="mb-8">
@@ -160,6 +172,30 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         <div className="prose prose-neutral dark:prose-invert max-w-none mt-14">
           {mdxData?.content}
+        </div>
+
+        {/* Content improvement notice */}
+        <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+          <div className="flex items-start gap-3">
+            <Info className="h-5 w-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+            <div className="flex-1">
+              <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-1">
+                Help improve this content
+              </h4>
+              <p className="text-sm text-blue-700 dark:text-blue-300 mb-3">
+                Found an error or want to add more information about{" "}
+                {project.name}? You can edit this page directly on GitHub.
+              </p>
+              <GitHubEditButton
+                filePath={projectFilePath}
+                variant="default"
+                size="sm"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+              >
+                Edit this page
+              </GitHubEditButton>
+            </div>
+          </div>
         </div>
 
         {/* Call to action */}

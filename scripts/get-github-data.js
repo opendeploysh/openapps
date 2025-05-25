@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Read projects data from JSON file
-const projectsPath = path.join(__dirname, "../.next/cache/projects.json");
+const projectsPath = path.join(__dirname, "../src/lib/projects.json");
 const projects = JSON.parse(fs.readFileSync(projectsPath, "utf8"));
 
 const octokit = new Octokit({

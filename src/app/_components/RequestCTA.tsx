@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { GitHubContributeButton } from "@/components/GitHubEditButton";
 
 export const RequestCTA = () => {
   return (
@@ -29,23 +31,25 @@ export const RequestCTA = () => {
 
         <p className="mb-6 text-neutral-600 dark:text-neutral-400 max-w-lg mx-auto">
           We're constantly adding new self-hostable alternatives. Submit a
-          request and our team will help find or build the perfect solution for
-          your needs.
+          request on GitHub and our community will help find or build the
+          perfect solution for your needs.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Button size="sm" className="h-9">
+          <GitHubContributeButton size="sm" className="h-9">
             Submit Request
             <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-          </Button>
-          <Button size="sm" variant="outline" className="h-9">
-            Browse All Solutions
-          </Button>
+          </GitHubContributeButton>
+          <Link href="/categories">
+            <Button size="sm" variant="outline" className="h-9">
+              Browse All Solutions
+            </Button>
+          </Link>
         </div>
 
         <div className="mt-6 flex items-center justify-center gap-2 text-xs text-neutral-500">
-          <span>Average response time:</span>
-          <span className="font-medium">Under 24 hours</span>
+          <span>Open source community:</span>
+          <span className="font-medium">Contributions welcome</span>
         </div>
       </div>
     </section>

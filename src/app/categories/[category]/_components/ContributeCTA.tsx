@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { GitFork } from "lucide-react";
+import { GitHubContributeButton } from "@/components/GitHubEditButton";
 
 interface ContributeCTAProps {
   categoryName: string;
@@ -22,10 +23,10 @@ export const ContributeCTA: React.FC<ContributeCTAProps> = ({
           </p>
         </div>
         <div>
-          <Button className="gap-2">
+          <GitHubContributeButton className="gap-2">
             <GitFork className="h-4 w-4" />
             Suggest a Project
-          </Button>
+          </GitHubContributeButton>
         </div>
       </div>
     </div>

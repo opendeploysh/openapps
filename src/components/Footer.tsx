@@ -1,4 +1,6 @@
-import { Container } from "lucide-react";
+import { Container, Github, Heart } from "lucide-react";
+import Link from "next/link";
+import { GitHubContributeButton } from "./GitHubEditButton";
 
 export const Footer = () => {
   return (
@@ -11,6 +13,13 @@ export const Footer = () => {
             </div>
           </div>
           <div className="text-sm font-medium">OpenApps</div>
+        </div>
+
+        <div className="mb-6">
+          <GitHubContributeButton variant="outline" size="sm" className="mb-4">
+            <Heart className="w-4 h-4" />
+            Contribute to OpenApps
+          </GitHubContributeButton>
         </div>
 
         <div className="flex space-x-6 mb-6">
@@ -26,12 +35,15 @@ export const Footer = () => {
           >
             Documentation
           </a>
-          <a
-            href="#"
-            className="text-xs text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
+          <Link
+            href="https://github.com/opendeploysh/openapps"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors flex items-center gap-1"
           >
+            <Github className="w-3 h-3" />
             GitHub
-          </a>
+          </Link>
           <a
             href="#"
             className="text-xs text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
@@ -43,6 +55,17 @@ export const Footer = () => {
         <div className="text-xs text-neutral-500 dark:text-neutral-400">
           <p>© {new Date().getFullYear()} OpenApps. All rights reserved.</p>
           <p className="mt-1">Discover. Compare. Deploy.</p>
+          <p className="mt-2 text-xs">
+            Open source project • Help us improve by{" "}
+            <Link
+              href="https://github.com/opendeploysh/openapps"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              contributing on GitHub
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

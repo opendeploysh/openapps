@@ -11,6 +11,10 @@ import { RelatedCategories } from "./_components/RelatedCategories";
 import { ContributeCTA } from "./_components/ContributeCTA";
 import { ProjectsGrid } from "./_components/ProjectsGrid";
 import {
+  GitHubEditButton,
+  GitHubContributeButton,
+} from "@/components/GitHubEditButton";
+import {
   getAllCategoriesData,
   getCategoryProjects,
   findCategoryDataBySlug,
@@ -97,13 +101,21 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
       <Navbar />
       <div className="container max-w-5xl mx-auto px-4 py-8">
-        {/* Back to categories link */}
-        <Link href="/categories">
-          <Button variant="ghost" size="sm" className="mb-6">
-            <ChevronLeft className="h-4 w-4 mr-1" />
-            Back to Categories
-          </Button>
-        </Link>
+        {/* Back to categories link and edit button */}
+        <div className="flex items-center justify-between mb-6">
+          <Link href="/categories">
+            <Button variant="ghost" size="sm">
+              <ChevronLeft className="h-4 w-4 mr-1" />
+              Back to Categories
+            </Button>
+          </Link>
+
+          <div className="flex gap-2">
+            <GitHubContributeButton variant="outline" size="sm">
+              Add a project
+            </GitHubContributeButton>
+          </div>
+        </div>
 
         {/* Category Header */}
         <CategoryHeader
