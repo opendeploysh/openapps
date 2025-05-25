@@ -1,41 +1,41 @@
-"use client";
+"use client"
 
-import { useState, useEffect, useCallback, useRef } from "react";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { SearchBar } from "@/components/SearchBar";
-import { SortSelect } from "./SortSelect";
-import { FilterBadges, FilterOption } from "./FilterBadges";
-import { SlidersHorizontal } from "lucide-react";
+import React, { useState, useEffect, useCallback, useRef } from "react"
+import { useRouter, useSearchParams, usePathname } from "next/navigation"
+import { Button } from "@/components/ui/button"
+import { SearchBar } from "@/components/SearchBar"
+import { SortSelect } from "./SortSelect"
+import { FilterBadges, FilterOption } from "./FilterBadges"
+import { SlidersHorizontal } from "lucide-react"
 
 export interface ProjectFiltersProps {
-  onSearch?: (query: string) => void;
-  onSort?: (sortValue: string) => void;
-  onFilterChange?: (filterType: string, values: string[]) => void;
-  sortValue?: string;
-  searchPlaceholder?: string;
-  categoryFilters?: FilterOption[];
-  difficultyFilters?: FilterOption[];
-  pricingFilters?: FilterOption[];
-  hostingFilters?: FilterOption[];
-  popularAlternatives?: string[];
-  activeCategoryFilters?: string[];
-  activeDifficultyFilters?: string[];
-  activePricingFilters?: string[];
-  activeHostingFilters?: string[];
-  showCategoryFilters?: boolean;
-  showDifficultyFilters?: boolean;
-  showPricingFilters?: boolean;
-  showHostingFilters?: boolean;
-  showPopularAlternatives?: boolean;
-  className?: string;
+  onSearch?: (query: string) => void
+  onSort?: (sortValue: string) => void
+  onFilterChange?: (filterType: string, values: string[]) => void
+  sortValue?: string
+  searchPlaceholder?: string
+  categoryFilters?: FilterOption[]
+  difficultyFilters?: FilterOption[]
+  pricingFilters?: FilterOption[]
+  hostingFilters?: FilterOption[]
+  popularAlternatives?: string[]
+  activeCategoryFilters?: string[]
+  activeDifficultyFilters?: string[]
+  activePricingFilters?: string[]
+  activeHostingFilters?: string[]
+  showCategoryFilters?: boolean
+  showDifficultyFilters?: boolean
+  showPricingFilters?: boolean
+  showHostingFilters?: boolean
+  showPopularAlternatives?: boolean
+  className?: string
   // URL sync props
-  enableUrlSync?: boolean;
-  defaultSort?: string;
-  initialSearchQuery?: string;
+  enableUrlSync?: boolean
+  defaultSort?: string
+  initialSearchQuery?: string
 }
 
-export const ProjectFilters = ({
+export const ProjectFilters: React.FC<ProjectFiltersProps> = ({
   onSearch,
   onSort,
   onFilterChange,
@@ -59,101 +59,70 @@ export const ProjectFilters = ({
   enableUrlSync = false,
   defaultSort = "relevance",
   initialSearchQuery = "",
-}: ProjectFiltersProps) => {
-  const [showFilters, setShowFilters] = useState(false);
-  const isInitialized = useRef(false);
+}) => {
+  const [showFilters, setShowFilters] = useState(false)
+  const isInitialized = useRef(false)
 
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const pathname = usePathname()
 
   // Helper function to update URL with current filter state
   const updateURL = useCallback(
-    (
-      tags: string[],
-      difficulties: string[],
-      pricing: string[],
-      hosting: string[],
-      sort: string,
-      query?: string
-    ) => {
-      if (!enableUrlSync) return;
+    (tags: string[], difficulties: string[], pricing: string[], hosting: string[], sort: string, query?: string) => {
+      if (!enableUrlSync) return
 
-      const params = new URLSearchParams();
+      const params = new URLSearchParams()
 
-      if (tags.length > 0) params.set("tags", tags.join(","));
-      if (difficulties.length > 0)
-        params.set("difficulties", difficulties.join(","));
-      if (pricing.length > 0) params.set("pricing", pricing.join(","));
-      if (hosting.length > 0) params.set("hosting", hosting.join(","));
-      if (sort !== defaultSort) params.set("sort", sort);
-      if (query && query.trim()) params.set("q", query.trim());
+      if (tags.length > 0) params.set("tags", tags.join(","))
+      if (difficulties.length > 0) params.set("difficulties", difficulties.join(","))
+      if (pricing.length > 0) params.set("pricing", pricing.join(","))
+      if (hosting.length > 0) params.set("hosting", hosting.join(","))
+      if (sort !== defaultSort) params.set("sort", sort)
+      if (query && query.trim()) params.set("q", query.trim())
 
-      const url = params.toString()
-        ? `${pathname}?${params.toString()}`
-        : pathname;
-      router.replace(url, { scroll: false });
+      const url = params.toString() ? `${pathname}?${params.toString()}` : pathname
+      router.replace(url, { scroll: false })
     },
     [enableUrlSync, defaultSort, pathname, router]
-  );
+  )
 
   // Internal state for URL-synced filters
-  const [internalCategoryFilters, setInternalCategoryFilters] = useState<
-    string[]
-  >([]);
-  const [internalDifficultyFilters, setInternalDifficultyFilters] = useState<
-    string[]
-  >([]);
-  const [internalPricingFilters, setInternalPricingFilters] = useState<
-    string[]
-  >([]);
-  const [internalHostingFilters, setInternalHostingFilters] = useState<
-    string[]
-  >([]);
-  const [internalSortValue, setInternalSortValue] =
-    useState<string>(defaultSort);
-  const [internalSearchQuery, setInternalSearchQuery] = useState<string>("");
+  const [internalCategoryFilters, setInternalCategoryFilters] = useState<string[]>([])
+  const [internalDifficultyFilters, setInternalDifficultyFilters] = useState<string[]>([])
+  const [internalPricingFilters, setInternalPricingFilters] = useState<string[]>([])
+  const [internalHostingFilters, setInternalHostingFilters] = useState<string[]>([])
+  const [internalSortValue, setInternalSortValue] = useState<string>(defaultSort)
+  const [internalSearchQuery, setInternalSearchQuery] = useState<string>("")
 
   // Initialize from URL on mount - only run once
   useEffect(() => {
     if (enableUrlSync && !isInitialized.current) {
-      isInitialized.current = true;
+      isInitialized.current = true
 
       // Get initial values from URL or props
-      const tags =
-        searchParams.get("tags")?.split(",").filter(Boolean) ||
-        activeCategoryFilters ||
-        [];
-      const difficulties =
-        searchParams.get("difficulties")?.split(",").filter(Boolean) ||
-        activeDifficultyFilters ||
-        [];
-      const pricing =
-        searchParams.get("pricing")?.split(",").filter(Boolean) ||
-        activePricingFilters ||
-        [];
-      const hosting =
-        searchParams.get("hosting")?.split(",").filter(Boolean) ||
-        activeHostingFilters ||
-        [];
-      const sort = searchParams.get("sort") || sortValue || defaultSort;
-      const query = searchParams.get("q") || initialSearchQuery;
+      const tags = searchParams.get("tags")?.split(",").filter(Boolean) || activeCategoryFilters || []
+      const difficulties = searchParams.get("difficulties")?.split(",").filter(Boolean) || activeDifficultyFilters || []
+      const pricing = searchParams.get("pricing")?.split(",").filter(Boolean) || activePricingFilters || []
+      const hosting = searchParams.get("hosting")?.split(",").filter(Boolean) || activeHostingFilters || []
+      const sort = searchParams.get("sort") || sortValue || defaultSort
+      const query = searchParams.get("q") || initialSearchQuery
 
-      setInternalCategoryFilters(tags);
-      setInternalDifficultyFilters(difficulties);
-      setInternalPricingFilters(pricing);
-      setInternalHostingFilters(hosting);
-      setInternalSortValue(sort);
-      setInternalSearchQuery(query);
+      setInternalCategoryFilters(tags)
+      setInternalDifficultyFilters(difficulties)
+      setInternalPricingFilters(pricing)
+      setInternalHostingFilters(hosting)
+      setInternalSortValue(sort)
+      setInternalSearchQuery(query)
 
       // Notify parent components of initial state
-      onFilterChange?.("category", tags);
-      onFilterChange?.("difficulty", difficulties);
-      onFilterChange?.("pricing", pricing);
-      onFilterChange?.("hosting", hosting);
-      onSort?.(sort);
+      onFilterChange?.("category", tags)
+      onFilterChange?.("difficulty", difficulties)
+      onFilterChange?.("pricing", pricing)
+      onFilterChange?.("hosting", hosting)
+      onSort?.(sort)
       if (query) {
-        onSearch?.(query);
+        onSearch?.(query)
       }
     }
   }, [
@@ -169,123 +138,89 @@ export const ProjectFilters = ({
     onFilterChange,
     onSort,
     onSearch,
-  ]); // Include all dependencies but use isInitialized ref to prevent re-runs
+  ]) // Include all dependencies but use isInitialized ref to prevent re-runs
 
   // Use internal state when URL sync is enabled, otherwise use props
-  const currentCategoryFilters = enableUrlSync
-    ? internalCategoryFilters
-    : activeCategoryFilters || [];
-  const currentDifficultyFilters = enableUrlSync
-    ? internalDifficultyFilters
-    : activeDifficultyFilters || [];
-  const currentPricingFilters = enableUrlSync
-    ? internalPricingFilters
-    : activePricingFilters || [];
-  const currentHostingFilters = enableUrlSync
-    ? internalHostingFilters
-    : activeHostingFilters || [];
-  const currentSortValue = enableUrlSync
-    ? internalSortValue
-    : sortValue || defaultSort;
+  const currentCategoryFilters = enableUrlSync ? internalCategoryFilters : activeCategoryFilters || []
+  const currentDifficultyFilters = enableUrlSync ? internalDifficultyFilters : activeDifficultyFilters || []
+  const currentPricingFilters = enableUrlSync ? internalPricingFilters : activePricingFilters || []
+  const currentHostingFilters = enableUrlSync ? internalHostingFilters : activeHostingFilters || []
+  const currentSortValue = enableUrlSync ? internalSortValue : sortValue || defaultSort
 
   const handleCategoryFilterToggle = (category: string) => {
     const updatedFilters = currentCategoryFilters.includes(category)
       ? currentCategoryFilters.filter((f) => f !== category)
-      : [...currentCategoryFilters, category];
+      : [...currentCategoryFilters, category]
 
     if (enableUrlSync) {
-      setInternalCategoryFilters(updatedFilters);
+      setInternalCategoryFilters(updatedFilters)
     }
-    onFilterChange?.("category", updatedFilters);
-    updateURL(
-      updatedFilters,
-      currentDifficultyFilters,
-      currentPricingFilters,
-      currentHostingFilters,
-      currentSortValue
-    );
-  };
+    onFilterChange?.("category", updatedFilters)
+    updateURL(updatedFilters, currentDifficultyFilters, currentPricingFilters, currentHostingFilters, currentSortValue)
+  }
 
   const handleDifficultyFilterToggle = (difficulty: string) => {
     const updatedFilters = currentDifficultyFilters.includes(difficulty)
       ? currentDifficultyFilters.filter((f) => f !== difficulty)
-      : [...currentDifficultyFilters, difficulty];
+      : [...currentDifficultyFilters, difficulty]
 
     if (enableUrlSync) {
-      setInternalDifficultyFilters(updatedFilters);
+      setInternalDifficultyFilters(updatedFilters)
     }
-    onFilterChange?.("difficulty", updatedFilters);
-    updateURL(
-      currentCategoryFilters,
-      updatedFilters,
-      currentPricingFilters,
-      currentHostingFilters,
-      currentSortValue
-    );
-  };
+    onFilterChange?.("difficulty", updatedFilters)
+    updateURL(currentCategoryFilters, updatedFilters, currentPricingFilters, currentHostingFilters, currentSortValue)
+  }
 
   const handlePricingFilterToggle = (pricing: string) => {
     const updatedFilters = currentPricingFilters.includes(pricing)
       ? currentPricingFilters.filter((f) => f !== pricing)
-      : [...currentPricingFilters, pricing];
+      : [...currentPricingFilters, pricing]
 
     if (enableUrlSync) {
-      setInternalPricingFilters(updatedFilters);
+      setInternalPricingFilters(updatedFilters)
     }
-    onFilterChange?.("pricing", updatedFilters);
-    updateURL(
-      currentCategoryFilters,
-      currentDifficultyFilters,
-      updatedFilters,
-      currentHostingFilters,
-      currentSortValue
-    );
-  };
+    onFilterChange?.("pricing", updatedFilters)
+    updateURL(currentCategoryFilters, currentDifficultyFilters, updatedFilters, currentHostingFilters, currentSortValue)
+  }
 
   const handleHostingFilterToggle = (hosting: string) => {
     const updatedFilters = currentHostingFilters.includes(hosting)
       ? currentHostingFilters.filter((f) => f !== hosting)
-      : [...currentHostingFilters, hosting];
+      : [...currentHostingFilters, hosting]
 
     if (enableUrlSync) {
-      setInternalHostingFilters(updatedFilters);
+      setInternalHostingFilters(updatedFilters)
     }
-    onFilterChange?.("hosting", updatedFilters);
-    updateURL(
-      currentCategoryFilters,
-      currentDifficultyFilters,
-      currentPricingFilters,
-      updatedFilters,
-      currentSortValue
-    );
-  };
+    onFilterChange?.("hosting", updatedFilters)
+    updateURL(currentCategoryFilters, currentDifficultyFilters, currentPricingFilters, updatedFilters, currentSortValue)
+  }
 
   const handleClearAllFilters = () => {
     if (enableUrlSync) {
-      setInternalCategoryFilters([]);
-      setInternalDifficultyFilters([]);
-      setInternalPricingFilters([]);
-      setInternalHostingFilters([]);
+      setInternalCategoryFilters([])
+      setInternalDifficultyFilters([])
+      setInternalPricingFilters([])
+      setInternalHostingFilters([])
     }
-    onFilterChange?.("category", []);
-    onFilterChange?.("difficulty", []);
-    onFilterChange?.("pricing", []);
-    onFilterChange?.("hosting", []);
-    setShowFilters(false);
-    updateURL([], [], [], [], currentSortValue);
-  };
+    onFilterChange?.("category", [])
+    onFilterChange?.("difficulty", [])
+    onFilterChange?.("pricing", [])
+    onFilterChange?.("hosting", [])
+    setShowFilters(false)
+    updateURL([], [], [], [], currentSortValue)
+  }
 
   const hasActiveFilters =
     currentCategoryFilters.length > 0 ||
     currentDifficultyFilters.length > 0 ||
     currentPricingFilters.length > 0 ||
-    currentHostingFilters.length > 0;
+    currentHostingFilters.length > 0
 
   // Enhanced handlers that sync with URL
   const handleSearchWithUrlSync = (query: string) => {
-    onSearch?.(query);
+    onSearch?.(query)
     if (enableUrlSync) {
-      setInternalSearchQuery(query);
+      setInternalSearchQuery(query)
       updateURL(
         currentCategoryFilters,
         currentDifficultyFilters,
@@ -293,14 +228,14 @@ export const ProjectFilters = ({
         currentHostingFilters,
         currentSortValue,
         query
-      );
+      )
     }
-  };
+  }
 
   const handleSortWithUrlSync = (sortValue: string) => {
-    onSort?.(sortValue);
+    onSort?.(sortValue)
     if (enableUrlSync) {
-      setInternalSortValue(sortValue);
+      setInternalSortValue(sortValue)
       updateURL(
         currentCategoryFilters,
         currentDifficultyFilters,
@@ -308,9 +243,9 @@ export const ProjectFilters = ({
         currentHostingFilters,
         sortValue,
         internalSearchQuery
-      );
+      )
     }
-  };
+  }
 
   return (
     <section className={`mb-4 ${className}`}>
@@ -318,18 +253,10 @@ export const ProjectFilters = ({
         {/* Main filter bar */}
         <div className="flex gap-2 mb-3 items-center">
           <div className="flex-1">
-            <SearchBar
-              onSearch={handleSearchWithUrlSync}
-              placeholder={searchPlaceholder}
-            />
+            <SearchBar onSearch={handleSearchWithUrlSync} placeholder={searchPlaceholder} />
           </div>
           <div className="flex gap-2 flex-shrink-0">
-            {onSort && (
-              <SortSelect
-                value={currentSortValue}
-                onValueChange={handleSortWithUrlSync}
-              />
-            )}
+            {onSort && <SortSelect value={currentSortValue} onValueChange={handleSortWithUrlSync} />}
             <Button
               variant="outline"
               size="icon"
@@ -337,9 +264,7 @@ export const ProjectFilters = ({
               onClick={() => setShowFilters(!showFilters)}
             >
               <SlidersHorizontal className="h-4 w-4" />
-              {hasActiveFilters && (
-                <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-600 rounded-full" />
-              )}
+              {hasActiveFilters && <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-600 rounded-full" />}
             </Button>
           </div>
         </div>
@@ -350,12 +275,7 @@ export const ProjectFilters = ({
             <div className="flex justify-between items-center">
               <h3 className="text-sm font-medium">Filters</h3>
               {hasActiveFilters && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="h-7 text-xs"
-                  onClick={handleClearAllFilters}
-                >
+                <Button variant="ghost" size="sm" className="h-7 text-xs" onClick={handleClearAllFilters}>
                   Clear all
                 </Button>
               )}
@@ -407,31 +327,9 @@ export const ProjectFilters = ({
                 variant="outline"
               />
             )}
-
-            {/* Popular alternatives */}
-            {showPopularAlternatives && popularAlternatives.length > 0 && (
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400 flex-shrink-0">
-                  Popular alternatives to:
-                </span>
-                {popularAlternatives.map((alternative) => (
-                  <Button
-                    key={alternative}
-                    variant="outline"
-                    size="sm"
-                    className="h-6 text-xs px-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                    onClick={() => {
-                      handleSearchWithUrlSync(alternative);
-                    }}
-                  >
-                    {alternative}
-                  </Button>
-                ))}
-              </div>
-            )}
           </div>
         )}
       </div>
     </section>
-  );
-};
+  )
+}

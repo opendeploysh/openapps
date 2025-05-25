@@ -1,309 +1,204 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { matchSorter } from "match-sorter";
-import {
-  ProjectMeta,
-  projects,
-  projectsWithGitHubData,
-  getProjectPopularity,
-} from "@/lib/projects";
-import { ProjectFilters, FilterOption } from "@/components/filters";
-import { ProjectsGrid } from "./ProjectsGrid";
-import {
-  CheckCircle,
-  FolderArchive,
-  MessageSquare,
-  Wrench,
-  Film,
-  BarChart3,
-  LockKeyhole,
-  Settings,
-} from "lucide-react";
+import { useState } from "react"
+import { ProjectMeta, projects, projectsWithGitHubData, getProjectPopularity } from "@/lib/projects"
+import { Filters, useFilters, FilterOption } from "@/components/filters"
+import { ProjectsGrid } from "./ProjectsGrid"
+import { CheckCircle, FolderArchive, MessageSquare, Wrench, Film, BarChart3, LockKeyhole, Settings } from "lucide-react"
+import { HostingType } from "@/lib/hosting-type"
+import { PricingModel } from "@/lib/pricing-model"
 
-export default function ClientHomePage() {
-  const [searchResults, setSearchResults] = useState<null | ProjectMeta[]>(
-    null
-  );
-  const [activeFilter, setActiveFilter] = useState<string | null>(null);
-  const [activeCategoryFilters, setActiveCategoryFilters] = useState<string[]>(
-    []
-  );
-  const [activeDifficultyFilters, setActiveDifficultyFilters] = useState<
-    string[]
-  >([]);
-  const [activePricingFilters, setActivePricingFilters] = useState<string[]>(
-    []
-  );
-  const [activeHostingFilters, setActiveHostingFilters] = useState<string[]>(
-    []
-  );
-  const [sortOrder, setSortOrder] = useState("relevance");
+// Filter configurations
+const categoryFilters: FilterOption[] = [
+  {
+    value: "Productivity",
+    label: "Productivity",
+    icon: <CheckCircle className="w-3 h-3" />,
+  },
+  {
+    value: "File Storage",
+    label: "File Storage",
+    icon: <FolderArchive className="w-3 h-3" />,
+  },
+  {
+    value: "Communication",
+    label: "Communication",
+    icon: <MessageSquare className="w-3 h-3" />,
+  },
+  {
+    value: "Development",
+    label: "Development",
+    icon: <Wrench className="w-3 h-3" />,
+  },
+  { value: "Media", label: "Media", icon: <Film className="w-3 h-3" /> },
+  {
+    value: "Analytics",
+    label: "Analytics",
+    icon: <BarChart3 className="w-3 h-3" />,
+  },
+  {
+    value: "Security",
+    label: "Security",
+    icon: <LockKeyhole className="w-3 h-3" />,
+  },
+  {
+    value: "Automation",
+    label: "Automation",
+    icon: <Settings className="w-3 h-3" />,
+  },
+]
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 12;
+const difficultyFilters: FilterOption[] = [
+  { value: "Easy", label: "Easy" },
+  { value: "Medium", label: "Medium" },
+  { value: "Advanced", label: "Advanced" },
+]
 
-  // Categories with icons for filters
-  const categoryFilters: FilterOption[] = [
-    {
-      value: "Productivity",
-      label: "Productivity",
-      icon: <CheckCircle className="w-3 h-3" />,
-    },
-    {
-      value: "File Storage",
-      label: "File Storage",
-      icon: <FolderArchive className="w-3 h-3" />,
-    },
-    {
-      value: "Communication",
-      label: "Communication",
-      icon: <MessageSquare className="w-3 h-3" />,
-    },
-    {
-      value: "Development",
-      label: "Development",
-      icon: <Wrench className="w-3 h-3" />,
-    },
-    { value: "Media", label: "Media", icon: <Film className="w-3 h-3" /> },
-    {
-      value: "Analytics",
-      label: "Analytics",
-      icon: <BarChart3 className="w-3 h-3" />,
-    },
-    {
-      value: "Security",
-      label: "Security",
-      icon: <LockKeyhole className="w-3 h-3" />,
-    },
-    {
-      value: "Automation",
-      label: "Automation",
-      icon: <Settings className="w-3 h-3" />,
-    },
-  ];
+const pricingFilters: FilterOption[] = [
+  { value: PricingModel.Free, label: "Free" },
+  { value: PricingModel.OpenCore, label: "Open-Core" },
+  { value: PricingModel.EnterpriseLicensing, label: "Enterprise Licensing" },
+  { value: PricingModel.PaidOnly, label: "Paid Only" },
+  { value: PricingModel.Donationware, label: "Donationware" },
+  { value: PricingModel.Trialware, label: "Trialware" },
+]
 
-  // Difficulty filters
-  const difficultyFilters: FilterOption[] = [
-    { value: "Easy", label: "Easy" },
-    { value: "Medium", label: "Medium" },
-    { value: "Advanced", label: "Advanced" },
-  ];
+const hostingFilters: FilterOption[] = [
+  { value: HostingType.SelfHosted, label: "Self-hosted" },
+  { value: HostingType.CloudOnly, label: "Cloud-Only" },
+  { value: HostingType.Hybrid, label: "Hybrid" },
+  { value: HostingType.SelfHostedSaaS, label: "Self-hosted SaaS" },
+]
 
-  // Pricing filters
-  const pricingFilters: FilterOption[] = [
-    { value: "Open Source", label: "Open Source" },
-    { value: "Open-Core", label: "Open-Core" },
-    { value: "Freemium", label: "Freemium" },
-    { value: "Commercial", label: "Commercial" },
-  ];
+const popularAlternatives = ["Google Drive", "Slack", "GitHub", "Plex", "LastPass"]
 
-  // Hosting filters
-  const hostingFilters: FilterOption[] = [
-    { value: "Self-hosted", label: "Self-hosted" },
-    { value: "Cloud", label: "Cloud" },
-    { value: "Hybrid", label: "Hybrid" },
-  ];
+// Home page content component that uses the filters
+function HomePageContent() {
+  const {
+    searchResults,
+    sortOrder,
+    activeCategoryFilters,
+    activeDifficultyFilters,
+    activePricingFilters,
+    activeHostingFilters,
+  } = useFilters()
 
-  // Popular alternatives for quick search
-  const popularAlternatives = [
-    "Google Drive",
-    "Slack",
-    "GitHub",
-    "Plex",
-    "LastPass",
-  ];
+  const [currentPage, setCurrentPage] = useState(1)
+  const projectsPerPage = 12
 
-  // Sort function that works with both search results and regular projects
+  // Sort function
   const getSortedProjects = (projectList: ProjectMeta[]) => {
-    const sorted = [...projectList];
+    const sorted = [...projectList]
 
     switch (sortOrder) {
       case "name":
-        return sorted.sort((a, b) => a.name.localeCompare(b.name));
+        return sorted.sort((a, b) => a.name.localeCompare(b.name))
       case "stars":
         return sorted.sort((a, b) => {
-          const aGithubData = projectsWithGitHubData[a.slug];
-          const bGithubData = projectsWithGitHubData[b.slug];
-          const aStars = aGithubData?.stargazers_count || 0;
-          const bStars = bGithubData?.stargazers_count || 0;
-          return bStars - aStars;
-        });
+          const aGithubData = projectsWithGitHubData[a.slug]
+          const bGithubData = projectsWithGitHubData[b.slug]
+          const aStars = aGithubData?.stargazers_count || 0
+          const bStars = bGithubData?.stargazers_count || 0
+          return bStars - aStars
+        })
       case "difficulty-asc":
-        const difficultyOrder = { Easy: 1, Medium: 2, Advanced: 3 };
+        const difficultyOrder = { Easy: 1, Medium: 2, Advanced: 3 }
         return sorted.sort((a, b) => {
-          const aDiff = difficultyOrder[a.deployment?.difficulty || "Medium"];
-          const bDiff = difficultyOrder[b.deployment?.difficulty || "Medium"];
-          return aDiff - bDiff;
-        });
+          const aDiff = difficultyOrder[a.deployment?.difficulty || "Medium"]
+          const bDiff = difficultyOrder[b.deployment?.difficulty || "Medium"]
+          return aDiff - bDiff
+        })
       case "difficulty-desc":
-        const difficultyOrderDesc = { Easy: 3, Medium: 2, Advanced: 1 };
+        const difficultyOrderDesc = { Easy: 3, Medium: 2, Advanced: 1 }
         return sorted.sort((a, b) => {
-          const aDiff =
-            difficultyOrderDesc[a.deployment?.difficulty || "Medium"];
-          const bDiff =
-            difficultyOrderDesc[b.deployment?.difficulty || "Medium"];
-          return bDiff - aDiff;
-        });
+          const aDiff = difficultyOrderDesc[a.deployment?.difficulty || "Medium"]
+          const bDiff = difficultyOrderDesc[b.deployment?.difficulty || "Medium"]
+          return bDiff - aDiff
+        })
       case "popularity":
-        return sorted.sort(
-          (a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug)
-        );
+        return sorted.sort((a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug))
       case "relevance":
       default:
         if (searchResults) {
-          return sorted; // Keep match-sorter ranking
+          return sorted
         }
         return sorted.sort((a, b) => {
-          const aGithubData = projectsWithGitHubData[a.slug];
-          const bGithubData = projectsWithGitHubData[b.slug];
-          const aStars = aGithubData?.stargazers_count || 0;
-          const bStars = bGithubData?.stargazers_count || 0;
-          return bStars - aStars;
-        });
+          const aGithubData = projectsWithGitHubData[a.slug]
+          const bGithubData = projectsWithGitHubData[b.slug]
+          const aStars = aGithubData?.stargazers_count || 0
+          const bStars = bGithubData?.stargazers_count || 0
+          return bStars - aStars
+        })
     }
-  };
+  }
 
-  // Apply all filters to get final project list
+  // Apply all filters
   const getFilteredProjects = () => {
-    let filteredProjects = searchResults || projects;
+    let filteredProjects = searchResults || projects
 
-    // Apply category filters
     if (activeCategoryFilters.length > 0) {
       filteredProjects = filteredProjects.filter((project) =>
-        project.tags.some((category) =>
-          activeCategoryFilters.includes(category)
-        )
-      );
+        project.tags.some((category) => activeCategoryFilters.includes(category))
+      )
     }
 
-    // Apply difficulty filters
     if (activeDifficultyFilters.length > 0) {
       filteredProjects = filteredProjects.filter((project) =>
-        activeDifficultyFilters.includes(
-          project.deployment?.difficulty || "Medium"
-        )
-      );
+        activeDifficultyFilters.includes(project.deployment?.difficulty || "Medium")
+      )
     }
 
-    // Apply pricing filters
     if (activePricingFilters.length > 0) {
       filteredProjects = filteredProjects.filter((project) =>
-        activePricingFilters.includes(project.pricingModel ?? "Open Source")
-      );
+        activePricingFilters.includes(project.pricingModel ?? PricingModel.Free)
+      )
     }
 
-    // Apply hosting filters
     if (activeHostingFilters.length > 0) {
       filteredProjects = filteredProjects.filter((project) =>
-        activeHostingFilters.includes(project.hostingType ?? "Self-hosted")
-      );
+        activeHostingFilters.includes(project.hostingType ?? HostingType.SelfHosted)
+      )
     }
 
-    return filteredProjects;
-  };
+    return filteredProjects
+  }
 
-  // Get current projects - apply filters and pagination
-  const filteredProjects = getFilteredProjects();
-  const activeProjects = getSortedProjects(filteredProjects);
-  const indexOfLastProject = currentPage * projectsPerPage;
-  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = activeProjects.slice(
-    indexOfFirstProject,
-    indexOfLastProject
-  );
+  const filteredProjects = getFilteredProjects()
+  const activeProjects = getSortedProjects(filteredProjects)
+  const indexOfLastProject = currentPage * projectsPerPage
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage
+  const currentProjects = activeProjects.slice(indexOfFirstProject, indexOfLastProject)
 
-  const totalPages = Math.ceil(activeProjects.length / projectsPerPage);
-
-  const handleSearch = (query: string) => {
-    setActiveFilter(null);
-    setCurrentPage(1);
-
-    if (!query.trim()) {
-      setSearchResults(null);
-      return;
-    }
-
-    const filteredProjects = matchSorter(projects, query, {
-      keys: [
-        { key: "name", maxRanking: matchSorter.rankings.STARTS_WITH },
-        { key: "tags", threshold: matchSorter.rankings.CONTAINS },
-        { key: "language", threshold: matchSorter.rankings.CONTAINS },
-        { key: "license", threshold: matchSorter.rankings.CONTAINS },
-        {
-          key: "alternatives.selfHosted",
-          threshold: matchSorter.rankings.CONTAINS,
-          maxRanking: matchSorter.rankings.MATCHES,
-        },
-        {
-          key: "alternatives.nonSelfHosted",
-          threshold: matchSorter.rankings.CONTAINS,
-          maxRanking: matchSorter.rankings.MATCHES,
-        },
-      ],
-      sorter: (rankedItems) => rankedItems,
-    });
-
-    setSearchResults(filteredProjects);
-  };
-
-  const handleSort = (sortValue: string) => {
-    setSortOrder(sortValue);
-    setCurrentPage(1);
-  };
-
-  const handleFilterChange = (filterType: string, values: string[]) => {
-    setCurrentPage(1);
-
-    if (filterType === "category") {
-      setActiveCategoryFilters(values);
-    } else if (filterType === "difficulty") {
-      setActiveDifficultyFilters(values);
-    } else if (filterType === "pricing") {
-      setActivePricingFilters(values);
-    } else if (filterType === "hosting") {
-      setActiveHostingFilters(values);
-    }
-  };
+  const totalPages = Math.ceil(activeProjects.length / projectsPerPage)
 
   const clearSearchAndFilters = () => {
-    setSearchResults(null);
-    setActiveFilter(null);
-    setActiveCategoryFilters([]);
-    setActiveDifficultyFilters([]);
-    setActivePricingFilters([]);
-    setActiveHostingFilters([]);
-    setCurrentPage(1);
-  };
+    setCurrentPage(1)
+  }
 
   return (
     <>
-      <ProjectFilters
-        onSearch={handleSearch}
-        onSort={handleSort}
-        onFilterChange={handleFilterChange}
-        categoryFilters={categoryFilters}
-        difficultyFilters={difficultyFilters}
-        pricingFilters={pricingFilters}
-        hostingFilters={hostingFilters}
-        popularAlternatives={popularAlternatives}
-        activeCategoryFilters={activeCategoryFilters}
-        activeDifficultyFilters={activeDifficultyFilters}
-        activePricingFilters={activePricingFilters}
-        activeHostingFilters={activeHostingFilters}
-        showCategoryFilters={true}
-        showDifficultyFilters={true}
-        showPricingFilters={true}
-        showHostingFilters={true}
-        showPopularAlternatives={true}
-        enableUrlSync={true}
-        defaultSort="relevance"
-      />
+      {/* Filter controls using compound components */}
+      <section className="mb-4">
+        <div className="flex gap-2 mb-3 items-center">
+          <Filters.Search placeholder="Search projects..." />
+          <div className="flex gap-2 flex-shrink-0">
+            <Filters.Sort />
+            <Filters.Toggle />
+          </div>
+        </div>
+
+        <Filters.Panel>
+          <Filters.CategoryFilters filters={categoryFilters} />
+          <Filters.DifficultyFilters filters={difficultyFilters} />
+          <Filters.PricingFilters filters={pricingFilters} />
+          <Filters.HostingFilters filters={hostingFilters} />
+        </Filters.Panel>
+      </section>
 
       <ProjectsGrid
         currentProjects={currentProjects}
         searchResults={searchResults}
-        activeFilter={activeFilter}
+        activeFilter={null}
         currentPage={currentPage}
         totalPages={totalPages}
         indexOfFirstProject={indexOfFirstProject}
@@ -313,5 +208,13 @@ export default function ClientHomePage() {
         onClearFilters={clearSearchAndFilters}
       />
     </>
-  );
+  )
+}
+
+export default function ClientHomePage() {
+  return (
+    <Filters.Provider projects={projects} defaultSort="relevance">
+      <HomePageContent />
+    </Filters.Provider>
+  )
 }

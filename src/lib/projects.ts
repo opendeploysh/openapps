@@ -1,11 +1,11 @@
 import projectData from "./projects.json";
-import { categories } from "./categories";
-import { HostingType } from "./hosting-type";
+import {categories} from "./categories";
+import {HostingType} from "./hosting-type";
 import githubData from "./projects-github.json";
 
-import { RestEndpointMethodTypes } from "@octokit/rest";
-import { z } from "zod";
-import { PricingModel } from "./pricing-model";
+import {RestEndpointMethodTypes} from "@octokit/rest";
+import {z} from "zod";
+import {PricingModel} from "./pricing-model";
 
 export const feature = z.object({
   name: z.string(),
@@ -60,10 +60,12 @@ export const mdxProjectData = z.object({
     selfHosted: z.array(z.string()).optional(),
     nonSelfHosted: z.array(z.string()).optional(),
   }),
-  deployment: z.object({
-    difficulty: z.enum(["Easy", "Medium", "Advanced"]),
-    justification: z.string(),
-  }),
+  deployment: z
+    .object({
+      difficulty: z.enum(["Easy", "Medium", "Advanced"]),
+      justification: z.string(),
+    })
+    .optional(),
   popularity: z.number().optional(),
 
   language: z.string().optional(),

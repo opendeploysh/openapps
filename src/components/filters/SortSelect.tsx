@@ -5,7 +5,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowUpDown } from "lucide-react";
+import {ArrowUpDown} from "lucide-react";
 
 interface SortOption {
   value: string;
@@ -20,12 +20,12 @@ interface SortSelectProps {
 }
 
 const defaultSortOptions: SortOption[] = [
-  { value: "relevance", label: "Most Relevant" },
-  { value: "popularity", label: "Most Popular" },
-  { value: "stars", label: "Most Stars" },
-  { value: "name", label: "Name (A-Z)" },
-  { value: "difficulty-asc", label: "Easiest First" },
-  { value: "difficulty-desc", label: "Advanced First" },
+  {value: "relevance", label: "Most Relevant"},
+  {value: "popularity", label: "Most Popular"},
+  {value: "stars", label: "Most Stars"},
+  {value: "name", label: "Name (A-Z)"},
+  {value: "difficulty-asc", label: "Easiest First"},
+  {value: "difficulty-desc", label: "Advanced First"},
 ];
 
 export const SortSelect = ({
@@ -36,7 +36,7 @@ export const SortSelect = ({
 }: SortSelectProps) => {
   return (
     <Select value={value} onValueChange={onValueChange}>
-      <SelectTrigger className={`${className} !h-10`}>
+      <SelectTrigger className={`${className} !h-10 bg-white`}>
         <div className="flex items-center gap-1">
           <ArrowUpDown className="h-3.5 w-3.5 text-neutral-500" />
           <SelectValue placeholder="Sort by" />

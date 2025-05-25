@@ -1,6 +1,6 @@
 import React from "react";
-import { badgeVariants } from "@/components/ui/badge";
-import { formatDistanceToNow } from "date-fns";
+import {badgeVariants} from "@/components/ui/badge";
+import {formatDistanceToNow} from "date-fns";
 import {
   Star,
   Shield,
@@ -19,10 +19,10 @@ import {
   projects,
   projectsWithGitHubData,
 } from "@/lib/projects";
-import { SiDiscord, SiUnraid } from "@icons-pack/react-simple-icons";
+import {SiDiscord, SiUnraid} from "@icons-pack/react-simple-icons";
 import Link from "next/link";
-import { pricingModelInfo } from "@/lib/pricing-model";
-import { hostingTypeInfo } from "@/lib/hosting-type";
+import {pricingModelInfo} from "@/lib/pricing-model";
+import {hostingTypeInfo} from "@/lib/hosting-type";
 
 const difficultyIcons = {
   Easy: <CheckCircle className="w-4 h-4" />,
@@ -32,6 +32,8 @@ const difficultyIcons = {
 
 export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
   const githubData = projectsWithGitHubData[project.slug];
+
+  const language = project.language ?? githubData?.language;
 
   return (
     <div className="space-y-8">
@@ -150,6 +152,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
             })}
           </div>
         </div>
+
         {githubData && (
           <div className="space-y-2">
             <div className="font-semibold">Repository activity:</div>
@@ -222,7 +225,9 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
         <div className="space-y-2">
           <div className="font-semibold">Details:</div>
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">Estimated Popularity</div>
+            <div className="flex items-center gap-1">
+              <span>Estimated Popularity</span>
+            </div>
 
             <div className="border-t flex-grow" />
             <span className="font-medium">
@@ -287,16 +292,18 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
               </span>
             </div>
           )}
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <span>Language</span>
-            </div>
+          {language && (
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
+                <span>Language</span>
+              </div>
 
-            <div className="border-t flex-grow" />
-            <span className="font-medium">
-              {project.language ?? githubData?.language ?? "Unknown"}
-            </span>
-          </div>
+              <div className="border-t flex-grow" />
+              <span className="font-medium">
+                {project.language ?? githubData?.language ?? "Unknown"}
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </div>
