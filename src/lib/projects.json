@@ -7711,6 +7711,145 @@
     ]
   },
   {
+    "slug": "blinko",
+    "name": "Blinko",
+    "description": "Blinko is an open-source, self-hosted AI-powered note-taking tool that lets you capture, organize, and search your ideas with full privacy. It combines fast plain-text/Markdown editing with AI retrieval and runs entirely on your own infrastructure.\n",
+    "license": "MIT",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/210232737?s=64&v=4",
+    "heroImage": "https://raw.githubusercontent.com/blinkospace/blinko/main/app/public/home.webp",
+    "category": "note-taking",
+    "tags": [
+      "note-taking",
+      "ai",
+      "self-hosted",
+      "privacy",
+      "markdown"
+    ],
+    "github": "blinkospace/blinko",
+    "urls": {
+      "website": "https://blinko.space"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "logseq",
+        "outline",
+        "memos",
+        "joplin"
+      ],
+      "nonSelfHosted": [
+        "notion",
+        "evernote",
+        "microsoft-onenote",
+        "google-keep"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Docker-Compose setup is provided but requires configuring a Postgres database, vector store, and environment variables."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "AI-enhanced personal note management"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Quick capture and retrieval of thoughts and knowledge"
+          },
+          {
+            "name": "Architecture",
+            "value": "(Next.js + Tauri with Postgres & RAG search"
+          }
+        ]
+      },
+      {
+        "name": "Note-Taking",
+        "features": [
+          {
+            "name": "Instant plain-text capture"
+          },
+          {
+            "name": "Full Markdown support"
+          },
+          {
+            "name": "Tag & folder organization"
+          },
+          {
+            "name": "Rich-media attachments"
+          },
+          {
+            "name": "Keyboard-first editing"
+          },
+          {
+            "name": "Cross-platform Tauri apps"
+          }
+        ]
+      },
+      {
+        "name": "AI & Search",
+        "features": [
+          {
+            "name": "RAG semantic search"
+          },
+          {
+            "name": "Natural-language querying"
+          },
+          {
+            "name": "OpenAI / LLM backend choice"
+          },
+          {
+            "name": "AI summary generation"
+          },
+          {
+            "name": "Contextual recommendations"
+          },
+          {
+            "name": "Embedding index with vector DB"
+          }
+        ]
+      },
+      {
+        "name": "Privacy & Compliance",
+        "features": [
+          {
+            "name": "Role-based access"
+          },
+          {
+            "name": "Configurable data retention"
+          },
+          {
+            "name": "Audit logs"
+          },
+          {
+            "name": "Environment-based secrets"
+          }
+        ]
+      },
+      {
+        "name": "Integration & Deployment",
+        "features": [
+          {
+            "name": "Docker-Compose stack"
+          },
+          {
+            "name": "REST & WebSocket API"
+          },
+          {
+            "name": "Webhooks for automations"
+          },
+          {
+            "name": "Mobile & desktop clients"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "bar-assistant",
     "name": "Bar Assistant",
     "description": "Bar Assistant is an all-in-one solution for managing your home bar, specifically designed for cocktail recipes with features like ingredient substitutes, ABV calculations, unit switching and more.\n",
