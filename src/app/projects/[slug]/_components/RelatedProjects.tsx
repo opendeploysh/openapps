@@ -3,11 +3,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import {
-  githubProjectData,
-  ProjectMeta,
-  projectsWithGitHubData,
-} from "@/lib/projects";
+import { ProjectMeta, projectsWithGitHubData } from "@/lib/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
 interface RelatedProjectsProps {

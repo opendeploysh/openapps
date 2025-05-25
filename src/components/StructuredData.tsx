@@ -9,26 +9,8 @@ interface StructuredDataProps {
   };
 }
 
-const organizationStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "OpenApps",
-  url: "https://openapps.sh",
-  description:
-    "Find cost-effective, privacy-respecting alternatives to popular SaaS tools. Compare features, and deploy them yourself or through our managed services.",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://openapps.sh/search?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
-  sameAs: ["https://github.com/openapps-sh", "https://twitter.com/openapps_sh"],
-};
-
 export function StructuredData({ type, data }: StructuredDataProps) {
-  let structuredData;
+  let structuredData: any;
 
   switch (type) {
     case "website":

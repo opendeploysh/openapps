@@ -4,14 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Github,
   ChevronLeft,
@@ -380,8 +373,8 @@ export function OpenSourcePageClient() {
             Join the Open Source Movement
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto mb-6">
-            Whether you're a developer, designer, writer, or enthusiast, there's
-            a place for you in the open source community.
+            Whether you&apos;re a developer, designer, writer, or enthusiast,
+            there&apos;s a place for you in the open source community.
           </p>
 
           <Button size="lg" className="gap-2">

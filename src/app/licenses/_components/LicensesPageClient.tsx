@@ -16,7 +16,7 @@ import { Footer } from "@/components/Footer";
 
 export function LicensesPageClient() {
   const [selectedLicense, setSelectedLicense] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery] = useState("");
 
   const licenseData = getLicenseInfo();
   const filteredLicenses = licenseData.filter(

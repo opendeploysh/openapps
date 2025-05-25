@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import { Badge, badgeVariants } from "@/components/ui/badge";
+import { badgeVariants } from "@/components/ui/badge";
 import { formatDistanceToNow } from "date-fns";
 import {
   Star,
@@ -10,7 +9,6 @@ import {
   Clock,
   GitFork,
   Eye,
-  Heart,
   Github,
   Globe,
   Play,
@@ -25,13 +23,6 @@ import { SiDiscord, SiUnraid } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { pricingModelInfo } from "@/lib/pricing-model";
 import { hostingTypeInfo } from "@/lib/hosting-type";
-
-const difficultyColors = {
-  Easy: "text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20",
-  Medium:
-    "text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20",
-  Advanced: "text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20",
-};
 
 const difficultyIcons = {
   Easy: <CheckCircle className="w-4 h-4" />,

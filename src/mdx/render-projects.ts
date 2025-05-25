@@ -17,6 +17,7 @@ const getSourcePath = (slug: string) => {
 };
 
 export const useCompile = async (file: string) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const components = useMDXComponents({});
   let source = "";
   try {

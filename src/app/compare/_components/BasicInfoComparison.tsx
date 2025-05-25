@@ -1,6 +1,6 @@
 import { ProjectMeta, projectsWithGitHubData } from "@/lib/projects";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { GitFork, Star, X } from "lucide-react";

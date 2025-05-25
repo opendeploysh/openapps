@@ -110,82 +110,80 @@ export function FeatureComparison({
             </tr>
           </thead>
           <tbody>
-            {Array.from(allFeatures.entries()).map(
-              ([groupName, features], groupIndex) => (
-                <>
-                  {/* Group Header Row */}
-                  <tr
-                    key={`group-${groupName}`}
-                    className="bg-neutral-100 dark:bg-neutral-800"
+            {Array.from(allFeatures.entries()).map(([groupName, features]) => (
+              <>
+                {/* Group Header Row */}
+                <tr
+                  key={`group-${groupName}`}
+                  className="bg-neutral-100 dark:bg-neutral-800"
+                >
+                  <td
+                    colSpan={3}
+                    className="p-3 font-semibold text-neutral-900 dark:text-neutral-100 text-sm border-b border-neutral-200 dark:border-neutral-700 border-t"
                   >
-                    <td
-                      colSpan={3}
-                      className="p-3 font-semibold text-neutral-900 dark:text-neutral-100 text-sm border-b border-neutral-200 dark:border-neutral-700 border-t"
-                    >
-                      {groupName}
-                    </td>
-                  </tr>
-                  {/* Feature Rows */}
-                  {Array.from(features.values()).map(
-                    (featureInfo, featureIndex) => {
-                      const project1Feature = getProjectFeature(
-                        project1,
-                        groupName,
-                        featureInfo.name
-                      );
-                      const project2Feature = getProjectFeature(
-                        project2,
-                        groupName,
-                        featureInfo.name
-                      );
+                    {groupName}
+                  </td>
+                </tr>
+                {/* Feature Rows */}
+                {Array.from(features.values()).map(
+                  (featureInfo, featureIndex) => {
+                    const project1Feature = getProjectFeature(
+                      project1,
+                      groupName,
+                      featureInfo.name
+                    );
+                    const project2Feature = getProjectFeature(
+                      project2,
+                      groupName,
+                      featureInfo.name
+                    );
 
-                      return (
-                        <tr
-                          key={`${groupName}-${featureInfo.name}`}
-                          className={`border-b border-neutral-100 dark:border-neutral-800 ${
-                            featureIndex % 2 === 0
-                              ? "bg-white dark:bg-neutral-950"
-                              : "bg-neutral-50/50 dark:bg-neutral-900/20"
-                          }`}
-                        >
-                          <td className="p-3 pl-6">
-                            <div className="text-sm text-neutral-600 dark:text-neutral-400">
-                              {featureInfo.name}
-                            </div>
-                          </td>
-                          <td className="p-3 text-center">
-                            {project1Feature ? (
-                              project1Feature.value ? (
-                                <span className="text-xs text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
-                                  {project1Feature.value}
-                                </span>
-                              ) : (
-                                <Check className="w-5 h-5 text-green-600 mx-auto" />
-                              )
+                    return (
+                      <tr
+                        key={`${groupName}-${featureInfo.name}`}
+                        className={`border-b border-neutral-100 dark:border-neutral-800 ${
+                          featureIndex % 2 === 0
+                            ? "bg-white dark:bg-neutral-950"
+                            : "bg-neutral-50/50 dark:bg-neutral-900/20"
+                        }`}
+                      >
+                        <td className="p-3 pl-6">
+                          <div className="text-sm text-neutral-600 dark:text-neutral-400">
+                            {featureInfo.name}
+                          </div>
+                        </td>
+                        <td className="p-3 text-center">
+                          {project1Feature ? (
+                            project1Feature.value ? (
+                              <span className="text-xs text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
+                                {project1Feature.value}
+                              </span>
                             ) : (
-                              <X className="w-5 h-5 text-red-600 mx-auto" />
-                            )}
-                          </td>
-                          <td className="p-3 text-center">
-                            {project2Feature ? (
-                              project2Feature.value ? (
-                                <span className="text-xs text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
-                                  {project2Feature.value}
-                                </span>
-                              ) : (
-                                <Check className="w-5 h-5 text-green-600 mx-auto" />
-                              )
+                              <Check className="w-5 h-5 text-green-600 mx-auto" />
+                            )
+                          ) : (
+                            <X className="w-5 h-5 text-red-600 mx-auto" />
+                          )}
+                        </td>
+                        <td className="p-3 text-center">
+                          {project2Feature ? (
+                            project2Feature.value ? (
+                              <span className="text-xs text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
+                                {project2Feature.value}
+                              </span>
                             ) : (
-                              <X className="w-5 h-5 text-red-600 mx-auto" />
-                            )}
-                          </td>
-                        </tr>
-                      );
-                    }
-                  )}
-                </>
-              )
-            )}
+                              <Check className="w-5 h-5 text-green-600 mx-auto" />
+                            )
+                          ) : (
+                            <X className="w-5 h-5 text-red-600 mx-auto" />
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  }
+                )}
+              </>
+            ))}
           </tbody>
         </table>
       </div>

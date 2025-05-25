@@ -2,19 +2,12 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
-  BookOpen,
-  Bot,
   Command,
   Frame,
   LifeBuoy,
-  Map,
   PieChart,
-  Send,
   Settings2,
-  SquareTerminal,
-  Container,
   Layout,
   Compass,
   HardDrive,

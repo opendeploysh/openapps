@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, Info } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
@@ -10,10 +10,7 @@ import { CategoryHeader } from "./_components/CategoryHeader";
 import { RelatedCategories } from "./_components/RelatedCategories";
 import { ContributeCTA } from "./_components/ContributeCTA";
 import { ProjectsGrid } from "./_components/ProjectsGrid";
-import {
-  GitHubEditButton,
-  GitHubContributeButton,
-} from "@/components/GitHubEditButton";
+import { GitHubContributeButton } from "@/components/GitHubEditButton";
 import {
   getAllCategoriesData,
   getCategoryProjects,

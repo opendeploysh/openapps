@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { SearchBar } from "@/components/SearchBar";
@@ -67,34 +67,37 @@ export const ProjectFilters = ({
   const pathname = usePathname();
 
   // Helper function to update URL with current filter state
-  const updateURL = (
-    tags: string[],
-    difficulties: string[],
-    pricing: string[],
-    hosting: string[],
-    sort: string,
-    query?: string
-  ) => {
-    if (!enableUrlSync) return;
+  const updateURL = useCallback(
+    (
+      tags: string[],
+      difficulties: string[],
+      pricing: string[],
+      hosting: string[],
+      sort: string,
+      query?: string
+    ) => {
+      if (!enableUrlSync) return;
 
-    const params = new URLSearchParams();
+      const params = new URLSearchParams();
 
-    if (tags.length > 0) params.set("tags", tags.join(","));
-    if (difficulties.length > 0)
-      params.set("difficulties", difficulties.join(","));
-    if (pricing.length > 0) params.set("pricing", pricing.join(","));
-    if (hosting.length > 0) params.set("hosting", hosting.join(","));
-    if (sort !== defaultSort) params.set("sort", sort);
-    if (query && query.trim()) params.set("q", query.trim());
+      if (tags.length > 0) params.set("tags", tags.join(","));
+      if (difficulties.length > 0)
+        params.set("difficulties", difficulties.join(","));
+      if (pricing.length > 0) params.set("pricing", pricing.join(","));
+      if (hosting.length > 0) params.set("hosting", hosting.join(","));
+      if (sort !== defaultSort) params.set("sort", sort);
+      if (query && query.trim()) params.set("q", query.trim());
 
-    const url = params.toString()
-      ? `${pathname}?${params.toString()}`
-      : pathname;
-    router.replace(url, { scroll: false });
-  };
+      const url = params.toString()
+        ? `${pathname}?${params.toString()}`
+        : pathname;
+      router.replace(url, { scroll: false });
+    },
+    [enableUrlSync, defaultSort, pathname, router]
+  );
 
   // Helper function to read initial values from URL
-  const getInitialFilters = () => {
+  const getInitialFilters = useCallback(() => {
     if (!enableUrlSync) {
       return {
         tags: activeCategoryFilters || [],
@@ -126,7 +129,17 @@ export const ProjectFilters = ({
     const query = searchParams.get("q") || initialSearchQuery;
 
     return { tags, difficulties, pricing, hosting, sort, query };
-  };
+  }, [
+    enableUrlSync,
+    searchParams,
+    activeCategoryFilters,
+    activeDifficultyFilters,
+    activePricingFilters,
+    activeHostingFilters,
+    sortValue,
+    defaultSort,
+    initialSearchQuery,
+  ]);
 
   // Internal state for URL-synced filters
   const [internalCategoryFilters, setInternalCategoryFilters] = useState<
@@ -168,7 +181,7 @@ export const ProjectFilters = ({
         onSearch?.(query);
       }
     }
-  }, []);
+  }, [enableUrlSync, getInitialFilters, onFilterChange, onSort, onSearch]);
 
   // Use internal state when URL sync is enabled, otherwise use props
   const currentCategoryFilters = enableUrlSync
@@ -298,10 +311,11 @@ export const ProjectFilters = ({
       setInternalHostingFilters(currentHostingFilters);
     }
   }, [
-    activeCategoryFilters,
-    activeDifficultyFilters,
-    activePricingFilters,
-    activeHostingFilters,
+    enableUrlSync,
+    currentCategoryFilters,
+    currentDifficultyFilters,
+    currentPricingFilters,
+    currentHostingFilters,
   ]);
 
   return (

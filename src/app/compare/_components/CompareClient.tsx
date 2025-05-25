@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { ProjectMeta } from "@/lib/projects";
 import { ProjectSelector } from "./ProjectSelector";

@@ -17,8 +17,6 @@ import {
   Search,
   ArrowUpDown,
   CheckCircle,
-  Star,
-  Sparkles,
   Layout,
   Code,
   MessageSquare,
@@ -34,10 +32,6 @@ import {
   FolderOpen,
   Github,
 } from "lucide-react";
-import {
-  SiOpensourceinitiative,
-  SiOpensourceinitiativeHex,
-} from "@icons-pack/react-simple-icons";
 import { GitHubContributeButton } from "./GitHubEditButton";
 
 // Define basic tags for the navigation menu
@@ -143,9 +137,6 @@ export const Navbar = () => {
               >
                 Contribute
               </GitHubContributeButton>
-              <Button size="sm" className="h-9 hidden lg:flex">
-                Get Started
-              </Button>
               <Button
                 variant="outline"
                 size="icon"
