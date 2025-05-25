@@ -13,6 +13,7 @@ import {
   Heart,
   Github,
   Globe,
+  Play,
 } from "lucide-react";
 import {
   getProjectPopularity,
@@ -20,7 +21,7 @@ import {
   projects,
   projectsWithGitHubData,
 } from "@/lib/projects";
-import { SiDiscord } from "@icons-pack/react-simple-icons";
+import { SiDiscord, SiUnraid } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { pricingModelInfo } from "@/lib/pricing-model";
 import { hostingTypeInfo } from "@/lib/hosting-type";
@@ -39,7 +40,6 @@ const difficultyIcons = {
 };
 
 export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
-  console.log(project, projectsWithGitHubData);
   const githubData = projectsWithGitHubData[project.slug];
 
   return (
@@ -65,11 +65,11 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
               GitHub
             </a>
           )}
-          {project.websiteUrl && (
+          {project.urls?.website && (
             <>
               <span className="text-neutral-300 dark:text-neutral-700">•</span>
               <a
-                href={project.websiteUrl}
+                href={project.urls?.website}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
@@ -79,17 +79,47 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
               </a>
             </>
           )}
-          {project.discord && (
+          {project.urls?.discord && (
             <>
               <span className="text-neutral-300 dark:text-neutral-700">•</span>
               <a
-                href={project.discord}
+                href={project.urls?.discord}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
               >
                 <SiDiscord className="w-4 h-4" />
                 Discord
+              </a>
+            </>
+          )}
+
+          {project.urls?.demo && (
+            <>
+              <span className="text-neutral-300 dark:text-neutral-700">•</span>
+              <a
+                href={project.urls?.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
+              >
+                <Play className="w-4 h-4" />
+                Demo
+              </a>
+            </>
+          )}
+
+          {project.urls?.unraidApp && (
+            <>
+              <span className="text-neutral-300 dark:text-neutral-700">•</span>
+              <a
+                href={project.urls?.unraidApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors"
+              >
+                <SiUnraid className="w-4 h-4" />
+                Unraid Support
               </a>
             </>
           )}

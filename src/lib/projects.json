@@ -13,7 +13,9 @@
       "monitoring"
     ],
     "github": "aptabase/aptabase",
-    "websiteUrl": "https://aptabase.com/",
+    "urls": {
+      "website": "https://aptabase.com"
+    },
     "alternatives": {
       "selfHosted": [
         "plausible",
@@ -42,7 +44,9 @@
       "monitoring"
     ],
     "github": "eldy/awstats",
-    "websiteUrl": "https://www.awstats.org/",
+    "urls": {
+      "website": "https://www.awstats.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "matomo",
@@ -72,7 +76,9 @@
       "big-data"
     ],
     "github": "apache/druid",
-    "websiteUrl": "https://druid.apache.org/",
+    "urls": {
+      "website": "https://druid.apache.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "clickhouse",
@@ -102,7 +108,9 @@
       "data-visualization"
     ],
     "github": "jortilles/EDA",
-    "websiteUrl": "http://edadoc.jortilles.com/",
+    "urls": {
+      "website": "http://edadoc.jortilles.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "metabase",
@@ -131,7 +139,9 @@
       "monitoring"
     ],
     "github": "arp242/goatcounter",
-    "websiteUrl": "https://www.goatcounter.com/",
+    "urls": {
+      "website": "https://www.goatcounter.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "matomo",
@@ -161,7 +171,9 @@
       "data-visualization"
     ],
     "github": "litlyx/litlyx",
-    "websiteUrl": "https://litlyx.com/",
+    "urls": {
+      "website": "https://litlyx.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "matomo",
@@ -191,7 +203,9 @@
       "monitoring"
     ],
     "github": "explodingcamera/liwan",
-    "websiteUrl": "https://liwan.dev/",
+    "urls": {
+      "website": "https://liwan.dev/"
+    },
     "alternatives": {
       "selfHosted": [
         "plausible",
@@ -221,7 +235,9 @@
       "privacy"
     ],
     "github": "matomo-org/matomo",
-    "websiteUrl": "https://matomo.org/",
+    "urls": {
+      "website": "https://matomo.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "plausible",
@@ -252,7 +268,9 @@
       "data-visualization"
     ],
     "github": "metabase/metabase",
-    "websiteUrl": "https://www.metabase.com/",
+    "urls": {
+      "website": "https://www.metabase.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "redash",
@@ -282,7 +300,9 @@
       "devops"
     ],
     "github": "middlewarehq/middleware",
-    "websiteUrl": "https://middlewarehq.com/",
+    "urls": {
+      "website": "https://middlewarehq.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "metabase",
@@ -311,7 +331,9 @@
       "social"
     ],
     "github": "inovector/mixpost",
-    "websiteUrl": "https://mixpost.app/",
+    "urls": {
+      "website": "https://mixpost.app/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -337,7 +359,9 @@
       "privacy"
     ],
     "github": "offen/offen",
-    "websiteUrl": "https://www.offen.dev/",
+    "urls": {
+      "website": "https://www.offen.dev/"
+    },
     "alternatives": {
       "selfHosted": [
         "matomo",
@@ -366,7 +390,9 @@
       "privacy"
     ],
     "github": "plausible/analytics",
-    "websiteUrl": "https://plausible.io/",
+    "urls": {
+      "website": "https://plausible.io/"
+    },
     "alternatives": {
       "selfHosted": [
         "matomo",
@@ -395,7 +421,9 @@
       "automation"
     ],
     "github": "PostHog/posthog",
-    "websiteUrl": "https://posthog.com/",
+    "urls": {
+      "website": "https://posthog.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "matomo",
@@ -424,7 +452,9 @@
       "automation"
     ],
     "github": "getredash/redash",
-    "websiteUrl": "https://redash.io/",
+    "urls": {
+      "website": "https://redash.io/"
+    },
     "alternatives": {
       "selfHosted": [
         "metabase",
@@ -453,7 +483,9 @@
       "customer-data-platform"
     ],
     "github": "rudderlabs/rudder-server",
-    "websiteUrl": "https://www.rudderstack.com",
+    "urls": {
+      "website": "https://www.rudderstack.com"
+    },
     "alternatives": {
       "selfHosted": [
         "jitsu",
@@ -482,7 +514,9 @@
       "privacy"
     ],
     "github": "milesmcc/shynet",
-    "websiteUrl": "https://github.com/milesmcc/shynet",
+    "urls": {
+      "website": "https://github.com/milesmcc/shynet"
+    },
     "alternatives": {
       "selfHosted": [
         "matomo",
@@ -511,7 +545,9 @@
       "data-visualization"
     ],
     "github": "apache/superset",
-    "websiteUrl": "https://superset.apache.org/",
+    "urls": {
+      "website": "https://superset.apache.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "metabase",
@@ -540,7 +576,9 @@
       "privacy"
     ],
     "github": "umami-software/umami",
-    "websiteUrl": "https://umami.is",
+    "urls": {
+      "website": "https://umami.is"
+    },
     "alternatives": {
       "selfHosted": [
         "plausible",
@@ -568,7 +606,9 @@
       "documentation"
     ],
     "github": "ArchiveBox/ArchiveBox",
-    "websiteUrl": "https://archivebox.io/",
+    "urls": {
+      "website": "https://archivebox.io/"
+    },
     "alternatives": {
       "selfHosted": [
         "wallabag",
@@ -597,7 +637,9 @@
       "collection-management"
     ],
     "github": "archivesspace/archivesspace",
-    "websiteUrl": "https://archivesspace.org",
+    "urls": {
+      "website": "https://archivesspace.org"
+    },
     "alternatives": {
       "selfHosted": [
         "atom",
@@ -625,7 +667,9 @@
       "content-discovery"
     ],
     "github": "bitmagnet-io/bitmagnet",
-    "websiteUrl": "https://bitmagnet.io",
+    "urls": {
+      "website": "https://bitmagnet.io"
+    },
     "alternatives": {
       "selfHosted": [
         "jackett",
@@ -654,7 +698,9 @@
       "data-catalog"
     ],
     "github": "ckan/ckan",
-    "websiteUrl": "https://ckan.org",
+    "urls": {
+      "website": "https://ckan.org"
+    },
     "alternatives": {
       "selfHosted": [
         "udata",
@@ -683,7 +729,9 @@
       "exhibits"
     ],
     "github": "omeka/omeka-s",
-    "websiteUrl": "https://omeka.org/s/",
+    "urls": {
+      "website": "https://omeka.org/s/"
+    },
     "alternatives": {
       "selfHosted": [
         "collectiveaccess",
@@ -712,7 +760,9 @@
       "reading"
     ],
     "github": "wallabag/wallabag",
-    "websiteUrl": "https://wallabag.org/",
+    "urls": {
+      "website": "https://wallabag.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "archivebox",
@@ -741,7 +791,9 @@
       "content-preservation"
     ],
     "github": "wabarc/wayback",
-    "websiteUrl": "https://docs.wabarc.eu.org",
+    "urls": {
+      "website": "https://docs.wabarc.eu.org"
+    },
     "alternatives": {
       "selfHosted": [
         "archivebox",
@@ -774,7 +826,9 @@
       "security"
     ],
     "github": "authelia/authelia",
-    "websiteUrl": "https://www.authelia.com/",
+    "urls": {
+      "website": "https://www.authelia.com/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -877,7 +931,9 @@
       "security"
     ],
     "github": "goauthentik/authentik",
-    "websiteUrl": "https://goauthentik.io/",
+    "urls": {
+      "website": "https://goauthentik.io/"
+    },
     "alternatives": {
       "selfHosted": [
         "keycloak",
@@ -991,7 +1047,9 @@
       "security"
     ],
     "github": "casdoor/casdoor",
-    "websiteUrl": "https://casdoor.org/",
+    "urls": {
+      "website": "https://casdoor.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "keycloak",
@@ -1021,7 +1079,9 @@
       "security"
     ],
     "github": "FusionAuth/fusionauth-issues",
-    "websiteUrl": "https://fusionauth.io/",
+    "urls": {
+      "website": "https://fusionauth.io/"
+    },
     "alternatives": {
       "selfHosted": [
         "keycloak",
@@ -1050,7 +1110,9 @@
       "security"
     ],
     "github": "keycloak/keycloak",
-    "websiteUrl": "https://www.keycloak.org/",
+    "urls": {
+      "website": "https://www.keycloak.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "authelia"
@@ -1262,7 +1324,9 @@
       "security"
     ],
     "github": "logto-io/logto",
-    "websiteUrl": "https://logto.io/",
+    "urls": {
+      "website": "https://logto.io/"
+    },
     "alternatives": {
       "selfHosted": [
         "keycloak",
@@ -1422,7 +1486,9 @@
       "security"
     ],
     "github": "pocket-id/pocket-id",
-    "websiteUrl": "https://pocket-id.org/",
+    "urls": {
+      "website": "https://pocket-id.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "keycloak",
@@ -1451,7 +1517,9 @@
       "security"
     ],
     "github": "zitadel/zitadel",
-    "websiteUrl": "https://zitadel.com/",
+    "urls": {
+      "website": "https://zitadel.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "keycloak",
@@ -1480,7 +1548,9 @@
       "workflow"
     ],
     "github": "activepieces/activepieces",
-    "websiteUrl": "https://www.activepieces.com/",
+    "urls": {
+      "website": "https://www.activepieces.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n"
@@ -1508,7 +1578,9 @@
       "integration"
     ],
     "github": "apache/airflow",
-    "websiteUrl": "https://airflow.apache.org/",
+    "urls": {
+      "website": "https://airflow.apache.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "prefect",
@@ -1537,7 +1609,9 @@
       "workflow"
     ],
     "github": "automatisch/automatisch",
-    "websiteUrl": "https://automatisch.io/",
+    "urls": {
+      "website": "https://automatisch.io/"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n"
@@ -1566,7 +1640,9 @@
       "integration"
     ],
     "github": "muesli/beehive",
-    "websiteUrl": "https://github.com/muesli/beehive",
+    "urls": {
+      "website": "https://github.com/muesli/beehive"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n",
@@ -1595,7 +1671,9 @@
       "monitoring"
     ],
     "github": "dgtlmoon/changedetection.io",
-    "websiteUrl": "https://changedetection.io",
+    "urls": {
+      "website": "https://changedetection.io"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n"
@@ -1624,7 +1702,9 @@
       "integration"
     ],
     "github": "chiefonboarding/ChiefOnboarding",
-    "websiteUrl": "https://chiefonboarding.com",
+    "urls": {
+      "website": "https://chiefonboarding.com"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n"
@@ -1654,7 +1734,9 @@
       "messaging"
     ],
     "github": "dittofeed/dittofeed",
-    "websiteUrl": "https://dittofeed.com",
+    "urls": {
+      "website": "https://dittofeed.com"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -1684,7 +1766,9 @@
       "devops"
     ],
     "github": "healthchecks/healthchecks",
-    "websiteUrl": "https://healthchecks.io",
+    "urls": {
+      "website": "https://healthchecks.io"
+    },
     "alternatives": {
       "selfHosted": [
         "uptime-kuma"
@@ -1714,7 +1798,9 @@
       "file-management"
     ],
     "github": "zelon88/HRConvert2",
-    "websiteUrl": "https://github.com/zelon88/HRConvert2",
+    "urls": {
+      "website": "https://github.com/zelon88/HRConvert2"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -1741,7 +1827,9 @@
       "monitoring"
     ],
     "github": "huginn/huginn",
-    "websiteUrl": "https://github.com/huginn/huginn",
+    "urls": {
+      "website": "https://github.com/huginn/huginn"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n"
@@ -1772,7 +1860,9 @@
       "devops"
     ],
     "github": "kestra-io/kestra",
-    "websiteUrl": "https://kestra.io",
+    "urls": {
+      "website": "https://kestra.io"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n",
@@ -1803,7 +1893,9 @@
       "integration"
     ],
     "github": "leon-ai/leon",
-    "websiteUrl": "https://getleon.ai",
+    "urls": {
+      "website": "https://getleon.ai"
+    },
     "alternatives": {
       "selfHosted": [
         "mycroft"
@@ -1832,7 +1924,9 @@
       "download"
     ],
     "github": "mylar3/mylar3",
-    "websiteUrl": "https://github.com/mylar3/mylar3",
+    "urls": {
+      "website": "https://github.com/mylar3/mylar3"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -1859,7 +1953,10 @@
       "integration"
     ],
     "github": "n8n-io/n8n",
-    "websiteUrl": "https://n8n.io",
+    "urls": {
+      "website": "https://n8n.io",
+      "unraidApp": "https://forums.unraid.net/topic/97807-support-tmchow-n8n-workflow-automation/"
+    },
     "alternatives": {
       "selfHosted": [
         "utask",
@@ -1888,7 +1985,9 @@
       "system-administration"
     ],
     "github": "OliveTin/OliveTin",
-    "websiteUrl": "https://olivetin.app",
+    "urls": {
+      "website": "https://olivetin.app"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -1910,7 +2009,9 @@
       "workflow"
     ],
     "github": "PrefectHQ/prefect",
-    "websiteUrl": "https://www.prefect.io",
+    "urls": {
+      "website": "https://www.prefect.io"
+    },
     "alternatives": {
       "selfHosted": [
         "airflow",
@@ -1941,7 +2042,9 @@
       "file-management"
     ],
     "github": "pyload/pyload",
-    "websiteUrl": "https://pyload.net",
+    "urls": {
+      "website": "https://pyload.net"
+    },
     "alternatives": {
       "selfHosted": [
         "jdownloader"
@@ -1969,7 +2072,9 @@
       "development"
     ],
     "github": "node-red/node-red",
-    "websiteUrl": "https://nodered.org",
+    "urls": {
+      "website": "https://nodered.org"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n"
@@ -1998,7 +2103,9 @@
       "integration"
     ],
     "github": "ovh/utask",
-    "websiteUrl": "https://github.com/ovh/utask",
+    "urls": {
+      "website": "https://github.com/ovh/utask"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n",
@@ -2029,7 +2136,9 @@
       "llm"
     ],
     "github": "SomeOddCodeGuy/WilmerAI",
-    "websiteUrl": "https://github.com/SomeOddCodeGuy/WilmerAI",
+    "urls": {
+      "website": "https://github.com/SomeOddCodeGuy/WilmerAI"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n"
@@ -2059,7 +2168,9 @@
       "development"
     ],
     "github": "windmill-labs/windmill",
-    "websiteUrl": "https://www.windmill.dev",
+    "urls": {
+      "website": "https://www.windmill.dev"
+    },
     "alternatives": {
       "selfHosted": [
         "n8n"
@@ -2090,7 +2201,9 @@
       "marketing"
     ],
     "github": "marmelab/atomic-crm",
-    "websiteUrl": "https://marmelab.com/react-admin-crm",
+    "urls": {
+      "website": "https://marmelab.com/react-admin-crm"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -2218,7 +2331,9 @@
       "business"
     ],
     "github": "cortezaproject/corteza",
-    "websiteUrl": "https://cortezaproject.org/",
+    "urls": {
+      "website": "https://cortezaproject.org/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -2262,7 +2377,9 @@
       "email-marketing"
     ],
     "github": "DjangoCRM/django-crm",
-    "websiteUrl": "https://django-crm-admin.readthedocs.io/",
+    "urls": {
+      "website": "https://django-crm-admin.readthedocs.io/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -2306,7 +2423,9 @@
       "support"
     ],
     "github": "espocrm/espocrm",
-    "websiteUrl": "https://www.espocrm.com/",
+    "urls": {
+      "website": "https://www.espocrm.com/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -2466,7 +2585,9 @@
       "marketing"
     ],
     "github": "krayin/laravel-crm",
-    "websiteUrl": "https://krayincrm.com/",
+    "urls": {
+      "website": "https://krayincrm.com/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -2583,7 +2704,9 @@
       "relationships"
     ],
     "github": "monicahq/monica",
-    "websiteUrl": "https://www.monicahq.com/",
+    "urls": {
+      "website": "https://www.monicahq.com/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -2701,7 +2824,9 @@
       "support"
     ],
     "github": "salesagility/suitecrm",
-    "websiteUrl": "https://suitecrm.com/",
+    "urls": {
+      "website": "https://suitecrm.com/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -2846,7 +2971,9 @@
       "marketing"
     ],
     "github": "twentyhq/twenty",
-    "websiteUrl": "https://twenty.com/",
+    "urls": {
+      "website": "https://twenty.com/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -2983,7 +3110,9 @@
       "management"
     ],
     "github": "shipsaas/docking",
-    "websiteUrl": "https://docking.shipsaas.tech",
+    "urls": {
+      "website": "https://docking.shipsaas.tech"
+    },
     "alternatives": {
       "selfHosted": [
         "gotenberg",
@@ -3011,7 +3140,9 @@
       "document-processing"
     ],
     "github": "eikek/docspell",
-    "websiteUrl": "https://docspell.org",
+    "urls": {
+      "website": "https://docspell.org"
+    },
     "alternatives": {
       "selfHosted": [
         "paperless-ngx",
@@ -3040,7 +3171,9 @@
       "collaboration"
     ],
     "github": "documenso/documenso",
-    "websiteUrl": "https://documenso.com",
+    "urls": {
+      "website": "https://documenso.com"
+    },
     "alternatives": {
       "selfHosted": [
         "stirling-pdf",
@@ -3071,7 +3204,9 @@
       "pdf"
     ],
     "github": "docusealco/docuseal",
-    "websiteUrl": "https://www.docuseal.com",
+    "urls": {
+      "website": "https://www.docuseal.com"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -3196,7 +3331,9 @@
       "pdf"
     ],
     "github": "jonashellmann/everydocs-core",
-    "websiteUrl": "https://github.com/jonashellmann/everydocs-core",
+    "urls": {
+      "website": "https://github.com/jonashellmann/everydocs-core"
+    },
     "alternatives": {
       "selfHosted": [
         "paperless-ngx",
@@ -3227,7 +3364,9 @@
       "document-conversion"
     ],
     "github": "gotenberg/gotenberg",
-    "websiteUrl": "https://gotenberg.dev",
+    "urls": {
+      "website": "https://gotenberg.dev"
+    },
     "alternatives": {
       "selfHosted": [
         "stirling-pdf",
@@ -3356,7 +3495,9 @@
       "pdf"
     ],
     "github": "mkucej/i-librarian-free",
-    "websiteUrl": "https://i-librarian.net",
+    "urls": {
+      "website": "https://i-librarian.net"
+    },
     "alternatives": {
       "selfHosted": [
         "paperless-ngx",
@@ -3466,7 +3607,9 @@
       "ocr"
     ],
     "github": "mayan-edms/mayan-edms",
-    "websiteUrl": "https://www.mayan-edms.com",
+    "urls": {
+      "website": "https://www.mayan-edms.com"
+    },
     "alternatives": {
       "selfHosted": [
         "paperless-ngx",
@@ -3577,7 +3720,9 @@
       "security"
     ],
     "github": "OpenSignLabs/OpenSign",
-    "websiteUrl": "https://www.opensignlabs.com/",
+    "urls": {
+      "website": "https://www.opensignlabs.com/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -3687,7 +3832,9 @@
       "archival"
     ],
     "github": "ciur/papermerge",
-    "websiteUrl": "https://papermerge.com",
+    "urls": {
+      "website": "https://papermerge.com"
+    },
     "alternatives": {
       "selfHosted": [
         "paperless-ngx",
@@ -3797,7 +3944,9 @@
       "annotation"
     ],
     "github": "mrmn2/PdfDing",
-    "websiteUrl": "https://github.com/mrmn2/PdfDing",
+    "urls": {
+      "website": "https://github.com/mrmn2/PdfDing"
+    },
     "alternatives": {
       "selfHosted": [
         "paperless-ngx",
@@ -3905,7 +4054,9 @@
       "collaboration"
     ],
     "github": "Stirling-Tools/Stirling-PDF",
-    "websiteUrl": "https://stirlingpdf.com",
+    "urls": {
+      "website": "https://stirlingpdf.com"
+    },
     "alternatives": {
       "selfHosted": [
         "gotenberg",
@@ -3935,7 +4086,9 @@
       "ocr"
     ],
     "github": "sismics/docs",
-    "websiteUrl": "https://teedy.io",
+    "urls": {
+      "website": "https://teedy.io"
+    },
     "alternatives": {
       "selfHosted": [
         "paperless-ngx",
@@ -4044,7 +4197,9 @@
       "email-delivery"
     ],
     "github": "pentacent/keila",
-    "websiteUrl": "https://www.keila.io/",
+    "urls": {
+      "website": "https://www.keila.io/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -4068,7 +4223,9 @@
       "waitlist"
     ],
     "github": "knadh/listmonk",
-    "websiteUrl": "https://listmonk.app/",
+    "urls": {
+      "website": "https://listmonk.app/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -4092,7 +4249,9 @@
       "crm"
     ],
     "github": "mautic/mautic",
-    "websiteUrl": "https://www.mautic.org/",
+    "urls": {
+      "website": "https://www.mautic.org/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -4115,7 +4274,9 @@
       "email-delivery"
     ],
     "github": "phpList/phplist3",
-    "websiteUrl": "https://www.phplist.org",
+    "urls": {
+      "website": "https://www.phplist.org"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -4138,7 +4299,9 @@
       "email-delivery"
     ],
     "github": "sympa-community/sympa",
-    "websiteUrl": "https://www.sympa.community/",
+    "urls": {
+      "website": "https://www.sympa.community/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -4161,7 +4324,9 @@
       "visualization"
     ],
     "github": "genea-app/genea-app",
-    "websiteUrl": "https://genea.app",
+    "urls": {
+      "website": "https://genea.app"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -4184,7 +4349,9 @@
       "visualization"
     ],
     "github": "geneweb/geneweb",
-    "websiteUrl": "https://geneweb.tuxfamily.org/",
+    "urls": {
+      "website": "https://geneweb.tuxfamily.org/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -4208,7 +4375,9 @@
       "collaboration"
     ],
     "github": "gramps-project/gramps-web",
-    "websiteUrl": "https://www.grampsweb.org/",
+    "urls": {
+      "website": "https://www.grampsweb.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "geneweb",
@@ -4234,7 +4403,9 @@
       "collaboration"
     ],
     "github": "fisharebest/webtrees",
-    "websiteUrl": "https://webtrees.net/",
+    "urls": {
+      "website": "https://webtrees.net/"
+    },
     "alternatives": {
       "selfHosted": [
         "gramps",
@@ -4262,7 +4433,9 @@
       "personal-finance"
     ],
     "github": "actualbudget/actual",
-    "websiteUrl": "https://actualbudget.org/",
+    "urls": {
+      "website": "https://actualbudget.org/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -4369,7 +4542,9 @@
       "inventory"
     ],
     "github": "bigcapitalhq/bigcapital",
-    "websiteUrl": "https://bigcapital.app",
+    "urls": {
+      "website": "https://bigcapital.app"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -4476,7 +4651,9 @@
       "cryptocurrency"
     ],
     "github": "bitcart/bitcart",
-    "websiteUrl": "https://bitcart.ai",
+    "urls": {
+      "website": "https://bitcart.ai"
+    },
     "alternatives": {
       "selfHosted": [
         "BTCPay Server"
@@ -4585,7 +4762,9 @@
       "cryptocurrency"
     ],
     "github": "btcpayserver/btcpayserver",
-    "websiteUrl": "https://btcpayserver.org",
+    "urls": {
+      "website": "https://btcpayserver.org"
+    },
     "alternatives": {
       "selfHosted": [
         "Bitcart"
@@ -4694,7 +4873,9 @@
       "cryptocurrency"
     ],
     "github": "DePayFi/widgets",
-    "websiteUrl": "https://depay.com",
+    "urls": {
+      "website": "https://depay.com"
+    },
     "alternatives": {
       "selfHosted": [
         "BTCPay Server",
@@ -4803,7 +4984,9 @@
       "finance"
     ],
     "github": "Tanq16/ExpenseOwl",
-    "websiteUrl": "https://github.com/Tanq16/ExpenseOwl",
+    "urls": {
+      "website": "https://github.com/Tanq16/ExpenseOwl"
+    },
     "alternatives": {
       "selfHosted": [
         "Actual",
@@ -4910,7 +5093,9 @@
       "finance"
     ],
     "github": "mayswind/ezbookkeeping",
-    "websiteUrl": "https://ezbookkeeping.mayswind.net",
+    "urls": {
+      "website": "https://ezbookkeeping.mayswind.net"
+    },
     "alternatives": {
       "selfHosted": [
         "Firefly III",
@@ -5017,7 +5202,9 @@
       "finance"
     ],
     "github": "beancount/fava",
-    "websiteUrl": "https://beancount.github.io/fava/",
+    "urls": {
+      "website": "https://beancount.github.io/fava/"
+    },
     "alternatives": {
       "selfHosted": [
         "actual",
@@ -5127,7 +5314,9 @@
       "finance"
     ],
     "github": "firefly-iii/firefly-iii",
-    "websiteUrl": "https://www.firefly-iii.org",
+    "urls": {
+      "website": "https://www.firefly-iii.org"
+    },
     "alternatives": {
       "selfHosted": [
         "Actual",
@@ -5236,7 +5425,9 @@
       "business"
     ],
     "github": "FOSSBilling/FOSSBilling",
-    "websiteUrl": "https://fossbilling.org",
+    "urls": {
+      "website": "https://fossbilling.org"
+    },
     "alternatives": {
       "selfHosted": [
         "InvoiceNinja",
@@ -5345,7 +5536,9 @@
       "business"
     ],
     "github": "galette/galette",
-    "websiteUrl": "https://galette.eu",
+    "urls": {
+      "website": "https://galette.eu"
+    },
     "alternatives": {
       "selfHosted": [
         "FOSSBilling"
@@ -5450,7 +5643,9 @@
       "finance"
     ],
     "github": "ghostfolio/ghostfolio",
-    "websiteUrl": "https://ghostfol.io",
+    "urls": {
+      "website": "https://ghostfol.io"
+    },
     "alternatives": {
       "selfHosted": [
         "Portfolio Performance"
@@ -5559,7 +5754,9 @@
       "business"
     ],
     "github": "juspay/hyperswitch",
-    "websiteUrl": "https://hyperswitch.io",
+    "urls": {
+      "website": "https://hyperswitch.io"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -5665,7 +5862,9 @@
       "finance"
     ],
     "github": "spiral-project/ihatemoney",
-    "websiteUrl": "https://ihatemoney.org",
+    "urls": {
+      "website": "https://ihatemoney.org"
+    },
     "alternatives": {
       "selfHosted": [
         "Cospend",
@@ -5774,7 +5973,9 @@
       "business"
     ],
     "github": "invoiceninja/invoiceninja",
-    "websiteUrl": "https://invoiceninja.com",
+    "urls": {
+      "website": "https://invoiceninja.com"
+    },
     "alternatives": {
       "selfHosted": [
         "FOSSBilling",
@@ -5883,7 +6084,9 @@
       "business"
     ],
     "github": "InvoicePlane/InvoicePlane",
-    "websiteUrl": "https://www.invoiceplane.com",
+    "urls": {
+      "website": "https://www.invoiceplane.com"
+    },
     "alternatives": {
       "selfHosted": [
         "Invoice Ninja",
@@ -5993,7 +6196,9 @@
       "business"
     ],
     "github": "InvoiceShelf/InvoiceShelf",
-    "websiteUrl": "https://invoiceshelf.com",
+    "urls": {
+      "website": "https://invoiceshelf.com"
+    },
     "alternatives": {
       "selfHosted": [
         "Invoice Ninja",
@@ -6103,7 +6308,9 @@
       "business"
     ],
     "github": "killbill/killbill",
-    "websiteUrl": "https://killbill.io",
+    "urls": {
+      "website": "https://killbill.io"
+    },
     "alternatives": {
       "selfHosted": [
         "Invoice Ninja",
@@ -6213,7 +6420,9 @@
       "business"
     ],
     "github": "getlago/lago",
-    "websiteUrl": "https://www.getlago.com",
+    "urls": {
+      "website": "https://www.getlago.com"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -6320,7 +6529,9 @@
       "investing"
     ],
     "github": "maybe-finance/maybe",
-    "websiteUrl": "https://maybe.co",
+    "urls": {
+      "website": "https://maybe.co"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -6426,7 +6637,9 @@
       "cryptocurrency"
     ],
     "github": "Drakkar-Software/OctoBot",
-    "websiteUrl": "https://www.octobot.cloud",
+    "urls": {
+      "website": "https://www.octobot.cloud"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -6532,7 +6745,9 @@
       "budgeting"
     ],
     "github": "simonwep/ocular",
-    "websiteUrl": "https://simonwep.github.io/ocular",
+    "urls": {
+      "website": "https://simonwep.github.io/ocular"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -6638,7 +6853,9 @@
       "budgeting"
     ],
     "github": "TheAxelander/OpenBudgeteer",
-    "websiteUrl": "https://theaxelander.github.io/OpenBudgeteer/",
+    "urls": {
+      "website": "https://theaxelander.github.io/OpenBudgeteer/"
+    },
     "alternatives": {
       "selfHosted": [
         "firefly-iii"
@@ -6746,7 +6963,9 @@
       "receipts"
     ],
     "github": "Receipt-Wrangler/receipt-wrangler-api",
-    "websiteUrl": "https://github.com/Receipt-Wrangler/receipt-wrangler-api",
+    "urls": {
+      "website": "https://github.com/Receipt-Wrangler/receipt-wrangler-api"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -6852,7 +7071,9 @@
       "low-code"
     ],
     "github": "r3-team/r3",
-    "websiteUrl": "https://rei3.de",
+    "urls": {
+      "website": "https://rei3.de"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -6958,7 +7179,9 @@
       "cryptocurrency"
     ],
     "github": "vsys-host/shkeeper.io",
-    "websiteUrl": "https://shkeeper.io",
+    "urls": {
+      "website": "https://shkeeper.io"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -7065,7 +7288,9 @@
       "business"
     ],
     "github": "SolidInvoice/SolidInvoice",
-    "websiteUrl": "https://solidinvoice.co",
+    "urls": {
+      "website": "https://solidinvoice.co"
+    },
     "alternatives": {
       "selfHosted": [
         "Invoice Ninja",
@@ -7174,7 +7399,9 @@
       "organization"
     ],
     "github": "l4rm4nd/VoucherVault",
-    "websiteUrl": "https://github.com/l4rm4nd/VoucherVault/wiki",
+    "urls": {
+      "website": "https://github.com/l4rm4nd/VoucherVault/wiki"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -7279,7 +7506,9 @@
       "subscriptions"
     ],
     "github": "ellite/Wallos",
-    "websiteUrl": "https://wallosapp.com",
+    "urls": {
+      "website": "https://wallosapp.com"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
@@ -7385,7 +7614,9 @@
       "budgeting"
     ],
     "github": "eitchtee/WYGIWYH",
-    "websiteUrl": "https://wygiwyh-demo.herculino.com",
+    "urls": {
+      "website": "https://wygiwyh-demo.herculino.com"
+    },
     "alternatives": {
       "selfHosted": [
         "firefly-iii"
@@ -7492,7 +7723,9 @@
       "management"
     ],
     "github": "karlomikus/bar-assistant",
-    "websiteUrl": "https://barassistant.app/",
+    "urls": {
+      "website": "https://barassistant.app/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -7515,7 +7748,9 @@
       "management"
     ],
     "github": "mikebgrep/fork.recipes",
-    "websiteUrl": "https://mikebgrep.github.io/forkapi/",
+    "urls": {
+      "website": "https://mikebgrep.github.io/forkapi/"
+    },
     "alternatives": {
       "selfHosted": [
         "bar-assistant"
@@ -7540,7 +7775,9 @@
       "management"
     ],
     "github": "TomBursch/kitchenowl",
-    "websiteUrl": "https://kitchenowl.org/",
+    "urls": {
+      "website": "https://kitchenowl.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "fork-recipes"
@@ -7565,7 +7802,9 @@
       "management"
     ],
     "github": "managemeals/manage-meals-web",
-    "websiteUrl": "https://managemeals.com/",
+    "urls": {
+      "website": "https://managemeals.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "fork-recipes",
@@ -7591,7 +7830,9 @@
       "management"
     ],
     "github": "mealie-recipes/mealie",
-    "websiteUrl": "https://docs.mealie.io/",
+    "urls": {
+      "website": "https://docs.mealie.io/"
+    },
     "alternatives": {
       "selfHosted": [
         "kitchenowl",
@@ -7617,7 +7858,9 @@
       "management"
     ],
     "github": "julianpoy/recipesage",
-    "websiteUrl": "https://recipesage.com/",
+    "urls": {
+      "website": "https://recipesage.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "mealie",
@@ -7643,7 +7886,9 @@
       "management"
     ],
     "github": "reaper47/recipya",
-    "websiteUrl": "https://recipya.musicavis.ca/",
+    "urls": {
+      "website": "https://recipya.musicavis.ca/"
+    },
     "alternatives": {
       "selfHosted": [
         "mealie",
@@ -7671,7 +7916,9 @@
       "management"
     ],
     "github": "alexbates/Tamari",
-    "websiteUrl": "https://tamariapp.com/",
+    "urls": {
+      "website": "https://tamariapp.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "mealie",
@@ -7698,7 +7945,9 @@
       "suggestions"
     ],
     "github": "kassner/whattocook",
-    "websiteUrl": "https://www.kassner.com.br/en/2023/09/21/what-to-cook-launch/",
+    "urls": {
+      "website": "https://www.kassner.com.br/en/2023/09/21/what-to-cook-launch/"
+    },
     "alternatives": {
       "selfHosted": [
         "mealie",
@@ -7723,7 +7972,9 @@
       "scheduling"
     ],
     "github": "alfio-event/alf.io",
-    "websiteUrl": "https://alf.io/",
+    "urls": {
+      "website": "https://alf.io/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -7746,7 +7997,9 @@
       "scheduling"
     ],
     "github": "calcom/cal.com",
-    "websiteUrl": "https://cal.com/",
+    "urls": {
+      "website": "https://cal.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "alf"
@@ -7770,7 +8023,9 @@
       "scheduling"
     ],
     "github": "alextselegidis/easyappointments",
-    "websiteUrl": "https://easyappointments.org/",
+    "urls": {
+      "website": "https://easyappointments.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "cal",
@@ -7796,7 +8051,9 @@
       "ticketing"
     ],
     "github": "HiEventsDev/hi.events",
-    "websiteUrl": "https://hi.events/",
+    "urls": {
+      "website": "https://hi.events/"
+    },
     "alternatives": {
       "selfHosted": [
         "alf",
@@ -7824,7 +8081,9 @@
       "pms"
     ],
     "github": "Qloapps/QloApps",
-    "websiteUrl": "https://qloapps.com/",
+    "urls": {
+      "website": "https://qloapps.com/"
+    },
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": []
@@ -7848,7 +8107,9 @@
       "collaboration"
     ],
     "github": "lukevella/rallly",
-    "websiteUrl": "https://rallly.co",
+    "urls": {
+      "website": "https://rallly.co"
+    },
     "alternatives": {
       "selfHosted": [
         "cal",
@@ -7876,7 +8137,9 @@
       "booking"
     ],
     "github": "seatsurfing/seatsurfing",
-    "websiteUrl": "https://seatsurfing.io/",
+    "urls": {
+      "website": "https://seatsurfing.io/"
+    },
     "alternatives": {
       "selfHosted": [
         "cal",
@@ -7902,7 +8165,9 @@
       "archiving"
     ],
     "github": "melmothx/amusewiki",
-    "websiteUrl": "https://amusewiki.org",
+    "urls": {
+      "website": "https://amusewiki.org"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -7932,7 +8197,9 @@
       "wiki"
     ],
     "github": "bookstackapp/bookstack",
-    "websiteUrl": "https://www.bookstackapp.com",
+    "urls": {
+      "website": "https://www.bookstackapp.com"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -7963,7 +8230,9 @@
       "collaboration"
     ],
     "github": "django-wiki/django-wiki",
-    "websiteUrl": "https://demo.django-wiki.org",
+    "urls": {
+      "website": "https://demo.django-wiki.org"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -7992,7 +8261,9 @@
       "collaboration"
     ],
     "github": "docmost/docmost",
-    "websiteUrl": "https://docmost.com",
+    "urls": {
+      "website": "https://docmost.com"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8021,7 +8292,9 @@
       "collaboration"
     ],
     "github": "documize/community",
-    "websiteUrl": "https://www.documize.com",
+    "urls": {
+      "website": "https://www.documize.com"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8049,7 +8322,9 @@
       "collaboration"
     ],
     "github": "dokuwiki/dokuwiki",
-    "websiteUrl": "https://www.dokuwiki.org/",
+    "urls": {
+      "website": "https://www.dokuwiki.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8078,7 +8353,9 @@
       "personal-notes"
     ],
     "github": "Alamantus/FeatherWiki",
-    "websiteUrl": "https://feather.wiki/",
+    "urls": {
+      "website": "https://feather.wiki/"
+    },
     "alternatives": {
       "selfHosted": [
         "tiddlywiki",
@@ -8107,7 +8384,9 @@
       "collaboration"
     ],
     "github": "jgm/gitit",
-    "websiteUrl": "https://github.com/jgm/gitit",
+    "urls": {
+      "website": "https://github.com/jgm/gitit"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8136,7 +8415,9 @@
       "collaboration"
     ],
     "github": "gollum/gollum",
-    "websiteUrl": "https://github.com/gollum/gollum",
+    "urls": {
+      "website": "https://github.com/gollum/gollum"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8165,7 +8446,9 @@
       "collaboration"
     ],
     "github": "wikimedia/mediawiki",
-    "websiteUrl": "https://www.mediawiki.org/",
+    "urls": {
+      "website": "https://www.mediawiki.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8194,7 +8477,9 @@
       "collaboration"
     ],
     "github": "bouncepaw/mycorrhiza",
-    "websiteUrl": "https://mycorrhiza.wiki/",
+    "urls": {
+      "website": "https://mycorrhiza.wiki/"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8223,7 +8508,9 @@
       "collaboration"
     ],
     "github": "redimp/otterwiki",
-    "websiteUrl": "https://otterwiki.com/",
+    "urls": {
+      "website": "https://otterwiki.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8252,7 +8539,9 @@
       "collaboration"
     ],
     "github": "sbrl/Pepperminty-Wiki",
-    "websiteUrl": "https://peppermint.mooncarrot.space/",
+    "urls": {
+      "website": "https://peppermint.mooncarrot.space/"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8280,7 +8569,9 @@
       "knowledge-management"
     ],
     "github": "gilbitron/raneto",
-    "websiteUrl": "http://raneto.com/",
+    "urls": {
+      "website": "http://raneto.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8309,7 +8600,9 @@
       "personal-notes"
     ],
     "github": "TiddlyWiki/TiddlyWiki5",
-    "websiteUrl": "https://tiddlywiki.com/",
+    "urls": {
+      "website": "https://tiddlywiki.com/"
+    },
     "alternatives": {
       "selfHosted": [
         "wiki-js",
@@ -8339,7 +8632,9 @@
       "collaboration"
     ],
     "github": "requarks/wiki",
-    "websiteUrl": "https://js.wiki/",
+    "urls": {
+      "website": "https://js.wiki/"
+    },
     "alternatives": {
       "selfHosted": [
         "bookstack",
@@ -8367,7 +8662,9 @@
       "collaboration"
     ],
     "github": "xwiki/xwiki-platform",
-    "websiteUrl": "https://www.xwiki.org/",
+    "urls": {
+      "website": "https://www.xwiki.org/"
+    },
     "alternatives": {
       "selfHosted": [
         "mediawiki",

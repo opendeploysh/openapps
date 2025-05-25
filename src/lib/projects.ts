@@ -44,8 +44,14 @@ export const mdxProjectData = z.object({
 
   github: z.string().regex(/^[^/]+\/[^/]+$/),
 
-  websiteUrl: z.string().url().optional(),
-  discord: z.string().url().optional(),
+  urls: z
+    .object({
+      website: z.string().url().optional(),
+      demo: z.string().url().optional(),
+      discord: z.string().url().optional(),
+      unraidApp: z.string().url().optional(),
+    })
+    .optional(),
 
   alternatives: z.object({
     selfHosted: z.array(z.string()).optional(),
