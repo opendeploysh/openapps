@@ -57,6 +57,7 @@ export const primaryCategories = [
   "dev-projects",
   "testing",
   "monitoring",
+  "money",
   "remote",
   "search-engines",
   "self-hosting",
