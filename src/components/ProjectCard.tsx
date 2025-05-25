@@ -1,6 +1,8 @@
+"use client"
+
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, ServerCog, ExternalLink, Heart, ArrowRightLeft, Shield, Server, DollarSign, Cloud } from "lucide-react"
+import { Star, ServerCog, ExternalLink, Heart, ArrowRightLeft, Shield, DollarSign, Cloud } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -23,9 +25,10 @@ interface ProjectCardProps extends ProjectMeta {
   showLicense?: boolean
   pricingModel?: PricingModel
   hostingType?: HostingType
+  linkTo?: "project" | "alternatives"
 }
 
-export const ProjectCard = ({
+export const ProjectCard: React.FC<ProjectCardProps> = ({
   name,
   description,
   deployment,
@@ -36,6 +39,7 @@ export const ProjectCard = ({
   showLicense = false,
   pricingModel,
   hostingType,
+  linkTo,
 }: ProjectCardProps) => {
   const serviceDeployment = {
     available: false,
@@ -53,8 +57,20 @@ export const ProjectCard = ({
   const projectLicense = license ?? githubData?.license?.spdx_id ?? "Unknown"
   const projectHostingType = hostingType ?? "Unknown"
   const projectPricingModel = pricingModel ?? "Unknown"
+  const isProprietary = license === "Proprietary"
+
+  // Determine the link URL based on linkTo prop
+  const linkUrl =
+    linkTo == null
+      ? isProprietary
+        ? `/alternatives/to/${slug}`
+        : `/projects/${slug}`
+      : linkTo === "alternatives"
+      ? `/alternatives/to/${slug}`
+      : `/projects/${slug}`
+
   return (
-    <Link href={`/projects/${slug}`} className="block">
+    <Link href={linkUrl} className="block">
       <Card
         className={`flex flex-col border overflow-hidden shadow-none ${
           showLicense ? "h-[330px]" : "h-[300px]"
@@ -87,7 +103,7 @@ export const ProjectCard = ({
         )}
 
         <CardFooter className="flex flex-col text-left mt-auto gap-2 pt-2">
-          {githubData && (
+          {githubData && !isProprietary && (
             <div className="flex items-center gap-4 text-xs w-full">
               <div className="flex items-center gap-1">
                 <Star className="w-3 h-3 mr-0.5 text-yellow-500 flex-shrink-0" />
@@ -98,7 +114,7 @@ export const ProjectCard = ({
             </div>
           )}
 
-          {githubData && (
+          {githubData && !isProprietary && (
             <div className="flex items-center gap-4 text-xs w-full">
               <div className="flex items-center gap-1">
                 <Heart className="w-3 h-3 mr-0.5 text-red-500 flex-shrink-0" />
@@ -109,7 +125,7 @@ export const ProjectCard = ({
             </div>
           )}
 
-          {!githubData && (
+          {(!githubData || isProprietary) && (
             <div className="flex items-center gap-4 text-xs w-full">
               <div className="flex items-center gap-1">
                 <Cloud className="w-3 h-3 mr-0.5  flex-shrink-0" />
@@ -120,14 +136,14 @@ export const ProjectCard = ({
             </div>
           )}
 
-          {!githubData && (
+          {(!githubData || isProprietary) && (
             <div className="flex items-center gap-4 text-xs w-full">
               <div className="flex items-center gap-1">
                 <DollarSign className="w-3 h-3 mr-0.5  flex-shrink-0" />
                 Pricing Type
               </div>
               <div className="flex-grow border-t" />
-              <span className="flex-shrink-0">{pricingModel}</span>
+              <span className="flex-shrink-0">{projectPricingModel}</span>
             </div>
           )}
 
@@ -145,10 +161,24 @@ export const ProjectCard = ({
           {/* Deploy button with dialog */}
           <Dialog>
             <DialogTrigger asChild>
-              <Button variant="outline" size="sm" className="w-full mt-2 text-xs h-8 justify-between group">
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full mt-2 text-xs h-8 justify-between group"
+                onClick={(e) => e.preventDefault()}
+              >
                 <span className="flex items-center">
-                  <ServerCog className="w-3 h-3 mr-1" />
-                  Quick Deploy
+                  {linkTo === "alternatives" ? (
+                    <>
+                      <ArrowRightLeft className="w-3 h-3 mr-1" />
+                      View Alternatives
+                    </>
+                  ) : (
+                    <>
+                      <ServerCog className="w-3 h-3 mr-1" />
+                      Quick Deploy
+                    </>
+                  )}
                 </span>
               </Button>
             </DialogTrigger>

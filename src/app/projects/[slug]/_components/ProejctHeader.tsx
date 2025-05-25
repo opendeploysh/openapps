@@ -1,49 +1,29 @@
-import React from "react";
-import {badgeVariants} from "@/components/ui/badge";
-import {formatDistanceToNow} from "date-fns";
-import {
-  Star,
-  Shield,
-  CheckCircle,
-  AlertCircle,
-  Clock,
-  GitFork,
-  Eye,
-  Github,
-  Globe,
-  Play,
-} from "lucide-react";
-import {
-  getProjectPopularity,
-  ProjectMeta,
-  projects,
-  projectsWithGitHubData,
-} from "@/lib/projects";
-import {SiDiscord, SiUnraid} from "@icons-pack/react-simple-icons";
-import Link from "next/link";
-import {pricingModelInfo} from "@/lib/pricing-model";
-import {hostingTypeInfo} from "@/lib/hosting-type";
+import React from "react"
+import { badgeVariants } from "@/components/ui/badge"
+import { formatDistanceToNow } from "date-fns"
+import { Star, Shield, CheckCircle, AlertCircle, Clock, GitFork, Eye, Github, Globe, Play } from "lucide-react"
+import { getProjectPopularity, ProjectMeta, projects, projectsWithGitHubData } from "@/lib/projects"
+import { SiDiscord, SiUnraid } from "@icons-pack/react-simple-icons"
+import Link from "next/link"
+import { pricingModelInfo } from "@/lib/pricing-model"
+import { hostingTypeInfo } from "@/lib/hosting-type"
 
 const difficultyIcons = {
   Easy: <CheckCircle className="w-4 h-4" />,
   Medium: <AlertCircle className="w-4 h-4" />,
   Advanced: <Shield className="w-4 h-4" />,
-};
+}
 
 export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
-  const githubData = projectsWithGitHubData[project.slug];
+  const githubData = projectsWithGitHubData[project.slug]
 
-  const language = project.language ?? githubData?.language;
+  const language = project.language ?? githubData?.language
 
   return (
     <div className="space-y-8">
       <div className="flex flex-col gap-4">
         <div className="flex gap-2 items-center">
-          <img
-            src={project.logo}
-            alt={project.name}
-            className="object-cover rounded-lg w-10 h-10"
-          />
+          <img src={project.logo} alt={project.name} className="object-cover rounded-lg w-10 h-10" />
           <h1 className="text-3xl font-bold">{project.name}</h1>
         </div>
         <div className="flex gap-2">
@@ -119,19 +99,15 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
         </div>
       </div>
 
-      <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
-        {project.description}
-      </p>
+      <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">{project.description}</p>
 
       <div className="grid grid-cols-3 gap-8 text-sm">
         <div className="space-y-2">
           <div className="font-semibold">Self-hosted alternative to:</div>
           <div className="flex flex-wrap gap-2">
             {project.alternatives.nonSelfHosted?.map((alternative) => {
-              const project = projects.find(
-                (p) => p.slug.toLowerCase() === alternative.toLowerCase()
-              );
-              if (!project) return null;
+              const project = projects.find((p) => p.slug.toLowerCase() === alternative.toLowerCase())
+              if (!project) return null
               return (
                 <Link
                   href={`/projects/${project.slug}`}
@@ -141,14 +117,10 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
                     className: "text-sm flex items-center gap-2",
                   })}
                 >
-                  <img
-                    src={project.logo}
-                    alt={project?.name}
-                    className="rounded-full"
-                  />
+                  <img src={project.logo} alt={project?.name} className="rounded-full w-4 h-4" />
                   {project?.name}
                 </Link>
-              );
+              )
             })}
           </div>
         </div>
@@ -164,9 +136,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
               </div>
 
               <div className="border-t flex-grow" />
-              <span className="font-medium">
-                {githubData.stargazers_count?.toLocaleString() ?? 0}
-              </span>
+              <span className="font-medium">{githubData.stargazers_count?.toLocaleString() ?? 0}</span>
             </div>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1">
@@ -175,9 +145,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
               </div>
 
               <div className="border-t flex-grow" />
-              <span className="font-medium">
-                {githubData.forks?.toLocaleString() ?? 0}
-              </span>
+              <span className="font-medium">{githubData.forks?.toLocaleString() ?? 0}</span>
             </div>
 
             <div className="flex items-center gap-4">
@@ -187,9 +155,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
               </div>
 
               <div className="border-t flex-grow" />
-              <span className="font-medium">
-                {githubData.subscribers_count?.toLocaleString() ?? 0}
-              </span>
+              <span className="font-medium">{githubData.subscribers_count?.toLocaleString() ?? 0}</span>
             </div>
 
             <div className="flex items-center gap-4">
@@ -199,9 +165,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
               </div>
 
               <div className="border-t flex-grow" />
-              <span className="font-medium">
-                {githubData.open_issues_count?.toLocaleString() ?? 0}
-              </span>
+              <span className="font-medium">{githubData.open_issues_count?.toLocaleString() ?? 0}</span>
             </div>
 
             <div className="flex items-center gap-4">
@@ -230,9 +194,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
             </div>
 
             <div className="border-t flex-grow" />
-            <span className="font-medium">
-              {getProjectPopularity(project.slug).toLocaleString()}
-            </span>
+            <span className="font-medium">{getProjectPopularity(project.slug).toLocaleString()}</span>
           </div>
 
           {project.pricingModel && (
@@ -260,9 +222,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
 
               <div className="border-t flex-grow" />
               <span
-                className={`font-medium px-2 py-0.5 rounded-full text-sm ${
-                  hostingTypeInfo[project.hostingType].color
-                }`}
+                className={`font-medium px-2 py-0.5 rounded-full text-sm ${hostingTypeInfo[project.hostingType].color}`}
               >
                 {project.hostingType}
               </span>
@@ -275,9 +235,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
             </div>
 
             <div className="border-t flex-grow" />
-            <span className="font-medium">
-              {project.license ?? githubData?.license?.spdx_id ?? "Proprietary"}
-            </span>
+            <span className="font-medium">{project.license ?? githubData?.license?.spdx_id ?? "Proprietary"}</span>
           </div>
           {project.deployment && (
             <div className="flex items-center gap-4">
@@ -299,13 +257,11 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
               </div>
 
               <div className="border-t flex-grow" />
-              <span className="font-medium">
-                {project.language ?? githubData?.language ?? "Unknown"}
-              </span>
+              <span className="font-medium">{project.language ?? githubData?.language ?? "Unknown"}</span>
             </div>
           )}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

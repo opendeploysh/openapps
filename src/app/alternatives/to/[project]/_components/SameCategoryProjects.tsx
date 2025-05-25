@@ -1,58 +1,45 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { ProjectCard } from "@/components/ProjectCard";
-import { ProjectMeta } from "@/lib/projects";
+import React, { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ProjectCard } from "@/components/ProjectCard"
+import { ProjectMeta } from "@/lib/projects"
 
 interface SameCategoryProjectsProps {
-  projects: ProjectMeta[];
-  categoryName: string;
+  projects: ProjectMeta[]
+  categoryName: string
 }
 
-export function SameCategoryProjects({
-  projects,
-  categoryName,
-}: SameCategoryProjectsProps) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 9;
+export function SameCategoryProjects({ projects, categoryName }: SameCategoryProjectsProps) {
+  const [currentPage, setCurrentPage] = useState(1)
+  const projectsPerPage = 9
 
   // Pagination logic
-  const totalPages = Math.ceil(projects.length / projectsPerPage);
-  const startIndex = (currentPage - 1) * projectsPerPage;
-  const paginatedProjects = projects.slice(
-    startIndex,
-    startIndex + projectsPerPage
-  );
+  const totalPages = Math.ceil(projects.length / projectsPerPage)
+  const startIndex = (currentPage - 1) * projectsPerPage
+  const paginatedProjects = projects.slice(startIndex, startIndex + projectsPerPage)
 
   const goToPage = (page: number) => {
-    setCurrentPage(page);
+    setCurrentPage(page)
     // Scroll to the section
-    document
-      .getElementById("same-category-section")
-      ?.scrollIntoView({ behavior: "smooth" });
-  };
+    document.getElementById("same-category-section")?.scrollIntoView({ behavior: "smooth" })
+  }
 
   if (projects.length === 0) {
-    return null;
+    return null
   }
 
   return (
     <div id="same-category-section" className="mb-16">
       <h2 className="text-2xl font-bold mb-6">More {categoryName} projects</h2>
       <p className="text-neutral-600 dark:text-neutral-400 mb-8">
-        Discover other open source projects in the {categoryName.toLowerCase()}{" "}
-        category:
+        Discover other open source projects in the {categoryName.toLowerCase()} category:
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {paginatedProjects.map((categoryProject) => (
-          <ProjectCard
-            key={categoryProject.slug}
-            {...categoryProject}
-            showLicense={true}
-          />
+          <ProjectCard key={categoryProject.slug} {...categoryProject} showLicense={true} linkTo="alternatives" />
         ))}
       </div>
 
@@ -72,15 +59,15 @@ export function SameCategoryProjects({
 
           <div className="flex gap-1">
             {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-              let pageNumber;
+              let pageNumber
               if (totalPages <= 5) {
-                pageNumber = i + 1;
+                pageNumber = i + 1
               } else if (currentPage <= 3) {
-                pageNumber = i + 1;
+                pageNumber = i + 1
               } else if (currentPage >= totalPages - 2) {
-                pageNumber = totalPages - 4 + i;
+                pageNumber = totalPages - 4 + i
               } else {
-                pageNumber = currentPage - 2 + i;
+                pageNumber = currentPage - 2 + i
               }
 
               return (
@@ -93,7 +80,7 @@ export function SameCategoryProjects({
                 >
                   {pageNumber}
                 </Button>
-              );
+              )
             })}
           </div>
 
@@ -113,11 +100,10 @@ export function SameCategoryProjects({
       {/* Show pagination info */}
       <div className="text-center mt-4">
         <p className="text-sm text-neutral-500">
-          Showing {startIndex + 1}-
-          {Math.min(startIndex + projectsPerPage, projects.length)} of{" "}
-          {projects.length} projects in {categoryName.toLowerCase()}
+          Showing {startIndex + 1}-{Math.min(startIndex + projectsPerPage, projects.length)} of {projects.length}{" "}
+          projects in {categoryName.toLowerCase()}
         </p>
       </div>
     </div>
-  );
+  )
 }

@@ -66,6 +66,7 @@
     "slug": "bigtable",
     "name": "Cloud Bigtable",
     "description": "Cloud Bigtable is Google's fully managed, scalable NoSQL database service designed for large analytical and operational workloads. It powers many Google services including Search, Analytics, Maps and Gmail.\n",
+    "license": "Proprietary",
     "hostingType": "Cloud-Only",
     "pricingModel": "Paid Only",
     "logo": "/images/bigtable.svg",
@@ -82,7 +83,8 @@
     },
     "alternatives": {
       "selfHosted": [
-        "apache-cassandra",
+        "clickhouse",
+        "cassandra",
         "scylladb"
       ],
       "nonSelfHosted": [

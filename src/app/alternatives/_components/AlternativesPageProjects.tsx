@@ -155,6 +155,7 @@ export const AlternativesPageProjects: React.FC = () => {
           activeProjectsLength={activeProjects.length}
           setCurrentPage={setCurrentPage}
           onClearFilters={clearSearchAndFilters}
+          linkTo="alternatives"
         />
       </div>
     </>

@@ -1,14 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-  TooltipProvider,
-} from "@/components/ui/tooltip";
+import React from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip"
 import {
   ChevronLeft,
   Github,
@@ -20,69 +15,53 @@ import {
   CheckCircle,
   DollarSign,
   Server,
-} from "lucide-react";
-import {
-  projects,
-  getProjectPopularity,
-  projectsWithGitHubData,
-} from "@/lib/projects";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { ProjectCard } from "@/components/ProjectCard";
-import { SameCategoryProjects } from "./_components/SameCategoryProjects";
-import { Metadata } from "next";
-import { pricingModelInfo } from "@/lib/pricing-model";
-import { hostingTypeInfo } from "@/lib/hosting-type";
+  ArrowRight,
+} from "lucide-react"
+import { projects, getProjectPopularity, projectsWithGitHubData, ProjectMeta } from "@/lib/projects"
+import { Navbar } from "@/components/Navbar"
+import { Footer } from "@/components/Footer"
+import { ProjectCard } from "@/components/ProjectCard"
+import { SameCategoryProjects } from "./_components/SameCategoryProjects"
+import { Metadata } from "next"
+import { pricingModelInfo } from "@/lib/pricing-model"
+import { hostingTypeInfo } from "@/lib/hosting-type"
+import { AlternativePreviewCard } from "./_components/AlternativePreviewCard"
+import { useCompileFromSlug } from "@/mdx/render-projects"
 
 interface AlternativesPageProps {
   params: Promise<{
-    project: string;
-  }>;
+    project: string
+  }>
 }
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
     project: project.slug,
-  }));
+  }))
 }
 
-export async function generateMetadata({
-  params,
-}: AlternativesPageProps): Promise<Metadata> {
-  const { project: projectSlug } = await params;
-  const project = projects.find((p) => p.slug === projectSlug);
+export async function generateMetadata({ params }: AlternativesPageProps): Promise<Metadata> {
+  const { project: projectSlug } = await params
+  const project = projects.find((p) => p.slug === projectSlug)
 
   if (!project) {
     return {
       title: "Project Not Found",
       description: "The requested project could not be found.",
-    };
+    }
   }
 
   // Count alternatives for description
-  const selfHostedCount = projects.filter((p) => {
-    const selfHostedAlts = p.alternatives?.selfHosted || [];
-    const projectVariations = [
-      project.name.toLowerCase(),
-      project.slug.toLowerCase(),
-      project.name.toLowerCase().replace(/\s+/g, "-"),
-    ];
-    return selfHostedAlts.some(
-      (alt) =>
-        projectVariations.includes(alt.toLowerCase()) ||
-        projectVariations.includes(alt.toLowerCase().replace(/\s+/g, "-"))
-    );
-  }).length;
+  const selfHostedCount = project.alternatives?.selfHosted?.length || 0
 
-  const sameCategoryCount =
-    projects.filter((p) => p.category === project.category).length - 1;
+  const sameCategoryCount = projects.filter((p) => p.category === project.category).length - 1
 
-  const title = `Alternatives to ${project.name} - Cost-Effective SaaS Alternatives`;
+  const title = `Alternatives to ${project.name} - Cost-Effective SaaS Alternatives`
   const description = `Discover ${
     selfHostedCount + sameCategoryCount
   }+ cost-effective, privacy-respecting alternatives to ${
     project.name
-  }. Compare features and deploy them yourself or through our managed services.`;
+  }. Compare features and deploy them yourself or through our managed services.`
 
   return {
     title,
@@ -96,9 +75,7 @@ export async function generateMetadata({
       "self-hosted",
       "alternatives",
       project.category.toLowerCase(),
-      ...(project.alternatives?.nonSelfHosted || []).map(
-        (alt) => `${alt} alternative`
-      ),
+      ...(project.alternatives?.nonSelfHosted || []).map((alt) => `${alt} alternative`),
     ].join(", "),
     authors: [{ name: "OpenApps" }],
     creator: "OpenApps",
@@ -107,15 +84,13 @@ export async function generateMetadata({
     alternates: {
       canonical: `/alternatives/${project.slug}`,
     },
-  };
+  }
 }
 
-export default async function AlternativesPage({
-  params,
-}: AlternativesPageProps) {
-  const { project: projectSlug } = await params;
+export default async function AlternativesPage({ params }: AlternativesPageProps) {
+  const { project: projectSlug } = await params
 
-  const project = projects.find((p) => p.slug === projectSlug);
+  const project = projects.find((p) => p.slug === projectSlug)
 
   if (!project) {
     return (
@@ -128,8 +103,7 @@ export default async function AlternativesPage({
             </div>
             <h1 className="text-2xl font-bold mb-2">Project not found</h1>
             <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-              The project you're looking for doesn't exist or may have been
-              moved.
+              The project you're looking for doesn't exist or may have been moved.
             </p>
             <Link href="/alternatives">
               <Button>Browse All Alternatives</Button>
@@ -138,96 +112,42 @@ export default async function AlternativesPage({
         </div>
         <Footer />
       </div>
-    );
+    )
   }
 
   // Get GitHub data for license information
-  const githubData = projectsWithGitHubData[project.slug];
+  const githubData = projectsWithGitHubData[project.slug]
 
-  // Find projects that offer alternatives to the same services as this project
-  const relatedAlternatives = projects
-    .filter((p) => {
-      if (p.slug === project.slug) return false;
+  // Get self-hosted alternatives from the project's alternatives.selfHosted array
+  const selfHostedAlternativeProjects = await Promise.all(
+    (project.alternatives?.selfHosted || [])
+      .map((altName) => {
+        // Find the project in our database
+        return projects.find(
+          (p) =>
+            p.name.toLowerCase() === altName.toLowerCase() ||
+            p.slug.toLowerCase() === altName.toLowerCase().replace(/\s+/g, "-") ||
+            p.slug.toLowerCase() === altName.toLowerCase()
+        )
+      })
+      .filter((p): p is ProjectMeta => Boolean(p))
+      .map(async (p) => {
+        const mdxData = await useCompileFromSlug(p.slug)
+        return { ...p, mdxData }
+      })
+  )
 
-      // Check if they share alternatives to the same non-self-hosted services
-      const thisAlternatives = project.alternatives?.nonSelfHosted || [];
-      const otherAlternatives = p.alternatives?.nonSelfHosted || [];
-
-      return thisAlternatives.some((alt) => otherAlternatives.includes(alt));
-    })
-    .sort((a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug))
-    .slice(0, 6);
-
-  // Find projects that this project is an alternative to (self-hosted alternatives)
-  const selfHostedAlternatives = projects
-    .filter((p) => {
-      const selfHostedAlts = p.alternatives?.selfHosted || [];
-
-      // Check if this project is listed in the other project's selfHosted alternatives
-      // We'll check multiple variations of the name to handle different naming conventions
-      const projectVariations = [
-        project.name.toLowerCase(),
-        project.slug.toLowerCase(),
-        project.name.toLowerCase().replace(/\s+/g, "-"),
-        project.name.toLowerCase().replace(/\s+/g, ""),
-        project.slug.toLowerCase().replace(/-/g, ""),
-        // Handle cases like "Apache Airflow" -> "airflow"
-        project.name.toLowerCase().split(" ").pop() || "",
-        // Handle cases like "Apache Airflow" -> "apache-airflow"
-        project.name.toLowerCase().replace(/\s+/g, "-"),
-      ].filter((v) => v.length > 2); // Filter out very short variations
-
-      return selfHostedAlts.some((alt) => {
-        const altLower = alt.toLowerCase();
-        const altDashed = altLower.replace(/\s+/g, "-");
-        const altNospace = altLower.replace(/\s+/g, "");
-
-        return projectVariations.some(
-          (variation) =>
-            variation === altLower ||
-            variation === altDashed ||
-            variation === altNospace ||
-            // Check if the alternative ends with our project name (for cases like apache-airflow -> airflow)
-            altLower.endsWith("-" + variation) ||
-            altLower.endsWith(variation) ||
-            // Check if our project name ends with the alternative
-            variation.endsWith("-" + altLower) ||
-            variation.endsWith(altLower)
-        );
-      });
-    })
-    .sort((a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug))
-    .slice(0, 9);
-
-  const hasAlternatives =
-    (project.alternatives?.nonSelfHosted?.length || 0) > 0 ||
-    (project.alternatives?.selfHosted?.length || 0) > 0;
+  const hasAlternatives = selfHostedAlternativeProjects.length > 0
 
   // Get all projects in the same primary category, excluding already shown alternatives
   const alreadyShownSlugs = new Set([
     project.slug, // Exclude current project
-    ...selfHostedAlternatives.map((p) => p.slug),
-    ...relatedAlternatives.map((p) => p.slug),
-    // Also exclude projects from the selfHosted alternatives list that we found in our database
-    ...(project.alternatives?.selfHosted || [])
-      .map((altName) => {
-        const foundProject = projects.find(
-          (p) =>
-            p.name.toLowerCase() === altName.toLowerCase() ||
-            p.slug.toLowerCase() === altName.toLowerCase().replace(/\s+/g, "-")
-        );
-        return foundProject?.slug;
-      })
-      .filter((slug): slug is string => Boolean(slug)),
-  ]);
+    ...selfHostedAlternativeProjects.map((p) => p.slug),
+  ])
 
   const sameCategoryProjects = projects
-    .filter(
-      (p) => p.category === project.category && !alreadyShownSlugs.has(p.slug)
-    )
-    .sort(
-      (a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug)
-    );
+    .filter((p) => p.category === project.category && !alreadyShownSlugs.has(p.slug))
+    .sort((a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug))
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
@@ -255,33 +175,24 @@ export default async function AlternativesPage({
           <div className="flex items-center gap-3 mb-4">
             <div className="w-16 h-16 rounded-xl flex items-center justify-center">
               {project.logo ? (
-                <img
-                  src={project.logo}
-                  alt={`${project.name} logo`}
-                  className="w-10 h-10 rounded-lg"
-                />
+                <img src={project.logo} alt={`${project.name} logo`} className="w-10 h-10 rounded-lg" />
               ) : (
                 <Code className="w-8 h-8 text-blue-600 dark:text-blue-400" />
               )}
             </div>
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold">
-                Alternatives to {project.name}
-              </h1>
+              <h1 className="text-3xl md:text-4xl font-bold">Alternatives to {project.name}</h1>
             </div>
           </div>
           <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-3xl">
-            {project.description} Find open source and proprietary alternatives
-            that serve similar purposes.
+            {project.description} Find open source and proprietary alternatives that serve similar purposes.
           </p>
 
           {/* Project Details */}
           <div className="flex flex-wrap gap-6 mt-6 text-sm">
             <div className="flex items-center gap-2">
               <Shield className="h-4 w-4 text-neutral-500" />
-              <span className="text-neutral-600 dark:text-neutral-400">
-                License:
-              </span>
+              <span className="text-neutral-600 dark:text-neutral-400">License:</span>
               <Badge variant="outline" className="text-xs">
                 {project.license ?? githubData?.license?.spdx_id ?? "Unknown"}
               </Badge>
@@ -290,9 +201,7 @@ export default async function AlternativesPage({
             {githubData?.stargazers_count && (
               <div className="flex items-center gap-2">
                 <Star className="h-4 w-4 text-yellow-500" />
-                <span className="text-neutral-600 dark:text-neutral-400">
-                  Stars:
-                </span>
+                <span className="text-neutral-600 dark:text-neutral-400">Stars:</span>
                 <Badge variant="outline" className="text-xs">
                   {githubData.stargazers_count.toLocaleString()}
                 </Badge>
@@ -302,9 +211,7 @@ export default async function AlternativesPage({
             {project.deployment && (
               <div className="flex items-center gap-2">
                 <Code className="h-4 w-4 text-neutral-500" />
-                <span className="text-neutral-600 dark:text-neutral-400">
-                  Difficulty:
-                </span>
+                <span className="text-neutral-600 dark:text-neutral-400">Difficulty:</span>
                 <Badge
                   variant="outline"
                   className={`text-xs ${
@@ -323,25 +230,19 @@ export default async function AlternativesPage({
             {project.pricingModel && (
               <div className="flex items-center gap-2">
                 <DollarSign className="h-4 w-4 text-neutral-500" />
-                <span className="text-neutral-600 dark:text-neutral-400">
-                  Pricing:
-                </span>
+                <span className="text-neutral-600 dark:text-neutral-400">Pricing:</span>
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Badge
                         variant="outline"
-                        className={`text-xs border-none ${
-                          pricingModelInfo[project.pricingModel].color
-                        } cursor-help`}
+                        className={`text-xs border-none ${pricingModelInfo[project.pricingModel].color} cursor-help`}
                       >
                         {project.pricingModel}
                       </Badge>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p className="text-sm max-w-xs">
-                        {pricingModelInfo[project.pricingModel].description}
-                      </p>
+                      <p className="text-sm max-w-xs">{pricingModelInfo[project.pricingModel].description}</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
@@ -351,25 +252,19 @@ export default async function AlternativesPage({
             {project.hostingType && (
               <div className="flex items-center gap-2">
                 <Server className="h-4 w-4 text-neutral-500" />
-                <span className="text-neutral-600 dark:text-neutral-400">
-                  Hosting:
-                </span>
+                <span className="text-neutral-600 dark:text-neutral-400">Hosting:</span>
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Badge
                         variant="outline"
-                        className={`text-xs border-none ${
-                          hostingTypeInfo[project.hostingType].color
-                        } cursor-help`}
+                        className={`text-xs border-none ${hostingTypeInfo[project.hostingType].color} cursor-help`}
                       >
                         {project.hostingType}
                       </Badge>
                     </TooltipTrigger>
                     <TooltipContent>
-                      <p className="text-sm max-w-xs">
-                        {hostingTypeInfo[project.hostingType].description}
-                      </p>
+                      <p className="text-sm max-w-xs">{hostingTypeInfo[project.hostingType].description}</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
@@ -379,16 +274,13 @@ export default async function AlternativesPage({
         </div>
 
         {!hasAlternatives ? (
-          <div className="text-center py-16">
+          <div className="text-center py-16 mb-16">
             <div className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
               <Info className="h-8 w-8 text-neutral-500" />
             </div>
-            <h2 className="text-xl font-semibold mb-2">
-              No alternatives listed
-            </h2>
+            <h2 className="text-xl font-semibold mb-2">No alternatives listed</h2>
             <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-              We haven't identified specific alternatives for {project.name}{" "}
-              yet.
+              We haven't identified specific alternatives for {project.name} yet.
             </p>
             <div className="flex gap-4 justify-center">
               <Link href={`/projects/${project.slug}`}>
@@ -401,86 +293,37 @@ export default async function AlternativesPage({
           </div>
         ) : (
           <>
-            {/* Self-hosted Alternatives - Show First */}
-            {selfHostedAlternatives.length > 0 && (
+            {selfHostedAlternativeProjects.length > 0 && (
               <div className="mb-16">
-                <h2 className="text-2xl font-bold mb-6">
-                  Self-hosted alternatives to {project.name}
-                </h2>
+                <h2 className="text-2xl font-bold mb-6">Self-hosted alternatives to {project.name}</h2>
                 <p className="text-neutral-600 dark:text-neutral-400 mb-8">
-                  Other open source projects that also replace the same
-                  proprietary services:
+                  Open source projects that can replace {project.name}:
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {selfHostedAlternatives.map((similarProject) => (
-                    <ProjectCard
-                      key={similarProject.slug}
-                      {...similarProject}
-                      showLicense={true}
-                    />
-                  ))}
+                <div className="grid grid-cols-1 gap-6">
+                  {selfHostedAlternativeProjects
+                    .sort((a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug))
+                    .map((alternativeProject) => (
+                      <AlternativePreviewCard
+                        key={alternativeProject.slug}
+                        project={alternativeProject}
+                        ContentPreview={<div>{alternativeProject.mdxData?.content}</div>}
+                      />
+                    ))}
                 </div>
               </div>
             )}
-
-            {/* Proprietary Service Alternatives */}
-            {project.alternatives?.nonSelfHosted &&
-              project.alternatives.nonSelfHosted.length > 0 && (
-                <div className="mb-16">
-                  <h2 className="text-2xl font-bold mb-6">
-                    {project.name} is an alternative to
-                  </h2>
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-8">
-                    These are the proprietary services that {project.name} can
-                    replace:
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {project.alternatives.nonSelfHosted.map(
-                      (service, index) => (
-                        <Card
-                          key={index}
-                          className="hover:shadow-md transition-shadow"
-                        >
-                          <CardContent className="p-6">
-                            <div className="flex items-center gap-3 mb-3">
-                              <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-red-100 to-red-200 dark:from-red-900/30 dark:to-red-800/20 flex items-center justify-center">
-                                <ExternalLink className="h-5 w-5 text-red-600 dark:text-red-400" />
-                              </div>
-                              <h3 className="font-semibold">{service}</h3>
-                            </div>
-                            <Badge
-                              variant="outline"
-                              className="text-xs text-red-600 dark:text-red-400"
-                            >
-                              Proprietary Service
-                            </Badge>
-                          </CardContent>
-                        </Card>
-                      )
-                    )}
-                  </div>
-                </div>
-              )}
           </>
         )}
 
         {/* Same Category Projects - Paginated */}
-        {project.category && (
-          <SameCategoryProjects
-            projects={sameCategoryProjects}
-            categoryName={project.category}
-          />
-        )}
+        {project.category && <SameCategoryProjects projects={sameCategoryProjects} categoryName={project.category} />}
 
         {/* Call to Action */}
         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-xl p-8 mb-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">
-              Ready to try {project.name}?
-            </h2>
+            <h2 className="text-2xl font-bold mb-4">Ready to try {project.name}?</h2>
             <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-              Deploy {project.name} and take control of your data with this open
-              source alternative.
+              Deploy {project.name} and take control of your data with this open source alternative.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href={`/projects/${project.slug}`}>
@@ -490,10 +333,7 @@ export default async function AlternativesPage({
                 </Button>
               </Link>
               <Button size="lg" variant="outline" className="gap-2" asChild>
-                <Link
-                  href={`https://github.com/${project.github}`}
-                  target="_blank"
-                >
+                <Link href={`https://github.com/${project.github}`} target="_blank">
                   <Github className="h-4 w-4" />
                   View on GitHub
                 </Link>
@@ -507,12 +347,7 @@ export default async function AlternativesPage({
           <h3 className="text-lg font-semibold mb-4">Explore by Category</h3>
           <div className="flex flex-wrap gap-2 justify-center">
             {project.tags.map((category) => (
-              <Link
-                key={category}
-                href={`/categories/${category
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")}`}
-              >
+              <Link key={category} href={`/categories/${category.toLowerCase().replace(/\s+/g, "-")}`}>
                 <Badge
                   variant="outline"
                   className="text-sm px-3 py-1 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:border-blue-300 dark:hover:border-blue-600 transition-colors cursor-pointer"
@@ -522,13 +357,11 @@ export default async function AlternativesPage({
               </Link>
             ))}
           </div>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-3">
-            Find more projects in these tags
-          </p>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-3">Find more projects in these tags</p>
         </div>
       </div>
 
       <Footer />
     </div>
-  );
+  )
 }

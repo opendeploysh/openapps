@@ -23,6 +23,7 @@ interface ProjectsGridProps {
   activeProjectsLength: number
   setCurrentPage: (page: number) => void
   onClearFilters: () => void
+  linkTo?: "project" | "alternatives"
 }
 
 export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
@@ -36,6 +37,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
   activeProjectsLength,
   setCurrentPage,
   onClearFilters,
+  linkTo = "project",
 }) => {
   const hasActiveSearchOrFilter = searchResults != null || activeFilter != null
   const hasNoResults = activeProjectsLength === 0 && hasActiveSearchOrFilter
@@ -112,7 +114,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {currentProjects.map((project) => (
-          <ProjectCard key={project.slug} {...project} />
+          <ProjectCard key={project.slug} {...project} linkTo={linkTo} />
         ))}
       </div>
       {totalPages > 1 && (
