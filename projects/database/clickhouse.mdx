@@ -1,0 +1,87 @@
+---
+slug: clickhouse
+name: ClickHouse
+description: |
+  ClickHouse is an open-source column-oriented database management system that allows generating analytical data reports in real-time. It provides high performance for analytical queries on large datasets.
+logo: https://avatars.githubusercontent.com/u/54801242?s=64&v=4
+category: database
+tags: [database, analytics, datawarehouse, olap, big-data]
+github: ClickHouse/ClickHouse
+urls:
+  website: https://clickhouse.com/
+  discord: https://discord.gg/clickhouse
+alternatives:
+  selfHosted: [druid, pinot]
+  nonSelfHosted: [bigtable, bigquery, snowflake]
+deployment:
+  difficulty: "Advanced"
+  justification: "Requires careful configuration and tuning for optimal performance. Complex distributed architecture needs expertise to manage effectively."
+pricingModel: Free
+hostingType: Hybrid
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Column-oriented OLAP database
+      - name: Target Use Case
+        value: Real-time analytics and reporting
+      - name: Architecture
+        value: Distributed, columnar storage
+  - name: Data Management
+    features:
+      - name: Automatic Sharding
+      - name: Replication
+      - name: Data Compression
+      - name: Schema Evolution
+      - name: Real-time Ingestion
+  - name: Performance
+    features:
+      - name: Vectorized Query Execution
+      - name: Linear Scalability
+      - name: Parallel Processing
+      - name: Column Compression
+      - name: Sub-second Queries
+  - name: Integration
+    features:
+      - name: SQL Support
+      - name: Kafka Integration
+      - name: JDBC/ODBC Drivers
+      - name: REST API
+      - name: Various Data Formats
+  - name: Security
+    features:
+      - name: Role-based Access Control
+      - name: Data Encryption
+      - name: Authentication
+      - name: Audit Logging
+      - name: Row-level Security
+---
+
+ClickHouse is a high-performance, open-source analytical database management system that uses a column-oriented storage approach to deliver exceptional query performance on large datasets.
+
+## Key Features
+
+- **Column-oriented Storage**:
+
+  - Efficient data compression
+  - Vectorized query execution
+  - Parallel processing
+  - Real-time data ingestion
+  - Distributed query processing
+
+- **Performance Optimizations**:
+
+  - Linear scalability
+  - Sub-second query responses
+  - Materialized views
+  - Distributed joins
+  - Adaptive index granularity
+
+- **Integration & Ecosystem**:
+
+  - Native SQL support
+  - Kafka integration
+  - Multiple table engines
+  - Various data formats
+  - Extensive API support

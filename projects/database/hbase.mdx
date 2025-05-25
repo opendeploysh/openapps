@@ -1,0 +1,87 @@
+---
+slug: hbase
+name: Apache HBase
+description: |
+  Apache HBase is an open-source, distributed, versioned, column-oriented database modeled after Google's Bigtable. It provides Bigtable-like capabilities on top of Apache Hadoop for handling massive datasets with billions of rows and millions of columns.
+logo: https://hbase.apache.org/images/favicon.ico
+category: database
+tags: [database, nosql, big-data, hadoop, distributed]
+github: apache/hbase
+urls:
+  website: https://hbase.apache.org/
+alternatives:
+  selfHosted: [cassandra, scylladb]
+  nonSelfHosted: [bigtable, dynamodb]
+deployment:
+  difficulty: "Advanced"
+  justification: "Requires Hadoop ecosystem knowledge and careful configuration for production deployments. Complex architecture with multiple components to manage."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core Features
+    features:
+      - name: Architecture
+        value: Distributed column-oriented store
+      - name: Consistency Model
+        value: Strong consistency
+      - name: Query Language
+        value: Java API, REST, Thrift
+      - name: Scalability
+        value: Linear horizontal scaling
+  - name: Data Management
+    features:
+      - name: Automatic Sharding
+      - name: Data Replication
+      - name: Versioning Support
+      - name: Compression Support
+      - name: Region Splitting/Merging
+  - name: Performance
+    features:
+      - name: Real-time Queries
+      - name: Random Access
+      - name: Automatic Load Balancing
+      - name: Block Cache
+      - name: Bloom Filters
+  - name: Integration
+    features:
+      - name: Hadoop Ecosystem
+      - name: MapReduce Support
+      - name: Spark Integration
+      - name: Phoenix SQL Layer
+      - name: Backup/Restore Tools
+  - name: Operations
+    features:
+      - name: Shell Interface
+      - name: Web UI
+      - name: Monitoring Tools
+      - name: Rolling Upgrades
+      - name: Disaster Recovery
+---
+
+Apache HBase is a distributed, scalable, big data store designed to handle massive tables with billions of rows and millions of columns. It's built on top of HDFS (Hadoop Distributed File System) and provides real-time read/write access to your data.
+
+## Key Features
+
+- **Distributed Architecture**:
+
+  - Linear and modular scalability
+  - Automatic sharding of tables
+  - Consistent reads and writes
+  - Region servers for data hosting
+  - ZooKeeper quorum for coordination
+
+- **Data Model**:
+
+  - Column-oriented storage
+  - Schema-flexible tables
+  - Versioned data cells
+  - Sparse data handling
+  - Row-level atomicity
+
+- **Performance**:
+  - In-memory operation
+  - Block cache for hot data
+  - Bloom filters for queries
+  - Compaction for storage optimization
+  - Write-ahead logging

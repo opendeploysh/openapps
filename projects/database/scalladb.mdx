@@ -1,0 +1,85 @@
+---
+slug: scylladb
+name: ScyllaDB
+description: |
+  ScyllaDB is a high-performance NoSQL database that is API-compatible with Apache Cassandra and Amazon DynamoDB. It uses a shared-nothing approach to increase throughput and storage capacity, delivering order-of-magnitude performance improvements.
+logo: https://avatars.githubusercontent.com/u/14364730?s=64&v=4
+category: database
+tags: [database, nosql, distributed]
+github: scylladb/scylladb
+urls:
+  website: https://www.scylladb.com/
+  discord: https://discord.gg/scylladb
+alternatives:
+  selfHosted: [cassandra]
+  nonSelfHosted: [dynamodb, bigtable]
+deployment:
+  difficulty: "Advanced"
+  justification: "Requires careful configuration and tuning for optimal performance. Complex distributed architecture needs expertise to manage effectively."
+pricingModel: Open-Core
+hostingType: Hybrid
+
+featureGroups:
+  - name: Core Features
+    features:
+      - name: Architecture
+        value: Shared-nothing distributed design
+      - name: API Compatibility
+        value: Cassandra CQL and DynamoDB APIs
+      - name: Performance
+        value: Sub-millisecond latencies
+      - name: Scalability
+        value: Linear horizontal scaling
+  - name: Data Management
+    features:
+      - name: Automatic Sharding
+      - name: Multi-DC Replication
+      - name: Strong Consistency
+      - name: Auto-Compaction
+      - name: Live Backups
+  - name: Performance Features
+    features:
+      - name: Memory Management
+        value: Close-to-hardware architecture
+      - name: I/O Optimization
+        value: Asynchronous processing
+      - name: Resource Scheduling
+        value: Advanced task scheduling
+      - name: Cache Management
+        value: Row-level cache
+  - name: Enterprise Features
+    features:
+      - name: Monitoring Tools
+      - name: Security Features
+      - name: Multi-tenancy
+      - name: Advanced Replication
+      - name: Enterprise Support
+---
+
+ScyllaDB is a high-performance NoSQL database designed to be a drop-in replacement for Apache Cassandra, offering significantly better performance through its close-to-hardware design and advanced C++ implementation.
+
+## Key Features
+
+- **High Performance Architecture**:
+
+  - Close-to-hardware design
+  - Shared-nothing approach
+  - Advanced memory management
+  - Optimized I/O scheduling
+  - Lock-free implementation
+
+- **Compatibility & Integration**:
+
+  - Cassandra Query Language (CQL) support
+  - DynamoDB API compatibility
+  - Kafka integration
+  - Kubernetes operator
+  - Prometheus monitoring
+
+- **Enterprise Capabilities**:
+
+  - Multi-datacenter replication
+  - Advanced security features
+  - Rolling upgrades
+  - Live backups
+  - Monitoring and management tools

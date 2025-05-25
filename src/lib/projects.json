@@ -63,136 +63,6 @@
     }
   },
   {
-    "slug": "bigtable",
-    "name": "Cloud Bigtable",
-    "description": "Cloud Bigtable is Google's fully managed, scalable NoSQL database service designed for large analytical and operational workloads. It powers many Google services including Search, Analytics, Maps and Gmail.\n",
-    "license": "Proprietary",
-    "hostingType": "Cloud-Only",
-    "pricingModel": "Paid Only",
-    "logo": "/images/bigtable.svg",
-    "heroImage": "https://cloud.google.com/static/bigtable/docs/images/bigtable-architecture.svg",
-    "category": "analytics",
-    "tags": [
-      "analytics",
-      "datawarehouse",
-      "nosql",
-      "big-data"
-    ],
-    "urls": {
-      "website": "https://cloud.google.com/bigtable"
-    },
-    "alternatives": {
-      "selfHosted": [
-        "clickhouse",
-        "cassandra",
-        "scylladb"
-      ],
-      "nonSelfHosted": [
-        "dynamodb",
-        "azure-cosmos-db"
-      ]
-    },
-    "featureGroups": [
-      {
-        "name": "Core",
-        "features": [
-          {
-            "name": "Focus",
-            "value": "Wide-column NoSQL database"
-          },
-          {
-            "name": "Target Use Case",
-            "value": "Large-scale analytics and operational workloads"
-          },
-          {
-            "name": "Architecture",
-            "value": "Distributed, columnar storage"
-          }
-        ]
-      },
-      {
-        "name": "Data Management",
-        "features": [
-          {
-            "name": "Automatic Sharding"
-          },
-          {
-            "name": "Replication"
-          },
-          {
-            "name": "Data Versioning"
-          },
-          {
-            "name": "Automatic Compaction"
-          },
-          {
-            "name": "Schema Flexibility"
-          }
-        ]
-      },
-      {
-        "name": "Performance",
-        "features": [
-          {
-            "name": "Single-digit Millisecond Latency"
-          },
-          {
-            "name": "Linear Scalability"
-          },
-          {
-            "name": "Automatic Load Balancing"
-          },
-          {
-            "name": "SSD Performance"
-          },
-          {
-            "name": "High Throughput"
-          }
-        ]
-      },
-      {
-        "name": "Integration",
-        "features": [
-          {
-            "name": "HBase API Compatible"
-          },
-          {
-            "name": "Google Cloud Integration"
-          },
-          {
-            "name": "Dataflow/Hadoop Support"
-          },
-          {
-            "name": "Streaming Analytics"
-          },
-          {
-            "name": "Export/Import Tools"
-          }
-        ]
-      },
-      {
-        "name": "Security",
-        "features": [
-          {
-            "name": "IAM Integration"
-          },
-          {
-            "name": "Encryption at Rest"
-          },
-          {
-            "name": "In-transit Encryption"
-          },
-          {
-            "name": "Audit Logging"
-          },
-          {
-            "name": "VPC Service Controls"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "slug": "druid",
     "name": "Apache Druid",
     "description": "Apache Druid is a high performance, real-time analytics database that delivers sub-second OLAP queries on streaming and batch data at scale and under load.\n",
@@ -3349,6 +3219,525 @@
           },
           {
             "name": "Redis Cache"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "bigtable",
+    "name": "Cloud Bigtable",
+    "description": "Cloud Bigtable is Google's fully managed, scalable NoSQL database service designed for large analytical and operational workloads. It powers many Google services including Search, Analytics, Maps and Gmail.\n",
+    "license": "Proprietary",
+    "hostingType": "Cloud-Only",
+    "pricingModel": "Paid Only",
+    "logo": "/images/bigtable.svg",
+    "category": "database",
+    "tags": [
+      "database",
+      "analytics",
+      "datawarehouse",
+      "nosql",
+      "big-data"
+    ],
+    "urls": {
+      "website": "https://cloud.google.com/bigtable"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "clickhouse",
+        "cassandra",
+        "scylladb",
+        "hbase"
+      ],
+      "nonSelfHosted": [
+        "dynamodb",
+        "azure-cosmos-db"
+      ]
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Wide-column NoSQL database"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Large-scale analytics and operational workloads"
+          },
+          {
+            "name": "Architecture",
+            "value": "Distributed, columnar storage"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Automatic Sharding"
+          },
+          {
+            "name": "Replication"
+          },
+          {
+            "name": "Data Versioning"
+          },
+          {
+            "name": "Automatic Compaction"
+          },
+          {
+            "name": "Schema Flexibility"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Single-digit Millisecond Latency"
+          },
+          {
+            "name": "Linear Scalability"
+          },
+          {
+            "name": "Automatic Load Balancing"
+          },
+          {
+            "name": "SSD Performance"
+          },
+          {
+            "name": "High Throughput"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "HBase API Compatible"
+          },
+          {
+            "name": "Google Cloud Integration"
+          },
+          {
+            "name": "Dataflow/Hadoop Support"
+          },
+          {
+            "name": "Streaming Analytics"
+          },
+          {
+            "name": "Export/Import Tools"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "IAM Integration"
+          },
+          {
+            "name": "Encryption at Rest"
+          },
+          {
+            "name": "In-transit Encryption"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "VPC Service Controls"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "clickhouse",
+    "name": "ClickHouse",
+    "description": "ClickHouse is an open-source column-oriented database management system that allows generating analytical data reports in real-time. It provides high performance for analytical queries on large datasets.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/54801242?s=64&v=4",
+    "category": "database",
+    "tags": [
+      "database",
+      "analytics",
+      "datawarehouse",
+      "olap",
+      "big-data"
+    ],
+    "github": "ClickHouse/ClickHouse",
+    "urls": {
+      "website": "https://clickhouse.com/",
+      "discord": "https://discord.gg/clickhouse"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "druid",
+        "pinot"
+      ],
+      "nonSelfHosted": [
+        "bigtable",
+        "bigquery",
+        "snowflake"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Requires careful configuration and tuning for optimal performance. Complex distributed architecture needs expertise to manage effectively."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Column-oriented OLAP database"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Real-time analytics and reporting"
+          },
+          {
+            "name": "Architecture",
+            "value": "Distributed, columnar storage"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Automatic Sharding"
+          },
+          {
+            "name": "Replication"
+          },
+          {
+            "name": "Data Compression"
+          },
+          {
+            "name": "Schema Evolution"
+          },
+          {
+            "name": "Real-time Ingestion"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Vectorized Query Execution"
+          },
+          {
+            "name": "Linear Scalability"
+          },
+          {
+            "name": "Parallel Processing"
+          },
+          {
+            "name": "Column Compression"
+          },
+          {
+            "name": "Sub-second Queries"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "SQL Support"
+          },
+          {
+            "name": "Kafka Integration"
+          },
+          {
+            "name": "JDBC/ODBC Drivers"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Various Data Formats"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Role-based Access Control"
+          },
+          {
+            "name": "Data Encryption"
+          },
+          {
+            "name": "Authentication"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "Row-level Security"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hbase",
+    "name": "Apache HBase",
+    "description": "Apache HBase is an open-source, distributed, versioned, column-oriented database modeled after Google's Bigtable. It provides Bigtable-like capabilities on top of Apache Hadoop for handling massive datasets with billions of rows and millions of columns.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://hbase.apache.org/images/favicon.ico",
+    "category": "database",
+    "tags": [
+      "database",
+      "nosql",
+      "big-data",
+      "hadoop",
+      "distributed"
+    ],
+    "github": "apache/hbase",
+    "urls": {
+      "website": "https://hbase.apache.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "cassandra",
+        "scylladb"
+      ],
+      "nonSelfHosted": [
+        "bigtable",
+        "dynamodb"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Requires Hadoop ecosystem knowledge and careful configuration for production deployments. Complex architecture with multiple components to manage."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Features",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "Distributed column-oriented store"
+          },
+          {
+            "name": "Consistency Model",
+            "value": "Strong consistency"
+          },
+          {
+            "name": "Query Language",
+            "value": "Java API, REST, Thrift"
+          },
+          {
+            "name": "Scalability",
+            "value": "Linear horizontal scaling"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Automatic Sharding"
+          },
+          {
+            "name": "Data Replication"
+          },
+          {
+            "name": "Versioning Support"
+          },
+          {
+            "name": "Compression Support"
+          },
+          {
+            "name": "Region Splitting/Merging"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Real-time Queries"
+          },
+          {
+            "name": "Random Access"
+          },
+          {
+            "name": "Automatic Load Balancing"
+          },
+          {
+            "name": "Block Cache"
+          },
+          {
+            "name": "Bloom Filters"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Hadoop Ecosystem"
+          },
+          {
+            "name": "MapReduce Support"
+          },
+          {
+            "name": "Spark Integration"
+          },
+          {
+            "name": "Phoenix SQL Layer"
+          },
+          {
+            "name": "Backup/Restore Tools"
+          }
+        ]
+      },
+      {
+        "name": "Operations",
+        "features": [
+          {
+            "name": "Shell Interface"
+          },
+          {
+            "name": "Web UI"
+          },
+          {
+            "name": "Monitoring Tools"
+          },
+          {
+            "name": "Rolling Upgrades"
+          },
+          {
+            "name": "Disaster Recovery"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "scylladb",
+    "name": "ScyllaDB",
+    "description": "ScyllaDB is a high-performance NoSQL database that is API-compatible with Apache Cassandra and Amazon DynamoDB. It uses a shared-nothing approach to increase throughput and storage capacity, delivering order-of-magnitude performance improvements.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/14364730?s=64&v=4",
+    "category": "database",
+    "tags": [
+      "database",
+      "nosql",
+      "distributed"
+    ],
+    "github": "scylladb/scylladb",
+    "urls": {
+      "website": "https://www.scylladb.com/",
+      "discord": "https://discord.gg/scylladb"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "cassandra"
+      ],
+      "nonSelfHosted": [
+        "dynamodb",
+        "bigtable"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Requires careful configuration and tuning for optimal performance. Complex distributed architecture needs expertise to manage effectively."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Features",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "Shared-nothing distributed design"
+          },
+          {
+            "name": "API Compatibility",
+            "value": "Cassandra CQL and DynamoDB APIs"
+          },
+          {
+            "name": "Performance",
+            "value": "Sub-millisecond latencies"
+          },
+          {
+            "name": "Scalability",
+            "value": "Linear horizontal scaling"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Automatic Sharding"
+          },
+          {
+            "name": "Multi-DC Replication"
+          },
+          {
+            "name": "Strong Consistency"
+          },
+          {
+            "name": "Auto-Compaction"
+          },
+          {
+            "name": "Live Backups"
+          }
+        ]
+      },
+      {
+        "name": "Performance Features",
+        "features": [
+          {
+            "name": "Memory Management",
+            "value": "Close-to-hardware architecture"
+          },
+          {
+            "name": "I/O Optimization",
+            "value": "Asynchronous processing"
+          },
+          {
+            "name": "Resource Scheduling",
+            "value": "Advanced task scheduling"
+          },
+          {
+            "name": "Cache Management",
+            "value": "Row-level cache"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "Monitoring Tools"
+          },
+          {
+            "name": "Security Features"
+          },
+          {
+            "name": "Multi-tenancy"
+          },
+          {
+            "name": "Advanced Replication"
+          },
+          {
+            "name": "Enterprise Support"
           }
         ]
       }

@@ -1,22 +1,21 @@
-import projectData from "./projects.json";
-import {categories} from "./categories";
-import {HostingType} from "./hosting-type";
-import githubData from "./projects-github.json";
+import projectData from "./projects.json"
+import { HostingType } from "./hosting-type"
+import githubData from "./projects-github.json"
 
-import {RestEndpointMethodTypes} from "@octokit/rest";
-import {z} from "zod";
-import {PricingModel} from "./pricing-model";
+import { RestEndpointMethodTypes } from "@octokit/rest"
+import { z } from "zod"
+import { PricingModel } from "./pricing-model"
 
 export const feature = z.object({
   name: z.string(),
   description: z.string().optional(),
   value: z.string().optional(),
-});
+})
 
 export const featureGroup = z.object({
   name: z.string(),
   features: z.array(feature),
-});
+})
 
 export const mdxProjectData = z.object({
   slug: z.string(),
@@ -33,13 +32,13 @@ export const mdxProjectData = z.object({
     .optional()
     .refine((val) => {
       if (!val) {
-        console.warn("Project hero image not set");
-        return true;
+        console.warn("Project hero image not set")
+        return true
       }
-      return true;
+      return true
     }),
 
-  category: z.enum(categories),
+  category: z.string(),
   tags: z.array(z.string()),
 
   github: z
@@ -71,9 +70,9 @@ export const mdxProjectData = z.object({
   language: z.string().optional(),
 
   featureGroups: z.array(featureGroup).optional(),
-});
+})
 
-export type ProjectMeta = z.infer<typeof mdxProjectData>;
+export type ProjectMeta = z.infer<typeof mdxProjectData>
 
 export const githubProjectData = z.object({
   lastCommitDate: z.string().transform((str) => new Date(str)),
@@ -82,27 +81,27 @@ export const githubProjectData = z.object({
   forks: z.number(),
   watchers: z.number(),
   issues: z.number(),
-});
+})
 
-export const projects = projectData as unknown as Array<ProjectMeta>;
+export const projects = projectData as unknown as Array<ProjectMeta>
 export const projectsWithGitHubData = githubData as unknown as Record<
   string,
   {
-    lastCommitDate: string;
-    languages: Record<string, number>;
+    lastCommitDate: string
+    languages: Record<string, number>
   } & RestEndpointMethodTypes["repos"]["get"]["response"]["data"]
->;
+>
 
 /**
  * Computes a popularity score for a project based on GitHub metrics
  * Higher score means more popular
  */
 export const getProjectPopularity = (slug: string): number => {
-  const project = projects.find((p) => p.slug === slug);
-  if (project?.popularity) return project.popularity;
+  const project = projects.find((p) => p.slug === slug)
+  if (project?.popularity) return project.popularity
 
-  const githubData = projectsWithGitHubData[slug];
-  if (!githubData || !project) return 0;
+  const githubData = projectsWithGitHubData[slug]
+  if (!githubData || !project) return 0
 
   // Weight different factors that contribute to popularity
   const weights = {
@@ -111,7 +110,7 @@ export const getProjectPopularity = (slug: string): number => {
     watchers: 0.15, // 15% weight for watchers
     issues: 0.1, // 10% weight for open issues
     lastCommit: 0.2, // 20% weight for recency
-  };
+  }
 
   const scores = {
     stars: githubData.stargazers_count || 0,
@@ -121,21 +120,16 @@ export const getProjectPopularity = (slug: string): number => {
     lastCommit: githubData.lastCommitDate
       ? Math.max(
           0,
-          Math.exp(
-            -(
-              (Date.now() - new Date(githubData.lastCommitDate).getTime()) /
-              (30 * 24 * 60 * 60 * 1000)
-            )
-          )
+          Math.exp(-((Date.now() - new Date(githubData.lastCommitDate).getTime()) / (30 * 24 * 60 * 60 * 1000)))
         )
       : 0,
-  };
+  }
 
   // Calculate weighted score and scale to 0-100
   const score =
     Object.entries(weights).reduce((total, [metric, weight]) => {
-      return total + scores[metric as keyof typeof scores] * weight;
-    }, 0) / 100;
+      return total + scores[metric as keyof typeof scores] * weight
+    }, 0) / 100
 
-  return Math.round(score);
-};
+  return Math.round(score)
+}
