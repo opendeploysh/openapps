@@ -27,7 +27,7 @@ export const categories = [
   "wikis",
   "calendar",
   "groupware",
-  "notes",
+  "note-taking",
   "office",
   "dashboards",
   "polls",
