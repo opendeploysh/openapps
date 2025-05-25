@@ -8160,6 +8160,7 @@
     "logo": "https://amusewiki.org/favicon.ico",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "publishing",
       "archiving"
@@ -8225,6 +8226,7 @@
     "logo": "https://avatars.githubusercontent.com/u/7289936?s=64&v=4",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8256,6 +8258,7 @@
     "heroImage": "/images/docmost.png",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8287,6 +8290,7 @@
     "heroImage": "https://github.com/documize/community/blob/master/screenshot.png?raw=true",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8317,6 +8321,7 @@
     "logo": "https://www.dokuwiki.org/lib/tpl/dokuwiki/images/logo.png",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8348,6 +8353,7 @@
     "logo": "https://raw.githubusercontent.com/Alamantus/FeatherWiki/master/logo.svg",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "personal-notes"
@@ -8379,6 +8385,7 @@
     "logo": "https://avatars.githubusercontent.com/u/3044?s=64&v=4",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8410,6 +8417,7 @@
     "logo": "https://avatars.githubusercontent.com/u/3840027?s=64&v=4",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8441,6 +8449,7 @@
     "logo": "https://www.mediawiki.org/static/images/project-logos/mediawikiwiki.png",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8472,6 +8481,7 @@
     "logo": "https://mycorrhiza.wiki/static/favicon.ico",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8503,6 +8513,7 @@
     "logo": "https://otterwiki.com/static/img/otterhead.png",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8534,6 +8545,7 @@
     "logo": "https://raw.githubusercontent.com/sbrl/Pepperminty-Wiki/master/logo.png",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8565,6 +8577,7 @@
     "logo": "https://raw.githubusercontent.com/ryanlelek/Raneto/main/logo/logo_readme.png",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management"
     ],
@@ -8595,6 +8608,7 @@
     "logo": "https://avatars.githubusercontent.com/u/79505?s=64&v=4",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "personal-notes"
@@ -8627,6 +8641,7 @@
     "heroImage": "/images/wiki.js.png",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"
@@ -8657,6 +8672,7 @@
     "logo": "https://www.xwiki.org/xwiki/resources/icons/xwiki/favicon144.png",
     "category": "wikis",
     "tags": [
+      "wiki",
       "documentation",
       "knowledge-management",
       "collaboration"

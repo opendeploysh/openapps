@@ -129,8 +129,7 @@ export const ProjectCard = ({
             </div>
             <div className="flex-grow border-t" />
             <span className="flex-shrink-0">
-              {getProjectPopularity(slug)}{" "}
-              <span className="text-xs text-muted-foreground">/ 100</span>
+              {getProjectPopularity(slug).toLocaleString()}
             </span>
           </div>
 

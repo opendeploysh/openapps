@@ -204,6 +204,10 @@ export const ProjectFilters = ({
     const updatedFilters = currentCategoryFilters.includes(category)
       ? currentCategoryFilters.filter((f) => f !== category)
       : [...currentCategoryFilters, category];
+
+    if (enableUrlSync) {
+      setInternalCategoryFilters(updatedFilters);
+    }
     onFilterChange?.("category", updatedFilters);
     updateURL(
       updatedFilters,
@@ -218,6 +222,10 @@ export const ProjectFilters = ({
     const updatedFilters = currentDifficultyFilters.includes(difficulty)
       ? currentDifficultyFilters.filter((f) => f !== difficulty)
       : [...currentDifficultyFilters, difficulty];
+
+    if (enableUrlSync) {
+      setInternalDifficultyFilters(updatedFilters);
+    }
     onFilterChange?.("difficulty", updatedFilters);
     updateURL(
       currentCategoryFilters,
@@ -232,6 +240,10 @@ export const ProjectFilters = ({
     const updatedFilters = currentPricingFilters.includes(pricing)
       ? currentPricingFilters.filter((f) => f !== pricing)
       : [...currentPricingFilters, pricing];
+
+    if (enableUrlSync) {
+      setInternalPricingFilters(updatedFilters);
+    }
     onFilterChange?.("pricing", updatedFilters);
     updateURL(
       currentCategoryFilters,
@@ -246,6 +258,10 @@ export const ProjectFilters = ({
     const updatedFilters = currentHostingFilters.includes(hosting)
       ? currentHostingFilters.filter((f) => f !== hosting)
       : [...currentHostingFilters, hosting];
+
+    if (enableUrlSync) {
+      setInternalHostingFilters(updatedFilters);
+    }
     onFilterChange?.("hosting", updatedFilters);
     updateURL(
       currentCategoryFilters,
@@ -257,6 +273,12 @@ export const ProjectFilters = ({
   };
 
   const handleClearAllFilters = () => {
+    if (enableUrlSync) {
+      setInternalCategoryFilters([]);
+      setInternalDifficultyFilters([]);
+      setInternalPricingFilters([]);
+      setInternalHostingFilters([]);
+    }
     onFilterChange?.("category", []);
     onFilterChange?.("difficulty", []);
     onFilterChange?.("pricing", []);
@@ -301,22 +323,6 @@ export const ProjectFilters = ({
       );
     }
   };
-
-  // Update internal state when filter changes are triggered
-  useEffect(() => {
-    if (enableUrlSync) {
-      setInternalCategoryFilters(currentCategoryFilters);
-      setInternalDifficultyFilters(currentDifficultyFilters);
-      setInternalPricingFilters(currentPricingFilters);
-      setInternalHostingFilters(currentHostingFilters);
-    }
-  }, [
-    enableUrlSync,
-    currentCategoryFilters,
-    currentDifficultyFilters,
-    currentPricingFilters,
-    currentHostingFilters,
-  ]);
 
   return (
     <section className={`mb-4 ${className}`}>

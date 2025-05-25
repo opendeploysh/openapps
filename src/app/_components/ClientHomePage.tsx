@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 import { matchSorter } from "match-sorter";
-import { ProjectMeta, projects, projectsWithGitHubData } from "@/lib/projects";
+import {
+  ProjectMeta,
+  projects,
+  projectsWithGitHubData,
+  getProjectPopularity,
+} from "@/lib/projects";
 import { ProjectFilters, FilterOption } from "@/components/filters";
 import { ProjectsGrid } from "./ProjectsGrid";
 import {
@@ -140,6 +145,10 @@ export default function ClientHomePage() {
             difficultyOrderDesc[b.deployment?.difficulty || "Medium"];
           return bDiff - aDiff;
         });
+      case "popularity":
+        return sorted.sort(
+          (a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug)
+        );
       case "relevance":
       default:
         if (searchResults) {

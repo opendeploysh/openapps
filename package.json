@@ -10,7 +10,7 @@
     "lint": "next lint",
     "generate": "tsx scripts/generate-projects.ts",
     "get-github-data": "node scripts/get-github-data.js",
-    "scrape-for-projects": "tsx scripts/scrape-for-projects.ts"
+    "create-project": "tsx scripts/create-project.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

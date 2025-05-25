@@ -26,7 +26,7 @@ export const HeroHeader = ({ projectCount }: HeroHeaderProps) => {
 
         <div className="max-w-2xl mx-auto space-y-3">
           <p className="text-lg text-neutral-600 dark:text-neutral-400">
-            Find, compare, and deploy open source alternatives.
+            Find, compare, and deploy SaaS alternatives.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-500">
             Compare features · Deploy yourself · Managed services available
@@ -41,16 +41,16 @@ export const HeroHeader = ({ projectCount }: HeroHeaderProps) => {
         </span>
       </div>
 
-      <div className="flex gap-8 items-center justify-center">
+      {/* <div className="flex gap-8 items-center justify-center">
         <div className="w-16 h-1 rounded-full bg-gradient-to-r from-blue-500 to-transparent"></div>
         <div className="flex border border-neutral-200 dark:border-neutral-800 rounded-full px-4 py-1 text-xs">
           <span className="text-blue-600 dark:text-blue-400 font-medium">
             Powered by
           </span>
-          <span className="ml-1.5">OpenApps</span>
+          <span className="ml-1.5">OpenDeploy</span>
         </div>
         <div className="w-16 h-1 rounded-full bg-gradient-to-l from-blue-500 to-transparent"></div>
-      </div>
+      </div> */}
     </header>
   );
 };

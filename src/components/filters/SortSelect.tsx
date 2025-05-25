@@ -21,6 +21,7 @@ interface SortSelectProps {
 
 const defaultSortOptions: SortOption[] = [
   { value: "relevance", label: "Most Relevant" },
+  { value: "popularity", label: "Most Popular" },
   { value: "stars", label: "Most Stars" },
   { value: "name", label: "Name (A-Z)" },
   { value: "difficulty-asc", label: "Easiest First" },

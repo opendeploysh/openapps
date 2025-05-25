@@ -17,7 +17,6 @@ export const DeploymentGuide = () => {
       </div>
 
       <div className="relative p-8 md:p-10 grid md:grid-cols-2 gap-8 items-center">
-        {/* Left side - Text content */}
         <div className="space-y-4">
           <div className="inline-block text-blue-600 dark:text-blue-400 bg-white dark:bg-blue-900/50 rounded-full px-3 py-1 text-xs font-medium mb-1 shadow-sm">
             Getting Started Guide
@@ -105,7 +104,6 @@ export const DeploymentGuide = () => {
           </div>
         </div>
 
-        {/* Right side - Visual content */}
         <div className="hidden md:block bg-white dark:bg-neutral-800 rounded-lg overflow-hidden shadow-lg">
           <div className="border-b border-neutral-200 dark:border-neutral-700 py-3 px-4 flex items-center">
             <div className="flex space-x-1.5">

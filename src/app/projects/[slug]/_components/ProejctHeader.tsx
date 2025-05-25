@@ -226,8 +226,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
 
             <div className="border-t flex-grow" />
             <span className="font-medium">
-              {getProjectPopularity(project.slug)}{" "}
-              <span className="text-xs text-muted-foreground">/ 100</span>
+              {getProjectPopularity(project.slug).toLocaleString()}
             </span>
           </div>
 

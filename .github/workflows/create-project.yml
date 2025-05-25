@@ -1,0 +1,90 @@
+name: Create Project MDX
+
+on:
+  workflow_dispatch:
+    inputs:
+      github_url:
+        description: "GitHub repository URL (e.g., https://github.com/owner/repo)"
+        required: true
+        type: string
+
+jobs:
+  create-project:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate project MDX
+        id: generate-mdx
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          # Run the existing TypeScript script
+          npx tsx scripts/create-project.ts ${{ github.event.inputs.github_url }}
+
+          # Extract slug and category from the generated file
+          # Find the most recently created .mdx file
+          LATEST_MDX=$(find projects -name "*.mdx" -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -d' ' -f2-)
+
+          if [ -z "$LATEST_MDX" ]; then
+            echo "No MDX file found"
+            exit 1
+          fi
+
+          # Extract slug and category from the file path and frontmatter
+          SLUG=$(basename "$LATEST_MDX" .mdx)
+          CATEGORY=$(dirname "$LATEST_MDX" | sed 's|projects/||')
+
+          # Extract project name from frontmatter for PR title
+          PROJECT_NAME=$(grep "^name:" "$LATEST_MDX" | sed 's/name: *//')
+
+          echo "file_path=$LATEST_MDX" >> $GITHUB_OUTPUT
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "category=$CATEGORY" >> $GITHUB_OUTPUT
+          echo "project_name=$PROJECT_NAME" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Add ${{ steps.generate-mdx.outputs.project_name }} project"
+          title: "Add ${{ steps.generate-mdx.outputs.project_name }} (${{ steps.generate-mdx.outputs.slug }})"
+          body: |
+            ## New Project Addition
+
+            **Repository**: ${{ github.event.inputs.github_url }}
+            **Category**: ${{ steps.generate-mdx.outputs.category }}
+            **Generated File**: `${{ steps.generate-mdx.outputs.file_path }}`
+
+            ### AI-Generated Content
+            This project MDX file was automatically generated using OpenAI based on the repository content and our standardized template.
+
+            ### Review Checklist
+            - [ ] Verify project information is accurate
+            - [ ] Check feature groups and categories match existing projects in the same category
+            - [ ] Validate alternatives and tags are appropriate
+            - [ ] Confirm deployment difficulty assessment is realistic
+            - [ ] Review pricing model and hosting type are correct
+            - [ ] Ensure content follows the established format and style
+            - [ ] Verify all required frontmatter fields are present
+
+            ---
+            *This PR was automatically generated using the Create Project workflow with AI assistance.*
+          branch: add-project-${{ steps.generate-mdx.outputs.slug }}
+          delete-branch: true

@@ -105,41 +105,23 @@ export const getProjectPopularity = (slug: string): number => {
     forks: 0.2, // 20% weight for forks
     watchers: 0.15, // 15% weight for watchers
     issues: 0.1, // 10% weight for open issues
-    lastCommit: 0.15, // 15% weight for recency
+    lastCommit: 0.2, // 20% weight for recency
   };
 
-  // Get max values across all projects for normalization
-  const maxStats = {
-    stars: Math.max(
-      ...Object.values(projectsWithGitHubData).map(
-        (d) => d.stargazers_count || 0
-      )
-    ),
-    forks: Math.max(
-      ...Object.values(projectsWithGitHubData).map((d) => d.forks || 0)
-    ),
-    watchers: Math.max(
-      ...Object.values(projectsWithGitHubData).map(
-        (d) => d.subscribers_count || 0
-      )
-    ),
-    issues: Math.max(
-      ...Object.values(projectsWithGitHubData).map((d) => d.open_issues || 0)
-    ),
-  };
-
-  // Calculate normalized scores (0-1 range)
   const scores = {
-    stars: (githubData.stargazers_count || 0) / maxStats.stars,
-    forks: (githubData.forks || 0) / maxStats.forks,
-    watchers: (githubData.subscribers_count || 0) / maxStats.watchers,
-    issues: (githubData.open_issues || 0) / maxStats.issues,
+    stars: githubData.stargazers_count || 0,
+    forks: githubData.forks || 0,
+    watchers: githubData.subscribers_count || 0,
+    issues: githubData.open_issues || 0,
     lastCommit: githubData.lastCommitDate
       ? Math.max(
           0,
-          1 -
-            (Date.now() - new Date(githubData.lastCommitDate).getTime()) /
-              (365 * 24 * 60 * 60 * 1000)
+          Math.exp(
+            -(
+              (Date.now() - new Date(githubData.lastCommitDate).getTime()) /
+              (30 * 24 * 60 * 60 * 1000)
+            )
+          )
         )
       : 0,
   };
@@ -148,7 +130,7 @@ export const getProjectPopularity = (slug: string): number => {
   const score =
     Object.entries(weights).reduce((total, [metric, weight]) => {
       return total + scores[metric as keyof typeof scores] * weight;
-    }, 0) * 100;
+    }, 0) / 100;
 
   return Math.round(score);
 };

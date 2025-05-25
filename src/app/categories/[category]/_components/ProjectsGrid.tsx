@@ -4,7 +4,12 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectFilters, FilterOption } from "@/components/filters";
-import { projects, projectsWithGitHubData, ProjectMeta } from "@/lib/projects";
+import {
+  projects,
+  projectsWithGitHubData,
+  ProjectMeta,
+  getProjectPopularity,
+} from "@/lib/projects";
 import { matchSorter } from "match-sorter";
 import {
   Pagination,
@@ -125,6 +130,10 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
             difficultyOrderDesc[b.deployment?.difficulty || "Medium"];
           return bDiff - aDiff;
         });
+      case "popularity":
+        return sorted.sort(
+          (a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug)
+        );
       default:
         return sorted;
     }

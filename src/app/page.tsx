@@ -1,7 +1,6 @@
 import { projects } from "@/lib/projects";
 import { Navbar } from "@/components/Navbar";
 import { HeroHeader } from "./_components/HeroHeader";
-import { DeploymentGuide } from "./_components/DeploymentGuide";
 import { RequestCTA } from "./_components/RequestCTA";
 import { Footer } from "../components/Footer";
 import ClientHomePage from "./_components/ClientHomePage";
@@ -16,7 +15,7 @@ export default function Home() {
 
         <ClientHomePage />
 
-        <DeploymentGuide />
+        {/* <DeploymentGuide /> */}
 
         <RequestCTA />
 

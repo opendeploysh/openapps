@@ -1,4 +1,4 @@
-import { Container, Github, Heart } from "lucide-react";
+import { FolderOpen, Heart } from "lucide-react";
 import Link from "next/link";
 import { GitHubContributeButton } from "./GitHubEditButton";
 
@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="flex items-center gap-1.5 mb-4">
           <div className="w-6 h-6 rounded-md bg-blue-600 flex items-center justify-center">
             <div className="text-white font-bold text-xs">
-              <Container className="w-4 h-4" />
+              <FolderOpen className="w-4 h-4" />
             </div>
           </div>
           <div className="text-sm font-medium">OpenApps</div>
@@ -24,31 +24,22 @@ export const Footer = () => {
 
         <div className="flex space-x-6 mb-6">
           <a
-            href="#"
+            href="/categories"
             className="text-xs text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
           >
-            About
+            Categories
           </a>
           <a
-            href="#"
+            href="/licenses"
             className="text-xs text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
           >
-            Documentation
+            Licenses
           </a>
-          <Link
-            href="https://github.com/opendeploysh/openapps"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors flex items-center gap-1"
-          >
-            <Github className="w-3 h-3" />
-            GitHub
-          </Link>
           <a
-            href="#"
+            href="/compare"
             className="text-xs text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
           >
-            Contact
+            Compare
           </a>
         </div>
 
