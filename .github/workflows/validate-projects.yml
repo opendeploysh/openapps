@@ -1,0 +1,82 @@
+name: Validate Projects
+
+on:
+  pull_request:
+    paths:
+      - "projects/**/*.mdx"
+      - "src/lib/projects.ts"
+      - "scripts/generate-projects.ts"
+  push:
+    branches:
+      - main
+    paths:
+      - "projects/**/*.mdx"
+      - "src/lib/projects.ts"
+      - "scripts/generate-projects.ts"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate project schemas
+        run: |
+          echo "🔍 Validating all project MDX files..."
+          pnpm run generate -- --no-write --error-on-invalid
+
+      - name: Check for schema changes
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "📋 Checking if projects.json would change..."
+
+          # Generate the projects.json file
+          pnpm run generate
+
+          # Check if there are any changes
+          if git diff --exit-code src/lib/projects.json; then
+            echo "✅ No changes to projects.json"
+          else
+            echo "❌ projects.json would be updated by this PR"
+            echo ""
+            echo "The following changes would be made to projects.json:"
+            git diff src/lib/projects.json
+            echo ""
+            echo "💡 This usually means:"
+            echo "  - New projects were added"
+            echo "  - Existing project metadata was modified"
+            echo "  - Project validation schemas were updated"
+            echo ""
+            echo "ℹ️  This is informational only and won't fail the build."
+          fi
