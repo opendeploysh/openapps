@@ -1,0 +1,122 @@
+---
+slug: blinko
+name: Blinko
+heroImage: https://raw.githubusercontent.com/blinkospace/blinko/main/app/public/home.webp
+description: |
+  Blinko is an open-source, self-hosted AI-powered note-taking tool that lets you capture, organize, and search your ideas with full privacy. It combines fast plain-text/Markdown editing with AI retrieval and runs entirely on your own infrastructure.
+logo: https://avatars.githubusercontent.com/u/210232737?s=64&v=4
+category: note-taking
+tags: [note-taking, ai, self-hosted, privacy, markdown]
+github: blinkospace/blinko
+urls:
+  website: https://blinko.space
+alternatives:
+  selfHosted: [logseq, outline, memos, joplin]
+  nonSelfHosted: [notion, evernote, microsoft-onenote, google-keep]
+license: MIT
+deployment:
+  difficulty: Medium
+  justification: Docker-Compose setup is provided but requires configuring a Postgres database, vector store, and environment variables.
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: AI-enhanced personal note management
+      - name: Target Use Case
+        value: Quick capture and retrieval of thoughts and knowledge
+      - name: Architecture
+        value:(Next.js + Tauri with Postgres & RAG search
+  - name: Note-Taking
+    features:
+      - name: Instant plain-text capture
+      - name: Full Markdown support
+      - name: Tag & folder organization
+      - name: Rich-media attachments
+      - name: Keyboard-first editing
+      - name: Cross-platform Tauri apps
+  - name: AI & Search
+    features:
+      - name: RAG semantic search
+      - name: Natural-language querying
+      - name: OpenAI / LLM backend choice
+      - name: AI summary generation
+      - name: Contextual recommendations
+      - name: Embedding index with vector DB
+  - name: Privacy & Compliance
+    features:
+      - name: Role-based access
+      - name: Configurable data retention
+      - name: Audit logs
+      - name: Environment-based secrets
+  - name: Integration & Deployment
+    features:
+      - name: Docker-Compose stack
+      - name: REST & WebSocket API
+      - name: Webhooks for automations
+      - name: Mobile & desktop clients
+---
+
+Blinko is an AI-powered, self-hosted note-taking platform that helps you capture ideas instantly and retrieve them later with natural-language search. It stands out by combining privacy-first storage with advanced RAG search and a lightweight, cross-platform Tauri app.
+
+## Key Features
+
+- **Note-Taking**:
+  - Instant plain-text and Markdown editing
+  - Quick tags and folders for organization
+  - Drag-and-drop image/file attachments
+  - Keyboard shortcuts for rapid entry
+  - Cross-platform desktop & mobile clients
+  - Shareable links with read-only mode
+
+- **AI & Search**:
+  - Semantic RAG search over all notes
+  - Natural-language queries (“show ideas about AI agents”)
+  - AI-generated summaries of long notes
+  - Contextual note recommendations
+  - Pluggable LLM backend (OpenAI, local)
+  - Vector index for blazing-fast retrieval
+
+- **Privacy & Compliance**:
+  - Runs entirely on your own server
+  - Data stored in your Postgres instance
+  - HTTPS/TLS and token-based auth
+  - Role-based access and audit logs
+  - Configurable retention & backups
+  - Environment-based secret management
+
+- **Integration & Deployment**:
+  - One-command Docker-Compose stack
+  - REST and WebSocket APIs for automations
+  - Webhooks to trigger external workflows
+  - PikaPods one-click cloud deploy
+  - Mobile/desktop apps via Tauri
+  - CLI importer for existing Markdown
+
+## Who Should Use Blinko
+
+- **Developers** capturing code snippets and architecture ideas  
+- **Researchers** organizing literature notes and quick insights  
+- **Product Managers** tracking feature ideas and meeting notes  
+- **Students & Learners** keeping study summaries and revision cards  
+
+## Getting Started
+
+Blinko offers two simple deployment options:
+
+1. **Docker Compose**:
+
+   ```bash
+   curl -s https://raw.githubusercontent.com/blinkospace/blinko/main/install.sh | bash
+   ```
+
+2. **Manual Compose file**:
+   ```bash
+   git clone https://github.com/blinkospace/blinko.git
+   cd blinko
+   docker compose -f docker-compose.yml up -d
+   ```
+
+Both methods spin up Postgres, the Blinko server, and the web client in minutes. Detailed configuration and environment variables are documented in the project README, making first-time setup straightforward even for self-hosting newcomers.
