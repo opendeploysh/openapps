@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { SearchBar } from "@/components/SearchBar";
@@ -61,6 +61,7 @@ export const ProjectFilters = ({
   initialSearchQuery = "",
 }: ProjectFiltersProps) => {
   const [showFilters, setShowFilters] = useState(false);
+  const isInitialized = useRef(false);
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -96,51 +97,6 @@ export const ProjectFilters = ({
     [enableUrlSync, defaultSort, pathname, router]
   );
 
-  // Helper function to read initial values from URL
-  const getInitialFilters = useCallback(() => {
-    if (!enableUrlSync) {
-      return {
-        tags: activeCategoryFilters || [],
-        difficulties: activeDifficultyFilters || [],
-        pricing: activePricingFilters || [],
-        hosting: activeHostingFilters || [],
-        sort: sortValue || defaultSort,
-        query: initialSearchQuery,
-      };
-    }
-
-    const tags =
-      searchParams.get("tags")?.split(",").filter(Boolean) ||
-      activeCategoryFilters ||
-      [];
-    const difficulties =
-      searchParams.get("difficulties")?.split(",").filter(Boolean) ||
-      activeDifficultyFilters ||
-      [];
-    const pricing =
-      searchParams.get("pricing")?.split(",").filter(Boolean) ||
-      activePricingFilters ||
-      [];
-    const hosting =
-      searchParams.get("hosting")?.split(",").filter(Boolean) ||
-      activeHostingFilters ||
-      [];
-    const sort = searchParams.get("sort") || sortValue || defaultSort;
-    const query = searchParams.get("q") || initialSearchQuery;
-
-    return { tags, difficulties, pricing, hosting, sort, query };
-  }, [
-    enableUrlSync,
-    searchParams,
-    activeCategoryFilters,
-    activeDifficultyFilters,
-    activePricingFilters,
-    activeHostingFilters,
-    sortValue,
-    defaultSort,
-    initialSearchQuery,
-  ]);
-
   // Internal state for URL-synced filters
   const [internalCategoryFilters, setInternalCategoryFilters] = useState<
     string[]
@@ -158,11 +114,30 @@ export const ProjectFilters = ({
     useState<string>(defaultSort);
   const [internalSearchQuery, setInternalSearchQuery] = useState<string>("");
 
-  // Initialize from URL on mount
+  // Initialize from URL on mount - only run once
   useEffect(() => {
-    if (enableUrlSync) {
-      const { tags, difficulties, pricing, hosting, sort, query } =
-        getInitialFilters();
+    if (enableUrlSync && !isInitialized.current) {
+      isInitialized.current = true;
+
+      // Get initial values from URL or props
+      const tags =
+        searchParams.get("tags")?.split(",").filter(Boolean) ||
+        activeCategoryFilters ||
+        [];
+      const difficulties =
+        searchParams.get("difficulties")?.split(",").filter(Boolean) ||
+        activeDifficultyFilters ||
+        [];
+      const pricing =
+        searchParams.get("pricing")?.split(",").filter(Boolean) ||
+        activePricingFilters ||
+        [];
+      const hosting =
+        searchParams.get("hosting")?.split(",").filter(Boolean) ||
+        activeHostingFilters ||
+        [];
+      const sort = searchParams.get("sort") || sortValue || defaultSort;
+      const query = searchParams.get("q") || initialSearchQuery;
 
       setInternalCategoryFilters(tags);
       setInternalDifficultyFilters(difficulties);
@@ -181,7 +156,20 @@ export const ProjectFilters = ({
         onSearch?.(query);
       }
     }
-  }, [enableUrlSync, getInitialFilters, onFilterChange, onSort, onSearch]);
+  }, [
+    enableUrlSync,
+    searchParams,
+    activeCategoryFilters,
+    activeDifficultyFilters,
+    activePricingFilters,
+    activeHostingFilters,
+    sortValue,
+    defaultSort,
+    initialSearchQuery,
+    onFilterChange,
+    onSort,
+    onSearch,
+  ]); // Include all dependencies but use isInitialized ref to prevent re-runs
 
   // Use internal state when URL sync is enabled, otherwise use props
   const currentCategoryFilters = enableUrlSync

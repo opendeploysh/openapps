@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectFilters, FilterOption } from "@/components/filters";
@@ -152,51 +152,57 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
   const totalPages = Math.ceil(sortedProjects.length / projectsPerPage);
 
   // Handle search within category
-  const handleSearch = (query: string) => {
-    setCurrentPage(1); // Reset to first page on search
+  const handleSearch = useCallback(
+    (query: string) => {
+      setCurrentPage(1); // Reset to first page on search
 
-    if (!query.trim()) {
-      setSearchResults(null);
-      return;
-    }
+      if (!query.trim()) {
+        setSearchResults(null);
+        return;
+      }
 
-    const searchResults = matchSorter(baseCategoryProjects, query, {
-      keys: [
-        { key: "name", threshold: matchSorter.rankings.WORD_STARTS_WITH },
-        {
-          key: "description",
-          threshold: matchSorter.rankings.WORD_STARTS_WITH,
-        },
-        {
-          key: "alternatives.nonSelfHosted",
-          threshold: matchSorter.rankings.CONTAINS,
-        },
-        { key: "language", threshold: matchSorter.rankings.CONTAINS },
-        { key: "license", threshold: matchSorter.rankings.CONTAINS },
-      ],
-    });
+      const searchResults = matchSorter(baseCategoryProjects, query, {
+        keys: [
+          { key: "name", threshold: matchSorter.rankings.WORD_STARTS_WITH },
+          {
+            key: "description",
+            threshold: matchSorter.rankings.WORD_STARTS_WITH,
+          },
+          {
+            key: "alternatives.nonSelfHosted",
+            threshold: matchSorter.rankings.CONTAINS,
+          },
+          { key: "language", threshold: matchSorter.rankings.CONTAINS },
+          { key: "license", threshold: matchSorter.rankings.CONTAINS },
+        ],
+      });
 
-    setSearchResults(searchResults);
-  };
+      setSearchResults(searchResults);
+    },
+    [baseCategoryProjects]
+  );
 
   // Handle sorting
-  const handleSort = (sortValue: string) => {
+  const handleSort = useCallback((sortValue: string) => {
     setSortOrder(sortValue);
     setCurrentPage(1); // Reset to first page on sort
-  };
+  }, []);
 
   // Handle filtering
-  const handleFilterChange = (filterType: string, values: string[]) => {
-    setCurrentPage(1); // Reset to first page on filter change
+  const handleFilterChange = useCallback(
+    (filterType: string, values: string[]) => {
+      setCurrentPage(1); // Reset to first page on filter change
 
-    if (filterType === "difficulty") {
-      setActiveDifficultyFilters(values);
-    } else if (filterType === "pricing") {
-      setActivePricingFilters(values);
-    } else if (filterType === "hosting") {
-      setActiveHostingFilters(values);
-    }
-  };
+      if (filterType === "difficulty") {
+        setActiveDifficultyFilters(values);
+      } else if (filterType === "pricing") {
+        setActivePricingFilters(values);
+      } else if (filterType === "hosting") {
+        setActiveHostingFilters(values);
+      }
+    },
+    []
+  );
 
   // Clear all filters and search
   const clearAllFilters = () => {

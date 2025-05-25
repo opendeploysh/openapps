@@ -42,7 +42,10 @@ export const mdxProjectData = z.object({
   category: z.enum(categories),
   tags: z.array(z.string()),
 
-  github: z.string().regex(/^[^/]+\/[^/]+$/),
+  github: z
+    .string()
+    .regex(/^[^/]+\/[^/]+$/)
+    .optional(),
 
   urls: z
     .object({

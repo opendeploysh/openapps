@@ -533,6 +533,136 @@
     }
   },
   {
+    "slug": "snowflake",
+    "name": "Snowflake",
+    "description": "Snowflake is a cloud-based data warehousing platform that enables data storage, processing, and analytics at scale. It provides a fully managed service with features like data sharing, time travel, and automatic scaling.\n",
+    "hostingType": "Cloud-Only",
+    "pricingModel": "Paid Only",
+    "logo": "https://avatars.githubusercontent.com/u/6453780?s=200&v=4",
+    "heroImage": "https://user-images.githubusercontent.com/61099/242266547-63d98bd9-35f3-4dfe-92f4-a4a8dd75aa5c.png",
+    "category": "analytics",
+    "tags": [
+      "data-warehouse",
+      "analytics"
+    ],
+    "urls": {
+      "website": "https://www.snowflake.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "databend",
+        "clickhouse"
+      ],
+      "nonSelfHosted": [
+        "bigquery",
+        "redshift"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Fully managed service with minimal setup required"
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Data warehousing and analytics"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Enterprise data processing"
+          },
+          {
+            "name": "Architecture",
+            "value": "Cloud-native, multi-cluster"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Data Storage"
+          },
+          {
+            "name": "Data Sharing"
+          },
+          {
+            "name": "Time Travel"
+          },
+          {
+            "name": "Zero-copy Cloning"
+          },
+          {
+            "name": "Data Encryption"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Automatic Scaling"
+          },
+          {
+            "name": "Query Optimization"
+          },
+          {
+            "name": "Concurrent Access"
+          },
+          {
+            "name": "Caching"
+          },
+          {
+            "name": "Multi-cluster Architecture"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Multiple Data Formats"
+          },
+          {
+            "name": "ETL/ELT Support"
+          },
+          {
+            "name": "BI Tool Integration"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Partner Ecosystem"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Role-based Access"
+          },
+          {
+            "name": "Column-level Security"
+          },
+          {
+            "name": "Data Encryption"
+          },
+          {
+            "name": "Network Policies"
+          },
+          {
+            "name": "Compliance Standards"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "superset",
     "name": "Apache Superset",
     "description": "Apache Superset is a modern, enterprise-ready business intelligence web application that enables data exploration and visualization through an intuitive interface. It supports a wide range of databases and provides powerful SQL querying capabilities.\n",
