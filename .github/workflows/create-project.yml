@@ -22,7 +22,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           fetch-depth: 0
 
       - name: Setup pnpm
@@ -83,7 +83,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           commit-message: "Add ${{ steps.generate-mdx.outputs.project_name }} project"
           title: "Add ${{ steps.generate-mdx.outputs.project_name }} (${{ steps.generate-mdx.outputs.slug }})"
           body: |
