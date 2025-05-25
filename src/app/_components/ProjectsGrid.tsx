@@ -1,6 +1,6 @@
-import { ProjectCard } from "@/components/ProjectCard";
-import { ProjectMeta } from "@/lib/projects";
-import { Button } from "@/components/ui/button";
+import { ProjectCard } from "@/components/ProjectCard"
+import { ProjectMeta } from "@/lib/projects"
+import { Button } from "@/components/ui/button"
 import {
   Pagination,
   PaginationContent,
@@ -9,23 +9,23 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
-import { Search, RefreshCw } from "lucide-react";
+} from "@/components/ui/pagination"
+import { Search, RefreshCw } from "lucide-react"
 
 interface ProjectsGridProps {
-  currentProjects: ProjectMeta[];
-  searchResults: ProjectMeta[] | null;
-  activeFilter: string | null;
-  currentPage: number;
-  totalPages: number;
-  indexOfFirstProject: number;
-  indexOfLastProject: number;
-  activeProjectsLength: number;
-  setCurrentPage: (page: number) => void;
-  onClearFilters: () => void;
+  currentProjects: ProjectMeta[]
+  searchResults: ProjectMeta[] | null
+  activeFilter: string | null
+  currentPage: number
+  totalPages: number
+  indexOfFirstProject: number
+  indexOfLastProject: number
+  activeProjectsLength: number
+  setCurrentPage: (page: number) => void
+  onClearFilters: () => void
 }
 
-export const ProjectsGrid = ({
+export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
   currentProjects,
   searchResults,
   activeFilter,
@@ -36,19 +36,15 @@ export const ProjectsGrid = ({
   activeProjectsLength,
   setCurrentPage,
   onClearFilters,
-}: ProjectsGridProps) => {
-  // Check if we have an active search/filter but no results
-  const hasActiveSearchOrFilter =
-    searchResults !== null || activeFilter !== null;
-  const hasNoResults = activeProjectsLength === 0 && hasActiveSearchOrFilter;
+}) => {
+  const hasActiveSearchOrFilter = searchResults != null || activeFilter != null
+  const hasNoResults = activeProjectsLength === 0 && hasActiveSearchOrFilter
 
   if (hasNoResults) {
     return (
       <section className="mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">
-            {activeFilter ? `${activeFilter}` : "Search Results"}
-          </h2>
+          <h2 className="text-xl font-bold">{activeFilter ? `${activeFilter}` : "Search Results"}</h2>
           <p className="text-sm text-neutral-500">No projects found</p>
         </div>
 
@@ -59,15 +55,11 @@ export const ProjectsGrid = ({
               <Search className="w-8 h-8 text-neutral-400" />
             </div>
             <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center">
-              <span className="text-amber-600 dark:text-amber-400 text-xs">
-                !
-              </span>
+              <span className="text-amber-600 dark:text-amber-400 text-xs">!</span>
             </div>
           </div>
 
-          <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-            No alternatives found
-          </h3>
+          <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-2">No alternatives found</h3>
 
           <p className="text-neutral-600 dark:text-neutral-400 text-center max-w-md mb-6">
             {activeFilter
@@ -76,20 +68,16 @@ export const ProjectsGrid = ({
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button
-              variant="outline"
-              onClick={onClearFilters}
-              className="gap-2"
-            >
+            <Button variant="outline" onClick={onClearFilters} className="gap-2">
               <RefreshCw className="w-4 h-4" />
               Clear filters
             </Button>
             <Button
               variant="default"
               onClick={() => {
-                onClearFilters();
+                onClearFilters()
                 // Scroll to top to see all projects
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                window.scrollTo({ top: 0, behavior: "smooth" })
               }}
             >
               Browse all projects
@@ -98,14 +86,9 @@ export const ProjectsGrid = ({
 
           {/* Suggestions */}
           <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h4 className="text-sm font-medium text-blue-900 dark:text-blue-100 mb-2">
-              💡 Search tips:
-            </h4>
+            <h4 className="text-sm font-medium text-blue-900 dark:text-blue-100 mb-2">💡 Search tips:</h4>
             <ul className="text-xs text-blue-700 dark:text-blue-300 space-y-1">
-              <li>
-                • Try broader terms (e.g., "chat" instead of "slack
-                alternative")
-              </li>
+              <li>• Try broader terms (e.g., "chat" instead of "slack alternative")</li>
               <li>• Check spelling and try different variations</li>
               <li>• Browse by tags using the filter options</li>
               <li>• Use the popular alternatives tags for inspiration</li>
@@ -113,22 +96,17 @@ export const ProjectsGrid = ({
           </div>
         </div>
       </section>
-    );
+    )
   }
 
   return (
     <section className="mb-6">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-bold">
-          {searchResults
-            ? activeFilter
-              ? activeFilter
-              : "Search Results"
-            : "Featured Projects"}
+          {searchResults ? (activeFilter ? activeFilter : "Search Results") : "Featured Projects"}
         </h2>
         <p className="text-sm text-neutral-500">
-          Showing {indexOfFirstProject + 1}-
-          {Math.min(indexOfLastProject, activeProjectsLength)} of{" "}
+          Showing {indexOfFirstProject + 1}-{Math.min(indexOfLastProject, activeProjectsLength)} of{" "}
           {activeProjectsLength} projects
         </p>
       </div>
@@ -145,16 +123,12 @@ export const ProjectsGrid = ({
                 <PaginationPrevious
                   href="#"
                   onClick={(e) => {
-                    e.preventDefault();
+                    e.preventDefault()
                     if (currentPage > 1) {
-                      setCurrentPage(currentPage - 1);
+                      setCurrentPage(currentPage - 1)
                     }
                   }}
-                  className={
-                    currentPage === 1
-                      ? "pointer-events-none opacity-50"
-                      : "cursor-pointer"
-                  }
+                  className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
               </PaginationItem>
 
@@ -164,8 +138,8 @@ export const ProjectsGrid = ({
                   <PaginationLink
                     href="#"
                     onClick={(e) => {
-                      e.preventDefault();
-                      setCurrentPage(1);
+                      e.preventDefault()
+                      setCurrentPage(1)
                     }}
                     className="cursor-pointer"
                   >
@@ -187,8 +161,8 @@ export const ProjectsGrid = ({
                   <PaginationLink
                     href="#"
                     onClick={(e) => {
-                      e.preventDefault();
-                      setCurrentPage(currentPage - 1);
+                      e.preventDefault()
+                      setCurrentPage(currentPage - 1)
                     }}
                     className="cursor-pointer"
                   >
@@ -210,8 +184,8 @@ export const ProjectsGrid = ({
                   <PaginationLink
                     href="#"
                     onClick={(e) => {
-                      e.preventDefault();
-                      setCurrentPage(currentPage + 1);
+                      e.preventDefault()
+                      setCurrentPage(currentPage + 1)
                     }}
                     className="cursor-pointer"
                   >
@@ -233,8 +207,8 @@ export const ProjectsGrid = ({
                   <PaginationLink
                     href="#"
                     onClick={(e) => {
-                      e.preventDefault();
-                      setCurrentPage(totalPages);
+                      e.preventDefault()
+                      setCurrentPage(totalPages)
                     }}
                     className="cursor-pointer"
                   >
@@ -247,16 +221,12 @@ export const ProjectsGrid = ({
                 <PaginationNext
                   href="#"
                   onClick={(e) => {
-                    e.preventDefault();
+                    e.preventDefault()
                     if (currentPage < totalPages) {
-                      setCurrentPage(currentPage + 1);
+                      setCurrentPage(currentPage + 1)
                     }
                   }}
-                  className={
-                    currentPage === totalPages
-                      ? "pointer-events-none opacity-50"
-                      : "cursor-pointer"
-                  }
+                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
               </PaginationItem>
             </PaginationContent>
@@ -264,5 +234,5 @@ export const ProjectsGrid = ({
         </div>
       )}
     </section>
-  );
-};
+  )
+}

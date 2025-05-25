@@ -63,6 +63,134 @@
     }
   },
   {
+    "slug": "bigtable",
+    "name": "Cloud Bigtable",
+    "description": "Cloud Bigtable is Google's fully managed, scalable NoSQL database service designed for large analytical and operational workloads. It powers many Google services including Search, Analytics, Maps and Gmail.\n",
+    "hostingType": "Cloud-Only",
+    "pricingModel": "Paid Only",
+    "logo": "/images/bigtable.svg",
+    "heroImage": "https://cloud.google.com/static/bigtable/docs/images/bigtable-architecture.svg",
+    "category": "analytics",
+    "tags": [
+      "analytics",
+      "datawarehouse",
+      "nosql",
+      "big-data"
+    ],
+    "urls": {
+      "website": "https://cloud.google.com/bigtable"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "apache-cassandra",
+        "scylladb"
+      ],
+      "nonSelfHosted": [
+        "dynamodb",
+        "azure-cosmos-db"
+      ]
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Wide-column NoSQL database"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Large-scale analytics and operational workloads"
+          },
+          {
+            "name": "Architecture",
+            "value": "Distributed, columnar storage"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Automatic Sharding"
+          },
+          {
+            "name": "Replication"
+          },
+          {
+            "name": "Data Versioning"
+          },
+          {
+            "name": "Automatic Compaction"
+          },
+          {
+            "name": "Schema Flexibility"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Single-digit Millisecond Latency"
+          },
+          {
+            "name": "Linear Scalability"
+          },
+          {
+            "name": "Automatic Load Balancing"
+          },
+          {
+            "name": "SSD Performance"
+          },
+          {
+            "name": "High Throughput"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "HBase API Compatible"
+          },
+          {
+            "name": "Google Cloud Integration"
+          },
+          {
+            "name": "Dataflow/Hadoop Support"
+          },
+          {
+            "name": "Streaming Analytics"
+          },
+          {
+            "name": "Export/Import Tools"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "IAM Integration"
+          },
+          {
+            "name": "Encryption at Rest"
+          },
+          {
+            "name": "In-transit Encryption"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "VPC Service Controls"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "druid",
     "name": "Apache Druid",
     "description": "Apache Druid is a high performance, real-time analytics database that delivers sub-second OLAP queries on streaming and batch data at scale and under load.\n",
@@ -557,10 +685,6 @@
         "bigquery",
         "redshift"
       ]
-    },
-    "deployment": {
-      "difficulty": "Easy",
-      "justification": "Fully managed service with minimal setup required"
     },
     "featureGroups": [
       {

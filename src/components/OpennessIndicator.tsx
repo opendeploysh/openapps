@@ -1,12 +1,8 @@
 "use client";
 
 import React from "react";
-import { Badge } from "@/components/ui/badge";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import {Badge} from "@/components/ui/badge";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {
   HelpCircle,
   BadgeCheck,
@@ -15,8 +11,8 @@ import {
   Lock,
   Check,
 } from "lucide-react";
-import { PricingModel, pricingModelInfo } from "@/lib/pricing-model";
-import { HostingType, hostingTypeInfo } from "@/lib/hosting-type";
+import {PricingModel, pricingModelInfo} from "@/lib/pricing-model";
+import {HostingType, hostingTypeInfo} from "@/lib/hosting-type";
 
 // Scoring system for pricing models (lower = more open/free)
 const getPricingScore = (pricing: PricingModel): number => {
@@ -159,7 +155,7 @@ export const OpennessIndicator: React.FC<OpennessIndicatorProps> = ({
           onMouseLeave={handleMouseLeave}
         >
           <opennessInfo.icon
-            className={`w-3 h-3 ${opennessInfo.color} hover:scale-110 transition-transform`}
+            className={`w-4 h-4 ${opennessInfo.color} hover:scale-110 transition-transform`}
           />
         </div>
       </PopoverTrigger>
