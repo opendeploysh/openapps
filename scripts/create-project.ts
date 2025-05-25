@@ -29,6 +29,7 @@ async function scrapeWebpage(url: string): Promise<string> {
 
 // Get URL from command line arguments
 const arg = process.argv[2];
+const categoryOverride = process.argv[3]; // Optional category override
 const url = z.string().url().parse(arg);
 
 const githubPage = await scrapeWebpage(url);
@@ -95,8 +96,15 @@ try {
   const slug = slugMatch[1].trim();
   const category = categoryMatch[1].trim();
 
+  // Use category override for folder placement if provided, otherwise use AI-determined category
+  const folderCategory = categoryOverride || category;
+
   // Create directory if it doesn't exist
-  const projectDir = join(process.cwd(), "projects", category.toLowerCase());
+  const projectDir = join(
+    process.cwd(),
+    "projects",
+    folderCategory.toLowerCase()
+  );
   mkdirSync(projectDir, { recursive: true });
 
   // Write the file
@@ -104,6 +112,11 @@ try {
   writeFileSync(filePath, cleanedMdx, "utf8");
 
   console.log(`\nMDX file written to: ${filePath}`);
+  if (categoryOverride && categoryOverride !== category) {
+    console.log(
+      `Note: Used category override "${categoryOverride}" for folder placement, but AI determined category as "${category}" in frontmatter`
+    );
+  }
 } catch (error) {
   console.error("Error calling OpenAI API:", error);
   process.exit(1);

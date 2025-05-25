@@ -7,6 +7,27 @@ on:
         description: "GitHub repository URL (e.g., https://github.com/owner/repo)"
         required: true
         type: string
+      category:
+        description: "Optional: Override category for folder placement (leave empty for AI to determine)"
+        required: false
+        type: choice
+        options:
+          - ""
+          - analytics
+          - auth
+          - automation
+          - backup
+          - communication
+          - crm
+          - database
+          - database-management
+          - dev
+          - file-storage
+          - media
+          - monitoring
+          - productivity
+          - security
+          - other
 
 jobs:
   create-project:
@@ -50,7 +71,11 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           # Run the existing TypeScript script
-          pnpm run create-project ${{ github.event.inputs.github_url }}
+          if [ -n "${{ github.event.inputs.category }}" ]; then
+            pnpm run create-project ${{ github.event.inputs.github_url }} ${{ github.event.inputs.category }}
+          else
+            pnpm run create-project ${{ github.event.inputs.github_url }}
+          fi
 
           # Extract slug and category from the generated file
           # Find the most recently created .mdx file

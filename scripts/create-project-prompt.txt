@@ -128,7 +128,7 @@ featureGroups:
 - `heroImage`: Only include if a clear hero/banner image is available
 - `description`: Single paragraph, 1-2 sentences max, use `|` for multiline
 - `logo`: Use GitHub avatar URL format: `https://avatars.githubusercontent.com/u/{user-id}?s=64&v=4`
-- `category`: Single category from: analytics, auth, automation, backup, communication, crm, database, dev, file-storage, media, monitoring, productivity, security, etc.
+- `category`: Single category from: analytics, auth, automation, backup, communication, crm, database, dev, file-storage, media, monitoring, productivity, security, etc. (IMPORTANT: Choose based on actual project analysis, not folder placement preferences)
 - `tags`: Array of 3-5 categorization tags: functionality, use-case, technology, target-audience
 - `github`: Format as `username/repository`
 - `urls.website`: Official project website only
