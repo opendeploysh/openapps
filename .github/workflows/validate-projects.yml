@@ -54,7 +54,7 @@ jobs:
       - name: Validate project schemas
         run: |
           echo "🔍 Validating all project MDX files..."
-          pnpm run generate -- --no-write --error-on-invalid
+          pnpm run generate -- --no-write --error-on-invalid --check-urls
 
       - name: Check for schema changes
         if: github.event_name == 'pull_request'

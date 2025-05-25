@@ -3196,7 +3196,6 @@
     "hostingType": "Hybrid",
     "pricingModel": "Freemium",
     "logo": "https://avatars.githubusercontent.com/u/138379721?s=64&v=4",
-    "heroImage": "https://private-user-images.githubusercontent.com/5418788/251969508-d8703ea3-361a-423f-8bfe-eff1bd9dbe14.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDgxMjc3ODMsIm5iZiI6MTc0ODEyNzQ4MywicGF0aCI6Ii81NDE4Nzg4LzI1MTk2OTUwOC1kODcwM2VhMy0zNjFhLTQyM2YtOGJmZS1lZmYxYmQ5ZGJlMTQuanBnP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDUyNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA1MjRUMjI1ODAzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NWIxN2EwYWI4NDMxYzNlODA4YmQ0NGU0YWQ4NWUzYTI3Y2MwMDA5MmUwNTg4M2RjN2JiYWI4OTNiMjIzZGIwYyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.jrvlnHCz0MuG2RJWwWkLWCMcc59jSWKx1aZh43ID5tE",
     "category": "document-management",
     "tags": [
       "document-management",
@@ -3712,7 +3711,6 @@
     "hostingType": "Hybrid",
     "pricingModel": "Open-Core",
     "logo": "https://avatars.githubusercontent.com/u/146751146?s=64&v=4",
-    "heroImage": "https://private-user-images.githubusercontent.com/171803164/344711878-7edb65bd-c265-4b3d-9758-38e79766c5c2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDgxMjgxMTcsIm5iZiI6MTc0ODEyNzgxNywicGF0aCI6Ii8xNzE4MDMxNjQvMzQ0NzExODc4LTdlZGI2NWJkLWMyNjUtNGIzZC05NzU4LTM4ZTc5NzY2YzVjMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyNFQyMzAzMzdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mOTdmNjY2OWNlMjk5ZWY3Nzg4NzBhOGViYzZmYTk3YjdmNjQxMWUzNGNiZDdmNzU0Mjg5N2RlMzUxOGE5OGRjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.rsWtW2B_taVTjOIl-0EILNO1g0q1-it5_Yvck0JNIuA",
     "category": "document-management",
     "tags": [
       "document-management",
@@ -8823,7 +8821,6 @@
     "alternatives": {
       "selfHosted": [
         "mediawiki",
-        "confluence",
         "wiki-js"
       ],
       "nonSelfHosted": [
