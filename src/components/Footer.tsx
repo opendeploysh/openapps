@@ -10,7 +10,7 @@ export const Footer = () => {
               <Container className="w-4 h-4" />
             </div>
           </div>
-          <div className="text-sm font-medium">Podlify</div>
+          <div className="text-sm font-medium">Hostable.tools</div>
         </div>
 
         <div className="flex space-x-6 mb-6">
@@ -41,10 +41,10 @@ export const Footer = () => {
         </div>
 
         <div className="text-xs text-neutral-500 dark:text-neutral-400">
-          <p>© {new Date().getFullYear()} Podlify. All rights reserved.</p>
-          <p className="mt-1">
-            Dedicated to privacy, open source, and digital sovereignty.
+          <p>
+            © {new Date().getFullYear()} Hostable.tools. All rights reserved.
           </p>
+          <p className="mt-1">Discover. Compare. Deploy.</p>
         </div>
       </div>
     </footer>

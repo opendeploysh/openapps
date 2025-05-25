@@ -61,8 +61,8 @@ export const Navbar = () => {
                 <Container className="h-4 w-4 text-white" />
               </div>
               <span className="font-bold text-lg">
-                <span className="text-black dark:text-white">Deploy</span>
-                <span className="text-blue-600">Plane</span>
+                <span className="text-black dark:text-white">Hostable</span>
+                <span className="text-blue-600">.tools</span>
               </span>
             </Link>
 
@@ -177,7 +177,7 @@ export const Navbar = () => {
                 <Search className="h-4 w-4" />
               </Button>
               <Button size="sm" className="h-9 hidden md:flex">
-                Deploy Now
+                Get Started
               </Button>
               <Button
                 variant="outline"
@@ -199,8 +199,8 @@ export const Navbar = () => {
                 <Container className="h-4 w-4 text-white" />
               </div>
               <span className="font-bold text-lg">
-                <span className="text-black dark:text-white">Deploy</span>
-                <span className="text-blue-600">Plane</span>
+                <span className="text-black dark:text-white">Hostable</span>
+                <span className="text-blue-600">.tools</span>
               </span>
             </div>
             <Button variant="ghost" size="icon" className="h-8 w-8">
@@ -322,7 +322,7 @@ export const Navbar = () => {
           </div>
 
           <div className="mt-6">
-            <Button className="w-full">Deploy Now</Button>
+            <Button className="w-full">Get Started</Button>
           </div>
         </div>
       </div>

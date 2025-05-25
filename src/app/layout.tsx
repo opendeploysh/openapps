@@ -13,56 +13,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "OSS Finder - Self-Hostable Open Source Alternatives",
-    template: "%s | OSS Finder",
-  },
+  title: "Hostable.tools - Discover. Compare. Deploy.",
   description:
-    "Discover and explore self-hostable open-source alternatives to popular proprietary software. Find secure, privacy-focused solutions you can deploy on your own infrastructure.",
+    "Find cost-effective, privacy-respecting alternatives to popular SaaS tools. Compare features, and deploy them yourself or through our managed services.",
   keywords: [
-    "open source",
     "self-hosted",
-    "alternatives",
-    "privacy",
-    "software",
-    "self-hostable",
-    "FOSS",
-    "free software",
-    "private cloud",
-    "home server",
+    "open source",
+    "software alternatives",
+    "privacy-focused",
     "docker",
-    "deployment",
+    "kubernetes",
+    "homelab",
+    "SaaS alternatives",
+    "cost-effective",
+    "managed services",
   ],
-  authors: [{ name: "OSS Finder", url: "https://ossfinder.com" }],
-  creator: "OSS Finder",
-  publisher: "OSS Finder",
-  metadataBase: new URL("https://ossfinder.com"),
+  authors: [{ name: "Hostable.tools", url: "https://hostable.tools" }],
+  creator: "Hostable.tools",
+  publisher: "Hostable.tools",
+  metadataBase: new URL("https://hostable.tools"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    type: "website",
+    title: "Hostable.tools - Discover. Compare. Deploy.",
+    description:
+      "Find cost-effective, privacy-respecting alternatives to popular SaaS tools. Compare features, and deploy them yourself or through our managed services.",
+    url: "https://hostable.tools",
+    siteName: "Hostable.tools",
     locale: "en_US",
-    url: "https://ossfinder.com",
-    siteName: "OSS Finder",
-    title: "OSS Finder - Self-Hostable Open Source Alternatives",
-    description:
-      "Discover and explore self-hostable open-source alternatives to popular proprietary software.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "OSS Finder - Self-Hostable Open Source Alternatives",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "OSS Finder - Self-Hostable Open Source Alternatives",
-    description:
-      "Discover and explore self-hostable open-source alternatives to popular proprietary software.",
-    images: ["/og-image.png"],
+    type: "website",
   },
   robots: {
     index: true,
@@ -74,12 +54,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  category: "Technology",
-  applicationName: "OSS Finder",
-  referrer: "origin-when-cross-origin",
-  verification: {
-    google: "your-google-site-verification-code",
   },
 };
 

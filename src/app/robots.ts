@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/", "/admin/", "/private/"],
     },
-    sitemap: "https://ossfinder.com/sitemap.xml",
+    sitemap: "https://hostable.tools/sitemap.xml",
   };
 }

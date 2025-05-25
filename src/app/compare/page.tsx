@@ -108,8 +108,8 @@ export default function ComparePage() {
             Project Comparison
           </h1>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto text-sm">
-            Compare two self-hosted projects side by side to help you make
-            informed decisions.
+            Compare cost-effective, privacy-respecting alternatives to popular
+            SaaS tools side by side to help you make informed decisions.
           </p>
         </div>
 

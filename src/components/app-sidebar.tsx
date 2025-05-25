@@ -52,8 +52,8 @@ import {
 // This is sample data
 const data = {
   user: {
-    name: "DeployPlane User",
-    email: "user@deployplane.com",
+    name: "Hostable.tools User",
+    email: "user@hostable.tools",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
@@ -192,14 +192,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <Link href="/">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-blue-600 text-sidebar-primary-foreground">
-                  <Container className="size-4" />
-                </div>
-                <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">DeployPlane</span>
-                  <span className="truncate text-xs">
-                    Your Deployment Platform
-                  </span>
+                <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                    <Command className="size-4" />
+                  </div>
+                  <div className="grid flex-1 text-left text-sm leading-tight">
+                    <span className="truncate font-semibold">
+                      Hostable.tools
+                    </span>
+                    <span className="truncate text-xs">Enterprise</span>
+                  </div>
                 </div>
               </Link>
             </SidebarMenuButton>

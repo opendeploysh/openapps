@@ -78,12 +78,12 @@ export async function generateMetadata({
     projects.filter((p) => p.primaryCategory === project.primaryCategory)
       .length - 1;
 
-  const title = `Alternatives to ${project.name} - Open Source & Self-Hosted Options`;
+  const title = `Alternatives to ${project.name} - Cost-Effective SaaS Alternatives`;
   const description = `Discover ${
     selfHostedCount + sameCategoryCount
-  }+ open source alternatives to ${
+  }+ cost-effective, privacy-respecting alternatives to ${
     project.name
-  }. Find self-hosted solutions and compare features, licenses, and deployment options for ${project.primaryCategory.toLowerCase()} projects.`;
+  }. Compare features and deploy them yourself or through our managed services.`;
 
   return {
     title,
@@ -101,9 +101,9 @@ export async function generateMetadata({
         (alt) => `${alt} alternative`
       ),
     ].join(", "),
-    authors: [{ name: "OSS Finder" }],
-    creator: "OSS Finder",
-    publisher: "OSS Finder",
+    authors: [{ name: "Hostable.tools" }],
+    creator: "Hostable.tools",
+    publisher: "Hostable.tools",
     robots: "index, follow",
     alternates: {
       canonical: `/alternatives/${project.slug}`,

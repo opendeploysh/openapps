@@ -50,10 +50,8 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${project.name} - Self-Hosted Open Source ${project.primaryCategory}`;
-  const description = `${project.description} Learn how to deploy ${
-    project.name
-  }, view documentation, and explore alternatives in the ${project.primaryCategory.toLowerCase()} category.`;
+  const title = `${project.name} - Cost-Effective SaaS Alternative`;
+  const description = `${project.description} Deploy ${project.name} as a privacy-respecting alternative to popular SaaS tools. Compare features and choose self-hosted or managed deployment.`;
 
   return {
     title,
@@ -74,7 +72,7 @@ export async function generateMetadata({
       "privacy",
       "deployment",
     ].join(", "),
-    authors: [{ name: "OSS Finder" }],
+    authors: [{ name: "Hostable.tools" }],
     openGraph: {
       title,
       description,

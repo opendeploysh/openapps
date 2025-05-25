@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
 import { projects } from "@/lib/projects";
+import { primaryCategories } from "@/lib/categories";
 import _ from "lodash";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://ossfinder.com";
+const baseUrl = "https://hostable.tools";
 
+export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages
   const staticPages = [
     {

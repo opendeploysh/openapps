@@ -15,20 +15,21 @@ export const HeroHeader = ({ projectCount }: HeroHeaderProps) => {
       <div className="mb-6">
         <div className="inline-block relative">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-500">
-            <span className="text-black dark:text-white">Deploy</span>Plane
+            <span className="text-black dark:text-white">Hostable</span>
+            <span className="text-blue-600">.tools</span>
           </h1>
         </div>
 
         <p className="text-sm uppercase tracking-widest text-neutral-400 mb-4">
-          Your Deployment & Management Companion
+          Discover. Compare. Deploy.
         </p>
 
         <div className="max-w-2xl mx-auto space-y-3">
           <p className="text-lg text-neutral-600 dark:text-neutral-400">
-            Find, deploy, and manage self-hosted alternatives.
+            Find, compare, and deploy open source alternatives.
           </p>
           <p className="text-sm text-neutral-500 dark:text-neutral-500">
-            Easy deployment · Hosting options · Full control
+            Compare features · Deploy yourself · Managed services available
           </p>
         </div>
       </div>
@@ -40,7 +41,6 @@ export const HeroHeader = ({ projectCount }: HeroHeaderProps) => {
         </span>
       </div>
 
-      {/* Visual elements */}
       <div className="flex gap-8 items-center justify-center">
         <div className="w-16 h-1 rounded-full bg-gradient-to-r from-blue-500 to-transparent"></div>
         <div className="flex border border-neutral-200 dark:border-neutral-800 rounded-full px-4 py-1 text-xs">

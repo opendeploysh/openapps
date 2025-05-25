@@ -172,7 +172,7 @@ export const ProjectCard = ({
                     <Badge variant="default" className="bg-blue-600">
                       Recommended
                     </Badge>
-                    Deploy with Podlify
+                    Deploy with Hostable.tools
                   </h3>
                   <p className="text-sm mb-2">
                     The fastest way to get your own {name} instance
@@ -202,7 +202,7 @@ export const ProjectCard = ({
                     </li>
                   </ul>
                   <Button size="sm" className="w-full">
-                    Deploy with Podlify
+                    Deploy with Hostable.tools
                   </Button>
                 </div>
 
