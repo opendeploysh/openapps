@@ -162,7 +162,7 @@ export default function ClientHomePage() {
     // Apply category filters
     if (activeCategoryFilters.length > 0) {
       filteredProjects = filteredProjects.filter((project) =>
-        project.categories.some((category) =>
+        project.tags.some((category) =>
           activeCategoryFilters.includes(category)
         )
       );
@@ -218,7 +218,7 @@ export default function ClientHomePage() {
     const filteredProjects = matchSorter(projects, query, {
       keys: [
         { key: "name", maxRanking: matchSorter.rankings.STARTS_WITH },
-        { key: "categories", threshold: matchSorter.rankings.CONTAINS },
+        { key: "tags", threshold: matchSorter.rankings.CONTAINS },
         { key: "language", threshold: matchSorter.rankings.CONTAINS },
         { key: "license", threshold: matchSorter.rankings.CONTAINS },
         {

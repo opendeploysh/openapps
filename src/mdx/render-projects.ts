@@ -11,12 +11,8 @@ const getSourcePath = (slug: string) => {
   const project = projects.find((p) => p.slug === slug);
   if (!project) notFound();
   return (
-    path.join(
-      process.cwd(),
-      "projects",
-      project.primaryCategory,
-      project.slug
-    ) + ".mdx"
+    path.join(process.cwd(), "projects", project.category, project.slug) +
+    ".mdx"
   );
 };
 

@@ -3,7 +3,11 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { ProjectMeta } from "@/lib/projects";
+import {
+  githubProjectData,
+  ProjectMeta,
+  projectsWithGitHubData,
+} from "@/lib/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
 interface RelatedProjectsProps {
@@ -17,30 +21,29 @@ export function RelatedProjects({
   allProjects,
   maxProjects = 3,
 }: RelatedProjectsProps) {
-  // Find related projects based on matching categories
+  // Find related projects based on matching tags
   const relatedProjects = allProjects
     .filter(
       (project) =>
         // Exclude the current project
         project.slug !== currentProject.slug &&
         // Find projects that share at least one category
-        project.categories.some((category) =>
-          currentProject.categories.includes(category)
-        )
+        project.tags.some((category) => currentProject.tags.includes(category))
     )
-    // Sort by number of matching categories (most matches first)
+    // Sort by number of matching tags (most matches first)
     .sort((a, b) => {
-      const aMatches = a.categories.filter((cat) =>
-        currentProject.categories.includes(cat)
+      const aMatches = a.tags.filter((cat) =>
+        currentProject.tags.includes(cat)
       ).length;
-      const bMatches = b.categories.filter((cat) =>
-        currentProject.categories.includes(cat)
+      const bMatches = b.tags.filter((cat) =>
+        currentProject.tags.includes(cat)
       ).length;
 
+      const aStars = projectsWithGitHubData[a.slug]?.stargazers_count || 0;
+      const bStars = projectsWithGitHubData[b.slug]?.stargazers_count || 0;
+
       // If same number of matches, sort by stars
-      if (aMatches === bMatches) {
-        return (b.stars || 0) - (a.stars || 0);
-      }
+      if (aMatches === bMatches) return bStars - aStars;
 
       return bMatches - aMatches;
     })
@@ -58,18 +61,18 @@ export function RelatedProjects({
         <div>
           <h2 className="text-2xl font-bold mb-2">Related Projects</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-            Similar projects based on shared categories
+            Similar projects based on shared tags
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          {currentProject.categories.slice(0, 3).map((category) => (
+          {currentProject.tags.slice(0, 3).map((category) => (
             <Badge key={category} variant="secondary" className="text-xs">
               {category}
             </Badge>
           ))}
-          {currentProject.categories.length > 3 && (
+          {currentProject.tags.length > 3 && (
             <Badge variant="outline" className="text-xs">
-              +{currentProject.categories.length - 3} more
+              +{currentProject.tags.length - 3} more
             </Badge>
           )}
         </div>
@@ -85,7 +88,7 @@ export function RelatedProjects({
       {allProjects.filter(
         (p) =>
           p.slug !== currentProject.slug &&
-          p.categories.some((cat) => currentProject.categories.includes(cat))
+          p.tags.some((cat) => currentProject.tags.includes(cat))
       ).length > maxProjects && (
         <div className="text-center mt-8">
           <Button variant="outline" asChild>

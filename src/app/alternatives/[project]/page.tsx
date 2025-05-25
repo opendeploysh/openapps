@@ -75,8 +75,7 @@ export async function generateMetadata({
   }).length;
 
   const sameCategoryCount =
-    projects.filter((p) => p.primaryCategory === project.primaryCategory)
-      .length - 1;
+    projects.filter((p) => p.category === project.category).length - 1;
 
   const title = `Alternatives to ${project.name} - Cost-Effective SaaS Alternatives`;
   const description = `Discover ${
@@ -92,18 +91,18 @@ export async function generateMetadata({
       `${project.name} alternatives`,
       `${project.name} open source`,
       `self-hosted ${project.name}`,
-      `${project.primaryCategory.toLowerCase()} software`,
+      `${project.category.toLowerCase()} software`,
       "open source",
       "self-hosted",
       "alternatives",
-      project.primaryCategory.toLowerCase(),
+      project.category.toLowerCase(),
       ...(project.alternatives?.nonSelfHosted || []).map(
         (alt) => `${alt} alternative`
       ),
     ].join(", "),
-    authors: [{ name: "Hostable.tools" }],
-    creator: "Hostable.tools",
-    publisher: "Hostable.tools",
+    authors: [{ name: "OpenApps" }],
+    creator: "OpenApps",
+    publisher: "OpenApps",
     robots: "index, follow",
     alternates: {
       canonical: `/alternatives/${project.slug}`,
@@ -224,9 +223,7 @@ export default async function AlternativesPage({
 
   const sameCategoryProjects = projects
     .filter(
-      (p) =>
-        p.primaryCategory === project.primaryCategory &&
-        !alreadyShownSlugs.has(p.slug)
+      (p) => p.category === project.category && !alreadyShownSlugs.has(p.slug)
     )
     .sort(
       (a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug)
@@ -468,10 +465,10 @@ export default async function AlternativesPage({
         )}
 
         {/* Same Category Projects - Paginated */}
-        {project.primaryCategory && (
+        {project.category && (
           <SameCategoryProjects
             projects={sameCategoryProjects}
-            categoryName={project.primaryCategory}
+            categoryName={project.category}
           />
         )}
 
@@ -509,12 +506,10 @@ export default async function AlternativesPage({
         <div className="text-center pt-8 border-t border-neutral-200 dark:border-neutral-800">
           <h3 className="text-lg font-semibold mb-4">Explore by Category</h3>
           <div className="flex flex-wrap gap-2 justify-center">
-            {project.categories.map((category) => (
+            {project.tags.map((category) => (
               <Link
                 key={category}
-                href={`/categories/${category
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")}`}
+                href={`/tags/${category.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 <Badge
                   variant="outline"
@@ -526,7 +521,7 @@ export default async function AlternativesPage({
             ))}
           </div>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-3">
-            Find more projects in these categories
+            Find more projects in these tags
           </p>
         </div>
       </div>

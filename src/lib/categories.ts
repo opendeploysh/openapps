@@ -1,4 +1,4 @@
-export const primaryCategories = [
+export const categories = [
   "communication",
   "email-complete",
   "email-delivery",

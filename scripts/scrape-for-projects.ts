@@ -66,7 +66,7 @@ Website URL: ${pageData.url}
 ${pageData.githubUrl ? `GitHub URL: ${pageData.githubUrl}` : ""}
 
 The MDX should include:
-- Frontmatter with metadata (slug, name, description, categories, etc)
+- Frontmatter with metadata (slug, name, description, tags, etc)
 - Key features section
 - Who should use this section
 - Getting started section

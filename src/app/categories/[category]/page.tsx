@@ -64,7 +64,7 @@ import { ProjectFilters, FilterOption } from "@/components/filters";
 import { matchSorter } from "match-sorter";
 import _ from "lodash";
 
-// Icon mapping for categories
+// Icon mapping for tags
 const categoryIcons: Record<string, React.ReactNode> = {
   "Developer Tools": <Code className="w-5 h-5" />,
   Communication: <MessageSquare className="w-5 h-5" />,
@@ -131,7 +131,7 @@ const categoryIcons: Record<string, React.ReactNode> = {
   photography: <Film className="w-5 h-5" />,
 };
 
-// Default colors for categories
+// Default colors for tags
 const categoryColors = [
   "blue",
   "violet",
@@ -270,7 +270,7 @@ export default function CategoryPage() {
 
   // Filter projects by the current category (matching original category names)
   const baseCategoryProjects = projects.filter((p) =>
-    p.categories.some(
+    p.tags.some(
       (cat) => cat.toLowerCase().replace(/\s+/g, "-") === categorySlug
     )
   );
@@ -278,9 +278,9 @@ export default function CategoryPage() {
   // Convert slug back to category name (reverse the slug transformation)
   const categoryName = categorySlug.replace(/-/g, " ");
 
-  // Generate categories dynamically from project data
+  // Generate tags dynamically from project data
   const allCategories = _.chain(projects)
-    .flatMap((project) => project.categories)
+    .flatMap((project) => project.tags)
     .uniq()
     .map((cat, index) => ({
       name: cat,
@@ -437,7 +437,7 @@ export default function CategoryPage() {
       <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
         <Navbar />
         <div className="container max-w-5xl mx-auto px-4 py-8">
-          <Link href="/categories">
+          <Link href="/tags">
             <Button variant="ghost" size="sm" className="mb-6">
               <ChevronLeft className="h-4 w-4 mr-1" />
               Back to Categories
@@ -453,7 +453,7 @@ export default function CategoryPage() {
               The category you're looking for doesn't exist or may have been
               moved.
             </p>
-            <Link href="/categories">
+            <Link href="/tags">
               <Button>Browse All Categories</Button>
             </Link>
           </div>
@@ -467,8 +467,8 @@ export default function CategoryPage() {
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
       <Navbar />
       <div className="container max-w-5xl mx-auto px-4 py-8">
-        {/* Back to categories link */}
-        <Link href="/categories">
+        {/* Back to tags link */}
+        <Link href="/tags">
           <Button variant="ghost" size="sm" className="mb-6">
             <ChevronLeft className="h-4 w-4 mr-1" />
             Back to Categories
@@ -566,17 +566,14 @@ export default function CategoryPage() {
                   .toLowerCase()
                   .replace(/\s+/g, "-");
                 const relatedProjectCount = projects.filter((p) =>
-                  p.categories.some(
+                  p.tags.some(
                     (cat) =>
                       cat.toLowerCase().replace(/\s+/g, "-") === relatedSlug
                   )
                 ).length;
 
                 return (
-                  <Link
-                    href={`/categories/${relatedSlug}`}
-                    key={relatedCat.name}
-                  >
+                  <Link href={`/tags/${relatedSlug}`} key={relatedCat.name}>
                     <Card
                       className={`cursor-pointer transition-all ${catColors.hover} h-full`}
                     >

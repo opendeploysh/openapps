@@ -52,8 +52,8 @@ import {
 // This is sample data
 const data = {
   user: {
-    name: "Hostable.tools User",
-    email: "user@hostable.tools",
+    name: "OpenApps User",
+    email: "user@openapps.sh",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
@@ -87,57 +87,57 @@ const data = {
     },
     {
       title: "Categories",
-      url: "/categories",
+      url: "/tags",
       icon: Layout,
       items: [
         {
           title: "All Categories",
-          url: "/categories",
+          url: "/tags",
           icon: Layout,
         },
         {
           title: "Development",
-          url: "/categories/development",
+          url: "/tags/development",
           icon: Code,
         },
         {
           title: "Communication",
-          url: "/categories/communication",
+          url: "/tags/communication",
           icon: MessageSquare,
         },
         {
           title: "Databases",
-          url: "/categories/databases",
+          url: "/tags/databases",
           icon: Database,
         },
         {
           title: "Security",
-          url: "/categories/security",
+          url: "/tags/security",
           icon: ShieldCheck,
         },
         {
           title: "Automation",
-          url: "/categories/automation",
+          url: "/tags/automation",
           icon: Settings,
         },
         {
           title: "Media",
-          url: "/categories/media",
+          url: "/tags/media",
           icon: Film,
         },
         {
           title: "Analytics",
-          url: "/categories/analytics",
+          url: "/tags/analytics",
           icon: BarChart3,
         },
         {
           title: "Infrastructure",
-          url: "/categories/infrastructure",
+          url: "/tags/infrastructure",
           icon: Server,
         },
         {
           title: "Web",
-          url: "/categories/web",
+          url: "/tags/web",
           icon: Globe,
         },
       ],
@@ -197,9 +197,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     <Command className="size-4" />
                   </div>
                   <div className="grid flex-1 text-left text-sm leading-tight">
-                    <span className="truncate font-semibold">
-                      Hostable.tools
-                    </span>
+                    <span className="truncate font-semibold">OpenApps</span>
                     <span className="truncate text-xs">Enterprise</span>
                   </div>
                 </div>

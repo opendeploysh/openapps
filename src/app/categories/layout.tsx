@@ -3,24 +3,24 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Categories - Browse Open Source Projects by Category",
   description:
-    "Explore open source and self-hostable projects organized by categories. Find productivity tools, development software, communication platforms, and more.",
+    "Explore open source and self-hostable projects organized by tags. Find productivity tools, development software, communication platforms, and more.",
   keywords:
-    "open source categories, self-hosted software categories, project categories, software types, development tools, productivity software",
+    "open source tags, self-hosted software tags, project tags, software types, development tools, productivity software",
   openGraph: {
     title: "Categories - Browse Open Source Projects by Category",
     description:
-      "Explore open source and self-hostable projects organized by categories.",
+      "Explore open source and self-hostable projects organized by tags.",
     type: "website",
-    url: "/categories",
+    url: "/tags",
   },
   twitter: {
     card: "summary",
     title: "Categories - Browse Open Source Projects by Category",
     description:
-      "Explore open source and self-hostable projects organized by categories.",
+      "Explore open source and self-hostable projects organized by tags.",
   },
   alternates: {
-    canonical: "/categories",
+    canonical: "/tags",
   },
 };
 

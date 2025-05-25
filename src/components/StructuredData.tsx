@@ -12,22 +12,19 @@ interface StructuredDataProps {
 const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Hostable.tools",
-  url: "https://hostable.tools",
+  name: "OpenApps",
+  url: "https://openapps.sh",
   description:
     "Find cost-effective, privacy-respecting alternatives to popular SaaS tools. Compare features, and deploy them yourself or through our managed services.",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://hostable.tools/search?q={search_term_string}",
+      urlTemplate: "https://openapps.sh/search?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },
-  sameAs: [
-    "https://github.com/hostable-tools",
-    "https://twitter.com/hostabletools",
-  ],
+  sameAs: ["https://github.com/openapps-sh", "https://twitter.com/openapps_sh"],
 };
 
 export function StructuredData({ type, data }: StructuredDataProps) {
@@ -38,21 +35,21 @@ export function StructuredData({ type, data }: StructuredDataProps) {
       structuredData = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        name: "Hostable.tools",
+        name: "OpenApps",
         description:
           "Find cost-effective, privacy-respecting alternatives to popular SaaS tools. Compare features, and deploy them yourself or through our managed services.",
-        url: "https://hostable.tools",
+        url: "https://openapps.sh",
         potentialAction: {
           "@type": "SearchAction",
           target: {
             "@type": "EntryPoint",
-            urlTemplate: "https://hostable.tools/search?q={search_term_string}",
+            urlTemplate: "https://openapps.sh/search?q={search_term_string}",
           },
           "query-input": "required name=search_term_string",
         },
         sameAs: [
-          "https://github.com/hostable-tools",
-          "https://twitter.com/hostabletools",
+          "https://github.com/openapps-sh",
+          "https://twitter.com/openapps_sh",
         ],
       };
       break;
@@ -65,8 +62,8 @@ export function StructuredData({ type, data }: StructuredDataProps) {
           "@type": "SoftwareApplication",
           name: project.name,
           description: project.description,
-          url: `https://hostable.tools/projects/${project.slug}`,
-          applicationCategory: project.primaryCategory,
+          url: `https://openapps.sh/projects/${project.slug}`,
+          applicationCategory: project.category,
           operatingSystem: "Linux, Windows, macOS",
           softwareVersion: "Latest",
           license: project.license || "Open Source",
@@ -79,9 +76,9 @@ export function StructuredData({ type, data }: StructuredDataProps) {
             : undefined,
           softwareHelp: {
             "@type": "CreativeWork",
-            url: `https://hostable.tools/projects/${project.slug}`,
+            url: `https://openapps.sh/projects/${project.slug}`,
           },
-          applicationSubCategory: project.categories,
+          applicationSubCategory: project.tags,
           featureList: project.alternatives?.nonSelfHosted || [],
           screenshot: project.heroImage || undefined,
           aggregateRating: project.popularity
@@ -107,7 +104,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
           "@type": "CollectionPage",
           name: `${data.category} - SaaS Alternatives`,
           description: `Find cost-effective, privacy-respecting ${data.category.toLowerCase()} alternatives to popular SaaS tools.`,
-          url: `https://hostable.tools/categories/${data.category.toLowerCase()}`,
+          url: `https://openapps.sh/tags/${data.category.toLowerCase()}`,
           mainEntity: {
             "@type": "ItemList",
             numberOfItems: data.projectCount,
@@ -120,19 +117,19 @@ export function StructuredData({ type, data }: StructuredDataProps) {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://hostable.tools",
+                item: "https://openapps.sh",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "Categories",
-                item: "https://hostable.tools/categories",
+                item: "https://openapps.sh/tags",
               },
               {
                 "@type": "ListItem",
                 position: 3,
                 name: data.category,
-                item: `https://hostable.tools/categories/${data.category.toLowerCase()}`,
+                item: `https://openapps.sh/tags/${data.category.toLowerCase()}`,
               },
             ],
           },
@@ -159,7 +156,7 @@ export function ProjectStructuredData({ project }: { project: ProjectMeta }) {
     "@type": "SoftwareApplication",
     name: project.name,
     description: project.description,
-    url: `https://hostable.tools/projects/${project.slug}`,
+    url: `https://openapps.sh/projects/${project.slug}`,
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Cross-platform",
     softwareVersion: "Latest",
@@ -167,11 +164,11 @@ export function ProjectStructuredData({ project }: { project: ProjectMeta }) {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
-      url: `https://hostable.tools/projects/${project.slug}`,
+      url: `https://openapps.sh/projects/${project.slug}`,
     },
     provider: {
       "@type": "Organization",
-      name: "Hostable.tools",
+      name: "OpenApps",
     },
     inLanguage: "en",
     license: project.license || "Various",
@@ -194,14 +191,14 @@ export function CategoryStructuredData({ data }: { data: any }) {
     "@type": "CollectionPage",
     name: `${data.category} - Self-Hosted Software`,
     description: `Discover the best self-hosted ${data.category.toLowerCase()} software alternatives.`,
-    url: `https://hostable.tools/categories/${data.category.toLowerCase()}`,
+    url: `https://openapps.sh/tags/${data.category.toLowerCase()}`,
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: data.projects?.length || 0,
       itemListElement: data.projects?.map((project: any, index: number) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `https://hostable.tools/projects/${project.slug}`,
+        url: `https://openapps.sh/projects/${project.slug}`,
         name: project.name,
       })),
     },
@@ -219,15 +216,15 @@ export function WebsiteStructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Hostable.tools",
-    url: "https://hostable.tools",
+    name: "OpenApps",
+    url: "https://openapps.sh",
     description:
       "Find cost-effective, privacy-respecting alternatives to popular SaaS tools. Compare features, and deploy them yourself or through our managed services.",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://hostable.tools/search?q={search_term_string}",
+        urlTemplate: "https://openapps.sh/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -249,19 +246,19 @@ export function BreadcrumbStructuredData({ items }: { items: any[] }) {
       {
         "@type": "ListItem",
         position: 1,
-        item: "https://hostable.tools",
+        item: "https://openapps.sh",
         name: "Home",
       },
       {
         "@type": "ListItem",
         position: 2,
-        item: "https://hostable.tools/categories",
+        item: "https://openapps.sh/tags",
         name: "Categories",
       },
       ...items.map((item, index) => ({
         "@type": "ListItem",
         position: index + 3,
-        item: `https://hostable.tools/categories/${item.category.toLowerCase()}`,
+        item: `https://openapps.sh/tags/${item.category.toLowerCase()}`,
         name: item.name,
       })),
     ],

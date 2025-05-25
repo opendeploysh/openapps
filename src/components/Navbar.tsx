@@ -20,9 +20,6 @@ import {
   Star,
   Sparkles,
   Layout,
-  HardDrive,
-  Github,
-  Heart,
   Code,
   MessageSquare,
   Database,
@@ -34,9 +31,14 @@ import {
   Globe,
   Scale,
   GitCompare,
+  FolderOpen,
 } from "lucide-react";
+import {
+  SiOpensourceinitiative,
+  SiOpensourceinitiativeHex,
+} from "@icons-pack/react-simple-icons";
 
-// Define basic categories for the navigation menu
+// Define basic tags for the navigation menu
 const navCategories = [
   { name: "Productivity", icon: <CheckCircle className="h-3 w-3" /> },
   { name: "Development", icon: <Code className="h-3 w-3" /> },
@@ -58,11 +60,11 @@ export const Navbar = () => {
           <div className="flex h-14 items-center justify-between">
             <Link href="/" className="flex items-center gap-1">
               <div className="mr-1 flex items-center justify-center h-8 w-8 rounded-md bg-blue-600">
-                <Container className="h-4 w-4 text-white" />
+                <FolderOpen className="h-4 w-4 text-white" />
               </div>
               <span className="font-bold text-lg">
-                <span className="text-black dark:text-white">Hostable</span>
-                <span className="text-blue-600">.tools</span>
+                <span className="text-black dark:text-white">Open</span>
+                <span className="text-blue-600">Apps</span>
               </span>
             </Link>
 
@@ -123,7 +125,7 @@ export const Navbar = () => {
                 <DropdownMenuContent align="start" className="w-[220px]">
                   <DropdownMenuLabel>Categories</DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <Link href="/categories" className="w-full">
+                  <Link href="/tags" className="w-full">
                     <DropdownMenuItem className="flex items-center gap-2 cursor-pointer">
                       <div className="h-5 w-5 rounded flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
                         <Layout className="h-3 w-3 text-blue-600 dark:text-blue-400" />
@@ -135,7 +137,7 @@ export const Navbar = () => {
                   {navCategories.map((category) => (
                     <Link
                       key={category.name}
-                      href={`/categories/${category.name.toLowerCase()}`}
+                      href={`/tags/${category.name.toLowerCase()}`}
                       className="w-full"
                     >
                       <DropdownMenuItem className="flex items-center gap-2 cursor-pointer">
@@ -199,8 +201,8 @@ export const Navbar = () => {
                 <Container className="h-4 w-4 text-white" />
               </div>
               <span className="font-bold text-lg">
-                <span className="text-black dark:text-white">Hostable</span>
-                <span className="text-blue-600">.tools</span>
+                <span className="text-black dark:text-white">Open</span>
+                <span className="text-blue-600">Apps</span>
               </span>
             </div>
             <Button variant="ghost" size="icon" className="h-8 w-8">
@@ -259,7 +261,7 @@ export const Navbar = () => {
             </Button>
 
             <div className="pl-8 space-y-1 my-2">
-              <Link href="/categories" className="w-full">
+              <Link href="/tags" className="w-full">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -272,7 +274,7 @@ export const Navbar = () => {
               {navCategories.map((category) => (
                 <Link
                   key={category.name}
-                  href={`/categories/${category.name.toLowerCase()}`}
+                  href={`/tags/${category.name.toLowerCase()}`}
                   className="w-full"
                 >
                   <Button

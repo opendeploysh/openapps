@@ -42,7 +42,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import _ from "lodash";
 
-// Icon mapping for categories
+// Icon mapping for tags
 const categoryIcons: Record<string, React.ReactNode> = {
   "Developer Tools": <Code className="w-4 h-4" />,
   Communication: <MessageSquare className="w-4 h-4" />,
@@ -84,7 +84,7 @@ const categoryIcons: Record<string, React.ReactNode> = {
   "Email Marketing": <Mail className="w-4 h-4" />,
 };
 
-// Default colors for categories
+// Default colors for tags
 const categoryColors = [
   "blue",
   "violet",
@@ -222,13 +222,13 @@ const getColorClasses = (color: string) => {
   return colorMap[color] || colorMap.blue;
 };
 
-const categories = _.chain(projects)
-  .flatMap((project) => project.categories)
+const tags = _.chain(projects)
+  .flatMap((project) => project.tags)
 
   .value();
 
 const categoryCount = _.chain(projects)
-  .flatMap((project) => project.categories)
+  .flatMap((project) => project.tags)
   .countBy()
   .value();
 
@@ -246,7 +246,7 @@ const sortedCategories = _.chain(categoryCount)
 const mainCats = sortedCategories.slice(0, 20);
 const additionalCats = sortedCategories.slice(20);
 
-// Group main categories into 4 columns (5 items each)
+// Group main tags into 4 columns (5 items each)
 const mainCategoriesGrouped = _.chunk(mainCats, 5);
 
 export default function CategoriesPage() {
@@ -278,7 +278,7 @@ export default function CategoriesPage() {
           </h1>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-6">
             Discover self-hostable open source projects for your favorite
-            software categories.
+            software tags.
           </p>
         </div>
 
@@ -295,7 +295,7 @@ export default function CategoriesPage() {
               <div key={groupIndex} className="space-y-6">
                 {categoryGroup.map((category) => (
                   <Link
-                    href={`/categories/${category.name
+                    href={`/tags/${category.name
                       .toLowerCase()
                       .replace(/\s+/g, "-")}`}
                     key={category.name}
@@ -343,7 +343,7 @@ export default function CategoriesPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {additionalCats.map((category) => (
                 <Link
-                  href={`/categories/${category.name
+                  href={`/tags/${category.name
                     .toLowerCase()
                     .replace(/\s+/g, "-")}`}
                   key={category.name}

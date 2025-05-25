@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hostable.tools - Discover. Compare. Deploy.",
+  title: "OpenApps - Discover. Compare. Deploy.",
   description:
     "Find cost-effective, privacy-respecting alternatives to popular SaaS tools. Compare features, and deploy them yourself or through our managed services.",
   keywords: [
@@ -28,19 +28,19 @@ export const metadata: Metadata = {
     "cost-effective",
     "managed services",
   ],
-  authors: [{ name: "Hostable.tools", url: "https://hostable.tools" }],
-  creator: "Hostable.tools",
-  publisher: "Hostable.tools",
-  metadataBase: new URL("https://hostable.tools"),
+  authors: [{ name: "OpenApps", url: "https://openapps.sh" }],
+  creator: "OpenApps",
+  publisher: "OpenApps",
+  metadataBase: new URL("https://openapps.sh"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Hostable.tools - Discover. Compare. Deploy.",
+    title: "OpenApps - Discover. Compare. Deploy.",
     description:
       "Find cost-effective, privacy-respecting alternatives to popular SaaS tools. Compare features, and deploy them yourself or through our managed services.",
-    url: "https://hostable.tools",
-    siteName: "Hostable.tools",
+    url: "https://openapps.sh",
+    siteName: "OpenApps",
     locale: "en_US",
     type: "website",
   },

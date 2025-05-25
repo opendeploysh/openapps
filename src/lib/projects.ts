@@ -1,5 +1,5 @@
 import projectData from "../../.next/cache/projects.json";
-import { primaryCategories } from "./categories";
+import { categories } from "./categories";
 import { HostingType } from "./hosting-type";
 import githubData from "./projects-github.json";
 
@@ -39,8 +39,8 @@ export const mdxProjectData = z.object({
       return true;
     }),
 
-  primaryCategory: z.enum(primaryCategories),
-  categories: z.array(z.string()),
+  category: z.enum(categories),
+  tags: z.array(z.string()),
 
   github: z.string().regex(/^[^/]+\/[^/]+$/),
 

@@ -71,8 +71,8 @@ export const ProjectsGrid = ({
 
           <p className="text-neutral-600 dark:text-neutral-400 text-center max-w-md mb-6">
             {activeFilter
-              ? `We couldn't find any projects in the "${activeFilter}" category. Try browsing other categories or adjusting your search.`
-              : "We couldn't find any projects matching your search. Try different keywords or browse our categories."}
+              ? `We couldn't find any projects in the "${activeFilter}" category. Try browsing other tags or adjusting your search.`
+              : "We couldn't find any projects matching your search. Try different keywords or browse our tags."}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -107,7 +107,7 @@ export const ProjectsGrid = ({
                 alternative")
               </li>
               <li>• Check spelling and try different variations</li>
-              <li>• Browse by categories using the filter options</li>
+              <li>• Browse by tags using the filter options</li>
               <li>• Use the popular alternatives tags for inspiration</li>
             </ul>
           </div>

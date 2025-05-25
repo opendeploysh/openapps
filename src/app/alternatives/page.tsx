@@ -23,7 +23,7 @@ import { Footer } from "@/components/Footer";
 import { projects } from "@/lib/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
-// Popular services and their categories for the alternatives showcase
+// Popular services and their tags for the alternatives showcase
 const popularServices = [
   {
     name: "Google Workspace",
@@ -339,10 +339,7 @@ export default function AlternativesPage() {
                 count: "14+",
               },
             ].map((category, index) => (
-              <Link
-                key={index}
-                href={`/categories/${category.name.toLowerCase()}`}
-              >
+              <Link key={index} href={`/tags/${category.name.toLowerCase()}`}>
                 <Card className="text-center hover:shadow-md transition-shadow cursor-pointer">
                   <CardContent className="p-4">
                     <div className="h-10 w-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mx-auto mb-2">

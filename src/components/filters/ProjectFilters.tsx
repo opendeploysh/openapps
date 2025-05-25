@@ -68,7 +68,7 @@ export const ProjectFilters = ({
 
   // Helper function to update URL with current filter state
   const updateURL = (
-    categories: string[],
+    tags: string[],
     difficulties: string[],
     pricing: string[],
     hosting: string[],
@@ -79,7 +79,7 @@ export const ProjectFilters = ({
 
     const params = new URLSearchParams();
 
-    if (categories.length > 0) params.set("categories", categories.join(","));
+    if (tags.length > 0) params.set("tags", tags.join(","));
     if (difficulties.length > 0)
       params.set("difficulties", difficulties.join(","));
     if (pricing.length > 0) params.set("pricing", pricing.join(","));
@@ -97,7 +97,7 @@ export const ProjectFilters = ({
   const getInitialFilters = () => {
     if (!enableUrlSync) {
       return {
-        categories: activeCategoryFilters || [],
+        tags: activeCategoryFilters || [],
         difficulties: activeDifficultyFilters || [],
         pricing: activePricingFilters || [],
         hosting: activeHostingFilters || [],
@@ -106,8 +106,8 @@ export const ProjectFilters = ({
       };
     }
 
-    const categories =
-      searchParams.get("categories")?.split(",").filter(Boolean) ||
+    const tags =
+      searchParams.get("tags")?.split(",").filter(Boolean) ||
       activeCategoryFilters ||
       [];
     const difficulties =
@@ -125,7 +125,7 @@ export const ProjectFilters = ({
     const sort = searchParams.get("sort") || sortValue || defaultSort;
     const query = searchParams.get("q") || initialSearchQuery;
 
-    return { categories, difficulties, pricing, hosting, sort, query };
+    return { tags, difficulties, pricing, hosting, sort, query };
   };
 
   // Internal state for URL-synced filters
@@ -148,10 +148,10 @@ export const ProjectFilters = ({
   // Initialize from URL on mount
   useEffect(() => {
     if (enableUrlSync) {
-      const { categories, difficulties, pricing, hosting, sort, query } =
+      const { tags, difficulties, pricing, hosting, sort, query } =
         getInitialFilters();
 
-      setInternalCategoryFilters(categories);
+      setInternalCategoryFilters(tags);
       setInternalDifficultyFilters(difficulties);
       setInternalPricingFilters(pricing);
       setInternalHostingFilters(hosting);
@@ -159,7 +159,7 @@ export const ProjectFilters = ({
       setInternalSearchQuery(query);
 
       // Notify parent components of initial state
-      onFilterChange?.("category", categories);
+      onFilterChange?.("category", tags);
       onFilterChange?.("difficulty", difficulties);
       onFilterChange?.("pricing", pricing);
       onFilterChange?.("hosting", hosting);

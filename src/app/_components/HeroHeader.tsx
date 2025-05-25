@@ -15,8 +15,8 @@ export const HeroHeader = ({ projectCount }: HeroHeaderProps) => {
       <div className="mb-6">
         <div className="inline-block relative">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-500">
-            <span className="text-black dark:text-white">Hostable</span>
-            <span className="text-blue-600">.tools</span>
+            <span className="text-black dark:text-white">Open</span>
+            <span className="text-blue-600">Apps</span>
           </h1>
         </div>
 
@@ -47,7 +47,7 @@ export const HeroHeader = ({ projectCount }: HeroHeaderProps) => {
           <span className="text-blue-600 dark:text-blue-400 font-medium">
             Powered by
           </span>
-          <span className="ml-1.5">Podlify</span>
+          <span className="ml-1.5">OpenApps</span>
         </div>
         <div className="w-16 h-1 rounded-full bg-gradient-to-l from-blue-500 to-transparent"></div>
       </div>

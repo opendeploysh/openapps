@@ -1,9 +1,9 @@
 import { MetadataRoute } from "next";
 import { projects } from "@/lib/projects";
-import { primaryCategories } from "@/lib/categories";
+import { primaryCategories } from "@/lib/tags";
 import _ from "lodash";
 
-const baseUrl = "https://hostable.tools";
+const baseUrl = "https://openapps.sh";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages
@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/categories`,
+      url: `${baseUrl}/tags`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 0.8,
@@ -75,13 +75,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Category pages
-  const categories = _.chain(projects)
-    .flatMap((project) => project.categories)
+  const tags = _.chain(projects)
+    .flatMap((project) => project.tags)
     .uniq()
     .value();
 
-  const categoryPages = categories.map((category) => ({
-    url: `${baseUrl}/categories/${category.toLowerCase().replace(/\s+/g, "-")}`,
+  const categoryPages = tags.map((category) => ({
+    url: `${baseUrl}/tags/${category.toLowerCase().replace(/\s+/g, "-")}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,

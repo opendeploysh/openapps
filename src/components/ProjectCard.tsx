@@ -47,7 +47,7 @@ export const ProjectCard = ({
   name,
   description,
   deployment,
-  categories,
+  tags,
   logo,
   slug,
   license,
@@ -98,10 +98,10 @@ export const ProjectCard = ({
           </CardDescription>
         </CardHeader>
 
-        {categories && categories.length > 0 && (
+        {tags && tags.length > 0 && (
           <CardContent className="pt-3">
             <div className="flex flex-wrap gap-1 py-0 text-xs">
-              {categories.slice(0, 2).map((category) => (
+              {tags.slice(0, 2).map((category) => (
                 <Badge variant="secondary" key={category}>
                   {category}
                 </Badge>
@@ -172,7 +172,7 @@ export const ProjectCard = ({
                     <Badge variant="default" className="bg-blue-600">
                       Recommended
                     </Badge>
-                    Deploy with Hostable.tools
+                    Deploy with OpenApps
                   </h3>
                   <p className="text-sm mb-2">
                     The fastest way to get your own {name} instance
@@ -202,7 +202,7 @@ export const ProjectCard = ({
                     </li>
                   </ul>
                   <Button size="sm" className="w-full">
-                    Deploy with Hostable.tools
+                    Deploy with OpenApps
                   </Button>
                 </div>
 

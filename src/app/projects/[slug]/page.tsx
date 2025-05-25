@@ -63,8 +63,8 @@ export async function generateMetadata({
       `${project.name.toLowerCase()} deployment`,
       `${project.name.toLowerCase()} docker`,
       `${project.name.toLowerCase()} installation`,
-      project.primaryCategory.toLowerCase(),
-      ...project.categories.map((cat) => cat.toLowerCase()),
+      project.category.toLowerCase(),
+      ...project.tags.map((cat) => cat.toLowerCase()),
       ...(project.language ? [project.language.toLowerCase()] : []),
       ...(project.license ? [project.license.toLowerCase()] : []),
       "self-hosted",
@@ -72,7 +72,7 @@ export async function generateMetadata({
       "privacy",
       "deployment",
     ].join(", "),
-    authors: [{ name: "Hostable.tools" }],
+    authors: [{ name: "OpenApps" }],
     openGraph: {
       title,
       description,
@@ -208,12 +208,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-4">Project Categories</h3>
             <div className="flex flex-wrap gap-2 justify-center">
-              {project.categories.map((category) => (
+              {project.tags.map((category) => (
                 <Link
                   key={category}
-                  href={`/categories/${category
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
+                  href={`/tags/${category.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   <Badge
                     variant="outline"

@@ -19,7 +19,7 @@ export async function generateMetadata({
 
   // Find projects in this category
   const categoryProjects = projects.filter((p) =>
-    p.categories.some(
+    p.tags.some(
       (cat) => cat.toLowerCase().replace(/\s+/g, "-") === categorySlug
     )
   );
@@ -27,7 +27,7 @@ export async function generateMetadata({
   // Find the actual category name (with proper casing) from the projects
   const actualCategoryName =
     _.chain(projects)
-      .flatMap((project) => project.categories)
+      .flatMap((project) => project.tags)
       .find((cat) => cat.toLowerCase().replace(/\s+/g, "-") === categorySlug)
       .value() || categoryName;
 
@@ -44,7 +44,7 @@ export async function generateMetadata({
   const description = `Discover ${projectCount} self-hosted open source ${actualCategoryName.toLowerCase()} projects. Compare features, licenses, and deployment options for ${actualCategoryName.toLowerCase()} software alternatives.`;
 
   return {
-    title: `${actualCategoryName} - SaaS Alternatives | Hostable.tools`,
+    title: `${actualCategoryName} - SaaS Alternatives | OpenApps`,
     description: `Find cost-effective, privacy-respecting ${actualCategoryName.toLowerCase()} alternatives to popular SaaS tools. Compare features and deploy them yourself or through our managed services.`,
     keywords: [
       "SaaS alternatives",
@@ -56,7 +56,7 @@ export async function generateMetadata({
       "docker",
       "kubernetes",
     ],
-    authors: [{ name: "Hostable.tools" }],
+    authors: [{ name: "OpenApps" }],
     openGraph: {
       title: `${actualCategoryName} - SaaS Alternatives`,
       description: `Find cost-effective, privacy-respecting ${actualCategoryName.toLowerCase()} alternatives to popular SaaS tools.`,
@@ -68,7 +68,7 @@ export async function generateMetadata({
       description,
     },
     alternates: {
-      canonical: `/categories/${categorySlug}`,
+      canonical: `/tags/${categorySlug}`,
     },
   };
 }

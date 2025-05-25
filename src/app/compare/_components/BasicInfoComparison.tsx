@@ -32,17 +32,17 @@ export function BasicInfoComparison({
   const comparisonRows = [
     {
       label: "Categories",
-      key: "categories",
+      key: "tags",
       render: (project: ProjectMeta) => (
         <div className="flex flex-wrap gap-1">
-          {project.categories.slice(0, 2).map((category) => (
+          {project.tags.slice(0, 2).map((category) => (
             <Badge key={category} variant="secondary" className="text-xs">
               {category}
             </Badge>
           ))}
-          {project.categories.length > 2 && (
+          {project.tags.length > 2 && (
             <Badge variant="outline" className="text-xs">
-              +{project.categories.length - 2}
+              +{project.tags.length - 2}
             </Badge>
           )}
         </div>
