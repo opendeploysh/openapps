@@ -20,15 +20,26 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: "20"
-          cache: "npm"
+          version: 10
+          run_install: false
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Generate project MDX
         id: generate-mdx
@@ -36,7 +47,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           # Run the existing TypeScript script
-          npx tsx scripts/create-project.ts ${{ github.event.inputs.github_url }}
+          pnpm run create-project ${{ github.event.inputs.github_url }}
 
           # Extract slug and category from the generated file
           # Find the most recently created .mdx file
