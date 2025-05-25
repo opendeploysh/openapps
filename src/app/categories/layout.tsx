@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description:
       "Explore open source and self-hostable projects organized by tags.",
     type: "website",
-    url: "/tags",
+    url: "/categories",
   },
   twitter: {
     card: "summary",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       "Explore open source and self-hostable projects organized by tags.",
   },
   alternates: {
-    canonical: "/tags",
+    canonical: "/categories",
   },
 };
 

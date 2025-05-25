@@ -211,7 +211,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {project.tags.map((category) => (
                 <Link
                   key={category}
-                  href={`/tags/${category.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`/categories/${category
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
                 >
                   <Badge
                     variant="outline"

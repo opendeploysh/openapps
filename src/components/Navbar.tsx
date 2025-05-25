@@ -125,7 +125,7 @@ export const Navbar = () => {
                 <DropdownMenuContent align="start" className="w-[220px]">
                   <DropdownMenuLabel>Categories</DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <Link href="/tags" className="w-full">
+                  <Link href="/categories" className="w-full">
                     <DropdownMenuItem className="flex items-center gap-2 cursor-pointer">
                       <div className="h-5 w-5 rounded flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
                         <Layout className="h-3 w-3 text-blue-600 dark:text-blue-400" />
@@ -137,7 +137,7 @@ export const Navbar = () => {
                   {navCategories.map((category) => (
                     <Link
                       key={category.name}
-                      href={`/tags/${category.name.toLowerCase()}`}
+                      href={`/categories/${category.name.toLowerCase()}`}
                       className="w-full"
                     >
                       <DropdownMenuItem className="flex items-center gap-2 cursor-pointer">
@@ -261,7 +261,7 @@ export const Navbar = () => {
             </Button>
 
             <div className="pl-8 space-y-1 my-2">
-              <Link href="/tags" className="w-full">
+              <Link href="/categories" className="w-full">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -274,7 +274,7 @@ export const Navbar = () => {
               {navCategories.map((category) => (
                 <Link
                   key={category.name}
-                  href={`/tags/${category.name.toLowerCase()}`}
+                  href={`/categories/${category.name.toLowerCase()}`}
                   className="w-full"
                 >
                   <Button

@@ -3,18 +3,19 @@ import { projects } from "@/lib/projects";
 import _ from "lodash";
 
 interface CategoryLayoutProps {
-  params: {
+  params: Promise<{
     category: string;
-  };
+  }>;
   children: React.ReactNode;
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 }): Promise<Metadata> {
-  const categorySlug = params.category;
+  const { category } = await params;
+  const categorySlug = category;
   const categoryName = categorySlug.replace(/-/g, " ");
 
   // Find projects in this category
@@ -68,7 +69,7 @@ export async function generateMetadata({
       description,
     },
     alternates: {
-      canonical: `/tags/${categorySlug}`,
+      canonical: `/categories/${categorySlug}`,
     },
   };
 }

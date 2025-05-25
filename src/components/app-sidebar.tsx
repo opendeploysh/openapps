@@ -87,57 +87,57 @@ const data = {
     },
     {
       title: "Categories",
-      url: "/tags",
+      url: "/categories",
       icon: Layout,
       items: [
         {
           title: "All Categories",
-          url: "/tags",
+          url: "/categories",
           icon: Layout,
         },
         {
           title: "Development",
-          url: "/tags/development",
+          url: "/categories/development",
           icon: Code,
         },
         {
           title: "Communication",
-          url: "/tags/communication",
+          url: "/categories/communication",
           icon: MessageSquare,
         },
         {
           title: "Databases",
-          url: "/tags/databases",
+          url: "/categories/databases",
           icon: Database,
         },
         {
           title: "Security",
-          url: "/tags/security",
+          url: "/categories/security",
           icon: ShieldCheck,
         },
         {
           title: "Automation",
-          url: "/tags/automation",
+          url: "/categories/automation",
           icon: Settings,
         },
         {
           title: "Media",
-          url: "/tags/media",
+          url: "/categories/media",
           icon: Film,
         },
         {
           title: "Analytics",
-          url: "/tags/analytics",
+          url: "/categories/analytics",
           icon: BarChart3,
         },
         {
           title: "Infrastructure",
-          url: "/tags/infrastructure",
+          url: "/categories/infrastructure",
           icon: Server,
         },
         {
           title: "Web",
-          url: "/tags/web",
+          url: "/categories/web",
           icon: Globe,
         },
       ],
