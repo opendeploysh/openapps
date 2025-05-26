@@ -1879,6 +1879,43 @@
     }
   },
   {
+    "slug": "flowise",
+    "name": "Flowise",
+    "description": "Flowise is an open-source no-code platform for building AI agents and workflows visually, with support for LangChain, multiple LLM integrations, and customizable components.\n",
+    "license": "Apache-2.0",
+    "hostingType": "Hybrid",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/128289781?s=64&v=4",
+    "heroImage": "https://raw.githubusercontent.com/FlowiseAI/Flowise/main/images/flowise.png",
+    "category": "automation",
+    "tags": [
+      "automation",
+      "ai",
+      "llm",
+      "agents",
+      "workflow",
+      "langchain"
+    ],
+    "github": "FlowiseAI/Flowise",
+    "urls": {
+      "website": "https://flowiseai.com"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "langflow",
+        "superagent",
+        "autogen-studio"
+      ],
+      "nonSelfHosted": [
+        "langchain"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Node.js environment and configuration. Multiple components need to be managed including UI, server and database."
+    }
+  },
+  {
     "slug": "healthchecks",
     "name": "Healthchecks",
     "description": "Healthchecks is an open source cron job monitoring service that listens for HTTP requests and email messages from your scheduled tasks and sends alerts when jobs don't check in on time.\n",
@@ -2085,8 +2122,11 @@
     },
     "alternatives": {
       "selfHosted": [
-        "utask",
-        "apache-airflow"
+        "huginn",
+        "windmill",
+        "node-red",
+        "activepieces",
+        "kestra"
       ],
       "nonSelfHosted": [
         "zapier"
@@ -2096,6 +2136,38 @@
       "difficulty": "Medium",
       "justification": "Requires Node.js environment setup and configuration. Multiple components need to be managed."
     }
+  },
+  {
+    "slug": "node-red",
+    "name": "Node-RED",
+    "description": "Node-RED is a low-code programming tool for event-driven applications that enables you to wire together hardware devices, APIs and online services using a visual flow-based development environment.\n",
+    "license": "Apache-2.0",
+    "logo": "https://avatars.githubusercontent.com/u/5375661?s=64&v=4",
+    "heroImage": "https://camo.githubusercontent.com/fd858c2c9103ef598aff5ca1f4c818d912093009a94879b7d4a90e8357f7a421/68747470733a2f2f6e6f64657265642e6f72672f696d616765732f6e6f64652d7265642d73637265656e73686f742e706e67",
+    "category": "automation",
+    "tags": [
+      "automation",
+      "workflow",
+      "integration",
+      "development"
+    ],
+    "github": "node-red/node-red",
+    "urls": {
+      "website": "https://nodered.org"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "n8n"
+      ],
+      "nonSelfHosted": [
+        "zapier"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple installation via npm with minimal configuration required."
+    },
+    "language": "JavaScript"
   },
   {
     "slug": "olivetin",
@@ -2184,38 +2256,6 @@
     "language": "Python"
   },
   {
-    "slug": "node-red",
-    "name": "Node-RED",
-    "description": "Node-RED is a low-code programming tool for event-driven applications that enables you to wire together hardware devices, APIs and online services using a visual flow-based development environment.\n",
-    "license": "Apache-2.0",
-    "logo": "https://avatars.githubusercontent.com/u/5375661?s=64&v=4",
-    "heroImage": "https://camo.githubusercontent.com/fd858c2c9103ef598aff5ca1f4c818d912093009a94879b7d4a90e8357f7a421/68747470733a2f2f6e6f64657265642e6f72672f696d616765732f6e6f64652d7265642d73637265656e73686f742e706e67",
-    "category": "automation",
-    "tags": [
-      "automation",
-      "workflow",
-      "integration",
-      "development"
-    ],
-    "github": "node-red/node-red",
-    "urls": {
-      "website": "https://nodered.org"
-    },
-    "alternatives": {
-      "selfHosted": [
-        "n8n"
-      ],
-      "nonSelfHosted": [
-        "zapier"
-      ]
-    },
-    "deployment": {
-      "difficulty": "Easy",
-      "justification": "Simple installation via npm with minimal configuration required."
-    },
-    "language": "JavaScript"
-  },
-  {
     "slug": "utask",
     "name": "µTask",
     "description": "µTask is a powerful automation engine that allows you to model and execute business processes using YAML templates, providing secure data encryption, access control, and extensibility through custom Golang plugins.\n",
@@ -2285,7 +2325,6 @@
     "description": "Windmill is an open-source developer platform for building internal tools, automating tasks, and creating workflows. It provides a unified interface for APIs, background jobs, and UIs with support for multiple programming languages.\n",
     "license": "AGPL-3.0",
     "logo": "https://avatars.githubusercontent.com/u/98025271?s=64&v=4",
-    "heroImage": "https://raw.githubusercontent.com/windmill-labs/windmill/main/imgs/windmill-diagram.png",
     "category": "automation",
     "tags": [
       "automation",
