@@ -120,7 +120,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
 
   // Get self-hosted alternatives from the project's alternatives.selfHosted array
   const selfHostedAlternativeProjects = await Promise.all(
-    (project.alternatives?.selfHosted || [])
+    (project.alternatives?.selfHosted ?? [])
       .map((altName) => {
         // Find the project in our database
         return projects.find(
@@ -132,10 +132,10 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
       })
       .filter((p): p is ProjectMeta => Boolean(p))
       .map(async (p) => {
-        const mdxData = await useCompileFromSlug(p.slug)
+        const mdxData = await useCompileFromSlug(p.slug).catch(() => null)
         return { ...p, mdxData }
       })
-  )
+  ).catch(() => [])
 
   const hasAlternatives = selfHostedAlternativeProjects.length > 0
 

@@ -2494,7 +2494,7 @@
     "description": "Django-CRM is an open-source CRM solution built on Django framework, providing enterprise-level features like lead management, task tracking, email marketing, and sales analytics while maintaining simplicity in development and customization.\n",
     "hostingType": "Self-Hosted",
     "pricingModel": "Free",
-    "logo": "https://raw.githubusercontent.com/DjangoCRM/django-crm/main/static/images/django-crm-logo.png",
+    "logo": "https://avatars.githubusercontent.com/u/170883296?s=64&v=4",
     "category": "crm",
     "tags": [
       "crm",
@@ -2535,6 +2535,260 @@
     ]
   },
   {
+    "slug": "dolibarr",
+    "name": "Dolibarr",
+    "description": "Dolibarr ERP & CRM is a modern open source software package that helps manage business activities like contacts, invoices, orders, stocks, calendar, HR and more. It's designed for small to large companies and can be used standalone or as a web application.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/877491?s=64&v=4",
+    "category": "crm",
+    "tags": [
+      "crm",
+      "erp",
+      "business"
+    ],
+    "github": "dolibarr/dolibarr",
+    "urls": {
+      "website": "https://www.dolibarr.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "odoo",
+        "erpnext"
+      ],
+      "nonSelfHosted": [
+        "salesforce",
+        "dynamics-365"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires web server setup and database configuration, but has good documentation and installer wizard."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Platform",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "PHP + JavaScript"
+          },
+          {
+            "name": "Deployment Options",
+            "value": "Cloud or Self-hosted"
+          },
+          {
+            "name": "Database Support",
+            "value": "MySQL, MariaDB, PostgreSQL"
+          },
+          {
+            "name": "Integration",
+            "value": "REST & SOAP APIs"
+          }
+        ]
+      },
+      {
+        "name": "Business Applications",
+        "features": [
+          {
+            "name": "CRM"
+          },
+          {
+            "name": "Sales Management"
+          },
+          {
+            "name": "Purchase Management"
+          },
+          {
+            "name": "Inventory Control"
+          },
+          {
+            "name": "Project Management"
+          },
+          {
+            "name": "HR Management"
+          },
+          {
+            "name": "Accounting"
+          },
+          {
+            "name": "Point of Sale"
+          }
+        ]
+      },
+      {
+        "name": "CRM Features",
+        "features": [
+          {
+            "name": "Contact Management"
+          },
+          {
+            "name": "Lead Tracking"
+          },
+          {
+            "name": "Sales Pipeline"
+          },
+          {
+            "name": "Proposal Management"
+          },
+          {
+            "name": "Contract Management"
+          },
+          {
+            "name": "Ticket System"
+          }
+        ]
+      },
+      {
+        "name": "Platform Features",
+        "features": [
+          {
+            "name": "Multi-User Support"
+          },
+          {
+            "name": "Role-based Access"
+          },
+          {
+            "name": "Document Management"
+          },
+          {
+            "name": "Email Integration"
+          },
+          {
+            "name": "Barcode Support"
+          },
+          {
+            "name": "Mobile Access"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "erpnext",
+    "name": "ERPNext",
+    "description": "ERPNext is a comprehensive, free, and open-source Enterprise Resource Planning (ERP) system that includes CRM, accounting, HR, manufacturing and more. It provides a complete business management solution used by thousands of companies worldwide.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://raw.githubusercontent.com/frappe/erpnext/7755e77dfcea1fd8e97e51a2717413ea09acd64a/erpnext/public/images/v16/erpnext.svg",
+    "heroImage": "https://github.com/frappe/erpnext/blob/develop/erpnext/public/images/v16/hero_image.png?raw=true",
+    "category": "crm",
+    "tags": [
+      "crm",
+      "erp",
+      "business"
+    ],
+    "github": "frappe/erpnext",
+    "urls": {
+      "website": "https://erpnext.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "odoo"
+      ],
+      "nonSelfHosted": [
+        "salesforce",
+        "sap"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex ERP system requiring technical expertise for deployment, configuration and maintenance."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Platform",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "Python + JavaScript"
+          },
+          {
+            "name": "Deployment",
+            "value": "Self-hosted or Cloud"
+          },
+          {
+            "name": "Customization",
+            "value": "Extensive configuration options"
+          },
+          {
+            "name": "Integration",
+            "value": "REST API and webhooks"
+          }
+        ]
+      },
+      {
+        "name": "Business Applications",
+        "features": [
+          {
+            "name": "Financial Accounting"
+          },
+          {
+            "name": "Order Management"
+          },
+          {
+            "name": "HR & Payroll"
+          },
+          {
+            "name": "Manufacturing"
+          },
+          {
+            "name": "CRM"
+          },
+          {
+            "name": "Project Management"
+          },
+          {
+            "name": "Asset Management"
+          },
+          {
+            "name": "Website Builder"
+          }
+        ]
+      },
+      {
+        "name": "CRM Features",
+        "features": [
+          {
+            "name": "Lead Management"
+          },
+          {
+            "name": "Opportunity Tracking"
+          },
+          {
+            "name": "Sales Pipeline"
+          },
+          {
+            "name": "Customer Support"
+          },
+          {
+            "name": "Email Integration"
+          }
+        ]
+      },
+      {
+        "name": "Platform Features",
+        "features": [
+          {
+            "name": "Multi-company Support"
+          },
+          {
+            "name": "Role-based Access"
+          },
+          {
+            "name": "Workflow Engine"
+          },
+          {
+            "name": "Custom Reports"
+          },
+          {
+            "name": "Mobile Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "espocrm",
     "name": "EspoCRM",
     "description": "EspoCRM is an open-source CRM platform designed to help organizations build and maintain strong customer relationships, providing tools for managing leads, contacts, sales opportunities, marketing campaigns, and support cases.\n",
@@ -2553,8 +2807,15 @@
       "website": "https://www.espocrm.com/"
     },
     "alternatives": {
-      "selfHosted": [],
-      "nonSelfHosted": []
+      "selfHosted": [
+        "odoo",
+        "erpnext"
+      ],
+      "nonSelfHosted": [
+        "salesforce",
+        "airtable",
+        "zohocrm"
+      ]
     },
     "deployment": {
       "difficulty": "Medium",
@@ -2692,6 +2953,113 @@
           },
           {
             "name": "MySQL Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "gauzy",
+    "name": "Ever Gauzy",
+    "description": "Ever Gauzy is an open-source business management platform that combines ERP, CRM, HRM, and project management capabilities. It offers features like time tracking, employee management, project tracking, and financial management tools.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Free",
+    "logo": "https://gauzy.co/favicon.svg",
+    "heroImage": "https://docs.gauzy.co/overview.png",
+    "category": "crm",
+    "tags": [
+      "crm",
+      "erp",
+      "hrm",
+      "project-management"
+    ],
+    "github": "ever-co/ever-gauzy",
+    "urls": {
+      "website": "https://gauzy.co"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Requires setup of multiple components including PostgreSQL, Redis, and optional services. Docker/Kubernetes deployment recommended for production."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Platform",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Business management & operations"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Organizations & enterprises"
+          },
+          {
+            "name": "Architecture",
+            "value": "NestJS + Angular"
+          }
+        ]
+      },
+      {
+        "name": "HR Management",
+        "features": [
+          {
+            "name": "Employee Management"
+          },
+          {
+            "name": "Time Tracking"
+          },
+          {
+            "name": "Performance Monitoring"
+          },
+          {
+            "name": "Applicant Tracking"
+          },
+          {
+            "name": "Onboarding Tools"
+          }
+        ]
+      },
+      {
+        "name": "Project Management",
+        "features": [
+          {
+            "name": "Task Management"
+          },
+          {
+            "name": "Project Tracking"
+          },
+          {
+            "name": "Team Collaboration"
+          },
+          {
+            "name": "Goals & KPIs"
+          },
+          {
+            "name": "Activity Monitoring"
+          }
+        ]
+      },
+      {
+        "name": "Business Tools",
+        "features": [
+          {
+            "name": "CRM Features"
+          },
+          {
+            "name": "Sales Pipeline"
+          },
+          {
+            "name": "Invoicing"
+          },
+          {
+            "name": "Expense Tracking"
+          },
+          {
+            "name": "Financial Management"
           }
         ]
       }
@@ -2936,6 +3304,130 @@
     ]
   },
   {
+    "slug": "odoo",
+    "name": "Odoo",
+    "description": "Odoo is a comprehensive suite of open source business applications including CRM, Website Builder, eCommerce, Project Management, Accounting, Point of Sale, HR and more. The apps can be used standalone or integrated into a complete ERP system.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/6368483?s=64&v=4",
+    "heroImage": "https://lafptocsuil8sakp.public.blob.vercel-storage.com/screenshot/https-www-odoo-com-r9UbFrtqzug9FSmHd7JlxOQKxcW16s.png",
+    "category": "crm",
+    "tags": [
+      "crm",
+      "erp",
+      "business"
+    ],
+    "github": "odoo/odoo",
+    "urls": {
+      "website": "https://www.odoo.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "erpnext"
+      ],
+      "nonSelfHosted": [
+        "salesforce",
+        "dynamics-365"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex system with many components requiring significant technical expertise to deploy and maintain."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Platform",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "Python + JavaScript"
+          },
+          {
+            "name": "Deployment Options",
+            "value": "Cloud or Self-hosted"
+          },
+          {
+            "name": "Modularity",
+            "value": "App-based architecture"
+          },
+          {
+            "name": "Integration",
+            "value": "Seamless cross-app integration"
+          }
+        ]
+      },
+      {
+        "name": "Business Applications",
+        "features": [
+          {
+            "name": "CRM"
+          },
+          {
+            "name": "eCommerce"
+          },
+          {
+            "name": "Inventory Management"
+          },
+          {
+            "name": "Project Management"
+          },
+          {
+            "name": "Accounting"
+          },
+          {
+            "name": "Point of Sale"
+          },
+          {
+            "name": "Human Resources"
+          },
+          {
+            "name": "Manufacturing"
+          }
+        ]
+      },
+      {
+        "name": "CRM Features",
+        "features": [
+          {
+            "name": "Contact Management"
+          },
+          {
+            "name": "Pipeline Management"
+          },
+          {
+            "name": "Email Integration"
+          },
+          {
+            "name": "Sales Automation"
+          },
+          {
+            "name": "Analytics & Reporting"
+          }
+        ]
+      },
+      {
+        "name": "Platform Features",
+        "features": [
+          {
+            "name": "Multi-company Support"
+          },
+          {
+            "name": "Role-based Access"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Customization Options"
+          },
+          {
+            "name": "Mobile Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "suitecrm",
     "name": "SuiteCRM",
     "description": "SuiteCRM is an award-winning open-source enterprise CRM platform that provides comprehensive customer relationship management capabilities including sales automation, marketing campaigns, support cases, project management and more.\n",
@@ -2954,8 +3446,14 @@
       "website": "https://suitecrm.com/"
     },
     "alternatives": {
-      "selfHosted": [],
-      "nonSelfHosted": []
+      "selfHosted": [
+        "odoo",
+        "erpnext"
+      ],
+      "nonSelfHosted": [
+        "salesforce",
+        "sap"
+      ]
     },
     "deployment": {
       "difficulty": "Medium",
@@ -3647,7 +4145,8 @@
     },
     "alternatives": {
       "selfHosted": [
-        "cassandra"
+        "scylladb",
+        "clickhouse"
       ],
       "nonSelfHosted": [
         "dynamodb",
@@ -3738,6 +4237,1387 @@
           },
           {
             "name": "Enterprise Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "adminer",
+    "name": "Adminer",
+    "description": "Adminer is a full-featured database management tool written in PHP. It consists of a single file ready to deploy to the target server and supports multiple database systems including MySQL, PostgreSQL, SQLite, and more.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://www.adminer.org/static/images/icons/adminer.png",
+    "category": "database-management",
+    "tags": [
+      "database",
+      "mysql",
+      "postgresql",
+      "sqlite",
+      "mssql"
+    ],
+    "github": "vrana/adminer",
+    "urls": {
+      "website": "https://www.adminer.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "phpmyadmin"
+      ],
+      "nonSelfHosted": [
+        "dbeaver",
+        "datagrip"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single PHP file deployment, just upload and run. Requires PHP environment."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Database management"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Developers & DBAs"
+          },
+          {
+            "name": "Architecture",
+            "value": "Single PHP file"
+          }
+        ]
+      },
+      {
+        "name": "Database Support",
+        "features": [
+          {
+            "name": "MySQL/MariaDB"
+          },
+          {
+            "name": "PostgreSQL"
+          },
+          {
+            "name": "SQLite"
+          },
+          {
+            "name": "MS SQL"
+          },
+          {
+            "name": "Oracle"
+          }
+        ]
+      },
+      {
+        "name": "Management Features",
+        "features": [
+          {
+            "name": "Table Management"
+          },
+          {
+            "name": "Query Execution"
+          },
+          {
+            "name": "Data Import/Export"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Database Structure"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Authentication"
+          },
+          {
+            "name": "SSL Support"
+          },
+          {
+            "name": "IP Restriction"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "SQL Injection Prevention"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "azimutt",
+    "name": "Azimutt",
+    "description": "Azimutt is a next-generation ERD tool for exploring, documenting and analyzing database schemas. It provides modern visualization capabilities for handling large, complex database structures with features for schema design, data exploration, documentation and analysis.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/89384563?s=64&v=4",
+    "category": "database-managment",
+    "tags": [
+      "database",
+      "erd",
+      "documentation",
+      "analysis"
+    ],
+    "github": "azimuttapp/azimutt",
+    "urls": {
+      "website": "https://azimutt.app/"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Docker image available but requires configuration of storage and email services."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Database exploration & documentation"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Large complex databases"
+          },
+          {
+            "name": "Architecture",
+            "value": "Elixir + Elm"
+          }
+        ]
+      },
+      {
+        "name": "Database Features",
+        "features": [
+          {
+            "name": "Schema Visualization"
+          },
+          {
+            "name": "Data Exploration"
+          },
+          {
+            "name": "Documentation Tools"
+          },
+          {
+            "name": "Schema Analysis"
+          },
+          {
+            "name": "Multi-DB Support"
+          }
+        ]
+      },
+      {
+        "name": "Visualization",
+        "features": [
+          {
+            "name": "Interactive ERD"
+          },
+          {
+            "name": "Smart Layout"
+          },
+          {
+            "name": "Relation Tracking"
+          },
+          {
+            "name": "Custom Views"
+          },
+          {
+            "name": "Search Everywhere"
+          }
+        ]
+      },
+      {
+        "name": "Documentation",
+        "features": [
+          {
+            "name": "Table Notes"
+          },
+          {
+            "name": "Column Notes"
+          },
+          {
+            "name": "Tags & Labels"
+          },
+          {
+            "name": "Use Case Layouts"
+          },
+          {
+            "name": "Team Documentation"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "SQL Import"
+          },
+          {
+            "name": "Database Connection"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Kubernetes Deploy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "baserow",
+    "name": "Baserow",
+    "description": "Baserow is an open-source no-code database tool and Airtable alternative that allows users to create online databases without technical experience. It combines spreadsheet ease-of-use with powerful data organization capabilities.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/1261496?s=64&v=4",
+    "heroImage": "https://github.com/bram2w/baserow/raw/master/docs/assets/screenshot.png",
+    "category": "database-managment",
+    "tags": [
+      "database",
+      "no-code",
+      "spreadsheet",
+      "airtable"
+    ],
+    "github": "baserow/baserow",
+    "urls": {
+      "website": "https://baserow.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "adminer",
+        "azimutt"
+      ],
+      "nonSelfHosted": [
+        "airtable",
+        "notion",
+        "dbeaver",
+        "datagrip"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Docker deployment available but requires configuration of storage and services."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Platform",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "Django + Vue.js"
+          },
+          {
+            "name": "Database",
+            "value": "PostgreSQL"
+          },
+          {
+            "name": "API First",
+            "value": "REST API"
+          },
+          {
+            "name": "Deployment",
+            "value": "Docker/Self-hosted"
+          }
+        ]
+      },
+      {
+        "name": "Database Features",
+        "features": [
+          {
+            "name": "Spreadsheet Interface"
+          },
+          {
+            "name": "Custom Fields"
+          },
+          {
+            "name": "Views & Filters"
+          },
+          {
+            "name": "Data Import/Export"
+          },
+          {
+            "name": "Real-time Collaboration"
+          }
+        ]
+      },
+      {
+        "name": "Development Features",
+        "features": [
+          {
+            "name": "Plugin System"
+          },
+          {
+            "name": "REST API Access"
+          },
+          {
+            "name": "Custom Fields"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "Database Backups"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "Role-based Access"
+          },
+          {
+            "name": "SSO Integration"
+          },
+          {
+            "name": "Audit Logs"
+          },
+          {
+            "name": "Advanced Security"
+          },
+          {
+            "name": "Priority Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "bytebase",
+    "name": "Bytebase",
+    "description": "Bytebase is a Database CI/CD and DevSecOps solution that helps teams manage database changes, access control, and governance. It provides a web-based interface for developers and DBAs to collaborate on database development lifecycle management.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/74386897?s=64&v=4",
+    "heroImage": "https://raw.githubusercontent.com/bytebase/bytebase/main/docs/assets/change-query-secure-govern.webp",
+    "category": "database-managment",
+    "tags": [
+      "database",
+      "devops",
+      "cicd",
+      "security"
+    ],
+    "github": "bytebase/bytebase",
+    "urls": {
+      "website": "https://www.bytebase.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "adminer",
+        "flyway"
+      ],
+      "nonSelfHosted": [
+        "liquibase",
+        "dbeaver"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Docker and Kubernetes deployment options available with good documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Platform",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Database DevSecOps"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Development teams & DBAs"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + Vue.js"
+          }
+        ]
+      },
+      {
+        "name": "Database Features",
+        "features": [
+          {
+            "name": "Schema Change Management"
+          },
+          {
+            "name": "SQL Review & Linting"
+          },
+          {
+            "name": "Data Access Control"
+          },
+          {
+            "name": "Data Masking"
+          },
+          {
+            "name": "Query Management"
+          }
+        ]
+      },
+      {
+        "name": "DevOps Features",
+        "features": [
+          {
+            "name": "GitOps Integration"
+          },
+          {
+            "name": "CI/CD Pipeline"
+          },
+          {
+            "name": "Change Workflow"
+          },
+          {
+            "name": "Drift Detection"
+          },
+          {
+            "name": "Audit Logging"
+          }
+        ]
+      },
+      {
+        "name": "Security Features",
+        "features": [
+          {
+            "name": "RBAC"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Data Protection"
+          },
+          {
+            "name": "Activity Monitoring"
+          },
+          {
+            "name": "Policy Enforcement"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "chartbrew",
+    "name": "Chartbrew",
+    "description": "Chartbrew is an open-source web platform for creating live reporting dashboards by connecting directly to databases and APIs. It provides a chart builder, editable dashboards, embeddable charts, query editor, and team collaboration features.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/57401255?s=64&v=4",
+    "heroImage": "https://chartbrew-static.b-cdn.net/banners/chartbrew-dashboard.png",
+    "category": "database-managment",
+    "tags": [
+      "database",
+      "visualization",
+      "analytics",
+      "dashboard"
+    ],
+    "github": "chartbrew/chartbrew",
+    "urls": {
+      "website": "https://chartbrew.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "metabase",
+        "grafana"
+      ],
+      "nonSelfHosted": [
+        "tableau",
+        "powerbi",
+        "looker"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Docker deployment available with detailed documentation, requires database and Redis setup."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Platform",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "Node.js + React"
+          },
+          {
+            "name": "Database Support",
+            "value": "MySQL/PostgreSQL"
+          },
+          {
+            "name": "Cache Layer",
+            "value": "Redis"
+          },
+          {
+            "name": "Deployment",
+            "value": "Docker/Self-hosted"
+          }
+        ]
+      },
+      {
+        "name": "Data Sources",
+        "features": [
+          {
+            "name": "Database Connections"
+          },
+          {
+            "name": "API Integration"
+          },
+          {
+            "name": "MongoDB Support"
+          },
+          {
+            "name": "Firestore Support"
+          },
+          {
+            "name": "Real-time Data"
+          }
+        ]
+      },
+      {
+        "name": "Visualization",
+        "features": [
+          {
+            "name": "Chart Builder"
+          },
+          {
+            "name": "Custom Dashboards"
+          },
+          {
+            "name": "Embedded Charts"
+          },
+          {
+            "name": "Query Editor"
+          },
+          {
+            "name": "Data Refresh"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "features": [
+          {
+            "name": "Team Management"
+          },
+          {
+            "name": "Sharing Controls"
+          },
+          {
+            "name": "User Roles"
+          },
+          {
+            "name": "Dashboard Export"
+          },
+          {
+            "name": "Version Control"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "chartdb",
+    "name": "ChartDB",
+    "description": "ChartDB is an open-source web-based database diagramming editor that allows users to instantly visualize database schemas through a single \"Smart Query\". It provides AI-powered schema export, interactive editing, and supports multiple database systems.\n",
+    "license": "AGPL-3.0",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/177466511?s=64&v=4",
+    "heroImage": "https://github.com/chartdb/chartdb/raw/main/public/chartdb.png",
+    "category": "database-managment",
+    "tags": [
+      "database",
+      "visualization",
+      "schema",
+      "diagram"
+    ],
+    "github": "chartdb/chartdb",
+    "urls": {
+      "website": "https://chartdb.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "azimutt",
+        "chartbrew"
+      ],
+      "nonSelfHosted": [
+        "dbdiagram",
+        "drawsql"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Docker deployment with optional AI capabilities configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Platform",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "TypeScript + React"
+          },
+          {
+            "name": "Database Support",
+            "value": "Multiple SQL DBs"
+          },
+          {
+            "name": "AI Integration",
+            "value": "OpenAI/Custom LLM"
+          },
+          {
+            "name": "Deployment",
+            "value": "Docker/Self-hosted"
+          }
+        ]
+      },
+      {
+        "name": "Database Support",
+        "features": [
+          {
+            "name": "PostgreSQL/Supabase"
+          },
+          {
+            "name": "MySQL/MariaDB"
+          },
+          {
+            "name": "SQL Server"
+          },
+          {
+            "name": "SQLite/D1"
+          },
+          {
+            "name": "CockroachDB"
+          }
+        ]
+      },
+      {
+        "name": "Visualization",
+        "features": [
+          {
+            "name": "Schema Import"
+          },
+          {
+            "name": "Interactive Editor"
+          },
+          {
+            "name": "Custom Layouts"
+          },
+          {
+            "name": "Export Options"
+          },
+          {
+            "name": "Real-time Preview"
+          }
+        ]
+      },
+      {
+        "name": "AI Features",
+        "features": [
+          {
+            "name": "Schema Migration"
+          },
+          {
+            "name": "DDL Generation"
+          },
+          {
+            "name": "Dialect Translation"
+          },
+          {
+            "name": "Smart Queries"
+          },
+          {
+            "name": "Documentation Help"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cloudbeaver",
+    "name": "CloudBeaver",
+    "description": "CloudBeaver is a web-based database management tool that provides a rich interface for working with databases. Built on DBeaver's core, it offers database administration, query execution, and data visualization through a modern web interface.\n",
+    "license": "Apache-2.0",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/34743864?s=64&v=4",
+    "heroImage": "https://github.com/dbeaver/cloudbeaver/wiki/images/data-transfer-demo.png",
+    "category": "database-managment",
+    "tags": [
+      "database",
+      "sql",
+      "administration",
+      "visualization"
+    ],
+    "github": "dbeaver/cloudbeaver",
+    "urls": {
+      "website": "https://cloudbeaver.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "adminer",
+        "phpmyadmin"
+      ],
+      "nonSelfHosted": [
+        "dbeaver",
+        "datagrip"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Docker deployment with detailed documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Platform",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "Java + TypeScript/React"
+          },
+          {
+            "name": "Database Support",
+            "value": "Multiple RDBMS"
+          },
+          {
+            "name": "Interface",
+            "value": "Web-based"
+          },
+          {
+            "name": "Deployment",
+            "value": "Docker/Kubernetes"
+          }
+        ]
+      },
+      {
+        "name": "Database Features",
+        "features": [
+          {
+            "name": "SQL Editor"
+          },
+          {
+            "name": "Data Browser"
+          },
+          {
+            "name": "Schema Explorer"
+          },
+          {
+            "name": "Query History"
+          },
+          {
+            "name": "Transaction Management"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Role-based Access"
+          },
+          {
+            "name": "Connection Templates"
+          },
+          {
+            "name": "Backup/Restore"
+          },
+          {
+            "name": "Monitoring Tools"
+          }
+        ]
+      },
+      {
+        "name": "Security Features",
+        "features": [
+          {
+            "name": "LDAP Integration"
+          },
+          {
+            "name": "SSO Support"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "Encryption"
+          },
+          {
+            "name": "Access Control"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "databunker",
+    "name": "Databunker",
+    "description": "Databunker is a self-hosted, GDPR compliant, secure database for storing personal records (PII/PHI/KYC). It provides encryption, tokenization, and privacy controls while offering a simple REST API for integration.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/58372112?s=64&v=4",
+    "category": "database-management",
+    "tags": [
+      "database",
+      "security",
+      "privacy",
+      "gdpr",
+      "encryption"
+    ],
+    "github": "securitybunker/databunker",
+    "urls": {
+      "website": "https://databunker.org/"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires understanding of database concepts and security practices, but provides good documentation and Docker deployment options."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Features",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "Go + MySQL/PostgreSQL"
+          },
+          {
+            "name": "Deployment Options",
+            "value": "Docker, Kubernetes"
+          },
+          {
+            "name": "Data Encryption",
+            "value": "AES-256"
+          },
+          {
+            "name": "API Access",
+            "value": "REST API"
+          }
+        ]
+      },
+      {
+        "name": "Security Features",
+        "features": [
+          {
+            "name": "Encrypted Storage"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "Data Tokenization"
+          },
+          {
+            "name": "Data Segregation"
+          }
+        ]
+      },
+      {
+        "name": "Privacy Features",
+        "features": [
+          {
+            "name": "GDPR Compliance"
+          },
+          {
+            "name": "Consent Management"
+          },
+          {
+            "name": "Data Minimization"
+          },
+          {
+            "name": "User Privacy Portal"
+          },
+          {
+            "name": "Right to be Forgotten"
+          }
+        ]
+      },
+      {
+        "name": "Integration Features",
+        "features": [
+          {
+            "name": "REST API Support"
+          },
+          {
+            "name": "SDK Availability"
+          },
+          {
+            "name": "Session Management"
+          },
+          {
+            "name": "Passport.js Support"
+          },
+          {
+            "name": "Multiple Database Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "datasette",
+    "name": "Datasette",
+    "description": "Datasette is a tool for exploring and publishing data. It helps people take data of any shape or size and publish that as an interactive, explorable website and accompanying API.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/457586?s=64&v=4",
+    "category": "database-management",
+    "tags": [
+      "database",
+      "data-exploration",
+      "api",
+      "sqlite"
+    ],
+    "github": "simonw/datasette",
+    "urls": {
+      "website": "https://datasette.io"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires basic understanding of databases and Python, but provides good documentation and multiple deployment options."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Features",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "Python + SQLite"
+          },
+          {
+            "name": "Deployment Options",
+            "value": "Docker, Heroku, Cloud Run"
+          },
+          {
+            "name": "Data Format Support",
+            "value": "SQLite, CSV"
+          },
+          {
+            "name": "API Access",
+            "value": "JSON API"
+          }
+        ]
+      },
+      {
+        "name": "Data Features",
+        "features": [
+          {
+            "name": "SQL Query Interface"
+          },
+          {
+            "name": "Custom Visualizations"
+          },
+          {
+            "name": "Data Export Options"
+          },
+          {
+            "name": "Full-text Search"
+          },
+          {
+            "name": "Faceted Browse"
+          }
+        ]
+      },
+      {
+        "name": "Publishing Features",
+        "features": [
+          {
+            "name": "Automatic API"
+          },
+          {
+            "name": "Custom Metadata"
+          },
+          {
+            "name": "Authentication"
+          },
+          {
+            "name": "Custom Templates"
+          },
+          {
+            "name": "Plugin System"
+          }
+        ]
+      },
+      {
+        "name": "Integration Features",
+        "features": [
+          {
+            "name": "REST API Support"
+          },
+          {
+            "name": "JSON API"
+          },
+          {
+            "name": "CSV Export"
+          },
+          {
+            "name": "Cloud Deployment"
+          },
+          {
+            "name": "Docker Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "evidence",
+    "name": "Evidence",
+    "description": "Evidence is an open-source business intelligence tool that generates interactive data visualizations and reports using SQL queries and markdown files. It offers a code-based alternative to traditional drag-and-drop BI tools.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/82418810?s=64&v=4",
+    "heroImage": "https://github.com/evidence-dev/evidence/raw/next/sites/docs/static/img/how-it-works.png",
+    "category": "database-management",
+    "tags": [
+      "business-intelligence",
+      "data-visualization",
+      "sql",
+      "markdown",
+      "analytics"
+    ],
+    "github": "evidence-dev/evidence",
+    "urls": {
+      "website": "https://evidence.dev"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires knowledge of SQL and markdown, but provides good documentation and multiple deployment options including VSCode extension."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Features",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "JavaScript + Svelte"
+          },
+          {
+            "name": "Deployment Options",
+            "value": "Cloud, Self-hosted, Docker"
+          },
+          {
+            "name": "Query Language",
+            "value": "SQL"
+          },
+          {
+            "name": "Interface",
+            "value": "Code-based (Markdown)"
+          }
+        ]
+      },
+      {
+        "name": "Data Features",
+        "features": [
+          {
+            "name": "SQL Query Integration"
+          },
+          {
+            "name": "Interactive Visualizations"
+          },
+          {
+            "name": "Template Support"
+          },
+          {
+            "name": "Multiple Data Sources"
+          },
+          {
+            "name": "Query Results Caching"
+          }
+        ]
+      },
+      {
+        "name": "Development Features",
+        "features": [
+          {
+            "name": "VSCode Extension"
+          },
+          {
+            "name": "Hot Reload"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "Component Library"
+          },
+          {
+            "name": "Custom Components"
+          }
+        ]
+      },
+      {
+        "name": "Deployment Features",
+        "features": [
+          {
+            "name": "Cloud Hosting"
+          },
+          {
+            "name": "Self-hosting Options"
+          },
+          {
+            "name": "Static Site Generation"
+          },
+          {
+            "name": "Security Controls"
+          },
+          {
+            "name": "Collaborative Development"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "mathesar",
+    "name": "Mathesar",
+    "description": "Mathesar is a web application that provides an intuitive spreadsheet-like interface for PostgreSQL databases, allowing users of all technical skill levels to view, edit, query, and collaborate on data directly. It's self-hosted and uses native Postgres access control.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/64070190?s=64&v=4",
+    "category": "database-management",
+    "tags": [
+      "database",
+      "postgresql",
+      "spreadsheet",
+      "collaboration",
+      "data-management"
+    ],
+    "github": "mathesar-foundation/mathesar",
+    "urls": {
+      "website": "https://mathesar.org/"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Docker for installation but provides detailed documentation. Basic understanding of PostgreSQL helpful but not required."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Features",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "Python + TypeScript + PostgreSQL"
+          },
+          {
+            "name": "Deployment Options",
+            "value": "Docker"
+          },
+          {
+            "name": "Interface Type",
+            "value": "Spreadsheet-like UI"
+          },
+          {
+            "name": "Database Support",
+            "value": "PostgreSQL"
+          }
+        ]
+      },
+      {
+        "name": "Data Management Features",
+        "features": [
+          {
+            "name": "Data Import/Export"
+          },
+          {
+            "name": "Schema Management"
+          },
+          {
+            "name": "Custom Data Types"
+          },
+          {
+            "name": "Record Management"
+          },
+          {
+            "name": "Relationship Management"
+          }
+        ]
+      },
+      {
+        "name": "Query Features",
+        "features": [
+          {
+            "name": "Visual Query Builder"
+          },
+          {
+            "name": "Filtering & Sorting"
+          },
+          {
+            "name": "Data Grouping"
+          },
+          {
+            "name": "Data Exploration"
+          },
+          {
+            "name": "Query Results Export"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration Features",
+        "features": [
+          {
+            "name": "Multi-user Support"
+          },
+          {
+            "name": "Role-based Access"
+          },
+          {
+            "name": "Native Postgres Security"
+          },
+          {
+            "name": "Shared Database Access"
+          },
+          {
+            "name": "Team Collaboration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "nocodb",
+    "name": "NocoDB",
+    "description": "NocoDB is an open source no-code platform that turns any database into a smart spreadsheet. It provides an Airtable-like interface with powerful features including role-based access control, REST APIs, and automation workflows.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/50206778?s=64&v=4",
+    "category": "database-management",
+    "tags": [
+      "database-management",
+      "spreadsheet",
+      "low-code",
+      "no-code",
+      "airtable"
+    ],
+    "github": "nocodb/nocodb",
+    "urls": {
+      "website": "https://nocodb.com"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": [
+        "airtable"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Docker installation with good documentation and multiple deployment options including auto-upstall script."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Features",
+        "features": [
+          {
+            "name": "Architecture",
+            "value": "TypeScript + Vue"
+          },
+          {
+            "name": "Deployment Options",
+            "value": "Docker, Binary, Nix"
+          },
+          {
+            "name": "Database Support",
+            "value": "MySQL, PostgreSQL, SQLite, SQL Server, MariaDB"
+          },
+          {
+            "name": "Interface Type",
+            "value": "Spreadsheet-like UI"
+          }
+        ]
+      },
+      {
+        "name": "Spreadsheet Features",
+        "features": [
+          {
+            "name": "Multiple Views"
+          },
+          {
+            "name": "Column Types"
+          },
+          {
+            "name": "Sorting & Filtering"
+          },
+          {
+            "name": "Formula Support"
+          },
+          {
+            "name": "Role-based Access"
+          }
+        ]
+      },
+      {
+        "name": "Integration Features",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Chat Apps Integration"
+          },
+          {
+            "name": "Email Integration"
+          },
+          {
+            "name": "Storage Integration"
+          },
+          {
+            "name": "Workflow Automation"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration Features",
+        "features": [
+          {
+            "name": "Team Collaboration"
+          },
+          {
+            "name": "View Sharing"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Real-time Updates"
+          },
+          {
+            "name": "Comments & Discussion"
           }
         ]
       }
@@ -7178,8 +9058,8 @@
     "alternatives": {
       "selfHosted": [],
       "nonSelfHosted": [
-        "Mint",
-        "Personal Capital"
+        "mint",
+        "lunchmoney"
       ]
     },
     "deployment": {
