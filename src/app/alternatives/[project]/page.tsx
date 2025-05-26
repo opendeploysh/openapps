@@ -35,9 +35,7 @@ interface AlternativesPageProps {
 }
 
 export async function generateStaticParams() {
-  return projects.map((project) => ({
-    project: project.slug,
-  }))
+  return projects.map((project) => ({ project: project.slug }))
 }
 
 export async function generateMetadata({ params }: AlternativesPageProps): Promise<Metadata> {

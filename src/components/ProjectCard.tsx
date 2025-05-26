@@ -63,10 +63,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   const linkUrl =
     linkTo == null
       ? isProprietary
-        ? `/alternatives/to/${slug}`
+        ? `/alternatives/${slug}`
         : `/projects/${slug}`
       : linkTo === "alternatives"
-      ? `/alternatives/to/${slug}`
+      ? `/alternatives/${slug}`
       : `/projects/${slug}`
 
   return (
