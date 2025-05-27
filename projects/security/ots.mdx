@@ -1,0 +1,95 @@
+---
+slug: ots
+name: OTS (One-Time Secret)
+description: |
+  OTS is an open-source one-time secret sharing platform with symmetric 256-bit AES encryption in the browser, allowing secure sharing of passwords and sensitive information that self-destructs after first access.
+logo: https://avatars.githubusercontent.com/u/169064?s=64&v=4
+category: security
+tags: [security, encryption, password-sharing, secrets]
+github: Luzifer/ots
+urls:
+  website: https://ots.fyi/
+alternatives:
+  selfHosted: [privatebin, snappass, yopass]
+  nonSelfHosted: [onetimesecret, password.link]
+deployment:
+  difficulty: "Easy"
+  justification: "Single binary deployment with optional Redis backend, Docker support, and minimal configuration required."
+pricingModel: Free
+hostingType: Hybrid
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: One-time secret sharing
+      - name: Target Use Case
+        value: Secure password/secret sharing
+      - name: Architecture
+        value: Go backend + Vue.js frontend
+  - name: Security
+    features:
+      - name: AES 256-bit Encryption
+      - name: Client-side Encryption
+      - name: Zero-knowledge Server
+      - name: Auto-deletion on Read
+      - name: Optional Expiry Times
+  - name: Storage Options
+    features:
+      - name: In-memory Storage
+      - name: Redis Backend
+      - name: Configurable Expiry
+      - name: Key Prefix Support
+  - name: Access Methods
+    features:
+      - name: Web Interface
+      - name: CLI Tool
+      - name: REST API
+      - name: File Attachments
+      - name: Basic/Token Auth
+  - name: Customization
+    features:
+      - name: Custom Branding
+      - name: Multi-language Support
+      - name: Theme Customization
+      - name: API Integration
+---
+
+OTS (One-Time-Secret) is an open-source secret sharing platform that enables secure transmission of sensitive information like passwords, API keys, or confidential messages. The platform ensures that secrets are encrypted client-side and automatically deleted after the first access.
+
+## Key Features
+
+- **Security First**:
+
+  - 256-bit AES encryption
+  - Client-side encryption (server never sees plaintext)
+  - Automatic deletion on first read
+  - Zero-knowledge architecture
+  - Optional password protection
+  - Configurable expiry times
+
+- **Flexible Deployment**:
+
+  - Single binary deployment
+  - Docker and minimal Docker images
+  - In-memory or Redis storage
+  - Environment-based configuration
+  - Kubernetes ready
+  - Public instance available at ots.fyi
+
+- **Multiple Access Methods**:
+
+  - Modern web interface
+  - Command-line tool (ots-cli)
+  - RESTful API
+  - File attachment support
+  - Scriptable operations
+  - Basic and token authentication
+
+- **Developer Friendly**:
+  - Simple API integration
+  - CLI for automation
+  - Bash scripting examples
+  - Go and JavaScript SDKs
+  - Comprehensive documentation
+  - Active development with Tilt support

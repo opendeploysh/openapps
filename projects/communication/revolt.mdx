@@ -1,0 +1,98 @@
+---
+slug: revolt
+name: Revolt
+heroImage: https://github.com/revoltchat/.github/blob/master/screenshots/2022-03.png?raw=true
+description: |
+  Revolt is an open-source, self-hostable chat platform designed as a privacy-focused alternative to Discord, featuring text/voice channels, customizable servers, and a familiar user interface without compromising on user privacy.
+logo: https://avatars.githubusercontent.com/u/57727799?s=200&v=4
+category: communication
+tags: [chat, discord-alternative, self-hosted, privacy, open-source]
+github: revoltchat/self-hosted
+urls:
+  website: https://revolt.chat/
+alternatives:
+  selfHosted: [element, mattermost, rocket-chat, spacebar]
+  nonSelfHosted: [discord, slack, teams]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Docker Compose setup with multiple services including MongoDB, Redis, and various microservices."
+pricingModel: Free
+hostingType: Hybrid
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Privacy-focused chat platform
+      - name: Target Use Case
+        value: Discord alternative
+      - name: Architecture
+        value: Microservices + MongoDB/Redis
+  - name: Communication
+    features:
+      - name: Text Channels
+      - name: Voice Channels (WIP)
+      - name: Direct Messages
+      - name: Group Chats
+      - name: Server Organization
+  - name: Features
+    features:
+      - name: File Sharing
+      - name: Custom Emojis
+      - name: Role Management
+      - name: Permissions System
+      - name: Markdown Support
+  - name: Customization
+    features:
+      - name: Custom Themes
+      - name: Server Customization
+      - name: Bot Support
+      - name: Webhooks
+      - name: Custom CSS
+  - name: Privacy & Security
+    features:
+      - name: Self-hosted Option
+      - name: No Tracking
+      - name: End-to-end Encryption (planned)
+      - name: Data Ownership
+      - name: Invite-only Mode
+---
+
+Revolt is an open-source chat platform built as a privacy-focused alternative to Discord. It provides a familiar interface with servers, channels, and direct messaging while ensuring users maintain control over their data through self-hosting options.
+
+## Key Features
+
+- **Privacy-First Design**:
+
+  - No user tracking or data selling
+  - Self-hostable for complete control
+  - Open-source and transparent
+  - GDPR compliant
+  - Optional invite-only instances
+  - No phone number requirement
+
+- **Familiar Features**:
+
+  - Server and channel organization
+  - Text and voice channels (voice in development)
+  - Direct messages and group chats
+  - File sharing and embeds
+  - Custom emoji support
+  - Rich markdown formatting
+
+- **Modern Architecture**:
+
+  - Microservices-based design
+  - MongoDB for data storage
+  - Redis for caching and sessions
+  - RabbitMQ for message queuing
+  - Caddy reverse proxy
+  - Docker Compose deployment
+
+- **Customization & Extensibility**:
+  - Custom themes and CSS
+  - Bot development support
+  - Webhook integrations
+  - Role-based permissions
+  - Server customization options
+  - Active development community

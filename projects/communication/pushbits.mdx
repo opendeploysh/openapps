@@ -1,0 +1,96 @@
+---
+slug: pushbits
+name: PushBits
+description: |
+  PushBits is an open-source relay server for push notifications that delivers important notifications through Matrix, offering a self-hosted alternative to Pushover and Gotify without requiring an additional app.
+logo: https://avatars.githubusercontent.com/u/76977393?s=64&v=4
+category: communication
+tags: [notifications, push-notifications, matrix, self-hosted, gotify-compatible]
+github: pushbits/server
+urls:
+  website: https://www.pushbits.io/
+alternatives:
+  selfHosted: [gotify, ntfy, apprise]
+  nonSelfHosted: [pushover, pushbullet, prowl]
+deployment:
+  difficulty: "Easy"
+  justification: "Single Go binary with PostgreSQL/SQLite backend, Docker support, and straightforward configuration."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Push notifications via Matrix
+      - name: Target Use Case
+        value: Server monitoring & alerts
+      - name: Architecture
+        value: Go backend + Matrix protocol
+  - name: Notification Features
+    features:
+      - name: Matrix Integration
+      - name: Multiple Users
+      - name: Multiple Channels
+      - name: Priority Levels
+      - name: Message Formatting
+  - name: Security
+    features:
+      - name: Two-factor Authentication
+      - name: Argon2 Password Hashing
+      - name: HIBP Password Check
+      - name: API Token Auth
+      - name: Bi-directional Verification
+  - name: Compatibility
+    features:
+      - name: Gotify API Compatible
+      - name: REST API
+      - name: CLI Management
+      - name: Plugin Support
+      - name: Webhook Integration
+  - name: Storage Options
+    features:
+      - name: PostgreSQL Backend
+      - name: SQLite Support
+      - name: Docker Deployment
+      - name: Environment Config
+---
+
+PushBits is a relay server for push notifications that enables you to send notifications via a simple web API and delivers them through Matrix. It provides a self-hosted alternative to services like Pushover and Gotify, with the advantage of not requiring a dedicated mobile app.
+
+## Key Features
+
+- **Matrix-Based Delivery**:
+
+  - No additional app required
+  - Uses existing Matrix clients
+  - End-to-end encryption support
+  - Cross-platform compatibility
+  - Federated protocol benefits
+  - Real-time message delivery
+
+- **Gotify Compatibility**:
+
+  - Drop-in replacement for Gotify API
+  - Compatible with existing plugins
+  - Support for Watchtower notifications
+  - Jellyfin integration
+  - Priority levels support
+  - Message formatting options
+
+- **Security & Authentication**:
+
+  - Two-factor authentication (2FA)
+  - Argon2 password hashing
+  - HIBP weak password checking
+  - API token authentication
+  - Bi-directional key verification
+  - User and channel isolation
+
+- **Easy Management**:
+  - Simple web API
+  - CLI for user management
+  - Docker deployment
+  - PostgreSQL or SQLite backend
+  - Environment-based configuration
+  - Multiple users and applications

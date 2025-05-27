@@ -1,5 +1,112 @@
 [
   {
+    "filePath": "projects/ai/latitude.mdx",
+    "slug": "latitude",
+    "name": "Latitude",
+    "description": "Latitude is an open-source platform for AI prompt engineering, deployment, and evaluation that helps teams build, test, and maintain reliable AI applications by providing a complete lifecycle management system for prompts.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/98949449?s=64&v=4",
+    "category": "ai",
+    "tags": [
+      "ai",
+      "llm",
+      "prompt-engineering",
+      "evaluation"
+    ],
+    "github": "latitude-dev/latitude-llm",
+    "urls": {
+      "website": "https://latitude.so"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires setup of multiple services but has good Docker support and documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "AI prompt engineering and evaluation"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Teams building AI applications"
+          },
+          {
+            "name": "Architecture",
+            "value": "TypeScript + Python"
+          }
+        ]
+      },
+      {
+        "name": "Prompt Management",
+        "features": [
+          {
+            "name": "Prompt Editor"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "Collaborative Editing"
+          },
+          {
+            "name": "PromptL Language Support"
+          },
+          {
+            "name": "Variables & Conditionals"
+          }
+        ]
+      },
+      {
+        "name": "Development Tools",
+        "features": [
+          {
+            "name": "Interactive Playground"
+          },
+          {
+            "name": "Batch Testing"
+          },
+          {
+            "name": "API Deployment"
+          },
+          {
+            "name": "Performance Monitoring"
+          },
+          {
+            "name": "Automatic Logging"
+          }
+        ]
+      },
+      {
+        "name": "Evaluation",
+        "features": [
+          {
+            "name": "LLM-as-judge Evaluation"
+          },
+          {
+            "name": "Programmatic Rules"
+          },
+          {
+            "name": "Human Review"
+          },
+          {
+            "name": "Dataset Management"
+          },
+          {
+            "name": "Regression Testing"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "filePath": "projects/analytics/aptabase.mdx",
     "slug": "aptabase",
     "name": "Aptabase",
@@ -2310,6 +2417,143 @@
     "language": "Python"
   },
   {
+    "filePath": "projects/automation/typebot.mdx",
+    "slug": "typebot",
+    "name": "Typebot",
+    "description": "Typebot is an open-source conversational app builder that allows you to create advanced chatbots and forms visually, offering a powerful alternative to Typeform or Landbot.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Freemium",
+    "logo": "https://typebot.io/images/favicon.svg",
+    "heroImage": "https://github.com/baptisteArno/typebot.io/raw/main/.github/images/banner.png",
+    "category": "automation",
+    "tags": [
+      "chatbot",
+      "forms",
+      "no-code",
+      "automation",
+      "conversational"
+    ],
+    "github": "baptisteArno/typebot.io",
+    "urls": {
+      "website": "https://typebot.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "botpress",
+        "rasa",
+        "n8n"
+      ],
+      "nonSelfHosted": [
+        "typeform",
+        "landbot",
+        "chatfuel"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Docker-based deployment with clear documentation and minimal configuration required."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Visual chatbot builder"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Conversational forms"
+          },
+          {
+            "name": "Architecture",
+            "value": "Next.js + PostgreSQL"
+          }
+        ]
+      },
+      {
+        "name": "Builder Features",
+        "features": [
+          {
+            "name": "Drag-and-drop Editor"
+          },
+          {
+            "name": "Logic Branching"
+          },
+          {
+            "name": "Variable Management"
+          },
+          {
+            "name": "Conditional Logic"
+          },
+          {
+            "name": "Templates"
+          }
+        ]
+      },
+      {
+        "name": "Input Types",
+        "features": [
+          {
+            "name": "Text Inputs"
+          },
+          {
+            "name": "Multiple Choice"
+          },
+          {
+            "name": "File Upload"
+          },
+          {
+            "name": "Date Picker"
+          },
+          {
+            "name": "Rating Scales"
+          }
+        ]
+      },
+      {
+        "name": "Integrations",
+        "features": [
+          {
+            "name": "Webhook Support"
+          },
+          {
+            "name": "API Integration"
+          },
+          {
+            "name": "Google Sheets"
+          },
+          {
+            "name": "Email Notifications"
+          },
+          {
+            "name": "Analytics"
+          }
+        ]
+      },
+      {
+        "name": "Deployment",
+        "features": [
+          {
+            "name": "Embeddable Widget"
+          },
+          {
+            "name": "Standalone Pages"
+          },
+          {
+            "name": "Custom Domains"
+          },
+          {
+            "name": "White-labeling"
+          },
+          {
+            "name": "Self-hosting"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "filePath": "projects/automation/utask.mdx",
     "slug": "utask",
     "name": "µTask",
@@ -2407,6 +2651,3484 @@
       "justification": "Requires Postgres database setup and configuration. Multiple components need to be managed."
     },
     "language": "Rust"
+  },
+  {
+    "filePath": "projects/collaboration/wbo.mdx",
+    "slug": "wbo",
+    "name": "WBO (Whitebophir)",
+    "description": "WBO is a web-based collaborative whiteboard that allows teams to draw, write, and brainstorm together in real-time on shared boards without requiring any installation.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://wbo.ophir.dev/favicon.ico",
+    "category": "collaboration",
+    "tags": [
+      "whiteboard",
+      "collaboration",
+      "drawing",
+      "real-time",
+      "nodejs"
+    ],
+    "github": "lovasoa/whitebophir",
+    "urls": {
+      "website": "https://github.com/lovasoa/whitebophir",
+      "demo": "https://wbo.ophir.dev/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "excalidraw",
+        "drawio",
+        "tldraw"
+      ],
+      "nonSelfHosted": [
+        "miro",
+        "figma",
+        "google-jamboard"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Node.js application with Docker support, minimal dependencies and configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Collaborative whiteboard"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Team brainstorming"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + WebSockets"
+          }
+        ]
+      },
+      {
+        "name": "Drawing Tools",
+        "features": [
+          {
+            "name": "Freehand Drawing"
+          },
+          {
+            "name": "Shapes & Lines"
+          },
+          {
+            "name": "Text Tool"
+          },
+          {
+            "name": "Eraser"
+          },
+          {
+            "name": "Color Palette"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "features": [
+          {
+            "name": "Real-time Sync"
+          },
+          {
+            "name": "Multiple Users"
+          },
+          {
+            "name": "No Registration"
+          },
+          {
+            "name": "Instant Sharing"
+          },
+          {
+            "name": "Persistent Boards"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Infinite Canvas"
+          },
+          {
+            "name": "Zoom & Pan"
+          },
+          {
+            "name": "Export Options"
+          },
+          {
+            "name": "Mobile Support"
+          },
+          {
+            "name": "Keyboard Shortcuts"
+          }
+        ]
+      },
+      {
+        "name": "Simplicity",
+        "features": [
+          {
+            "name": "No Login Required"
+          },
+          {
+            "name": "Lightweight"
+          },
+          {
+            "name": "Fast Loading"
+          },
+          {
+            "name": "Minimal UI"
+          },
+          {
+            "name": "Easy Deployment"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/anycable.mdx",
+    "slug": "anycable",
+    "name": "AnyCable",
+    "description": "AnyCable is a realtime server for two-way reliable communication over WebSockets and SSE. It provides a scalable and performant solution for adding realtime features to any backend application.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/20143762?s=64&v=4",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "websockets",
+      "realtime",
+      "sse",
+      "communication",
+      "messaging"
+    ],
+    "github": "anycable/anycable",
+    "urls": {
+      "website": "https://anycable.io"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires setup of multiple services but has good Docker support and documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Realtime communication"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Scalable WebSocket/SSE servers"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + Ruby"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "WebSocket Support"
+          },
+          {
+            "name": "SSE Support"
+          },
+          {
+            "name": "Two-way Communication"
+          },
+          {
+            "name": "Pub/Sub Capabilities"
+          },
+          {
+            "name": "Channel Management"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Redis Support"
+          },
+          {
+            "name": "NATS Support"
+          },
+          {
+            "name": "Multiple Backends"
+          },
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Kubernetes Ready"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Horizontal Scaling"
+          },
+          {
+            "name": "Load Balancing"
+          },
+          {
+            "name": "Connection Pooling"
+          },
+          {
+            "name": "Metrics & Monitoring"
+          },
+          {
+            "name": "High Availability"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/apprise.mdx",
+    "slug": "apprise",
+    "name": "Apprise",
+    "description": "Apprise allows you to send notifications to almost all of the most popular notification services available today such as: Telegram, Discord, Slack, Amazon SNS, Gotify, etc. through a single unified interface.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/44533801?s=64&v=4",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "notifications",
+      "alerts",
+      "messaging"
+    ],
+    "github": "caronc/apprise",
+    "urls": {
+      "website": "https://github.com/caronc/apprise"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Python package installation with good documentation and CLI support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Unified notification delivery"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Multi-platform notifications"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python-based"
+          }
+        ]
+      },
+      {
+        "name": "Notification Services",
+        "features": [
+          {
+            "name": "Chat Services",
+            "value": "Discord, Slack, Telegram, etc"
+          },
+          {
+            "name": "Email Services",
+            "value": "SMTP, Gmail, Outlook, etc"
+          },
+          {
+            "name": "Push Services",
+            "value": "Pushbullet, Pushover, etc"
+          },
+          {
+            "name": "SMS Services",
+            "value": "Twilio, MessageBird, etc"
+          },
+          {
+            "name": "Desktop Notifications"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "CLI Support"
+          },
+          {
+            "name": "Python API"
+          },
+          {
+            "name": "Configuration Files"
+          },
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Plugin System"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Async Notifications"
+          },
+          {
+            "name": "File Attachments"
+          },
+          {
+            "name": "Custom Hooks"
+          },
+          {
+            "name": "Persistent Storage"
+          },
+          {
+            "name": "Tag Filtering"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/centrifugo.mdx",
+    "slug": "centrifugo",
+    "name": "Centrifugo",
+    "description": "Centrifugo is an open-source scalable real-time messaging server that can instantly deliver messages to application users over WebSocket, HTTP-streaming, SSE, GRPC, and WebTransport. It provides a language-agnostic PUB/SUB server for building real-time applications.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/6236442?s=54&v=4",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "websockets",
+      "realtime",
+      "pubsub",
+      "messaging"
+    ],
+    "github": "centrifugal/centrifugo",
+    "urls": {
+      "website": "https://centrifugal.dev"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": [
+        "pubnub",
+        "pusher",
+        "ably"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires configuration but has good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Real-time messaging"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Scalable PUB/SUB server"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go-based"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "WebSocket Support"
+          },
+          {
+            "name": "HTTP Streaming"
+          },
+          {
+            "name": "Server-Sent Events"
+          },
+          {
+            "name": "GRPC Support"
+          },
+          {
+            "name": "WebTransport Support"
+          }
+        ]
+      },
+      {
+        "name": "Scalability",
+        "features": [
+          {
+            "name": "Redis Integration"
+          },
+          {
+            "name": "Redis Cluster Support"
+          },
+          {
+            "name": "NATS Integration"
+          },
+          {
+            "name": "Horizontal Scaling"
+          },
+          {
+            "name": "Connection Multiplexing"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Channel Subscriptions"
+          },
+          {
+            "name": "Message History"
+          },
+          {
+            "name": "Presence Information"
+          },
+          {
+            "name": "JWT Authentication"
+          },
+          {
+            "name": "Admin Web UI"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/chitchatter.mdx",
+    "slug": "chitchatter",
+    "name": "Chitchatter",
+    "description": "Chitchatter is a free, peer-to-peer, end-to-end encrypted communication tool designed for private and secure messaging. It offers serverless, decentralized, and ephemeral chat with features like video calls, screen sharing, and file transfers.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://raw.githubusercontent.com/jeremyckahn/chitchatter/main/public/logo192.png",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "chat",
+      "p2p",
+      "encryption",
+      "privacy",
+      "webrtc"
+    ],
+    "github": "jeremyckahn/chitchatter",
+    "urls": {
+      "website": "https://chitchatter.im/"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Static site that can be deployed to any web host with minimal configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Private P2P communication"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Secure messaging and calls"
+          },
+          {
+            "name": "Architecture",
+            "value": "React + WebRTC"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Text Chat"
+          },
+          {
+            "name": "Video Calls"
+          },
+          {
+            "name": "Audio Calls"
+          },
+          {
+            "name": "Screen Sharing"
+          },
+          {
+            "name": "File Transfers"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Peer-to-Peer"
+          },
+          {
+            "name": "No Message Storage"
+          },
+          {
+            "name": "No Central Server"
+          },
+          {
+            "name": "Public Key Verification"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Multiple Peers Per Room"
+          },
+          {
+            "name": "Private Rooms"
+          },
+          {
+            "name": "Direct Messaging"
+          },
+          {
+            "name": "Markdown Support"
+          },
+          {
+            "name": "Dark/Light Themes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/databag.mdx",
+    "slug": "databag",
+    "name": "Databag",
+    "description": "Databag is a federated messenger for self-hosting that focuses on efficiency and minimal resource usage. It provides decentralized communication with end-to-end encryption, audio/video calls, and topic-based threading.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://github.com/balzack/databag/raw/main/doc/icon_v2.png",
+    "heroImage": "https://github.com/balzack/databag/raw/main/doc/mobile.png",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "messaging",
+      "federation",
+      "encryption",
+      "webrtc"
+    ],
+    "github": "balzack/databag",
+    "urls": {
+      "website": "https://github.com/balzack/databag"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires DNS setup but has good Docker and container support with documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Federated messaging"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Private communication"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + React Native"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Topic-based Threading"
+          },
+          {
+            "name": "Audio Calls"
+          },
+          {
+            "name": "Video Calls"
+          },
+          {
+            "name": "Group Chats"
+          },
+          {
+            "name": "Push Notifications"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Public-Private Key Identity"
+          },
+          {
+            "name": "Multi-Factor Auth"
+          },
+          {
+            "name": "TOTP Support"
+          },
+          {
+            "name": "Decentralized Design"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "UnifiedPush"
+          },
+          {
+            "name": "FCM Support"
+          },
+          {
+            "name": "APN Support"
+          },
+          {
+            "name": "WebRTC Integration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/element.mdx",
+    "slug": "element",
+    "name": "Element",
+    "description": "Element is a secure and decentralized communication client for the Matrix network. It provides end-to-end encrypted messaging, voice/video calls, file sharing, and collaboration features with a focus on privacy and security.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/13446337?s=64&v=4",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "chat",
+      "matrix",
+      "encryption",
+      "collaboration"
+    ],
+    "github": "element-hq/element-web",
+    "urls": {
+      "website": "https://element.io"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Matrix homeserver setup but has good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Secure communication"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Team collaboration"
+          },
+          {
+            "name": "Architecture",
+            "value": "React + Matrix"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Text Chat"
+          },
+          {
+            "name": "Voice Calls"
+          },
+          {
+            "name": "Video Calls"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Screen Sharing"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Cross-Signing"
+          },
+          {
+            "name": "Key Backup"
+          },
+          {
+            "name": "Device Verification"
+          },
+          {
+            "name": "Message Verification"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Room Management"
+          },
+          {
+            "name": "User Profiles"
+          },
+          {
+            "name": "Message History"
+          },
+          {
+            "name": "Multiple Devices"
+          },
+          {
+            "name": "Cross-Platform"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/globaleaks.mdx",
+    "slug": "globaleaks",
+    "name": "GlobaLeaks",
+    "description": "GlobaLeaks is a free and open-source whistleblowing software enabling anyone to easily set up and maintain a secure reporting platform. It provides end-to-end encryption, anonymity features, and comprehensive security measures.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/667615?s=64&v=4",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "whistleblowing",
+      "security",
+      "encryption",
+      "privacy"
+    ],
+    "github": "globaleaks/globaleaks",
+    "urls": {
+      "website": "https://www.globaleaks.org"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires server setup but has good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Secure whistleblowing"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Anonymous reporting"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Angular"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Tor Network Support"
+          },
+          {
+            "name": "Anonymous Submissions"
+          },
+          {
+            "name": "File Encryption"
+          },
+          {
+            "name": "Access Control"
+          }
+        ]
+      },
+      {
+        "name": "Platform Features",
+        "features": [
+          {
+            "name": "Multi-tenancy"
+          },
+          {
+            "name": "Customizable Forms"
+          },
+          {
+            "name": "File Attachments"
+          },
+          {
+            "name": "Two-way Messaging"
+          },
+          {
+            "name": "Multiple Recipients"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Audit Logs"
+          },
+          {
+            "name": "Backup System"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "Customization Options"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/gotify.mdx",
+    "slug": "gotify",
+    "name": "Gotify",
+    "description": "Gotify is a simple server for sending and receiving messages in real-time via WebSocket. It provides a sleek web UI, REST API, and supports plugins for extending functionality. Perfect for self-hosted push notifications.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://raw.githubusercontent.com/gotify/logo/master/gotify-logo.png",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "notifications",
+      "websocket",
+      "api",
+      "developer-tools"
+    ],
+    "github": "gotify/server",
+    "urls": {
+      "website": "https://gotify.net"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple setup with good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Push notifications"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Real-time messaging"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + React"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "WebSocket Support"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Real-time Updates"
+          },
+          {
+            "name": "Message Priority"
+          },
+          {
+            "name": "Message Tags"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Client Management"
+          },
+          {
+            "name": "Application Management"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Plugin Support"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Android App"
+          },
+          {
+            "name": "CLI Client"
+          },
+          {
+            "name": "API Tokens"
+          },
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Multi-arch Builds"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/livehelperchat.mdx",
+    "slug": "livehelperchat",
+    "name": "Live Helper Chat",
+    "description": "Live Helper Chat is an open-source live support application that enables real-time customer support through web chat. It features a comprehensive set of tools including chatbots, voice/video calls, mobile apps, and integrations with popular messaging platforms.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://raw.githubusercontent.com/LiveHelperChat/livehelperchat/master/lhc_web/design/defaulttheme/images/general/logo.png",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "customer-support",
+      "live-chat",
+      "chatbot",
+      "messaging"
+    ],
+    "github": "LiveHelperChat/livehelperchat",
+    "urls": {
+      "website": "https://livehelperchat.com"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires PHP setup but has good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Live customer support"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Website chat support"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + JavaScript"
+          }
+        ]
+      },
+      {
+        "name": "Chat Features",
+        "features": [
+          {
+            "name": "Real-time Chat"
+          },
+          {
+            "name": "Chatbot Integration"
+          },
+          {
+            "name": "Voice & Video Calls"
+          },
+          {
+            "name": "Screen Sharing"
+          },
+          {
+            "name": "File Sharing"
+          }
+        ]
+      },
+      {
+        "name": "Support Tools",
+        "features": [
+          {
+            "name": "Canned Responses"
+          },
+          {
+            "name": "Visitor Tracking"
+          },
+          {
+            "name": "Chat Transfer"
+          },
+          {
+            "name": "Department Routing"
+          },
+          {
+            "name": "Analytics"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Mobile Apps"
+          },
+          {
+            "name": "Desktop Apps"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "Third-party AI"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/matermost.mdx",
+    "slug": "mattermost",
+    "name": "Mattermost",
+    "description": "Mattermost is an open source platform for secure collaboration across the entire software development lifecycle. It provides team messaging, file sharing, project management and integrations in a self-hosted environment.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/9828093?s=64&v=4",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "collaboration",
+      "chat",
+      "team-messaging",
+      "devops"
+    ],
+    "github": "mattermost/mattermost",
+    "urls": {
+      "website": "https://mattermost.com"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "rocket-chat",
+        "element"
+      ],
+      "nonSelfHosted": [
+        "slack",
+        "discord",
+        "microsoft-teams",
+        "google-chat"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires database setup but has good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Team collaboration"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Software development teams"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + React"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Team Messaging"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Voice & Video Calls"
+          },
+          {
+            "name": "Screen Sharing"
+          },
+          {
+            "name": "Thread Discussions"
+          }
+        ]
+      },
+      {
+        "name": "Development Tools",
+        "features": [
+          {
+            "name": "Code Snippets"
+          },
+          {
+            "name": "DevOps Integrations"
+          },
+          {
+            "name": "Incident Management"
+          },
+          {
+            "name": "Slash Commands"
+          },
+          {
+            "name": "Webhooks"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Enterprise Security"
+          },
+          {
+            "name": "Data Privacy"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Audit Logs"
+          },
+          {
+            "name": "Compliance Tools"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/mumble.mdx",
+    "slug": "mumble",
+    "name": "Mumble",
+    "description": "Mumble is an open-source, low-latency and high-quality voice chat program built on Qt and Opus. It provides secure, encrypted communication through a client-server architecture with excellent audio quality and minimal delay.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/639008?s=64&v=4",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "voip",
+      "voice-chat",
+      "gaming"
+    ],
+    "github": "mumble-voip/mumble",
+    "urls": {
+      "website": "https://www.mumble.info/"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires server setup but has good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Low-latency voice chat"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Gaming and team communication"
+          },
+          {
+            "name": "Architecture",
+            "value": "Qt + Opus"
+          }
+        ]
+      },
+      {
+        "name": "Voice Features",
+        "features": [
+          {
+            "name": "Low Latency Audio"
+          },
+          {
+            "name": "High Quality Voice"
+          },
+          {
+            "name": "Echo Cancellation"
+          },
+          {
+            "name": "Noise Suppression"
+          },
+          {
+            "name": "Voice Activity Detection"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Certificate Authentication"
+          },
+          {
+            "name": "Access Control Lists"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Channel Passwords"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "In-Game Overlay"
+          },
+          {
+            "name": "Positional Audio"
+          },
+          {
+            "name": "Plugin Support"
+          },
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Cross-Platform"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/novu.mdx",
+    "slug": "novu",
+    "name": "Novu",
+    "description": "Novu is an open-source notification infrastructure that provides a unified API for sending notifications across multiple channels including Email, SMS, Push, and Chat. It offers an embeddable notification center, workflow engine, and no-code email editor.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://avatars.githubusercontent.com/u/77433905?s=64&v=4",
+    "category": "communication",
+    "tags": [
+      "communication",
+      "notifications",
+      "email",
+      "sms",
+      "push",
+      "chat"
+    ],
+    "github": "novuhq/novu",
+    "urls": {
+      "website": "https://novu.co"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": [
+        "onesignal",
+        "magicbell",
+        "notify"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires setup of multiple services but has good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Notification infrastructure"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Multi-channel notifications"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + React"
+          }
+        ]
+      },
+      {
+        "name": "Notification Channels",
+        "features": [
+          {
+            "name": "Email Support"
+          },
+          {
+            "name": "SMS Integration"
+          },
+          {
+            "name": "Push Notifications"
+          },
+          {
+            "name": "Chat Messages"
+          },
+          {
+            "name": "In-App Notifications"
+          }
+        ]
+      },
+      {
+        "name": "Platform Features",
+        "features": [
+          {
+            "name": "Notification Center"
+          },
+          {
+            "name": "Workflow Engine"
+          },
+          {
+            "name": "Email Editor"
+          },
+          {
+            "name": "Digest Engine"
+          },
+          {
+            "name": "User Preferences"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Multiple Providers"
+          },
+          {
+            "name": "Real-time Support"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "SDKs"
+          },
+          {
+            "name": "Embeddable Components"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/pushbits.mdx",
+    "slug": "pushbits",
+    "name": "PushBits",
+    "description": "PushBits is an open-source relay server for push notifications that delivers important notifications through Matrix, offering a self-hosted alternative to Pushover and Gotify without requiring an additional app.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/76977393?s=64&v=4",
+    "category": "communication",
+    "tags": [
+      "notifications",
+      "push-notifications",
+      "matrix",
+      "self-hosted",
+      "gotify-compatible"
+    ],
+    "github": "pushbits/server",
+    "urls": {
+      "website": "https://www.pushbits.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "gotify",
+        "ntfy",
+        "apprise"
+      ],
+      "nonSelfHosted": [
+        "pushover",
+        "pushbullet",
+        "prowl"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single Go binary with PostgreSQL/SQLite backend, Docker support, and straightforward configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Push notifications via Matrix"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Server monitoring & alerts"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go backend + Matrix protocol"
+          }
+        ]
+      },
+      {
+        "name": "Notification Features",
+        "features": [
+          {
+            "name": "Matrix Integration"
+          },
+          {
+            "name": "Multiple Users"
+          },
+          {
+            "name": "Multiple Channels"
+          },
+          {
+            "name": "Priority Levels"
+          },
+          {
+            "name": "Message Formatting"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Two-factor Authentication"
+          },
+          {
+            "name": "Argon2 Password Hashing"
+          },
+          {
+            "name": "HIBP Password Check"
+          },
+          {
+            "name": "API Token Auth"
+          },
+          {
+            "name": "Bi-directional Verification"
+          }
+        ]
+      },
+      {
+        "name": "Compatibility",
+        "features": [
+          {
+            "name": "Gotify API Compatible"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "CLI Management"
+          },
+          {
+            "name": "Plugin Support"
+          },
+          {
+            "name": "Webhook Integration"
+          }
+        ]
+      },
+      {
+        "name": "Storage Options",
+        "features": [
+          {
+            "name": "PostgreSQL Backend"
+          },
+          {
+            "name": "SQLite Support"
+          },
+          {
+            "name": "Docker Deployment"
+          },
+          {
+            "name": "Environment Config"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/retroshare.mdx",
+    "slug": "retroshare",
+    "name": "RetroShare",
+    "description": "RetroShare is a decentralized, encrypted, peer-to-peer communication platform that creates a network of trust between friends, offering secure file sharing, chat, forums, channels, and mail without relying on central servers.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://retroshare.cc/img/retroshare-symbol.png",
+    "category": "communication",
+    "tags": [
+      "p2p",
+      "decentralized",
+      "encryption",
+      "file-sharing",
+      "privacy",
+      "social-network"
+    ],
+    "github": "RetroShare/RetroShare",
+    "urls": {
+      "website": "https://retroshare.cc/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "syncthing",
+        "ipfs",
+        "zeronet"
+      ],
+      "nonSelfHosted": [
+        "signal",
+        "telegram",
+        "discord"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Desktop applications available for all major platforms with simple installation, no server setup required."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Decentralized secure communication"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Private friend-to-friend networks"
+          },
+          {
+            "name": "Architecture",
+            "value": "P2P mesh network + PGP/TLS"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Encrypted Chat"
+          },
+          {
+            "name": "Voice/Video Calls"
+          },
+          {
+            "name": "Forums"
+          },
+          {
+            "name": "Mail System"
+          },
+          {
+            "name": "Channels"
+          }
+        ]
+      },
+      {
+        "name": "File Sharing",
+        "features": [
+          {
+            "name": "BitTorrent-like Swarming"
+          },
+          {
+            "name": "Anonymous Tunnels"
+          },
+          {
+            "name": "File Search"
+          },
+          {
+            "name": "Large File Support"
+          },
+          {
+            "name": "Offline Sharing"
+          }
+        ]
+      },
+      {
+        "name": "Security & Privacy",
+        "features": [
+          {
+            "name": "PGP Authentication"
+          },
+          {
+            "name": "TLS Encryption"
+          },
+          {
+            "name": "Tor/I2P Support"
+          },
+          {
+            "name": "No Central Servers"
+          },
+          {
+            "name": "IP Protection"
+          }
+        ]
+      },
+      {
+        "name": "Social Features",
+        "features": [
+          {
+            "name": "Friend Networks"
+          },
+          {
+            "name": "Boards/Links Sharing"
+          },
+          {
+            "name": "Commenting System"
+          },
+          {
+            "name": "Voting System"
+          },
+          {
+            "name": "Identity Management"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/revolt.mdx",
+    "slug": "revolt",
+    "name": "Revolt",
+    "description": "Revolt is an open-source, self-hostable chat platform designed as a privacy-focused alternative to Discord, featuring text/voice channels, customizable servers, and a familiar user interface without compromising on user privacy.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/57727799?s=200&v=4",
+    "heroImage": "https://github.com/revoltchat/.github/blob/master/screenshots/2022-03.png?raw=true",
+    "category": "communication",
+    "tags": [
+      "chat",
+      "discord-alternative",
+      "self-hosted",
+      "privacy",
+      "open-source"
+    ],
+    "github": "revoltchat/self-hosted",
+    "urls": {
+      "website": "https://revolt.chat/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "element",
+        "mattermost",
+        "rocket-chat",
+        "spacebar"
+      ],
+      "nonSelfHosted": [
+        "discord",
+        "slack",
+        "teams"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Docker Compose setup with multiple services including MongoDB, Redis, and various microservices."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Privacy-focused chat platform"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Discord alternative"
+          },
+          {
+            "name": "Architecture",
+            "value": "Microservices + MongoDB/Redis"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Text Channels"
+          },
+          {
+            "name": "Voice Channels (WIP)"
+          },
+          {
+            "name": "Direct Messages"
+          },
+          {
+            "name": "Group Chats"
+          },
+          {
+            "name": "Server Organization"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Custom Emojis"
+          },
+          {
+            "name": "Role Management"
+          },
+          {
+            "name": "Permissions System"
+          },
+          {
+            "name": "Markdown Support"
+          }
+        ]
+      },
+      {
+        "name": "Customization",
+        "features": [
+          {
+            "name": "Custom Themes"
+          },
+          {
+            "name": "Server Customization"
+          },
+          {
+            "name": "Bot Support"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "Custom CSS"
+          }
+        ]
+      },
+      {
+        "name": "Privacy & Security",
+        "features": [
+          {
+            "name": "Self-hosted Option"
+          },
+          {
+            "name": "No Tracking"
+          },
+          {
+            "name": "End-to-end Encryption (planned)"
+          },
+          {
+            "name": "Data Ownership"
+          },
+          {
+            "name": "Invite-only Mode"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/rocket-chat.mdx",
+    "slug": "rocket-chat",
+    "name": "Rocket.Chat",
+    "description": "Rocket.Chat is an open-source, fully customizable communications platform for organizations with high standards of data protection, offering team collaboration, omnichannel customer service, and a complete messaging solution.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Freemium",
+    "logo": "https://avatars.githubusercontent.com/u/12508788?s=48&v=4",
+    "heroImage": "https://camo.githubusercontent.com/fcecafb4fdb35d736ae202333079097c2e9f337b84844ef8674ccbc6ecaf4acf/68747470733a2f2f676c6f62616c2d75706c6f6164732e776562666c6f772e636f6d2f3631316131396239383533623734313461306636623366362f3633313963373262626438616635633863323265666162365f6865726f496d6167652e77656270",
+    "category": "communication",
+    "tags": [
+      "chat",
+      "team-collaboration",
+      "omnichannel",
+      "self-hosted",
+      "enterprise"
+    ],
+    "github": "RocketChat/Rocket.Chat",
+    "urls": {
+      "website": "https://rocket.chat/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "mattermost",
+        "element",
+        "revolt",
+        "zulip"
+      ],
+      "nonSelfHosted": [
+        "slack",
+        "teams",
+        "discord"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires MongoDB and Node.js setup, but offers Docker deployment and comprehensive documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Enterprise team communications"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Business collaboration"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + MongoDB + Meteor"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Real-time Messaging"
+          },
+          {
+            "name": "Voice & Video Calls"
+          },
+          {
+            "name": "Screen Sharing"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Threaded Conversations"
+          }
+        ]
+      },
+      {
+        "name": "Omnichannel",
+        "features": [
+          {
+            "name": "Live Chat Widget"
+          },
+          {
+            "name": "Multi-channel Support"
+          },
+          {
+            "name": "Customer Queue"
+          },
+          {
+            "name": "Department Routing"
+          },
+          {
+            "name": "CRM Integration"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "LDAP/SAML/OAuth"
+          },
+          {
+            "name": "E2E Encryption"
+          },
+          {
+            "name": "Compliance Tools"
+          },
+          {
+            "name": "Data Loss Prevention"
+          },
+          {
+            "name": "Message Auditing"
+          }
+        ]
+      },
+      {
+        "name": "Extensibility",
+        "features": [
+          {
+            "name": "Apps Marketplace"
+          },
+          {
+            "name": "REST & Real-time APIs"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "Custom Integrations"
+          },
+          {
+            "name": "White-labeling"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/sama.mdx",
+    "slug": "sama",
+    "name": "SAMA",
+    "description": "SAMA is a next-generation self-hosted chat server and clients platform that provides modern messaging capabilities with complete control over your data and infrastructure.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://samacloud.io/static/favicon/favicon-32x32.png",
+    "heroImage": "https://samacloud.io/static/Homepage/Frame-124.png",
+    "category": "communication",
+    "tags": [
+      "chat",
+      "self-hosted",
+      "messaging",
+      "nodejs",
+      "docker"
+    ],
+    "github": "SAMA-Communications/sama-server",
+    "urls": {
+      "website": "https://samacloud.io/",
+      "demo": "https://app.samacloud.io/demo"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "rocket-chat",
+        "mattermost",
+        "element"
+      ],
+      "nonSelfHosted": [
+        "slack",
+        "teams",
+        "discord"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Docker-based deployment with Node.js, straightforward setup process."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Modern self-hosted chat"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Team communication"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + Docker"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Real-time Messaging"
+          },
+          {
+            "name": "Group Chats"
+          },
+          {
+            "name": "Direct Messages"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Message History"
+          }
+        ]
+      },
+      {
+        "name": "Client Support",
+        "features": [
+          {
+            "name": "Web Client"
+          },
+          {
+            "name": "Mobile Clients"
+          },
+          {
+            "name": "Desktop Apps"
+          },
+          {
+            "name": "API Access"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Channel Organization"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Notifications"
+          }
+        ]
+      },
+      {
+        "name": "Deployment",
+        "features": [
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Self-hosted"
+          },
+          {
+            "name": "Data Control"
+          },
+          {
+            "name": "Easy Setup"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/screego.mdx",
+    "slug": "screego",
+    "name": "Screego",
+    "description": "Screego is a simple, secure tool to quickly share your screen with one or multiple people via web browser, requiring no installation or registration.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/72201776?s=64&v=4",
+    "category": "communication",
+    "tags": [
+      "screen-sharing",
+      "webrtc",
+      "collaboration",
+      "docker",
+      "golang"
+    ],
+    "github": "screego/server",
+    "urls": {
+      "website": "https://screego.net/",
+      "demo": "https://app.screego.net/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "jitsi-meet",
+        "bigbluebutton"
+      ],
+      "nonSelfHosted": [
+        "zoom",
+        "teams",
+        "google-meet"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single Docker container or Go binary, minimal configuration required."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Browser-based screen sharing"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Quick screen sharing"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + WebRTC"
+          }
+        ]
+      },
+      {
+        "name": "Sharing Features",
+        "features": [
+          {
+            "name": "No Installation Required"
+          },
+          {
+            "name": "Multiple Viewers"
+          },
+          {
+            "name": "Low Latency"
+          },
+          {
+            "name": "High Quality Streaming"
+          },
+          {
+            "name": "Audio Support"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Encrypted Connections"
+          },
+          {
+            "name": "No Registration"
+          },
+          {
+            "name": "Temporary Rooms"
+          },
+          {
+            "name": "Password Protection"
+          },
+          {
+            "name": "TURN Server Support"
+          }
+        ]
+      },
+      {
+        "name": "Usability",
+        "features": [
+          {
+            "name": "Simple Interface"
+          },
+          {
+            "name": "One-click Sharing"
+          },
+          {
+            "name": "Cross-browser Support"
+          },
+          {
+            "name": "Mobile Support"
+          },
+          {
+            "name": "No Plugins"
+          }
+        ]
+      },
+      {
+        "name": "Deployment",
+        "features": [
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Single Binary"
+          },
+          {
+            "name": "Low Resource Usage"
+          },
+          {
+            "name": "Easy Configuration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/simplex-chat.mdx",
+    "slug": "simplex-chat",
+    "name": "SimpleX Chat",
+    "description": "SimpleX Chat is the most private and secure messaging platform with no user identifiers, featuring double ratchet E2E encryption and a unique approach to privacy that doesn't require phone numbers or usernames.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/59927747?s=200&v=4",
+    "category": "communication",
+    "tags": [
+      "privacy",
+      "encryption",
+      "messaging",
+      "decentralized",
+      "haskell"
+    ],
+    "github": "simplex-chat/simplex-chat",
+    "urls": {
+      "website": "https://simplex.chat/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "element",
+        "briar",
+        "jami"
+      ],
+      "nonSelfHosted": [
+        "signal",
+        "session",
+        "threema"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires understanding of the SimpleX protocol and server setup, but provides Docker images."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Maximum privacy messaging"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Private communications"
+          },
+          {
+            "name": "Architecture",
+            "value": "Haskell + SimpleX protocol"
+          }
+        ]
+      },
+      {
+        "name": "Privacy Features",
+        "features": [
+          {
+            "name": "No User Identifiers"
+          },
+          {
+            "name": "No Phone Numbers"
+          },
+          {
+            "name": "No Usernames"
+          },
+          {
+            "name": "Metadata Protection"
+          },
+          {
+            "name": "Anonymous Connections"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Double Ratchet E2E"
+          },
+          {
+            "name": "Post-quantum Resistant"
+          },
+          {
+            "name": "Perfect Forward Secrecy"
+          },
+          {
+            "name": "Decentralized Network"
+          },
+          {
+            "name": "No Central Servers"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Text Messaging"
+          },
+          {
+            "name": "Voice Messages"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Group Chats"
+          },
+          {
+            "name": "Disappearing Messages"
+          }
+        ]
+      },
+      {
+        "name": "Platform Support",
+        "features": [
+          {
+            "name": "iOS App"
+          },
+          {
+            "name": "Android App"
+          },
+          {
+            "name": "Desktop Clients"
+          },
+          {
+            "name": "Terminal App"
+          },
+          {
+            "name": "Self-hosted Servers"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/spectrum2.mdx",
+    "slug": "spectrum2",
+    "name": "Spectrum 2",
+    "description": "Spectrum 2 is an open-source instant messaging transport that bridges different IM networks, allowing users to communicate across platforms like XMPP, Discord, Telegram, and more.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/30230291?s=48&v=4",
+    "category": "communication",
+    "tags": [
+      "messaging",
+      "bridge",
+      "xmpp",
+      "transport",
+      "cpp"
+    ],
+    "github": "SpectrumIM/spectrum2",
+    "urls": {
+      "website": "https://spectrum.im/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "matterbridge",
+        "matrix-bridges"
+      ],
+      "nonSelfHosted": [
+        "beeper",
+        "franz"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Requires understanding of XMPP protocols and complex configuration for different transports."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "IM network bridging"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Cross-platform messaging"
+          },
+          {
+            "name": "Architecture",
+            "value": "C++ + XMPP transport"
+          }
+        ]
+      },
+      {
+        "name": "Supported Networks",
+        "features": [
+          {
+            "name": "XMPP/Jabber"
+          },
+          {
+            "name": "Discord"
+          },
+          {
+            "name": "Telegram"
+          },
+          {
+            "name": "IRC"
+          },
+          {
+            "name": "Twitter"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Message Bridging"
+          },
+          {
+            "name": "Contact Lists"
+          },
+          {
+            "name": "Group Chats"
+          },
+          {
+            "name": "File Transfer"
+          },
+          {
+            "name": "Status Synchronization"
+          }
+        ]
+      },
+      {
+        "name": "Technical",
+        "features": [
+          {
+            "name": "libpurple Support"
+          },
+          {
+            "name": "Multiple Backends"
+          },
+          {
+            "name": "Gateway Mode"
+          },
+          {
+            "name": "Component Mode"
+          },
+          {
+            "name": "Database Storage"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "User Registration"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "Logging"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/synapse.mdx",
+    "slug": "synapse",
+    "name": "Synapse",
+    "description": "Synapse is the reference homeserver implementation for Matrix, an open standard for secure, decentralized, real-time communication across different service providers.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/8418310?s=200&v=4",
+    "category": "communication",
+    "tags": [
+      "matrix",
+      "decentralized",
+      "federation",
+      "python",
+      "messaging"
+    ],
+    "github": "element-hq/synapse",
+    "urls": {
+      "website": "https://element-hq.github.io/synapse/latest/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "dendrite",
+        "conduit"
+      ],
+      "nonSelfHosted": [
+        "discord",
+        "slack",
+        "teams"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires PostgreSQL setup and understanding of Matrix federation, but has excellent documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Matrix homeserver"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Federated communication"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + PostgreSQL"
+          }
+        ]
+      },
+      {
+        "name": "Matrix Features",
+        "features": [
+          {
+            "name": "Federation Support"
+          },
+          {
+            "name": "E2E Encryption"
+          },
+          {
+            "name": "Room Management"
+          },
+          {
+            "name": "User Presence"
+          },
+          {
+            "name": "Read Receipts"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Real-time Messaging"
+          },
+          {
+            "name": "Voice/Video Calls"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Group Chats"
+          },
+          {
+            "name": "Direct Messages"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Room Administration"
+          },
+          {
+            "name": "Federation Control"
+          },
+          {
+            "name": "Media Repository"
+          },
+          {
+            "name": "Moderation Tools"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "Bridges Support"
+          },
+          {
+            "name": "Bot Support"
+          },
+          {
+            "name": "SSO/SAML"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/syndie.mdx",
+    "slug": "syndie",
+    "name": "Syndie",
+    "description": "Syndie is a libre system for operating distributed forums, providing anonymous and secure communication through encrypted, decentralized message syndication.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://syndie.de/favicon.ico",
+    "heroImage": "https://syndie.de/images/syndie-banner.png",
+    "category": "communication",
+    "tags": [
+      "forums",
+      "decentralized",
+      "anonymous",
+      "java",
+      "privacy"
+    ],
+    "github": "i2p/i2p.syndie",
+    "urls": {
+      "website": "https://syndie.de/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "discourse",
+        "flarum",
+        "nodebb"
+      ],
+      "nonSelfHosted": [
+        "reddit",
+        "discord"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Java application requiring understanding of distributed systems and anonymity networks."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Distributed forums"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Anonymous discussions"
+          },
+          {
+            "name": "Architecture",
+            "value": "Java + Distributed sync"
+          }
+        ]
+      },
+      {
+        "name": "Privacy Features",
+        "features": [
+          {
+            "name": "Anonymous Posting"
+          },
+          {
+            "name": "Encrypted Messages"
+          },
+          {
+            "name": "No Central Server"
+          },
+          {
+            "name": "Pseudonymous Identities"
+          },
+          {
+            "name": "Offline Operation"
+          }
+        ]
+      },
+      {
+        "name": "Forum Features",
+        "features": [
+          {
+            "name": "Threaded Discussions"
+          },
+          {
+            "name": "Multiple Forums"
+          },
+          {
+            "name": "Message Syndication"
+          },
+          {
+            "name": "Attachments"
+          },
+          {
+            "name": "Moderation Tools"
+          }
+        ]
+      },
+      {
+        "name": "Distribution",
+        "features": [
+          {
+            "name": "P2P Synchronization"
+          },
+          {
+            "name": "Offline Reading"
+          },
+          {
+            "name": "Archive Support"
+          },
+          {
+            "name": "Selective Sync"
+          },
+          {
+            "name": "Bandwidth Control"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-end Encryption"
+          },
+          {
+            "name": "Digital Signatures"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Secure Channels"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/tailchat.mdx",
+    "slug": "tailchat",
+    "name": "Tailchat",
+    "description": "Tailchat is a next-generation noIM application for your workspace, designed to be more than just another Slack/Discord clone with its plugin system and modern architecture.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://tailchat.msgbyte.com/img/logo.svg",
+    "category": "communication",
+    "tags": [
+      "chat",
+      "workspace",
+      "plugins",
+      "nodejs",
+      "docker"
+    ],
+    "github": "msgbyte/tailchat",
+    "urls": {
+      "website": "https://tailchat.msgbyte.com/",
+      "demo": "https://nightly.paw.msgbyte.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "rocket-chat",
+        "mattermost",
+        "element"
+      ],
+      "nonSelfHosted": [
+        "slack",
+        "discord",
+        "teams"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Docker/Kubernetes setup with MongoDB and Redis, but provides good documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Extensible workspace chat"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Team collaboration"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + MongoDB + Redis"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Text Messaging"
+          },
+          {
+            "name": "Voice/Video Calls"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Group Management"
+          },
+          {
+            "name": "Direct Messages"
+          }
+        ]
+      },
+      {
+        "name": "Plugin System",
+        "features": [
+          {
+            "name": "Plugin Marketplace"
+          },
+          {
+            "name": "Custom Plugins"
+          },
+          {
+            "name": "API Extensions"
+          },
+          {
+            "name": "UI Customization"
+          },
+          {
+            "name": "Third-party Integration"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Multi-workspace"
+          },
+          {
+            "name": "Role Management"
+          },
+          {
+            "name": "Channel Organization"
+          },
+          {
+            "name": "Search Function"
+          },
+          {
+            "name": "Notifications"
+          }
+        ]
+      },
+      {
+        "name": "Deployment",
+        "features": [
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Kubernetes Ready"
+          },
+          {
+            "name": "Microservices"
+          },
+          {
+            "name": "Scalable Architecture"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/tiledesk.mdx",
+    "slug": "tiledesk",
+    "name": "Tiledesk",
+    "description": "Tiledesk is an all-in-one customer engagement platform offering omnichannel live chat, AI-powered chatbots, and comprehensive support tools from lead generation to post-sales.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Freemium",
+    "logo": "https://avatars.githubusercontent.com/u/39886277?s=200&v=4",
+    "category": "communication",
+    "tags": [
+      "customer-support",
+      "chatbot",
+      "omnichannel",
+      "live-chat",
+      "ai"
+    ],
+    "github": "Tiledesk/tiledesk",
+    "urls": {
+      "website": "https://tiledesk.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "chatwoot",
+        "botpress",
+        "rasa"
+      ],
+      "nonSelfHosted": [
+        "intercom",
+        "zendesk",
+        "tidio"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Docker setup with MongoDB and various microservices, but provides comprehensive documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Customer engagement platform"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Customer support & sales"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + MongoDB + Angular"
+          }
+        ]
+      },
+      {
+        "name": "Omnichannel",
+        "features": [
+          {
+            "name": "Live Chat Widget"
+          },
+          {
+            "name": "WhatsApp Integration"
+          },
+          {
+            "name": "Facebook Messenger"
+          },
+          {
+            "name": "Email Support"
+          },
+          {
+            "name": "Telegram Integration"
+          }
+        ]
+      },
+      {
+        "name": "AI & Automation",
+        "features": [
+          {
+            "name": "AI Chatbots"
+          },
+          {
+            "name": "Intent Recognition"
+          },
+          {
+            "name": "Automated Workflows"
+          },
+          {
+            "name": "Smart Routing"
+          },
+          {
+            "name": "Canned Responses"
+          }
+        ]
+      },
+      {
+        "name": "Support Features",
+        "features": [
+          {
+            "name": "Ticketing System"
+          },
+          {
+            "name": "Agent Dashboard"
+          },
+          {
+            "name": "Analytics & Reports"
+          },
+          {
+            "name": "Customer History"
+          },
+          {
+            "name": "Team Collaboration"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "CRM Integration"
+          },
+          {
+            "name": "Custom Widgets"
+          },
+          {
+            "name": "Plugin System"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/tinode.mdx",
+    "slug": "tinode",
+    "name": "Tinode",
+    "description": "Tinode is an instant messaging platform with a Go backend and clients for iOS, Android, web, and command line, designed for building chat applications with modern features.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://raw.githubusercontent.com/tinode/chat/master/docs/logo.svg",
+    "category": "communication",
+    "tags": [
+      "messaging",
+      "chat",
+      "golang",
+      "real-time",
+      "mobile"
+    ],
+    "github": "tinode/chat",
+    "urls": {
+      "website": "https://github.com/tinode/chat",
+      "demo": "https://sandbox.tinode.co/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "matrix",
+        "xmpp",
+        "rocket-chat"
+      ],
+      "nonSelfHosted": [
+        "telegram",
+        "whatsapp",
+        "signal"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Go backend setup with database configuration, but provides Docker images and clear documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Instant messaging platform"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Chat app development"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go backend + Multi-platform"
+          }
+        ]
+      },
+      {
+        "name": "Messaging Features",
+        "features": [
+          {
+            "name": "Real-time Messaging"
+          },
+          {
+            "name": "Group Chats"
+          },
+          {
+            "name": "Direct Messages"
+          },
+          {
+            "name": "Typing Indicators"
+          },
+          {
+            "name": "Read Receipts"
+          }
+        ]
+      },
+      {
+        "name": "Client Support",
+        "features": [
+          {
+            "name": "iOS Native App"
+          },
+          {
+            "name": "Android Native App"
+          },
+          {
+            "name": "Web Application"
+          },
+          {
+            "name": "CLI Client"
+          },
+          {
+            "name": "Chatbot Support"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "Push Notifications"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "User Presence"
+          },
+          {
+            "name": "Message History"
+          },
+          {
+            "name": "Search Function"
+          }
+        ]
+      },
+      {
+        "name": "Development",
+        "features": [
+          {
+            "name": "gRPC API"
+          },
+          {
+            "name": "Plugin System"
+          },
+          {
+            "name": "Bot Framework"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "Custom Clients"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/tox.mdx",
+    "slug": "tox",
+    "name": "Tox",
+    "description": "Tox is a distributed, secure messenger with audio and video chat capabilities, providing peer-to-peer encrypted communication without central servers.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://tox.chat/theme/img/favicon.ico",
+    "category": "communication",
+    "tags": [
+      "p2p",
+      "encryption",
+      "messaging",
+      "privacy",
+      "video-chat"
+    ],
+    "github": "TokTok/c-toxcore",
+    "urls": {
+      "website": "https://tox.chat/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "jami",
+        "briar",
+        "retroshare"
+      ],
+      "nonSelfHosted": [
+        "signal",
+        "telegram",
+        "whatsapp"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Client applications available for all platforms, no server setup required as it's P2P."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "P2P secure messaging"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Private communication"
+          },
+          {
+            "name": "Architecture",
+            "value": "C + P2P protocol"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Text Messaging"
+          },
+          {
+            "name": "Voice Calls"
+          },
+          {
+            "name": "Video Calls"
+          },
+          {
+            "name": "File Transfer"
+          },
+          {
+            "name": "Group Chats"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-end Encryption"
+          },
+          {
+            "name": "No Central Servers"
+          },
+          {
+            "name": "No Metadata Collection"
+          },
+          {
+            "name": "Perfect Forward Secrecy"
+          },
+          {
+            "name": "DHT-based Routing"
+          }
+        ]
+      },
+      {
+        "name": "Privacy",
+        "features": [
+          {
+            "name": "No Phone Numbers"
+          },
+          {
+            "name": "No Registration"
+          },
+          {
+            "name": "Anonymous IDs"
+          },
+          {
+            "name": "No Tracking"
+          },
+          {
+            "name": "Open Source"
+          }
+        ]
+      },
+      {
+        "name": "Platform Support",
+        "features": [
+          {
+            "name": "Windows Client"
+          },
+          {
+            "name": "macOS Client"
+          },
+          {
+            "name": "Linux Client"
+          },
+          {
+            "name": "Android App"
+          },
+          {
+            "name": "iOS App"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/communication/zulip.mdx",
+    "slug": "zulip",
+    "name": "Zulip",
+    "description": "Zulip is a powerful open-source team chat application that combines the immediacy of real-time chat with the organization of email-style threading, designed for productive team collaboration.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Freemium",
+    "logo": "https://static.zulipchat.com/static/images/favicon.svg",
+    "heroImage": "https://static.zulipchat.com/static/images/landing-page/hello/generated/screen-1-dark-2x.5a30fb078bce.webp",
+    "category": "communication",
+    "tags": [
+      "chat",
+      "team-collaboration",
+      "threading",
+      "python",
+      "open-source"
+    ],
+    "github": "zulip/zulip",
+    "urls": {
+      "website": "https://zulip.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "mattermost",
+        "rocket-chat",
+        "element"
+      ],
+      "nonSelfHosted": [
+        "slack",
+        "teams",
+        "discord"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires PostgreSQL and Redis setup, but provides excellent documentation and installation scripts."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Threaded team chat"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Organized team communication"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python/Django + PostgreSQL"
+          }
+        ]
+      },
+      {
+        "name": "Organization",
+        "features": [
+          {
+            "name": "Topic-based Threading"
+          },
+          {
+            "name": "Stream Organization"
+          },
+          {
+            "name": "Powerful Search"
+          },
+          {
+            "name": "Message History"
+          },
+          {
+            "name": "Conversation Links"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Real-time Messaging"
+          },
+          {
+            "name": "Private Messages"
+          },
+          {
+            "name": "Group PMs"
+          },
+          {
+            "name": "Markdown Support"
+          },
+          {
+            "name": "Code Syntax Highlighting"
+          }
+        ]
+      },
+      {
+        "name": "Productivity",
+        "features": [
+          {
+            "name": "Keyboard Shortcuts"
+          },
+          {
+            "name": "Email Notifications"
+          },
+          {
+            "name": "Mobile Apps"
+          },
+          {
+            "name": "Desktop Apps"
+          },
+          {
+            "name": "Integrations"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Stream Permissions"
+          },
+          {
+            "name": "Guest Access"
+          },
+          {
+            "name": "Data Export"
+          },
+          {
+            "name": "LDAP/SAML"
+          }
+        ]
+      }
+    ]
   },
   {
     "filePath": "projects/crm/atomic-crm.mdx",
@@ -12445,6 +16167,750 @@
       "difficulty": "Medium",
       "justification": "Requires Docker setup but has detailed documentation and example configurations."
     }
+  },
+  {
+    "filePath": "projects/security/onetimesecret.mdx",
+    "slug": "onetimesecret",
+    "name": "OneTimeSecret",
+    "description": "OneTimeSecret is an open-source service for sharing sensitive information like passwords and private links that self-destruct after being accessed, ensuring your confidential data stays out of email inboxes and chat logs.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Freemium",
+    "logo": "https://docs.onetimesecret.com/_astro/onetime-logo-v3-xs.P2aRjlid.png",
+    "category": "security",
+    "tags": [
+      "security",
+      "password-sharing",
+      "secrets",
+      "privacy",
+      "encryption"
+    ],
+    "github": "onetimesecret/onetimesecret",
+    "urls": {
+      "website": "https://onetimesecret.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "ots",
+        "privatebin",
+        "snappass",
+        "yopass"
+      ],
+      "nonSelfHosted": [
+        "password.link",
+        "pwpush",
+        "scrt.link"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Ruby/Rack setup with Redis backend, but provides Docker support and comprehensive documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Temporary secret sharing"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Secure password/secret sharing"
+          },
+          {
+            "name": "Architecture",
+            "value": "Ruby/Rack + Vue.js/Vite"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Self-destructing Secrets"
+          },
+          {
+            "name": "One-time Access"
+          },
+          {
+            "name": "Passphrase Protection"
+          },
+          {
+            "name": "TTL Configuration"
+          },
+          {
+            "name": "Anonymous Sharing"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Email Integration"
+          },
+          {
+            "name": "Custom Branding"
+          },
+          {
+            "name": "Multi-language Support"
+          }
+        ]
+      },
+      {
+        "name": "Storage & Backend",
+        "features": [
+          {
+            "name": "Redis Storage"
+          },
+          {
+            "name": "Configurable Expiry"
+          },
+          {
+            "name": "Account System"
+          },
+          {
+            "name": "Usage Tracking"
+          },
+          {
+            "name": "Rate Limiting"
+          }
+        ]
+      },
+      {
+        "name": "Developer Tools",
+        "features": [
+          {
+            "name": "RESTful API"
+          },
+          {
+            "name": "API Documentation"
+          },
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Pre-commit Hooks"
+          },
+          {
+            "name": "Debug Mode"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/security/ots.mdx",
+    "slug": "ots",
+    "name": "OTS (One-Time Secret)",
+    "description": "OTS is an open-source one-time secret sharing platform with symmetric 256-bit AES encryption in the browser, allowing secure sharing of passwords and sensitive information that self-destructs after first access.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/169064?s=64&v=4",
+    "category": "security",
+    "tags": [
+      "security",
+      "encryption",
+      "password-sharing",
+      "secrets"
+    ],
+    "github": "Luzifer/ots",
+    "urls": {
+      "website": "https://ots.fyi/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "privatebin",
+        "snappass",
+        "yopass"
+      ],
+      "nonSelfHosted": [
+        "onetimesecret",
+        "password.link"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single binary deployment with optional Redis backend, Docker support, and minimal configuration required."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "One-time secret sharing"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Secure password/secret sharing"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go backend + Vue.js frontend"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "AES 256-bit Encryption"
+          },
+          {
+            "name": "Client-side Encryption"
+          },
+          {
+            "name": "Zero-knowledge Server"
+          },
+          {
+            "name": "Auto-deletion on Read"
+          },
+          {
+            "name": "Optional Expiry Times"
+          }
+        ]
+      },
+      {
+        "name": "Storage Options",
+        "features": [
+          {
+            "name": "In-memory Storage"
+          },
+          {
+            "name": "Redis Backend"
+          },
+          {
+            "name": "Configurable Expiry"
+          },
+          {
+            "name": "Key Prefix Support"
+          }
+        ]
+      },
+      {
+        "name": "Access Methods",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "CLI Tool"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "File Attachments"
+          },
+          {
+            "name": "Basic/Token Auth"
+          }
+        ]
+      },
+      {
+        "name": "Customization",
+        "features": [
+          {
+            "name": "Custom Branding"
+          },
+          {
+            "name": "Multi-language Support"
+          },
+          {
+            "name": "Theme Customization"
+          },
+          {
+            "name": "API Integration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/security/shhh.mdx",
+    "slug": "shhh",
+    "name": "Shhh",
+    "description": "Shhh is a secure secret sharing tool that keeps sensitive information out of emails and chat logs by providing secure links with passphrase protection and expiration dates.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://github.com/smallwat3r/shhh/raw/master/shhh/static/img/logo.png",
+    "category": "security",
+    "tags": [
+      "secret-sharing",
+      "encryption",
+      "privacy",
+      "python",
+      "security"
+    ],
+    "github": "smallwat3r/shhh",
+    "urls": {
+      "website": "https://github.com/smallwat3r/shhh"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "ots",
+        "onetimesecret",
+        "privatebin"
+      ],
+      "nonSelfHosted": [
+        "password.link",
+        "pwpush"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Python application with Docker support, minimal dependencies."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Secure secret sharing"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Sensitive information exchange"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python Flask application"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Passphrase Protection"
+          },
+          {
+            "name": "Expiration Dates"
+          },
+          {
+            "name": "One-time Read"
+          },
+          {
+            "name": "Encrypted Storage"
+          },
+          {
+            "name": "Secure Links"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Simple Interface"
+          },
+          {
+            "name": "No Registration"
+          },
+          {
+            "name": "Custom Expiration"
+          },
+          {
+            "name": "Read Receipts"
+          },
+          {
+            "name": "Mobile Friendly"
+          }
+        ]
+      },
+      {
+        "name": "Privacy",
+        "features": [
+          {
+            "name": "No Logs"
+          },
+          {
+            "name": "Self-destructing Secrets"
+          },
+          {
+            "name": "No Tracking"
+          },
+          {
+            "name": "Anonymous Usage"
+          }
+        ]
+      },
+      {
+        "name": "Deployment",
+        "features": [
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Environment Config"
+          },
+          {
+            "name": "Lightweight"
+          },
+          {
+            "name": "Easy Setup"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/url-shorteners/kutt.mdx",
+    "slug": "kutt",
+    "name": "Kutt",
+    "description": "Kutt is a modern URL shortener with support for custom domains. Create and edit links, view statistics, manage users, and more. It's built with self-hosting in mind and offers extensive customization options.\n",
+    "license": "MIT",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/30232102?s=64&v=4",
+    "heroImage": "https://kutt.it/images/callout.png",
+    "category": "url-shorteners",
+    "tags": [
+      "url-shortener",
+      "nodejs",
+      "rest-api",
+      "self-hosted"
+    ],
+    "github": "thedevs-network/kutt",
+    "urls": {
+      "website": "https://kutt.it"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "shlink",
+        "yourls"
+      ],
+      "nonSelfHosted": [
+        "bitly",
+        "tinyurl"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Node.js environment and database setup but has good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Features",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Modern URL shortening"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Self-hosted URL management"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js with multiple database support"
+          }
+        ]
+      },
+      {
+        "name": "URL Management",
+        "features": [
+          {
+            "name": "Custom domains"
+          },
+          {
+            "name": "Password protection"
+          },
+          {
+            "name": "Link expiration"
+          },
+          {
+            "name": "Custom URLs"
+          },
+          {
+            "name": "Visit tracking"
+          },
+          {
+            "name": "API access"
+          }
+        ]
+      },
+      {
+        "name": "Analytics",
+        "features": [
+          {
+            "name": "Visit statistics"
+          },
+          {
+            "name": "Link management"
+          },
+          {
+            "name": "User management"
+          },
+          {
+            "name": "Private stats"
+          },
+          {
+            "name": "Admin dashboard"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Browser extensions"
+          },
+          {
+            "name": "Docker support"
+          },
+          {
+            "name": "Multiple databases"
+          },
+          {
+            "name": "Redis caching"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/url-shorteners/shlink.mdx",
+    "slug": "shlink",
+    "name": "Shlink",
+    "description": "Shlink is a PHP-based self-hosted URL shortener that allows you to create and manage shortened URLs under your own domain. It provides both CLI and REST API interfaces with features like visit tracking, QR code generation, and multi-domain support.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/20341790?s=64&v=4",
+    "heroImage": "https://raw.githubusercontent.com/shlinkio/shlink.io/main/public/images/shlink-hero.png",
+    "category": "url-shorteners",
+    "tags": [
+      "url-shortener",
+      "php",
+      "rest-api",
+      "self-hosted"
+    ],
+    "github": "shlinkio/shlink",
+    "urls": {
+      "website": "https://shlink.io"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "yourls",
+        "polr"
+      ],
+      "nonSelfHosted": [
+        "bitly",
+        "tinyurl"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires PHP environment setup and database configuration but has good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Features",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "URL shortening and tracking"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Self-hosted URL management"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP-based with multiple database support"
+          }
+        ]
+      },
+      {
+        "name": "URL Management",
+        "features": [
+          {
+            "name": "Custom short codes"
+          },
+          {
+            "name": "Multi-domain support"
+          },
+          {
+            "name": "QR code generation"
+          },
+          {
+            "name": "URL tagging"
+          },
+          {
+            "name": "Visit tracking"
+          },
+          {
+            "name": "API key authentication"
+          }
+        ]
+      },
+      {
+        "name": "Analytics",
+        "features": [
+          {
+            "name": "Visit statistics"
+          },
+          {
+            "name": "Geolocation tracking"
+          },
+          {
+            "name": "Device tracking"
+          },
+          {
+            "name": "Referrer tracking"
+          },
+          {
+            "name": "Visit tagging"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "CLI interface"
+          },
+          {
+            "name": "Docker support"
+          },
+          {
+            "name": "Web client"
+          },
+          {
+            "name": "Database flexibility"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/url-shorteners/yours.mdx",
+    "slug": "yourls",
+    "name": "YOURLS",
+    "description": "YOURLS (Your Own URL Shortener) is a set of PHP scripts that lets you run your own URL shortening service. It provides full control over your data, detailed statistics, analytics, and plugin support.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/2106111?s=64&v=4",
+    "category": "url-shorteners",
+    "tags": [
+      "url-shortener",
+      "php",
+      "self-hosted"
+    ],
+    "github": "YOURLS/YOURLS",
+    "urls": {
+      "website": "https://yourls.org"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "kutt",
+        "shlink"
+      ],
+      "nonSelfHosted": [
+        "bitly",
+        "tinyurl"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple PHP setup with good documentation and wide hosting support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core Features",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Simple URL shortening"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Self-hosted URL management"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP-based with MySQL database"
+          }
+        ]
+      },
+      {
+        "name": "URL Management",
+        "features": [
+          {
+            "name": "Custom short URLs"
+          },
+          {
+            "name": "Bulk URL import"
+          },
+          {
+            "name": "Private links"
+          },
+          {
+            "name": "Link expiration"
+          },
+          {
+            "name": "Visit tracking"
+          },
+          {
+            "name": "API access"
+          }
+        ]
+      },
+      {
+        "name": "Analytics",
+        "features": [
+          {
+            "name": "Click statistics"
+          },
+          {
+            "name": "Referrer tracking"
+          },
+          {
+            "name": "Geographic data"
+          },
+          {
+            "name": "Visit history"
+          },
+          {
+            "name": "Traffic sources"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Plugin system"
+          },
+          {
+            "name": "Browser bookmarklets"
+          },
+          {
+            "name": "Multiple users"
+          },
+          {
+            "name": "Theme support"
+          }
+        ]
+      }
+    ]
   },
   {
     "filePath": "projects/wikis/amusewiki.mdx",

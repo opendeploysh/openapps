@@ -1,0 +1,88 @@
+---
+slug: centrifugo
+name: Centrifugo
+description: |
+  Centrifugo is an open-source scalable real-time messaging server that can instantly deliver messages to application users over WebSocket, HTTP-streaming, SSE, GRPC, and WebTransport. It provides a language-agnostic PUB/SUB server for building real-time applications.
+logo: https://avatars.githubusercontent.com/u/6236442?s=54&v=4
+category: communication
+tags: [communication, websockets, realtime, pubsub, messaging]
+github: centrifugal/centrifugo
+urls:
+  website: https://centrifugal.dev
+alternatives:
+  selfHosted: []
+  nonSelfHosted: [pubnub, pusher, ably]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires configuration but has good documentation and Docker support."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Real-time messaging
+      - name: Target Use Case
+        value: Scalable PUB/SUB server
+      - name: Architecture
+        value: Go-based
+  - name: Communication
+    features:
+      - name: WebSocket Support
+      - name: HTTP Streaming
+      - name: Server-Sent Events
+      - name: GRPC Support
+      - name: WebTransport Support
+  - name: Scalability
+    features:
+      - name: Redis Integration
+      - name: Redis Cluster Support
+      - name: NATS Integration
+      - name: Horizontal Scaling
+      - name: Connection Multiplexing
+  - name: Features
+    features:
+      - name: Channel Subscriptions
+      - name: Message History
+      - name: Presence Information
+      - name: JWT Authentication
+      - name: Admin Web UI
+---
+
+Centrifugo is a scalable real-time messaging server that enables instant message delivery to online users through multiple transport protocols. It serves as a robust PUB/SUB server that can be integrated with any backend technology.
+
+## Key Features
+
+- **Transport Protocols**:
+
+  - WebSocket support
+  - HTTP-streaming
+  - Server-Sent Events (SSE)
+  - GRPC integration
+  - WebTransport capability
+
+- **Scalability & Integration**:
+
+  - Redis and Redis Cluster support
+  - NATS integration
+  - PostgreSQL async consumer
+  - Kafka consumer support
+  - Horizontal scaling
+
+- **Security & Authentication**:
+
+  - JWT authentication
+  - Proxy authentication
+  - Channel permissions
+  - Namespace management
+  - Connection authentication
+
+- **Advanced Features**:
+  - Message history
+  - Delta compression
+  - Presence information
+  - RPC capabilities
+  - Admin web interface
+  - Prometheus metrics
+  - Grafana dashboard
