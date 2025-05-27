@@ -1,0 +1,97 @@
+---
+slug: calibre-web
+name: Calibre-Web
+description: |
+  Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database, with OPDS support for e-readers.
+logo: https://raw.githubusercontent.com/janeczku/calibre-web/master/cps/static/favicon.ico
+category: media
+tags: [ebooks, calibre, opds, web-reader, python]
+github: janeczku/calibre-web
+urls:
+  website: https://github.com/janeczku/calibre-web
+alternatives:
+  selfHosted: [calibre, kavita, ubooquity]
+  nonSelfHosted: [kindle, google-books]
+deployment:
+  difficulty: "Easy"
+  justification: "Docker deployment with existing Calibre database, minimal configuration needed."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Web interface for Calibre
+      - name: Target Use Case
+        value: eBook library access
+      - name: Architecture
+        value: Python Flask + Calibre DB
+  - name: Reading Features
+    features:
+      - name: Web-based Reader
+      - name: EPUB Support
+      - name: PDF Support
+      - name: Comic Support
+      - name: Reading Progress
+  - name: Library Access
+    features:
+      - name: OPDS Catalog
+      - name: Download Books
+      - name: Send to Kindle
+      - name: Metadata Editing
+      - name: Book Conversion
+  - name: User Management
+    features:
+      - name: Multi-user Support
+      - name: User Restrictions
+      - name: Shelf Management
+      - name: Reading Lists
+      - name: OAuth Support
+  - name: Interface
+    features:
+      - name: Responsive Design
+      - name: Dark Mode
+      - name: Advanced Search
+      - name: Custom Columns
+      - name: Multiple Languages
+---
+
+Calibre-Web is a web application that provides a clean, modern interface for browsing, reading, and downloading eBooks from an existing Calibre database. It offers remote access to your library with support for OPDS-compatible e-readers.
+
+## Key Features
+
+- **Web-Based Reading**:
+
+  - Built-in eBook reader
+  - EPUB, PDF, and CBZ/CBR support
+  - Responsive reading interface
+  - Reading progress sync
+  - Customizable reader settings
+  - Offline reading capability
+
+- **Library Management**:
+
+  - Browse existing Calibre database
+  - Advanced search and filtering
+  - Metadata viewing and editing
+  - Book format conversion
+  - Series and author browsing
+  - Custom column support
+
+- **E-Reader Integration**:
+
+  - OPDS catalog server
+  - Send books to Kindle
+  - Download in multiple formats
+  - E-reader app compatibility
+  - Mobile-friendly interface
+  - Kobo sync support
+
+- **Multi-User Features**:
+  - User account management
+  - Permission-based access
+  - Personal bookshelves
+  - Reading history tracking
+  - OAuth authentication
+  - LDAP integration

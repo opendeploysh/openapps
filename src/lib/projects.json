@@ -11054,6 +11054,1360 @@
     ]
   },
   {
+    "filePath": "projects/media/atsumeru.mdx",
+    "slug": "atsumeru",
+    "name": "Atsumeru",
+    "description": "Atsumeru is a free self-hosted manga/comic/light novel media server with native clients for Windows, Linux, macOS, and Android, offering comprehensive library management and reading features.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://atsumeru.xyz/assets/media/hero.png",
+    "category": "media",
+    "tags": [
+      "manga",
+      "comics",
+      "media-server",
+      "ebooks",
+      "java"
+    ],
+    "github": "AtsumeruDev/Atsumeru",
+    "urls": {
+      "website": "https://atsumeru.xyz/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "komga",
+        "kavita",
+        "calibre-web"
+      ],
+      "nonSelfHosted": [
+        "kindle",
+        "comixology"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Java setup or Docker deployment with database configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Manga/comic media server"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Digital library management"
+          },
+          {
+            "name": "Architecture",
+            "value": "Java + Native clients"
+          }
+        ]
+      },
+      {
+        "name": "Library Management",
+        "features": [
+          {
+            "name": "Metadata Support"
+          },
+          {
+            "name": "Series Organization"
+          },
+          {
+            "name": "Category Management"
+          },
+          {
+            "name": "Import Tools"
+          },
+          {
+            "name": "Archive Support"
+          }
+        ]
+      },
+      {
+        "name": "Reading Features",
+        "features": [
+          {
+            "name": "Web Reader"
+          },
+          {
+            "name": "Native Clients"
+          },
+          {
+            "name": "Reading Progress"
+          },
+          {
+            "name": "Bookmarks"
+          },
+          {
+            "name": "Multiple Formats"
+          }
+        ]
+      },
+      {
+        "name": "Server Features",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "OPDS Support"
+          },
+          {
+            "name": "Metadata Fetching"
+          }
+        ]
+      },
+      {
+        "name": "Client Support",
+        "features": [
+          {
+            "name": "Windows Client"
+          },
+          {
+            "name": "Linux Client"
+          },
+          {
+            "name": "macOS Client"
+          },
+          {
+            "name": "Android App"
+          },
+          {
+            "name": "Web Interface"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/media/booklogr.mdx",
+    "slug": "booklogr",
+    "name": "BookLogr",
+    "description": "BookLogr is a self-hosted personal book library manager that helps you organize, track, and manage your reading collection with a clean and intuitive interface.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://demo.booklogr.app/icon.svg",
+    "category": "media",
+    "tags": [
+      "books",
+      "library-management",
+      "reading-tracker",
+      "docker"
+    ],
+    "github": "Mozzo1000/booklogr",
+    "urls": {
+      "website": "https://github.com/Mozzo1000/booklogr",
+      "demo": "https://demo.booklogr.app/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "calibre",
+        "calibre-web",
+        "kavita"
+      ],
+      "nonSelfHosted": [
+        "goodreads",
+        "librarything"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Docker deployment with minimal configuration required."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Personal book library"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Book collection management"
+          },
+          {
+            "name": "Architecture",
+            "value": "React + Node.js"
+          }
+        ]
+      },
+      {
+        "name": "Library Features",
+        "features": [
+          {
+            "name": "Book Cataloging"
+          },
+          {
+            "name": "ISBN Lookup"
+          },
+          {
+            "name": "Cover Images"
+          },
+          {
+            "name": "Reading Status"
+          },
+          {
+            "name": "Collections"
+          }
+        ]
+      },
+      {
+        "name": "Tracking",
+        "features": [
+          {
+            "name": "Reading Progress"
+          },
+          {
+            "name": "Reading Goals"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "Reading History"
+          },
+          {
+            "name": "Notes & Reviews"
+          }
+        ]
+      },
+      {
+        "name": "Organization",
+        "features": [
+          {
+            "name": "Custom Shelves"
+          },
+          {
+            "name": "Tags & Categories"
+          },
+          {
+            "name": "Search & Filter"
+          },
+          {
+            "name": "Sort Options"
+          },
+          {
+            "name": "Bulk Actions"
+          }
+        ]
+      },
+      {
+        "name": "User Features",
+        "features": [
+          {
+            "name": "User Profiles"
+          },
+          {
+            "name": "Privacy Settings"
+          },
+          {
+            "name": "Export Data"
+          },
+          {
+            "name": "Import Books"
+          },
+          {
+            "name": "Mobile Friendly"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/media/calibre-web.mdx",
+    "slug": "calibre-web",
+    "name": "Calibre-Web",
+    "description": "Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database, with OPDS support for e-readers.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://raw.githubusercontent.com/janeczku/calibre-web/master/cps/static/favicon.ico",
+    "category": "media",
+    "tags": [
+      "ebooks",
+      "calibre",
+      "opds",
+      "web-reader",
+      "python"
+    ],
+    "github": "janeczku/calibre-web",
+    "urls": {
+      "website": "https://github.com/janeczku/calibre-web"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "calibre",
+        "kavita",
+        "ubooquity"
+      ],
+      "nonSelfHosted": [
+        "kindle",
+        "google-books"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Docker deployment with existing Calibre database, minimal configuration needed."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Web interface for Calibre"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "eBook library access"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python Flask + Calibre DB"
+          }
+        ]
+      },
+      {
+        "name": "Reading Features",
+        "features": [
+          {
+            "name": "Web-based Reader"
+          },
+          {
+            "name": "EPUB Support"
+          },
+          {
+            "name": "PDF Support"
+          },
+          {
+            "name": "Comic Support"
+          },
+          {
+            "name": "Reading Progress"
+          }
+        ]
+      },
+      {
+        "name": "Library Access",
+        "features": [
+          {
+            "name": "OPDS Catalog"
+          },
+          {
+            "name": "Download Books"
+          },
+          {
+            "name": "Send to Kindle"
+          },
+          {
+            "name": "Metadata Editing"
+          },
+          {
+            "name": "Book Conversion"
+          }
+        ]
+      },
+      {
+        "name": "User Management",
+        "features": [
+          {
+            "name": "Multi-user Support"
+          },
+          {
+            "name": "User Restrictions"
+          },
+          {
+            "name": "Shelf Management"
+          },
+          {
+            "name": "Reading Lists"
+          },
+          {
+            "name": "OAuth Support"
+          }
+        ]
+      },
+      {
+        "name": "Interface",
+        "features": [
+          {
+            "name": "Responsive Design"
+          },
+          {
+            "name": "Dark Mode"
+          },
+          {
+            "name": "Advanced Search"
+          },
+          {
+            "name": "Custom Columns"
+          },
+          {
+            "name": "Multiple Languages"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/media/calibre.mdx",
+    "slug": "calibre",
+    "name": "Calibre",
+    "description": "Calibre is a powerful, cross-platform e-book library management application that can view, convert, edit, and catalog e-books in most major formats, with a built-in content server.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://calibre-ebook.com/favicon.ico",
+    "category": "media",
+    "tags": [
+      "ebooks",
+      "library-management",
+      "conversion",
+      "metadata",
+      "python"
+    ],
+    "github": "kovidgoyal/calibre",
+    "urls": {
+      "website": "https://calibre-ebook.com/",
+      "demo": "https://calibre-ebook.com/demo"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "calibre-web",
+        "kavita",
+        "ubooquity"
+      ],
+      "nonSelfHosted": [
+        "kindle",
+        "adobe-digital-editions"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Desktop application with simple installation, optional server component."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "E-book library management"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Complete e-book solution"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Qt"
+          }
+        ]
+      },
+      {
+        "name": "Library Management",
+        "features": [
+          {
+            "name": "Metadata Management"
+          },
+          {
+            "name": "Cover Downloads"
+          },
+          {
+            "name": "Series Organization"
+          },
+          {
+            "name": "Virtual Libraries"
+          },
+          {
+            "name": "Bulk Editing"
+          }
+        ]
+      },
+      {
+        "name": "Format Support",
+        "features": [
+          {
+            "name": "Format Conversion"
+          },
+          {
+            "name": "EPUB/MOBI/PDF"
+          },
+          {
+            "name": "Comic Formats"
+          },
+          {
+            "name": "News Downloads"
+          },
+          {
+            "name": "Custom Columns"
+          }
+        ]
+      },
+      {
+        "name": "E-Reader Support",
+        "features": [
+          {
+            "name": "Device Sync"
+          },
+          {
+            "name": "Send to Device"
+          },
+          {
+            "name": "Device Detection"
+          },
+          {
+            "name": "Format Optimization"
+          },
+          {
+            "name": "Collection Management"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "Content Server"
+          },
+          {
+            "name": "E-book Editor"
+          },
+          {
+            "name": "Plugin System"
+          },
+          {
+            "name": "Regex Search"
+          },
+          {
+            "name": "Scripting Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/media/kapowarr.mdx",
+    "slug": "kapowarr",
+    "name": "Kapowarr",
+    "description": "Kapowarr is a comic book library manager that automates downloading, organizing, and converting comic book issues, similar to Sonarr but designed specifically for comics.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://raw.githubusercontent.com/Casvt/Kapowarr/main/frontend/static/favicon.ico",
+    "heroImage": "https://casvt.github.io/Kapowarr/assets/images/homepage_preview.png",
+    "category": "media",
+    "tags": [
+      "comics",
+      "manga",
+      "automation",
+      "library-management",
+      "python"
+    ],
+    "github": "Casvt/Kapowarr",
+    "urls": {
+      "website": "https://casvt.github.io/Kapowarr/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "komga",
+        "kavita",
+        "mylar3"
+      ],
+      "nonSelfHosted": [
+        "comixology",
+        "marvel-unlimited"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Docker setup and configuration of download clients and indexers."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Comic book automation"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Automated comic library"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Docker"
+          }
+        ]
+      },
+      {
+        "name": "Automation",
+        "features": [
+          {
+            "name": "Auto-downloading"
+          },
+          {
+            "name": "Issue Monitoring"
+          },
+          {
+            "name": "Release Tracking"
+          },
+          {
+            "name": "Quality Profiles"
+          },
+          {
+            "name": "Indexer Support"
+          }
+        ]
+      },
+      {
+        "name": "Library Management",
+        "features": [
+          {
+            "name": "Series Organization"
+          },
+          {
+            "name": "Metadata Fetching"
+          },
+          {
+            "name": "File Renaming"
+          },
+          {
+            "name": "Folder Structure"
+          },
+          {
+            "name": "Format Conversion"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Download Clients"
+          },
+          {
+            "name": "ComicVine API"
+          },
+          {
+            "name": "Notification Support"
+          },
+          {
+            "name": "Media Servers"
+          },
+          {
+            "name": "Manual Import"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Volume Management"
+          },
+          {
+            "name": "Issue Tracking"
+          },
+          {
+            "name": "Missing Issues"
+          },
+          {
+            "name": "Upgrade Logic"
+          },
+          {
+            "name": "Calendar View"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/media/kavita.mdx",
+    "slug": "kavita",
+    "name": "Kavita",
+    "description": "Kavita is a fast, feature-rich, cross-platform reading server built with a focus on manga, comics, and books, offering a modern web interface with extensive metadata support.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://www.kavitareader.com/img/logo.png",
+    "heroImage": "https://www.kavitareader.com/img/features/library.PNG",
+    "category": "media",
+    "tags": [
+      "manga",
+      "comics",
+      "ebooks",
+      "media-server",
+      "dotnet"
+    ],
+    "github": "Kareadita/Kavita",
+    "urls": {
+      "website": "https://www.kavitareader.com/",
+      "demo": "https://www.kavitareader.com/#demo"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "komga",
+        "calibre-web",
+        "ubooquity"
+      ],
+      "nonSelfHosted": [
+        "kindle",
+        "comixology"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single executable or Docker container with automatic setup and web-based configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Multi-format reading server"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Digital reading library"
+          },
+          {
+            "name": "Architecture",
+            "value": ".NET Core + Angular"
+          }
+        ]
+      },
+      {
+        "name": "Format Support",
+        "features": [
+          {
+            "name": "Manga (CBZ/CBR)"
+          },
+          {
+            "name": "Comics (CB7/CBT)"
+          },
+          {
+            "name": "Books (EPUB/PDF)"
+          },
+          {
+            "name": "Raw Images"
+          },
+          {
+            "name": "Archive Formats"
+          }
+        ]
+      },
+      {
+        "name": "Reading Experience",
+        "features": [
+          {
+            "name": "Web Reader"
+          },
+          {
+            "name": "Reading Progress"
+          },
+          {
+            "name": "Bookmarks"
+          },
+          {
+            "name": "Reading Lists"
+          },
+          {
+            "name": "Continuous Scroll"
+          }
+        ]
+      },
+      {
+        "name": "Library Features",
+        "features": [
+          {
+            "name": "Metadata Scraping"
+          },
+          {
+            "name": "Smart Collections"
+          },
+          {
+            "name": "Series Grouping"
+          },
+          {
+            "name": "User Ratings"
+          },
+          {
+            "name": "Reviews"
+          }
+        ]
+      },
+      {
+        "name": "User Management",
+        "features": [
+          {
+            "name": "Multi-user Support"
+          },
+          {
+            "name": "Age Restrictions"
+          },
+          {
+            "name": "Library Sharing"
+          },
+          {
+            "name": "Progress Sync"
+          },
+          {
+            "name": "OPDS Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/media/kiwix-serve.mdx",
+    "slug": "kiwix-serve",
+    "name": "kiwix-serve",
+    "description": "kiwix-serve is an HTTP daemon that serves offline content from ZIM files, enabling you to host Wikipedia, Project Gutenberg, and other educational content on your local network.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://www.kiwix.org/favicon.ico",
+    "heroImage": "https://www.kiwix.org/content/images/kiwix-serve-banner.jpg",
+    "category": "media",
+    "tags": [
+      "offline-content",
+      "wikipedia",
+      "zim-files",
+      "education",
+      "cpp"
+    ],
+    "github": "kiwix/kiwix-tools",
+    "urls": {
+      "website": "https://www.kiwix.org/en/downloads/kiwix-serve/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "xowa",
+        "wikimedia-enterprise"
+      ],
+      "nonSelfHosted": [
+        "wikipedia",
+        "archive-org"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single binary with ZIM files, minimal configuration required."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Offline content serving"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Local knowledge base"
+          },
+          {
+            "name": "Architecture",
+            "value": "C++ HTTP server"
+          }
+        ]
+      },
+      {
+        "name": "Content Support",
+        "features": [
+          {
+            "name": "ZIM File Format"
+          },
+          {
+            "name": "Multiple Libraries"
+          },
+          {
+            "name": "Full-text Search"
+          },
+          {
+            "name": "Content Catalog"
+          },
+          {
+            "name": "Multi-language"
+          }
+        ]
+      },
+      {
+        "name": "Access Features",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "OPDS Catalog"
+          },
+          {
+            "name": "Search API"
+          },
+          {
+            "name": "Random Articles"
+          },
+          {
+            "name": "Bookmarks"
+          }
+        ]
+      },
+      {
+        "name": "Deployment",
+        "features": [
+          {
+            "name": "Lightweight Server"
+          },
+          {
+            "name": "No Database"
+          },
+          {
+            "name": "Cross-platform"
+          },
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Command Line"
+          }
+        ]
+      },
+      {
+        "name": "Content Sources",
+        "features": [
+          {
+            "name": "Wikipedia Offline"
+          },
+          {
+            "name": "Wiktionary"
+          },
+          {
+            "name": "Project Gutenberg"
+          },
+          {
+            "name": "TED Talks"
+          },
+          {
+            "name": "Custom Content"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/media/komga.mdx",
+    "slug": "komga",
+    "name": "Komga",
+    "description": "Komga is a media server for comics, mangas, BDs, magazines and eBooks with API and OPDS support, offering a modern web interface for exploring libraries and a feature-rich web reader.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://komga.org/img/logo.svg",
+    "category": "media",
+    "tags": [
+      "comics",
+      "manga",
+      "media-server",
+      "opds",
+      "java"
+    ],
+    "github": "gotson/komga",
+    "urls": {
+      "website": "https://komga.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "kavita",
+        "ubooquity",
+        "calibre-web"
+      ],
+      "nonSelfHosted": [
+        "comixology",
+        "kindle"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single JAR file or Docker container with automatic database setup."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Comic/manga media server"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Digital comic library"
+          },
+          {
+            "name": "Architecture",
+            "value": "Spring Boot + Vue.js"
+          }
+        ]
+      },
+      {
+        "name": "Library Management",
+        "features": [
+          {
+            "name": "Multiple Libraries"
+          },
+          {
+            "name": "Metadata Management"
+          },
+          {
+            "name": "Series Organization"
+          },
+          {
+            "name": "Collections"
+          },
+          {
+            "name": "Read Lists"
+          }
+        ]
+      },
+      {
+        "name": "Reading Features",
+        "features": [
+          {
+            "name": "Web Reader"
+          },
+          {
+            "name": "Webtoon Mode"
+          },
+          {
+            "name": "Reading Progress"
+          },
+          {
+            "name": "Bookmarks"
+          },
+          {
+            "name": "Continuous Reading"
+          }
+        ]
+      },
+      {
+        "name": "API & Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "OPDS Feed"
+          },
+          {
+            "name": "Tachiyomi Support"
+          },
+          {
+            "name": "Chunky Support"
+          },
+          {
+            "name": "SSE Updates"
+          }
+        ]
+      },
+      {
+        "name": "User Features",
+        "features": [
+          {
+            "name": "Multi-user Support"
+          },
+          {
+            "name": "Age Restrictions"
+          },
+          {
+            "name": "Library Sharing"
+          },
+          {
+            "name": "Authentication"
+          },
+          {
+            "name": "Activity Tracking"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/media/librum.mdx",
+    "slug": "librum",
+    "name": "Librum",
+    "description": "Librum is a modern, feature-rich e-book reader and library manager that supports all major book formats, runs on all devices, and offers powerful tools to boost reading productivity.\n",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
+    "logo": "https://librumreader.com/favicon.ico",
+    "category": "media",
+    "tags": [
+      "ebooks",
+      "reader",
+      "library-management",
+      "productivity",
+      "cpp"
+    ],
+    "github": "Librum-Reader/Librum",
+    "urls": {
+      "website": "https://librumreader.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "calibre",
+        "kavita",
+        "bookwyrm"
+      ],
+      "nonSelfHosted": [
+        "kindle",
+        "apple-books"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Desktop application with simple installation, cloud sync optional."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "E-book reader & manager"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal reading productivity"
+          },
+          {
+            "name": "Architecture",
+            "value": "C++ Qt application"
+          }
+        ]
+      },
+      {
+        "name": "Reading Features",
+        "features": [
+          {
+            "name": "Format Support"
+          },
+          {
+            "name": "Annotations"
+          },
+          {
+            "name": "Text-to-Speech"
+          },
+          {
+            "name": "Reading Statistics"
+          },
+          {
+            "name": "Customization"
+          }
+        ]
+      },
+      {
+        "name": "Library Management",
+        "features": [
+          {
+            "name": "Tag System"
+          },
+          {
+            "name": "Smart Search"
+          },
+          {
+            "name": "Collections"
+          },
+          {
+            "name": "Metadata Editing"
+          },
+          {
+            "name": "Cloud Sync"
+          }
+        ]
+      },
+      {
+        "name": "Productivity Tools",
+        "features": [
+          {
+            "name": "Note Taking"
+          },
+          {
+            "name": "Highlighting"
+          },
+          {
+            "name": "Dictionary"
+          },
+          {
+            "name": "Translation"
+          },
+          {
+            "name": "Export Options"
+          }
+        ]
+      },
+      {
+        "name": "Platform Support",
+        "features": [
+          {
+            "name": "Windows"
+          },
+          {
+            "name": "macOS"
+          },
+          {
+            "name": "Linux"
+          },
+          {
+            "name": "Mobile Apps"
+          },
+          {
+            "name": "Cloud Storage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/media/stump.mdx",
+    "slug": "stump",
+    "name": "Stump",
+    "description": "Stump is a fast, free and open source comics, manga and digital book server with OPDS support, built with Rust for performance and reliability.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://www.stumpapp.dev/favicon.ico",
+    "category": "media",
+    "tags": [
+      "comics",
+      "manga",
+      "ebooks",
+      "media-server",
+      "rust"
+    ],
+    "github": "stumpapp/stump",
+    "urls": {
+      "website": "https://www.stumpapp.dev/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "komga",
+        "kavita",
+        "calibre-web"
+      ],
+      "nonSelfHosted": [
+        "comixology",
+        "kindle"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single binary or Docker container with built-in database and web UI."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Digital book server"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Comic/manga library"
+          },
+          {
+            "name": "Architecture",
+            "value": "Rust + React"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Fast Scanning"
+          },
+          {
+            "name": "Low Memory Usage"
+          },
+          {
+            "name": "Quick Loading"
+          },
+          {
+            "name": "Efficient Caching"
+          },
+          {
+            "name": "Rust Performance"
+          }
+        ]
+      },
+      {
+        "name": "Library Features",
+        "features": [
+          {
+            "name": "Series Management"
+          },
+          {
+            "name": "Metadata Support"
+          },
+          {
+            "name": "Smart Collections"
+          },
+          {
+            "name": "Tag System"
+          },
+          {
+            "name": "Search Function"
+          }
+        ]
+      },
+      {
+        "name": "Reading Experience",
+        "features": [
+          {
+            "name": "Web Reader"
+          },
+          {
+            "name": "OPDS Support"
+          },
+          {
+            "name": "Progress Tracking"
+          },
+          {
+            "name": "Bookmarks"
+          },
+          {
+            "name": "Mobile Support"
+          }
+        ]
+      },
+      {
+        "name": "Server Features",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Scheduled Tasks"
+          },
+          {
+            "name": "Thumbnail Generation"
+          },
+          {
+            "name": "Format Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "filePath": "projects/miscellaneous/dockflare.mdx",
     "slug": "dockflare",
     "name": "DockFlare",
