@@ -1,0 +1,141 @@
+---
+slug: dockflare
+name: DockFlare
+description: |
+  DockFlare simplifies Cloudflare Tunnel and Zero Trust Access policy management using Docker labels for automated configuration. It provides a web UI for service definitions and policy overrides, enabling secure access to both Docker and non-Docker applications.
+logo: https://avatars.githubusercontent.com/u/175474883?s=64&v=4
+category: security
+tags: [networking, security, automation]
+github: chrispybacon-dev/dockflare
+urls:
+  website: https://github.com/ChrispyBacon-dev/DockFlare/wiki
+alternatives:
+  selfHosted: []
+  nonSelfHosted: [cloudflare-tunnel]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Docker setup and Cloudflare API configuration but has good documentation."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Cloudflare Tunnel & Access Management
+      - name: Target Use Case
+        value: Docker & non-Docker service exposure
+      - name: Architecture
+        value: Python + Flask + Docker
+  - name: Tunnel Management
+    features:
+      - name: Automated tunnel creation
+      - name: Docker label configuration
+      - name: Multi-hostname support
+      - name: Multi-zone support
+      - name: DNS management
+      - name: State persistence
+  - name: Access Control
+    features:
+      - name: Zero Trust policies
+      - name: Policy overrides
+      - name: Access application management
+      - name: Authentication rules
+      - name: UI-driven controls
+      - name: Label-based configuration
+  - name: Integration
+    features:
+      - name: Docker integration
+      - name: Cloudflare API
+      - name: Web UI dashboard
+      - name: Real-time logging
+      - name: Health monitoring
+      - name: Theme customization
+---
+
+DockFlare simplifies Cloudflare Tunnel and Zero Trust Access policy management
+by using Docker labels for automated configuration, while also providing a
+powerful web UI for manual service definitions and policy overrides. It enables
+secure, hassle-free public access to both Dockerized and non-Dockerized
+applications with minimal direct interaction with Cloudflare. Acting as a
+dynamic, self-hosted ingress controller, DockFlare offers persistent, UI-driven
+control over access policies centralizing and streamlining your access
+management.
+
+## Key Features
+
+- **Unified Cloudflare Tunnel Management**: Automates Tunnel creation/use & cloudflared agent lifecycle (optional internal deployment or external).
+- **Dynamic Ingress via Docker Labels**: Auto-configures Tunnel ingress & DNS from Docker labels (e.g., `cloudflare.tunnel.hostname`, `service`) by monitoring container events.
+- **Manual Ingress Rule Management**: Add & manage public hostnames for non-Docker services (e.g., router, NAS) via Web UI; DockFlare handles Tunnel rules & DNS.
+- **Versatile Access Policy Control (Docker & Manual)**: Define Cloudflare Access Policies (e.g., bypass, authenticate, custom JSON) via Docker labels; auto-manages Access Applications.
+- **Web UI to manage/override policies for any rule**: UI changes persist, override labels, with revert option & clear indicators.
+- **Multi-Hostname & Multi-Zone**: Supports multiple hostnames (unique targets, zones, policies) per Docker container (indexed labels) or manual rule.
+- **State Persistence & Graceful Deletion**: Configurable grace period for Docker rule cleanup; persists all managed rules, Access App IDs, & UI overrides in state.json.
+- **Intelligent Reconciliation**: Continuously syncs Docker, manual entries, & saved state (respecting UI overrides) with Cloudflare (Tunnel, DNS, Access Apps); shows UI progress.
+- **Comprehensive Web UI (DaisyUI)**:
+  - Dashboard: Tunnel/agent status & controls.
+  - Unified Rule List: View/manage all rules (Docker & manual) with status, target, Access Policy (Cloudflare links, UI override badges), & delete options.
+  - Easy Manual Entry: Add non-Docker services via UI.
+  - Account Tools: View account tunnels/DNS.
+  - Real-time Logs & Themes: SSE activity logs & multiple UI themes.
+- **Secure & Robust**: Content Security Policy (CSP), API retries, and error reporting.
+
+## Getting Started
+
+### Important Prerequisites for Cloudflare API
+
+Before you begin, ensure you have the necessary Cloudflare API credentials and permissions.
+
+### Quick Start (Docker Compose)
+
+1. Create a `docker-compose.yml` file:
+
+```yaml
+version: "3.8"
+services:
+  dockflare:
+    image: alplat/dockflare:stable # Or :unstable for the latest features
+    container_name: dockflare
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    environment:
+      - STATE_FILE_PATH=/app/data/state.json
+      - TZ=Europe/Zurich # Set your timezone
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - dockflare_data:/app/data
+    networks:
+      - cloudflare-net
+    # Optional labels to expose DockFlare itself via DockFlare
+    # labels:
+    #   - cloudflare.tunnel.enable=true
+    #   - cloudflare.tunnel.hostname=dockflare.yourdomain.tld
+    #   - cloudflare.tunnel.service=http://dockflare:5000
+    #   - cloudflare.tunnel.access.policy=authenticate # Example: require login
+volumes:
+  dockflare_data:
+networks:
+  cloudflare-net:
+    name: cloudflare-net
+```
+
+2. Create a `.env` file by copying `env.example` and filling in your details.
+
+3. Run DockFlare:
+
+```bash
+docker compose up -d
+```
+
+4. Access the Web UI: Open `http://your-server-ip:5000` in your browser.
+
+## How It Works & Labeling Containers
+
+DockFlare listens for Docker container events.
+
+- **Label-First for Initial Setup**: By labeling your containers, DockFlare initially configures Cloudflare Tunnel ingress rules, DNS records, and associated Cloudflare Zero Trust Access Applications.
+- **UI for Dynamic Overrides**: The Web UI allows you to dynamically change Access Policies for individual services. These UI changes take precedence over container labels and are persistent.
+- **Revert Option**: You can always revert a UI-managed Access Policy back to be controlled by the container's labels via the Web UI.

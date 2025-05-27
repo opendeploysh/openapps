@@ -17,60 +17,63 @@ export const featureGroup = z.object({
   features: z.array(feature),
 })
 
-export const mdxProjectData = z.object({
-  slug: z.string(),
-  name: z.string(),
-  description: z.string(),
+export const mdxProjectData = z
+  .object({
+    filePath: z.string(),
+    slug: z.string(),
+    name: z.string(),
+    description: z.string(),
 
-  license: z.string().optional(),
-  hostingType: z.nativeEnum(HostingType).optional(),
-  pricingModel: z.nativeEnum(PricingModel).optional(),
+    license: z.string().optional(),
+    hostingType: z.nativeEnum(HostingType).optional(),
+    pricingModel: z.nativeEnum(PricingModel).optional(),
 
-  logo: z.string(),
-  heroImage: z
-    .string()
-    .optional()
-    .refine((val) => {
-      if (!val) {
-        console.warn("Project hero image not set")
+    logo: z.string(),
+    heroImage: z
+      .string()
+      .optional()
+      .refine((val) => {
+        if (!val) {
+          console.warn("Project hero image not set")
+          return true
+        }
         return true
-      }
-      return true
+      }),
+
+    category: z.string(),
+    tags: z.array(z.string()),
+
+    github: z
+      .string()
+      .regex(/^[^/]+\/[^/]+$/)
+      .optional(),
+
+    urls: z
+      .object({
+        website: z.string().url().optional(),
+        demo: z.string().url().optional(),
+        discord: z.string().url().optional(),
+        unraidApp: z.string().url().optional(),
+      })
+      .optional(),
+
+    alternatives: z.object({
+      selfHosted: z.array(z.string()).optional(),
+      nonSelfHosted: z.array(z.string()).optional(),
     }),
+    deployment: z
+      .object({
+        difficulty: z.enum(["Easy", "Medium", "Advanced"]),
+        justification: z.string(),
+      })
+      .optional(),
+    popularity: z.number().optional(),
 
-  category: z.string(),
-  tags: z.array(z.string()),
+    language: z.string().optional(),
 
-  github: z
-    .string()
-    .regex(/^[^/]+\/[^/]+$/)
-    .optional(),
-
-  urls: z
-    .object({
-      website: z.string().url().optional(),
-      demo: z.string().url().optional(),
-      discord: z.string().url().optional(),
-      unraidApp: z.string().url().optional(),
-    })
-    .optional(),
-
-  alternatives: z.object({
-    selfHosted: z.array(z.string()).optional(),
-    nonSelfHosted: z.array(z.string()).optional(),
-  }),
-  deployment: z
-    .object({
-      difficulty: z.enum(["Easy", "Medium", "Advanced"]),
-      justification: z.string(),
-    })
-    .optional(),
-  popularity: z.number().optional(),
-
-  language: z.string().optional(),
-
-  featureGroups: z.array(featureGroup).optional(),
-})
+    featureGroups: z.array(featureGroup).optional(),
+  })
+  .passthrough()
 
 export type ProjectMeta = z.infer<typeof mdxProjectData>
 

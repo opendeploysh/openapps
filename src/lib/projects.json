@@ -1,5 +1,6 @@
 [
   {
+    "filePath": "projects/analytics/aptabase.mdx",
     "slug": "aptabase",
     "name": "Aptabase",
     "description": "Aptabase is an open-source alternative to Firebase/Google Analytics, specifically built for Mobile, Desktop and Web apps with a focus on privacy and simplicity.\n",
@@ -32,6 +33,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/awstats.mdx",
     "slug": "awstats",
     "name": "AWStats",
     "description": "AWStats is a powerful, full-featured web server logfile analyzer that shows detailed web statistics including visitors, pages, hits, search engines, keywords, and more.\n",
@@ -63,6 +65,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/druid.mdx",
     "slug": "druid",
     "name": "Apache Druid",
     "description": "Apache Druid is a high performance, real-time analytics database that delivers sub-second OLAP queries on streaming and batch data at scale and under load.\n",
@@ -95,6 +98,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/eda.mdx",
     "slug": "eda",
     "name": "Enterprise Data Analytics",
     "description": "EDA is an open-source analytics and business intelligence platform focused on simplicity and ease of use, allowing users to create dashboards and reports without technical knowledge.\n",
@@ -127,6 +131,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/goatcounter.mdx",
     "slug": "goatcounter",
     "name": "GoatCounter",
     "description": "GoatCounter is an open source web analytics platform available as a hosted service or self-hosted app. It aims to offer easy to use and meaningful privacy-friendly web analytics as an alternative to Google Analytics or Matomo.\n",
@@ -158,6 +163,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/litlyx.mdx",
     "slug": "litlyx",
     "name": "Litlyx",
     "description": "Litlyx is a modern, developer-friendly, cookie-free analytics tool that provides powerful web analytics capabilities. It offers a simple setup process and can be self-hosted with Docker as an alternative to Google Analytics, Matomo, and other analytics platforms.\n",
@@ -191,6 +197,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/liwan.mdx",
     "slug": "liwan",
     "name": "Liwan",
     "description": "Liwan is a lightweight, privacy-first web analytics platform written in Rust. It provides accurate real-time analytics with a single self-contained binary and no database requirements.\n",
@@ -222,6 +229,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/matomo.mdx",
     "slug": "matomo",
     "name": "Matomo",
     "description": "Matomo (formerly Piwik) is a leading open source web analytics platform that gives you complete control over your data. It's a privacy-focused alternative to Google Analytics with comprehensive tracking and reporting capabilities.\n",
@@ -254,6 +262,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/metabase.mdx",
     "slug": "metabase",
     "name": "Metabase",
     "description": "Metabase is an easy-to-use, open source business intelligence and analytics platform that lets anyone in your organization ask questions and learn from data through a simple interface.\n",
@@ -287,6 +296,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/middleware.mdx",
     "slug": "middleware",
     "name": "Middleware",
     "description": "Middleware is an open-source tool designed to help engineering leaders measure and analyze the effectiveness of their teams using the DORA metrics.\n",
@@ -319,6 +329,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/mixpost.mdx",
     "slug": "mixpost",
     "name": "Mixpost",
     "description": "Mixpost is a self-hosted social media management platform that allows you to schedule, publish, and manage social media content. It provides features like analytics, team collaboration, media library management, and post templating without subscriptions or limits.\n",
@@ -347,6 +358,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/offen.mdx",
     "slug": "offen",
     "name": "Offen",
     "description": "Offen is a privacy-focused web analytics platform that gives users full access to their data while providing website operators with essential insights. It's lightweight, self-hosted, and emphasizes transparency and user consent.\n",
@@ -378,6 +390,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/plausible.mdx",
     "slug": "plausible",
     "name": "Plausible Analytics",
     "description": "Plausible Analytics is a lightweight, open-source and privacy-friendly alternative to Google Analytics. It doesn't use cookies, is fully compliant with GDPR/CCPA/PECR, and can be self-hosted or cloud-hosted.\n",
@@ -409,6 +422,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/posthog.mdx",
     "slug": "posthog",
     "name": "PostHog",
     "description": "PostHog is an all-in-one open source product analytics platform that provides analytics, session recording, feature flags, A/B testing, surveys and more. It can be self-hosted or used as a cloud service.\n",
@@ -440,6 +454,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/redash.mdx",
     "slug": "redash",
     "name": "Redash",
     "description": "Redash is an open source business intelligence and data visualization platform that enables anyone to query, visualize and share data from any data source. It supports multiple databases and provides interactive dashboards, scheduled reports and alerts.\n",
@@ -471,6 +486,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/rudderstack.mdx",
     "slug": "rudderstack",
     "name": "RudderStack",
     "description": "RudderStack is an open source Customer Data Platform (CDP) that provides data pipelines to collect data from applications, websites and SaaS platforms, then activate it in your warehouse and business tools.\n",
@@ -502,6 +518,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/shynet.mdx",
     "slug": "shynet",
     "name": "Shynet",
     "description": "Shynet is a modern, privacy-friendly and cookie-free web analytics platform that provides detailed insights without compromising visitor privacy. It works without JavaScript and can be self-hosted.\n",
@@ -533,6 +550,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/snowflake.mdx",
     "slug": "snowflake",
     "name": "Snowflake",
     "description": "Snowflake is a cloud-based data warehousing platform that enables data storage, processing, and analytics at scale. It provides a fully managed service with features like data sharing, time travel, and automatic scaling.\n",
@@ -659,6 +677,7 @@
     ]
   },
   {
+    "filePath": "projects/analytics/superset.mdx",
     "slug": "superset",
     "name": "Apache Superset",
     "description": "Apache Superset is a modern, enterprise-ready business intelligence web application that enables data exploration and visualization through an intuitive interface. It supports a wide range of databases and provides powerful SQL querying capabilities.\n",
@@ -690,6 +709,7 @@
     }
   },
   {
+    "filePath": "projects/analytics/umami.mdx",
     "slug": "umami",
     "name": "Umami",
     "description": "Umami is a simple, fast, privacy-focused alternative to Google Analytics. It provides website analytics with a clean interface and without compromising visitor privacy.\n",
@@ -721,6 +741,7 @@
     }
   },
   {
+    "filePath": "projects/archiving/archivebox.mdx",
     "slug": "archivebox",
     "name": "ArchiveBox",
     "description": "ArchiveBox is a self-hosted web archiving solution that lets you preserve content from websites in multiple formats like HTML, PDF, screenshots, and more. It supports importing from browser history, bookmarks, RSS feeds, and other sources.\n",
@@ -751,6 +772,7 @@
     }
   },
   {
+    "filePath": "projects/archiving/archivesspace.mdx",
     "slug": "archivesspace",
     "name": "ArchivesSpace",
     "description": "ArchivesSpace is an open source archives information management system built for managing and providing web access to archives, manuscripts and digital objects.\n",
@@ -781,6 +803,7 @@
     }
   },
   {
+    "filePath": "projects/archiving/bitmagnet.mdx",
     "slug": "bitmagnet",
     "name": "BitMagnet",
     "description": "BitMagnet is a self-hosted BitTorrent indexer, DHT crawler, and content classifier with a modern web UI, GraphQL API and seamless integration with the Servarr stack.\n",
@@ -812,6 +835,7 @@
     }
   },
   {
+    "filePath": "projects/archiving/ckan.mdx",
     "slug": "ckan",
     "name": "CKAN",
     "description": "CKAN is an open source data management system that makes it easy to publish, share and work with data. It powers many government and organizational data portals with features for cataloging, storing and accessing datasets.\n",
@@ -843,6 +867,7 @@
     }
   },
   {
+    "filePath": "projects/archiving/omekas.mdx",
     "slug": "omekas",
     "name": "Omeka S",
     "description": "Omeka S is a web publication system for universities, galleries, libraries, archives, and museums. It enables creating networks of independently curated exhibits sharing collaborative pools of items, media, and metadata.\n",
@@ -874,6 +899,7 @@
     }
   },
   {
+    "filePath": "projects/archiving/wallabag.mdx",
     "slug": "wallabag",
     "name": "wallabag",
     "description": "wallabag is a self-hosted web application for saving web pages to read later. It extracts and stores content without distractions like ads, allowing offline reading across devices.\n",
@@ -905,6 +931,7 @@
     }
   },
   {
+    "filePath": "projects/archiving/wayback.mdx",
     "slug": "wayback",
     "name": "Wayback",
     "description": "An archiving tool with an IM-style interface that prioritizes privacy and accessibility, integrated with various archival services including Internet Archive, archive.today, Ghostarchive, IPFS, Telegraph, and file systems.\n",
@@ -936,6 +963,7 @@
     }
   },
   {
+    "filePath": "projects/auth/authelia.mdx",
     "slug": "authelia",
     "name": "Authelia",
     "description": "Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion for reverse proxies.\n",
@@ -1042,6 +1070,7 @@
     ]
   },
   {
+    "filePath": "projects/auth/authentik.mdx",
     "slug": "authentik",
     "name": "Authentik",
     "description": "Authentik is an open-source Identity Provider focused on flexibility and versatility. It supports multiple authentication protocols and can serve as a self-hosted alternative to commercial solutions like Okta, Auth0, and Entra ID.\n",
@@ -1158,6 +1187,7 @@
     ]
   },
   {
+    "filePath": "projects/auth/casdoor.mdx",
     "slug": "casdoor",
     "name": "Casdoor",
     "description": "Casdoor is an open-source Identity and Access Management (IAM) / Single-Sign-On (SSO) platform with a web UI supporting multiple authentication protocols including OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, and more.\n",
@@ -1189,6 +1219,7 @@
     }
   },
   {
+    "filePath": "projects/auth/fusionauth.mdx",
     "slug": "fusionauth",
     "name": "FusionAuth",
     "description": "FusionAuth is a modern customer identity and access management (CIAM) platform that provides authentication, authorization, and user management capabilities. It offers flexible deployment options including self-hosted and cloud-hosted solutions.\n",
@@ -1221,6 +1252,7 @@
     }
   },
   {
+    "filePath": "projects/auth/keycloak.mdx",
     "slug": "keycloak",
     "name": "Keycloak",
     "description": "Keycloak is an open source identity and access management solution providing features like single sign-on, identity brokering and social login, user federation, strong authentication, and fine-grained authorization.\n",
@@ -1435,6 +1467,7 @@
     ]
   },
   {
+    "filePath": "projects/auth/logto.mdx",
     "slug": "logto",
     "name": "Logto",
     "description": "Logto is a modern, open-source authentication infrastructure focused on SaaS and AI applications. It provides multi-tenancy, enterprise SSO, and RBAC capabilities while simplifying OIDC and OAuth 2.1 implementation.\n",
@@ -1596,6 +1629,7 @@
     ]
   },
   {
+    "filePath": "projects/auth/pocket-id.mdx",
     "slug": "pocket-id",
     "name": "Pocket ID",
     "description": "Pocket ID is a simple OIDC provider focused on passkey authentication, allowing users to securely access services without passwords. It provides a streamlined alternative to more complex identity providers.\n",
@@ -1628,6 +1662,7 @@
     }
   },
   {
+    "filePath": "projects/auth/zitadel.mdx",
     "slug": "zitadel",
     "name": "ZITADEL",
     "description": "ZITADEL is an open-source identity and access management platform with built-in multi-tenancy, providing authentication, authorization, and user management capabilities. It offers both self-hosted and cloud options with features like SSO, OIDC, SAML, and passkey support.\n",
@@ -1662,6 +1697,7 @@
     }
   },
   {
+    "filePath": "projects/automation/activepieces.mdx",
     "slug": "activepieces",
     "name": "Activepieces",
     "description": "Activepieces is an open source alternative to Zapier, providing AI-powered workflow automation with a type-safe pieces framework written in TypeScript.\n",
@@ -1692,6 +1728,7 @@
     }
   },
   {
+    "filePath": "projects/automation/airflow.mdx",
     "slug": "airflow",
     "name": "Apache Airflow",
     "description": "Apache Airflow is a platform to programmatically author, schedule, and monitor workflows. When workflows are defined as code, they become more maintainable, versionable, testable, and collaborative.\n",
@@ -1723,6 +1760,7 @@
     }
   },
   {
+    "filePath": "projects/automation/automatisch.mdx",
     "slug": "automatisch",
     "name": "Automatisch",
     "description": "Automatisch is an open source business automation tool that lets you connect different services like Twitter, Slack, and more to automate business processes without any programming knowledge.\n",
@@ -1753,6 +1791,7 @@
     }
   },
   {
+    "filePath": "projects/automation/beehive.mdx",
     "slug": "beehive",
     "name": "Beehive",
     "description": "Beehive is an event and agent system that allows you to create automated tasks triggered by events and filters. It provides a modular architecture with support for Twitter, Email, IRC, RSS and many other integrations.\n",
@@ -1786,6 +1825,7 @@
     "language": "Go"
   },
   {
+    "filePath": "projects/automation/changedetection.mdx",
     "slug": "changedetection",
     "name": "ChangeDetection",
     "description": "An open source website change detection, monitoring and notification service. Monitor webpages for changes including text content, visual changes, price drops and more.\n",
@@ -1815,6 +1855,7 @@
     }
   },
   {
+    "filePath": "projects/automation/chiefonboarding.mdx",
     "slug": "chiefonboarding",
     "name": "ChiefOnboarding",
     "description": "ChiefOnboarding is a free and open source employee onboarding platform that lets you onboard new hires through Slack or a web dashboard with automated provisioning, pre-boarding, and structured onboarding sequences.\n",
@@ -1847,6 +1888,7 @@
     "language": "Python"
   },
   {
+    "filePath": "projects/automation/dittofeed.mdx",
     "slug": "dittofeed",
     "name": "Dittofeed",
     "description": "Dittofeed is an open source customer engagement platform for automating transactional and marketing messages across email, SMS, mobile push, WhatsApp, Slack and other channels.\n",
@@ -1879,6 +1921,7 @@
     }
   },
   {
+    "filePath": "projects/automation/flowise.mdx",
     "slug": "flowise",
     "name": "Flowise",
     "description": "Flowise is an open-source no-code platform for building AI agents and workflows visually, with support for LangChain, multiple LLM integrations, and customizable components.\n",
@@ -1916,6 +1959,7 @@
     }
   },
   {
+    "filePath": "projects/automation/healthchecks.mdx",
     "slug": "healthchecks",
     "name": "Healthchecks",
     "description": "Healthchecks is an open source cron job monitoring service that listens for HTTP requests and email messages from your scheduled tasks and sends alerts when jobs don't check in on time.\n",
@@ -1948,6 +1992,7 @@
     "language": "Python"
   },
   {
+    "filePath": "projects/automation/hrconvert2.mdx",
     "slug": "hrconvert2",
     "name": "HRConvert2",
     "description": "HRConvert2 is a self-hosted file conversion server and sharing tool that supports 445 file formats with drag-and-drop functionality, OCR capabilities, virus scanning, and multiple language support.\n",
@@ -1977,6 +2022,7 @@
     "language": "PHP"
   },
   {
+    "filePath": "projects/automation/huginn.mdx",
     "slug": "huginn",
     "name": "Huginn",
     "description": "Huginn is an open source system for building agents that perform automated tasks online. It can monitor websites, watch for events, and take actions on your behalf through a directed graph of agents.\n",
@@ -2009,6 +2055,7 @@
     "language": "Ruby"
   },
   {
+    "filePath": "projects/automation/kestra.mdx",
     "slug": "kestra",
     "name": "Kestra",
     "description": "Kestra is an open source event-driven orchestration platform that makes both scheduled and event-driven workflows easy through a declarative YAML interface and intuitive UI.\n",
@@ -2043,6 +2090,7 @@
     "language": "Java"
   },
   {
+    "filePath": "projects/automation/leon.mdx",
     "slug": "leon",
     "name": "Leon",
     "description": "Leon is an open source personal assistant that can live on your server. It provides a customizable skill system, offline speech capabilities, and privacy-focused automation through both voice and text interfaces.\n",
@@ -2075,6 +2123,7 @@
     "language": "TypeScript"
   },
   {
+    "filePath": "projects/automation/mylar3.mdx",
     "slug": "mylar3",
     "name": "Mylar3",
     "description": "Mylar3 is an automated Comic Book (cbr/cbz) downloader program that monitors and downloads comics from NZB and torrent sources, with support for story arcs, metadata tagging, and library management.\n",
@@ -2101,6 +2150,7 @@
     "language": "Python"
   },
   {
+    "filePath": "projects/automation/n8n.mdx",
     "slug": "n8n",
     "name": "n8n",
     "description": "n8n is a fair-code workflow automation platform that combines visual building with custom code capabilities, offering 400+ integrations, native AI features, and flexible deployment options.\n",
@@ -2138,6 +2188,7 @@
     }
   },
   {
+    "filePath": "projects/automation/node-red.mdx",
     "slug": "node-red",
     "name": "Node-RED",
     "description": "Node-RED is a low-code programming tool for event-driven applications that enables you to wire together hardware devices, APIs and online services using a visual flow-based development environment.\n",
@@ -2170,6 +2221,7 @@
     "language": "JavaScript"
   },
   {
+    "filePath": "projects/automation/olivetin.mdx",
     "slug": "olivetin",
     "name": "OliveTin",
     "description": "OliveTin provides a simple web interface for executing predefined shell commands safely, making it easy to give non-technical users and admins controlled access to system operations.\n",
@@ -2197,6 +2249,7 @@
     "language": "Go"
   },
   {
+    "filePath": "projects/automation/prefect.mdx",
     "slug": "prefect",
     "name": "Prefect",
     "description": "Prefect is a modern workflow orchestration framework for Python that enables data teams to build, schedule and monitor resilient data pipelines with features like retries, caching, and event-based automation.\n",
@@ -2228,6 +2281,7 @@
     }
   },
   {
+    "filePath": "projects/automation/pyload.mdx",
     "slug": "pyload",
     "name": "pyLoad",
     "description": "pyLoad is a free and open source download manager written in Python that supports multiple file hosts, download automation, and a web interface for remote management.\n",
@@ -2256,6 +2310,7 @@
     "language": "Python"
   },
   {
+    "filePath": "projects/automation/utask.mdx",
     "slug": "utask",
     "name": "µTask",
     "description": "µTask is a powerful automation engine that allows you to model and execute business processes using YAML templates, providing secure data encryption, access control, and extensibility through custom Golang plugins.\n",
@@ -2288,6 +2343,7 @@
     "language": "Go"
   },
   {
+    "filePath": "projects/automation/wilmerai.mdx",
     "slug": "wilmerai",
     "name": "WilmerAI",
     "description": "WilmerAI is an open source LLM routing and workflow automation platform that enables prompts to be routed to specialized workflows and allows multiple LLMs to work together to generate responses.\n",
@@ -2320,6 +2376,7 @@
     "language": "Python"
   },
   {
+    "filePath": "projects/automation/windmill.mdx",
     "slug": "windmill",
     "name": "Windmill",
     "description": "Windmill is an open-source developer platform for building internal tools, automating tasks, and creating workflows. It provides a unified interface for APIs, background jobs, and UIs with support for multiple programming languages.\n",
@@ -2352,6 +2409,7 @@
     "language": "Rust"
   },
   {
+    "filePath": "projects/crm/atomic-crm.mdx",
     "slug": "atomic-crm",
     "name": "Atomic CRM",
     "description": "Atomic CRM is a full-featured open-source CRM built with React, react-admin, and Supabase, offering contact management, task tracking, email integration, deal pipeline visualization and extensive customization capabilities.\n",
@@ -2481,6 +2539,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/corteza.mdx",
     "slug": "corteza",
     "name": "Corteza",
     "description": "Corteza is an open source low-code platform that enables building CRM, business process and structured data applications with workflow automation capabilities and extensive integration options.\n",
@@ -2528,6 +2587,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/django-crm.mdx",
     "slug": "django-crm",
     "name": "Django-CRM",
     "description": "Django-CRM is an open-source CRM solution built on Django framework, providing enterprise-level features like lead management, task tracking, email marketing, and sales analytics while maintaining simplicity in development and customization.\n",
@@ -2574,6 +2634,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/dolibarr.mdx",
     "slug": "dolibarr",
     "name": "Dolibarr",
     "description": "Dolibarr ERP & CRM is a modern open source software package that helps manage business activities like contacts, invoices, orders, stocks, calendar, HR and more. It's designed for small to large companies and can be used standalone or as a web application.\n",
@@ -2704,6 +2765,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/erpnext.mdx",
     "slug": "erpnext",
     "name": "ERPNext",
     "description": "ERPNext is a comprehensive, free, and open-source Enterprise Resource Planning (ERP) system that includes CRM, accounting, HR, manufacturing and more. It provides a complete business management solution used by thousands of companies worldwide.\n",
@@ -2828,6 +2890,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/espocrm.mdx",
     "slug": "espocrm",
     "name": "EspoCRM",
     "description": "EspoCRM is an open-source CRM platform designed to help organizations build and maintain strong customer relationships, providing tools for managing leads, contacts, sales opportunities, marketing campaigns, and support cases.\n",
@@ -2998,6 +3061,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/gauzy.mdx",
     "slug": "gauzy",
     "name": "Ever Gauzy",
     "description": "Ever Gauzy is an open-source business management platform that combines ERP, CRM, HRM, and project management capabilities. It offers features like time tracking, employee management, project tracking, and financial management tools.\n",
@@ -3105,6 +3169,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/krayin.mdx",
     "slug": "krayin",
     "name": "Krayin CRM",
     "description": "Krayin CRM is an open-source Laravel-based CRM framework designed for SMEs and enterprises, offering complete customer lifecycle management with features like lead generation, custom attributes, and email integration.\n",
@@ -3223,6 +3288,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/monica.mdx",
     "slug": "monica",
     "name": "Monica",
     "description": "Monica is an open-source personal relationship management system (PRM) that helps you document your life and organize interactions with family and friends, offering features like contact management, reminders, diary entries, and document storage.\n",
@@ -3343,6 +3409,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/odoo.mdx",
     "slug": "odoo",
     "name": "Odoo",
     "description": "Odoo is a comprehensive suite of open source business applications including CRM, Website Builder, eCommerce, Project Management, Accounting, Point of Sale, HR and more. The apps can be used standalone or integrated into a complete ERP system.\n",
@@ -3467,6 +3534,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/suitecrm.mdx",
     "slug": "suitecrm",
     "name": "SuiteCRM",
     "description": "SuiteCRM is an award-winning open-source enterprise CRM platform that provides comprehensive customer relationship management capabilities including sales automation, marketing campaigns, support cases, project management and more.\n",
@@ -3619,6 +3687,7 @@
     ]
   },
   {
+    "filePath": "projects/crm/twenty.mdx",
     "slug": "twenty",
     "name": "Twenty",
     "description": "Twenty is a modern, open-source CRM platform focused on providing a fresh user experience with features like customer tracking, opportunity management, and task automation while maintaining complete data ownership.\n",
@@ -3762,6 +3831,7 @@
     ]
   },
   {
+    "filePath": "projects/database/bigtable.mdx",
     "slug": "bigtable",
     "name": "Cloud Bigtable",
     "description": "Cloud Bigtable is Google's fully managed, scalable NoSQL database service designed for large analytical and operational workloads. It powers many Google services including Search, Analytics, Maps and Gmail.\n",
@@ -3893,6 +3963,7 @@
     ]
   },
   {
+    "filePath": "projects/database/clickhouse.mdx",
     "slug": "clickhouse",
     "name": "ClickHouse",
     "description": "ClickHouse is an open-source column-oriented database management system that allows generating analytical data reports in real-time. It provides high performance for analytical queries on large datasets.\n",
@@ -4028,6 +4099,7 @@
     ]
   },
   {
+    "filePath": "projects/database/hbase.mdx",
     "slug": "hbase",
     "name": "Apache HBase",
     "description": "Apache HBase is an open-source, distributed, versioned, column-oriented database modeled after Google's Bigtable. It provides Bigtable-like capabilities on top of Apache Hadoop for handling massive datasets with billions of rows and millions of columns.\n",
@@ -4165,6 +4237,7 @@
     ]
   },
   {
+    "filePath": "projects/database/scalladb.mdx",
     "slug": "scylladb",
     "name": "ScyllaDB",
     "description": "ScyllaDB is a high-performance NoSQL database that is API-compatible with Apache Cassandra and Amazon DynamoDB. It uses a shared-nothing approach to increase throughput and storage capacity, delivering order-of-magnitude performance improvements.\n",
@@ -4282,6 +4355,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/adminer.mdx",
     "slug": "adminer",
     "name": "Adminer",
     "description": "Adminer is a full-featured database management tool written in PHP. It consists of a single file ready to deploy to the target server and supports multiple database systems including MySQL, PostgreSQL, SQLite, and more.\n",
@@ -4394,6 +4468,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/azimutt.mdx",
     "slug": "azimutt",
     "name": "Azimutt",
     "description": "Azimutt is a next-generation ERD tool for exploring, documenting and analyzing database schemas. It provides modern visualization capabilities for handling large, complex database structures with features for schema design, data exploration, documentation and analysis.\n",
@@ -4520,6 +4595,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/baserow.mdx",
     "slug": "baserow",
     "name": "Baserow",
     "description": "Baserow is an open-source no-code database tool and Airtable alternative that allows users to create online databases without technical experience. It combines spreadsheet ease-of-use with powerful data organization capabilities.\n",
@@ -4639,6 +4715,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/bytebase.mdx",
     "slug": "bytebase",
     "name": "Bytebase",
     "description": "Bytebase is a Database CI/CD and DevSecOps solution that helps teams manage database changes, access control, and governance. It provides a web-based interface for developers and DBAs to collaborate on database development lifecycle management.\n",
@@ -4752,6 +4829,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/chartbrew.mdx",
     "slug": "chartbrew",
     "name": "Chartbrew",
     "description": "Chartbrew is an open-source web platform for creating live reporting dashboards by connecting directly to databases and APIs. It provides a chart builder, editable dashboards, embeddable charts, query editor, and team collaboration features.\n",
@@ -4870,6 +4948,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/chartdb.mdx",
     "slug": "chartdb",
     "name": "ChartDB",
     "description": "ChartDB is an open-source web-based database diagramming editor that allows users to instantly visualize database schemas through a single \"Smart Query\". It provides AI-powered schema export, interactive editing, and supports multiple database systems.\n",
@@ -4988,6 +5067,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/cloudbeaver.mdx",
     "slug": "cloudbeaver",
     "name": "CloudBeaver",
     "description": "CloudBeaver is a web-based database management tool that provides a rich interface for working with databases. Built on DBeaver's core, it offers database administration, query execution, and data visualization through a modern web interface.\n",
@@ -5106,6 +5186,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/databunker.mdx",
     "slug": "databunker",
     "name": "Databunker",
     "description": "Databunker is a self-hosted, GDPR compliant, secure database for storing personal records (PII/PHI/KYC). It provides encryption, tokenization, and privacy controls while offering a simple REST API for integration.\n",
@@ -5217,6 +5298,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/datasette.mdx",
     "slug": "datasette",
     "name": "Datasette",
     "description": "Datasette is a tool for exploring and publishing data. It helps people take data of any shape or size and publish that as an interactive, explorable website and accompanying API.\n",
@@ -5327,6 +5409,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/evidence.mdx",
     "slug": "evidence",
     "name": "Evidence",
     "description": "Evidence is an open-source business intelligence tool that generates interactive data visualizations and reports using SQL queries and markdown files. It offers a code-based alternative to traditional drag-and-drop BI tools.\n",
@@ -5439,6 +5522,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/mathesar.mdx",
     "slug": "mathesar",
     "name": "Mathesar",
     "description": "Mathesar is a web application that provides an intuitive spreadsheet-like interface for PostgreSQL databases, allowing users of all technical skill levels to view, edit, query, and collaborate on data directly. It's self-hosted and uses native Postgres access control.\n",
@@ -5550,6 +5634,7 @@
     ]
   },
   {
+    "filePath": "projects/database-managment/nocodb.mdx",
     "slug": "nocodb",
     "name": "NocoDB",
     "description": "NocoDB is an open source no-code platform that turns any database into a smart spreadsheet. It provides an Airtable-like interface with powerful features including role-based access control, REST APIs, and automation workflows.\n",
@@ -5664,6 +5749,7 @@
     ]
   },
   {
+    "filePath": "projects/document-management/docking.mdx",
     "slug": "docking",
     "name": "DocKing",
     "description": "DocKing is a document management service/microservice that handles templates and renders them in PDF format, providing a centralized solution for PDF generation and template management.\n",
@@ -5694,6 +5780,7 @@
     }
   },
   {
+    "filePath": "projects/document-management/docspell.mdx",
     "slug": "docspell",
     "name": "Docspell",
     "description": "Docspell is a personal document management system that helps organize files from scanners, emails and other sources, featuring machine learning powered metadata suggestions and OCR processing.\n",
@@ -5725,6 +5812,7 @@
     }
   },
   {
+    "filePath": "projects/document-management/documenso.mdx",
     "slug": "documenso",
     "name": "Documenso",
     "description": "Documenso is an open-source document signing tool that enables secure digital signatures while maintaining privacy and control through self-hosting capabilities.\n",
@@ -5755,6 +5843,7 @@
     }
   },
   {
+    "filePath": "projects/document-management/docuseal.mdx",
     "slug": "docuseal",
     "name": "DocuSeal",
     "description": "DocuSeal is an open source document filling and signing platform that provides secure and efficient digital document processing, allowing users to create PDF forms that can be filled and signed online with an easy-to-use, mobile-optimized interface.\n",
@@ -5884,6 +5973,7 @@
     ]
   },
   {
+    "filePath": "projects/document-management/everydocs.mdx",
     "slug": "everydocs",
     "name": "EveryDocs",
     "description": "EveryDocs is a simple Document Management System (DMS) for private use, offering basic functionality to organize documents digitally with features like folder organization, full-text search, and encrypted storage.\n",
@@ -5915,6 +6005,7 @@
     }
   },
   {
+    "filePath": "projects/document-management/gotenberg.mdx",
     "slug": "gotenberg",
     "name": "Gotenberg",
     "description": "Gotenberg is a containerized API that provides seamless PDF conversion capabilities, allowing developers to convert various document formats like HTML, Markdown, Word, and Excel into PDFs using tools like Chromium and LibreOffice.\n",
@@ -6046,6 +6137,7 @@
     ]
   },
   {
+    "filePath": "projects/document-management/i-librarian.mdx",
     "slug": "i-librarian",
     "name": "I, Librarian",
     "description": "I, Librarian is an open-source document management system focused on research and academic papers, featuring PDF management, metadata extraction, and integration with academic databases like PubMed, NASA, IEEE, and arXiv.\n",
@@ -6158,6 +6250,7 @@
     ]
   },
   {
+    "filePath": "projects/document-management/mayan-edms.mdx",
     "slug": "mayan-edms",
     "name": "Mayan EDMS",
     "description": "Mayan EDMS is an open-source document management system focused on storing, organizing and categorizing files while preserving business context, featuring OCR, previews, digital signatures, workflows, and a REST API.\n",
@@ -6270,6 +6363,7 @@
     ]
   },
   {
+    "filePath": "projects/document-management/opensign.mdx",
     "slug": "opensign",
     "name": "OpenSign",
     "description": "OpenSign is an open-source document e-signing solution that provides a secure and reliable alternative to commercial e-signature platforms like DocuSign, offering features like secure PDF signing, multi-signer support, templates, and audit trails.\n",
@@ -6381,6 +6475,125 @@
     ]
   },
   {
+    "filePath": "projects/document-management/paperless-ngx.mdx",
+    "slug": "paperless-ngx",
+    "name": "Paperless-ngx",
+    "description": "Paperless-ngx is a document management system that transforms physical documents into a searchable online archive. It provides OCR scanning, indexing, and archival features to help reduce paper storage while maintaining document accessibility.\n",
+    "license": "GPL-3.0",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/99562962?s=64&v=4",
+    "heroImage": "https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docs/assets/screenshots/documents-smallcards-dark.png",
+    "category": "document-management",
+    "tags": [
+      "document-management",
+      "ocr",
+      "archiving",
+      "scanning"
+    ],
+    "github": "paperless-ngx/paperless-ngx",
+    "urls": {
+      "website": "https://docs.paperless-ngx.com"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": []
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Docker setup but has good documentation and installation script."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Document digitization and management"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal and small business document archival"
+          },
+          {
+            "name": "Architecture",
+            "value": "Django + Angular"
+          }
+        ]
+      },
+      {
+        "name": "Document Processing",
+        "features": [
+          {
+            "name": "OCR scanning"
+          },
+          {
+            "name": "Full-text search"
+          },
+          {
+            "name": "Automated tagging"
+          },
+          {
+            "name": "Document classification"
+          },
+          {
+            "name": "Metadata extraction"
+          },
+          {
+            "name": "Version control"
+          }
+        ]
+      },
+      {
+        "name": "Organization",
+        "features": [
+          {
+            "name": "Custom tags"
+          },
+          {
+            "name": "Document types"
+          },
+          {
+            "name": "Correspondent tracking"
+          },
+          {
+            "name": "File categorization"
+          },
+          {
+            "name": "Smart filtering"
+          },
+          {
+            "name": "Bulk operations"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Email processing"
+          },
+          {
+            "name": "IMAP monitoring"
+          },
+          {
+            "name": "Multi-user support"
+          },
+          {
+            "name": "Mobile friendly"
+          },
+          {
+            "name": "Backup support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/document-management/papermerge.mdx",
     "slug": "papermerge",
     "name": "Papermerge",
     "description": "Papermerge is an open-source document management system focused on scanned documents and digital archives, featuring OCR text extraction, full-text search, document versioning, and metadata management with a desktop-like web interface.\n",
@@ -6494,6 +6707,7 @@
     ]
   },
   {
+    "filePath": "projects/document-management/pdfding.mdx",
     "slug": "pdfding",
     "name": "PdfDing",
     "description": "PdfDing is a self-hosted PDF manager, viewer and editor offering seamless reading experience across devices, with features like multi-level tagging, annotations, highlighting, and progress tracking.\n",
@@ -6605,6 +6819,7 @@
     ]
   },
   {
+    "filePath": "projects/document-management/stirlingpdf.mdx",
     "slug": "stirling-pdf",
     "name": "Stirling PDF",
     "description": "Stirling PDF is a powerful open-source web-based PDF manipulation tool that enables secure local hosting and provides 50+ operations including splitting, merging, converting, and more.\n",
@@ -6636,6 +6851,7 @@
     }
   },
   {
+    "filePath": "projects/document-management/teedy.mdx",
     "slug": "teedy",
     "name": "Teedy",
     "description": "Teedy is a lightweight document management system for individuals and businesses, featuring OCR, full-text search, metadata management, workflow capabilities, and file versioning with a responsive interface.\n",
@@ -6748,6 +6964,7 @@
     ]
   },
   {
+    "filePath": "projects/email-lists/keila.mdx",
     "slug": "keila",
     "name": "Keila",
     "description": "Keila is an open source newsletter tool and Mailchimp alternative that allows you to easily send campaigns and create sign-up forms, with support for multiple email delivery providers.\n",
@@ -6773,6 +6990,7 @@
     }
   },
   {
+    "filePath": "projects/email-lists/listmonk.mdx",
     "slug": "listmonk",
     "name": "Listmonk",
     "description": "Listmonk is a high-performance, self-hosted newsletter and mailing list manager with a modern dashboard interface. It's distributed as a single binary and uses PostgreSQL for data storage.\n",
@@ -6799,6 +7017,7 @@
     }
   },
   {
+    "filePath": "projects/email-lists/mautic.mdx",
     "slug": "mautic",
     "name": "Mautic",
     "description": "Mautic is an open source marketing automation platform that helps businesses automate their marketing campaigns, track leads, send emails, and manage customer relationships through a modern web interface.\n",
@@ -6825,6 +7044,7 @@
     }
   },
   {
+    "filePath": "projects/email-lists/phplist.mdx",
     "slug": "phplist",
     "name": "phpList",
     "description": "Fully functional open source email marketing manager for creating, sending, integrating, and analyzing email campaigns and newsletters. Used in 95+ countries and available in 20 languages.\n",
@@ -6850,6 +7070,7 @@
     }
   },
   {
+    "filePath": "projects/email-lists/sympa.mdx",
     "slug": "sympa",
     "name": "Sympa",
     "description": "Sympa is an open source electronic mailing list manager that automates list management functions like subscriptions, moderation, and archives. Optimized for large lists with efficient message delivery.\n",
@@ -6875,6 +7096,7 @@
     }
   },
   {
+    "filePath": "projects/genealogy/genea.mdx",
     "slug": "genea",
     "name": "Genea",
     "description": "Genea is a serverless web application for visually building and editing family trees online. It works with standard GEDCOM genealogy data format and requires no backend server.\n",
@@ -6900,6 +7122,7 @@
     }
   },
   {
+    "filePath": "projects/genealogy/geneweb.mdx",
     "slug": "geneweb",
     "name": "GeneWeb",
     "description": "GeneWeb is a robust genealogy software with a web interface that allows users to create, manage and visualize family trees. It supports GEDCOM format and can be used both offline or as a web service.\n",
@@ -6925,6 +7148,7 @@
     }
   },
   {
+    "filePath": "projects/genealogy/gramps.mdx",
     "slug": "gramps",
     "name": "Gramps Web",
     "description": "Gramps Web is a modern web application for browsing and collaboratively editing genealogical databases. It's fully interoperable with the Gramps desktop application and brings family history to the web.\n",
@@ -6954,6 +7178,7 @@
     }
   },
   {
+    "filePath": "projects/genealogy/webtrees.mdx",
     "slug": "webtrees",
     "name": "webtrees",
     "description": "webtrees is a leading online collaborative genealogy application that works with standard GEDCOM files, offering full editing capabilities, privacy controls, and media support for photos and documents.\n",
@@ -6982,6 +7207,7 @@
     }
   },
   {
+    "filePath": "projects/knowledge-management/outline.mdx",
     "slug": "outline",
     "name": "Outline",
     "description": "Outline is a fast, collaborative knowledge base for growing teams that's beautiful, real-time collaborative, feature-packed, and markdown compatible. Built using React and Node.js, it offers a modern approach to team documentation.\n",
@@ -7106,6 +7332,124 @@
     ]
   },
   {
+    "filePath": "projects/miscellaneous/dockflare.mdx",
+    "slug": "dockflare",
+    "name": "DockFlare",
+    "description": "DockFlare simplifies Cloudflare Tunnel and Zero Trust Access policy management using Docker labels for automated configuration. It provides a web UI for service definitions and policy overrides, enabling secure access to both Docker and non-Docker applications.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/175474883?s=64&v=4",
+    "category": "security",
+    "tags": [
+      "networking",
+      "security",
+      "automation"
+    ],
+    "github": "chrispybacon-dev/dockflare",
+    "urls": {
+      "website": "https://github.com/ChrispyBacon-dev/DockFlare/wiki"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": [
+        "cloudflare-tunnel"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Docker setup and Cloudflare API configuration but has good documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Cloudflare Tunnel & Access Management"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Docker & non-Docker service exposure"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Flask + Docker"
+          }
+        ]
+      },
+      {
+        "name": "Tunnel Management",
+        "features": [
+          {
+            "name": "Automated tunnel creation"
+          },
+          {
+            "name": "Docker label configuration"
+          },
+          {
+            "name": "Multi-hostname support"
+          },
+          {
+            "name": "Multi-zone support"
+          },
+          {
+            "name": "DNS management"
+          },
+          {
+            "name": "State persistence"
+          }
+        ]
+      },
+      {
+        "name": "Access Control",
+        "features": [
+          {
+            "name": "Zero Trust policies"
+          },
+          {
+            "name": "Policy overrides"
+          },
+          {
+            "name": "Access application management"
+          },
+          {
+            "name": "Authentication rules"
+          },
+          {
+            "name": "UI-driven controls"
+          },
+          {
+            "name": "Label-based configuration"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Docker integration"
+          },
+          {
+            "name": "Cloudflare API"
+          },
+          {
+            "name": "Web UI dashboard"
+          },
+          {
+            "name": "Real-time logging"
+          },
+          {
+            "name": "Health monitoring"
+          },
+          {
+            "name": "Theme customization"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/miscellaneous/hortusfox.mdx",
     "slug": "hortusfox",
     "name": "HortusFox",
     "description": "HortusFox is a self-hosted collaborative plant management system for tracking and managing plants across multiple locations. It provides features like task management, inventory tracking, weather monitoring, and collaborative tools.\n",
@@ -7113,6 +7457,7 @@
     "hostingType": "Self-Hosted",
     "pricingModel": "Free",
     "logo": "https://www.hortusfox.com/img/logo.png",
+    "heroImage": "https://github.com/danielbrendel/hortusfox-web/raw/main/app/resources/gfx/screenshot-desktop.png",
     "category": "miscellaneous",
     "tags": [
       "plants",
@@ -7130,7 +7475,7 @@
     },
     "deployment": {
       "difficulty": "Medium",
-      "justification": "Requires PHP environment and MariaDB database setup, but has good documentation and Docker support."
+      "justification": "Requires MariaDB database setup, but has good documentation and Docker support."
     },
     "featureGroups": [
       {
@@ -7222,6 +7567,7 @@
     ]
   },
   {
+    "filePath": "projects/money/actual.mdx",
     "slug": "actual",
     "name": "Actual",
     "description": "Actual is a local-first personal finance tool that provides envelope budgeting capabilities with synchronization between devices, offering complete data ownership and privacy through self-hosting options.\n",
@@ -7331,6 +7677,7 @@
     ]
   },
   {
+    "filePath": "projects/money/bigcapital.mdx",
     "slug": "bigcapital",
     "name": "BigCapital",
     "description": "BigCapital is an open-source accounting and inventory software that helps businesses manage their finances, automate accounting processes, and generate intelligent financial reports for better decision-making.\n",
@@ -7440,6 +7787,7 @@
     ]
   },
   {
+    "filePath": "projects/money/bitcart.mdx",
     "slug": "bitcart",
     "name": "Bitcart",
     "description": "Bitcart is an open-source self-hosted payment processor supporting multiple cryptocurrencies including BTC, LTC, BCH, XMR, ETH, TRX, and USDT, providing merchants with a flexible and secure payment gateway solution.\n",
@@ -7551,6 +7899,7 @@
     ]
   },
   {
+    "filePath": "projects/money/btcpayserver.mdx",
     "slug": "btcpayserver",
     "name": "BTCPay Server",
     "description": "BTCPay Server is a free and open-source Bitcoin payment processor that enables direct peer-to-peer transactions without fees or intermediaries, offering enhanced privacy, security and self-hosting capabilities.\n",
@@ -7662,6 +8011,7 @@
     ]
   },
   {
+    "filePath": "projects/money/depay.mdx",
     "slug": "depay",
     "name": "DePay",
     "description": "DePay is an open-source payment protocol that enables direct peer-to-peer cryptocurrency payments with automatic token conversion, allowing merchants to accept any token while receiving their preferred currency.\n",
@@ -7773,6 +8123,7 @@
     ]
   },
   {
+    "filePath": "projects/money/expenseowl.mdx",
     "slug": "expenseowl",
     "name": "ExpenseOwl",
     "description": "ExpenseOwl is a simple self-hosted expense tracking system with modern monthly pie-chart visualization and cashflow showcase, focused on quick expense entry and essential tracking features.\n",
@@ -7882,6 +8233,7 @@
     ]
   },
   {
+    "filePath": "projects/money/ezbookkeeping.mdx",
     "slug": "ezbookkeeping",
     "name": "ezBookkeeping",
     "description": "ezBookkeeping is a lightweight self-hosted personal bookkeeping app with a user-friendly interface for both desktop and mobile devices, featuring PWA support, multi-currency handling, and comprehensive financial tracking capabilities.\n",
@@ -7991,6 +8343,7 @@
     ]
   },
   {
+    "filePath": "projects/money/fava.mdx",
     "slug": "fava",
     "name": "Fava",
     "description": "Fava is a web interface for Beancount, a double-entry bookkeeping software, offering a modern UI with features like interactive charts, account statistics, and document management.\n",
@@ -8103,6 +8456,7 @@
     ]
   },
   {
+    "filePath": "projects/money/firefly-iii.mdx",
     "slug": "firefly-iii",
     "name": "Firefly III",
     "description": "Firefly III is a self-hosted personal finance manager that helps track expenses and income, create budgets, and generate financial reports while maintaining complete data privacy and control.\n",
@@ -8215,6 +8569,7 @@
     ]
   },
   {
+    "filePath": "projects/money/fossbilling.mdx",
     "slug": "fossbilling",
     "name": "FOSSBilling",
     "description": "FOSSBilling is a free open-source billing and client management solution designed for web hosting businesses, offering automated invoicing, payment processing, and comprehensive client management capabilities.\n",
@@ -8326,6 +8681,7 @@
     ]
   },
   {
+    "filePath": "projects/money/galette.mdx",
     "slug": "galette",
     "name": "Galette",
     "description": "Galette is a web-based membership management system for non-profit organizations, offering features like member tracking, dues collection, and customizable fields while being free and open source.\n",
@@ -8433,6 +8789,7 @@
     ]
   },
   {
+    "filePath": "projects/money/ghostfolio.mdx",
     "slug": "ghostfolio",
     "name": "Ghostfolio",
     "description": "Ghostfolio is an open source wealth management software that helps track stocks, ETFs and cryptocurrencies across multiple platforms, offering portfolio insights and data-driven investment decisions.\n",
@@ -8543,6 +8900,7 @@
     ]
   },
   {
+    "filePath": "projects/money/hyperswitch.mdx",
     "slug": "hyperswitch",
     "name": "Hyperswitch",
     "description": "Hyperswitch is an open-source payments orchestration platform that provides a single API to access multiple payment service providers, enabling seamless payment processing with comprehensive routing and management capabilities.\n",
@@ -8652,6 +9010,7 @@
     ]
   },
   {
+    "filePath": "projects/money/ihatemoney.mdx",
     "slug": "ihatemoney",
     "name": "I Hate Money",
     "description": "I Hate Money is a simple web application for shared budget management, helping groups track shared expenses, manage who bought what and when, and settle bills easily.\n",
@@ -8762,6 +9121,7 @@
     ]
   },
   {
+    "filePath": "projects/money/invoiceninja.mdx",
     "slug": "invoiceninja",
     "name": "Invoice Ninja",
     "description": "Invoice Ninja is a powerful open-source invoicing, payment, and time-tracking platform that helps businesses manage billing, quotes, projects and expenses with extensive customization options.\n",
@@ -8874,6 +9234,7 @@
     ]
   },
   {
+    "filePath": "projects/money/invoiceplane.mdx",
     "slug": "invoiceplane",
     "name": "InvoicePlane",
     "description": "InvoicePlane is a self-hosted open source application for managing invoices, clients and payments, offering comprehensive billing and client management features for small businesses.\n",
@@ -8985,6 +9346,7 @@
     ]
   },
   {
+    "filePath": "projects/money/invoiceshelf.mdx",
     "slug": "invoiceshelf",
     "name": "InvoiceShelf",
     "description": "InvoiceShelf is an open-source invoicing and expense tracking platform that helps businesses create professional invoices, manage expenses, and track payments with comprehensive features.\n",
@@ -9097,6 +9459,7 @@
     ]
   },
   {
+    "filePath": "projects/money/killbill.mdx",
     "slug": "killbill",
     "name": "Kill Bill",
     "description": "Kill Bill is an open-source subscription billing and payment platform that helps businesses manage complex billing scenarios, subscriptions, and payments with extensive customization options.\n",
@@ -9209,6 +9572,7 @@
     ]
   },
   {
+    "filePath": "projects/money/lago.mdx",
     "slug": "lago",
     "name": "Lago",
     "description": "Lago is an open-source metering and usage-based billing platform that helps businesses manage complex pricing models, subscriptions, and payments with extensive customization options.\n",
@@ -9318,6 +9682,7 @@
     ]
   },
   {
+    "filePath": "projects/money/maybe.mdx",
     "slug": "maybe",
     "name": "Maybe",
     "description": "Maybe is an open-source personal finance and wealth management platform that helps individuals track their finances, investments, and connect with financial advisors.\n",
@@ -9427,6 +9792,7 @@
     ]
   },
   {
+    "filePath": "projects/money/octobot.mdx",
     "slug": "octobot",
     "name": "OctoBot",
     "description": "OctoBot is an open-source cryptocurrency trading robot that enables users to create, backtest and optimize custom trading strategies using technical analysis, AI, and social media signals.\n",
@@ -9535,6 +9901,7 @@
     ]
   },
   {
+    "filePath": "projects/money/ocular.mdx",
     "slug": "ocular",
     "name": "Ocular",
     "description": "Ocular is an open-source budgeting and expense tracking application that helps users visualize and manage their finances across multiple years with features like Sankey diagrams and detailed analytics.\n",
@@ -9643,6 +10010,7 @@
     ]
   },
   {
+    "filePath": "projects/money/openbudgeteer.mdx",
     "slug": "openbudgeteer",
     "name": "OpenBudgeteer",
     "description": "OpenBudgeteer is an open-source budgeting application based on the Bucket Budgeting Principle, inspired by YNAB and Buckets, built with .NET Core and Blazor.\n",
@@ -9753,6 +10121,7 @@
     ]
   },
   {
+    "filePath": "projects/money/receipt-wrangler.mdx",
     "slug": "receipt-wrangler",
     "name": "Receipt Wrangler",
     "description": "Receipt Wrangler is a free and open-source receipt management and splitting application with features like OCR scanning, AI data extraction, email integration, and multi-user support.\n",
@@ -9861,6 +10230,7 @@
     ]
   },
   {
+    "filePath": "projects/money/rei3.mdx",
     "slug": "rei3",
     "name": "REI3",
     "description": "REI3 is a free and open source low-code platform for building and hosting powerful business applications with full control and ownership, offering features like workflows, end-to-end encryption, and mobile support.\n",
@@ -9969,6 +10339,7 @@
     ]
   },
   {
+    "filePath": "projects/money/shkeeper.mdx",
     "slug": "shkeeper",
     "name": "SHKeeper",
     "description": "SHKeeper is an open-source, self-hosted cryptocurrency payment processor that enables direct acceptance of multiple cryptocurrencies without fees or intermediaries.\n",
@@ -10077,6 +10448,7 @@
     ]
   },
   {
+    "filePath": "projects/money/solidinvoice.mdx",
     "slug": "solidinvoice",
     "name": "SolidInvoice",
     "description": "SolidInvoice is an open-source invoicing application designed to help small businesses and freelancers manage billing operations with features like client management, quotes, invoices, and online payments.\n",
@@ -10189,6 +10561,7 @@
     ]
   },
   {
+    "filePath": "projects/money/vouchervault.mdx",
     "slug": "vouchervault",
     "name": "VoucherVault",
     "description": "VoucherVault is a Django web application for digitally storing and managing vouchers, coupons, loyalty cards and gift cards with features like transaction tracking, file uploads, QR codes and expiry notifications.\n",
@@ -10296,6 +10669,7 @@
     ]
   },
   {
+    "filePath": "projects/money/wallos.mdx",
     "slug": "wallos",
     "name": "Wallos",
     "description": "Wallos is an open-source personal subscription tracker that helps you manage recurring payments and subscriptions with features like multi-currency support, notifications, and spending analytics.\n",
@@ -10404,6 +10778,7 @@
     ]
   },
   {
+    "filePath": "projects/money/wygiwyh.mdx",
     "slug": "wygiwyh",
     "name": "WYGIWYH",
     "description": "WYGIWYH (What You Get Is What You Have) is an opinionated finance tracker designed for no-budget money management, featuring multi-currency support, custom transaction rules, and built-in investment tracking.\n",
@@ -10514,6 +10889,7 @@
     ]
   },
   {
+    "filePath": "projects/note-taking/blinko.mdx",
     "slug": "blinko",
     "name": "Blinko",
     "description": "Blinko is an open-source, self-hosted AI-powered note-taking tool that lets you capture, organize, and search your ideas with full privacy. It combines fast plain-text/Markdown editing with AI retrieval and runs entirely on your own infrastructure.\n",
@@ -10653,6 +11029,7 @@
     ]
   },
   {
+    "filePath": "projects/object-storage/ceph.mdx",
     "slug": "ceph",
     "name": "Ceph",
     "description": "Ceph is a highly scalable distributed storage system providing object, block, and file storage in a unified platform. It's designed for performance, reliability and scalability from terabytes to exabytes.\n",
@@ -10772,6 +11149,7 @@
     ]
   },
   {
+    "filePath": "projects/object-storage/garbage.mdx",
     "slug": "garage",
     "name": "Garage",
     "description": "Garage is an S3-compatible distributed object storage service designed for self-hosting at small-to-medium scale. It focuses on geo-distributed deployments with data replication across multiple physical locations.\n",
@@ -10873,6 +11251,7 @@
     ]
   },
   {
+    "filePath": "projects/object-storage/juicefs.mdx",
     "slug": "juicefs",
     "name": "JuiceFS",
     "description": "JuiceFS is a high-performance POSIX file system designed for cloud-native environments. It stores data in object storage with metadata in databases like Redis/MySQL, offering full POSIX/Hadoop compatibility and enterprise features.\n",
@@ -10993,6 +11372,7 @@
     ]
   },
   {
+    "filePath": "projects/object-storage/mino.mdx",
     "slug": "minio",
     "name": "MinIO",
     "description": "MinIO is a high-performance, S3-compatible object storage solution designed for AI/ML workloads. It offers industry-leading performance, scalability, and enterprise features while remaining open source under the AGPL license.\n",
@@ -11110,6 +11490,7 @@
     ]
   },
   {
+    "filePath": "projects/object-storage/seaweedfs.mdx",
     "slug": "seaweedfs",
     "name": "SeaweedFS",
     "description": "SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, optimized for billions of files. It provides O(1) disk seek performance, cloud tiering, and features like POSIX FUSE mount, S3 API, Kubernetes support, and erasure coding.\n",
@@ -11234,6 +11615,7 @@
     ]
   },
   {
+    "filePath": "projects/object-storage/sftpgo.mdx",
     "slug": "sftpgo",
     "name": "SFTPGo",
     "description": "SFTPGo is a full-featured and highly configurable file transfer solution supporting SFTP, HTTP/S, FTP/S, and WebDAV protocols with multiple storage backends including local filesystem, S3, Google Cloud Storage, and Azure Blob Storage.\n",
@@ -11360,6 +11742,7 @@
     ]
   },
   {
+    "filePath": "projects/object-storage/zenko-cloudserver.mdx",
     "slug": "zenko-cloudserver",
     "name": "Zenko CloudServer",
     "description": "Zenko CloudServer is an open-source Amazon S3-compatible object storage server that provides a unified S3 API interface to access multiple backend storage systems, both on-premise and in public clouds.\n",
@@ -11484,6 +11867,7 @@
     ]
   },
   {
+    "filePath": "projects/object-storage/zot.mdx",
     "slug": "zot",
     "name": "Zot",
     "description": "Zot is a production-ready vendor-neutral OCI image registry that strictly follows OCI Distribution Specification. It provides a scale-out architecture for storing container images and artifacts in OCI image format.\n",
@@ -11605,6 +11989,7 @@
     ]
   },
   {
+    "filePath": "projects/recipes/bar-assistant.mdx",
     "slug": "bar-assistant",
     "name": "Bar Assistant",
     "description": "Bar Assistant is an all-in-one solution for managing your home bar, specifically designed for cocktail recipes with features like ingredient substitutes, ABV calculations, unit switching and more.\n",
@@ -11630,6 +12015,7 @@
     }
   },
   {
+    "filePath": "projects/recipes/fork-recipes.mdx",
     "slug": "fork-recipes",
     "name": "Fork Recipes",
     "description": "Fork Recipes is a simple, elegant Python web application that works with ForkAPI to provide management for food recipe collections, featuring recipe scraping, meal planning, shopping lists and AI-powered features.\n",
@@ -11657,6 +12043,7 @@
     }
   },
   {
+    "filePath": "projects/recipes/kitchenowl.mdx",
     "slug": "kitchenowl",
     "name": "KitchenOwl",
     "description": "KitchenOwl is a smart self-hosted grocery list and recipe manager that allows you to easily manage shopping lists, recipes, meal plans and household expenses with real-time sync across multiple users.\n",
@@ -11684,6 +12071,7 @@
     }
   },
   {
+    "filePath": "projects/recipes/manage-meals.mdx",
     "slug": "manage-meals",
     "name": "ManageMeals",
     "description": "ManageMeals is a modern recipe management web application built with SvelteKit, offering recipe organization, meal planning, and shopping list features with a clean and intuitive interface.\n",
@@ -11712,6 +12100,7 @@
     }
   },
   {
+    "filePath": "projects/recipes/mealie.mdx",
     "slug": "mealie",
     "name": "Mealie",
     "description": "Mealie is a self-hosted recipe manager and meal planner with a RestAPI backend and Vue frontend, offering automated recipe imports, meal planning, shopping lists and a pleasant user experience for the whole family.\n",
@@ -11740,6 +12129,7 @@
     }
   },
   {
+    "filePath": "projects/recipes/recipesage.mdx",
     "slug": "recipesage",
     "name": "RecipeSage",
     "description": "RecipeSage is a collaborative recipe management platform that allows users to import recipes from any URL, plan meals, manage shopping lists, and share recipes with family and friends through a progressive web app interface.\n",
@@ -11768,6 +12158,7 @@
     }
   },
   {
+    "filePath": "projects/recipes/recipya.mdx",
     "slug": "recipya",
     "name": "Recipya",
     "description": "Recipya is a clean, simple and powerful recipe manager web application built with Go, focusing on family recipe management with features like recipe importing, digitization of paper recipes, and automatic nutritional calculations.\n",
@@ -11798,6 +12189,7 @@
     }
   },
   {
+    "filePath": "projects/recipes/tamari.mdx",
     "slug": "tamari",
     "name": "Tamari",
     "description": "Tamari is a fully-featured recipe manager web application built using Python and Flask, offering recipe management, meal planning, shopping lists, and recipe exploration with over 107,000 recipes from 50 recipe sharing websites.\n",
@@ -11826,6 +12218,7 @@
     }
   },
   {
+    "filePath": "projects/recipes/whattocook.mdx",
     "slug": "whattocook",
     "name": "What to Cook?",
     "description": "What to Cook is a recipe suggestion application that recommends recipes based on ingredients you have available at home, built with Spring Boot and React.\n",
@@ -11855,6 +12248,7 @@
     }
   },
   {
+    "filePath": "projects/scheduling/alf.mdx",
     "slug": "alf",
     "name": "Alf.io",
     "description": "Alf.io is an open source ticket reservation system for events, conferences, workshops and meetups. It provides comprehensive features for managing event attendance with a focus on privacy and security.\n",
@@ -11879,6 +12273,7 @@
     }
   },
   {
+    "filePath": "projects/scheduling/cal.mdx",
     "slug": "cal",
     "name": "Cal.com",
     "description": "Cal.com is an open source scheduling infrastructure and Calendly alternative. It provides comprehensive features for managing appointments, scheduling, and calendar integration with a focus on privacy and customization.\n",
@@ -11906,6 +12301,7 @@
     }
   },
   {
+    "filePath": "projects/scheduling/easyappointments.mdx",
     "slug": "easyappointments",
     "name": "Easy!Appointments",
     "description": "Easy!Appointments is a highly customizable web application that allows customers to book appointments through a web interface, with features like Google Calendar sync, email notifications, and multi-language support.\n",
@@ -11933,6 +12329,7 @@
     }
   },
   {
+    "filePath": "projects/scheduling/hi.events.mdx",
     "slug": "hi-events",
     "name": "Hi.Events",
     "description": "Hi.Events is an open source event management and ticketing platform that helps sell tickets online for all types of events, from conferences and workshops to club nights and concerts.\n",
@@ -11962,6 +12359,7 @@
     }
   },
   {
+    "filePath": "projects/scheduling/qloapps.mdx",
     "slug": "qloapps",
     "name": "QloApps",
     "description": "QloApps is a free and open source hotel management and reservation system that provides a complete Property Management System (PMS), booking engine, and hotel website builder to help hotels manage their operations online.\n",
@@ -11988,6 +12386,7 @@
     }
   },
   {
+    "filePath": "projects/scheduling/rallly.mdx",
     "slug": "rallly",
     "name": "Rallly",
     "description": "Rallly is an open-source scheduling and collaboration tool designed to make organizing events and meetings easier by finding the best date and time based on participants' availability.\n",
@@ -12017,6 +12416,7 @@
     }
   },
   {
+    "filePath": "projects/scheduling/seatsurfing.mdx",
     "slug": "seatsurfing",
     "name": "Seatsurfing",
     "description": "Seatsurfing is an open source desk and room booking system that enables organizations to manage flexible workspaces, hot desking, and meeting room reservations through a modern web interface.\n",
@@ -12047,6 +12447,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/amusewiki.mdx",
     "slug": "amusewiki",
     "name": "AmuseWiki",
     "description": "AmuseWiki is a library-oriented wiki engine and publishing platform focused on high-quality text archiving and printing capabilities, with support for multiple output formats including PDF and EPUB.\n",
@@ -12079,6 +12480,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/bookstack.mdx",
     "slug": "bookstack",
     "name": "BookStack",
     "description": "BookStack is a self-hosted platform for organizing and storing information in a book-like structure, perfect for documentation, wikis, and knowledge management.\n",
@@ -12111,9 +12513,12 @@
     "deployment": {
       "difficulty": "Medium",
       "justification": "Requires web server, PHP, and MySQL/MariaDB setup. Well-documented installation process with Docker options available."
-    }
+    },
+    "demoUrl": "https://demo.bookstackapp.com",
+    "openSource": true
   },
   {
+    "filePath": "projects/wikis/django-wiki.mdx",
     "slug": "django-wiki",
     "name": "Django Wiki",
     "description": "Django Wiki is a mature wiki system built for Django that offers complex functionality with simple integration and a superb interface, using Django models as its foundation.\n",
@@ -12142,9 +12547,11 @@
     "deployment": {
       "difficulty": "Medium",
       "justification": "Requires Django environment setup and database configuration. Docker deployment available but configuration can be complex for advanced features."
-    }
+    },
+    "demoUrl": "https://demo.django-wiki.org"
   },
   {
+    "filePath": "projects/wikis/docmost.mdx",
     "slug": "docmost",
     "name": "Docmost",
     "description": "Docmost is an open-source collaborative wiki and documentation software that provides real-time collaboration, diagrams support, and enterprise features as an alternative to Confluence and Notion.\n",
@@ -12177,6 +12584,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/documize.mdx",
     "slug": "documize",
     "name": "Documize",
     "description": "Documize is a modern, self-hosted, enterprise-grade knowledge management solution built with Go and EmberJS, designed to unify both customer-facing and internal documentation.\n",
@@ -12209,6 +12617,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/dokuwiki.mdx",
     "slug": "dokuwiki",
     "name": "DokuWiki",
     "description": "DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database. It is loved by users for its clean and readable syntax and appreciated by administrators for its easy maintenance and integration capabilities.\n",
@@ -12241,6 +12650,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/feather-wiki.mdx",
     "slug": "feather-wiki",
     "name": "Feather Wiki",
     "description": "Feather Wiki is a tiny, self-contained JavaScript wiki that runs in the browser. At just 58KB, it's like TiddlyWiki but as small as possible, offering a lightning-fast tool for creating non-linear notebooks, databases and wikis.\n",
@@ -12273,6 +12683,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/gitit.mdx",
     "slug": "gitit",
     "name": "Gitit",
     "description": "Gitit is a wiki program written in Haskell that uses Happstack for the web server and pandoc for markup processing, with pages stored in git, darcs, or mercurial repositories.\n",
@@ -12305,6 +12716,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/gollum.mdx",
     "slug": "gollum",
     "name": "Gollum",
     "description": "Gollum is a simple Git-based wiki system that allows for human-editable text/markup files, flexible organization, and support for multiple markup languages.\n",
@@ -12337,6 +12749,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/mediawiki.mdx",
     "slug": "mediawiki",
     "name": "MediaWiki",
     "description": "MediaWiki is a free and open-source wiki software package written in PHP. It serves as the platform for Wikipedia and other Wikimedia projects, used by hundreds of millions of people each month.\n",
@@ -12369,6 +12782,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/mycorrhiza.mdx",
     "slug": "mycorrhiza",
     "name": "Mycorrhiza Wiki",
     "description": "Mycorrhiza Wiki is a lightweight file-system wiki engine that uses Git for keeping history. It stores content in plain files and features a unique markup language called Mycomarkup.\n",
@@ -12401,6 +12815,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/otterwiki.mdx",
     "slug": "otterwiki",
     "name": "OtterWiki",
     "description": "An Otter Wiki is a minimalistic Python-based wiki software that stores content in git repositories and uses Markdown for markup. Built with Flask and featuring a clean interface with dark mode support.\n",
@@ -12433,6 +12848,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/pepperminty.mdx",
     "slug": "pepperminty",
     "name": "Pepperminty Wiki",
     "description": "A complete wiki engine contained in a single PHP file. Features include file upload, page revision history, page tags, and more - all while being lightweight and easy to deploy.\n",
@@ -12465,6 +12881,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/raneto.mdx",
     "slug": "raneto",
     "name": "Raneto",
     "description": "Raneto is a free, open-source Markdown-powered knowledge base platform built on Node.js. It uses static Markdown files to create documentation without requiring a database.\n",
@@ -12496,6 +12913,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/tiddlywiki.mdx",
     "slug": "tiddlywiki",
     "name": "TiddlyWiki",
     "description": "TiddlyWiki is a unique non-linear personal web notebook that anyone can use and keep forever, independently of any corporation. It's a complete interactive wiki in JavaScript that can be used as a single HTML file in the browser or as a Node.js application.\n",
@@ -12528,6 +12946,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/wiki-js.mdx",
     "slug": "wiki-js",
     "name": "Wiki.js",
     "description": "Wiki.js is a modern, lightweight wiki platform built with Node.js that offers powerful editing, beautiful themes, and Git-based storage for collaborative knowledge management.\n",
@@ -12560,6 +12979,7 @@
     }
   },
   {
+    "filePath": "projects/wikis/xwiki.mdx",
     "slug": "xwiki",
     "name": "XWiki",
     "description": "XWiki is an advanced open source enterprise wiki platform written in Java. It features a powerful WYSIWYG editor, strong rights management, and extensive customization capabilities through its extension system.\n",
