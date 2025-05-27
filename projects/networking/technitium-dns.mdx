@@ -1,0 +1,97 @@
+---
+slug: technitium-dns
+name: Technitium DNS Server
+description: |
+  Technitium DNS Server is an authoritative and recursive DNS server with built-in ad blocking, offering enterprise-grade features like DNSSEC, DNS-over-HTTPS, and comprehensive zone management.
+logo: https://avatars.githubusercontent.com/u/12230362?s=200&v=4
+category: networking
+tags: [dns, ad-blocking, authoritative-dns, dnssec, csharp]
+github: TechnitiumSoftware/DnsServer
+urls:
+  website: https://technitium.com/dns/
+alternatives:
+  selfHosted: [pi-hole, adguard-home, bind9, powerdns]
+  nonSelfHosted: [cloudflare-dns, route53]
+deployment:
+  difficulty: "Easy"
+  justification: "Cross-platform installer or Docker deployment with web-based configuration interface."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Full-featured DNS server
+      - name: Target Use Case
+        value: Enterprise DNS management
+      - name: Architecture
+        value: C# .NET + Web UI
+  - name: DNS Features
+    features:
+      - name: Authoritative DNS
+      - name: Recursive Resolver
+      - name: Zone Management
+      - name: DNSSEC Support
+      - name: DNS-over-HTTPS/TLS
+  - name: Ad Blocking
+    features:
+      - name: Built-in Blocking
+      - name: Custom Blocklists
+      - name: Regex Support
+      - name: Allow Lists
+      - name: Block Stats
+  - name: Advanced Features
+    features:
+      - name: Split Horizon DNS
+      - name: DNS Caching
+      - name: Query Logging
+      - name: DNS Apps/Plugins
+      - name: Failover Support
+  - name: Management
+    features:
+      - name: Web Interface
+      - name: REST API
+      - name: Zone Templates
+      - name: Backup/Restore
+      - name: Multi-user Support
+---
+
+Technitium DNS Server is a comprehensive DNS solution that combines authoritative and recursive DNS server capabilities with built-in ad blocking. It provides enterprise-grade features while remaining accessible for home users.
+
+## Key Features
+
+- **Complete DNS Server**:
+
+  - Authoritative DNS hosting
+  - Recursive DNS resolver
+  - Primary and secondary zones
+  - Zone transfer support
+  - Dynamic DNS updates
+  - Reverse DNS zones
+
+- **Advanced DNS Features**:
+
+  - DNSSEC signing and validation
+  - DNS-over-HTTPS (DoH)
+  - DNS-over-TLS (DoT)
+  - DNS-over-QUIC (DoQ)
+  - Split horizon DNS
+  - Query forwarding
+
+- **Ad Blocking Integration**:
+
+  - Built-in ad blocking
+  - Multiple blocklist formats
+  - Custom blocking rules
+  - Per-client policies
+  - Blocking statistics
+  - Scheduled updates
+
+- **Enterprise Management**:
+  - Comprehensive web interface
+  - RESTful API
+  - DNS Apps (plugins)
+  - Zone templates
+  - Multi-user access control
+  - Audit logging

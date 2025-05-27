@@ -1,0 +1,97 @@
+---
+slug: pi-hole
+name: Pi-hole
+description: |
+  Pi-hole is a network-wide ad blocker that acts as a DNS sinkhole, protecting your devices from unwanted content without installing any client-side software.
+logo: https://pi-hole.github.io/graphics/Vortex/Vortex_with_Wordmark.svg
+category: networking
+tags: [dns, ad-blocking, privacy, raspberry-pi, network-security]
+github: pi-hole/pi-hole
+urls:
+  website: https://pi-hole.net/
+alternatives:
+  selfHosted: [adguard-home, blocky, technitium-dns]
+  nonSelfHosted: [nextdns, cloudflare-dns]
+deployment:
+  difficulty: "Easy"
+  justification: "One-line installation script with automated setup, extensive documentation and community support."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Network-wide ad blocking
+      - name: Target Use Case
+        value: Home/office network protection
+      - name: Architecture
+        value: Shell/PHP + Web UI
+  - name: Blocking
+    features:
+      - name: DNS Sinkhole
+      - name: Regex Filtering
+      - name: Wildcard Blocking
+      - name: Group Management
+      - name: Gravity Database
+  - name: Interface
+    features:
+      - name: Web Dashboard
+      - name: Real-time Stats
+      - name: Query Log
+      - name: Long-term Data
+      - name: API Access
+  - name: DNS Features
+    features:
+      - name: DHCP Server
+      - name: Conditional Forwarding
+      - name: DNS-over-HTTPS
+      - name: Custom DNS Records
+      - name: DNSSEC
+  - name: Management
+    features:
+      - name: Whitelist/Blacklist
+      - name: Client Grouping
+      - name: Scheduled Updates
+      - name: Teleporter Backup
+      - name: Command Line Tools
+---
+
+Pi-hole is the original network-wide ad blocker, functioning as a DNS sinkhole that protects your entire network from ads, trackers, and malicious domains. It's particularly popular for Raspberry Pi deployments but runs on any Linux system.
+
+## Key Features
+
+- **Network-Wide Protection**:
+
+  - Blocks ads for all devices
+  - No client software needed
+  - Works with any device
+  - Guest network support
+  - IoT device protection
+  - Smart TV ad blocking
+
+- **Powerful Interface**:
+
+  - Comprehensive web dashboard
+  - Real-time statistics
+  - Detailed query logs
+  - Long-term data storage
+  - Client activity monitoring
+  - Responsive design
+
+- **Advanced Blocking**:
+
+  - Gravity database system
+  - Regex pattern support
+  - Wildcard domain blocking
+  - Group-based management
+  - Time-based restrictions
+  - Custom blocklists
+
+- **Additional Features**:
+  - Built-in DHCP server
+  - Local DNS records
+  - Conditional forwarding
+  - DNSSEC validation
+  - API for automation
+  - Extensive documentation

@@ -14611,6 +14611,676 @@
     ]
   },
   {
+    "filePath": "projects/networking/adguard-home.mdx",
+    "slug": "adguard-home",
+    "name": "AdGuard Home",
+    "description": "AdGuard Home is a network-wide software for blocking ads and tracking, providing a user-friendly DNS server with comprehensive filtering capabilities and detailed analytics.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/8361145?s=200&v=4",
+    "category": "networking",
+    "tags": [
+      "dns",
+      "ad-blocking",
+      "privacy",
+      "security",
+      "filtering"
+    ],
+    "github": "AdguardTeam/AdGuardHome",
+    "urls": {
+      "website": "https://adguard.com/en/adguard-home/overview.html"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "pi-hole",
+        "blocky",
+        "technitium-dns"
+      ],
+      "nonSelfHosted": [
+        "nextdns",
+        "cloudflare-dns"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single binary or Docker container with web-based setup wizard and minimal configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Network-wide ad blocking"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Home network protection"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + Web UI"
+          }
+        ]
+      },
+      {
+        "name": "Filtering",
+        "features": [
+          {
+            "name": "DNS-based Ad Blocking"
+          },
+          {
+            "name": "Tracking Protection"
+          },
+          {
+            "name": "Malware Blocking"
+          },
+          {
+            "name": "Custom Blocklists"
+          },
+          {
+            "name": "Parental Controls"
+          }
+        ]
+      },
+      {
+        "name": "DNS Features",
+        "features": [
+          {
+            "name": "DNS-over-HTTPS"
+          },
+          {
+            "name": "DNS-over-TLS"
+          },
+          {
+            "name": "DNS-over-QUIC"
+          },
+          {
+            "name": "DNSSEC Support"
+          },
+          {
+            "name": "Upstream DNS Selection"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Query Logs"
+          },
+          {
+            "name": "Statistics Dashboard"
+          },
+          {
+            "name": "Client Management"
+          },
+          {
+            "name": "API Access"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "Safe Search"
+          },
+          {
+            "name": "Custom Filtering Rules"
+          },
+          {
+            "name": "Rewrites"
+          },
+          {
+            "name": "IPv6 Support"
+          },
+          {
+            "name": "DHCP Server"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/networking/blocky.mdx",
+    "slug": "blocky",
+    "name": "blocky",
+    "description": "blocky is a fast and lightweight DNS proxy designed as an ad-blocker for local networks, offering advanced features like conditional forwarding, custom DNS entries, and detailed metrics.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://0xerr0r.github.io/blocky/main/blocky.svg",
+    "category": "networking",
+    "tags": [
+      "dns",
+      "ad-blocking",
+      "privacy",
+      "golang",
+      "prometheus"
+    ],
+    "github": "0xERR0R/blocky",
+    "urls": {
+      "website": "https://0xerr0r.github.io/blocky/latest/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "pi-hole",
+        "adguard-home",
+        "technitium-dns"
+      ],
+      "nonSelfHosted": [
+        "nextdns",
+        "cloudflare-dns"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single Go binary or Docker container with YAML configuration, no database required."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Fast DNS ad-blocking"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Local network protection"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + YAML config"
+          }
+        ]
+      },
+      {
+        "name": "Blocking Features",
+        "features": [
+          {
+            "name": "Multiple Blocklists"
+          },
+          {
+            "name": "Regex Support"
+          },
+          {
+            "name": "Whitelist/Blacklist"
+          },
+          {
+            "name": "Client-specific Rules"
+          },
+          {
+            "name": "Temporary Disabling"
+          }
+        ]
+      },
+      {
+        "name": "DNS Features",
+        "features": [
+          {
+            "name": "Conditional Forwarding"
+          },
+          {
+            "name": "Custom DNS Entries"
+          },
+          {
+            "name": "DNS-over-HTTPS"
+          },
+          {
+            "name": "DNS-over-TLS"
+          },
+          {
+            "name": "Caching"
+          }
+        ]
+      },
+      {
+        "name": "Monitoring",
+        "features": [
+          {
+            "name": "Prometheus Metrics"
+          },
+          {
+            "name": "Query Logging"
+          },
+          {
+            "name": "Grafana Dashboards"
+          },
+          {
+            "name": "Performance Stats"
+          },
+          {
+            "name": "API Endpoints"
+          }
+        ]
+      },
+      {
+        "name": "Advanced",
+        "features": [
+          {
+            "name": "Redis Support"
+          },
+          {
+            "name": "Multiple Resolvers"
+          },
+          {
+            "name": "EDNS Client Subnet"
+          },
+          {
+            "name": "Prefetching"
+          },
+          {
+            "name": "Parallel Queries"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/networking/maza-ad-blocking.mdx",
+    "slug": "maza-ad-blocking",
+    "name": "Maza ad blocking",
+    "description": "Maza is a local ad blocker that works like Pi-hole but operates directly on your operating system by modifying the hosts file, requiring no additional hardware or network configuration.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://maza-ad-blocking.andros.dev/img/logo.png",
+    "category": "networking",
+    "tags": [
+      "ad-blocking",
+      "hosts-file",
+      "privacy",
+      "shell",
+      "local"
+    ],
+    "github": "tanrax/maza-ad-blocking",
+    "urls": {
+      "website": "https://maza-ad-blocking.andros.dev/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "pi-hole",
+        "adguard-home",
+        "blocky"
+      ],
+      "nonSelfHosted": [
+        "ublock-origin",
+        "adblock-plus"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple shell script that modifies the hosts file, no server or complex setup required."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Local ad blocking"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal device protection"
+          },
+          {
+            "name": "Architecture",
+            "value": "Shell script + hosts file"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "System-wide Blocking"
+          },
+          {
+            "name": "No DNS Server"
+          },
+          {
+            "name": "Multiple Blocklists"
+          },
+          {
+            "name": "Easy Enable/Disable"
+          },
+          {
+            "name": "Automatic Updates"
+          }
+        ]
+      },
+      {
+        "name": "Simplicity",
+        "features": [
+          {
+            "name": "Single Command"
+          },
+          {
+            "name": "No Configuration"
+          },
+          {
+            "name": "No Dependencies"
+          },
+          {
+            "name": "Lightweight"
+          },
+          {
+            "name": "Cross-platform"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Start/Stop Control"
+          },
+          {
+            "name": "Update Command"
+          },
+          {
+            "name": "Status Check"
+          },
+          {
+            "name": "Custom Lists"
+          }
+        ]
+      },
+      {
+        "name": "Compatibility",
+        "features": [
+          {
+            "name": "Linux Support"
+          },
+          {
+            "name": "macOS Support"
+          },
+          {
+            "name": "BSD Support"
+          },
+          {
+            "name": "WSL Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/networking/pi-hole.mdx",
+    "slug": "pi-hole",
+    "name": "Pi-hole",
+    "description": "Pi-hole is a network-wide ad blocker that acts as a DNS sinkhole, protecting your devices from unwanted content without installing any client-side software.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://pi-hole.github.io/graphics/Vortex/Vortex_with_Wordmark.svg",
+    "category": "networking",
+    "tags": [
+      "dns",
+      "ad-blocking",
+      "privacy",
+      "raspberry-pi",
+      "network-security"
+    ],
+    "github": "pi-hole/pi-hole",
+    "urls": {
+      "website": "https://pi-hole.net/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "adguard-home",
+        "blocky",
+        "technitium-dns"
+      ],
+      "nonSelfHosted": [
+        "nextdns",
+        "cloudflare-dns"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "One-line installation script with automated setup, extensive documentation and community support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Network-wide ad blocking"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Home/office network protection"
+          },
+          {
+            "name": "Architecture",
+            "value": "Shell/PHP + Web UI"
+          }
+        ]
+      },
+      {
+        "name": "Blocking",
+        "features": [
+          {
+            "name": "DNS Sinkhole"
+          },
+          {
+            "name": "Regex Filtering"
+          },
+          {
+            "name": "Wildcard Blocking"
+          },
+          {
+            "name": "Group Management"
+          },
+          {
+            "name": "Gravity Database"
+          }
+        ]
+      },
+      {
+        "name": "Interface",
+        "features": [
+          {
+            "name": "Web Dashboard"
+          },
+          {
+            "name": "Real-time Stats"
+          },
+          {
+            "name": "Query Log"
+          },
+          {
+            "name": "Long-term Data"
+          },
+          {
+            "name": "API Access"
+          }
+        ]
+      },
+      {
+        "name": "DNS Features",
+        "features": [
+          {
+            "name": "DHCP Server"
+          },
+          {
+            "name": "Conditional Forwarding"
+          },
+          {
+            "name": "DNS-over-HTTPS"
+          },
+          {
+            "name": "Custom DNS Records"
+          },
+          {
+            "name": "DNSSEC"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Whitelist/Blacklist"
+          },
+          {
+            "name": "Client Grouping"
+          },
+          {
+            "name": "Scheduled Updates"
+          },
+          {
+            "name": "Teleporter Backup"
+          },
+          {
+            "name": "Command Line Tools"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/networking/technitium-dns.mdx",
+    "slug": "technitium-dns",
+    "name": "Technitium DNS Server",
+    "description": "Technitium DNS Server is an authoritative and recursive DNS server with built-in ad blocking, offering enterprise-grade features like DNSSEC, DNS-over-HTTPS, and comprehensive zone management.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/12230362?s=200&v=4",
+    "category": "networking",
+    "tags": [
+      "dns",
+      "ad-blocking",
+      "authoritative-dns",
+      "dnssec",
+      "csharp"
+    ],
+    "github": "TechnitiumSoftware/DnsServer",
+    "urls": {
+      "website": "https://technitium.com/dns/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "pi-hole",
+        "adguard-home",
+        "bind9",
+        "powerdns"
+      ],
+      "nonSelfHosted": [
+        "cloudflare-dns",
+        "route53"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Cross-platform installer or Docker deployment with web-based configuration interface."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Full-featured DNS server"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Enterprise DNS management"
+          },
+          {
+            "name": "Architecture",
+            "value": "C# .NET + Web UI"
+          }
+        ]
+      },
+      {
+        "name": "DNS Features",
+        "features": [
+          {
+            "name": "Authoritative DNS"
+          },
+          {
+            "name": "Recursive Resolver"
+          },
+          {
+            "name": "Zone Management"
+          },
+          {
+            "name": "DNSSEC Support"
+          },
+          {
+            "name": "DNS-over-HTTPS/TLS"
+          }
+        ]
+      },
+      {
+        "name": "Ad Blocking",
+        "features": [
+          {
+            "name": "Built-in Blocking"
+          },
+          {
+            "name": "Custom Blocklists"
+          },
+          {
+            "name": "Regex Support"
+          },
+          {
+            "name": "Allow Lists"
+          },
+          {
+            "name": "Block Stats"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "Split Horizon DNS"
+          },
+          {
+            "name": "DNS Caching"
+          },
+          {
+            "name": "Query Logging"
+          },
+          {
+            "name": "DNS Apps/Plugins"
+          },
+          {
+            "name": "Failover Support"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Zone Templates"
+          },
+          {
+            "name": "Backup/Restore"
+          },
+          {
+            "name": "Multi-user Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "filePath": "projects/note-taking/blinko.mdx",
     "slug": "blinko",
     "name": "Blinko",

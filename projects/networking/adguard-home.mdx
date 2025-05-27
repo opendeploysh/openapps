@@ -1,0 +1,97 @@
+---
+slug: adguard-home
+name: AdGuard Home
+description: |
+  AdGuard Home is a network-wide software for blocking ads and tracking, providing a user-friendly DNS server with comprehensive filtering capabilities and detailed analytics.
+logo: https://avatars.githubusercontent.com/u/8361145?s=200&v=4
+category: networking
+tags: [dns, ad-blocking, privacy, security, filtering]
+github: AdguardTeam/AdGuardHome
+urls:
+  website: https://adguard.com/en/adguard-home/overview.html
+alternatives:
+  selfHosted: [pi-hole, blocky, technitium-dns]
+  nonSelfHosted: [nextdns, cloudflare-dns]
+deployment:
+  difficulty: "Easy"
+  justification: "Single binary or Docker container with web-based setup wizard and minimal configuration."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Network-wide ad blocking
+      - name: Target Use Case
+        value: Home network protection
+      - name: Architecture
+        value: Go + Web UI
+  - name: Filtering
+    features:
+      - name: DNS-based Ad Blocking
+      - name: Tracking Protection
+      - name: Malware Blocking
+      - name: Custom Blocklists
+      - name: Parental Controls
+  - name: DNS Features
+    features:
+      - name: DNS-over-HTTPS
+      - name: DNS-over-TLS
+      - name: DNS-over-QUIC
+      - name: DNSSEC Support
+      - name: Upstream DNS Selection
+  - name: Management
+    features:
+      - name: Web Interface
+      - name: Query Logs
+      - name: Statistics Dashboard
+      - name: Client Management
+      - name: API Access
+  - name: Advanced Features
+    features:
+      - name: Safe Search
+      - name: Custom Filtering Rules
+      - name: Rewrites
+      - name: IPv6 Support
+      - name: DHCP Server
+---
+
+AdGuard Home is a powerful network-wide ad and tracker blocking solution that works as a DNS server. It provides comprehensive protection for all devices on your network without requiring client-side software installation.
+
+## Key Features
+
+- **Comprehensive Blocking**:
+
+  - Network-wide ad blocking
+  - Tracker and analytics blocking
+  - Malware and phishing protection
+  - Adult content filtering
+  - Custom blocklist support
+  - Regex-based filtering
+
+- **Modern DNS Protocols**:
+
+  - DNS-over-HTTPS (DoH)
+  - DNS-over-TLS (DoT)
+  - DNS-over-QUIC (DoQ)
+  - DNSCrypt support
+  - DNSSEC validation
+  - Multiple upstream servers
+
+- **User-Friendly Interface**:
+
+  - Intuitive web dashboard
+  - Real-time query logs
+  - Detailed statistics
+  - Per-client settings
+  - Dark mode support
+  - Mobile-responsive design
+
+- **Advanced Features**:
+  - Built-in DHCP server
+  - Safe Search enforcement
+  - Custom DNS rewrites
+  - Parental control schedules
+  - RESTful API
+  - Automatic updates

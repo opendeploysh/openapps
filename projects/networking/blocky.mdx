@@ -1,0 +1,97 @@
+---
+slug: blocky
+name: blocky
+description: |
+  blocky is a fast and lightweight DNS proxy designed as an ad-blocker for local networks, offering advanced features like conditional forwarding, custom DNS entries, and detailed metrics.
+logo: https://0xerr0r.github.io/blocky/main/blocky.svg
+category: networking
+tags: [dns, ad-blocking, privacy, golang, prometheus]
+github: 0xERR0R/blocky
+urls:
+  website: https://0xerr0r.github.io/blocky/latest/
+alternatives:
+  selfHosted: [pi-hole, adguard-home, technitium-dns]
+  nonSelfHosted: [nextdns, cloudflare-dns]
+deployment:
+  difficulty: "Easy"
+  justification: "Single Go binary or Docker container with YAML configuration, no database required."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Fast DNS ad-blocking
+      - name: Target Use Case
+        value: Local network protection
+      - name: Architecture
+        value: Go + YAML config
+  - name: Blocking Features
+    features:
+      - name: Multiple Blocklists
+      - name: Regex Support
+      - name: Whitelist/Blacklist
+      - name: Client-specific Rules
+      - name: Temporary Disabling
+  - name: DNS Features
+    features:
+      - name: Conditional Forwarding
+      - name: Custom DNS Entries
+      - name: DNS-over-HTTPS
+      - name: DNS-over-TLS
+      - name: Caching
+  - name: Monitoring
+    features:
+      - name: Prometheus Metrics
+      - name: Query Logging
+      - name: Grafana Dashboards
+      - name: Performance Stats
+      - name: API Endpoints
+  - name: Advanced
+    features:
+      - name: Redis Support
+      - name: Multiple Resolvers
+      - name: EDNS Client Subnet
+      - name: Prefetching
+      - name: Parallel Queries
+---
+
+blocky is a DNS proxy and ad-blocker for local networks, designed as a lightweight alternative to Pi-hole. Written in Go, it offers high performance with low resource usage while providing comprehensive ad-blocking and privacy features.
+
+## Key Features
+
+- **Efficient Ad Blocking**:
+
+  - Multiple blocklist support
+  - Automatic list updates
+  - Regex-based blocking
+  - Per-client configurations
+  - Whitelist management
+  - Group-based policies
+
+- **Advanced DNS Features**:
+
+  - Conditional DNS forwarding
+  - Custom DNS mappings
+  - Multiple upstream resolvers
+  - DNS-over-HTTPS/TLS support
+  - Intelligent caching
+  - Query prefetching
+
+- **Monitoring & Analytics**:
+
+  - Prometheus metrics export
+  - Detailed query logging
+  - Ready-made Grafana dashboards
+  - Performance statistics
+  - REST API for integration
+  - Real-time monitoring
+
+- **Flexible Configuration**:
+  - YAML-based configuration
+  - Hot-reload support
+  - Redis cache backend
+  - Client group management
+  - Scheduled blocking
+  - Easy Docker deployment
