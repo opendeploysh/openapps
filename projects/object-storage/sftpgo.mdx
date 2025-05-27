@@ -1,0 +1,94 @@
+---
+slug: sftpgo
+name: SFTPGo
+description: |
+  SFTPGo is a full-featured and highly configurable file transfer solution supporting SFTP, HTTP/S, FTP/S, and WebDAV protocols with multiple storage backends including local filesystem, S3, Google Cloud Storage, and Azure Blob Storage.
+logo: https://sftpgo.com/assets/img/logo.png
+category: object-storage
+tags: [storage, sftp, ftp, webdav, s3]
+github: drakkan/sftpgo
+urls:
+  website: https://sftpgo.com
+alternatives:
+  selfHosted: [minio, seaweedfs, ceph, garage]
+  nonSelfHosted: [aws-s3, google-cloud-storage, azure-blob-storage]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires configuration but has good documentation and container support."
+license: AGPL-3.0
+pricingModel: Open-Core
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Multi-protocol file transfer service
+      - name: Target Use Case
+        value: Secure file transfer and storage
+      - name: Architecture
+        value: Go-based modular system
+  - name: Protocol Support
+    features:
+      - name: SFTP server
+      - name: FTP/S server
+      - name: HTTP/S server
+      - name: WebDAV server
+      - name: Multi-factor auth
+      - name: Proxy protocol
+  - name: Storage Features
+    features:
+      - name: Local filesystem
+      - name: S3 compatibility
+      - name: Google Cloud Storage
+      - name: Azure Blob Storage
+      - name: Data encryption
+      - name: Virtual folders
+  - name: Management
+    features:
+      - name: Web admin UI
+      - name: Web client UI
+      - name: REST API
+      - name: Prometheus metrics
+      - name: Audit logging
+      - name: Access control
+---
+
+SFTPGo is a versatile file transfer solution that supports multiple protocols and storage backends. It provides a modern web interface for administration and file management while offering enterprise features like encryption and access control.
+
+## Key Features
+
+- **Protocol Support**:
+
+  - SFTP server implementation
+  - FTP/S server capabilities
+  - HTTP/S file server
+  - WebDAV interface
+  - Multi-factor authentication
+  - Proxy protocol support
+
+- **Storage Options**:
+
+  - Local filesystem storage
+  - S3-compatible backends
+  - Google Cloud Storage
+  - Azure Blob Storage
+  - Data-at-rest encryption
+  - Virtual folder mapping
+
+- **Management Features**:
+
+  - Web-based admin interface
+  - User-friendly file manager
+  - REST API access
+  - Prometheus metrics
+  - Detailed audit logs
+  - Role-based access control
+
+- **Security Features**:
+  - Two-factor authentication
+  - Data encryption
+  - Access controls
+  - IP filtering
+  - Password policies
+  - Audit trail

@@ -1,0 +1,93 @@
+---
+slug: juicefs
+name: JuiceFS
+description: |
+  JuiceFS is a high-performance POSIX file system designed for cloud-native environments. It stores data in object storage with metadata in databases like Redis/MySQL, offering full POSIX/Hadoop compatibility and enterprise features.
+logo: https://avatars.githubusercontent.com/u/71220596?s=64&v=4
+category: file-storage
+tags: [storage, posix, file-storage]
+github: juicedata/juicefs
+urls:
+  website: https://juicefs.com
+alternatives:
+  selfHosted: [minio, seaweedfs, ceph]
+  nonSelfHosted: [aws-s3, google-cloud-storage, azure-blob-storage]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires setting up metadata engine and object storage but has good documentation and container support."
+license: Apache-2.0
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Cloud-native distributed file system
+      - name: Target Use Case
+        value: Cloud-native and big data workloads
+      - name: Architecture
+        value: Go-based with Redis/MySQL metadata
+  - name: Storage Features
+    features:
+      - name: POSIX compatibility
+      - name: S3 gateway
+      - name: Data compression
+      - name: Data encryption
+      - name: Global file locks
+      - name: Strong consistency
+  - name: Integration
+    features:
+      - name: Kubernetes CSI driver
+      - name: Hadoop compatibility
+      - name: Docker support
+      - name: Multi-client access
+      - name: Cloud storage support
+      - name: Redis/MySQL metadata
+  - name: Performance
+    features:
+      - name: Low latency
+      - name: High throughput
+      - name: Client caching
+      - name: Parallel operations
+      - name: Metadata optimization
+---
+
+JuiceFS is a high-performance distributed file system that bridges cloud object storage with local file system access. It provides POSIX-compatible file access while storing data in object storage and metadata in databases like Redis or MySQL.
+
+## Key Features
+
+- **File System Capabilities**:
+
+  - Full POSIX compatibility
+  - Global file locking
+  - Strong consistency
+  - Data compression
+  - Encryption support
+  - Client-side caching
+
+- **Cloud Integration**:
+
+  - S3-compatible gateway
+  - Kubernetes CSI driver
+  - Hadoop compatibility
+  - Docker support
+  - Multiple cloud storage support
+  - Distributed architecture
+
+- **Performance Features**:
+
+  - Low latency access
+  - High throughput
+  - Parallel operations
+  - Client caching
+  - Metadata optimization
+  - Scalable architecture
+
+- **Enterprise Features**:
+  - Access control
+  - Audit logging
+  - Monitoring support
+  - Multi-user access
+  - Data durability
+  - Disaster recovery

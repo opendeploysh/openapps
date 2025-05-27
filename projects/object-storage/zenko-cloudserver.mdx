@@ -1,0 +1,94 @@
+---
+slug: zenko-cloudserver
+name: Zenko CloudServer
+description: |
+  Zenko CloudServer is an open-source Amazon S3-compatible object storage server that provides a unified S3 API interface to access multiple backend storage systems, both on-premise and in public clouds.
+logo: https://avatars.githubusercontent.com/u/383812?s=64&v=4
+category: object-storage
+tags: [storage, s3, object-storage, cloud-native]
+github: scality/cloudserver
+urls:
+  website: https://www.zenko.io/cloudserver
+alternatives:
+  selfHosted: [minio, seaweedfs, ceph]
+  nonSelfHosted: [aws-s3, google-cloud-storage, azure-blob-storage]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires configuration but has good documentation and container support."
+license: Apache-2.0
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Multi-backend object storage
+      - name: Target Use Case
+        value: Cloud storage abstraction layer
+      - name: Architecture
+        value: Node.js-based S3 server
+  - name: Storage Features
+    features:
+      - name: S3 API compatibility
+      - name: Multi-backend support
+      - name: Location constraints
+      - name: Data replication
+      - name: Bucket versioning
+      - name: Object lifecycle
+  - name: Backend Support
+    features:
+      - name: Local filesystem
+      - name: AWS S3
+      - name: Azure Blob Storage
+      - name: Google Cloud Storage
+      - name: In-memory storage
+      - name: Multiple backends
+  - name: Enterprise Features
+    features:
+      - name: Identity management
+      - name: Access control
+      - name: Monitoring
+      - name: Docker support
+      - name: Vault integration
+      - name: CI/CD friendly
+---
+
+Zenko CloudServer is an open-source S3-compatible object storage server that provides a unified interface to multiple backend storage systems. It's particularly useful for developers needing local S3 emulation or as an abstraction layer for multi-cloud storage applications.
+
+## Key Features
+
+- **S3 Compatibility**:
+
+  - Full S3 API support
+  - Bucket operations
+  - Object lifecycle management
+  - Versioning support
+  - Access control
+  - Location constraints
+
+- **Backend Support**:
+
+  - Local filesystem storage
+  - AWS S3 backend
+  - Azure Blob Storage
+  - Google Cloud Storage
+  - In-memory storage
+  - Multi-backend capability
+
+- **Developer Features**:
+
+  - Docker integration
+  - CI/CD environment support
+  - Local development
+  - Easy configuration
+  - Comprehensive documentation
+  - Active community
+
+- **Enterprise Capabilities**:
+  - Identity management
+  - Vault integration
+  - Monitoring support
+  - Multi-tenant support
+  - Backend abstraction
+  - Scalable architecture

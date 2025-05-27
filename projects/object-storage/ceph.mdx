@@ -1,0 +1,92 @@
+---
+slug: ceph
+name: Ceph
+description: |
+  Ceph is a highly scalable distributed storage system providing object, block, and file storage in a unified platform. It's designed for performance, reliability and scalability from terabytes to exabytes.
+logo: https://avatars.githubusercontent.com/u/1015767?s=64&v=4
+category: object-storage
+tags: [storage, distributed-storage, object-storage, block-storage, file-storage]
+github: ceph/ceph
+urls:
+  website: https://ceph.io
+alternatives:
+  selfHosted: [minio, seaweedfs, garage]
+  nonSelfHosted: [aws-s3, google-cloud-storage, azure-blob-storage]
+deployment:
+  difficulty: "Advanced"
+  justification: "Complex distributed system requiring careful planning and expertise to deploy and maintain."
+license: LGPL-2.1/3.0
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Unified distributed storage
+      - name: Target Use Case
+        value: Large-scale storage infrastructure
+      - name: Architecture
+        value: C++/Python distributed system
+  - name: Storage Types
+    features:
+      - name: Object storage (RADOS)
+      - name: Block storage (RBD)
+      - name: File storage (CephFS)
+      - name: S3/Swift compatibility
+      - name: NFS/SMB gateways
+      - name: iSCSI support
+  - name: Scalability
+    features:
+      - name: Horizontal scaling
+      - name: Automatic rebalancing
+      - name: No single point of failure
+      - name: Multi-site replication
+      - name: Erasure coding
+  - name: Enterprise Features
+    features:
+      - name: Monitoring & metrics
+      - name: Disaster recovery
+      - name: Data encryption
+      - name: Access control
+      - name: Audit logging
+---
+
+Ceph is a highly scalable, software-defined storage platform that provides object, block, and file storage capabilities in a single unified system. It's designed to be self-healing and self-managing, with no single point of failure.
+
+## Key Features
+
+- **Storage Types**:
+
+  - RADOS object storage
+  - RBD block storage
+  - CephFS file system
+  - S3/Swift compatibility
+  - NFS/SMB gateways
+  - iSCSI target support
+
+- **Scalability & Performance**:
+
+  - Horizontal scaling
+  - Automatic data rebalancing
+  - No single point of failure
+  - Multi-site replication
+  - Erasure coding
+  - BlueStore storage backend
+
+- **Management & Monitoring**:
+
+  - Built-in monitoring
+  - Self-healing capabilities
+  - Automated recovery
+  - Comprehensive metrics
+  - Dashboard interface
+  - CLI tools
+
+- **Enterprise Features**:
+  - Data encryption
+  - Access control
+  - Audit logging
+  - Snapshot support
+  - Disaster recovery
+  - Multi-tenancy

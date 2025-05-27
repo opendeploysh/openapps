@@ -1,0 +1,86 @@
+---
+slug: garage
+name: Garage
+description: |
+  Garage is an S3-compatible distributed object storage service designed for self-hosting at small-to-medium scale. It focuses on geo-distributed deployments with data replication across multiple physical locations.
+logo: https://garagehq.deuxfleurs.fr/favicon.ico
+category: object-storage
+tags: [storage, s3, object-storage, distributed]
+github: deuxfleurs-org/garage
+urls:
+  website: https://garagehq.deuxfleurs.fr
+alternatives:
+  selfHosted: [minio, seaweedfs, ceph]
+  nonSelfHosted: [aws-s3, google-cloud-storage, azure-blob-storage]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires understanding of distributed systems but has good documentation and container support."
+license: AGPL-3.0
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Distributed object storage
+      - name: Target Use Case
+        value: Small to medium scale self-hosting
+      - name: Architecture
+        value: Rust-based distributed system
+  - name: Storage Features
+    features:
+      - name: S3 API compatibility
+      - name: Data replication
+      - name: Geo-distribution
+      - name: High availability
+      - name: Bucket management
+      - name: Object versioning
+  - name: Operational
+    features:
+      - name: Lightweight design
+      - name: Easy maintenance
+      - name: Failure resilience
+      - name: Multi-location support
+      - name: Monitoring capabilities
+      - name: Command-line tools
+---
+
+Garage is a lightweight, S3-compatible distributed object storage system optimized for self-hosted deployments across multiple physical locations. It emphasizes ease of operation and resilience to machine failures while maintaining data availability.
+
+## Key Features
+
+- **Storage Capabilities**:
+
+  - Full S3 API compatibility
+  - Multi-location data replication
+  - Bucket management
+  - Object versioning
+  - High availability design
+  - Failure resilience
+
+- **Distributed Architecture**:
+
+  - Geo-distributed deployment
+  - Cross-location replication
+  - Location-aware routing
+  - Consensus-based coordination
+  - Partition tolerance
+  - Network resilience
+
+- **Operational Benefits**:
+
+  - Lightweight resource usage
+  - Simple maintenance
+  - Built-in monitoring
+  - Command-line tools
+  - Container support
+  - Easy scaling
+
+- **Deployment Options**:
+  - Bare metal installation
+  - Container deployment
+  - Multi-node clustering
+  - Cross-datacenter setup
+  - Development environments
+  - Production workloads

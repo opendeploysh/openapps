@@ -1,0 +1,92 @@
+---
+slug: minio
+name: MinIO
+description: |
+  MinIO is a high-performance, S3-compatible object storage solution designed for AI/ML workloads. It offers industry-leading performance, scalability, and enterprise features while remaining open source under the AGPL license.
+logo: https://avatars.githubusercontent.com/u/695951?s=64&v=4
+category: object-storage
+tags: [storage, s3, object-storage, cloud-native]
+github: minio/minio
+urls:
+  website: https://min.io
+alternatives:
+  selfHosted: [seaweedfs, ceph]
+  nonSelfHosted: [aws-s3, google-cloud-storage, azure-blob-storage]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires proper configuration but has good documentation and container support."
+license: AGPL-3.0
+pricingModel: Open-Core
+hostingType: Hybrid
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: High-performance object storage
+      - name: Target Use Case
+        value: AI/ML and data-intensive workloads
+      - name: Architecture
+        value: Go-based distributed system
+  - name: Storage Features
+    features:
+      - name: S3 API compatibility
+      - name: Erasure coding
+      - name: Object versioning
+      - name: Object locking
+      - name: Bucket replication
+      - name: Encryption at rest
+  - name: Performance
+    features:
+      - name: High throughput
+      - name: Low latency
+      - name: Parallel operations
+      - name: Optimized for AI/ML
+      - name: Scalable architecture
+  - name: Enterprise Features
+    features:
+      - name: Identity management
+      - name: Multi-site replication
+      - name: Monitoring & metrics
+      - name: Audit logging
+      - name: Console UI
+---
+
+MinIO is a high-performance object storage solution built for cloud-native workloads, particularly AI/ML and analytics. It provides S3-compatible APIs while delivering industry-leading performance and enterprise features.
+
+## Key Features
+
+- **Storage Capabilities**:
+
+  - Full S3 API compatibility
+  - Erasure coding for data protection
+  - Object versioning and locking
+  - Bucket replication
+  - Encryption at rest
+  - Multi-site deployment
+
+- **Performance Features**:
+
+  - High-throughput architecture
+  - Optimized for AI/ML workloads
+  - Parallel operations
+  - Scalable distributed system
+  - Low latency access
+  - Direct memory access
+
+- **Enterprise Tools**:
+
+  - Web-based Console UI
+  - Identity management
+  - Audit logging
+  - Monitoring & metrics
+  - Multi-tenant support
+  - Role-based access control
+
+- **Deployment Options**:
+  - Bare metal installation
+  - Container deployment
+  - Kubernetes integration
+  - Multi-node clustering
+  - Cloud deployment
+  - Air-gapped environments
