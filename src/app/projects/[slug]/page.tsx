@@ -117,7 +117,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const mdxData = await useCompileFromSlug(project.filePath)
 
   // Determine the project file path based on category and slug
-  const projectFilePath = `projects/${project.category.toLowerCase().replace(/\s+/g, "-")}/${slug}.mdx`
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
@@ -133,8 +132,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </Link>
 
           <div className="flex gap-2">
-            <GitHubViewButton filePath={projectFilePath} variant="ghost" size="sm" />
-            <GitHubEditButton filePath={projectFilePath} variant="outline" size="sm">
+            <GitHubViewButton filePath={project.filePath} variant="ghost" size="sm" />
+            <GitHubEditButton filePath={project.filePath} variant="outline" size="sm">
               Improve this page
             </GitHubEditButton>
           </div>
@@ -167,7 +166,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 GitHub.
               </p>
               <GitHubEditButton
-                filePath={projectFilePath}
+                filePath={project.filePath}
                 variant="default"
                 size="sm"
                 className="bg-blue-600 hover:bg-blue-700 text-white"
