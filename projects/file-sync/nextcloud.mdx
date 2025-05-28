@@ -1,0 +1,141 @@
+---
+slug: nextcloud
+name: Nextcloud
+description: |
+  Nextcloud is a comprehensive file hosting and collaboration platform that allows you to access and share your files, calendars, contacts, mail and more from any device, on your terms. It provides a secure, private cloud solution with extensive app ecosystem.
+category: file-sync
+tags: [file-sharing, cloud, collaboration, calendar, contacts]
+github: nextcloud/server
+urls:
+  website: https://nextcloud.com/
+  demo: https://try.nextcloud.com/
+alternatives:
+  selfHosted: [owncloud, seafile, pydio]
+  nonSelfHosted: [google-drive, dropbox, onedrive]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires web server setup (Apache/Nginx) and database configuration, but has good documentation and multiple installation methods."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: File hosting and collaboration platform
+      - name: Target Use Case
+        value: Personal and business file storage
+      - name: Architecture
+        value: PHP + MySQL/PostgreSQL + Apache/Nginx
+  - name: File Management
+    features:
+      - name: File Sync & Share
+      - name: Version Control
+      - name: Collaborative Editing
+      - name: File Comments
+      - name: External Storage
+  - name: Collaboration
+    features:
+      - name: Calendar & Contacts
+      - name: Mail Integration
+      - name: Talk (Video Chat)
+      - name: Deck (Kanban)
+      - name: Group Management
+  - name: Security & Privacy
+    features:
+      - name: End-to-End Encryption
+      - name: Two-Factor Auth
+      - name: File Access Control
+      - name: Audit Logging
+      - name: GDPR Compliance
+  - name: Integration
+    features:
+      - name: LDAP/AD Support
+      - name: SSO Integration
+      - name: WebDAV/CalDAV
+      - name: API Access
+      - name: Mobile Apps
+  - name: Apps & Extensions
+    features:
+      - name: App Store
+      - name: Office Integration
+      - name: Media Streaming
+      - name: Backup Solutions
+      - name: Custom Apps
+---
+
+Nextcloud is a powerful, open-source file hosting and collaboration platform that puts you in control of your data. Originally forked from ownCloud in 2016, Nextcloud has evolved into a comprehensive solution that combines file storage, sharing, and synchronization with a rich ecosystem of collaborative tools and applications.
+
+## Key Features
+
+- **File Storage & Sync**:
+
+  - Cross-platform file synchronization
+  - Selective sync capabilities
+  - Version history and file recovery
+  - Collaborative file editing
+  - File sharing with permissions
+  - External storage integration
+
+- **Collaboration Tools**:
+
+  - Calendar and contact management
+  - Mail client integration
+  - Video conferencing (Nextcloud Talk)
+  - Project management (Nextcloud Deck)
+  - Real-time document collaboration
+  - Team workspaces
+
+- **Security & Privacy**:
+
+  - End-to-end encryption
+  - Server-side encryption
+  - Two-factor authentication
+  - Brute force protection
+  - File access control
+  - Activity monitoring and audit logs
+
+- **Communication**:
+
+  - Built-in chat and video calls
+  - Screen sharing capabilities
+  - Voice messages
+  - File sharing in conversations
+  - Integration with external chat systems
+  - Mobile push notifications
+
+- **Office & Productivity**:
+
+  - Online office suite (Collabora/OnlyOffice)
+  - Document templates
+  - Form builder
+  - Note-taking applications
+  - Password manager integration
+  - Bookmark management
+
+- **Enterprise Features**:
+
+  - LDAP/Active Directory integration
+  - Single sign-on (SSO) support
+  - Group and user management
+  - Quota management
+  - Compliance and governance tools
+  - Enterprise support options
+
+- **Extensibility**:
+  - Rich app ecosystem (200+ apps)
+  - Custom app development
+  - Theming and branding
+  - Workflow automation
+  - Third-party integrations
+  - API for custom solutions
+
+## Technical Specifications
+
+- **Backend**: PHP with Symfony components
+- **Database**: MySQL, MariaDB, PostgreSQL, SQLite
+- **Web Server**: Apache HTTP Server or Nginx
+- **Frontend**: Vue.js and JavaScript
+- **Mobile**: Native iOS and Android apps
+- **Desktop**: Cross-platform sync clients
+- **Standards**: WebDAV, CalDAV, CardDAV, LDAP

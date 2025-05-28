@@ -1,0 +1,158 @@
+---
+slug: openssh-sftp
+name: OpenSSH SFTP Server
+description: |
+  OpenSSH SFTP server is a secure file transfer protocol implementation that provides encrypted file transfer capabilities over SSH. It offers a reliable, standardized method for secure file transfer and remote file system access with strong authentication and encryption.
+category: file-sync
+tags: [sftp, ssh, secure, file-transfer, protocol]
+github: openssh/openssh-portable
+urls:
+  website: https://www.openssh.com/
+alternatives:
+  selfHosted: [vsftpd, proftpd, pure-ftpd]
+  nonSelfHosted: [aws-sftp, azure-sftp, google-cloud-sftp]
+deployment:
+  difficulty: "Easy"
+  justification: "Built into most Unix-like systems, simple configuration, and well-documented setup process."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Secure file transfer protocol
+      - name: Target Use Case
+        value: Secure file transfer and remote access
+      - name: Architecture
+        value: C + SSH protocol + Unix/Linux
+  - name: Security
+    features:
+      - name: SSH Encryption
+      - name: Public Key Auth
+      - name: Password Auth
+      - name: Host Key Verification
+      - name: Secure Channels
+  - name: File Operations
+    features:
+      - name: File Upload/Download
+      - name: Directory Navigation
+      - name: File Permissions
+      - name: Symbolic Links
+      - name: File Attributes
+  - name: Authentication
+    features:
+      - name: SSH Keys
+      - name: Password-based
+      - name: Certificate Auth
+      - name: Multi-factor Auth
+      - name: Chroot Jails
+  - name: Protocol Features
+    features:
+      - name: Resume Transfers
+      - name: Batch Operations
+      - name: Compression
+      - name: Bandwidth Limiting
+      - name: Connection Multiplexing
+  - name: Administration
+    features:
+      - name: User Management
+      - name: Access Control
+      - name: Logging
+      - name: Configuration
+      - name: Monitoring
+---
+
+OpenSSH SFTP (SSH File Transfer Protocol) server is a secure, reliable file transfer solution that operates over the SSH protocol. As part of the OpenSSH suite, it provides encrypted file transfer capabilities with strong authentication mechanisms, making it the standard choice for secure file transfer in enterprise and personal environments.
+
+## Key Features
+
+- **Security & Encryption**:
+
+  - Strong SSH encryption (AES, ChaCha20, etc.)
+  - Public key authentication
+  - Host key verification
+  - Perfect forward secrecy
+  - Secure channel establishment
+  - Protection against man-in-the-middle attacks
+
+- **Authentication Methods**:
+
+  - SSH public/private key pairs
+  - Password-based authentication
+  - Certificate-based authentication
+  - Multi-factor authentication support
+  - Kerberos integration
+  - LDAP authentication backends
+
+- **File Transfer Operations**:
+
+  - Secure file upload and download
+  - Directory listing and navigation
+  - File and directory creation/deletion
+  - Permission and ownership management
+  - Symbolic link support
+  - File attribute preservation
+
+- **Protocol Capabilities**:
+
+  - Resume interrupted transfers
+  - Batch file operations
+  - Data compression
+  - Bandwidth throttling
+  - Connection multiplexing
+  - Large file support
+
+- **Access Control**:
+
+  - User-based access restrictions
+  - Chroot jail environments
+  - Directory-level permissions
+  - IP-based access control
+  - Time-based restrictions
+  - Command restrictions
+
+- **Administration & Monitoring**:
+
+  - Comprehensive logging
+  - Connection monitoring
+  - User session tracking
+  - Configuration management
+  - Performance metrics
+  - Security auditing
+
+- **Platform Support**:
+  - Native Unix/Linux support
+  - Windows compatibility (via clients)
+  - Cross-platform file transfer
+  - Integration with system users
+  - Service management
+  - Automated startup
+
+## Technical Specifications
+
+- **Language**: C
+- **Protocol**: SSH File Transfer Protocol (SFTP)
+- **Encryption**: AES, ChaCha20, 3DES, and others
+- **Authentication**: SSH keys, passwords, certificates
+- **Platforms**: Unix, Linux, macOS, Windows (via WSL)
+- **Port**: 22 (SSH) or custom
+- **Standards**: RFC 4251-4254, draft-ietf-secsh-filexfer
+
+## Use Cases
+
+- **Secure File Transfer**: Encrypted file transfer between systems
+- **Remote File Access**: Secure remote file system access
+- **Backup Solutions**: Secure backup file transfers
+- **Web Development**: Secure deployment and file management
+- **System Administration**: Secure file distribution and management
+- **Automated Scripts**: Secure file transfer in automation workflows
+
+## Unique Advantages
+
+- **Industry Standard**: Widely adopted and supported protocol
+- **Built-in Security**: Strong encryption and authentication by default
+- **Universal Support**: Available on virtually all Unix-like systems
+- **Mature and Stable**: Decades of development and security testing
+- **No Additional Software**: Often pre-installed on systems
+- **Firewall Friendly**: Uses single port (22) for all operations

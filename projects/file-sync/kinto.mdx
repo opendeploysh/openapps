@@ -1,0 +1,158 @@
+---
+slug: kinto
+name: Kinto
+description: |
+  Kinto is a minimalist JSON storage service with synchronization and sharing abilities. It provides a lightweight, schema-less storage solution with built-in synchronization capabilities, making it ideal for applications that need simple data storage and sync.
+category: file-sync
+tags: [json, storage, sync, api, python]
+github: Kinto/kinto
+urls:
+  website: https://kinto.readthedocs.org
+alternatives:
+  selfHosted: [couchdb, pouchdb, firebase-realtime]
+  nonSelfHosted: [firebase, supabase, aws-dynamodb]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple Python application with minimal dependencies and straightforward configuration."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: JSON storage with synchronization
+      - name: Target Use Case
+        value: Applications needing simple data sync
+      - name: Architecture
+        value: Python + REST API + PostgreSQL/Redis
+  - name: Storage
+    features:
+      - name: JSON Documents
+      - name: Schema-less Storage
+      - name: Collections
+      - name: Records Management
+      - name: Metadata Support
+  - name: Synchronization
+    features:
+      - name: Real-time Sync
+      - name: Conflict Resolution
+      - name: Offline Support
+      - name: Delta Updates
+      - name: Batch Operations
+  - name: API Features
+    features:
+      - name: REST API
+      - name: HTTP Caching
+      - name: Pagination
+      - name: Filtering
+      - name: Sorting
+  - name: Security
+    features:
+      - name: Authentication
+      - name: Authorization
+      - name: Permissions
+      - name: CORS Support
+      - name: Rate Limiting
+  - name: Administration
+    features:
+      - name: Web Admin
+      - name: Monitoring
+      - name: Logging
+      - name: Backup/Restore
+      - name: Multi-tenancy
+---
+
+Kinto is a lightweight, minimalist JSON storage service designed for applications that need simple data storage with built-in synchronization capabilities. It provides a RESTful API for storing and retrieving JSON documents while handling synchronization, conflict resolution, and offline scenarios automatically.
+
+## Key Features
+
+- **JSON Storage**:
+
+  - Schema-less JSON document storage
+  - Flexible data structures
+  - Collection-based organization
+  - Record versioning and history
+  - Metadata and timestamps
+  - Efficient data retrieval
+
+- **Synchronization Engine**:
+
+  - Real-time data synchronization
+  - Automatic conflict resolution
+  - Offline-first architecture
+  - Delta synchronization
+  - Batch operations support
+  - Multi-device sync
+
+- **RESTful API**:
+
+  - Clean, intuitive REST API
+  - HTTP caching support
+  - Pagination for large datasets
+  - Advanced filtering and sorting
+  - Bulk operations
+  - JSON Schema validation
+
+- **Authentication & Security**:
+
+  - Pluggable authentication backends
+  - Fine-grained permissions
+  - User and group management
+  - CORS support for web apps
+  - Rate limiting and throttling
+  - Secure token-based auth
+
+- **Data Management**:
+
+  - Collection and record management
+  - Data validation and constraints
+  - Automatic timestamping
+  - Soft deletion and recovery
+  - Data export and import
+  - Backup and restore tools
+
+- **Developer Experience**:
+
+  - Simple setup and configuration
+  - Comprehensive documentation
+  - Client libraries for multiple languages
+  - WebSocket support for real-time updates
+  - Debugging and monitoring tools
+  - Plugin architecture
+
+- **Scalability & Performance**:
+  - Horizontal scaling support
+  - Efficient database backends
+  - Caching mechanisms
+  - Connection pooling
+  - Performance monitoring
+  - Load balancing ready
+
+## Technical Specifications
+
+- **Backend**: Python with Pyramid framework
+- **Database**: PostgreSQL, Redis, Memory
+- **API**: RESTful HTTP API
+- **Authentication**: Multiple backends (Basic, OAuth, etc.)
+- **Storage**: JSON documents with metadata
+- **Caching**: HTTP caching headers
+- **Deployment**: Docker, pip, various platforms
+
+## Use Cases
+
+- **Mobile Applications**: Offline-first mobile apps with data sync
+- **Web Applications**: Real-time collaborative web applications
+- **IoT Devices**: Sensor data collection and synchronization
+- **Configuration Management**: Application settings and preferences
+- **Content Management**: Simple CMS with synchronization needs
+- **Prototyping**: Rapid application development with data storage
+
+## Unique Advantages
+
+- **Minimalist Design**: Simple, focused on core synchronization needs
+- **Offline-First**: Built-in support for offline scenarios and sync
+- **Language Agnostic**: REST API works with any programming language
+- **Lightweight**: Minimal resource requirements and dependencies
+- **Conflict Resolution**: Automatic handling of data conflicts
+- **Developer Friendly**: Easy to integrate and extend

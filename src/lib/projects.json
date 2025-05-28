@@ -10508,6 +10508,159 @@
     ]
   },
   {
+    "filePath": "projects/document-management/evergreen.mdx",
+    "slug": "evergreen",
+    "name": "Evergreen",
+    "description": "Evergreen is a highly-scalable integrated library system (ILS) software that helps library patrons find library materials and helps libraries manage, catalog, and circulate those materials. Designed for consortial use and large library systems.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "ils",
+    "tags": [
+      "library",
+      "ils",
+      "catalog",
+      "circulation",
+      "acquisitions"
+    ],
+    "github": "evergreen-library-system/Evergreen",
+    "urls": {
+      "website": "https://evergreen-ils.org"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "koha",
+        "rero-ils"
+      ],
+      "nonSelfHosted": [
+        "oclc-worldshare",
+        "sirsi-dynix"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex enterprise system requiring PostgreSQL, specialized configuration, and library science knowledge."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Integrated library system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Libraries and library consortiums"
+          },
+          {
+            "name": "Architecture",
+            "value": "PostgreSQL + Perl + JavaScript"
+          }
+        ]
+      },
+      {
+        "name": "Catalog Management",
+        "features": [
+          {
+            "name": "MARC Cataloging"
+          },
+          {
+            "name": "Authority Control"
+          },
+          {
+            "name": "Bibliographic Records"
+          },
+          {
+            "name": "Holdings Management"
+          },
+          {
+            "name": "Item Records"
+          }
+        ]
+      },
+      {
+        "name": "Circulation",
+        "features": [
+          {
+            "name": "Patron Management"
+          },
+          {
+            "name": "Check-in/Check-out"
+          },
+          {
+            "name": "Holds Management"
+          },
+          {
+            "name": "Fine Management"
+          },
+          {
+            "name": "Renewal System"
+          }
+        ]
+      },
+      {
+        "name": "Public Interface",
+        "features": [
+          {
+            "name": "OPAC (Online Catalog)"
+          },
+          {
+            "name": "Advanced Search"
+          },
+          {
+            "name": "Patron Self-Service"
+          },
+          {
+            "name": "Mobile Interface"
+          },
+          {
+            "name": "Accessibility Features"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "Acquisitions Module"
+          },
+          {
+            "name": "Serials Management"
+          },
+          {
+            "name": "Reports & Statistics"
+          },
+          {
+            "name": "Multi-library Support"
+          },
+          {
+            "name": "Consortial Features"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Z39.50 Support"
+          },
+          {
+            "name": "SIP2 Protocol"
+          },
+          {
+            "name": "LDAP Authentication"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Third-party Integrations"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "filePath": "projects/document-management/everydocs.mdx",
     "slug": "everydocs",
     "name": "EveryDocs",
@@ -10779,6 +10932,200 @@
           },
           {
             "name": "Remote Access"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/document-management/koha.mdx",
+    "slug": "koha",
+    "name": "Koha",
+    "description": "Koha is the world's first free and open-source integrated library system (ILS). It provides enterprise-class features including acquisitions, circulation, cataloging, label printing, offline circulation, and comprehensive patron management for libraries of all sizes.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "ils",
+    "tags": [
+      "library",
+      "ils",
+      "catalog",
+      "circulation",
+      "open-source"
+    ],
+    "github": "Koha-Community/Koha",
+    "urls": {
+      "website": "https://koha-community.org/",
+      "demo": "https://koha-community.org/demo/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "evergreen",
+        "rero-ils"
+      ],
+      "nonSelfHosted": [
+        "oclc-worldshare",
+        "sirsi-dynix"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Well-documented with good community support, but requires LAMP stack setup and library-specific configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Integrated library system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Libraries of all sizes"
+          },
+          {
+            "name": "Architecture",
+            "value": "Perl + MySQL/MariaDB + Apache"
+          }
+        ]
+      },
+      {
+        "name": "Cataloging",
+        "features": [
+          {
+            "name": "MARC21 Support"
+          },
+          {
+            "name": "UNIMARC Support"
+          },
+          {
+            "name": "Authority Records"
+          },
+          {
+            "name": "Z39.50 Integration"
+          },
+          {
+            "name": "Batch Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Circulation",
+        "features": [
+          {
+            "name": "Patron Management"
+          },
+          {
+            "name": "Check-out/Check-in"
+          },
+          {
+            "name": "Holds & Reserves"
+          },
+          {
+            "name": "Fines & Fees"
+          },
+          {
+            "name": "Offline Circulation"
+          }
+        ]
+      },
+      {
+        "name": "Acquisitions",
+        "features": [
+          {
+            "name": "Order Management"
+          },
+          {
+            "name": "Vendor Management"
+          },
+          {
+            "name": "Budget Tracking"
+          },
+          {
+            "name": "Receiving"
+          },
+          {
+            "name": "Invoice Processing"
+          }
+        ]
+      },
+      {
+        "name": "Serials",
+        "features": [
+          {
+            "name": "Subscription Management"
+          },
+          {
+            "name": "Issue Tracking"
+          },
+          {
+            "name": "Claiming"
+          },
+          {
+            "name": "Routing Lists"
+          },
+          {
+            "name": "Prediction Patterns"
+          }
+        ]
+      },
+      {
+        "name": "Public Interface",
+        "features": [
+          {
+            "name": "OPAC"
+          },
+          {
+            "name": "Self-Service"
+          },
+          {
+            "name": "Mobile Interface"
+          },
+          {
+            "name": "Social Features"
+          },
+          {
+            "name": "Multi-language"
+          }
+        ]
+      },
+      {
+        "name": "Reports & Tools",
+        "features": [
+          {
+            "name": "SQL Reports"
+          },
+          {
+            "name": "Guided Reports"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "Label Printing"
+          },
+          {
+            "name": "Barcode Generation"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "Multi-branch Support"
+          },
+          {
+            "name": "User Permissions"
+          },
+          {
+            "name": "System Preferences"
+          },
+          {
+            "name": "News & Announcements"
+          },
+          {
+            "name": "Calendar Management"
           }
         ]
       }
@@ -11348,6 +11695,200 @@
           },
           {
             "name": "QR Code Sharing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/document-management/rero-ils.mdx",
+    "slug": "rero-ils",
+    "name": "RERO ILS",
+    "description": "RERO ILS is a large-scale integrated library system that can be run as a service with consortial features, intended primarily for library networks. It includes most standard modules (circulation, acquisitions, cataloging) and provides both web-based public and professional interfaces.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "ils",
+    "tags": [
+      "library",
+      "ils",
+      "consortium",
+      "catalog",
+      "modern"
+    ],
+    "github": "rero/rero-ils",
+    "urls": {
+      "website": "https://rero21.ch/",
+      "demo": "https://ils.test.rero.ch/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "koha",
+        "evergreen"
+      ],
+      "nonSelfHosted": [
+        "oclc-worldshare",
+        "sirsi-dynix"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Modern containerized system but requires Docker expertise, Elasticsearch, and complex configuration for consortial features."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Consortial library system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Library networks and consortiums"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Flask + Elasticsearch + Docker"
+          }
+        ]
+      },
+      {
+        "name": "Modern Interface",
+        "features": [
+          {
+            "name": "Angular Frontend"
+          },
+          {
+            "name": "Responsive Design"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Real-time Updates"
+          },
+          {
+            "name": "Progressive Web App"
+          }
+        ]
+      },
+      {
+        "name": "Cataloging",
+        "features": [
+          {
+            "name": "MARC21 Support"
+          },
+          {
+            "name": "RDA Cataloging"
+          },
+          {
+            "name": "Authority Control"
+          },
+          {
+            "name": "Linked Data Ready"
+          },
+          {
+            "name": "Import/Export Tools"
+          }
+        ]
+      },
+      {
+        "name": "Circulation",
+        "features": [
+          {
+            "name": "Patron Management"
+          },
+          {
+            "name": "Loan Management"
+          },
+          {
+            "name": "Request System"
+          },
+          {
+            "name": "Fee Management"
+          },
+          {
+            "name": "Notification System"
+          }
+        ]
+      },
+      {
+        "name": "Acquisitions",
+        "features": [
+          {
+            "name": "Order Management"
+          },
+          {
+            "name": "Vendor Management"
+          },
+          {
+            "name": "Budget Control"
+          },
+          {
+            "name": "Receipt Processing"
+          },
+          {
+            "name": "Invoice Handling"
+          }
+        ]
+      },
+      {
+        "name": "Consortial Features",
+        "features": [
+          {
+            "name": "Multi-library Support"
+          },
+          {
+            "name": "Shared Catalogs"
+          },
+          {
+            "name": "Inter-library Loans"
+          },
+          {
+            "name": "Consortial Policies"
+          },
+          {
+            "name": "Resource Sharing"
+          }
+        ]
+      },
+      {
+        "name": "Public Interface",
+        "features": [
+          {
+            "name": "Modern OPAC"
+          },
+          {
+            "name": "Faceted Search"
+          },
+          {
+            "name": "User Account"
+          },
+          {
+            "name": "Mobile Optimized"
+          },
+          {
+            "name": "Accessibility"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "Role-based Access"
+          },
+          {
+            "name": "Configuration Management"
+          },
+          {
+            "name": "Statistics & Reports"
+          },
+          {
+            "name": "System Monitoring"
+          },
+          {
+            "name": "Multi-tenancy"
           }
         ]
       }
@@ -14615,6 +15156,1949 @@
       "difficulty": "Medium",
       "justification": "Requires setup of Perl environment and mail server configuration."
     }
+  },
+  {
+    "filePath": "projects/file-sync/bewcloud.mdx",
+    "slug": "bewcloud",
+    "name": "bewCloud",
+    "description": "bewCloud is a file sharing and synchronization platform that combines file storage with notes and photo management. It serves as an alternative to Nextcloud and ownCloud with additional RSS reader functionality for a complete personal cloud experience.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "file-sync",
+    "tags": [
+      "file-sharing",
+      "notes",
+      "photos",
+      "rss",
+      "docker"
+    ],
+    "github": "bewcloud/bewcloud",
+    "urls": {
+      "website": "https://bewcloud.com"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "nextcloud",
+        "owncloud",
+        "seafile"
+      ],
+      "nonSelfHosted": [
+        "google-drive",
+        "dropbox",
+        "icloud"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Docker-based deployment with simple configuration and minimal setup requirements."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Personal cloud with file sync, notes, and photos"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal users and small teams"
+          },
+          {
+            "name": "Architecture",
+            "value": "Docker containerized application"
+          }
+        ]
+      },
+      {
+        "name": "File Management",
+        "features": [
+          {
+            "name": "File Sync & Share"
+          },
+          {
+            "name": "File Upload/Download"
+          },
+          {
+            "name": "Folder Organization"
+          },
+          {
+            "name": "File Preview"
+          },
+          {
+            "name": "Search Functionality"
+          }
+        ]
+      },
+      {
+        "name": "Content Features",
+        "features": [
+          {
+            "name": "Note Taking"
+          },
+          {
+            "name": "Photo Management"
+          },
+          {
+            "name": "RSS Reader"
+          },
+          {
+            "name": "Content Organization"
+          },
+          {
+            "name": "Media Viewing"
+          }
+        ]
+      },
+      {
+        "name": "Synchronization",
+        "features": [
+          {
+            "name": "Cross-device Sync"
+          },
+          {
+            "name": "Real-time Updates"
+          },
+          {
+            "name": "Conflict Resolution"
+          },
+          {
+            "name": "Selective Sync"
+          },
+          {
+            "name": "Offline Access"
+          }
+        ]
+      },
+      {
+        "name": "User Interface",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Mobile Responsive"
+          },
+          {
+            "name": "Clean Design"
+          },
+          {
+            "name": "Intuitive Navigation"
+          },
+          {
+            "name": "Dark Mode Support"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "RSS Feeds"
+          },
+          {
+            "name": "External Storage"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Client Applications"
+          },
+          {
+            "name": "Third-party Tools"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/kinto.mdx",
+    "slug": "kinto",
+    "name": "Kinto",
+    "description": "Kinto is a minimalist JSON storage service with synchronization and sharing abilities. It provides a lightweight, schema-less storage solution with built-in synchronization capabilities, making it ideal for applications that need simple data storage and sync.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "file-sync",
+    "tags": [
+      "json",
+      "storage",
+      "sync",
+      "api",
+      "python"
+    ],
+    "github": "Kinto/kinto",
+    "urls": {
+      "website": "https://kinto.readthedocs.org"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "couchdb",
+        "pouchdb",
+        "firebase-realtime"
+      ],
+      "nonSelfHosted": [
+        "firebase",
+        "supabase",
+        "aws-dynamodb"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Python application with minimal dependencies and straightforward configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "JSON storage with synchronization"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Applications needing simple data sync"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + REST API + PostgreSQL/Redis"
+          }
+        ]
+      },
+      {
+        "name": "Storage",
+        "features": [
+          {
+            "name": "JSON Documents"
+          },
+          {
+            "name": "Schema-less Storage"
+          },
+          {
+            "name": "Collections"
+          },
+          {
+            "name": "Records Management"
+          },
+          {
+            "name": "Metadata Support"
+          }
+        ]
+      },
+      {
+        "name": "Synchronization",
+        "features": [
+          {
+            "name": "Real-time Sync"
+          },
+          {
+            "name": "Conflict Resolution"
+          },
+          {
+            "name": "Offline Support"
+          },
+          {
+            "name": "Delta Updates"
+          },
+          {
+            "name": "Batch Operations"
+          }
+        ]
+      },
+      {
+        "name": "API Features",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "HTTP Caching"
+          },
+          {
+            "name": "Pagination"
+          },
+          {
+            "name": "Filtering"
+          },
+          {
+            "name": "Sorting"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Authentication"
+          },
+          {
+            "name": "Authorization"
+          },
+          {
+            "name": "Permissions"
+          },
+          {
+            "name": "CORS Support"
+          },
+          {
+            "name": "Rate Limiting"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "Web Admin"
+          },
+          {
+            "name": "Monitoring"
+          },
+          {
+            "name": "Logging"
+          },
+          {
+            "name": "Backup/Restore"
+          },
+          {
+            "name": "Multi-tenancy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/nextcloud.mdx",
+    "slug": "nextcloud",
+    "name": "Nextcloud",
+    "description": "Nextcloud is a comprehensive file hosting and collaboration platform that allows you to access and share your files, calendars, contacts, mail and more from any device, on your terms. It provides a secure, private cloud solution with extensive app ecosystem.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "file-sync",
+    "tags": [
+      "file-sharing",
+      "cloud",
+      "collaboration",
+      "calendar",
+      "contacts"
+    ],
+    "github": "nextcloud/server",
+    "urls": {
+      "website": "https://nextcloud.com/",
+      "demo": "https://try.nextcloud.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "owncloud",
+        "seafile",
+        "pydio"
+      ],
+      "nonSelfHosted": [
+        "google-drive",
+        "dropbox",
+        "onedrive"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires web server setup (Apache/Nginx) and database configuration, but has good documentation and multiple installation methods."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "File hosting and collaboration platform"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal and business file storage"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + MySQL/PostgreSQL + Apache/Nginx"
+          }
+        ]
+      },
+      {
+        "name": "File Management",
+        "features": [
+          {
+            "name": "File Sync & Share"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "Collaborative Editing"
+          },
+          {
+            "name": "File Comments"
+          },
+          {
+            "name": "External Storage"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "features": [
+          {
+            "name": "Calendar & Contacts"
+          },
+          {
+            "name": "Mail Integration"
+          },
+          {
+            "name": "Talk (Video Chat)"
+          },
+          {
+            "name": "Deck (Kanban)"
+          },
+          {
+            "name": "Group Management"
+          }
+        ]
+      },
+      {
+        "name": "Security & Privacy",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Two-Factor Auth"
+          },
+          {
+            "name": "File Access Control"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "GDPR Compliance"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "LDAP/AD Support"
+          },
+          {
+            "name": "SSO Integration"
+          },
+          {
+            "name": "WebDAV/CalDAV"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Mobile Apps"
+          }
+        ]
+      },
+      {
+        "name": "Apps & Extensions",
+        "features": [
+          {
+            "name": "App Store"
+          },
+          {
+            "name": "Office Integration"
+          },
+          {
+            "name": "Media Streaming"
+          },
+          {
+            "name": "Backup Solutions"
+          },
+          {
+            "name": "Custom Apps"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/openssh-sftp.mdx",
+    "slug": "openssh-sftp",
+    "name": "OpenSSH SFTP Server",
+    "description": "OpenSSH SFTP server is a secure file transfer protocol implementation that provides encrypted file transfer capabilities over SSH. It offers a reliable, standardized method for secure file transfer and remote file system access with strong authentication and encryption.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "file-sync",
+    "tags": [
+      "sftp",
+      "ssh",
+      "secure",
+      "file-transfer",
+      "protocol"
+    ],
+    "github": "openssh/openssh-portable",
+    "urls": {
+      "website": "https://www.openssh.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "vsftpd",
+        "proftpd",
+        "pure-ftpd"
+      ],
+      "nonSelfHosted": [
+        "aws-sftp",
+        "azure-sftp",
+        "google-cloud-sftp"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Built into most Unix-like systems, simple configuration, and well-documented setup process."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Secure file transfer protocol"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Secure file transfer and remote access"
+          },
+          {
+            "name": "Architecture",
+            "value": "C + SSH protocol + Unix/Linux"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "SSH Encryption"
+          },
+          {
+            "name": "Public Key Auth"
+          },
+          {
+            "name": "Password Auth"
+          },
+          {
+            "name": "Host Key Verification"
+          },
+          {
+            "name": "Secure Channels"
+          }
+        ]
+      },
+      {
+        "name": "File Operations",
+        "features": [
+          {
+            "name": "File Upload/Download"
+          },
+          {
+            "name": "Directory Navigation"
+          },
+          {
+            "name": "File Permissions"
+          },
+          {
+            "name": "Symbolic Links"
+          },
+          {
+            "name": "File Attributes"
+          }
+        ]
+      },
+      {
+        "name": "Authentication",
+        "features": [
+          {
+            "name": "SSH Keys"
+          },
+          {
+            "name": "Password-based"
+          },
+          {
+            "name": "Certificate Auth"
+          },
+          {
+            "name": "Multi-factor Auth"
+          },
+          {
+            "name": "Chroot Jails"
+          }
+        ]
+      },
+      {
+        "name": "Protocol Features",
+        "features": [
+          {
+            "name": "Resume Transfers"
+          },
+          {
+            "name": "Batch Operations"
+          },
+          {
+            "name": "Compression"
+          },
+          {
+            "name": "Bandwidth Limiting"
+          },
+          {
+            "name": "Connection Multiplexing"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Logging"
+          },
+          {
+            "name": "Configuration"
+          },
+          {
+            "name": "Monitoring"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/owncloud.mdx",
+    "slug": "owncloud",
+    "name": "ownCloud",
+    "description": "ownCloud is an all-in-one solution for saving, synchronizing, viewing, editing and sharing files, calendars, address books and more. It provides a secure, private cloud platform with enterprise features and extensive customization options.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Open-Core",
+    "category": "file-sync",
+    "tags": [
+      "file-sharing",
+      "cloud",
+      "collaboration",
+      "enterprise",
+      "calendar"
+    ],
+    "github": "owncloud/core",
+    "urls": {
+      "website": "https://owncloud.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "nextcloud",
+        "seafile",
+        "pydio"
+      ],
+      "nonSelfHosted": [
+        "google-drive",
+        "dropbox",
+        "onedrive"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires web server setup and database configuration, but provides good documentation and multiple deployment options including Docker."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Enterprise file sharing platform"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Business and enterprise file storage"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + MySQL/PostgreSQL + Apache/Nginx"
+          }
+        ]
+      },
+      {
+        "name": "File Management",
+        "features": [
+          {
+            "name": "File Sync & Share"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "File Locking"
+          },
+          {
+            "name": "Bulk Operations"
+          },
+          {
+            "name": "External Storage"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "features": [
+          {
+            "name": "Real-time Editing"
+          },
+          {
+            "name": "Comments & Tags"
+          },
+          {
+            "name": "Shared Workspaces"
+          },
+          {
+            "name": "Activity Streams"
+          },
+          {
+            "name": "Notifications"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "LDAP/AD Integration"
+          },
+          {
+            "name": "SSO Support"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "Compliance Tools"
+          },
+          {
+            "name": "Enterprise Support"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Encryption at Rest"
+          },
+          {
+            "name": "Two-Factor Auth"
+          },
+          {
+            "name": "File Access Control"
+          },
+          {
+            "name": "Antivirus Integration"
+          },
+          {
+            "name": "Data Loss Prevention"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Office Integration"
+          },
+          {
+            "name": "Calendar & Contacts"
+          },
+          {
+            "name": "WebDAV/CalDAV"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Mobile Apps"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/peergos.mdx",
+    "slug": "peergos",
+    "name": "Peergos",
+    "description": "Peergos is a secure and private space online where you can store, share and view your photos, videos, music and documents. It also includes a calendar, news feed, task lists, chat and email client, providing a comprehensive private cloud platform with end-to-end encryption.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "file-sync",
+    "tags": [
+      "privacy",
+      "encryption",
+      "p2p",
+      "secure",
+      "java"
+    ],
+    "github": "Peergos/Peergos",
+    "urls": {
+      "website": "https://peergos.org"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "nextcloud",
+        "owncloud",
+        "syncthing"
+      ],
+      "nonSelfHosted": [
+        "tresorit",
+        "spideroak",
+        "pcloud-crypto"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Java-based application with good documentation, but requires understanding of cryptographic concepts and network configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Private, secure cloud storage platform"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Privacy-conscious users and organizations"
+          },
+          {
+            "name": "Architecture",
+            "value": "Java + P2P + End-to-end encryption"
+          }
+        ]
+      },
+      {
+        "name": "Security & Privacy",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Zero-Knowledge Architecture"
+          },
+          {
+            "name": "Client-side Encryption"
+          },
+          {
+            "name": "Forward Secrecy"
+          },
+          {
+            "name": "Anonymous Access"
+          }
+        ]
+      },
+      {
+        "name": "File Management",
+        "features": [
+          {
+            "name": "File Storage & Sync"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Media Streaming"
+          },
+          {
+            "name": "File Preview"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "features": [
+          {
+            "name": "Secure Sharing"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Group Management"
+          },
+          {
+            "name": "Real-time Collaboration"
+          },
+          {
+            "name": "Comments & Annotations"
+          }
+        ]
+      },
+      {
+        "name": "Communication",
+        "features": [
+          {
+            "name": "Encrypted Chat"
+          },
+          {
+            "name": "Email Client"
+          },
+          {
+            "name": "Video Calls"
+          },
+          {
+            "name": "Voice Messages"
+          },
+          {
+            "name": "Screen Sharing"
+          }
+        ]
+      },
+      {
+        "name": "Productivity",
+        "features": [
+          {
+            "name": "Calendar"
+          },
+          {
+            "name": "Task Lists"
+          },
+          {
+            "name": "News Feed"
+          },
+          {
+            "name": "Note Taking"
+          },
+          {
+            "name": "Document Editing"
+          }
+        ]
+      },
+      {
+        "name": "Network",
+        "features": [
+          {
+            "name": "P2P Architecture"
+          },
+          {
+            "name": "Distributed Storage"
+          },
+          {
+            "name": "Offline Access"
+          },
+          {
+            "name": "Decentralized Identity"
+          },
+          {
+            "name": "Self-sovereign Data"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/puter.mdx",
+    "slug": "puter",
+    "name": "Puter",
+    "description": "Puter is a web-based operating system designed to be feature-rich, exceptionally fast, and highly extensible. It provides a complete desktop environment in the browser with file management, applications, and cloud storage capabilities, offering a unique approach to web-based computing.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "file-sync",
+    "tags": [
+      "web-os",
+      "desktop",
+      "browser",
+      "nodejs",
+      "cloud"
+    ],
+    "github": "heyputer/puter",
+    "urls": {
+      "website": "https://puter.com/",
+      "demo": "https://puter.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "nextcloud",
+        "owncloud",
+        "eyeos"
+      ],
+      "nonSelfHosted": [
+        "google-workspace",
+        "microsoft-365",
+        "zoho"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Node.js application with Docker support, but requires proper configuration for web-based OS features and security considerations."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Web-based operating system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Browser-based computing and file management"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + Web technologies + Cloud storage"
+          }
+        ]
+      },
+      {
+        "name": "Desktop Environment",
+        "features": [
+          {
+            "name": "Desktop Interface"
+          },
+          {
+            "name": "Window Management"
+          },
+          {
+            "name": "Taskbar & Menus"
+          },
+          {
+            "name": "File Explorer"
+          },
+          {
+            "name": "System Tray"
+          }
+        ]
+      },
+      {
+        "name": "File Management",
+        "features": [
+          {
+            "name": "File Storage"
+          },
+          {
+            "name": "Folder Organization"
+          },
+          {
+            "name": "File Operations"
+          },
+          {
+            "name": "Cloud Integration"
+          },
+          {
+            "name": "File Sharing"
+          }
+        ]
+      },
+      {
+        "name": "Applications",
+        "features": [
+          {
+            "name": "Built-in Apps"
+          },
+          {
+            "name": "Text Editor"
+          },
+          {
+            "name": "Image Viewer"
+          },
+          {
+            "name": "Media Player"
+          },
+          {
+            "name": "Web Browser"
+          }
+        ]
+      },
+      {
+        "name": "Extensibility",
+        "features": [
+          {
+            "name": "App Store"
+          },
+          {
+            "name": "Custom Apps"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Plugin System"
+          },
+          {
+            "name": "Themes"
+          }
+        ]
+      },
+      {
+        "name": "Cloud Features",
+        "features": [
+          {
+            "name": "Cloud Storage"
+          },
+          {
+            "name": "Sync Across Devices"
+          },
+          {
+            "name": "Online Access"
+          },
+          {
+            "name": "Backup & Restore"
+          },
+          {
+            "name": "Collaboration"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Fast Loading"
+          },
+          {
+            "name": "Responsive UI"
+          },
+          {
+            "name": "Efficient Rendering"
+          },
+          {
+            "name": "Memory Management"
+          },
+          {
+            "name": "Caching"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/pydio.mdx",
+    "slug": "pydio",
+    "name": "Pydio",
+    "description": "Pydio (now Pydio Cells) transforms any web server into a powerful file management system and an alternative to mainstream cloud storage providers. It offers enterprise-grade security, collaboration features, and extensive customization options.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Freemium",
+    "category": "file-sync",
+    "tags": [
+      "file-sharing",
+      "enterprise",
+      "collaboration",
+      "microservices",
+      "go"
+    ],
+    "github": "pydio/cells",
+    "urls": {
+      "website": "https://pydio.com/",
+      "demo": "https://pydio.com/en/demo"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "nextcloud",
+        "owncloud",
+        "seafile"
+      ],
+      "nonSelfHosted": [
+        "google-drive",
+        "dropbox",
+        "box"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Modern microservices architecture with good documentation, but requires understanding of distributed systems and proper configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Enterprise file management platform"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Enterprise and business users"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go microservices + React frontend"
+          }
+        ]
+      },
+      {
+        "name": "File Management",
+        "features": [
+          {
+            "name": "File Sync & Share"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "Advanced Search"
+          },
+          {
+            "name": "Metadata Management"
+          },
+          {
+            "name": "Bulk Operations"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "features": [
+          {
+            "name": "Real-time Editing"
+          },
+          {
+            "name": "Workspaces"
+          },
+          {
+            "name": "Comments & Annotations"
+          },
+          {
+            "name": "Activity Streams"
+          },
+          {
+            "name": "Team Management"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Access Control Lists"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "Data Loss Prevention"
+          },
+          {
+            "name": "Compliance Tools"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "features": [
+          {
+            "name": "LDAP/AD Integration"
+          },
+          {
+            "name": "SSO Support"
+          },
+          {
+            "name": "Multi-tenancy"
+          },
+          {
+            "name": "Branding & Theming"
+          },
+          {
+            "name": "Enterprise Support"
+          }
+        ]
+      },
+      {
+        "name": "Modern Architecture",
+        "features": [
+          {
+            "name": "Microservices"
+          },
+          {
+            "name": "REST APIs"
+          },
+          {
+            "name": "Event-driven"
+          },
+          {
+            "name": "Scalable Design"
+          },
+          {
+            "name": "Cloud Native"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/samba.mdx",
+    "slug": "samba",
+    "name": "Samba",
+    "description": "Samba is the standard Windows interoperability suite of programs for Linux and Unix. It provides secure, stable and fast file and print services for all clients using the SMB/CIFS protocol, enabling seamless integration between Windows and Unix-like systems.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "file-sync",
+    "tags": [
+      "smb",
+      "cifs",
+      "windows",
+      "interoperability",
+      "file-sharing"
+    ],
+    "github": "samba-team/samba",
+    "urls": {
+      "website": "https://www.samba.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "netatalk",
+        "nfs",
+        "openssh-sftp"
+      ],
+      "nonSelfHosted": [
+        "windows-file-sharing",
+        "azure-files",
+        "aws-fsx"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires understanding of SMB/CIFS protocols and Windows networking concepts, but has extensive documentation and community support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Windows interoperability and file sharing"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Mixed Windows/Unix environments"
+          },
+          {
+            "name": "Architecture",
+            "value": "C + SMB/CIFS protocol + Unix/Linux"
+          }
+        ]
+      },
+      {
+        "name": "File Services",
+        "features": [
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Directory Services"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "File Locking"
+          },
+          {
+            "name": "Permissions"
+          }
+        ]
+      },
+      {
+        "name": "Print Services",
+        "features": [
+          {
+            "name": "Print Sharing"
+          },
+          {
+            "name": "Print Queues"
+          },
+          {
+            "name": "Driver Management"
+          },
+          {
+            "name": "Print Accounting"
+          },
+          {
+            "name": "CUPS Integration"
+          }
+        ]
+      },
+      {
+        "name": "Authentication",
+        "features": [
+          {
+            "name": "Active Directory"
+          },
+          {
+            "name": "Domain Controller"
+          },
+          {
+            "name": "LDAP Integration"
+          },
+          {
+            "name": "Kerberos Support"
+          },
+          {
+            "name": "Local Authentication"
+          }
+        ]
+      },
+      {
+        "name": "Windows Integration",
+        "features": [
+          {
+            "name": "SMB Protocol"
+          },
+          {
+            "name": "CIFS Support"
+          },
+          {
+            "name": "Windows ACLs"
+          },
+          {
+            "name": "NT Domains"
+          },
+          {
+            "name": "Group Policy"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Command Line Tools"
+          },
+          {
+            "name": "Configuration Management"
+          },
+          {
+            "name": "Monitoring"
+          },
+          {
+            "name": "Logging"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Encryption"
+          },
+          {
+            "name": "Digital Signatures"
+          },
+          {
+            "name": "Access Controls"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "Firewall Integration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/seafile.mdx",
+    "slug": "seafile",
+    "name": "Seafile",
+    "description": "Seafile is a file hosting and sharing solution primarily designed for teams and organizations. It provides reliable file synchronization, sharing, and collaboration features with strong security and performance optimizations for enterprise use.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Open-Core",
+    "category": "file-sync",
+    "tags": [
+      "file-sharing",
+      "team",
+      "enterprise",
+      "sync",
+      "collaboration"
+    ],
+    "github": "haiwen/seafile",
+    "urls": {
+      "website": "https://www.seafile.com/en/home/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "nextcloud",
+        "owncloud",
+        "pydio"
+      ],
+      "nonSelfHosted": [
+        "google-drive",
+        "dropbox",
+        "box"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires multiple components setup (server, database, web server) but provides good documentation and Docker support."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Team file hosting and collaboration"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Teams and organizations"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + C + MySQL/PostgreSQL"
+          }
+        ]
+      },
+      {
+        "name": "File Management",
+        "features": [
+          {
+            "name": "File Sync & Share"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "File Locking"
+          },
+          {
+            "name": "Selective Sync"
+          },
+          {
+            "name": "Delta Sync"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "features": [
+          {
+            "name": "Real-time Editing"
+          },
+          {
+            "name": "File Comments"
+          },
+          {
+            "name": "Shared Libraries"
+          },
+          {
+            "name": "Team Workspaces"
+          },
+          {
+            "name": "Activity Tracking"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Two-Factor Auth"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "Remote Wipe"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "features": [
+          {
+            "name": "LDAP Integration"
+          },
+          {
+            "name": "SSO Support"
+          },
+          {
+            "name": "Admin Console"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Storage Policies"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Delta Synchronization"
+          },
+          {
+            "name": "Bandwidth Control"
+          },
+          {
+            "name": "Cluster Support"
+          },
+          {
+            "name": "CDN Integration"
+          },
+          {
+            "name": "Caching"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/syncthing.mdx",
+    "slug": "syncthing",
+    "name": "Syncthing",
+    "description": "Syncthing is an open-source peer-to-peer file synchronization tool that keeps your files synchronized between multiple devices without requiring a central server. It provides secure, private, and decentralized file sync with end-to-end encryption.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "file-sync",
+    "tags": [
+      "p2p",
+      "sync",
+      "decentralized",
+      "privacy",
+      "encryption"
+    ],
+    "github": "syncthing/syncthing",
+    "urls": {
+      "website": "https://syncthing.net/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "seafile",
+        "nextcloud",
+        "owncloud"
+      ],
+      "nonSelfHosted": [
+        "resilio-sync",
+        "dropbox",
+        "google-drive"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple installation with pre-built binaries, minimal configuration required, and intuitive web interface."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Peer-to-peer file synchronization"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal and small team file sync"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + Web UI + P2P Protocol"
+          }
+        ]
+      },
+      {
+        "name": "Synchronization",
+        "features": [
+          {
+            "name": "Real-time Sync"
+          },
+          {
+            "name": "Selective Sync"
+          },
+          {
+            "name": "Conflict Resolution"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "Bandwidth Control"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Device Authentication"
+          },
+          {
+            "name": "TLS Communication"
+          },
+          {
+            "name": "No Central Server"
+          },
+          {
+            "name": "Private by Design"
+          }
+        ]
+      },
+      {
+        "name": "Network",
+        "features": [
+          {
+            "name": "P2P Discovery"
+          },
+          {
+            "name": "Relay Support"
+          },
+          {
+            "name": "NAT Traversal"
+          },
+          {
+            "name": "Local Discovery"
+          },
+          {
+            "name": "Global Discovery"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Folder Sharing"
+          },
+          {
+            "name": "Device Management"
+          },
+          {
+            "name": "Ignore Patterns"
+          }
+        ]
+      },
+      {
+        "name": "Platform Support",
+        "features": [
+          {
+            "name": "Cross-Platform"
+          },
+          {
+            "name": "Mobile Apps"
+          },
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Package Managers"
+          },
+          {
+            "name": "Portable Builds"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/file-sync/unison.mdx",
+    "slug": "unison",
+    "name": "Unison",
+    "description": "Unison is a file-synchronization tool for OSX, Unix, and Windows that allows two replicas of a collection of files and directories to be stored on different hosts and synchronized by detecting changes and propagating them in either direction.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "file-sync",
+    "tags": [
+      "sync",
+      "cross-platform",
+      "bidirectional",
+      "ocaml",
+      "command-line"
+    ],
+    "github": "bcpierce00/unison",
+    "urls": {
+      "website": "https://www.cis.upenn.edu/~bcpierce/unison/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "syncthing",
+        "rsync",
+        "git-annex"
+      ],
+      "nonSelfHosted": [
+        "dropbox",
+        "google-drive",
+        "onedrive"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Command-line tool with straightforward installation, but requires understanding of synchronization concepts and proper configuration for complex scenarios."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Bidirectional file synchronization"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Cross-platform file sync between specific locations"
+          },
+          {
+            "name": "Architecture",
+            "value": "OCaml + Command-line + Cross-platform"
+          }
+        ]
+      },
+      {
+        "name": "Synchronization",
+        "features": [
+          {
+            "name": "Bidirectional Sync"
+          },
+          {
+            "name": "Conflict Detection"
+          },
+          {
+            "name": "Change Propagation"
+          },
+          {
+            "name": "Selective Sync"
+          },
+          {
+            "name": "Dry Run Mode"
+          }
+        ]
+      },
+      {
+        "name": "Platform Support",
+        "features": [
+          {
+            "name": "Cross-Platform"
+          },
+          {
+            "name": "Windows Support"
+          },
+          {
+            "name": "macOS Support"
+          },
+          {
+            "name": "Linux/Unix Support"
+          },
+          {
+            "name": "Remote Sync"
+          }
+        ]
+      },
+      {
+        "name": "File Operations",
+        "features": [
+          {
+            "name": "File Comparison"
+          },
+          {
+            "name": "Directory Sync"
+          },
+          {
+            "name": "Symbolic Links"
+          },
+          {
+            "name": "Permissions"
+          },
+          {
+            "name": "Timestamps"
+          }
+        ]
+      },
+      {
+        "name": "Network Features",
+        "features": [
+          {
+            "name": "SSH Transport"
+          },
+          {
+            "name": "Socket Transport"
+          },
+          {
+            "name": "Compression"
+          },
+          {
+            "name": "Encryption"
+          },
+          {
+            "name": "Resume Support"
+          }
+        ]
+      },
+      {
+        "name": "User Interface",
+        "features": [
+          {
+            "name": "Command Line"
+          },
+          {
+            "name": "Text Interface"
+          },
+          {
+            "name": "Batch Mode"
+          },
+          {
+            "name": "Interactive Mode"
+          },
+          {
+            "name": "Logging"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "Ignore Patterns"
+          },
+          {
+            "name": "Backup Copies"
+          },
+          {
+            "name": "Archive Files"
+          },
+          {
+            "name": "Fast Update"
+          },
+          {
+            "name": "Checksums"
+          }
+        ]
+      }
+    ]
   },
   {
     "filePath": "projects/genealogy/genea.mdx",

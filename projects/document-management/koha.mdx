@@ -1,0 +1,163 @@
+---
+slug: koha
+name: Koha
+description: |
+  Koha is the world's first free and open-source integrated library system (ILS). It provides enterprise-class features including acquisitions, circulation, cataloging, label printing, offline circulation, and comprehensive patron management for libraries of all sizes.
+category: ils
+tags: [library, ils, catalog, circulation, open-source]
+github: Koha-Community/Koha
+urls:
+  website: https://koha-community.org/
+  demo: https://koha-community.org/demo/
+alternatives:
+  selfHosted: [evergreen, rero-ils]
+  nonSelfHosted: [oclc-worldshare, sirsi-dynix]
+deployment:
+  difficulty: "Medium"
+  justification: "Well-documented with good community support, but requires LAMP stack setup and library-specific configuration."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Integrated library system
+      - name: Target Use Case
+        value: Libraries of all sizes
+      - name: Architecture
+        value: Perl + MySQL/MariaDB + Apache
+  - name: Cataloging
+    features:
+      - name: MARC21 Support
+      - name: UNIMARC Support
+      - name: Authority Records
+      - name: Z39.50 Integration
+      - name: Batch Import/Export
+  - name: Circulation
+    features:
+      - name: Patron Management
+      - name: Check-out/Check-in
+      - name: Holds & Reserves
+      - name: Fines & Fees
+      - name: Offline Circulation
+  - name: Acquisitions
+    features:
+      - name: Order Management
+      - name: Vendor Management
+      - name: Budget Tracking
+      - name: Receiving
+      - name: Invoice Processing
+  - name: Serials
+    features:
+      - name: Subscription Management
+      - name: Issue Tracking
+      - name: Claiming
+      - name: Routing Lists
+      - name: Prediction Patterns
+  - name: Public Interface
+    features:
+      - name: OPAC
+      - name: Self-Service
+      - name: Mobile Interface
+      - name: Social Features
+      - name: Multi-language
+  - name: Reports & Tools
+    features:
+      - name: SQL Reports
+      - name: Guided Reports
+      - name: Statistics
+      - name: Label Printing
+      - name: Barcode Generation
+  - name: Administration
+    features:
+      - name: Multi-branch Support
+      - name: User Permissions
+      - name: System Preferences
+      - name: News & Announcements
+      - name: Calendar Management
+---
+
+Koha is the world's first free and open-source integrated library system (ILS), originally developed in New Zealand in 1999. Named after a Māori word meaning "gift" or "contribution," Koha has grown into a mature, enterprise-class library management system used by thousands of libraries worldwide.
+
+## Key Features
+
+- **Comprehensive Cataloging**:
+
+  - Full MARC21 and UNIMARC support
+  - Authority record management
+  - Z39.50/SRU client for record importing
+  - Batch import and export capabilities
+  - Duplicate detection and merging
+  - Fast cataloging workflows
+
+- **Circulation Management**:
+
+  - Patron registration and management
+  - Check-out and check-in operations
+  - Holds and reserves system
+  - Fine and fee management
+  - Renewal notifications
+  - Offline circulation for network outages
+
+- **Acquisitions System**:
+
+  - Purchase order creation and management
+  - Vendor and supplier management
+  - Budget allocation and tracking
+  - Receiving and invoice processing
+  - Claiming and order tracking
+  - EDI integration capabilities
+
+- **Serials Management**:
+
+  - Subscription management
+  - Issue prediction and tracking
+  - Claiming for missing issues
+  - Routing lists for periodicals
+  - Binding and preservation tracking
+  - Subscription renewal management
+
+- **Public Access Catalog (OPAC)**:
+
+  - Modern, responsive web interface
+  - Advanced search capabilities
+  - Patron self-service features
+  - Social features (reviews, tags, lists)
+  - Multi-language support
+  - Mobile-optimized interface
+
+- **Reporting & Analytics**:
+
+  - Built-in guided report wizard
+  - Custom SQL report creation
+  - Statistical reports and dashboards
+  - Circulation and collection statistics
+  - Patron activity reports
+  - Automated report scheduling
+
+- **Administrative Tools**:
+
+  - Multi-branch/multi-library support
+  - Granular user permissions
+  - System preference management
+  - News and announcement system
+  - Holiday and calendar management
+  - Label and barcode printing
+
+- **Integration & Standards**:
+  - REST API for third-party integrations
+  - SIP2 protocol support
+  - LDAP authentication
+  - Single sign-on (SSO) capabilities
+  - Standard library protocols
+  - Plugin architecture for extensions
+
+## Technical Specifications
+
+- **Backend**: Perl with Template Toolkit
+- **Database**: MySQL or MariaDB
+- **Web Server**: Apache HTTP Server
+- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap
+- **Operating System**: Linux, Unix-like systems
+- **Standards**: MARC21, UNIMARC, Z39.50, SRU, SIP2, OAI-PMH

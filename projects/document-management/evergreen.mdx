@@ -1,0 +1,130 @@
+---
+slug: evergreen
+name: Evergreen
+description: |
+  Evergreen is a highly-scalable integrated library system (ILS) software that helps library patrons find library materials and helps libraries manage, catalog, and circulate those materials. Designed for consortial use and large library systems.
+category: ils
+tags: [library, ils, catalog, circulation, acquisitions]
+github: evergreen-library-system/Evergreen
+urls:
+  website: https://evergreen-ils.org
+alternatives:
+  selfHosted: [koha, rero-ils]
+  nonSelfHosted: [oclc-worldshare, sirsi-dynix]
+deployment:
+  difficulty: "Advanced"
+  justification: "Complex enterprise system requiring PostgreSQL, specialized configuration, and library science knowledge."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Integrated library system
+      - name: Target Use Case
+        value: Libraries and library consortiums
+      - name: Architecture
+        value: PostgreSQL + Perl + JavaScript
+  - name: Catalog Management
+    features:
+      - name: MARC Cataloging
+      - name: Authority Control
+      - name: Bibliographic Records
+      - name: Holdings Management
+      - name: Item Records
+  - name: Circulation
+    features:
+      - name: Patron Management
+      - name: Check-in/Check-out
+      - name: Holds Management
+      - name: Fine Management
+      - name: Renewal System
+  - name: Public Interface
+    features:
+      - name: OPAC (Online Catalog)
+      - name: Advanced Search
+      - name: Patron Self-Service
+      - name: Mobile Interface
+      - name: Accessibility Features
+  - name: Administration
+    features:
+      - name: Acquisitions Module
+      - name: Serials Management
+      - name: Reports & Statistics
+      - name: Multi-library Support
+      - name: Consortial Features
+  - name: Integration
+    features:
+      - name: Z39.50 Support
+      - name: SIP2 Protocol
+      - name: LDAP Authentication
+      - name: API Access
+      - name: Third-party Integrations
+---
+
+Evergreen is a highly-scalable, open-source integrated library system (ILS) designed to meet the needs of libraries of all sizes, from small public libraries to large academic institutions and multi-library consortiums. It provides comprehensive tools for managing library collections, patron services, and administrative functions.
+
+## Key Features
+
+- **Cataloging & Collection Management**:
+
+  - Full MARC21 cataloging support
+  - Authority control and linking
+  - Bibliographic record management
+  - Holdings and item management
+  - Copy-specific information tracking
+  - Batch operations and imports
+
+- **Circulation Services**:
+
+  - Patron registration and management
+  - Check-in and check-out operations
+  - Holds and reserves management
+  - Fine and fee management
+  - Renewal and notification systems
+  - Offline circulation capabilities
+
+- **Public Access**:
+
+  - Modern OPAC (Online Public Access Catalog)
+  - Advanced search capabilities
+  - Patron self-service portal
+  - Mobile-responsive interface
+  - Accessibility compliance
+  - Multi-language support
+
+- **Acquisitions & Serials**:
+
+  - Purchase order management
+  - Vendor management
+  - Budget tracking
+  - Serials check-in
+  - Claiming and routing
+  - Electronic resource management
+
+- **Administration & Reporting**:
+
+  - Comprehensive reporting tools
+  - Statistical analysis
+  - Multi-library/consortial support
+  - Organizational unit hierarchy
+  - Permission-based access control
+  - System administration tools
+
+- **Integration & Standards**:
+  - Z39.50 client and server
+  - SIP2 protocol support
+  - LDAP authentication
+  - RESTful APIs
+  - Standard library protocols
+  - Third-party system integration
+
+## Technical Specifications
+
+- **Database**: PostgreSQL
+- **Backend**: Perl with OpenSRF framework
+- **Frontend**: JavaScript (AngularJS/Angular)
+- **Web Server**: Apache HTTP Server
+- **Operating System**: Linux (various distributions)
+- **Scalability**: Designed for large consortiums and high-volume operations

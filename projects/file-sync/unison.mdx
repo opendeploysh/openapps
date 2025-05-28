@@ -1,0 +1,165 @@
+---
+slug: unison
+name: Unison
+description: |
+  Unison is a file-synchronization tool for OSX, Unix, and Windows that allows two replicas of a collection of files and directories to be stored on different hosts and synchronized by detecting changes and propagating them in either direction.
+category: file-sync
+tags: [sync, cross-platform, bidirectional, ocaml, command-line]
+github: bcpierce00/unison
+urls:
+  website: https://www.cis.upenn.edu/~bcpierce/unison/
+alternatives:
+  selfHosted: [syncthing, rsync, git-annex]
+  nonSelfHosted: [dropbox, google-drive, onedrive]
+deployment:
+  difficulty: "Medium"
+  justification: "Command-line tool with straightforward installation, but requires understanding of synchronization concepts and proper configuration for complex scenarios."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Bidirectional file synchronization
+      - name: Target Use Case
+        value: Cross-platform file sync between specific locations
+      - name: Architecture
+        value: OCaml + Command-line + Cross-platform
+  - name: Synchronization
+    features:
+      - name: Bidirectional Sync
+      - name: Conflict Detection
+      - name: Change Propagation
+      - name: Selective Sync
+      - name: Dry Run Mode
+  - name: Platform Support
+    features:
+      - name: Cross-Platform
+      - name: Windows Support
+      - name: macOS Support
+      - name: Linux/Unix Support
+      - name: Remote Sync
+  - name: File Operations
+    features:
+      - name: File Comparison
+      - name: Directory Sync
+      - name: Symbolic Links
+      - name: Permissions
+      - name: Timestamps
+  - name: Network Features
+    features:
+      - name: SSH Transport
+      - name: Socket Transport
+      - name: Compression
+      - name: Encryption
+      - name: Resume Support
+  - name: User Interface
+    features:
+      - name: Command Line
+      - name: Text Interface
+      - name: Batch Mode
+      - name: Interactive Mode
+      - name: Logging
+  - name: Advanced Features
+    features:
+      - name: Ignore Patterns
+      - name: Backup Copies
+      - name: Archive Files
+      - name: Fast Update
+      - name: Checksums
+---
+
+Unison is a robust, cross-platform file synchronization tool that enables bidirectional synchronization between two file system replicas. Designed for reliability and precision, Unison carefully tracks changes and allows users to review and control the synchronization process, making it ideal for maintaining consistent file collections across different systems.
+
+## Key Features
+
+- **Bidirectional Synchronization**:
+
+  - Two-way file and directory synchronization
+  - Automatic change detection and propagation
+  - Intelligent conflict resolution
+  - User-controlled synchronization decisions
+  - Maintains file system consistency
+  - Handles simultaneous changes gracefully
+
+- **Cross-Platform Compatibility**:
+
+  - Native support for Windows, macOS, and Unix/Linux
+  - Consistent behavior across platforms
+  - Platform-specific optimizations
+  - Unicode filename support
+  - Case-sensitivity handling
+  - Path separator normalization
+
+- **Reliable Change Detection**:
+
+  - Fast fingerprinting algorithm
+  - Modification time and size comparison
+  - Optional content-based checksums
+  - Symbolic link handling
+  - Permission and ownership tracking
+  - Extended attribute support
+
+- **Network Synchronization**:
+
+  - SSH-based remote synchronization
+  - Socket-based communication
+  - Compression for bandwidth efficiency
+  - Encryption for secure transfers
+  - Resume interrupted transfers
+  - Connection multiplexing
+
+- **User Control & Safety**:
+
+  - Interactive confirmation of changes
+  - Dry-run mode for testing
+  - Backup copies of modified files
+  - Ignore patterns and filters
+  - Batch mode for automation
+  - Detailed logging and reporting
+
+- **Performance Optimization**:
+
+  - Incremental synchronization
+  - Fast update detection
+  - Efficient network protocols
+  - Minimal memory usage
+  - Archive files for state tracking
+  - Optimized file comparison
+
+- **Advanced Configuration**:
+  - Flexible ignore patterns
+  - Custom merge tools
+  - Profile-based configurations
+  - Preference files
+  - Command-line options
+  - Environment variable support
+
+## Technical Specifications
+
+- **Language**: OCaml
+- **Platforms**: Windows, macOS, Linux, Unix
+- **Transport**: SSH, direct socket, local filesystem
+- **Protocols**: Custom Unison protocol over SSH/socket
+- **Compression**: Built-in compression support
+- **Encryption**: SSH-based encryption
+- **Interface**: Command-line, text-based UI
+
+## Use Cases
+
+- **Personal File Sync**: Synchronizing files between home and work computers
+- **Backup Solutions**: Maintaining synchronized backup copies
+- **Development**: Keeping source code synchronized across environments
+- **Collaboration**: Sharing files between team members
+- **Migration**: Moving files between different systems
+- **Version Control**: Simple file versioning and history
+
+## Unique Advantages
+
+- **Precision Control**: User reviews and approves all changes
+- **Conflict Handling**: Intelligent detection and resolution of conflicts
+- **Cross-Platform**: True cross-platform synchronization
+- **Reliability**: Mature, well-tested synchronization algorithms
+- **Efficiency**: Fast, incremental synchronization
+- **Flexibility**: Highly configurable for various use cases

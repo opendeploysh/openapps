@@ -1,0 +1,148 @@
+---
+slug: seafile
+name: Seafile
+description: |
+  Seafile is a file hosting and sharing solution primarily designed for teams and organizations. It provides reliable file synchronization, sharing, and collaboration features with strong security and performance optimizations for enterprise use.
+category: file-sync
+tags: [file-sharing, team, enterprise, sync, collaboration]
+github: haiwen/seafile
+urls:
+  website: https://www.seafile.com/en/home/
+alternatives:
+  selfHosted: [nextcloud, owncloud, pydio]
+  nonSelfHosted: [google-drive, dropbox, box]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires multiple components setup (server, database, web server) but provides good documentation and Docker support."
+pricingModel: Open-Core
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Team file hosting and collaboration
+      - name: Target Use Case
+        value: Teams and organizations
+      - name: Architecture
+        value: Python + C + MySQL/PostgreSQL
+  - name: File Management
+    features:
+      - name: File Sync & Share
+      - name: Version Control
+      - name: File Locking
+      - name: Selective Sync
+      - name: Delta Sync
+  - name: Collaboration
+    features:
+      - name: Real-time Editing
+      - name: File Comments
+      - name: Shared Libraries
+      - name: Team Workspaces
+      - name: Activity Tracking
+  - name: Security
+    features:
+      - name: End-to-End Encryption
+      - name: Two-Factor Auth
+      - name: Access Control
+      - name: Audit Logging
+      - name: Remote Wipe
+  - name: Enterprise
+    features:
+      - name: LDAP Integration
+      - name: SSO Support
+      - name: Admin Console
+      - name: User Management
+      - name: Storage Policies
+  - name: Performance
+    features:
+      - name: Delta Synchronization
+      - name: Bandwidth Control
+      - name: Cluster Support
+      - name: CDN Integration
+      - name: Caching
+---
+
+Seafile is a high-performance file hosting and collaboration platform specifically designed for teams and organizations. Built with a focus on reliability, security, and performance, Seafile offers enterprise-grade features while maintaining simplicity and ease of use.
+
+## Key Features
+
+- **High-Performance Sync**:
+
+  - Delta synchronization (only sync changed parts)
+  - Efficient bandwidth usage
+  - Fast file transfer protocols
+  - Intelligent conflict resolution
+  - Selective folder synchronization
+  - Pause and resume capabilities
+
+- **Team Collaboration**:
+
+  - Shared libraries and workspaces
+  - Real-time collaborative editing
+  - File comments and discussions
+  - Activity feeds and notifications
+  - Team permission management
+  - Guest user access
+
+- **Enterprise Security**:
+
+  - Client-side encryption
+  - Server-side encryption at rest
+  - Two-factor authentication
+  - Granular access controls
+  - Audit logging and compliance
+  - Remote device management
+
+- **File Management**:
+
+  - File versioning and history
+  - File locking for editing
+  - Advanced search capabilities
+  - Bulk file operations
+  - File preview and thumbnails
+  - Trash and recovery
+
+- **Administration**:
+
+  - Centralized admin console
+  - User and group management
+  - Storage quota management
+  - System monitoring and logs
+  - Backup and restore tools
+  - Multi-tenancy support
+
+- **Integration & APIs**:
+
+  - LDAP and Active Directory
+  - Single sign-on (SSO) support
+  - RESTful APIs
+  - WebDAV support
+  - Third-party integrations
+  - Custom app development
+
+- **Platform Support**:
+  - Cross-platform desktop clients
+  - Mobile apps (iOS/Android)
+  - Web interface
+  - Command-line tools
+  - Docker deployment
+  - Cloud marketplace availability
+
+## Technical Specifications
+
+- **Server**: Python with C extensions
+- **Database**: MySQL, MariaDB, PostgreSQL, SQLite
+- **Storage**: Local filesystem, S3, Swift
+- **Web Server**: Nginx (recommended), Apache
+- **Clients**: Windows, macOS, Linux, iOS, Android
+- **Protocols**: HTTP/HTTPS, WebDAV
+- **Encryption**: AES-256, RSA
+
+## Performance Advantages
+
+- **Delta Sync**: Only transfers changed file blocks, not entire files
+- **Clustering**: Supports horizontal scaling for large deployments
+- **CDN Support**: Integration with content delivery networks
+- **Caching**: Intelligent caching for improved performance
+- **Optimized Protocol**: Custom sync protocol for efficiency

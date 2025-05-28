@@ -1,0 +1,172 @@
+---
+slug: rero-ils
+name: RERO ILS
+description: |
+  RERO ILS is a large-scale integrated library system that can be run as a service with consortial features, intended primarily for library networks. It includes most standard modules (circulation, acquisitions, cataloging) and provides both web-based public and professional interfaces.
+category: ils
+tags: [library, ils, consortium, catalog, modern]
+github: rero/rero-ils
+urls:
+  website: https://rero21.ch/
+  demo: https://ils.test.rero.ch/
+alternatives:
+  selfHosted: [koha, evergreen]
+  nonSelfHosted: [oclc-worldshare, sirsi-dynix]
+deployment:
+  difficulty: "Advanced"
+  justification: "Modern containerized system but requires Docker expertise, Elasticsearch, and complex configuration for consortial features."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Consortial library system
+      - name: Target Use Case
+        value: Library networks and consortiums
+      - name: Architecture
+        value: Python + Flask + Elasticsearch + Docker
+  - name: Modern Interface
+    features:
+      - name: Angular Frontend
+      - name: Responsive Design
+      - name: REST API
+      - name: Real-time Updates
+      - name: Progressive Web App
+  - name: Cataloging
+    features:
+      - name: MARC21 Support
+      - name: RDA Cataloging
+      - name: Authority Control
+      - name: Linked Data Ready
+      - name: Import/Export Tools
+  - name: Circulation
+    features:
+      - name: Patron Management
+      - name: Loan Management
+      - name: Request System
+      - name: Fee Management
+      - name: Notification System
+  - name: Acquisitions
+    features:
+      - name: Order Management
+      - name: Vendor Management
+      - name: Budget Control
+      - name: Receipt Processing
+      - name: Invoice Handling
+  - name: Consortial Features
+    features:
+      - name: Multi-library Support
+      - name: Shared Catalogs
+      - name: Inter-library Loans
+      - name: Consortial Policies
+      - name: Resource Sharing
+  - name: Public Interface
+    features:
+      - name: Modern OPAC
+      - name: Faceted Search
+      - name: User Account
+      - name: Mobile Optimized
+      - name: Accessibility
+  - name: Administration
+    features:
+      - name: Role-based Access
+      - name: Configuration Management
+      - name: Statistics & Reports
+      - name: System Monitoring
+      - name: Multi-tenancy
+---
+
+RERO ILS is a next-generation integrated library system developed by the RERO (Réseau des bibliothèques de Suisse occidentale) consortium in Switzerland. Designed from the ground up as a modern, cloud-native solution, it focuses on serving library networks and consortiums with advanced collaborative features and a contemporary user experience.
+
+## Key Features
+
+- **Modern Architecture**:
+
+  - Built with Python and Flask framework
+  - Angular-based responsive frontend
+  - Elasticsearch for powerful search capabilities
+  - Docker containerization for easy deployment
+  - Microservices architecture
+  - RESTful API design
+
+- **Consortial Focus**:
+
+  - Multi-library and multi-tenant support
+  - Shared catalog management
+  - Inter-library loan facilitation
+  - Consortial policy management
+  - Resource sharing capabilities
+  - Centralized vs. distributed operations
+
+- **Advanced Cataloging**:
+
+  - Full MARC21 support with RDA compliance
+  - Authority record management
+  - Linked data readiness (JSON-LD)
+  - Batch import and export capabilities
+  - Duplicate detection and merging
+  - Professional cataloging interface
+
+- **Circulation Services**:
+
+  - Comprehensive patron management
+  - Flexible loan policies
+  - Advanced request and hold system
+  - Fine and fee management
+  - Automated notification system
+  - Self-service capabilities
+
+- **Acquisitions Management**:
+
+  - Purchase order workflow
+  - Vendor and supplier management
+  - Budget allocation and tracking
+  - Receipt and invoice processing
+  - Claiming and order monitoring
+  - Financial reporting
+
+- **Public Discovery Interface**:
+
+  - Modern, intuitive OPAC design
+  - Faceted search and filtering
+  - Advanced search capabilities
+  - Patron self-service portal
+  - Mobile-responsive design
+  - Accessibility compliance (WCAG)
+
+- **Administrative Tools**:
+
+  - Role-based access control
+  - Flexible configuration management
+  - Comprehensive reporting system
+  - Real-time system monitoring
+  - Multi-language support
+  - Customizable workflows
+
+- **Integration & Standards**:
+  - REST API for third-party integrations
+  - Standard library protocols support
+  - LDAP and SSO authentication
+  - OAI-PMH for metadata harvesting
+  - SIP2 protocol compatibility
+  - Modern web standards compliance
+
+## Technical Specifications
+
+- **Backend**: Python with Flask and Invenio framework
+- **Frontend**: Angular with TypeScript
+- **Database**: PostgreSQL
+- **Search Engine**: Elasticsearch
+- **Deployment**: Docker and Kubernetes
+- **Operating System**: Linux (containerized)
+- **Standards**: MARC21, RDA, JSON-LD, OAI-PMH, SIP2
+
+## Unique Advantages
+
+- **Cloud-Native Design**: Built for modern infrastructure with containerization and microservices
+- **Consortial Excellence**: Specifically designed for library networks and resource sharing
+- **Modern UX**: Contemporary user interface design for both staff and patrons
+- **Scalability**: Designed to handle large-scale operations and high transaction volumes
+- **Future-Ready**: Prepared for linked data and semantic web technologies

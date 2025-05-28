@@ -1,0 +1,148 @@
+---
+slug: syncthing
+name: Syncthing
+description: |
+  Syncthing is an open-source peer-to-peer file synchronization tool that keeps your files synchronized between multiple devices without requiring a central server. It provides secure, private, and decentralized file sync with end-to-end encryption.
+category: file-sync
+tags: [p2p, sync, decentralized, privacy, encryption]
+github: syncthing/syncthing
+urls:
+  website: https://syncthing.net/
+alternatives:
+  selfHosted: [seafile, nextcloud, owncloud]
+  nonSelfHosted: [resilio-sync, dropbox, google-drive]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple installation with pre-built binaries, minimal configuration required, and intuitive web interface."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Peer-to-peer file synchronization
+      - name: Target Use Case
+        value: Personal and small team file sync
+      - name: Architecture
+        value: Go + Web UI + P2P Protocol
+  - name: Synchronization
+    features:
+      - name: Real-time Sync
+      - name: Selective Sync
+      - name: Conflict Resolution
+      - name: Version Control
+      - name: Bandwidth Control
+  - name: Security
+    features:
+      - name: End-to-End Encryption
+      - name: Device Authentication
+      - name: TLS Communication
+      - name: No Central Server
+      - name: Private by Design
+  - name: Network
+    features:
+      - name: P2P Discovery
+      - name: Relay Support
+      - name: NAT Traversal
+      - name: Local Discovery
+      - name: Global Discovery
+  - name: Management
+    features:
+      - name: Web Interface
+      - name: REST API
+      - name: Folder Sharing
+      - name: Device Management
+      - name: Ignore Patterns
+  - name: Platform Support
+    features:
+      - name: Cross-Platform
+      - name: Mobile Apps
+      - name: Docker Support
+      - name: Package Managers
+      - name: Portable Builds
+---
+
+Syncthing is a revolutionary peer-to-peer file synchronization tool that eliminates the need for centralized cloud storage. It creates a secure, private network between your devices, ensuring your data remains under your complete control while providing seamless synchronization across all your devices.
+
+## Key Features
+
+- **Peer-to-Peer Architecture**:
+
+  - No central server required
+  - Direct device-to-device synchronization
+  - Decentralized network topology
+  - Automatic device discovery
+  - Relay servers for NAT traversal
+  - Local network optimization
+
+- **Security & Privacy**:
+
+  - End-to-end encryption (TLS 1.3)
+  - Device authentication with certificates
+  - No data stored on third-party servers
+  - Open-source and auditable code
+  - Privacy by design principles
+  - Secure device pairing
+
+- **Synchronization Features**:
+
+  - Real-time file synchronization
+  - Selective folder synchronization
+  - Intelligent conflict resolution
+  - File versioning and history
+  - Bandwidth limiting and scheduling
+  - Pause and resume capabilities
+
+- **Folder Management**:
+
+  - Flexible folder sharing
+  - Read-only and send-only folders
+  - Ignore patterns (.stignore files)
+  - Folder labels and descriptions
+  - Nested folder support
+  - Custom folder paths
+
+- **Network Capabilities**:
+
+  - Automatic local device discovery
+  - Global discovery service
+  - Custom discovery servers
+  - Relay server support
+  - UPnP port forwarding
+  - IPv6 support
+
+- **User Interface**:
+
+  - Clean web-based interface
+  - Real-time status monitoring
+  - Detailed synchronization logs
+  - Performance statistics
+  - Configuration management
+  - Mobile-responsive design
+
+- **Advanced Features**:
+  - REST API for automation
+  - Event-based notifications
+  - Custom relay servers
+  - Folder watchers
+  - Delta synchronization
+  - Compression support
+
+## Technical Specifications
+
+- **Language**: Go (Golang)
+- **Protocol**: Custom BEP (Block Exchange Protocol)
+- **Encryption**: TLS 1.3 with ChaCha20-Poly1305
+- **Discovery**: Local (UDP) and Global (HTTPS)
+- **Platforms**: Windows, macOS, Linux, Android, FreeBSD
+- **Architecture**: Single binary, no dependencies
+- **API**: RESTful HTTP API
+
+## Unique Advantages
+
+- **True Decentralization**: No reliance on cloud providers or central servers
+- **Complete Privacy**: Your data never leaves your devices except to go to your other devices
+- **Zero Configuration**: Works out of the box with minimal setup
+- **Efficient Protocol**: Only transfers changed blocks, not entire files
+- **Open Source**: Fully auditable and community-driven development
