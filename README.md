@@ -17,7 +17,6 @@ OpenApps is a comprehensive directory of self-hostable open source projects that
 - **📈 GitHub Integration**: Real-time stars, forks, and activity data
 - **🏷️ Smart Categorization**: Projects organized by use case and functionality
 - **📱 Responsive Design**: Works seamlessly on desktop and mobile
-- **🚀 Static Generation**: Fast loading with Next.js static site generation
 
 ## 🏗️ Architecture
 
