@@ -29,16 +29,7 @@ export const mdxProjectData = z
     pricingModel: z.nativeEnum(PricingModel).optional(),
 
     logo: z.string(),
-    heroImage: z
-      .string()
-      .optional()
-      .refine((val) => {
-        if (!val) {
-          console.warn("Project hero image not set")
-          return true
-        }
-        return true
-      }),
+    heroImage: z.string().optional(),
 
     category: z.string(),
     tags: z.array(z.string()),

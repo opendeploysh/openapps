@@ -9471,6 +9471,819 @@
     ]
   },
   {
+    "filePath": "projects/digital-library/dspace.mdx",
+    "slug": "dspace",
+    "name": "DSpace",
+    "description": "DSpace is a turnkey institutional repository application that provides durable access to digital resources, widely used by academic, non-profit, and commercial organizations.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/428620?s=64&v=4",
+    "category": "digital-library",
+    "tags": [
+      "repository",
+      "digital-library",
+      "academic",
+      "institutional"
+    ],
+    "github": "DSpace/DSpace",
+    "urls": {
+      "website": "http://www.dspace.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "eprints",
+        "fedora-commons",
+        "invenio-rdm"
+      ],
+      "nonSelfHosted": [
+        "figshare",
+        "zenodo"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Java, PostgreSQL, and Solr setup with complex configuration for production use."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Institutional repository"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Academic digital assets"
+          },
+          {
+            "name": "Architecture",
+            "value": "Java + PostgreSQL + Solr"
+          }
+        ]
+      },
+      {
+        "name": "Repository Features",
+        "features": [
+          {
+            "name": "Digital Asset Storage"
+          },
+          {
+            "name": "Metadata Management"
+          },
+          {
+            "name": "Persistent Identifiers"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "Embargo Support"
+          }
+        ]
+      },
+      {
+        "name": "Discovery",
+        "features": [
+          {
+            "name": "Full-text Search"
+          },
+          {
+            "name": "Faceted Browse"
+          },
+          {
+            "name": "OAI-PMH Support"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "SWORD Protocol"
+          }
+        ]
+      },
+      {
+        "name": "Workflow",
+        "features": [
+          {
+            "name": "Submission Workflow"
+          },
+          {
+            "name": "Review Process"
+          },
+          {
+            "name": "Batch Import"
+          },
+          {
+            "name": "Curation Tasks"
+          },
+          {
+            "name": "Authority Control"
+          }
+        ]
+      },
+      {
+        "name": "Access Control",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Group Permissions"
+          },
+          {
+            "name": "Collection Hierarchy"
+          },
+          {
+            "name": "Access Restrictions"
+          },
+          {
+            "name": "Authentication Options"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/digital-library/eprints.mdx",
+    "slug": "eprints",
+    "name": "EPrints",
+    "description": "EPrints is a flexible repository software developed for building high quality and high value repositories, primarily used by academic institutions for open access research outputs.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://www.eprints.org/favicon.ico",
+    "category": "digital-library",
+    "tags": [
+      "repository",
+      "academic",
+      "research",
+      "perl",
+      "open-access"
+    ],
+    "github": "eprints/eprints3.4",
+    "urls": {
+      "website": "https://www.eprints.org/",
+      "demo": "http://tryme.demo.eprints-hosting.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "dspace",
+        "fedora-commons",
+        "invenio-rdm"
+      ],
+      "nonSelfHosted": [
+        "figshare",
+        "zenodo"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Perl, MySQL, and Apache setup with specific module configurations."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Research repository"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Academic publications"
+          },
+          {
+            "name": "Architecture",
+            "value": "Perl + MySQL + Apache"
+          }
+        ]
+      },
+      {
+        "name": "Repository Management",
+        "features": [
+          {
+            "name": "Flexible Metadata"
+          },
+          {
+            "name": "Document Types"
+          },
+          {
+            "name": "Multiple Formats"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "Embargo Management"
+          }
+        ]
+      },
+      {
+        "name": "Workflow",
+        "features": [
+          {
+            "name": "Deposit Workflow"
+          },
+          {
+            "name": "Editorial Review"
+          },
+          {
+            "name": "Quality Assurance"
+          },
+          {
+            "name": "Batch Operations"
+          },
+          {
+            "name": "Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Discovery",
+        "features": [
+          {
+            "name": "Advanced Search"
+          },
+          {
+            "name": "Browse Views"
+          },
+          {
+            "name": "RSS Feeds"
+          },
+          {
+            "name": "OAI-PMH"
+          },
+          {
+            "name": "Citation Export"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "User Profiles"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "REF Support"
+          },
+          {
+            "name": "ORCID Integration"
+          },
+          {
+            "name": "Altmetrics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/digital-library/fedora-commons.mdx",
+    "slug": "fedora-commons",
+    "name": "Fedora Commons Repository",
+    "description": "Fedora is a robust, modular, open source repository system for the management and dissemination of digital content, particularly suited for digital libraries and archives.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/7585963?s=64&v=4",
+    "heroImage": "https://wiki.lyrasis.org/download/attachments/87460886/fedora-logo.png",
+    "category": "digital-library",
+    "tags": [
+      "repository",
+      "digital-preservation",
+      "linked-data",
+      "java",
+      "rdf"
+    ],
+    "github": "fcrepo/fcrepo",
+    "urls": {
+      "website": "https://wiki.lyrasis.org/display/FF/Fedora+Repository+Home"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "dspace",
+        "eprints",
+        "archivematica"
+      ],
+      "nonSelfHosted": [
+        "preservica",
+        "archivematica-cloud"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex architecture requiring Java, triple store, and understanding of linked data concepts."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Digital preservation"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Archives & libraries"
+          },
+          {
+            "name": "Architecture",
+            "value": "Java + RDF + LDP"
+          }
+        ]
+      },
+      {
+        "name": "Preservation",
+        "features": [
+          {
+            "name": "OAIS Compliance"
+          },
+          {
+            "name": "Fixity Checking"
+          },
+          {
+            "name": "Versioning"
+          },
+          {
+            "name": "Audit Trail"
+          },
+          {
+            "name": "Format Migration"
+          }
+        ]
+      },
+      {
+        "name": "Data Model",
+        "features": [
+          {
+            "name": "Linked Data"
+          },
+          {
+            "name": "RDF Support"
+          },
+          {
+            "name": "SPARQL Queries"
+          },
+          {
+            "name": "Flexible Modeling"
+          },
+          {
+            "name": "External References"
+          }
+        ]
+      },
+      {
+        "name": "Standards",
+        "features": [
+          {
+            "name": "LDP Compliance"
+          },
+          {
+            "name": "WebAC Authorization"
+          },
+          {
+            "name": "Memento Versioning"
+          },
+          {
+            "name": "PREMIS Events"
+          },
+          {
+            "name": "Portland Common Data Model"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Messaging"
+          },
+          {
+            "name": "Camel Routes"
+          },
+          {
+            "name": "External Indexing"
+          },
+          {
+            "name": "Microservices"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/digital-library/invenio-rdm.mdx",
+    "slug": "invenio-rdm",
+    "name": "InvenioRDM",
+    "description": "InvenioRDM is a modern research data management repository platform that enables organizations to securely share and preserve research data with a beautiful, intuitive interface.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/1157480?s=64&v=4",
+    "category": "digital-library",
+    "tags": [
+      "digital-library",
+      "research-data",
+      "repository",
+      "cern"
+    ],
+    "github": "inveniosoftware/invenio-app-rdm",
+    "urls": {
+      "website": "https://inveniordm.docs.cern.ch/",
+      "demo": "https://inveniordm.web.cern.ch/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "dataverse",
+        "ckan",
+        "dspace"
+      ],
+      "nonSelfHosted": [
+        "zenodo",
+        "figshare",
+        "dryad"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Docker, Elasticsearch, PostgreSQL, and Redis with complex initial setup."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Research data management"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Research repositories"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Elasticsearch"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Flexible Metadata"
+          },
+          {
+            "name": "DOI Minting"
+          },
+          {
+            "name": "Versioning"
+          },
+          {
+            "name": "Large File Support"
+          },
+          {
+            "name": "Access Control"
+          }
+        ]
+      },
+      {
+        "name": "Discovery",
+        "features": [
+          {
+            "name": "Elasticsearch Search"
+          },
+          {
+            "name": "Faceted Browse"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "OAI-PMH"
+          },
+          {
+            "name": "Citation Formats"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "features": [
+          {
+            "name": "Communities"
+          },
+          {
+            "name": "User Profiles"
+          },
+          {
+            "name": "Sharing Controls"
+          },
+          {
+            "name": "Review Workflows"
+          },
+          {
+            "name": "Comments"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Beautiful UI"
+          },
+          {
+            "name": "Responsive Design"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "Previews"
+          },
+          {
+            "name": "GitHub Integration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/digital-library/islandora.mdx",
+    "slug": "islandora",
+    "name": "Islandora",
+    "description": "Islandora is an open-source software framework designed to help institutions collaboratively manage and discover digital assets using Drupal and Fedora Repository.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/494054?v=4",
+    "category": "digital-library",
+    "tags": [
+      "digital-library",
+      "drupal",
+      "fedora",
+      "preservation",
+      "php"
+    ],
+    "github": "Islandora/islandora",
+    "urls": {
+      "website": "https://www.islandora.ca/",
+      "demo": "https://sandbox.islandora.ca/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "omeka",
+        "samvera",
+        "dspace"
+      ],
+      "nonSelfHosted": [
+        "contentdm",
+        "digital-commons"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Requires Drupal, Fedora Repository, Solr, and various microservices with complex integration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Digital collections"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Libraries & archives"
+          },
+          {
+            "name": "Architecture",
+            "value": "Drupal + Fedora"
+          }
+        ]
+      },
+      {
+        "name": "Content Types",
+        "features": [
+          {
+            "name": "Images & Books"
+          },
+          {
+            "name": "Audio & Video"
+          },
+          {
+            "name": "PDFs & Documents"
+          },
+          {
+            "name": "Newspapers"
+          },
+          {
+            "name": "Research Data"
+          }
+        ]
+      },
+      {
+        "name": "Preservation",
+        "features": [
+          {
+            "name": "PREMIS Support"
+          },
+          {
+            "name": "Technical Metadata"
+          },
+          {
+            "name": "Preservation Policies"
+          },
+          {
+            "name": "Format Migration"
+          },
+          {
+            "name": "Checksums"
+          }
+        ]
+      },
+      {
+        "name": "Discovery",
+        "features": [
+          {
+            "name": "Solr Search"
+          },
+          {
+            "name": "Faceted Browse"
+          },
+          {
+            "name": "Collections"
+          },
+          {
+            "name": "Metadata Display"
+          },
+          {
+            "name": "IIIF Support"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Drupal Modules"
+          },
+          {
+            "name": "Microservices"
+          },
+          {
+            "name": "OAI-PMH"
+          },
+          {
+            "name": "REST APIs"
+          },
+          {
+            "name": "Linked Data"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/digital-library/samvera-hyrax.mdx",
+    "slug": "samvera-hyrax",
+    "name": "Samvera Hyrax",
+    "description": "Hyrax is a front-end application for the Samvera repository framework, providing a user interface for managing repository objects in Fedora-based digital repositories.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://samvera.org/images/favicon.ico",
+    "category": "digital-library",
+    "tags": [
+      "repository",
+      "digital-library",
+      "ruby-on-rails",
+      "fedora",
+      "hydra"
+    ],
+    "github": "samvera/hyrax",
+    "urls": {
+      "website": "https://samvera.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "islandora",
+        "dspace",
+        "eprints"
+      ],
+      "nonSelfHosted": [
+        "bepress",
+        "contentdm"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex Ruby on Rails application requiring Fedora, Solr, Redis, and extensive configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Repository interface"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Academic repositories"
+          },
+          {
+            "name": "Architecture",
+            "value": "Rails + Fedora + Solr"
+          }
+        ]
+      },
+      {
+        "name": "Repository Features",
+        "features": [
+          {
+            "name": "Work Types"
+          },
+          {
+            "name": "Collections"
+          },
+          {
+            "name": "Administrative Sets"
+          },
+          {
+            "name": "Batch Operations"
+          },
+          {
+            "name": "Workflows"
+          }
+        ]
+      },
+      {
+        "name": "User Interface",
+        "features": [
+          {
+            "name": "Responsive Design"
+          },
+          {
+            "name": "Dashboard"
+          },
+          {
+            "name": "Faceted Search"
+          },
+          {
+            "name": "Work Forms"
+          },
+          {
+            "name": "Batch Upload"
+          }
+        ]
+      },
+      {
+        "name": "Preservation",
+        "features": [
+          {
+            "name": "Versioning"
+          },
+          {
+            "name": "Fixity Checks"
+          },
+          {
+            "name": "Characterization"
+          },
+          {
+            "name": "Derivatives"
+          },
+          {
+            "name": "PCDM Model"
+          }
+        ]
+      },
+      {
+        "name": "Access Control",
+        "features": [
+          {
+            "name": "Fine-grained Permissions"
+          },
+          {
+            "name": "Embargo/Lease"
+          },
+          {
+            "name": "Groups"
+          },
+          {
+            "name": "Workflows"
+          },
+          {
+            "name": "Visibility Controls"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "filePath": "projects/document-management/docking.mdx",
     "slug": "docking",
     "name": "DocKing",
@@ -10680,6 +11493,2993 @@
           },
           {
             "name": "Document Sharing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/aimeos.mdx",
+    "slug": "aimeos",
+    "name": "Aimeos",
+    "description": "Aimeos is a professional, full-featured and ultra-fast e-commerce framework for building custom online shops, market places and complex B2B applications scaling to billions of items with Laravel.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://aimeos.org/fileadmin/logos/favicon.svg",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "laravel",
+      "marketplace",
+      "b2b",
+      "php"
+    ],
+    "github": "aimeos/aimeos",
+    "urls": {
+      "website": "https://aimeos.org/",
+      "demo": "https://demo.aimeos.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "bagisto",
+        "magento",
+        "prestashop"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "bigcommerce"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Laravel setup with database configuration and composer dependencies."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Enterprise e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Custom shops & marketplaces"
+          },
+          {
+            "name": "Architecture",
+            "value": "Laravel + MySQL"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "Multi-vendor Support"
+          },
+          {
+            "name": "B2B Features"
+          },
+          {
+            "name": "Product Variants"
+          },
+          {
+            "name": "Price Rules"
+          },
+          {
+            "name": "Stock Management"
+          }
+        ]
+      },
+      {
+        "name": "Scalability",
+        "features": [
+          {
+            "name": "High Performance"
+          },
+          {
+            "name": "Multi-site Support"
+          },
+          {
+            "name": "Multi-language"
+          },
+          {
+            "name": "Multi-currency"
+          },
+          {
+            "name": "Billions of Items"
+          }
+        ]
+      },
+      {
+        "name": "Customization",
+        "features": [
+          {
+            "name": "Modular Architecture"
+          },
+          {
+            "name": "Extension System"
+          },
+          {
+            "name": "Theme Support"
+          },
+          {
+            "name": "API-first Design"
+          },
+          {
+            "name": "Headless Commerce"
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "features": [
+          {
+            "name": "SEO Optimized"
+          },
+          {
+            "name": "Coupon System"
+          },
+          {
+            "name": "Product Reviews"
+          },
+          {
+            "name": "Wishlist"
+          },
+          {
+            "name": "Newsletter"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/bagisto.mdx",
+    "slug": "bagisto",
+    "name": "Bagisto",
+    "description": "Bagisto is a leading Laravel open source e-commerce framework with multi-inventory sources, taxation, localization, dropshipping and more exciting features.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/43133047?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "laravel",
+      "multi-vendor",
+      "dropshipping",
+      "php"
+    ],
+    "github": "bagisto/bagisto",
+    "urls": {
+      "website": "https://bagisto.com/en/",
+      "demo": "https://demo.bagisto.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "aimeos",
+        "magento",
+        "woocommerce"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "wix"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Laravel installation with built-in installer and clear documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Modern Laravel e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Multi-channel retail"
+          },
+          {
+            "name": "Architecture",
+            "value": "Laravel + Vue.js"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "Multi-inventory"
+          },
+          {
+            "name": "Multi-channel"
+          },
+          {
+            "name": "Multi-currency"
+          },
+          {
+            "name": "Multi-locale"
+          },
+          {
+            "name": "Dropshipping"
+          }
+        ]
+      },
+      {
+        "name": "Product Management",
+        "features": [
+          {
+            "name": "Product Types"
+          },
+          {
+            "name": "Configurable Products"
+          },
+          {
+            "name": "Virtual Products"
+          },
+          {
+            "name": "Bundled Products"
+          },
+          {
+            "name": "Downloadable Products"
+          }
+        ]
+      },
+      {
+        "name": "Customer Experience",
+        "features": [
+          {
+            "name": "PWA Support"
+          },
+          {
+            "name": "Mobile Responsive"
+          },
+          {
+            "name": "Guest Checkout"
+          },
+          {
+            "name": "Wishlist"
+          },
+          {
+            "name": "Product Compare"
+          }
+        ]
+      },
+      {
+        "name": "Business Tools",
+        "features": [
+          {
+            "name": "Tax Management"
+          },
+          {
+            "name": "Shipping Methods"
+          },
+          {
+            "name": "Payment Gateways"
+          },
+          {
+            "name": "SEO Tools"
+          },
+          {
+            "name": "Analytics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/coreshop.mdx",
+    "slug": "coreshop",
+    "name": "CoreShop",
+    "description": "CoreShop is a comprehensive e-commerce plugin for Pimcore, providing a full-featured online shop solution integrated with Pimcore's powerful data management capabilities.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/16944523?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "pimcore",
+      "symfony",
+      "php",
+      "plugin"
+    ],
+    "github": "coreshop/CoreShop",
+    "urls": {
+      "website": "https://www.coreshop.org"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "sylius",
+        "magento",
+        "prestashop"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "bigcommerce"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Pimcore installation and understanding of Pimcore's architecture."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Pimcore e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Content-commerce integration"
+          },
+          {
+            "name": "Architecture",
+            "value": "Pimcore + Symfony"
+          }
+        ]
+      },
+      {
+        "name": "Product Management",
+        "features": [
+          {
+            "name": "Product Information"
+          },
+          {
+            "name": "Variants"
+          },
+          {
+            "name": "Categories"
+          },
+          {
+            "name": "Attributes"
+          },
+          {
+            "name": "Digital Assets"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "Cart Management"
+          },
+          {
+            "name": "Order Processing"
+          },
+          {
+            "name": "Payment Integration"
+          },
+          {
+            "name": "Shipping Rules"
+          },
+          {
+            "name": "Tax Calculation"
+          }
+        ]
+      },
+      {
+        "name": "Pimcore Integration",
+        "features": [
+          {
+            "name": "Data Objects"
+          },
+          {
+            "name": "Asset Management"
+          },
+          {
+            "name": "Document Management"
+          },
+          {
+            "name": "Workflow Engine"
+          },
+          {
+            "name": "Multi-site"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "Price Rules"
+          },
+          {
+            "name": "Vouchers"
+          },
+          {
+            "name": "Customer Groups"
+          },
+          {
+            "name": "Multi-currency"
+          },
+          {
+            "name": "Multi-language"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/drupal-commerce.mdx",
+    "slug": "drupal-commerce",
+    "name": "Drupal Commerce",
+    "description": "Drupal Commerce is a popular e-commerce module for Drupal CMS, with support for dozens of payment, shipping, and shopping related modules, providing a flexible commerce solution.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/183176?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "drupal",
+      "cms",
+      "php",
+      "modular"
+    ],
+    "github": "drupalcommerce/commerce",
+    "urls": {
+      "website": "https://drupalcommerce.org"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "woocommerce",
+        "magento",
+        "prestashop"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "squarespace"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Drupal installation and configuration of commerce modules."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Drupal-integrated commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Content-driven commerce"
+          },
+          {
+            "name": "Architecture",
+            "value": "Drupal + PHP"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "Product Management"
+          },
+          {
+            "name": "Shopping Cart"
+          },
+          {
+            "name": "Checkout Process"
+          },
+          {
+            "name": "Order Management"
+          },
+          {
+            "name": "Customer Profiles"
+          }
+        ]
+      },
+      {
+        "name": "Drupal Integration",
+        "features": [
+          {
+            "name": "Content Types"
+          },
+          {
+            "name": "Views Integration"
+          },
+          {
+            "name": "Rules Engine"
+          },
+          {
+            "name": "User Permissions"
+          },
+          {
+            "name": "Multilingual"
+          }
+        ]
+      },
+      {
+        "name": "Extensibility",
+        "features": [
+          {
+            "name": "Payment Modules"
+          },
+          {
+            "name": "Shipping Modules"
+          },
+          {
+            "name": "Tax Modules"
+          },
+          {
+            "name": "Promotion System"
+          },
+          {
+            "name": "Custom Workflows"
+          }
+        ]
+      },
+      {
+        "name": "Developer Features",
+        "features": [
+          {
+            "name": "API-first"
+          },
+          {
+            "name": "Headless Commerce"
+          },
+          {
+            "name": "Custom Entities"
+          },
+          {
+            "name": "Event System"
+          },
+          {
+            "name": "Theming System"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/evershop.mdx",
+    "slug": "evershop",
+    "name": "EverShop",
+    "description": "EverShop is a GraphQL-based and React e-commerce platform with essential commerce features, modular architecture, and full customization capabilities.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/83757778?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "nodejs",
+      "react",
+      "graphql",
+      "docker"
+    ],
+    "github": "evershopcommerce/evershop",
+    "urls": {
+      "website": "https://evershop.io/",
+      "demo": "https://demo.evershop.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "medusajs",
+        "saleor",
+        "vendure"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "bigcommerce"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple Docker deployment or Node.js installation with built-in CLI."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Modern Node.js commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Developer-friendly stores"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + React + GraphQL"
+          }
+        ]
+      },
+      {
+        "name": "Technical Stack",
+        "features": [
+          {
+            "name": "GraphQL API"
+          },
+          {
+            "name": "React Frontend"
+          },
+          {
+            "name": "PostgreSQL"
+          },
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Module System"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "Product Catalog"
+          },
+          {
+            "name": "Shopping Cart"
+          },
+          {
+            "name": "Checkout"
+          },
+          {
+            "name": "Order Management"
+          },
+          {
+            "name": "Customer Accounts"
+          }
+        ]
+      },
+      {
+        "name": "Developer Experience",
+        "features": [
+          {
+            "name": "CLI Tools"
+          },
+          {
+            "name": "Hot Reload"
+          },
+          {
+            "name": "Extension API"
+          },
+          {
+            "name": "Theme System"
+          },
+          {
+            "name": "TypeScript Support"
+          }
+        ]
+      },
+      {
+        "name": "Modern Features",
+        "features": [
+          {
+            "name": "SSR Support"
+          },
+          {
+            "name": "PWA Ready"
+          },
+          {
+            "name": "SEO Optimized"
+          },
+          {
+            "name": "Multi-language"
+          },
+          {
+            "name": "Responsive Design"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/litecart.mdx",
+    "slug": "litecart",
+    "name": "Litecart",
+    "description": "Litecart is a minimalist shopping cart solution in a single file, supporting both traditional card payments and cryptocurrency transactions with a focus on simplicity.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/411055?s=64&v=4",
+    "heroImage": "https://github.com/shurco/litecart/raw/main/.github/media/banner.png",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "golang",
+      "cryptocurrency",
+      "minimal",
+      "docker"
+    ],
+    "github": "shurco/litecart",
+    "urls": {
+      "website": "https://github.com/shurco/litecart"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "snipcart",
+        "medusajs",
+        "opencart"
+      ],
+      "nonSelfHosted": [
+        "stripe-checkout",
+        "paddle"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single binary or Docker container with minimal configuration required."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Minimalist shopping cart"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Simple e-commerce needs"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go single binary"
+          }
+        ]
+      },
+      {
+        "name": "Payment Support",
+        "features": [
+          {
+            "name": "Card Payments"
+          },
+          {
+            "name": "Cryptocurrency"
+          },
+          {
+            "name": "Payment Gateway Integration"
+          },
+          {
+            "name": "Secure Transactions"
+          },
+          {
+            "name": "Multiple Currencies"
+          }
+        ]
+      },
+      {
+        "name": "Simplicity",
+        "features": [
+          {
+            "name": "Single File"
+          },
+          {
+            "name": "No Database"
+          },
+          {
+            "name": "Easy Setup"
+          },
+          {
+            "name": "Minimal Dependencies"
+          },
+          {
+            "name": "Lightweight"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Product Catalog"
+          },
+          {
+            "name": "Shopping Cart"
+          },
+          {
+            "name": "Checkout Process"
+          },
+          {
+            "name": "Order Management"
+          },
+          {
+            "name": "Email Notifications"
+          }
+        ]
+      },
+      {
+        "name": "Deployment",
+        "features": [
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Binary Distribution"
+          },
+          {
+            "name": "Cross-platform"
+          },
+          {
+            "name": "Low Resource Usage"
+          },
+          {
+            "name": "Easy Updates"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/magento.mdx",
+    "slug": "magento",
+    "name": "Magento Open Source",
+    "description": "Magento Open Source is a leading provider of open omnichannel innovation, offering a flexible and scalable commerce platform trusted by thousands of merchants worldwide.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/168457?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "php",
+      "enterprise",
+      "b2b",
+      "marketplace"
+    ],
+    "github": "magento/magento2",
+    "urls": {
+      "website": "https://business.adobe.com/products/magento/magento-commerce.html"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "woocommerce",
+        "prestashop",
+        "shopware"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "bigcommerce"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex installation requiring specific server configuration, multiple services, and performance optimization."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Enterprise e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Large-scale retail"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + MySQL + Redis"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "B2B Commerce"
+          },
+          {
+            "name": "Multi-store"
+          },
+          {
+            "name": "Advanced Catalog"
+          },
+          {
+            "name": "Customer Segmentation"
+          },
+          {
+            "name": "Page Builder"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Full Page Cache"
+          },
+          {
+            "name": "Varnish Support"
+          },
+          {
+            "name": "Elasticsearch"
+          },
+          {
+            "name": "Redis Cache"
+          },
+          {
+            "name": "CDN Integration"
+          }
+        ]
+      },
+      {
+        "name": "Extensibility",
+        "features": [
+          {
+            "name": "Marketplace"
+          },
+          {
+            "name": "API Coverage"
+          },
+          {
+            "name": "Module System"
+          },
+          {
+            "name": "Theme Framework"
+          },
+          {
+            "name": "Event System"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Tools",
+        "features": [
+          {
+            "name": "Inventory Management"
+          },
+          {
+            "name": "Order Management"
+          },
+          {
+            "name": "Customer Management"
+          },
+          {
+            "name": "Marketing Tools"
+          },
+          {
+            "name": "Analytics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/medusajs.mdx",
+    "slug": "medusajs",
+    "name": "MedusaJs",
+    "description": "MedusaJs is a headless commerce engine that enables developers to create amazing digital commerce experiences with a modular architecture and powerful APIs.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/62591822?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "nodejs",
+      "headless",
+      "api-first",
+      "typescript"
+    ],
+    "github": "medusajs/medusa",
+    "urls": {
+      "website": "https://medusajs.com/",
+      "demo": "https://next.medusajs.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "saleor",
+        "vendure",
+        "evershop"
+      ],
+      "nonSelfHosted": [
+        "commercetools",
+        "contentful"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple npm installation or Docker deployment with clear documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Headless commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Custom storefronts"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + TypeScript"
+          }
+        ]
+      },
+      {
+        "name": "Architecture",
+        "features": [
+          {
+            "name": "Modular Design"
+          },
+          {
+            "name": "Plugin System"
+          },
+          {
+            "name": "Event-driven"
+          },
+          {
+            "name": "Multi-tenancy"
+          },
+          {
+            "name": "Microservices Ready"
+          }
+        ]
+      },
+      {
+        "name": "Developer Experience",
+        "features": [
+          {
+            "name": "TypeScript Native"
+          },
+          {
+            "name": "REST & GraphQL"
+          },
+          {
+            "name": "Admin Dashboard"
+          },
+          {
+            "name": "CLI Tools"
+          },
+          {
+            "name": "Hot Reload"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "Multi-currency"
+          },
+          {
+            "name": "Multi-region"
+          },
+          {
+            "name": "Tax Calculation"
+          },
+          {
+            "name": "Inventory Management"
+          },
+          {
+            "name": "Order Management"
+          }
+        ]
+      },
+      {
+        "name": "Integrations",
+        "features": [
+          {
+            "name": "Payment Providers"
+          },
+          {
+            "name": "Fulfillment Services"
+          },
+          {
+            "name": "CMS Integration"
+          },
+          {
+            "name": "Analytics"
+          },
+          {
+            "name": "Search Engines"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/microweber.mdx",
+    "slug": "microweber",
+    "name": "Microweber",
+    "description": "Microweber is a drag and drop CMS and online shop that combines website building with e-commerce functionality in an easy-to-use platform.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/281507?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "cms",
+      "drag-drop",
+      "php",
+      "website-builder"
+    ],
+    "github": "microweber/microweber",
+    "urls": {
+      "website": "https://microweber.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "wordpress-woocommerce",
+        "opencart",
+        "prestashop"
+      ],
+      "nonSelfHosted": [
+        "wix",
+        "squarespace",
+        "weebly"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "One-click installers available, simple PHP application with automated setup."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "CMS with e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Small business websites"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + Laravel"
+          }
+        ]
+      },
+      {
+        "name": "Website Builder",
+        "features": [
+          {
+            "name": "Drag & Drop Editor"
+          },
+          {
+            "name": "Live Edit"
+          },
+          {
+            "name": "Templates"
+          },
+          {
+            "name": "Responsive Design"
+          },
+          {
+            "name": "Custom CSS/JS"
+          }
+        ]
+      },
+      {
+        "name": "E-commerce",
+        "features": [
+          {
+            "name": "Product Management"
+          },
+          {
+            "name": "Shopping Cart"
+          },
+          {
+            "name": "Payment Gateways"
+          },
+          {
+            "name": "Shipping Options"
+          },
+          {
+            "name": "Order Management"
+          }
+        ]
+      },
+      {
+        "name": "CMS Features",
+        "features": [
+          {
+            "name": "Blog System"
+          },
+          {
+            "name": "Page Builder"
+          },
+          {
+            "name": "Media Manager"
+          },
+          {
+            "name": "SEO Tools"
+          },
+          {
+            "name": "Multi-language"
+          }
+        ]
+      },
+      {
+        "name": "Business Tools",
+        "features": [
+          {
+            "name": "Contact Forms"
+          },
+          {
+            "name": "Email Marketing"
+          },
+          {
+            "name": "Analytics"
+          },
+          {
+            "name": "Customer Management"
+          },
+          {
+            "name": "Backup System"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/open-source-pos.mdx",
+    "slug": "open-source-pos",
+    "name": "Open Source POS",
+    "description": "Open Source Point of Sale is a web-based point of sale system designed for small to medium businesses, offering inventory management, sales tracking, and customer management.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/31845758?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "pos",
+      "point-of-sale",
+      "retail",
+      "inventory",
+      "php"
+    ],
+    "github": "opensourcepos/opensourcepos",
+    "urls": {
+      "website": "https://github.com/opensourcepos/opensourcepos"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "floreantpos",
+        "unicenta",
+        "chromis"
+      ],
+      "nonSelfHosted": [
+        "square",
+        "shopify-pos",
+        "toast"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Standard PHP application with Docker support and straightforward installation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Point of Sale system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Retail & hospitality"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + MySQL"
+          }
+        ]
+      },
+      {
+        "name": "Sales Features",
+        "features": [
+          {
+            "name": "Sales Register"
+          },
+          {
+            "name": "Barcode Scanning"
+          },
+          {
+            "name": "Receipt Printing"
+          },
+          {
+            "name": "Payment Processing"
+          },
+          {
+            "name": "Returns & Exchanges"
+          }
+        ]
+      },
+      {
+        "name": "Inventory",
+        "features": [
+          {
+            "name": "Stock Management"
+          },
+          {
+            "name": "Product Variants"
+          },
+          {
+            "name": "Supplier Management"
+          },
+          {
+            "name": "Purchase Orders"
+          },
+          {
+            "name": "Stock Alerts"
+          }
+        ]
+      },
+      {
+        "name": "Customer Management",
+        "features": [
+          {
+            "name": "Customer Database"
+          },
+          {
+            "name": "Loyalty Programs"
+          },
+          {
+            "name": "Store Credit"
+          },
+          {
+            "name": "Customer History"
+          },
+          {
+            "name": "Email Integration"
+          }
+        ]
+      },
+      {
+        "name": "Reporting",
+        "features": [
+          {
+            "name": "Sales Reports"
+          },
+          {
+            "name": "Inventory Reports"
+          },
+          {
+            "name": "Employee Reports"
+          },
+          {
+            "name": "Tax Reports"
+          },
+          {
+            "name": "Custom Reports"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/opencart.mdx",
+    "slug": "opencart",
+    "name": "OpenCart",
+    "description": "OpenCart is a free, open-source shopping cart solution that provides a professional and reliable foundation for building a successful online store.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/214225?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "shopping-cart",
+      "php",
+      "multi-store",
+      "marketplace"
+    ],
+    "github": "opencart/opencart",
+    "urls": {
+      "website": "https://www.opencart.com"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "prestashop",
+        "magento",
+        "woocommerce"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "bigcommerce"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple installation wizard, minimal server requirements, and extensive documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "User-friendly e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Small to medium stores"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + MySQL"
+          }
+        ]
+      },
+      {
+        "name": "Store Features",
+        "features": [
+          {
+            "name": "Multi-store"
+          },
+          {
+            "name": "Multi-language"
+          },
+          {
+            "name": "Multi-currency"
+          },
+          {
+            "name": "Product Options"
+          },
+          {
+            "name": "Product Reviews"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Admin Dashboard"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Order Processing"
+          },
+          {
+            "name": "Inventory Tracking"
+          },
+          {
+            "name": "Reports & Analytics"
+          }
+        ]
+      },
+      {
+        "name": "Extensions",
+        "features": [
+          {
+            "name": "Marketplace"
+          },
+          {
+            "name": "Payment Gateways"
+          },
+          {
+            "name": "Shipping Methods"
+          },
+          {
+            "name": "Themes"
+          },
+          {
+            "name": "Modules"
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "features": [
+          {
+            "name": "SEO Features"
+          },
+          {
+            "name": "Discount Coupons"
+          },
+          {
+            "name": "Affiliates"
+          },
+          {
+            "name": "Gift Vouchers"
+          },
+          {
+            "name": "Newsletter"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/prestashop.mdx",
+    "slug": "prestashop",
+    "name": "PrestaShop",
+    "description": "PrestaShop is a fully scalable open-source e-commerce solution that powers over 300,000 online stores worldwide with comprehensive features and a vibrant ecosystem.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/2815696?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "php",
+      "multi-language",
+      "marketplace",
+      "scalable"
+    ],
+    "github": "PrestaShop/PrestaShop",
+    "urls": {
+      "website": "https://www.prestashop.com/",
+      "demo": "https://demo.prestashop.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "opencart",
+        "magento",
+        "woocommerce"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "bigcommerce"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "One-click installer, clear requirements, and automated setup process."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Complete e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Professional online stores"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + Symfony"
+          }
+        ]
+      },
+      {
+        "name": "Store Management",
+        "features": [
+          {
+            "name": "Multi-store"
+          },
+          {
+            "name": "Multi-language"
+          },
+          {
+            "name": "Multi-currency"
+          },
+          {
+            "name": "Inventory Management"
+          },
+          {
+            "name": "Warehouse Management"
+          }
+        ]
+      },
+      {
+        "name": "Customization",
+        "features": [
+          {
+            "name": "Theme System"
+          },
+          {
+            "name": "Module Architecture"
+          },
+          {
+            "name": "Page Builder"
+          },
+          {
+            "name": "Custom Hooks"
+          },
+          {
+            "name": "Override System"
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "features": [
+          {
+            "name": "SEO Tools"
+          },
+          {
+            "name": "Email Marketing"
+          },
+          {
+            "name": "Promotions"
+          },
+          {
+            "name": "Cross-selling"
+          },
+          {
+            "name": "Analytics"
+          }
+        ]
+      },
+      {
+        "name": "Marketplace",
+        "features": [
+          {
+            "name": "Addons Store"
+          },
+          {
+            "name": "Themes"
+          },
+          {
+            "name": "Modules"
+          },
+          {
+            "name": "Services"
+          },
+          {
+            "name": "Translations"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/pretix.mdx",
+    "slug": "pretix",
+    "name": "Pretix",
+    "description": "Pretix is a ticket sales platform for events that provides a comprehensive solution for selling tickets online and at the door with a focus on data privacy and flexibility.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/8465417?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "ticketing",
+      "events",
+      "python",
+      "django",
+      "open-source"
+    ],
+    "github": "pretix/pretix",
+    "urls": {
+      "website": "https://pretix.eu/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "attendize",
+        "eventyay",
+        "osem"
+      ],
+      "nonSelfHosted": [
+        "eventbrite",
+        "ticketmaster",
+        "brown-paper-tickets"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Python environment setup with PostgreSQL and Redis for production use."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Event ticketing"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Event organizers"
+          },
+          {
+            "name": "Architecture",
+            "value": "Django + PostgreSQL"
+          }
+        ]
+      },
+      {
+        "name": "Ticketing Features",
+        "features": [
+          {
+            "name": "Multiple Ticket Types"
+          },
+          {
+            "name": "Seating Plans"
+          },
+          {
+            "name": "Vouchers & Discounts"
+          },
+          {
+            "name": "Waiting Lists"
+          },
+          {
+            "name": "Group Bookings"
+          }
+        ]
+      },
+      {
+        "name": "Sales Channels",
+        "features": [
+          {
+            "name": "Online Shop"
+          },
+          {
+            "name": "Box Office"
+          },
+          {
+            "name": "Resellers"
+          },
+          {
+            "name": "Widget Embedding"
+          },
+          {
+            "name": "API Sales"
+          }
+        ]
+      },
+      {
+        "name": "Payment & Compliance",
+        "features": [
+          {
+            "name": "Payment Providers"
+          },
+          {
+            "name": "Invoicing"
+          },
+          {
+            "name": "Tax Handling"
+          },
+          {
+            "name": "GDPR Compliant"
+          },
+          {
+            "name": "Data Export"
+          }
+        ]
+      },
+      {
+        "name": "Event Management",
+        "features": [
+          {
+            "name": "Check-in Apps"
+          },
+          {
+            "name": "Badge Printing"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "Email Automation"
+          },
+          {
+            "name": "Multi-event Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/s-cart.mdx",
+    "slug": "s-cart",
+    "name": "s-cart",
+    "description": "S-Cart is a free e-commerce website project for individuals and businesses, built on top of Laravel Framework with a modern, clean design and comprehensive features.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://s-cart.org/favicon.ico",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "laravel",
+      "php",
+      "shopping-cart",
+      "multi-vendor"
+    ],
+    "github": "s-cart/s-cart",
+    "urls": {
+      "website": "https://s-cart.org/",
+      "demo": "https://demo.s-cart.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "bagisto",
+        "aimeos",
+        "opencart"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "wix"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Standard Laravel application with automated installer and clear documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Laravel e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Modern online stores"
+          },
+          {
+            "name": "Architecture",
+            "value": "Laravel + Bootstrap"
+          }
+        ]
+      },
+      {
+        "name": "Store Features",
+        "features": [
+          {
+            "name": "Multi-vendor"
+          },
+          {
+            "name": "Multi-language"
+          },
+          {
+            "name": "Multi-currency"
+          },
+          {
+            "name": "Product Management"
+          },
+          {
+            "name": "Order Processing"
+          }
+        ]
+      },
+      {
+        "name": "Customization",
+        "features": [
+          {
+            "name": "Plugin System"
+          },
+          {
+            "name": "Template Engine"
+          },
+          {
+            "name": "API Support"
+          },
+          {
+            "name": "Custom Pages"
+          },
+          {
+            "name": "Block System"
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "features": [
+          {
+            "name": "SEO Friendly"
+          },
+          {
+            "name": "Promotions"
+          },
+          {
+            "name": "Coupons"
+          },
+          {
+            "name": "Email Marketing"
+          },
+          {
+            "name": "Social Integration"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Admin Dashboard"
+          },
+          {
+            "name": "Reports"
+          },
+          {
+            "name": "Backup System"
+          },
+          {
+            "name": "Cache Management"
+          },
+          {
+            "name": "Security Features"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/saleor.mdx",
+    "slug": "saleor",
+    "name": "Saleor",
+    "description": "Saleor is a high-performance, Django-based, GraphQL-first e-commerce platform that delivers ultra-fast, dynamic, and personalized shopping experiences.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/13796165?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "python",
+      "django",
+      "graphql",
+      "headless"
+    ],
+    "github": "saleor/saleor",
+    "urls": {
+      "website": "https://saleor.io",
+      "demo": "https://demo.saleor.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "medusajs",
+        "vendure",
+        "sylius"
+      ],
+      "nonSelfHosted": [
+        "commercetools",
+        "shopify-plus"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Docker setup with PostgreSQL, Redis, and proper configuration for production."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "GraphQL-first commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Headless commerce"
+          },
+          {
+            "name": "Architecture",
+            "value": "Django + GraphQL"
+          }
+        ]
+      },
+      {
+        "name": "API Features",
+        "features": [
+          {
+            "name": "GraphQL API"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "Subscriptions"
+          },
+          {
+            "name": "Batch Operations"
+          },
+          {
+            "name": "API Extensions"
+          }
+        ]
+      },
+      {
+        "name": "Commerce",
+        "features": [
+          {
+            "name": "Product Variants"
+          },
+          {
+            "name": "Multi-warehouse"
+          },
+          {
+            "name": "Multi-channel"
+          },
+          {
+            "name": "Dynamic Pricing"
+          },
+          {
+            "name": "Tax Automation"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Async Processing"
+          },
+          {
+            "name": "Caching"
+          },
+          {
+            "name": "CDN Ready"
+          },
+          {
+            "name": "Optimized Queries"
+          },
+          {
+            "name": "Scalable Architecture"
+          }
+        ]
+      },
+      {
+        "name": "Developer Tools",
+        "features": [
+          {
+            "name": "TypeScript SDK"
+          },
+          {
+            "name": "React Storefront"
+          },
+          {
+            "name": "CLI Tools"
+          },
+          {
+            "name": "Playground"
+          },
+          {
+            "name": "Documentation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/shopware.mdx",
+    "slug": "shopware",
+    "name": "Shopware Community Edition",
+    "description": "Shopware is a trendsetting open source e-commerce platform made in Germany, offering a perfect balance between innovation, flexibility, and ease of use.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://www.shopware.com/favicon.ico",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "php",
+      "symfony",
+      "api-first",
+      "german-engineering"
+    ],
+    "github": "shopware/platform",
+    "urls": {
+      "website": "https://www.shopware.com/en/community/community-edition/",
+      "demo": "https://www.shopware.com/en/test-demo/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "magento",
+        "prestashop",
+        "sylius"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "bigcommerce"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Symfony knowledge and specific server configuration for optimal performance."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "API-first commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "B2B & B2C commerce"
+          },
+          {
+            "name": "Architecture",
+            "value": "Symfony + Vue.js"
+          }
+        ]
+      },
+      {
+        "name": "Technology",
+        "features": [
+          {
+            "name": "API-First Design"
+          },
+          {
+            "name": "PWA Support"
+          },
+          {
+            "name": "Event System"
+          },
+          {
+            "name": "Rule Builder"
+          },
+          {
+            "name": "Flow Builder"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "B2B Suite"
+          },
+          {
+            "name": "Product Streams"
+          },
+          {
+            "name": "Shopping Experiences"
+          },
+          {
+            "name": "Multi-channel"
+          },
+          {
+            "name": "Advanced Search"
+          }
+        ]
+      },
+      {
+        "name": "Customization",
+        "features": [
+          {
+            "name": "App System"
+          },
+          {
+            "name": "Theme Manager"
+          },
+          {
+            "name": "Plugin Store"
+          },
+          {
+            "name": "Admin Extensions"
+          },
+          {
+            "name": "Custom Entities"
+          }
+        ]
+      },
+      {
+        "name": "German Market",
+        "features": [
+          {
+            "name": "GDPR Compliant"
+          },
+          {
+            "name": "German Tax System"
+          },
+          {
+            "name": "Legal Texts"
+          },
+          {
+            "name": "Payment Methods"
+          },
+          {
+            "name": "Shipping Providers"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/solidus.mdx",
+    "slug": "solidus",
+    "name": "Solidus",
+    "description": "Solidus is a free, open-source ecommerce platform built with Ruby on Rails that gives you complete control over your store with a focus on flexibility and customization.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/11045486?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "ruby-on-rails",
+      "api",
+      "modular",
+      "docker"
+    ],
+    "github": "solidusio/solidus",
+    "urls": {
+      "website": "https://solidus.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "spree",
+        "magento",
+        "sylius"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "bigcommerce"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Ruby on Rails environment setup with PostgreSQL and Redis."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Flexible e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Custom commerce solutions"
+          },
+          {
+            "name": "Architecture",
+            "value": "Ruby on Rails"
+          }
+        ]
+      },
+      {
+        "name": "Architecture",
+        "features": [
+          {
+            "name": "Modular Design"
+          },
+          {
+            "name": "Service Objects"
+          },
+          {
+            "name": "Event System"
+          },
+          {
+            "name": "Extension Points"
+          },
+          {
+            "name": "API Layer"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "Product Management"
+          },
+          {
+            "name": "Order Processing"
+          },
+          {
+            "name": "Multi-currency"
+          },
+          {
+            "name": "Tax Calculation"
+          },
+          {
+            "name": "Inventory Tracking"
+          }
+        ]
+      },
+      {
+        "name": "Customization",
+        "features": [
+          {
+            "name": "Extension System"
+          },
+          {
+            "name": "Theme Support"
+          },
+          {
+            "name": "Custom Calculators"
+          },
+          {
+            "name": "Promotion Engine"
+          },
+          {
+            "name": "Payment Methods"
+          }
+        ]
+      },
+      {
+        "name": "Developer Features",
+        "features": [
+          {
+            "name": "RESTful API"
+          },
+          {
+            "name": "GraphQL Support"
+          },
+          {
+            "name": "Testing Suite"
+          },
+          {
+            "name": "Documentation"
+          },
+          {
+            "name": "Community Extensions"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/spree.mdx",
+    "slug": "spree",
+    "name": "Spree Commerce",
+    "description": "Spree is a complete, modular & API-driven open source e-commerce solution for Ruby on Rails, offering a flexible platform for building sophisticated online stores.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/56702?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "ruby-on-rails",
+      "api-first",
+      "modular",
+      "headless"
+    ],
+    "github": "spree/spree",
+    "urls": {
+      "website": "https://spreecommerce.org",
+      "demo": "https://demo.spreecommerce.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "solidus",
+        "magento",
+        "sylius"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "bigcommerce"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Ruby on Rails environment with PostgreSQL and proper gem configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "API-driven commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Headless commerce"
+          },
+          {
+            "name": "Architecture",
+            "value": "Rails + API-first"
+          }
+        ]
+      },
+      {
+        "name": "API Features",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "GraphQL API"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "OAuth2"
+          },
+          {
+            "name": "API Documentation"
+          }
+        ]
+      },
+      {
+        "name": "Commerce",
+        "features": [
+          {
+            "name": "Multi-store"
+          },
+          {
+            "name": "Multi-currency"
+          },
+          {
+            "name": "Product Variants"
+          },
+          {
+            "name": "Promotions"
+          },
+          {
+            "name": "Tax Management"
+          }
+        ]
+      },
+      {
+        "name": "Flexibility",
+        "features": [
+          {
+            "name": "Modular Core"
+          },
+          {
+            "name": "Extension API"
+          },
+          {
+            "name": "Custom Attributes"
+          },
+          {
+            "name": "Event System"
+          },
+          {
+            "name": "Service Layer"
+          }
+        ]
+      },
+      {
+        "name": "Modern Features",
+        "features": [
+          {
+            "name": "Headless Ready"
+          },
+          {
+            "name": "PWA Support"
+          },
+          {
+            "name": "Mobile SDKs"
+          },
+          {
+            "name": "Storefront UI"
+          },
+          {
+            "name": "Admin Panel"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/sylius.mdx",
+    "slug": "sylius",
+    "name": "Sylius",
+    "description": "Sylius is a Symfony-powered open source full-stack platform for eCommerce, built on solid foundations with a focus on customization and professional support.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/719423?v=4",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "symfony",
+      "php",
+      "api-platform",
+      "headless"
+    ],
+    "github": "Sylius/Sylius",
+    "urls": {
+      "website": "https://sylius.com",
+      "demo": "https://sylius.com/try/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "magento",
+        "shopware",
+        "prestashop"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "bigcommerce"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Symfony expertise and proper server configuration for production deployment."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Symfony e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Complex B2B/B2C stores"
+          },
+          {
+            "name": "Architecture",
+            "value": "Symfony + API Platform"
+          }
+        ]
+      },
+      {
+        "name": "Technical Stack",
+        "features": [
+          {
+            "name": "Symfony Components"
+          },
+          {
+            "name": "API Platform"
+          },
+          {
+            "name": "BDD/TDD Ready"
+          },
+          {
+            "name": "Event Sourcing"
+          },
+          {
+            "name": "State Machine"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "Product Catalog"
+          },
+          {
+            "name": "Multi-channel"
+          },
+          {
+            "name": "Promotions"
+          },
+          {
+            "name": "Tax Management"
+          },
+          {
+            "name": "Shipping Methods"
+          }
+        ]
+      },
+      {
+        "name": "Customization",
+        "features": [
+          {
+            "name": "Plugin System"
+          },
+          {
+            "name": "Theme Engine"
+          },
+          {
+            "name": "Resource System"
+          },
+          {
+            "name": "Grid System"
+          },
+          {
+            "name": "Form Extensions"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "features": [
+          {
+            "name": "Multi-vendor"
+          },
+          {
+            "name": "B2B Features"
+          },
+          {
+            "name": "Workflow Engine"
+          },
+          {
+            "name": "API-first"
+          },
+          {
+            "name": "Scalability"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/thelia.mdx",
+    "slug": "thelia",
+    "name": "Thelia",
+    "description": "Thelia is an open source and flexible e-commerce solution based on Symfony components, offering a modern approach to building online stores with a focus on modularity.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://thelia.net/favicon.ico",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "symfony",
+      "php",
+      "modular",
+      "french"
+    ],
+    "github": "thelia/thelia",
+    "urls": {
+      "website": "https://thelia.net/",
+      "demo": "https://demo.thelia.net/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "sylius",
+        "prestashop",
+        "magento"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "wix"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires PHP environment with Symfony knowledge and database configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Modular e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Flexible online stores"
+          },
+          {
+            "name": "Architecture",
+            "value": "Symfony components"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Multi-language"
+          },
+          {
+            "name": "Multi-currency"
+          },
+          {
+            "name": "Tax Management"
+          },
+          {
+            "name": "SEO Friendly"
+          },
+          {
+            "name": "Responsive Design"
+          }
+        ]
+      },
+      {
+        "name": "Modularity",
+        "features": [
+          {
+            "name": "Module System"
+          },
+          {
+            "name": "Hook System"
+          },
+          {
+            "name": "Template Engine"
+          },
+          {
+            "name": "Event Dispatcher"
+          },
+          {
+            "name": "Service Container"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Product Catalog"
+          },
+          {
+            "name": "Customer Management"
+          },
+          {
+            "name": "Order Processing"
+          },
+          {
+            "name": "Content Management"
+          },
+          {
+            "name": "Statistics"
+          }
+        ]
+      },
+      {
+        "name": "Developer Tools",
+        "features": [
+          {
+            "name": "Smarty Templates"
+          },
+          {
+            "name": "Loop System"
+          },
+          {
+            "name": "CLI Tools"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Cache Management"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/vendure.mdx",
+    "slug": "vendure",
+    "name": "Vendure",
+    "description": "Vendure is a headless commerce framework built with TypeScript and Node.js, designed to deliver ultra-fast, scalable, and customizable e-commerce experiences.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://www.vendure.io/favicon.ico",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "nodejs",
+      "typescript",
+      "graphql",
+      "headless"
+    ],
+    "github": "vendure-ecommerce/vendure",
+    "urls": {
+      "website": "https://www.vendure.io",
+      "demo": "https://demo.vendure.io"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "medusajs",
+        "saleor",
+        "evershop"
+      ],
+      "nonSelfHosted": [
+        "commercetools",
+        "shopify-plus"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple npm installation with TypeScript, includes CLI tools for quick setup."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Headless GraphQL commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Custom storefronts"
+          },
+          {
+            "name": "Architecture",
+            "value": "TypeScript + GraphQL"
+          }
+        ]
+      },
+      {
+        "name": "Technology",
+        "features": [
+          {
+            "name": "GraphQL API"
+          },
+          {
+            "name": "TypeScript Native"
+          },
+          {
+            "name": "Plugin Architecture"
+          },
+          {
+            "name": "Event-driven"
+          },
+          {
+            "name": "Worker Queues"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "Product Variants"
+          },
+          {
+            "name": "Multi-channel"
+          },
+          {
+            "name": "Promotions"
+          },
+          {
+            "name": "Tax & Shipping"
+          },
+          {
+            "name": "Multi-language"
+          }
+        ]
+      },
+      {
+        "name": "Developer Experience",
+        "features": [
+          {
+            "name": "TypeScript SDK"
+          },
+          {
+            "name": "Admin UI"
+          },
+          {
+            "name": "GraphQL Playground"
+          },
+          {
+            "name": "Plugin API"
+          },
+          {
+            "name": "Testing Utils"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "features": [
+          {
+            "name": "Elasticsearch"
+          },
+          {
+            "name": "Asset Management"
+          },
+          {
+            "name": "Custom Fields"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "Horizontal Scaling"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/e-commerce/woocommerce.mdx",
+    "slug": "woocommerce",
+    "name": "WooCommerce",
+    "description": "WooCommerce is the world's most popular open-source e-commerce solution, built as a WordPress plugin to transform any WordPress site into a fully functional online store.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://woocommerce.com/favicon.ico",
+    "category": "e-commerce",
+    "tags": [
+      "e-commerce",
+      "wordpress",
+      "php",
+      "plugin",
+      "popular"
+    ],
+    "github": "woocommerce/woocommerce",
+    "urls": {
+      "website": "https://woocommerce.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "opencart",
+        "prestashop",
+        "magento"
+      ],
+      "nonSelfHosted": [
+        "shopify",
+        "squarespace",
+        "wix"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple WordPress plugin installation with extensive documentation and one-click setup."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "WordPress e-commerce"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "WordPress-based stores"
+          },
+          {
+            "name": "Architecture",
+            "value": "WordPress plugin"
+          }
+        ]
+      },
+      {
+        "name": "WordPress Integration",
+        "features": [
+          {
+            "name": "Native Integration"
+          },
+          {
+            "name": "Theme Compatibility"
+          },
+          {
+            "name": "Plugin Ecosystem"
+          },
+          {
+            "name": "Gutenberg Blocks"
+          },
+          {
+            "name": "WordPress Users"
+          }
+        ]
+      },
+      {
+        "name": "Commerce Features",
+        "features": [
+          {
+            "name": "Product Types"
+          },
+          {
+            "name": "Payment Gateways"
+          },
+          {
+            "name": "Shipping Options"
+          },
+          {
+            "name": "Tax Management"
+          },
+          {
+            "name": "Inventory Control"
+          }
+        ]
+      },
+      {
+        "name": "Extensions",
+        "features": [
+          {
+            "name": "Extension Store"
+          },
+          {
+            "name": "Payment Plugins"
+          },
+          {
+            "name": "Shipping Plugins"
+          },
+          {
+            "name": "Marketing Tools"
+          },
+          {
+            "name": "Analytics"
+          }
+        ]
+      },
+      {
+        "name": "Flexibility",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Webhooks"
+          },
+          {
+            "name": "Custom Fields"
+          },
+          {
+            "name": "Action Hooks"
+          },
+          {
+            "name": "Filter System"
           }
         ]
       }

@@ -1,0 +1,98 @@
+---
+slug: fedora-commons
+name: Fedora Commons Repository
+heroImage: https://wiki.lyrasis.org/download/attachments/87460886/fedora-logo.png
+description: |
+  Fedora is a robust, modular, open source repository system for the management and dissemination of digital content, particularly suited for digital libraries and archives.
+logo: https://avatars.githubusercontent.com/u/7585963?s=64&v=4
+category: digital-library
+tags: [repository, digital-preservation, linked-data, java, rdf]
+github: fcrepo/fcrepo
+urls:
+  website: https://wiki.lyrasis.org/display/FF/Fedora+Repository+Home
+alternatives:
+  selfHosted: [dspace, eprints, archivematica]
+  nonSelfHosted: [preservica, archivematica-cloud]
+deployment:
+  difficulty: "Advanced"
+  justification: "Complex architecture requiring Java, triple store, and understanding of linked data concepts."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Digital preservation
+      - name: Target Use Case
+        value: Archives & libraries
+      - name: Architecture
+        value: Java + RDF + LDP
+  - name: Preservation
+    features:
+      - name: OAIS Compliance
+      - name: Fixity Checking
+      - name: Versioning
+      - name: Audit Trail
+      - name: Format Migration
+  - name: Data Model
+    features:
+      - name: Linked Data
+      - name: RDF Support
+      - name: SPARQL Queries
+      - name: Flexible Modeling
+      - name: External References
+  - name: Standards
+    features:
+      - name: LDP Compliance
+      - name: WebAC Authorization
+      - name: Memento Versioning
+      - name: PREMIS Events
+      - name: Portland Common Data Model
+  - name: Integration
+    features:
+      - name: REST API
+      - name: Messaging
+      - name: Camel Routes
+      - name: External Indexing
+      - name: Microservices
+---
+
+Fedora Repository is a flexible, extensible, and durable platform for digital preservation and access. It provides a solid foundation for building digital library and archives systems with a focus on standards compliance and long-term preservation.
+
+## Key Features
+
+- **Digital Preservation**:
+
+  - OAIS reference model compliance
+  - Automatic fixity checking
+  - Complete versioning history
+  - Detailed audit trails
+  - Migration pathway support
+  - Preservation metadata
+
+- **Linked Data Architecture**:
+
+  - Native RDF data model
+  - SPARQL query support
+  - Linked Data Platform (LDP)
+  - External URI references
+  - Flexible object modeling
+  - Semantic relationships
+
+- **Standards-Based**:
+
+  - W3C LDP implementation
+  - WebAC authorization
+  - Memento time-based negotiation
+  - PREMIS event tracking
+  - Portland Common Data Model
+  - BagIt support
+
+- **Enterprise Integration**:
+  - Comprehensive REST API
+  - JMS messaging support
+  - Apache Camel integration
+  - External search indexing
+  - Microservices architecture
+  - Horizontal scalability
