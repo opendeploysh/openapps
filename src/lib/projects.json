@@ -13269,7 +13269,6 @@
     "description": "S-Cart is a free e-commerce website project for individuals and businesses, built on top of Laravel Framework with a modern, clean design and comprehensive features.\n",
     "hostingType": "Self-Hosted",
     "pricingModel": "Free",
-    "logo": "https://s-cart.org/favicon.ico",
     "category": "e-commerce",
     "tags": [
       "e-commerce",

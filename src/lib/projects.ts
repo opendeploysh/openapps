@@ -28,7 +28,7 @@ export const mdxProjectData = z
     hostingType: z.nativeEnum(HostingType).optional(),
     pricingModel: z.nativeEnum(PricingModel).optional(),
 
-    logo: z.string(),
+    logo: z.string().optional(),
     heroImage: z.string().optional(),
 
     category: z.string(),
@@ -126,4 +126,14 @@ export const getProjectPopularity = (slug: string): number => {
     }, 0) / 100
 
   return Math.round(score)
+}
+
+export const getProjectLogo = (slug: string): string | undefined => {
+  const project = projects.find((p) => p.slug === slug)
+  if (project?.logo) return project.logo
+
+  const githubData = projectsWithGitHubData[slug]
+  if (!githubData || !project) return undefined
+
+  return githubData.owner.avatar_url
 }

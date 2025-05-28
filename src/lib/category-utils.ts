@@ -1,5 +1,5 @@
-import { projects } from "@/lib/projects";
-import _ from "lodash";
+import { projects } from "@/lib/projects"
+import _ from "lodash"
 
 // Icon name mapping for tags (to be used with client-side icon components)
 export const categoryIconNames: Record<string, string> = {
@@ -66,7 +66,7 @@ export const categoryIconNames: Record<string, string> = {
   streaming: "Film",
   photos: "Film",
   photography: "Film",
-};
+}
 
 // Default colors for tags
 export const categoryColors = [
@@ -82,18 +82,18 @@ export const categoryColors = [
   "slate",
   "fuchsia",
   "emerald",
-];
+]
 
 // Color utility function
 export const getColorClasses = (color: string) => {
   const colorMap: {
     [key: string]: {
-      bg: string;
-      text: string;
-      darkBg: string;
-      darkText: string;
-      hover: string;
-    };
+      bg: string
+      text: string
+      darkBg: string
+      darkText: string
+      hover: string
+    }
   } = {
     blue: {
       bg: "bg-blue-100",
@@ -179,22 +179,22 @@ export const getColorClasses = (color: string) => {
       darkText: "dark:text-fuchsia-400",
       hover: "hover:bg-fuchsia-200 dark:hover:bg-fuchsia-900/50",
     },
-  };
+  }
 
-  return colorMap[color] || colorMap.blue;
-};
+  return colorMap[color] || colorMap.blue
+}
 
 export interface CategoryData {
-  name: string;
-  iconName: string;
-  color: string;
-  description: string;
+  name: string
+  iconName: string
+  color: string
+  description: string
 }
 
 // Generate all categories from project data (server-side safe)
 export const getAllCategoriesData = (): CategoryData[] => {
   return _.chain(projects)
-    .flatMap((project) => project.tags)
+    .flatMap((project) => [project.category.toLowerCase(), ...project.tags])
     .uniq()
     .map((cat, index) => ({
       name: cat,
@@ -202,24 +202,16 @@ export const getAllCategoriesData = (): CategoryData[] => {
       color: categoryColors[index % categoryColors.length],
       description: `Projects in the ${cat} category`,
     }))
-    .value();
-};
+    .value()
+}
 
 // Get projects for a specific category
 export const getCategoryProjects = (categorySlug: string) => {
-  return projects.filter((p) =>
-    p.tags.some(
-      (cat) => cat.toLowerCase().replace(/\s+/g, "-") === categorySlug
-    )
-  );
-};
+  return projects.filter((p) => p.tags.some((cat) => cat.toLowerCase().replace(/\s+/g, "-") === categorySlug))
+}
 
 // Find category by slug
-export const findCategoryDataBySlug = (
-  categorySlug: string
-): CategoryData | undefined => {
-  const allCategories = getAllCategoriesData();
-  return allCategories.find(
-    (cat) => cat.name.toLowerCase().replace(/\s+/g, "-") === categorySlug
-  );
-};
+export const findCategoryDataBySlug = (categorySlug: string): CategoryData | undefined => {
+  const allCategories = getAllCategoriesData()
+  return allCategories.find((cat) => cat.name.toLowerCase().replace(/\s+/g, "-") === categorySlug)
+}

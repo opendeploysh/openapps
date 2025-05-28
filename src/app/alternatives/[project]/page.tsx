@@ -17,7 +17,7 @@ import {
   Server,
   ArrowRight,
 } from "lucide-react"
-import { projects, getProjectPopularity, projectsWithGitHubData, ProjectMeta } from "@/lib/projects"
+import { projects, getProjectPopularity, projectsWithGitHubData, ProjectMeta, getProjectLogo } from "@/lib/projects"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { ProjectCard } from "@/components/ProjectCard"
@@ -147,6 +147,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
     .filter((p) => p.category === project.category && !alreadyShownSlugs.has(p.slug))
     .sort((a, b) => getProjectPopularity(b.slug) - getProjectPopularity(a.slug))
 
+  const logo = getProjectLogo(project.slug)
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
       <Navbar />
@@ -172,8 +173,8 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-16 h-16 rounded-xl flex items-center justify-center">
-              {project.logo ? (
-                <img src={project.logo} alt={`${project.name} logo`} className="w-10 h-10 rounded-lg" />
+              {logo ? (
+                <img src={logo} alt={`${project.name} logo`} className="w-10 h-10 rounded-lg" />
               ) : (
                 <Code className="w-8 h-8 text-blue-600 dark:text-blue-400" />
               )}

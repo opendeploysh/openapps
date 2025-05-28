@@ -1,43 +1,40 @@
-import React from "react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft } from "lucide-react";
-import { notFound } from "next/navigation";
-import { Metadata } from "next";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { CategoryHeader } from "./_components/CategoryHeader";
-import { RelatedCategories } from "./_components/RelatedCategories";
-import { ContributeCTA } from "./_components/ContributeCTA";
-import { ProjectsGrid } from "./_components/ProjectsGrid";
-import { GitHubContributeButton } from "@/components/GitHubEditButton";
+import React from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { ChevronLeft } from "lucide-react"
+import { notFound } from "next/navigation"
+import { Metadata } from "next"
+import { Navbar } from "@/components/Navbar"
+import { Footer } from "@/components/Footer"
+import { CategoryHeader } from "./_components/CategoryHeader"
+import { RelatedCategories } from "./_components/RelatedCategories"
+import { ContributeCTA } from "./_components/ContributeCTA"
+import { ProjectsGrid } from "./_components/ProjectsGrid"
+import { GitHubContributeButton } from "@/components/GitHubEditButton"
 import {
   getAllCategoriesData,
   getCategoryProjects,
   findCategoryDataBySlug,
   getColorClasses,
-} from "@/lib/category-utils";
+} from "@/lib/category-utils"
 
 interface CategoryPageProps {
   params: Promise<{
-    category: string;
-  }>;
+    category: string
+  }>
 }
 
 // Generate metadata for the page
-export async function generateMetadata({
-  params,
-}: CategoryPageProps): Promise<Metadata> {
-  const { category: categorySlug } = await params;
-  const category = findCategoryDataBySlug(categorySlug);
-  const baseCategoryProjects = getCategoryProjects(categorySlug);
+export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+  const { category: categorySlug } = await params
+  const category = findCategoryDataBySlug(categorySlug)
+  const baseCategoryProjects = getCategoryProjects(categorySlug)
 
-  if (!category) {
+  if (!category)
     return {
       title: "Category Not Found",
       description: "The requested category could not be found.",
-    };
-  }
+    }
 
   return {
     title: `${category.name} Projects - Open Source Self-Hosted Apps`,
@@ -67,32 +64,34 @@ export async function generateMetadata({
         baseCategoryProjects.length
       } open source ${category.name.toLowerCase()} projects that you can self-host.`,
     },
-  };
+  }
 }
 
 // Generate static params for all categories
 export async function generateStaticParams() {
-  const allCategories = getAllCategoriesData();
+  const allCategories = getAllCategoriesData()
 
   return allCategories.map((category) => ({
     category: category.name.toLowerCase().replace(/\s+/g, "-"),
-  }));
+  }))
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { category: categorySlug } = await params;
+  const { category: categorySlug } = await params
 
   // Get category data and projects server-side
-  const category = findCategoryDataBySlug(categorySlug);
-  const baseCategoryProjects = getCategoryProjects(categorySlug);
-  const allCategories = getAllCategoriesData();
+  const category = findCategoryDataBySlug(categorySlug)
+  const baseCategoryProjects = getCategoryProjects(categorySlug)
+  const allCategories = getAllCategoriesData()
+
+  console.log(baseCategoryProjects)
 
   // Handle case where category doesn't exist
   if (!category) {
-    notFound();
+    notFound()
   }
 
-  const colors = getColorClasses(category.color);
+  const colors = getColorClasses(category.color)
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-950 dark:to-neutral-900">
@@ -115,17 +114,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
 
         {/* Category Header */}
-        <CategoryHeader
-          category={category}
-          projectCount={baseCategoryProjects.length}
-          colors={colors}
-        />
+        <CategoryHeader category={category} projectCount={baseCategoryProjects.length} colors={colors} />
 
         {/* Projects Grid with Client-side Filtering */}
-        <ProjectsGrid
-          baseCategoryProjects={baseCategoryProjects}
-          categoryName={category.name}
-        />
+        <ProjectsGrid baseCategoryProjects={baseCategoryProjects} categoryName={category.name} />
 
         {/* Related Categories */}
         <RelatedCategories
@@ -139,5 +131,5 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       </div>
       <Footer />
     </div>
-  );
+  )
 }

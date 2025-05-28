@@ -2,7 +2,7 @@ import React from "react"
 import { badgeVariants } from "@/components/ui/badge"
 import { formatDistanceToNow } from "date-fns"
 import { Star, Shield, CheckCircle, AlertCircle, Clock, GitFork, Eye, Github, Globe, Play } from "lucide-react"
-import { getProjectPopularity, ProjectMeta, projects, projectsWithGitHubData } from "@/lib/projects"
+import { getProjectLogo, getProjectPopularity, ProjectMeta, projects, projectsWithGitHubData } from "@/lib/projects"
 import { SiDiscord, SiUnraid } from "@icons-pack/react-simple-icons"
 import Link from "next/link"
 import { pricingModelInfo } from "@/lib/pricing-model"
@@ -23,7 +23,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
     <div className="space-y-8">
       <div className="flex flex-col gap-4">
         <div className="flex gap-2 items-center">
-          <img src={project.logo} alt={project.name} className="object-cover rounded-lg w-10 h-10" />
+          <img src={getProjectLogo(project.slug)} alt={project.name} className="object-cover rounded-lg w-10 h-10" />
           <h1 className="text-3xl font-bold">{project.name}</h1>
         </div>
         <div className="flex gap-2">
@@ -117,7 +117,7 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
                     className: "text-sm flex items-center gap-2",
                   })}
                 >
-                  <img src={project.logo} alt={project?.name} className="rounded-full w-4 h-4" />
+                  <img src={getProjectLogo(project.slug)} alt={project?.name} className="rounded-full w-4 h-4" />
                   {project?.name}
                 </Link>
               )

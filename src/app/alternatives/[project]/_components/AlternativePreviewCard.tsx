@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Code, Star, ArrowRight } from "lucide-react"
-import { ProjectMeta, projectsWithGitHubData } from "@/lib/projects"
+import { getProjectLogo, ProjectMeta, projectsWithGitHubData } from "@/lib/projects"
 
 interface AlternativePreviewCardProps {
   project: ProjectMeta
@@ -13,15 +13,14 @@ interface AlternativePreviewCardProps {
 
 export const AlternativePreviewCard: React.FC<AlternativePreviewCardProps> = ({ project, ContentPreview }) => {
   const githubData = projectsWithGitHubData[project.slug]
-
+  const logo = getProjectLogo(project.slug)
   return (
     <Card className="overflow-hidden p-0">
       <CardContent className="p-0">
-        {/* Header with ranking, logo and name */}
         <div className="flex items-center gap-4 p-6 pb-4">
           <div className="w-12 h-12 rounded-lg flex items-center justify-center border">
-            {project.logo ? (
-              <img src={project.logo} alt={`${project.name} logo`} className="w-8 h-8 rounded" />
+            {logo ? (
+              <img src={logo} alt={`${project.name} logo`} className="w-8 h-8 rounded" />
             ) : (
               <Code className="w-6 h-6 text-neutral-500" />
             )}

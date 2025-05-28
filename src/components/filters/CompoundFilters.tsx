@@ -210,7 +210,7 @@ export const FilterProvider: React.FC<FilterProviderProps> = ({
 
   const value: FilterContextValue = {
     searchQuery,
-    searchResults,
+    searchResults: searchResults ?? projects,
     handleSearch,
     sortOrder,
     handleSort,

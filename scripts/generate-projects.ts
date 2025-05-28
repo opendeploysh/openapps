@@ -3,7 +3,6 @@ import path from "node:path"
 import matter from "gray-matter"
 import axios from "axios"
 import { mdxProjectData } from "../src/lib/projects"
-import { Octokit } from "@octokit/rest"
 
 // Parse command line arguments
 const args = process.argv.slice(2)
@@ -67,17 +66,6 @@ const validateLocalFile = (filePath: string): { valid: boolean; status?: number;
   }
 }
 
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
-const getGithubOrgIcon = async (org: string): Promise<string | null> => {
-  try {
-    const { data } = await octokit.orgs.get({ org })
-    return data.avatar_url
-  } catch (error) {
-    console.error(`Error fetching GitHub org icon for ${org}:`, error)
-    return null
-  }
-}
-
 const getAllProjectMdxFiles = () => {
   const contentDir = path.join(process.cwd(), "projects")
 
@@ -109,75 +97,9 @@ let invalidCount = 0
 let urlErrorCount = 0
 let warningCount = 0
 
-const getLogoForProject = async (data: any, file: string): Promise<string | undefined> => {
-  // Return existing logo if present
-  if (data.logo != null && data.logo !== "") return data.logo
-
-  // Try getting favicon if website URL exists
-  if (data.urls?.website) {
-    try {
-      const websiteUrl = new URL(data.urls.website)
-      const faviconUrl = `${websiteUrl.protocol}//${websiteUrl.host}/favicon.ico`
-
-      const response = await axios.head(faviconUrl, {
-        timeout: 5000,
-        validateStatus: (status) => status === 200,
-      })
-
-      if (response.status === 200) {
-        console.log(`🔍 Found favicon for ${websiteUrl.host}: ${faviconUrl}`)
-
-        const fileContent = fs.readFileSync(file, "utf8")
-        const hasLogoProperty = /^logo:.*$/m.test(fileContent)
-
-        const updatedContent = hasLogoProperty
-          ? fileContent.replace(/^logo:.*$/m, `logo: ${faviconUrl}`)
-          : fileContent.replace(/^(---\n.*?\n)/, `$1logo: ${faviconUrl}\n`)
-
-        fs.writeFileSync(file, updatedContent)
-        return faviconUrl
-      }
-    } catch (error) {
-      // Favicon fetch failed, continue to try GitHub icon
-    }
-  }
-
-  // Try getting GitHub org icon if GitHub repo exists
-  if (data.github) {
-    const [org] = data.github.split("/")
-    const githubIcon = await getGithubOrgIcon(org)
-    if (githubIcon) {
-      console.log(`🔍 Found GitHub icon for ${org}: ${githubIcon}`)
-
-      const fileContent = fs.readFileSync(file, "utf8")
-      const hasLogoProperty = /^logo:.*$/m.test(fileContent)
-
-      const updatedContent = hasLogoProperty
-        ? fileContent.replace(/^logo:.*$/m, `logo: ${githubIcon}`)
-        : fileContent.replace(/^(---\n.*?\n)/, `$1logo: ${githubIcon}\n`)
-
-      fs.writeFileSync(file, updatedContent)
-      return githubIcon
-    }
-  }
-
-  // No logo found
-  if (data.urls?.website) {
-    console.warn(`⚠️ Could not fetch favicon for ${data.urls.website}`)
-    if (errorOnInvalid) {
-      console.error(`\n💥 Exiting due to --error-on-invalid flag (favicon fetch failed)`)
-      process.exit(1)
-    }
-  }
-  return undefined
-}
-
 const processFile = async (file: string) => {
   const relativePath = path.relative(process.cwd(), file)
   const data = getFrontmatter(file)
-
-  // Try to get a logo for the project
-  data.logo = await getLogoForProject(data, file)
 
   const result = mdxProjectData.safeParse({ ...data, filePath: relativePath })
 
