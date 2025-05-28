@@ -1,0 +1,167 @@
+---
+slug: flipt
+name: Flipt
+description: |
+  Flipt is a feature flag solution with support for multiple data backends. Built with Go, it provides a lightweight, fast, and flexible feature flag platform that serves as an excellent alternative to LaunchDarkly with self-hosting capabilities.
+category: feature-toggle
+tags: [feature-flags, open-feature, multiple-backends]
+github: flipt-io/flipt
+urls:
+  website: https://flipt.io/
+  demo: https://try.flipt.io/
+alternatives:
+  selfHosted: [featbit, flagsmith, go-feature-flag]
+  nonSelfHosted: [launchdarkly, split, optimizely]
+deployment:
+  difficulty: "Easy"
+  justification: "Go binary with Docker and Kubernetes support. Simple deployment with multiple backend options and excellent performance characteristics."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Lightweight feature flag solution with multiple data backend support
+      - name: Target Use Case
+        value: Fast, flexible feature flag management with backend flexibility
+      - name: Architecture
+        value: Go + Multiple backends + Docker + Kubernetes + High performance
+  - name: Feature Flag Management
+    features:
+      - name: Feature Flag Creation
+      - name: Flag Variants
+      - name: Targeting Rules
+      - name: Percentage Rollouts
+      - name: Environment Support
+  - name: Multiple Data Backends
+    features:
+      - name: SQLite Support
+      - name: PostgreSQL Support
+      - name: MySQL Support
+      - name: File-based Storage
+      - name: Memory Storage
+  - name: Targeting & Rules
+    features:
+      - name: User Targeting
+      - name: Segment Targeting
+      - name: Custom Constraints
+      - name: Rule Evaluation
+      - name: Distribution Rules
+  - name: Developer Experience
+    features:
+      - name: REST API
+      - name: gRPC API
+      - name: Multi-language SDKs
+      - name: CLI Tool
+      - name: Local Development
+  - name: Performance
+    features:
+      - name: High Performance
+      - name: Low Latency
+      - name: Efficient Evaluation
+      - name: Caching Support
+      - name: Scalable Architecture
+  - name: Operations
+    features:
+      - name: Web UI Dashboard
+      - name: Metrics & Monitoring
+      - name: Health Checks
+      - name: Audit Logging
+      - name: Import/Export
+---
+
+Flipt is a high-performance, lightweight feature flag solution built with Go that supports multiple data backends. Designed for flexibility and speed, it provides a robust alternative to LaunchDarkly with the benefits of self-hosting and the ability to choose your preferred data storage backend.
+
+## Key Features
+
+- **Comprehensive Feature Flag Management**:
+
+  - Intuitive feature flag creation and management
+  - Flag variants for A/B testing and experimentation
+  - Advanced targeting rules and conditions
+  - Percentage-based rollouts and distributions
+  - Multi-environment support and isolation
+  - Flag lifecycle management
+
+- **Multiple Data Backend Support**:
+
+  - SQLite for simple deployments
+  - PostgreSQL for enterprise scalability
+  - MySQL for existing infrastructure
+  - File-based storage for GitOps workflows
+  - In-memory storage for testing
+  - Pluggable backend architecture
+
+- **Advanced Targeting & Rules**:
+
+  - User-based targeting with attributes
+  - Segment targeting for user groups
+  - Custom constraint evaluation
+  - Rule-based flag evaluation
+  - Distribution rules for variants
+  - Real-time rule updates
+
+- **Developer-Friendly Integration**:
+
+  - RESTful API for all operations
+  - gRPC API for high-performance access
+  - SDKs for multiple programming languages
+  - Command-line interface (CLI) tool
+  - Local development and testing support
+  - OpenAPI specification
+
+- **High Performance Architecture**:
+
+  - Built with Go for maximum performance
+  - Low-latency flag evaluation
+  - Efficient rule processing
+  - Built-in caching mechanisms
+  - Horizontal scaling support
+  - Minimal resource footprint
+
+- **Operational Excellence**:
+
+  - Clean web UI dashboard
+  - Metrics and monitoring integration
+  - Health check endpoints
+  - Comprehensive audit logging
+  - Import/export capabilities
+  - Backup and restore features
+
+- **Deployment Flexibility**:
+  - Single binary deployment
+  - Docker container support
+  - Kubernetes deployment
+  - Cloud-native architecture
+  - Multiple deployment patterns
+  - Easy configuration management
+
+## Technical Specifications
+
+- **Language**: Go
+- **License**: GPL-3.0
+- **Deployment**: Docker, Kubernetes, Binary
+- **Platforms**: Cross-platform
+- **Backends**: SQLite, PostgreSQL, MySQL, File, Memory
+- **APIs**: REST, gRPC
+
+## Use Cases
+
+- **Microservices**: Feature flag management across distributed systems
+- **Product Development**: Feature rollouts and experimentation
+- **DevOps Teams**: Deployment risk mitigation and canary releases
+- **High-Performance Applications**: Applications requiring low-latency flag evaluation
+- **GitOps Workflows**: File-based configuration with version control
+- **Multi-Environment Deployments**: Complex deployment scenarios
+
+## Unique Advantages
+
+- **Backend Flexibility**: Choose from multiple data storage backends
+- **High Performance**: Go-based architecture for maximum speed
+- **Lightweight**: Minimal resource usage and fast startup
+- **LaunchDarkly Alternative**: Feature-complete alternative with self-hosting
+- **Simple Deployment**: Single binary with easy configuration
+- **Open Source**: Transparent, customizable, and community-driven
+
+Based on the [Flipt GitHub repository](https://github.com/flipt-io/flipt), this tool provides development teams with a fast, flexible, and lightweight feature flag solution that offers the performance benefits of Go with the flexibility of multiple data backends, making it ideal for teams that need high-performance feature flag management with deployment flexibility.

@@ -1,0 +1,167 @@
+---
+slug: concourse
+name: Concourse
+description: |
+  Concourse is a container-based continuous integration platform that treats pipelines as first-class citizens. Built with Go, it provides a unique approach to CI/CD with its pipeline-centric design, immutable builds, and strong emphasis on reproducibility and scalability.
+category: continuous-integration
+tags: [continuous-integration, go, container-based, pipeline-centric, scalable]
+github: concourse/concourse
+urls:
+  website: https://concourse-ci.org/
+alternatives:
+  selfHosted: [drone, woodpecker-ci, jenkins]
+  nonSelfHosted: [github-actions, gitlab-ci, circleci]
+deployment:
+  difficulty: "Medium"
+  justification: "Go application with container-based architecture. Requires understanding of pipeline concepts but provides powerful scalability and reproducibility features."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Container-based CI/CD with pipeline-centric design and immutable builds
+      - name: Target Use Case
+        value: Scalable CI/CD with emphasis on reproducibility and pipeline management
+      - name: Architecture
+        value: Go + Container-based + Pipeline-centric + Immutable + Scalable
+  - name: Pipeline Design
+    features:
+      - name: Pipeline as Code
+      - name: Visual Pipeline Editor
+      - name: Resource Management
+      - name: Job Dependencies
+      - name: Pipeline Composition
+  - name: Container Technology
+    features:
+      - name: Container-based Builds
+      - name: Immutable Environments
+      - name: Resource Isolation
+      - name: Custom Images
+      - name: Garden Runtime
+  - name: Scalability
+    features:
+      - name: Horizontal Scaling
+      - name: Worker Nodes
+      - name: Resource Pools
+      - name: Load Distribution
+      - name: Auto-scaling
+  - name: Resource Management
+    features:
+      - name: Git Resources
+      - name: Docker Image Resources
+      - name: Time Resources
+      - name: Custom Resources
+      - name: Resource Versioning
+  - name: Security
+    features:
+      - name: Team Isolation
+      - name: Role-based Access
+      - name: Secret Management
+      - name: Credential Management
+      - name: Secure Builds
+  - name: Monitoring
+    features:
+      - name: Pipeline Visualization
+      - name: Build Monitoring
+      - name: Resource Tracking
+      - name: Performance Metrics
+      - name: Audit Logging
+---
+
+Concourse is a unique container-based continuous integration platform that treats pipelines as first-class citizens. Built with Go and designed around immutable builds and reproducible environments, it provides a powerful, scalable approach to CI/CD that emphasizes pipeline management and resource handling.
+
+## Key Features
+
+- **Pipeline-Centric Design**:
+
+  - Pipelines as first-class citizens
+  - Visual pipeline representation
+  - YAML-based pipeline configuration
+  - Resource and job dependency management
+  - Pipeline composition and reuse
+  - Declarative pipeline definitions
+
+- **Container-Based Architecture**:
+
+  - All builds run in containers
+  - Immutable build environments
+  - Complete resource isolation
+  - Custom container image support
+  - Garden container runtime
+  - Reproducible build execution
+
+- **Advanced Scalability**:
+
+  - Horizontal scaling capabilities
+  - Distributed worker nodes
+  - Resource pool management
+  - Intelligent load distribution
+  - Auto-scaling worker support
+  - High availability deployment
+
+- **Comprehensive Resource Management**:
+
+  - Git repository resources
+  - Docker image resources
+  - Time-based resources
+  - Custom resource types
+  - Resource versioning and tracking
+  - Automatic resource detection
+
+- **Enterprise Security Features**:
+
+  - Team-based isolation
+  - Role-based access control
+  - Integrated secret management
+  - Credential management system
+  - Secure build environments
+  - Authentication and authorization
+
+- **Advanced Monitoring & Visualization**:
+
+  - Real-time pipeline visualization
+  - Build status monitoring
+  - Resource tracking and history
+  - Performance metrics and analytics
+  - Comprehensive audit logging
+  - Dashboard and reporting
+
+- **Developer Experience**:
+  - Intuitive web interface
+  - CLI tools for management
+  - API access for automation
+  - Pipeline debugging capabilities
+  - Resource inspection tools
+  - Comprehensive documentation
+
+## Technical Specifications
+
+- **Language**: Go
+- **License**: Apache-2.0
+- **Deployment**: Binary, Docker, BOSH
+- **Platforms**: Cross-platform
+- **Requirements**: PostgreSQL database
+- **Container Runtime**: Garden (custom)
+- **Architecture**: Distributed, microservices
+
+## Use Cases
+
+- **Complex Pipelines**: Multi-stage, complex CI/CD workflows
+- **Scalable CI/CD**: Large-scale continuous integration requirements
+- **Reproducible Builds**: Applications requiring build reproducibility
+- **Resource Management**: Projects with complex resource dependencies
+- **Enterprise CI/CD**: Large organizations with multiple teams
+- **Cloud-Native Development**: Modern cloud-native application development
+
+## Unique Advantages
+
+- **Pipeline-First**: Unique pipeline-centric approach to CI/CD
+- **Immutable Builds**: Guaranteed reproducible build environments
+- **Resource Model**: Powerful resource management and versioning
+- **Scalability**: Built for horizontal scaling and high throughput
+- **Isolation**: Complete isolation between builds and teams
+- **Open Source**: Transparent, customizable, and community-driven
+
+Based on the [Concourse GitHub repository](https://github.com/concourse/concourse), this tool provides development teams with a unique, pipeline-centric CI/CD platform that emphasizes reproducibility and scalability, making it ideal for organizations that need complex pipeline management, guaranteed build reproducibility, and enterprise-scale continuous integration capabilities.
