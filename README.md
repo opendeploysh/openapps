@@ -207,7 +207,7 @@ Projects are validated using Zod schemas with these required fields:
 - **Fuzzy Search**: Searches across names, descriptions, and alternatives
 - **Category Filters**: Filter by project categories
 - **Difficulty Filters**: Easy, Medium, Advanced deployment
-- **Pricing Models**: Free, Open-Core, Freemium, Commercial
+- **Pricing Models**: Free, Open-Core, Open-Core, Commercial
 - **Hosting Types**: Self-Hosted, Cloud, Hybrid
 
 ## 🌐 Deployment

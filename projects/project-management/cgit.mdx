@@ -1,0 +1,166 @@
+---
+slug: cgit
+name: Cgit
+description: |
+  Cgit is a fast, lightweight web interface for Git repositories. Written in C, it provides a simple yet powerful way to browse Git repositories through a web browser with minimal resource usage and excellent performance, making it ideal for hosting multiple repositories.
+category: project-management
+tags: [git, web-interface, repository-browser, lightweight, c]
+github: cgit/cgit
+urls:
+  website: https://git.zx2c4.com/cgit/about/
+alternatives:
+  selfHosted: [gitea, gitlab, gogs]
+  nonSelfHosted: [github, bitbucket, gitlab]
+deployment:
+  difficulty: "Medium"
+  justification: "C application requiring compilation and web server configuration. More complex setup than containerized solutions."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Fast, lightweight web interface for Git repositories
+      - name: Target Use Case
+        value: Simple Git repository browsing and hosting
+      - name: Architecture
+        value: C + CGI + Web server + Git integration
+  - name: Repository Features
+    features:
+      - name: Git Repository Browsing
+      - name: Multiple Repository Support
+      - name: Repository Statistics
+      - name: Branch & Tag Viewing
+      - name: Commit History
+  - name: Web Interface
+    features:
+      - name: Clean Web UI
+      - name: Fast Performance
+      - name: Minimal Resource Usage
+      - name: Responsive Design
+      - name: Simple Navigation
+  - name: Code Browsing
+    features:
+      - name: Source Code Viewing
+      - name: Syntax Highlighting
+      - name: File Tree Navigation
+      - name: Diff Viewing
+      - name: Blame Functionality
+  - name: Search & Navigation
+    features:
+      - name: Repository Search
+      - name: Commit Search
+      - name: File Search
+      - name: Quick Navigation
+      - name: URL-based Access
+  - name: Customization
+    features:
+      - name: Theme Customization
+      - name: Configuration Options
+      - name: Custom CSS
+      - name: Logo & Branding
+      - name: Layout Control
+  - name: Performance
+    features:
+      - name: Fast Loading
+      - name: Efficient Caching
+      - name: Low Memory Usage
+      - name: Scalable Architecture
+      - name: Optimized Rendering
+---
+
+Cgit is a minimalist, high-performance web interface for Git repositories that prioritizes speed and simplicity. Written in C and designed as a CGI application, it provides an efficient way to browse Git repositories through a web browser without the overhead of larger Git hosting platforms.
+
+## Key Features
+
+- **Lightweight Git Interface**:
+
+  - Fast, efficient Git repository browsing
+  - Multiple repository support
+  - Clean, simple web interface
+  - Minimal resource requirements
+  - High-performance rendering
+  - Scalable architecture
+
+- **Comprehensive Repository Browsing**:
+
+  - Complete Git repository navigation
+  - Branch and tag management
+  - Commit history visualization
+  - Repository statistics and insights
+  - File tree exploration
+  - Repository comparison tools
+
+- **Advanced Code Viewing**:
+
+  - Source code syntax highlighting
+  - File content viewing and editing
+  - Diff visualization and comparison
+  - Blame functionality for code attribution
+  - Line-by-line code analysis
+  - Code search capabilities
+
+- **Search & Discovery**:
+
+  - Repository-wide search functionality
+  - Commit message and content search
+  - File and directory search
+  - Quick navigation tools
+  - URL-based direct access
+  - Advanced filtering options
+
+- **Performance Optimization**:
+
+  - Extremely fast page loading
+  - Efficient caching mechanisms
+  - Low memory footprint
+  - Optimized for large repositories
+  - Minimal server overhead
+  - Scalable for multiple repositories
+
+- **Customization Options**:
+
+  - Theme and appearance customization
+  - Custom CSS styling support
+  - Logo and branding options
+  - Configurable layout and design
+  - Flexible configuration system
+  - Custom header and footer support
+
+- **Simple Deployment**:
+  - CGI-based architecture
+  - Easy web server integration
+  - Minimal dependencies
+  - Straightforward configuration
+  - Standard web hosting compatibility
+  - Low maintenance requirements
+
+## Technical Specifications
+
+- **Language**: C
+- **Architecture**: CGI application
+- **License**: GPL-2.0
+- **Platforms**: Linux, Unix-like systems
+- **Requirements**: Web server, Git
+- **Dependencies**: Minimal system libraries
+
+## Use Cases
+
+- **Personal Git Hosting**: Individual developer repository hosting
+- **Team Repository Browsing**: Small team Git repository access
+- **Open Source Projects**: Public repository hosting and browsing
+- **Educational Environments**: Academic Git repository management
+- **Lightweight Git Interface**: Minimal overhead Git web access
+- **Legacy System Integration**: Git interface for older systems
+
+## Unique Advantages
+
+- **Extreme Performance**: Fastest Git web interface available
+- **Minimal Resources**: Very low memory and CPU usage
+- **Simple Architecture**: Easy to understand and maintain
+- **High Reliability**: Stable, battle-tested codebase
+- **No Database**: File-system based, no database dependencies
+- **Standards Compliant**: Works with any standard web server
+
+Based on the [Cgit source code](https://git.zx2c4.com/cgit/tree/), this tool provides users with the fastest and most efficient way to browse Git repositories through a web interface, making it ideal for situations where performance and minimal resource usage are priorities over advanced features.

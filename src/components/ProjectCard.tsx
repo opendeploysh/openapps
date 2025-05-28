@@ -14,7 +14,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-import { getProjectPopularity, ProjectMeta, projectsWithGitHubData } from "@/lib/projects"
+import { getProjectLogo, getProjectPopularity, ProjectMeta, projectsWithGitHubData } from "@/lib/projects"
 
 import Link from "next/link"
 import { PricingModel } from "@/lib/pricing-model"
@@ -33,7 +33,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   deployment,
   tags,
-  logo,
   slug,
   license,
   showLicense = false,
@@ -69,6 +68,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       ? `/alternatives/${slug}`
       : `/projects/${slug}`
 
+  const logo = getProjectLogo(slug)
   return (
     <Link href={linkUrl} className="block">
       <Card
