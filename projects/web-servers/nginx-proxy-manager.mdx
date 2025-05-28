@@ -1,0 +1,166 @@
+---
+slug: nginx-proxy-manager
+name: Nginx Proxy Manager
+description: |
+  Nginx Proxy Manager is a Docker container for managing Nginx proxy hosts with a simple, powerful interface. It provides an easy-to-use web interface for configuring reverse proxies, SSL certificates, and access control without complex command-line configuration.
+category: web-servers
+tags: [reverse-proxy, nginx, ssl-management]
+github: NginxProxyManager/nginx-proxy-manager
+urls:
+  website: https://nginxproxymanager.com/
+alternatives:
+  selfHosted: [traefik, caddy, haproxy]
+  nonSelfHosted: [cloudflare, aws-alb, azure-application-gateway]
+deployment:
+  difficulty: "Easy"
+  justification: "Docker-based deployment with intuitive web interface. No command-line configuration required."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: User-friendly Nginx reverse proxy management
+      - name: Target Use Case
+        value: Easy reverse proxy setup with web interface
+      - name: Architecture
+        value: Docker + Nginx + Web interface + Database
+  - name: Web Interface
+    features:
+      - name: Intuitive Dashboard
+      - name: Proxy Host Management
+      - name: SSL Certificate Management
+      - name: Access List Management
+      - name: Real-time Monitoring
+  - name: Reverse Proxy
+    features:
+      - name: HTTP/HTTPS Proxying
+      - name: Load Balancing
+      - name: WebSocket Support
+      - name: Custom Headers
+      - name: Path-based Routing
+  - name: SSL Management
+    features:
+      - name: Let's Encrypt Integration
+      - name: Custom SSL Certificates
+      - name: Automatic Renewal
+      - name: Wildcard Certificates
+      - name: SSL Termination
+  - name: Access Control
+    features:
+      - name: Access Lists
+      - name: IP Whitelisting
+      - name: Password Protection
+      - name: User Management
+      - name: Authentication
+  - name: Monitoring
+    features:
+      - name: Real-time Status
+      - name: Access Logs
+      - name: Error Logs
+      - name: Performance Metrics
+      - name: Health Checks
+  - name: Advanced Features
+    features:
+      - name: Custom Nginx Config
+      - name: Stream Proxying
+      - name: Rate Limiting
+      - name: Caching
+      - name: Compression
+---
+
+Nginx Proxy Manager transforms the complexity of Nginx configuration into a simple, intuitive web interface. It provides all the power of Nginx reverse proxy capabilities while eliminating the need for manual configuration file editing, making advanced proxy features accessible to users of all skill levels.
+
+## Key Features
+
+- **Intuitive Web Interface**:
+
+  - Clean, modern dashboard design
+  - Easy proxy host creation and management
+  - Visual SSL certificate management
+  - Real-time status monitoring
+  - User-friendly configuration options
+  - Mobile-responsive design
+
+- **Comprehensive Reverse Proxy**:
+
+  - HTTP and HTTPS proxy configuration
+  - Load balancing across multiple backends
+  - WebSocket proxying support
+  - Custom header manipulation
+  - Path-based routing and rewriting
+  - Upstream health monitoring
+
+- **Automated SSL Management**:
+
+  - Let's Encrypt certificate automation
+  - Custom SSL certificate upload
+  - Automatic certificate renewal
+  - Wildcard certificate support
+  - SSL termination and passthrough
+  - Certificate monitoring and alerts
+
+- **Access Control & Security**:
+
+  - IP-based access lists and whitelisting
+  - Password protection for proxy hosts
+  - User authentication and management
+  - Role-based access control
+  - Security header configuration
+  - Rate limiting and throttling
+
+- **Advanced Configuration**:
+
+  - Custom Nginx configuration snippets
+  - Stream (TCP/UDP) proxying
+  - Advanced caching options
+  - Compression settings
+  - Custom error pages
+  - Nginx module integration
+
+- **Monitoring & Logging**:
+
+  - Real-time proxy status monitoring
+  - Comprehensive access logging
+  - Error log analysis
+  - Performance metrics tracking
+  - Health check monitoring
+  - Alert and notification system
+
+- **Easy Deployment**:
+  - Docker container deployment
+  - Docker Compose configuration
+  - Database integration (SQLite/MySQL)
+  - Backup and restore functionality
+  - Multi-architecture support
+  - Simple upgrade process
+
+## Technical Specifications
+
+- **Base**: Nginx
+- **Interface**: Web-based management
+- **Deployment**: Docker containers
+- **Database**: SQLite, MySQL, MariaDB
+- **License**: MIT
+- **Platforms**: Linux, Docker
+
+## Use Cases
+
+- **Home Lab Management**: Easy reverse proxy setup for home services
+- **Small Business**: Simple proxy management for business applications
+- **Development Environments**: Quick proxy setup for development services
+- **Self-hosted Services**: Centralized access to multiple self-hosted applications
+- **SSL Management**: Automated certificate management for multiple domains
+- **Team Collaboration**: Shared proxy management with team access
+
+## Unique Advantages
+
+- **No Command Line**: Complete management through web interface
+- **Beginner Friendly**: Accessible to users without Nginx expertise
+- **Automated SSL**: Hassle-free Let's Encrypt certificate management
+- **Visual Management**: Intuitive interface for complex configurations
+- **Docker Native**: Designed for containerized environments
+- **Active Community**: Strong community support and regular updates
+
+Based on the [Nginx Proxy Manager GitHub repository](https://github.com/NginxProxyManager/nginx-proxy-manager), this tool democratizes advanced reverse proxy capabilities by providing a user-friendly interface that makes Nginx's powerful features accessible to everyone, regardless of their technical expertise.

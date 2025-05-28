@@ -1,0 +1,166 @@
+---
+slug: caddy
+name: Caddy
+description: |
+  Caddy is a powerful, enterprise-ready, open source web server with automatic HTTPS. It simplifies web server configuration with automatic SSL certificate management, HTTP/2 support, and a modern architecture designed for ease of use and security by default.
+category: web-servers
+tags: [web-server, automatic-https, http2, reverse-proxy]
+github: caddyserver/caddy
+urls:
+  website: https://caddyserver.com/
+alternatives:
+  selfHosted: [nginx, apache, traefik]
+  nonSelfHosted: [cloudflare, aws-cloudfront, fastly]
+deployment:
+  difficulty: "Easy"
+  justification: "Single binary with automatic HTTPS and simple configuration. Minimal setup required with sensible defaults."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Modern web server with automatic HTTPS and simple configuration
+      - name: Target Use Case
+        value: Websites and applications requiring easy SSL management
+      - name: Architecture
+        value: Go-based server with modular plugin system
+  - name: Automatic HTTPS
+    features:
+      - name: Automatic SSL Certificates
+      - name: Let's Encrypt Integration
+      - name: Certificate Renewal
+      - name: ACME Protocol Support
+      - name: Custom CA Support
+  - name: Protocol Support
+    features:
+      - name: HTTP/1.1
+      - name: HTTP/2
+      - name: HTTP/3 (QUIC)
+      - name: WebSocket
+      - name: gRPC Support
+  - name: Reverse Proxy
+    features:
+      - name: Load Balancing
+      - name: Health Checks
+      - name: Circuit Breaker
+      - name: Retry Logic
+      - name: Request Routing
+  - name: Configuration
+    features:
+      - name: Caddyfile Format
+      - name: JSON Configuration
+      - name: API Configuration
+      - name: Hot Reloading
+      - name: Zero-downtime Reloads
+  - name: Performance
+    features:
+      - name: HTTP/2 Server Push
+      - name: Compression (gzip, zstd)
+      - name: Static File Serving
+      - name: Caching Headers
+      - name: Connection Pooling
+  - name: Security
+    features:
+      - name: Security Headers
+      - name: Rate Limiting
+      - name: IP Filtering
+      - name: Authentication
+      - name: Authorization
+---
+
+Caddy is a modern web server that prioritizes security and ease of use. With automatic HTTPS as a core feature, it eliminates the complexity of SSL certificate management while providing powerful reverse proxy capabilities and a simple configuration syntax that makes web server administration accessible to developers and system administrators alike.
+
+## Key Features
+
+- **Automatic HTTPS**:
+
+  - Automatic SSL certificate provisioning
+  - Let's Encrypt integration out of the box
+  - Automatic certificate renewal
+  - ACME protocol support for various CAs
+  - Custom certificate authority support
+  - Zero-configuration SSL for most use cases
+
+- **Modern Protocol Support**:
+
+  - Full HTTP/1.1 and HTTP/2 support
+  - HTTP/3 (QUIC) protocol implementation
+  - WebSocket proxying and handling
+  - gRPC service proxying
+  - Server-Sent Events (SSE) support
+  - Protocol upgrade handling
+
+- **Powerful Reverse Proxy**:
+
+  - Intelligent load balancing algorithms
+  - Active and passive health checks
+  - Circuit breaker pattern implementation
+  - Automatic retry with backoff
+  - Request routing and rewriting
+  - Upstream failover handling
+
+- **Simple Configuration**:
+
+  - Human-readable Caddyfile format
+  - JSON configuration support
+  - RESTful admin API
+  - Hot configuration reloading
+  - Zero-downtime configuration updates
+  - Environment variable integration
+
+- **Performance Optimization**:
+
+  - HTTP/2 server push capabilities
+  - Built-in compression (gzip, zstd, brotli)
+  - Efficient static file serving
+  - Automatic cache headers
+  - Connection pooling and reuse
+  - Memory-efficient request handling
+
+- **Security Features**:
+
+  - Security headers by default
+  - Rate limiting and throttling
+  - IP-based access control
+  - Basic and JWT authentication
+  - Authorization middleware
+  - Request sanitization
+
+- **Plugin Ecosystem**:
+  - Modular plugin architecture
+  - Community-contributed plugins
+  - Custom plugin development
+  - Runtime plugin loading
+  - Plugin marketplace
+  - Enterprise plugin support
+
+## Technical Specifications
+
+- **Language**: Go
+- **Protocols**: HTTP/1.1, HTTP/2, HTTP/3, WebSocket
+- **Platforms**: Linux, Windows, macOS, FreeBSD
+- **License**: Apache-2.0
+- **Package Formats**: Binary, deb, rpm, Docker
+- **Configuration**: Caddyfile, JSON, API
+
+## Use Cases
+
+- **Static Websites**: Simple static site hosting with automatic HTTPS
+- **Reverse Proxy**: Load balancing and proxying to backend services
+- **API Gateway**: API routing and management
+- **Development Servers**: Local development with HTTPS
+- **Microservices**: Service mesh and inter-service communication
+- **Content Delivery**: Fast static content serving
+
+## Unique Advantages
+
+- **Zero-Config HTTPS**: Automatic SSL certificates without manual intervention
+- **Simple Configuration**: Human-readable configuration format
+- **Modern Architecture**: Built with Go for performance and reliability
+- **Security by Default**: Secure defaults and automatic security features
+- **Single Binary**: Easy deployment with no external dependencies
+- **Active Development**: Regular updates and feature additions
+
+Based on the [Caddy GitHub repository](https://github.com/caddyserver/caddy), this tool revolutionizes web server administration by making HTTPS automatic and configuration simple, making it ideal for developers and organizations who want a modern, secure web server without the complexity of traditional solutions.

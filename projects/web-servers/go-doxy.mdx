@@ -1,0 +1,166 @@
+---
+slug: go-doxy
+name: go-doxy
+description: |
+  go-doxy is a lightweight, simple, and performant reverse proxy with WebUI, Docker integration, and automatic shutdown/startup for containers based on traffic. It provides intelligent container management and efficient resource utilization for containerized applications.
+category: web-servers
+tags: [reverse-proxy, webui, container-management]
+github: yusing/godoxy
+urls:
+  website: https://github.com/yusing/godoxy
+alternatives:
+  selfHosted: [traefik, nginx-proxy-manager, caddy]
+  nonSelfHosted: [cloudflare, aws-alb, azure-application-gateway]
+deployment:
+  difficulty: "Easy"
+  justification: "Docker-based deployment with simple configuration. WebUI makes setup and management straightforward."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Lightweight reverse proxy with intelligent container management
+      - name: Target Use Case
+        value: Docker environments with dynamic container scaling
+      - name: Architecture
+        value: Go + Docker integration + Web interface
+  - name: Reverse Proxy
+    features:
+      - name: HTTP/HTTPS Proxying
+      - name: Load Balancing
+      - name: Request Routing
+      - name: SSL Termination
+      - name: Health Checks
+  - name: Container Management
+    features:
+      - name: Docker Integration
+      - name: Automatic Container Startup
+      - name: Automatic Container Shutdown
+      - name: Traffic-based Scaling
+      - name: Container Discovery
+  - name: Web Interface
+    features:
+      - name: Management WebUI
+      - name: Real-time Monitoring
+      - name: Configuration Management
+      - name: Container Status
+      - name: Traffic Analytics
+  - name: Performance
+    features:
+      - name: Lightweight Design
+      - name: Low Resource Usage
+      - name: Fast Response Times
+      - name: Efficient Proxying
+      - name: Minimal Overhead
+  - name: Automation
+    features:
+      - name: Traffic-based Actions
+      - name: Intelligent Scaling
+      - name: Resource Optimization
+      - name: Automatic Discovery
+      - name: Dynamic Configuration
+  - name: Monitoring
+    features:
+      - name: Real-time Metrics
+      - name: Container Health
+      - name: Traffic Monitoring
+      - name: Performance Analytics
+      - name: Status Dashboard
+---
+
+go-doxy is an innovative reverse proxy solution that combines traditional proxying capabilities with intelligent Docker container management. By automatically starting and stopping containers based on traffic patterns, it optimizes resource utilization while maintaining responsive service delivery.
+
+## Key Features
+
+- **Intelligent Container Management**:
+
+  - Automatic container startup on incoming traffic
+  - Automatic container shutdown during idle periods
+  - Traffic-based scaling decisions
+  - Docker API integration
+  - Container health monitoring
+  - Resource optimization algorithms
+
+- **Reverse Proxy Capabilities**:
+
+  - HTTP and HTTPS request proxying
+  - Load balancing across multiple backends
+  - Intelligent request routing
+  - SSL/TLS termination
+  - Health check monitoring
+  - Failover handling
+
+- **Web-based Management**:
+
+  - Intuitive web interface for configuration
+  - Real-time monitoring dashboard
+  - Container status visualization
+  - Traffic analytics and metrics
+  - Configuration management
+  - User-friendly administration
+
+- **Performance Optimization**:
+
+  - Lightweight Go implementation
+  - Minimal resource footprint
+  - Fast request processing
+  - Efficient memory usage
+  - Low-latency proxying
+  - Optimized for containerized environments
+
+- **Docker Integration**:
+
+  - Native Docker API support
+  - Automatic service discovery
+  - Container lifecycle management
+  - Dynamic configuration updates
+  - Multi-container orchestration
+  - Docker Compose compatibility
+
+- **Traffic Intelligence**:
+
+  - Traffic pattern analysis
+  - Predictive scaling decisions
+  - Idle detection algorithms
+  - Load-based container management
+  - Resource usage optimization
+  - Intelligent caching strategies
+
+- **Monitoring & Analytics**:
+  - Real-time traffic monitoring
+  - Container performance metrics
+  - Resource utilization tracking
+  - Historical data analysis
+  - Alert and notification system
+  - Comprehensive logging
+
+## Technical Specifications
+
+- **Language**: Go
+- **Deployment**: Docker containers
+- **Protocols**: HTTP/1.1, HTTPS
+- **Integration**: Docker API
+- **License**: MIT
+- **Platforms**: Linux, Docker
+
+## Use Cases
+
+- **Development Environments**: Dynamic container management for dev setups
+- **Resource Optimization**: Efficient resource usage in containerized deployments
+- **Microservices**: Intelligent scaling for microservice architectures
+- **Testing Environments**: On-demand container provisioning for testing
+- **Cost Optimization**: Reducing resource costs through intelligent scaling
+- **Edge Computing**: Efficient resource management at edge locations
+
+## Unique Advantages
+
+- **Traffic-based Automation**: Automatic container lifecycle management
+- **Resource Efficiency**: Significant resource savings through intelligent scaling
+- **Simple Management**: Easy-to-use web interface for configuration
+- **Docker Native**: Built specifically for Docker environments
+- **Lightweight**: Minimal overhead and resource usage
+- **Open Source**: Transparent and customizable solution
+
+Based on the [go-doxy GitHub repository](https://github.com/yusing/godoxy), this tool provides a unique approach to reverse proxying by combining traditional proxy features with intelligent container management, making it ideal for environments where resource efficiency and dynamic scaling are priorities.

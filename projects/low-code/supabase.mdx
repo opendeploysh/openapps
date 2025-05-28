@@ -1,0 +1,166 @@
+---
+slug: supabase
+name: Supabase
+heroImage: https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png
+description: |
+  Supabase is an open-source Firebase alternative that provides a complete backend-as-a-service platform. It offers PostgreSQL database, authentication, real-time subscriptions, edge functions, and file storage with a developer-friendly dashboard and auto-generated APIs.
+category: low-code
+tags: [firebase-alternative, postgresql, realtime, baas]
+github: supabase/supabase
+urls:
+  website: https://supabase.com/
+alternatives:
+  selfHosted: [appwrite, pocketbase, trailbase]
+  nonSelfHosted: [firebase, aws-amplify, azure-mobile-apps]
+deployment:
+  difficulty: "Medium"
+  justification: "Docker-based deployment with multiple services, requires proper configuration for PostgreSQL, authentication, and edge functions."
+pricingModel: Open-Core
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Open-source Firebase alternative
+      - name: Target Use Case
+        value: Full-stack applications with PostgreSQL
+      - name: Architecture
+        value: PostgreSQL + PostgREST + GoTrue + Realtime
+  - name: Database
+    features:
+      - name: PostgreSQL Database
+      - name: Auto-generated APIs
+      - name: Real-time Subscriptions
+      - name: Row Level Security
+      - name: Database Functions
+  - name: Authentication
+    features:
+      - name: User Management
+      - name: Social OAuth
+      - name: Magic Links
+      - name: Multi-factor Auth
+      - name: JWT Tokens
+  - name: Real-time
+    features:
+      - name: Database Changes
+      - name: Presence
+      - name: Broadcast
+      - name: WebSocket Support
+      - name: Channel Management
+  - name: Storage
+    features:
+      - name: File Storage
+      - name: Image Transformations
+      - name: CDN Integration
+      - name: Access Policies
+      - name: Resumable Uploads
+  - name: Edge Functions
+    features:
+      - name: Serverless Functions
+      - name: TypeScript Support
+      - name: Global Distribution
+      - name: Custom Logic
+      - name: API Extensions
+  - name: Developer Experience
+    features:
+      - name: Dashboard UI
+      - name: SQL Editor
+      - name: API Documentation
+      - name: CLI Tools
+      - name: Client Libraries
+---
+
+Supabase is a powerful open-source alternative to Firebase that provides a complete backend-as-a-service platform built on PostgreSQL. It combines the reliability and features of PostgreSQL with modern developer tools, real-time capabilities, and a comprehensive suite of backend services, making it ideal for building full-stack applications.
+
+## Key Features
+
+- **PostgreSQL Database**:
+
+  - Full PostgreSQL database with all advanced features
+  - Auto-generated REST APIs from database schema
+  - GraphQL support through pg_graphql extension
+  - Row Level Security (RLS) for fine-grained access control
+  - Database functions and triggers
+  - Full-text search capabilities
+
+- **Authentication & Authorization**:
+
+  - Built-in user management system
+  - Social OAuth providers (Google, GitHub, Discord, etc.)
+  - Magic link authentication
+  - Multi-factor authentication (MFA)
+  - JWT token-based authentication
+  - Row Level Security integration
+
+- **Real-time Capabilities**:
+
+  - Real-time database change subscriptions
+  - Presence tracking for collaborative features
+  - Broadcast messaging between clients
+  - WebSocket-based connections
+  - Channel management and filtering
+  - Conflict-free replicated data types (CRDTs)
+
+- **File Storage**:
+
+  - S3-compatible object storage
+  - Image transformations and optimization
+  - CDN integration for global delivery
+  - Access policies and permissions
+  - Resumable file uploads
+  - Automatic backup and versioning
+
+- **Edge Functions**:
+
+  - Serverless TypeScript/JavaScript functions
+  - Global edge deployment
+  - Custom API endpoints
+  - Database triggers and webhooks
+  - Third-party integrations
+  - Scheduled functions
+
+- **Developer Experience**:
+
+  - Intuitive web dashboard
+  - Built-in SQL editor with autocomplete
+  - Auto-generated API documentation
+  - Comprehensive CLI tools
+  - Client libraries for multiple platforms
+  - Local development environment
+
+- **Enterprise Features**:
+  - Single sign-on (SSO) integration
+  - Advanced security features
+  - Audit logging and compliance
+  - Custom domains and SSL
+  - Priority support
+  - SLA guarantees
+
+## Technical Specifications
+
+- **Database**: PostgreSQL with extensions
+- **API Layer**: PostgREST for auto-generated APIs
+- **Authentication**: GoTrue auth server
+- **Real-time**: Custom WebSocket server
+- **Storage**: S3-compatible object storage
+- **Functions**: Deno runtime for edge functions
+- **Deployment**: Docker Compose, Kubernetes
+
+## Use Cases
+
+- **Web Applications**: Full-stack web apps with real-time features
+- **Mobile Applications**: Backend for iOS and Android apps
+- **SaaS Products**: Multi-tenant software-as-a-service platforms
+- **Real-time Apps**: Chat applications, collaborative tools
+- **E-commerce**: Online stores with inventory management
+- **Content Management**: Blogs, portfolios, and media platforms
+
+## Unique Advantages
+
+- **PostgreSQL Power**: Full SQL database with advanced features
+- **Open Source**: Transparent, customizable, and community-driven
+- **Real-time First**: Built-in real-time capabilities across all services
+- **Developer Friendly**: Excellent tooling and documentation
+- **Firebase Compatible**: Easy migration path from Firebase
+- **Self-Hosted**: Complete control over data and infrastructure

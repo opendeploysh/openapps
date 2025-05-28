@@ -1,0 +1,166 @@
+---
+slug: oauth2-proxy
+name: OAuth2 Proxy
+description: |
+  OAuth2 Proxy is a flexible, open-source tool that can act as either a standalone reverse proxy or a middleware component integrated into existing reverse proxy or load balancer setups. It provides a simple and secure way to protect web applications with OAuth2/OIDC authentication by intercepting requests and redirecting users to OAuth2 providers for authentication.
+category: web-servers
+tags: [reverse-proxy, oauth2, authentication, oidc, security]
+github: oauth2-proxy/oauth2-proxy
+urls:
+  website: https://oauth2-proxy.github.io/oauth2-proxy
+alternatives:
+  selfHosted: [authelia, pomerium, jauth]
+  nonSelfHosted: [auth0, okta, azure-ad]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires OAuth provider setup and configuration. Well-documented but involves understanding of OAuth2/OIDC concepts."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: OAuth2/OIDC authentication reverse proxy
+      - name: Target Use Case
+        value: Protecting web applications with OAuth2 authentication
+      - name: Architecture
+        value: Go + OAuth2/OIDC + Reverse proxy + Multiple providers
+  - name: Authentication
+    features:
+      - name: OAuth2 Support
+      - name: OpenID Connect (OIDC)
+      - name: Multiple Provider Support
+      - name: Session Management
+      - name: Token Validation
+  - name: Identity Providers
+    features:
+      - name: Google OAuth
+      - name: Microsoft Entra ID
+      - name: GitHub OAuth
+      - name: Generic OIDC
+      - name: login.gov
+  - name: Reverse Proxy
+    features:
+      - name: HTTP/HTTPS Proxying
+      - name: Request Forwarding
+      - name: Header Injection
+      - name: Path-based Routing
+      - name: Upstream Management
+  - name: Authorization
+    features:
+      - name: Email-based Access Control
+      - name: Group-based Authorization
+      - name: Domain Restrictions
+      - name: Custom Authorization
+      - name: Role-based Access
+  - name: Security
+    features:
+      - name: Secure Cookie Management
+      - name: CSRF Protection
+      - name: TLS/SSL Support
+      - name: Token Encryption
+      - name: Session Security
+  - name: Integration
+    features:
+      - name: Middleware Mode
+      - name: Standalone Mode
+      - name: Kubernetes Support
+      - name: Docker Integration
+      - name: Load Balancer Integration
+---
+
+OAuth2 Proxy is a versatile authentication solution that brings OAuth2 and OpenID Connect authentication to web applications. Whether deployed as a standalone reverse proxy or integrated as middleware, it provides secure, standardized authentication while supporting a wide range of identity providers and deployment scenarios.
+
+## Key Features
+
+- **Comprehensive OAuth2/OIDC Support**:
+
+  - Full OAuth2 and OpenID Connect implementation
+  - Support for authorization code flow
+  - Token validation and refresh
+  - Secure session management
+  - PKCE (Proof Key for Code Exchange) support
+  - JWT token handling
+
+- **Multiple Identity Provider Support**:
+
+  - Google OAuth integration
+  - Microsoft Entra ID (Azure AD) support
+  - GitHub OAuth authentication
+  - Generic OIDC provider support
+  - login.gov integration
+  - Custom provider implementations
+
+- **Flexible Deployment Options**:
+
+  - Standalone reverse proxy mode
+  - Middleware integration mode
+  - Kubernetes ingress controller integration
+  - Docker container deployment
+  - Load balancer integration
+  - Cloud-native architecture
+
+- **Advanced Authorization**:
+
+  - Email-based access control
+  - Group and role-based authorization
+  - Domain and organization restrictions
+  - Custom authorization policies
+  - Fine-grained permission control
+  - Dynamic user validation
+
+- **Security Features**:
+
+  - Secure HTTP-only cookie management
+  - CSRF protection mechanisms
+  - TLS/SSL encryption support
+  - Token encryption and signing
+  - Session timeout management
+  - Security header injection
+
+- **Request Processing**:
+
+  - HTTP header injection with user details
+  - Username and group forwarding
+  - Custom header configuration
+  - Request path routing
+  - Upstream service protection
+  - API endpoint security
+
+- **Enterprise Features**:
+  - High availability support
+  - Horizontal scaling capabilities
+  - Comprehensive logging
+  - Metrics and monitoring
+  - Health check endpoints
+  - Configuration management
+
+## Technical Specifications
+
+- **Language**: Go
+- **Protocols**: HTTP/1.1, HTTP/2, HTTPS, OAuth2, OIDC
+- **Platforms**: Linux, Windows, macOS, Docker, Kubernetes
+- **License**: MIT
+- **Package Formats**: Binary, Docker, Helm charts
+- **Configuration**: Command-line flags, environment variables, config files
+
+## Use Cases
+
+- **Web Application Protection**: Securing web applications with OAuth2 authentication
+- **API Gateway Security**: Protecting API endpoints with token validation
+- **Microservices Authentication**: Centralized auth for microservice architectures
+- **Enterprise SSO**: Single sign-on integration with corporate identity providers
+- **Development Environments**: Secure access to development and staging services
+- **Multi-tenant Applications**: Tenant-specific authentication and authorization
+
+## Unique Advantages
+
+- **Provider Flexibility**: Support for multiple OAuth2 and OIDC providers
+- **Deployment Versatility**: Works as standalone proxy or integrated middleware
+- **Enterprise Ready**: Battle-tested with high availability and scaling features
+- **Community Driven**: Active open-source community with regular updates
+- **Standards Compliant**: Full OAuth2 and OIDC specification compliance
+- **Easy Integration**: Simple integration with existing infrastructure
+
+Based on the [OAuth2 Proxy GitHub repository](https://github.com/oauth2-proxy/oauth2-proxy), this tool provides organizations with a robust, flexible authentication solution that can be easily integrated into existing infrastructure while supporting modern OAuth2 and OpenID Connect standards, making it ideal for securing web applications and APIs in both cloud and on-premises environments.

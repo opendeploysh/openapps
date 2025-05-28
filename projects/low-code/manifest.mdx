@@ -1,0 +1,184 @@
+---
+slug: manifest
+name: Manifest
+description: |
+  Manifest is a complete backend that fits into a single YAML file. It provides a declarative approach to building backends by defining your entire application structure, APIs, database schema, and business logic in one configuration file, eliminating the need for traditional backend development.
+category: low-code
+tags: [backend, declarative, api]
+github: mnfst/manifest
+urls:
+  website: https://manifest.build
+  demo: https://manifest.new
+alternatives:
+  selfHosted: [appwrite, pocketbase, supabase]
+  nonSelfHosted: [firebase, aws-amplify, hasura]
+deployment:
+  difficulty: "Easy"
+  justification: "Single YAML file configuration with Node.js runtime, minimal setup required for deployment."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Declarative backend configuration
+      - name: Target Use Case
+        value: Rapid backend development with YAML
+      - name: Architecture
+        value: Node.js + YAML configuration + Auto-generation
+  - name: Configuration
+    features:
+      - name: YAML-based Setup
+      - name: Declarative Schema
+      - name: Single File Backend
+      - name: Hot Reloading
+      - name: Version Control Friendly
+  - name: API Generation
+    features:
+      - name: Auto REST APIs
+      - name: GraphQL Support
+      - name: CRUD Operations
+      - name: Custom Endpoints
+      - name: API Documentation
+  - name: Database
+    features:
+      - name: Schema Definition
+      - name: Relationships
+      - name: Validation Rules
+      - name: Migrations
+      - name: Seeding
+  - name: Authentication
+    features:
+      - name: User Management
+      - name: JWT Tokens
+      - name: Role-based Access
+      - name: OAuth Integration
+      - name: Session Management
+  - name: Business Logic
+    features:
+      - name: Custom Functions
+      - name: Hooks & Triggers
+      - name: Validation Logic
+      - name: Computed Fields
+      - name: Event Handling
+  - name: Developer Experience
+    features:
+      - name: Live Reload
+      - name: Error Handling
+      - name: Logging
+      - name: Testing Support
+      - name: CLI Tools
+---
+
+Manifest revolutionizes backend development by allowing developers to define their entire backend infrastructure in a single YAML file. This declarative approach eliminates the complexity of traditional backend development, automatically generating APIs, database schemas, authentication, and business logic from a simple configuration file.
+
+## Key Features
+
+- **Single File Backend**:
+
+  - Complete backend defined in one YAML file
+  - Declarative configuration approach
+  - No boilerplate code required
+  - Version control friendly
+  - Easy to understand and maintain
+  - Hot reloading during development
+
+- **Automatic API Generation**:
+
+  - REST APIs generated automatically
+  - GraphQL endpoint creation
+  - CRUD operations out of the box
+  - Custom endpoint definitions
+  - API documentation generation
+  - Request/response validation
+
+- **Database Management**:
+
+  - Schema definition in YAML
+  - Automatic table creation
+  - Relationship management
+  - Data validation rules
+  - Database migrations
+  - Seed data configuration
+
+- **Authentication & Authorization**:
+
+  - Built-in user management
+  - JWT token authentication
+  - Role-based access control
+  - OAuth provider integration
+  - Session management
+  - Permission-based API access
+
+- **Business Logic Integration**:
+
+  - Custom function definitions
+  - Pre/post hooks and triggers
+  - Data validation logic
+  - Computed field calculations
+  - Event-driven workflows
+  - Custom middleware support
+
+- **Developer Experience**:
+
+  - Live configuration reloading
+  - Comprehensive error handling
+  - Built-in logging system
+  - Testing framework integration
+  - CLI tools for management
+  - Rich development environment
+
+- **Deployment & Scaling**:
+  - Simple deployment process
+  - Docker container support
+  - Environment configuration
+  - Horizontal scaling support
+  - Cloud platform integration
+  - Production-ready features
+
+## Technical Specifications
+
+- **Runtime**: Node.js
+- **Configuration**: YAML
+- **Database**: PostgreSQL, MySQL, SQLite
+- **APIs**: REST, GraphQL
+- **Authentication**: JWT, OAuth
+- **Deployment**: Docker, Node.js
+- **CLI**: Command-line tools
+
+## Use Cases
+
+- **Rapid Prototyping**: Quick backend setup for MVPs
+- **API Development**: Fast API creation without coding
+- **Microservices**: Lightweight service definitions
+- **Content Management**: Backend for CMS applications
+- **Mobile Apps**: Backend services for mobile applications
+- **Internal Tools**: Quick backends for internal applications
+
+## Configuration Example
+
+```yaml
+name: My App
+entities:
+  User:
+    properties:
+      name: string
+      email: string
+      age: number
+    auth: true
+  Post:
+    properties:
+      title: string
+      content: text
+      author: User
+```
+
+## Unique Advantages
+
+- **Simplicity**: Entire backend in one YAML file
+- **Speed**: From configuration to running backend in minutes
+- **Maintainability**: Easy to understand and modify
+- **Version Control**: Configuration changes tracked in Git
+- **No Lock-in**: Standard technologies underneath
+- **Extensible**: Custom logic when needed

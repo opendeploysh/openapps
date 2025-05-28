@@ -1,0 +1,166 @@
+---
+slug: apache
+name: Apache HTTP Server
+description: |
+  Apache HTTP Server is a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards. As one of the most popular web servers in the world, it offers robust performance, extensive module support, and proven reliability for hosting websites and web applications.
+category: web-servers
+tags: [web-server, http, modules, ssl]
+github: apache/httpd
+urls:
+  website: https://httpd.apache.org/
+alternatives:
+  selfHosted: [nginx, lighttpd, caddy]
+  nonSelfHosted: [cloudflare, aws-cloudfront, fastly]
+deployment:
+  difficulty: "Medium"
+  justification: "Well-documented with extensive configuration options. Requires understanding of modules and virtual hosts for optimal setup."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Robust HTTP server with extensive module ecosystem
+      - name: Target Use Case
+        value: Enterprise websites and web applications
+      - name: Architecture
+        value: Modular C-based server with extensive configuration
+  - name: Protocol Support
+    features:
+      - name: HTTP/1.1
+      - name: HTTP/2
+      - name: HTTPS/SSL/TLS
+      - name: WebSocket Support
+      - name: Protocol Compliance
+  - name: Module System
+    features:
+      - name: Dynamic Module Loading
+      - name: Core Modules
+      - name: Third-party Modules
+      - name: Custom Module Development
+      - name: Module Configuration
+  - name: Virtual Hosting
+    features:
+      - name: Name-based Virtual Hosts
+      - name: IP-based Virtual Hosts
+      - name: Mass Virtual Hosting
+      - name: SSL Virtual Hosts
+      - name: Dynamic Virtual Hosts
+  - name: Security
+    features:
+      - name: SSL/TLS Encryption
+      - name: Access Control
+      - name: Authentication Modules
+      - name: Security Headers
+      - name: Rate Limiting
+  - name: Performance
+    features:
+      - name: Multi-Processing Modules
+      - name: Caching Support
+      - name: Compression
+      - name: Load Balancing
+      - name: Connection Pooling
+  - name: Administration
+    features:
+      - name: Configuration Management
+      - name: Log Management
+      - name: Status Monitoring
+      - name: Graceful Restart
+      - name: Process Management
+---
+
+Apache HTTP Server is the world's most widely used web server software, powering millions of websites globally. With over 25 years of development, it provides a stable, secure, and highly configurable platform for serving web content, from simple static sites to complex enterprise applications.
+
+## Key Features
+
+- **Modular Architecture**:
+
+  - Dynamic module loading system
+  - Extensive library of core and third-party modules
+  - Custom module development support
+  - Flexible module configuration
+  - Runtime module management
+  - Backward compatibility
+
+- **Virtual Hosting**:
+
+  - Name-based virtual hosting
+  - IP-based virtual hosting
+  - Mass virtual hosting for ISPs
+  - SSL/TLS virtual hosts
+  - Dynamic virtual host configuration
+  - Per-virtual-host configuration
+
+- **Security Features**:
+
+  - SSL/TLS encryption support
+  - Multiple authentication mechanisms
+  - Access control by IP, domain, or user
+  - Security headers configuration
+  - Rate limiting and DoS protection
+  - Secure file permissions
+
+- **Performance Optimization**:
+
+  - Multiple Multi-Processing Modules (MPMs)
+  - Built-in caching mechanisms
+  - Content compression (gzip, brotli)
+  - Load balancing capabilities
+  - Connection pooling
+  - Keep-alive connections
+
+- **Protocol Support**:
+
+  - Full HTTP/1.1 compliance
+  - HTTP/2 support with mod_http2
+  - HTTPS with SSL/TLS
+  - WebSocket proxying
+  - FastCGI and CGI support
+  - Reverse proxy capabilities
+
+- **Administration & Monitoring**:
+
+  - Comprehensive configuration system
+  - Detailed logging and log rotation
+  - Real-time status monitoring
+  - Graceful restart and reload
+  - Process management
+  - Performance metrics
+
+- **Content Management**:
+  - Static file serving
+  - Directory indexing
+  - Content negotiation
+  - URL rewriting and redirection
+  - Server-side includes (SSI)
+  - Custom error pages
+
+## Technical Specifications
+
+- **Language**: C
+- **Protocols**: HTTP/1.1, HTTP/2, HTTPS
+- **Platforms**: Linux, Windows, macOS, Unix
+- **License**: Apache-2.0
+- **Package Formats**: deb, rpm, Docker
+- **Configuration**: Text-based configuration files
+
+## Use Cases
+
+- **Enterprise Websites**: Large-scale corporate websites and portals
+- **Web Applications**: Dynamic web applications with various backends
+- **Content Management**: CMS platforms like WordPress, Drupal
+- **E-commerce**: Online stores and shopping platforms
+- **Intranet Services**: Internal company web services
+- **API Hosting**: RESTful API and web service hosting
+
+## Unique Advantages
+
+- **Industry Standard**: Most widely deployed web server globally
+- **Mature Ecosystem**: Decades of development and community support
+- **Extensive Documentation**: Comprehensive official and community documentation
+- **Module Ecosystem**: Vast library of available modules
+- **Enterprise Support**: Commercial support available from multiple vendors
+- **Proven Reliability**: Battle-tested in production environments worldwide
+
+Based on the [Apache HTTP Server repository](https://svn.apache.org/repos/asf/httpd/httpd/trunk/), this tool represents the gold standard in web server technology, providing organizations with a robust, secure, and highly configurable platform that can handle everything from simple websites to complex enterprise applications with millions of users.

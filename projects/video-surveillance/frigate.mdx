@@ -1,0 +1,169 @@
+---
+slug: frigate
+name: Frigate
+description: |
+  Frigate monitors your security cameras with locally processed AI. It provides real-time object detection, person detection, and intelligent video analysis using machine learning models, all processed locally for privacy and performance.
+category: video-surveillance
+tags: [ai, object-detection, security-cameras, docker, python, machine-learning]
+github: blakeblackshear/frigate
+logo: https://frigate.video/images/logo.svg
+heroImage: https://frigate.video/images/live.webp
+urls:
+  website: https://frigate.video/
+alternatives:
+  selfHosted: [viseron, zoneminder, bluecherry]
+  nonSelfHosted: [nest-cam, ring, arlo]
+deployment:
+  difficulty: "Medium"
+  justification: "Docker-based deployment with AI model configuration. Requires understanding of camera setup and AI detection parameters."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: AI-powered security camera monitoring with local processing
+      - name: Target Use Case
+        value: Intelligent video surveillance with object and person detection
+      - name: Architecture
+        value: Python + Docker + AI models + Camera integration
+  - name: AI Detection
+    features:
+      - name: Object Detection
+      - name: Person Detection
+      - name: Vehicle Detection
+      - name: Animal Detection
+      - name: Custom Models
+  - name: Video Processing
+    features:
+      - name: Real-time Analysis
+      - name: Motion Detection
+      - name: Zone-based Detection
+      - name: Event Recording
+      - name: Snapshot Creation
+  - name: Camera Integration
+    features:
+      - name: RTSP Support
+      - name: Multiple Camera Support
+      - name: Stream Management
+      - name: Camera Configuration
+      - name: Hardware Acceleration
+  - name: Smart Features
+    features:
+      - name: Event Filtering
+      - name: False Positive Reduction
+      - name: Intelligent Alerts
+      - name: Time-based Rules
+      - name: Zone Configuration
+  - name: Storage & Playback
+    features:
+      - name: Event Storage
+      - name: Clip Management
+      - name: Snapshot Gallery
+      - name: Timeline View
+      - name: Export Functions
+  - name: Integration
+    features:
+      - name: Home Assistant
+      - name: MQTT Support
+      - name: API Access
+      - name: Webhook Notifications
+      - name: Mobile Apps
+---
+
+Frigate is a cutting-edge AI-powered video surveillance system that brings intelligent object detection to security cameras. By processing video streams locally with machine learning models, it provides real-time detection of people, vehicles, and other objects while maintaining privacy and reducing false alarms.
+
+## Key Features
+
+- **Advanced AI Detection**:
+
+  - Real-time object detection using TensorFlow Lite
+  - Person detection with high accuracy
+  - Vehicle and animal detection
+  - Custom object detection models
+  - Configurable detection zones
+  - False positive filtering
+
+- **Intelligent Video Analysis**:
+
+  - Motion detection with AI validation
+  - Zone-based detection areas
+  - Time-based detection rules
+  - Event correlation and filtering
+  - Smart alert generation
+  - Confidence threshold tuning
+
+- **Camera Management**:
+
+  - RTSP stream support
+  - Multiple camera integration
+  - Hardware-accelerated decoding
+  - Stream quality optimization
+  - Camera health monitoring
+  - Flexible camera configuration
+
+- **Event Management**:
+
+  - Automatic event recording
+  - Intelligent clip creation
+  - Snapshot generation
+  - Event timeline visualization
+  - Search and filtering capabilities
+  - Retention policy management
+
+- **Smart Notifications**:
+
+  - Real-time alert system
+  - Configurable notification rules
+  - MQTT message publishing
+  - Webhook integration
+  - Mobile push notifications
+  - Email alerts
+
+- **Home Automation Integration**:
+
+  - Native Home Assistant integration
+  - MQTT broker support
+  - RESTful API access
+  - Custom automation triggers
+  - State reporting
+  - Sensor data publishing
+
+- **Performance Optimization**:
+  - Hardware acceleration support
+  - GPU processing (NVIDIA, Intel)
+  - Coral TPU integration
+  - CPU optimization
+  - Memory management
+  - Efficient storage usage
+
+## Technical Specifications
+
+- **Language**: Python
+- **AI Framework**: TensorFlow Lite
+- **Deployment**: Docker containers
+- **Protocols**: RTSP, MQTT, HTTP
+- **Hardware**: CPU, GPU, Coral TPU
+- **License**: MIT
+- **Platforms**: Linux, Docker
+
+## Use Cases
+
+- **Smart Home Security**: Intelligent home surveillance with AI detection
+- **Business Monitoring**: Commercial security with reduced false alarms
+- **Perimeter Security**: Outdoor monitoring with vehicle and person detection
+- **Pet Monitoring**: Animal detection and behavior monitoring
+- **Package Detection**: Delivery and package monitoring
+- **Privacy-Focused Surveillance**: Local processing without cloud dependency
+
+## Unique Advantages
+
+- **Local AI Processing**: All detection happens locally for privacy and speed
+- **Intelligent Filtering**: AI reduces false alarms from motion detection
+- **Hardware Acceleration**: Support for various AI acceleration hardware
+- **Home Assistant Native**: Deep integration with popular home automation platform
+- **Open Source**: Transparent, customizable, and community-driven
+- **Real-time Performance**: Low-latency detection and alerting
+
+Based on the [Frigate GitHub repository](https://github.com/blakeblackshear/frigate), this tool revolutionizes home and business security by bringing enterprise-grade AI detection capabilities to self-hosted surveillance systems, making it ideal for users who want intelligent monitoring without compromising privacy or relying on cloud services.

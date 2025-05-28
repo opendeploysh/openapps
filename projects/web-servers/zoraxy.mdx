@@ -1,0 +1,166 @@
+---
+slug: zoraxy
+name: Zoraxy
+description: |
+  Zoraxy is a general purpose HTTP reverse proxy and forwarding tool. It provides a simple yet powerful solution for routing HTTP traffic, load balancing, and managing web services with an intuitive web interface and flexible configuration options.
+category: web-servers
+tags: [reverse-proxy, http, go, web-interface, forwarding]
+github: tobychui/zoraxy
+urls:
+  website: https://zoraxy.aroz.org/
+alternatives:
+  selfHosted: [nginx-proxy-manager, traefik, caddy]
+  nonSelfHosted: [cloudflare, aws-alb, azure-application-gateway]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple Go binary with web interface. Easy setup with minimal configuration required."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: General purpose HTTP reverse proxy and forwarding
+      - name: Target Use Case
+        value: Simple HTTP traffic routing and load balancing
+      - name: Architecture
+        value: Go + Web interface + HTTP forwarding
+  - name: Reverse Proxy
+    features:
+      - name: HTTP/HTTPS Proxying
+      - name: Request Forwarding
+      - name: Load Balancing
+      - name: Health Checks
+      - name: Failover Support
+  - name: Web Interface
+    features:
+      - name: Management Dashboard
+      - name: Configuration Interface
+      - name: Real-time Monitoring
+      - name: Service Management
+      - name: User-friendly Setup
+  - name: Routing
+    features:
+      - name: Path-based Routing
+      - name: Host-based Routing
+      - name: Custom Rules
+      - name: Request Rewriting
+      - name: Header Manipulation
+  - name: Security
+    features:
+      - name: SSL/TLS Support
+      - name: Access Control
+      - name: Rate Limiting
+      - name: IP Filtering
+      - name: Security Headers
+  - name: Performance
+    features:
+      - name: Efficient Forwarding
+      - name: Connection Pooling
+      - name: Caching Support
+      - name: Compression
+      - name: Keep-alive Support
+  - name: Management
+    features:
+      - name: Configuration Management
+      - name: Service Discovery
+      - name: Log Management
+      - name: Status Monitoring
+      - name: API Access
+---
+
+Zoraxy is a straightforward and efficient HTTP reverse proxy designed for simplicity and ease of use. With its intuitive web interface and flexible configuration options, it provides a user-friendly solution for managing HTTP traffic routing, load balancing, and service forwarding without the complexity of larger proxy solutions.
+
+## Key Features
+
+- **Simple Reverse Proxy**:
+
+  - HTTP and HTTPS request proxying
+  - Efficient request forwarding
+  - Load balancing across multiple backends
+  - Health checking and monitoring
+  - Automatic failover support
+  - Connection pooling and optimization
+
+- **Intuitive Web Interface**:
+
+  - Clean, user-friendly dashboard
+  - Easy proxy configuration management
+  - Real-time service monitoring
+  - Visual service status indicators
+  - Simple setup and configuration
+  - Mobile-responsive design
+
+- **Flexible Routing**:
+
+  - Path-based routing rules
+  - Host-based routing and virtual hosting
+  - Custom routing configurations
+  - Request rewriting and transformation
+  - Header manipulation and injection
+  - URL redirection support
+
+- **Security Features**:
+
+  - SSL/TLS encryption support
+  - Access control and restrictions
+  - Rate limiting and throttling
+  - IP-based filtering and blocking
+  - Security header configuration
+  - Request validation and sanitization
+
+- **Performance Optimization**:
+
+  - Efficient HTTP forwarding
+  - Connection pooling and reuse
+  - Response caching capabilities
+  - Content compression support
+  - Keep-alive connection management
+  - Optimized resource usage
+
+- **Management & Monitoring**:
+
+  - Centralized configuration management
+  - Service discovery and registration
+  - Comprehensive logging system
+  - Real-time status monitoring
+  - Performance metrics tracking
+  - API for automation
+
+- **Easy Deployment**:
+  - Single Go binary deployment
+  - Minimal system requirements
+  - Simple configuration format
+  - Docker container support
+  - Cross-platform compatibility
+  - Quick setup and installation
+
+## Technical Specifications
+
+- **Language**: Go
+- **Protocols**: HTTP/1.1, HTTPS
+- **Interface**: Web-based management
+- **Platforms**: Linux, Windows, macOS
+- **License**: AGPL-3.0
+- **Deployment**: Binary, Docker
+
+## Use Cases
+
+- **Home Lab**: Simple reverse proxy for home lab services
+- **Small Business**: Basic load balancing for business applications
+- **Development**: Local development environment proxy setup
+- **Microservices**: Simple routing for microservice architectures
+- **Web Services**: HTTP traffic management and forwarding
+- **API Gateway**: Basic API routing and management
+
+## Unique Advantages
+
+- **Simplicity**: Easy to understand and configure
+- **Web Interface**: No command-line configuration required
+- **Lightweight**: Minimal resource usage and overhead
+- **User-Friendly**: Accessible to users without proxy expertise
+- **Quick Setup**: Fast deployment and configuration
+- **Open Source**: Free and customizable solution
+
+Based on the [Zoraxy GitHub repository](https://github.com/tobychui/zoraxy), this tool provides users with a simple, effective reverse proxy solution that prioritizes ease of use and straightforward configuration, making it ideal for users who need basic HTTP routing and forwarding capabilities without the complexity of enterprise-grade solutions.

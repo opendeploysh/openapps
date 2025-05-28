@@ -1,0 +1,166 @@
+---
+slug: jauth
+name: Jauth
+description: |
+  Jauth is a lightweight SSL/TLS reverse proxy with authorization via Telegram and SSH for self-hosted apps. It provides secure access control and authentication for web applications with minimal configuration and modern authorization methods.
+category: web-servers
+tags: [reverse-proxy, ssl, authorization, telegram, ssh]
+github: Jipok/Jauth
+urls:
+  website: https://github.com/Jipok/Jauth
+alternatives:
+  selfHosted: [authelia, oauth2-proxy, pomerium]
+  nonSelfHosted: [auth0, okta, azure-ad]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple Go binary with minimal configuration. Telegram and SSH integration is straightforward to set up."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Lightweight reverse proxy with modern authentication
+      - name: Target Use Case
+        value: Self-hosted applications requiring secure access control
+      - name: Architecture
+        value: Go + SSL/TLS + Telegram/SSH authentication
+  - name: Authentication
+    features:
+      - name: Telegram Bot Integration
+      - name: SSH Key Authentication
+      - name: Multi-factor Authentication
+      - name: User Management
+      - name: Session Management
+  - name: Reverse Proxy
+    features:
+      - name: SSL/TLS Termination
+      - name: HTTP/HTTPS Proxying
+      - name: Request Forwarding
+      - name: Header Management
+      - name: Path Routing
+  - name: Security
+    features:
+      - name: SSL/TLS Encryption
+      - name: Access Control
+      - name: Secure Sessions
+      - name: Rate Limiting
+      - name: IP Filtering
+  - name: Configuration
+    features:
+      - name: Simple Configuration
+      - name: YAML Configuration
+      - name: Environment Variables
+      - name: Hot Reloading
+      - name: Minimal Setup
+  - name: Integration
+    features:
+      - name: Telegram API
+      - name: SSH Protocol
+      - name: Docker Support
+      - name: Systemd Integration
+      - name: Logging Support
+  - name: Management
+    features:
+      - name: User Authorization
+      - name: Access Logs
+      - name: Status Monitoring
+      - name: Error Handling
+      - name: Debug Mode
+---
+
+Jauth is a modern, lightweight reverse proxy that brings contemporary authentication methods to self-hosted applications. By integrating with Telegram and SSH, it provides secure, convenient access control without the complexity of traditional authentication systems.
+
+## Key Features
+
+- **Modern Authentication Methods**:
+
+  - Telegram bot-based authentication
+  - SSH key authentication support
+  - Multi-factor authentication options
+  - Secure session management
+  - User authorization controls
+  - Token-based access
+
+- **SSL/TLS Reverse Proxy**:
+
+  - SSL/TLS termination and encryption
+  - HTTP to HTTPS redirection
+  - Certificate management
+  - Secure request forwarding
+  - Header manipulation
+  - Path-based routing
+
+- **Telegram Integration**:
+
+  - Telegram bot API integration
+  - User verification via Telegram
+  - Group-based access control
+  - Real-time authentication
+  - Message-based authorization
+  - Secure token exchange
+
+- **SSH Authentication**:
+
+  - SSH public key authentication
+  - Key-based user verification
+  - Secure key management
+  - SSH agent integration
+  - Multiple key support
+  - Key rotation capabilities
+
+- **Security Features**:
+
+  - End-to-end encryption
+  - Secure session handling
+  - Rate limiting protection
+  - IP-based access control
+  - Request validation
+  - Security headers
+
+- **Simple Configuration**:
+
+  - YAML-based configuration
+  - Environment variable support
+  - Minimal setup requirements
+  - Hot configuration reloading
+  - Docker-friendly deployment
+  - Systemd service integration
+
+- **Monitoring & Logging**:
+  - Access logging and monitoring
+  - Authentication event tracking
+  - Error logging and debugging
+  - Status monitoring
+  - Performance metrics
+  - Security audit trails
+
+## Technical Specifications
+
+- **Language**: Go
+- **Protocols**: HTTP/1.1, HTTPS, SSH
+- **Authentication**: Telegram API, SSH keys
+- **Platforms**: Linux, Windows, macOS
+- **License**: GPL-3.0
+- **Deployment**: Binary, Docker
+
+## Use Cases
+
+- **Self-hosted Applications**: Secure access to personal web services
+- **Home Lab Security**: Authentication for home lab environments
+- **Development Environments**: Secure access to development services
+- **Small Team Access**: Simple authentication for small teams
+- **Remote Access**: Secure remote access to internal applications
+- **IoT Device Management**: Secure access to IoT web interfaces
+
+## Unique Advantages
+
+- **Modern Authentication**: Telegram and SSH instead of traditional passwords
+- **Lightweight**: Minimal resource usage and simple deployment
+- **User-Friendly**: Familiar authentication methods (Telegram, SSH)
+- **Secure by Default**: Strong encryption and security practices
+- **Easy Setup**: Minimal configuration required
+- **Open Source**: Transparent and customizable solution
+
+Based on the [Jauth GitHub repository](https://github.com/Jipok/Jauth), this tool provides a fresh approach to web application authentication by leveraging modern communication platforms and secure protocols, making it ideal for developers and system administrators who want secure access control without complex authentication infrastructure.

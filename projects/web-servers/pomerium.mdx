@@ -1,0 +1,166 @@
+---
+slug: pomerium
+name: Pomerium
+description: |
+  Pomerium is an identity-aware reverse proxy that provides secure access to internal applications. It acts as a successor to oauth_proxy by inserting an OAuth step before proxying requests to backends, enabling safe exposure of self-hosted websites to the public internet.
+category: web-servers
+tags: [reverse-proxy, identity-aware, oauth, security]
+github: pomerium/pomerium
+urls:
+  website: https://www.pomerium.io
+alternatives:
+  selfHosted: [authelia, oauth2-proxy, jauth]
+  nonSelfHosted: [auth0, okta, azure-ad]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires OAuth provider setup and identity configuration. Well-documented but involves security concepts."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Identity-aware reverse proxy with OAuth integration
+      - name: Target Use Case
+        value: Secure access to internal applications with identity verification
+      - name: Architecture
+        value: Go + OAuth providers + Policy engine + Reverse proxy
+  - name: Identity & Authentication
+    features:
+      - name: OAuth 2.0 Integration
+      - name: OIDC Support
+      - name: Multi-provider Support
+      - name: Identity Verification
+      - name: Session Management
+  - name: Authorization
+    features:
+      - name: Policy-based Access Control
+      - name: Fine-grained Permissions
+      - name: Group-based Access
+      - name: Contextual Authorization
+      - name: Dynamic Policies
+  - name: Reverse Proxy
+    features:
+      - name: HTTP/HTTPS Proxying
+      - name: Load Balancing
+      - name: Health Checks
+      - name: Request Routing
+      - name: Header Management
+  - name: Security
+    features:
+      - name: Zero Trust Architecture
+      - name: End-to-end Encryption
+      - name: Certificate Management
+      - name: Security Headers
+      - name: Audit Logging
+  - name: Integration
+    features:
+      - name: Identity Providers
+      - name: Kubernetes Support
+      - name: Docker Integration
+      - name: Cloud Platforms
+      - name: Monitoring Tools
+  - name: Management
+    features:
+      - name: Configuration Management
+      - name: Policy Management
+      - name: User Management
+      - name: Monitoring Dashboard
+      - name: Audit Trails
+---
+
+Pomerium is a modern identity-aware reverse proxy that brings zero-trust security principles to application access. By requiring authentication and authorization for every request, it enables organizations to securely expose internal applications while maintaining granular control over who can access what.
+
+## Key Features
+
+- **Identity-Aware Access Control**:
+
+  - OAuth 2.0 and OpenID Connect integration
+  - Support for major identity providers (Google, GitHub, Azure AD, Okta)
+  - Multi-provider authentication support
+  - Identity verification and validation
+  - Secure session management
+  - Single sign-on (SSO) capabilities
+
+- **Policy-Based Authorization**:
+
+  - Fine-grained access control policies
+  - Context-aware authorization decisions
+  - Group and role-based access control
+  - Dynamic policy evaluation
+  - Conditional access rules
+  - Time-based access restrictions
+
+- **Zero Trust Security**:
+
+  - Never trust, always verify approach
+  - End-to-end encryption for all communications
+  - Mutual TLS (mTLS) support
+  - Certificate-based authentication
+  - Continuous verification
+  - Least privilege access principles
+
+- **Reverse Proxy Capabilities**:
+
+  - High-performance HTTP/HTTPS proxying
+  - Load balancing across multiple backends
+  - Health checking and failover
+  - Request routing and rewriting
+  - Custom header injection
+  - WebSocket support
+
+- **Enterprise Security Features**:
+
+  - Comprehensive audit logging
+  - Security event monitoring
+  - Compliance reporting
+  - Data loss prevention
+  - Threat detection
+  - Security analytics
+
+- **Cloud-Native Architecture**:
+
+  - Kubernetes-native deployment
+  - Docker container support
+  - Horizontal scaling capabilities
+  - Service mesh integration
+  - Cloud platform compatibility
+  - Infrastructure as code support
+
+- **Management & Monitoring**:
+  - Centralized configuration management
+  - Real-time monitoring dashboard
+  - Policy management interface
+  - User access analytics
+  - Performance metrics
+  - Health status monitoring
+
+## Technical Specifications
+
+- **Language**: Go
+- **Protocols**: HTTP/1.1, HTTP/2, HTTPS, mTLS
+- **Authentication**: OAuth 2.0, OIDC
+- **Platforms**: Linux, Windows, macOS, Docker, Kubernetes
+- **License**: Apache-2.0
+- **Deployment**: Binary, Docker, Kubernetes
+
+## Use Cases
+
+- **Internal Application Access**: Secure access to internal web applications
+- **Remote Work Security**: Safe access to company resources from anywhere
+- **Zero Trust Implementation**: Building zero-trust network architecture
+- **Compliance Requirements**: Meeting security and compliance standards
+- **Multi-cloud Security**: Consistent security across cloud environments
+- **Developer Tool Access**: Secure access to development and staging environments
+
+## Unique Advantages
+
+- **Identity-First Security**: Authentication and authorization for every request
+- **Zero Trust Ready**: Built with zero-trust principles from the ground up
+- **Policy-Driven**: Flexible, policy-based access control
+- **Cloud Native**: Designed for modern cloud and container environments
+- **Enterprise Grade**: Comprehensive security and compliance features
+- **Open Source**: Transparent, auditable, and customizable
+
+Based on the [Pomerium GitHub repository](https://github.com/pomerium/pomerium), this tool provides organizations with a modern approach to application security that goes beyond traditional VPNs and firewalls, enabling secure access to applications while maintaining visibility and control over user access patterns.

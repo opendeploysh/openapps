@@ -58,9 +58,10 @@ export const mdxProjectData = z
         justification: z.string(),
       })
       .optional(),
-    popularity: z.number().optional(),
 
+    popularity: z.number().optional(),
     language: z.string().optional(),
+    techStack: z.array(z.string()).optional(),
 
     featureGroups: z.array(featureGroup).optional(),
   })

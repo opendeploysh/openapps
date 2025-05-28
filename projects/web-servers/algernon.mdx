@@ -1,0 +1,166 @@
+---
+slug: algernon
+name: Algernon
+description: |
+  Algernon is a small self-contained pure-Go web server with Lua, Markdown, HTTP/2, QUIC, Redis and PostgreSQL support. It provides a lightweight yet feature-rich solution for serving web content with built-in scripting capabilities and modern protocol support.
+category: web-servers
+tags: [web-server, http2, quic]
+github: xyproto/algernon
+urls:
+  website: https://algernon.roboticoverlords.org/
+alternatives:
+  selfHosted: [caddy, nginx, lighttpd]
+  nonSelfHosted: [cloudflare, aws-cloudfront, fastly]
+deployment:
+  difficulty: "Easy"
+  justification: "Single binary deployment with minimal configuration. Self-contained with built-in features."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Lightweight web server with scripting and modern protocol support
+      - name: Target Use Case
+        value: Small to medium websites with dynamic content needs
+      - name: Architecture
+        value: Pure Go + Lua scripting + Built-in databases
+  - name: Protocol Support
+    features:
+      - name: HTTP/1.1
+      - name: HTTP/2
+      - name: QUIC Protocol
+      - name: HTTPS/TLS
+      - name: WebSocket Support
+  - name: Content Processing
+    features:
+      - name: Markdown Rendering
+      - name: Lua Scripting
+      - name: Template Processing
+      - name: Static File Serving
+      - name: Dynamic Content Generation
+  - name: Database Integration
+    features:
+      - name: Redis Support
+      - name: PostgreSQL Support
+      - name: Built-in Database
+      - name: Data Persistence
+      - name: Session Management
+  - name: Development Features
+    features:
+      - name: Live Reload
+      - name: Auto-compilation
+      - name: Development Mode
+      - name: Error Handling
+      - name: Logging System
+  - name: Performance
+    features:
+      - name: Single Binary
+      - name: Low Memory Usage
+      - name: Fast Startup
+      - name: Concurrent Handling
+      - name: Efficient Processing
+  - name: Security
+    features:
+      - name: TLS/SSL Support
+      - name: Secure Headers
+      - name: Access Control
+      - name: Rate Limiting
+      - name: Input Validation
+---
+
+Algernon is a modern, lightweight web server written in pure Go that combines simplicity with powerful features. It offers built-in support for Lua scripting, Markdown rendering, and modern web protocols like HTTP/2 and QUIC, making it ideal for developers who need a self-contained solution for dynamic web applications.
+
+## Key Features
+
+- **Modern Protocol Support**:
+
+  - HTTP/1.1 and HTTP/2 support
+  - QUIC protocol implementation
+  - TLS/SSL encryption
+  - WebSocket connections
+  - Automatic protocol negotiation
+  - Performance optimization
+
+- **Built-in Scripting**:
+
+  - Lua scripting engine integration
+  - Server-side script execution
+  - Dynamic content generation
+  - Template processing
+  - Custom function libraries
+  - Real-time script compilation
+
+- **Content Processing**:
+
+  - Markdown to HTML rendering
+  - Static file serving
+  - Template engine support
+  - Asset compilation
+  - Content caching
+  - MIME type detection
+
+- **Database Integration**:
+
+  - Redis database support
+  - PostgreSQL connectivity
+  - Built-in key-value store
+  - Session management
+  - Data persistence
+  - Connection pooling
+
+- **Development Tools**:
+
+  - Live reload functionality
+  - Auto-compilation of scripts
+  - Development mode with debugging
+  - Error reporting and logging
+  - Hot reloading of content
+  - Built-in profiling
+
+- **Performance & Efficiency**:
+
+  - Single binary deployment
+  - Low memory footprint
+  - Fast startup times
+  - Concurrent request handling
+  - Efficient resource usage
+  - Minimal dependencies
+
+- **Security Features**:
+  - TLS/SSL certificate support
+  - Secure HTTP headers
+  - Access control mechanisms
+  - Rate limiting capabilities
+  - Input validation
+  - CSRF protection
+
+## Technical Specifications
+
+- **Language**: Go
+- **Scripting**: Lua
+- **Protocols**: HTTP/1.1, HTTP/2, QUIC
+- **Databases**: Redis, PostgreSQL, Built-in
+- **License**: BSD-3-Clause
+- **Platforms**: Linux, macOS, Windows, Docker
+
+## Use Cases
+
+- **Personal Websites**: Small personal sites with dynamic content
+- **Development Servers**: Local development and testing environments
+- **Prototyping**: Rapid prototyping of web applications
+- **Microservices**: Lightweight service endpoints
+- **Documentation Sites**: Markdown-based documentation hosting
+- **API Servers**: Simple REST API development
+
+## Unique Advantages
+
+- **Self-Contained**: Single binary with no external dependencies
+- **Modern Protocols**: Built-in HTTP/2 and QUIC support
+- **Scripting Integration**: Native Lua scripting for dynamic content
+- **Database Ready**: Built-in support for popular databases
+- **Developer Friendly**: Live reload and development features
+- **Lightweight**: Minimal resource usage and fast performance
+
+Based on the [Algernon GitHub repository](https://github.com/xyproto/algernon), this tool provides developers with a modern, efficient web server that combines the simplicity of static serving with the power of dynamic content generation, making it perfect for projects that need more than a basic web server but don't require the complexity of larger frameworks.

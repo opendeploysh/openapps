@@ -1,0 +1,166 @@
+---
+slug: safeline
+name: SafeLine
+description: |
+  SafeLine is a web application firewall and reverse proxy designed to protect web applications from attacks and exploits. It provides comprehensive security features including threat detection, attack prevention, and real-time monitoring with easy deployment through Docker.
+category: web-servers
+tags: [waf, security, firewall, reverse-proxy]
+github: chaitin/SafeLine
+urls:
+  website: https://waf.chaitin.com/
+  demo: https://demo.waf.chaitin.com/
+alternatives:
+  selfHosted: [bunkerweb, modsecurity, crowdsec]
+  nonSelfHosted: [cloudflare, aws-waf, azure-waf]
+deployment:
+  difficulty: "Medium"
+  justification: "Docker deployment with security configuration. Requires understanding of web application security concepts."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Web application firewall with comprehensive threat protection
+      - name: Target Use Case
+        value: Web application security and attack prevention
+      - name: Architecture
+        value: Docker + WAF engine + Reverse proxy + Security modules
+  - name: Threat Protection
+    features:
+      - name: SQL Injection Prevention
+      - name: XSS Protection
+      - name: CSRF Protection
+      - name: DDoS Mitigation
+      - name: Bot Detection
+  - name: Attack Detection
+    features:
+      - name: Real-time Threat Detection
+      - name: Behavioral Analysis
+      - name: Signature-based Detection
+      - name: Anomaly Detection
+      - name: Machine Learning
+  - name: Access Control
+    features:
+      - name: IP Filtering
+      - name: Rate Limiting
+      - name: Geoblocking
+      - name: User Agent Filtering
+      - name: Request Validation
+  - name: Monitoring
+    features:
+      - name: Security Dashboard
+      - name: Attack Analytics
+      - name: Real-time Alerts
+      - name: Log Management
+      - name: Reporting
+  - name: Reverse Proxy
+    features:
+      - name: HTTP/HTTPS Proxying
+      - name: Load Balancing
+      - name: SSL Termination
+      - name: Health Checks
+      - name: Request Routing
+  - name: Management
+    features:
+      - name: Web Interface
+      - name: Rule Management
+      - name: Policy Configuration
+      - name: User Management
+      - name: API Access
+---
+
+SafeLine is a comprehensive web application firewall (WAF) that provides robust protection against web-based attacks and threats. Built with modern security principles, it offers real-time threat detection, attack prevention, and detailed monitoring capabilities to keep web applications secure.
+
+## Key Features
+
+- **Advanced Threat Protection**:
+
+  - SQL injection attack prevention
+  - Cross-site scripting (XSS) protection
+  - Cross-site request forgery (CSRF) protection
+  - DDoS attack mitigation
+  - Advanced bot detection and blocking
+  - File upload security scanning
+
+- **Intelligent Detection Engine**:
+
+  - Real-time threat detection and analysis
+  - Behavioral analysis and pattern recognition
+  - Signature-based attack detection
+  - Anomaly detection algorithms
+  - Machine learning-powered threat identification
+  - Zero-day attack protection
+
+- **Access Control & Filtering**:
+
+  - IP-based filtering and blocking
+  - Geographic IP blocking (geoblocking)
+  - Rate limiting and request throttling
+  - User agent and referrer filtering
+  - Request size and method validation
+  - Custom rule creation and management
+
+- **Reverse Proxy Capabilities**:
+
+  - High-performance HTTP/HTTPS proxying
+  - Load balancing across multiple backends
+  - SSL/TLS termination and encryption
+  - Health checking and failover
+  - Request routing and rewriting
+  - WebSocket support
+
+- **Security Monitoring**:
+
+  - Real-time security dashboard
+  - Comprehensive attack analytics
+  - Security event logging and correlation
+  - Custom alerting and notifications
+  - Detailed reporting capabilities
+  - Threat intelligence integration
+
+- **Management Interface**:
+
+  - Intuitive web-based administration
+  - Rule and policy management
+  - User access control
+  - Configuration management
+  - API for automation
+  - Multi-tenant support
+
+- **Easy Deployment**:
+  - Docker container deployment
+  - Simple configuration and setup
+  - Scalable architecture
+  - High availability support
+  - Cloud-native design
+  - Integration with existing infrastructure
+
+## Technical Specifications
+
+- **Deployment**: Docker containers
+- **Protocols**: HTTP/1.1, HTTP/2, HTTPS
+- **Interface**: Web-based management
+- **License**: GPL-3.0
+- **Platforms**: Linux, Docker
+
+## Use Cases
+
+- **Web Application Protection**: Securing web applications from common attacks
+- **E-commerce Security**: Protecting online stores and payment systems
+- **API Security**: Securing REST APIs and web services
+- **Enterprise Security**: Corporate web application protection
+- **Compliance**: Meeting security and regulatory requirements
+- **Cloud Security**: Multi-tenant cloud application protection
+
+## Unique Advantages
+
+- **Comprehensive Protection**: All-in-one web application security solution
+- **Real-time Detection**: Advanced threat detection and response
+- **Easy Deployment**: Simple Docker-based deployment
+- **User-Friendly**: Intuitive web interface for management
+- **Open Source**: Transparent and customizable security platform
+- **Active Development**: Continuously updated with new threats and features
+
+Based on the [SafeLine GitHub repository](https://github.com/chaitin/SafeLine), this tool provides organizations with a modern, effective web application firewall that combines advanced security features with ease of use, making it ideal for protecting web applications against the evolving landscape of cyber threats.

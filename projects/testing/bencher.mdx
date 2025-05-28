@@ -1,0 +1,165 @@
+---
+slug: bencher
+name: Bencher
+description: |
+  Bencher is a suite of continuous benchmarking tools designed to catch performance regressions in CI. It provides comprehensive performance tracking, statistical analysis, and alerting to ensure your code maintains optimal performance across development cycles.
+category: testing
+tags: [benchmarking, performance, ci-cd, rust, continuous-testing]
+github: bencherdev/bencher
+urls:
+  website: https://bencher.dev/
+alternatives:
+  selfHosted: [hyperfine, criterion, pyperf]
+  nonSelfHosted: [codspeed, benchmarkdotnet, jmh]
+deployment:
+  difficulty: "Medium"
+  justification: "Rust-based application with good documentation, but requires understanding of benchmarking concepts and CI/CD integration setup."
+pricingModel: Freemium
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Continuous benchmarking and performance regression detection
+      - name: Target Use Case
+        value: Performance monitoring in CI/CD pipelines
+      - name: Architecture
+        value: Rust + Web dashboard + CLI tools
+  - name: Benchmarking
+    features:
+      - name: Performance Tracking
+      - name: Regression Detection
+      - name: Statistical Analysis
+      - name: Baseline Comparison
+      - name: Historical Trends
+  - name: CI/CD Integration
+    features:
+      - name: GitHub Actions
+      - name: GitLab CI
+      - name: Jenkins Support
+      - name: Custom Webhooks
+      - name: API Integration
+  - name: Metrics & Analysis
+    features:
+      - name: Latency Measurements
+      - name: Throughput Analysis
+      - name: Memory Usage Tracking
+      - name: Custom Metrics
+      - name: Statistical Significance
+  - name: Alerting
+    features:
+      - name: Performance Alerts
+      - name: Threshold Configuration
+      - name: Email Notifications
+      - name: Slack Integration
+      - name: Custom Webhooks
+  - name: Visualization
+    features:
+      - name: Performance Dashboards
+      - name: Trend Charts
+      - name: Comparison Views
+      - name: Historical Data
+      - name: Export Capabilities
+  - name: Developer Experience
+    features:
+      - name: CLI Tools
+      - name: REST API
+      - name: Documentation
+      - name: Language Support
+      - name: Easy Setup
+---
+
+Bencher is a comprehensive continuous benchmarking platform designed to catch performance regressions before they reach production. Built with Rust for performance and reliability, Bencher integrates seamlessly into CI/CD pipelines to provide automated performance monitoring, statistical analysis, and alerting for development teams.
+
+## Key Features
+
+- **Continuous Benchmarking**:
+
+  - Automated performance tracking in CI/CD pipelines
+  - Performance regression detection
+  - Baseline establishment and comparison
+  - Historical performance trend analysis
+  - Statistical significance testing
+  - Configurable performance thresholds
+
+- **CI/CD Integration**:
+
+  - GitHub Actions integration
+  - GitLab CI/CD support
+  - Jenkins pipeline compatibility
+  - Custom webhook support
+  - API-based integration
+  - Multiple CI platform support
+
+- **Performance Metrics**:
+
+  - Latency and response time measurements
+  - Throughput and operations per second
+  - Memory usage and allocation tracking
+  - CPU utilization monitoring
+  - Custom metric definitions
+  - Multi-dimensional metric support
+
+- **Statistical Analysis**:
+
+  - Statistical significance testing
+  - Confidence interval calculations
+  - Outlier detection and handling
+  - Trend analysis algorithms
+  - Performance variance tracking
+  - Regression severity assessment
+
+- **Alerting & Notifications**:
+
+  - Real-time performance alerts
+  - Configurable threshold settings
+  - Email notification system
+  - Slack integration
+  - Custom webhook notifications
+  - Alert escalation policies
+
+- **Visualization & Reporting**:
+
+  - Interactive performance dashboards
+  - Historical trend charts
+  - Performance comparison views
+  - Regression analysis reports
+  - Data export capabilities
+  - Custom visualization options
+
+- **Developer Experience**:
+  - Comprehensive CLI tools
+  - RESTful API access
+  - Extensive documentation
+  - Multiple language support
+  - Easy setup and configuration
+  - Integration examples and templates
+
+## Technical Specifications
+
+- **Language**: Rust
+- **Database**: SQLite, PostgreSQL
+- **Frontend**: Web-based dashboard
+- **API**: RESTful HTTP API
+- **CLI**: Cross-platform command-line tools
+- **Deployment**: Docker, binary distributions
+- **Platforms**: Linux, macOS, Windows
+
+## Use Cases
+
+- **Performance Monitoring**: Continuous tracking of application performance
+- **Regression Detection**: Early detection of performance degradations
+- **Release Validation**: Performance validation before production deployment
+- **Optimization Tracking**: Monitoring performance improvements over time
+- **Capacity Planning**: Understanding performance trends for scaling decisions
+- **Quality Assurance**: Ensuring performance standards in development workflows
+
+## Unique Advantages
+
+- **CI/CD Native**: Built specifically for continuous integration workflows
+- **Statistical Rigor**: Advanced statistical analysis for reliable regression detection
+- **Rust Performance**: High-performance benchmarking infrastructure
+- **Multi-Language**: Support for benchmarks in various programming languages
+- **Open Source**: Transparent, customizable, and community-driven
+- **Easy Integration**: Simple setup with existing CI/CD pipelines

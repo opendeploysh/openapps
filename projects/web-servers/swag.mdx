@@ -1,0 +1,166 @@
+---
+slug: swag
+name: SWAG (Secure Web Application Gateway)
+description: |
+  SWAG is an Nginx webserver and reverse proxy with PHP support, built-in Certbot (Let's Encrypt) client and fail2ban integration. It provides a comprehensive solution for secure web hosting with automatic SSL certificates and intrusion prevention.
+category: web-servers
+tags: [reverse-proxy, ssl, fail2ban]
+github: linuxserver/docker-swag
+urls:
+  website: https://github.com/linuxserver/docker-swag
+alternatives:
+  selfHosted: [nginx-proxy-manager, caddy, traefik]
+  nonSelfHosted: [cloudflare, aws-alb, azure-application-gateway]
+deployment:
+  difficulty: "Medium"
+  justification: "Docker deployment with multiple integrated services. Requires configuration of SSL, reverse proxy, and security features."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Secure web gateway with integrated security features
+      - name: Target Use Case
+        value: Secure web hosting with automatic SSL and intrusion prevention
+      - name: Architecture
+        value: Nginx + PHP + Certbot + fail2ban + Docker
+  - name: Web Server
+    features:
+      - name: Nginx Web Server
+      - name: PHP Support
+      - name: Static File Serving
+      - name: Virtual Hosting
+      - name: Custom Configuration
+  - name: SSL Management
+    features:
+      - name: Let's Encrypt Integration
+      - name: Automatic Certificate Renewal
+      - name: Wildcard Certificates
+      - name: Custom SSL Certificates
+      - name: SSL Termination
+  - name: Reverse Proxy
+    features:
+      - name: HTTP/HTTPS Proxying
+      - name: Load Balancing
+      - name: WebSocket Support
+      - name: Custom Headers
+      - name: Path-based Routing
+  - name: Security
+    features:
+      - name: fail2ban Integration
+      - name: Intrusion Prevention
+      - name: Rate Limiting
+      - name: IP Blocking
+      - name: Security Headers
+  - name: Monitoring
+    features:
+      - name: Access Logs
+      - name: Error Logs
+      - name: Security Logs
+      - name: Performance Monitoring
+      - name: Health Checks
+  - name: Integration
+    features:
+      - name: Docker Compose
+      - name: LinuxServer.io
+      - name: Community Support
+      - name: Plugin Ecosystem
+      - name: Configuration Templates
+---
+
+SWAG (Secure Web Application Gateway) is a comprehensive Docker container that combines Nginx, PHP, automatic SSL certificate management, and intrusion prevention into a single, easy-to-deploy solution. It's designed to provide secure web hosting with minimal configuration while maintaining enterprise-grade security features.
+
+## Key Features
+
+- **Integrated Web Server**:
+
+  - High-performance Nginx web server
+  - PHP support with multiple versions
+  - Static file serving optimization
+  - Virtual hosting capabilities
+  - Custom Nginx configuration support
+  - Modern web standards compliance
+
+- **Automatic SSL Management**:
+
+  - Let's Encrypt certificate automation
+  - Automatic certificate renewal
+  - Wildcard certificate support
+  - Custom SSL certificate integration
+  - SSL/TLS termination
+  - Modern cipher suite support
+
+- **Reverse Proxy Capabilities**:
+
+  - HTTP and HTTPS proxying
+  - Load balancing across backends
+  - WebSocket proxying support
+  - Custom header manipulation
+  - Path-based routing and rewriting
+  - Upstream health monitoring
+
+- **Built-in Security**:
+
+  - fail2ban integration for intrusion prevention
+  - Automatic IP blocking for suspicious activity
+  - Rate limiting and request throttling
+  - Security header configuration
+  - DDoS protection mechanisms
+  - Vulnerability scanning protection
+
+- **Easy Configuration**:
+
+  - Pre-configured security settings
+  - Template-based configuration
+  - Environment variable configuration
+  - Docker Compose integration
+  - Sample configurations included
+  - Community-contributed configs
+
+- **Monitoring & Logging**:
+
+  - Comprehensive access logging
+  - Error logging and analysis
+  - Security event logging
+  - Performance monitoring
+  - Health check endpoints
+  - Log rotation and management
+
+- **Docker Integration**:
+  - Single container deployment
+  - Docker Compose support
+  - Volume mapping for persistence
+  - Environment-based configuration
+  - Multi-architecture support
+  - LinuxServer.io maintained
+
+## Technical Specifications
+
+- **Base**: Nginx + PHP + Certbot + fail2ban
+- **Deployment**: Docker containers
+- **Protocols**: HTTP/1.1, HTTP/2, HTTPS
+- **License**: GPL-3.0
+- **Platforms**: Linux, Docker
+- **Maintainer**: LinuxServer.io
+
+## Use Cases
+
+- **Secure Web Hosting**: Hosting websites with automatic SSL and security
+- **Reverse Proxy Gateway**: Secure gateway for internal applications
+- **Development Environments**: Secure development and staging environments
+- **Small Business**: Complete web hosting solution for small businesses
+- **Home Lab**: Secure access to home lab services
+- **Self-hosted Applications**: Secure frontend for self-hosted services
+
+## Unique Advantages
+
+- **All-in-One Solution**: Complete web gateway in a single container
+- **Security by Default**: Built-in security features and best practices
+- **Automatic SSL**: Hassle-free Let's Encrypt certificate management
+- **Community Maintained**: Supported by LinuxServer.io community
+- **Easy Deployment**: Simple Docker deployment with minimal configuration
+- **Production Ready**: Enterprise-grade features in an easy-to-use package
+
+Based on the [SWAG GitHub repository](https://github.com/linuxserver/docker-swag), this tool provides users with a comprehensive, secure web hosting solution that combines the power of Nginx with automatic SSL management and intrusion prevention, making it ideal for users who want enterprise-grade security without the complexity of managing multiple services.

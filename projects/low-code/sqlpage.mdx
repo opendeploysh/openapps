@@ -1,0 +1,178 @@
+---
+slug: sqlpage
+name: SQLPage
+description: |
+  SQLPage is a SQL-only dynamic website builder that allows you to create web applications using only SQL queries. It transforms SQL results into beautiful web pages with charts, forms, and interactive components, making it possible to build full web applications without traditional programming.
+category: low-code
+tags: [sql, website-builder, database, dynamic]
+github: sqlpage/SQLPage
+urls:
+  website: https://sql-page.com
+alternatives:
+  selfHosted: [grafana, metabase, superset]
+  nonSelfHosted: [tableau, power-bi, looker]
+deployment:
+  difficulty: "Easy"
+  justification: "Single binary with minimal configuration, connects to existing databases with simple SQL file structure."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: SQL-only dynamic website builder
+      - name: Target Use Case
+        value: Data-driven web applications and dashboards
+      - name: Architecture
+        value: Rust + SQL + Database connections
+  - name: SQL-First Development
+    features:
+      - name: SQL-only Syntax
+      - name: Dynamic Queries
+      - name: Parameter Binding
+      - name: Conditional Logic
+      - name: Data Transformation
+  - name: Database Support
+    features:
+      - name: PostgreSQL
+      - name: MySQL
+      - name: SQLite
+      - name: SQL Server
+      - name: Multiple Connections
+  - name: Web Components
+    features:
+      - name: Charts & Graphs
+      - name: Tables & Lists
+      - name: Forms & Inputs
+      - name: Cards & Layouts
+      - name: Navigation Menus
+  - name: User Interface
+    features:
+      - name: Responsive Design
+      - name: Modern Styling
+      - name: Custom Themes
+      - name: Interactive Elements
+      - name: Mobile Support
+  - name: Features
+    features:
+      - name: File Uploads
+      - name: Authentication
+      - name: Session Management
+      - name: Email Sending
+      - name: PDF Generation
+  - name: Deployment
+    features:
+      - name: Single Binary
+      - name: Docker Support
+      - name: Static Files
+      - name: Environment Config
+      - name: Hot Reload
+---
+
+SQLPage revolutionizes web development by enabling developers to create dynamic websites and applications using only SQL queries. This innovative approach eliminates the need for traditional programming languages, allowing database professionals and analysts to build full-featured web applications directly from their SQL knowledge.
+
+## Key Features
+
+- **SQL-Only Development**:
+
+  - Build entire web applications using only SQL
+  - No HTML, CSS, or JavaScript required
+  - Dynamic content generation from database queries
+  - Conditional logic and data transformation in SQL
+  - Parameter binding and user input handling
+  - Template-like SQL syntax for reusability
+
+- **Comprehensive Database Support**:
+
+  - PostgreSQL, MySQL, SQLite compatibility
+  - SQL Server and Oracle support
+  - Multiple database connections
+  - Cross-database queries
+  - Connection pooling and optimization
+  - Database-agnostic SQL syntax
+
+- **Rich Web Components**:
+
+  - Interactive charts and graphs
+  - Data tables with sorting and filtering
+  - Forms with validation and submission
+  - Card layouts and grid systems
+  - Navigation menus and breadcrumbs
+  - Modal dialogs and notifications
+
+- **Modern User Interface**:
+
+  - Responsive design out of the box
+  - Modern, clean styling
+  - Customizable themes and branding
+  - Mobile-optimized components
+  - Accessibility features
+  - Dark and light mode support
+
+- **Advanced Features**:
+
+  - File upload and management
+  - User authentication and sessions
+  - Email sending capabilities
+  - PDF report generation
+  - CSV and Excel export
+  - Real-time data updates
+
+- **Developer Experience**:
+
+  - Single binary deployment
+  - Hot reload during development
+  - Environment-based configuration
+  - Error handling and debugging
+  - Comprehensive documentation
+  - Example templates and tutorials
+
+- **Performance & Scalability**:
+  - Fast Rust-based engine
+  - Efficient SQL execution
+  - Caching mechanisms
+  - Static file serving
+  - Production-ready deployment
+  - Horizontal scaling support
+
+## Technical Specifications
+
+- **Language**: Rust
+- **Database**: PostgreSQL, MySQL, SQLite, SQL Server
+- **Frontend**: Auto-generated HTML/CSS/JavaScript
+- **Deployment**: Single binary executable
+- **Configuration**: Environment variables, config files
+- **Protocols**: HTTP/HTTPS
+- **Platforms**: Linux, Windows, macOS
+
+## Use Cases
+
+- **Business Dashboards**: Executive and operational dashboards
+- **Data Analytics**: Interactive data exploration tools
+- **Admin Panels**: Database administration interfaces
+- **Reporting Systems**: Automated report generation
+- **Internal Tools**: Employee and operational tools
+- **Customer Portals**: Self-service customer interfaces
+
+## SQL Example
+
+```sql
+SELECT 'chart' as component,
+       'Sales by Month' as title,
+       'bar' as type;
+
+SELECT month_name as label,
+       total_sales as value
+FROM monthly_sales
+ORDER BY month_number;
+```
+
+## Unique Advantages
+
+- **SQL-Native**: Leverage existing SQL skills for web development
+- **Rapid Development**: Build applications faster than traditional methods
+- **Database-Centric**: Perfect for data-heavy applications
+- **No Frontend Complexity**: Automatic UI generation from SQL
+- **Performance**: Rust-based engine for high performance
+- **Simplicity**: Minimal learning curve for SQL developers

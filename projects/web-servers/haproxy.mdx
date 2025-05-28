@@ -1,0 +1,166 @@
+---
+slug: haproxy
+name: HAProxy
+description: |
+  HAProxy is a very fast and reliable reverse-proxy offering high availability, load balancing, and proxying for TCP and HTTP-based applications. It is particularly suited for very high traffic web sites and powers many of the world's most visited ones.
+category: web-servers
+tags: [reverse-proxy, load-balancer, tcp, http]
+github: haproxy/haproxy
+urls:
+  website: https://www.haproxy.org/
+alternatives:
+  selfHosted: [nginx, traefik, envoy]
+  nonSelfHosted: [aws-alb, azure-load-balancer, gcp-load-balancer]
+deployment:
+  difficulty: "Medium"
+  justification: "Powerful configuration options require understanding of load balancing concepts. Well-documented but complex for advanced setups."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: High-performance reverse proxy and load balancer
+      - name: Target Use Case
+        value: High-traffic websites and enterprise applications
+      - name: Architecture
+        value: C-based proxy with advanced load balancing algorithms
+  - name: Load Balancing
+    features:
+      - name: Multiple Algorithms
+      - name: Weighted Round Robin
+      - name: Least Connections
+      - name: Source IP Hashing
+      - name: URI Hashing
+  - name: High Availability
+    features:
+      - name: Health Checks
+      - name: Failover Support
+      - name: Session Persistence
+      - name: Backup Servers
+      - name: Zero-downtime Reloads
+  - name: Protocol Support
+    features:
+      - name: HTTP/1.1
+      - name: HTTP/2
+      - name: TCP Proxying
+      - name: SSL/TLS Termination
+      - name: WebSocket Support
+  - name: Performance
+    features:
+      - name: High Throughput
+      - name: Low Latency
+      - name: Connection Pooling
+      - name: Keep-alive Support
+      - name: Efficient Memory Usage
+  - name: Security
+    features:
+      - name: SSL/TLS Support
+      - name: Rate Limiting
+      - name: Access Control Lists
+      - name: DDoS Protection
+      - name: Security Headers
+  - name: Monitoring
+    features:
+      - name: Statistics Interface
+      - name: Real-time Metrics
+      - name: Health Monitoring
+      - name: Performance Analytics
+      - name: Custom Logging
+---
+
+HAProxy is the world's fastest and most widely used software load balancer, trusted by organizations like GitHub, Reddit, Twitter, and Stack Overflow to handle billions of requests per day. It provides unmatched performance, reliability, and observability for modern applications.
+
+## Key Features
+
+- **Advanced Load Balancing**:
+
+  - Multiple load balancing algorithms (round-robin, least connections, source IP hash)
+  - Weighted server distribution
+  - Dynamic server weight adjustment
+  - Consistent hashing for session affinity
+  - Geographic load balancing
+  - Custom load balancing logic
+
+- **High Availability & Reliability**:
+
+  - Active and passive health checks
+  - Automatic failover and recovery
+  - Session persistence and sticky sessions
+  - Backup server configuration
+  - Zero-downtime configuration reloads
+  - Circuit breaker patterns
+
+- **Protocol Support**:
+
+  - HTTP/1.1 and HTTP/2 support
+  - TCP and UDP proxying
+  - SSL/TLS termination and passthrough
+  - WebSocket proxying
+  - gRPC load balancing
+  - Custom protocol handling
+
+- **Performance Excellence**:
+
+  - Industry-leading throughput and latency
+  - Efficient connection pooling
+  - Keep-alive connection management
+  - Memory-efficient architecture
+  - Multi-threading support
+  - Hardware acceleration support
+
+- **Security Features**:
+
+  - SSL/TLS encryption and certificate management
+  - Rate limiting and traffic shaping
+  - Access control lists (ACLs)
+  - DDoS protection mechanisms
+  - Security header injection
+  - Request/response filtering
+
+- **Observability & Monitoring**:
+
+  - Comprehensive statistics interface
+  - Real-time metrics and dashboards
+  - Detailed health monitoring
+  - Custom logging and analytics
+  - Performance profiling
+  - Integration with monitoring tools
+
+- **Advanced Features**:
+  - Content-based routing
+  - Request/response modification
+  - Compression and caching
+  - Traffic mirroring and splitting
+  - Blue-green deployments
+  - Canary releases
+
+## Technical Specifications
+
+- **Language**: C
+- **Protocols**: HTTP/1.1, HTTP/2, TCP, UDP, SSL/TLS
+- **Platforms**: Linux, FreeBSD, Solaris, AIX
+- **License**: GPL-2.0
+- **Package Formats**: deb, rpm, Docker
+- **Configuration**: Text-based configuration files
+
+## Use Cases
+
+- **High-Traffic Websites**: Load balancing for millions of concurrent users
+- **Microservices**: Service mesh and inter-service communication
+- **API Gateways**: API load balancing and traffic management
+- **Database Load Balancing**: Distributing database connections
+- **CDN Origins**: Origin server load balancing for CDNs
+- **Enterprise Applications**: Mission-critical application delivery
+
+## Unique Advantages
+
+- **Proven Performance**: Handles millions of concurrent connections
+- **Battle-Tested**: Used by the world's largest websites
+- **Zero-Downtime**: Configuration changes without service interruption
+- **Comprehensive Features**: Complete load balancing and proxy solution
+- **Open Source**: Free with commercial support available
+- **Active Development**: Continuous improvements and new features
+
+Based on the [HAProxy repository](https://git.haproxy.org/?p=haproxy.git;a=tree), this tool represents the gold standard in load balancing and reverse proxy technology, providing organizations with enterprise-grade performance and reliability for their most demanding applications.

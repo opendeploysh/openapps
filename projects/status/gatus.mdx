@@ -1,0 +1,170 @@
+---
+slug: gatus
+name: Gatus
+logo: https://gatus.io/img/logo.svg
+description: |
+  Gatus is an automated service health dashboard that monitors the health of your applications and services. It provides real-time monitoring, alerting, and a beautiful status page with comprehensive incident management capabilities.
+category: status
+tags: [monitoring, health-check, status-page, alerting]
+github: TwiN/gatus
+urls:
+  website: https://gatus.io/
+  demo: https://status.twin.sh
+alternatives:
+  selfHosted: [uptime-kuma, cstate, statping-ng]
+  nonSelfHosted: [pingdom, uptimerobot, statuspage]
+deployment:
+  difficulty: "Medium"
+  justification: "Docker deployment with YAML configuration. Requires setup of monitoring targets and alert configurations."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Automated service health monitoring and status dashboard
+      - name: Target Use Case
+        value: Real-time service monitoring with public status pages
+      - name: Architecture
+        value: Go + Docker + YAML configuration
+  - name: Monitoring
+    features:
+      - name: HTTP/HTTPS Monitoring
+      - name: TCP Port Monitoring
+      - name: DNS Resolution Checks
+      - name: SSL Certificate Monitoring
+      - name: Response Time Tracking
+  - name: Health Checks
+    features:
+      - name: Custom Conditions
+      - name: Response Validation
+      - name: Status Code Checking
+      - name: Content Verification
+      - name: Performance Thresholds
+  - name: Alerting
+    features:
+      - name: Multiple Alert Providers
+      - name: Slack Integration
+      - name: Discord Notifications
+      - name: Email Alerts
+      - name: Webhook Support
+  - name: Status Page
+    features:
+      - name: Public Dashboard
+      - name: Real-time Updates
+      - name: Historical Data
+      - name: Incident Timeline
+      - name: Service Grouping
+  - name: Configuration
+    features:
+      - name: YAML Configuration
+      - name: Environment Variables
+      - name: Hot Reloading
+      - name: Flexible Scheduling
+      - name: Custom Intervals
+  - name: Deployment
+    features:
+      - name: Docker Support
+      - name: Kubernetes Ready
+      - name: Binary Distribution
+      - name: ARM Support
+      - name: Multi-platform
+---
+
+Gatus is a powerful automated service health dashboard that continuously monitors your applications and services, providing real-time status updates and beautiful public status pages. Built with Go for performance and reliability, Gatus offers comprehensive monitoring capabilities with flexible alerting and an intuitive web interface.
+
+## Key Features
+
+- **Comprehensive Monitoring**:
+
+  - HTTP/HTTPS endpoint monitoring
+  - TCP port connectivity checks
+  - DNS resolution monitoring
+  - SSL certificate expiration tracking
+  - Response time measurements
+  - Custom health check conditions
+
+- **Advanced Health Checks**:
+
+  - Response status code validation
+  - Response body content verification
+  - JSON path validation
+  - Performance threshold monitoring
+  - Custom condition scripting
+  - Multi-step health checks
+
+- **Flexible Alerting**:
+
+  - Multiple alert provider support
+  - Slack integration
+  - Discord notifications
+  - Email alert system
+  - Custom webhook alerts
+  - PagerDuty integration
+  - Telegram notifications
+
+- **Status Dashboard**:
+
+  - Real-time service status display
+  - Public status page
+  - Historical uptime data
+  - Incident timeline
+  - Service grouping and categorization
+  - Responsive web interface
+
+- **Configuration Management**:
+
+  - YAML-based configuration
+  - Environment variable support
+  - Hot configuration reloading
+  - Flexible monitoring intervals
+  - Custom endpoint grouping
+  - Template support
+
+- **Performance & Reliability**:
+
+  - Lightweight Go application
+  - Minimal resource usage
+  - High-performance monitoring
+  - Concurrent health checks
+  - Efficient data storage
+  - Fast response times
+
+- **Deployment Options**:
+  - Docker containerization
+  - Kubernetes deployment
+  - Binary distributions
+  - ARM architecture support
+  - Multi-platform compatibility
+  - Easy scaling options
+
+## Technical Specifications
+
+- **Language**: Go
+- **Configuration**: YAML files
+- **Storage**: In-memory with persistence options
+- **Frontend**: Web-based dashboard
+- **Deployment**: Docker, Kubernetes, Binary
+- **License**: Apache-2.0
+- **Platforms**: Linux, macOS, Windows, ARM
+
+## Use Cases
+
+- **Service Monitoring**: Continuous monitoring of web applications and APIs
+- **Infrastructure Health**: Monitoring of databases, servers, and network services
+- **Public Status Pages**: Customer-facing service status communication
+- **Internal Dashboards**: Team visibility into service health
+- **SLA Monitoring**: Tracking service level agreement compliance
+- **Incident Management**: Early detection and alerting for service issues
+
+## Unique Advantages
+
+- **Zero Dependencies**: Single binary with no external database requirements
+- **High Performance**: Efficient Go implementation with minimal resource usage
+- **Flexible Configuration**: Powerful YAML-based configuration system
+- **Real-time Updates**: Live status updates without page refreshes
+- **Multi-Protocol Support**: HTTP, TCP, DNS, and SSL monitoring capabilities
+- **Easy Deployment**: Simple Docker deployment with Kubernetes support
+
+Based on the [Gatus GitHub repository](https://github.com/TwiN/gatus), this tool provides a perfect balance of simplicity and power, making it ideal for teams that need reliable service monitoring with beautiful status pages and comprehensive alerting capabilities.
