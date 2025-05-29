@@ -1,0 +1,167 @@
+---
+slug: genesis
+name: Genesis
+description: |
+  Genesis is a template framework for multi-environment BOSH deployments. Written in Perl, it provides a powerful templating system for managing complex BOSH deployments across multiple environments with shared configurations and environment-specific customizations.
+category: deployment-automation
+tags: [bosh, perl, template-framework, multi-environment, cloud-foundry]
+github: starkandwayne/genesis
+urls:
+  website: https://github.com/starkandwayne/genesis
+alternatives:
+  selfHosted: [terraform, ansible, helm]
+  nonSelfHosted: [aws-cloudformation, azure-resource-manager, google-deployment-manager]
+deployment:
+  difficulty: "Medium"
+  justification: "Perl-based framework requiring BOSH knowledge. Involves understanding of BOSH concepts and templating but provides powerful multi-environment deployment capabilities."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Template framework for multi-environment BOSH deployments
+      - name: Target Use Case
+        value: Managing complex BOSH deployments across multiple environments
+      - name: Architecture
+        value: Perl + BOSH + Template framework + Multi-environment + Configuration management
+  - name: Template System
+    features:
+      - name: YAML Templating
+      - name: Environment Inheritance
+      - name: Configuration Merging
+      - name: Variable Substitution
+      - name: Conditional Logic
+  - name: Multi-Environment
+    features:
+      - name: Environment Management
+      - name: Configuration Inheritance
+      - name: Environment-specific Overrides
+      - name: Shared Base Configurations
+      - name: Environment Promotion
+  - name: BOSH Integration
+    features:
+      - name: BOSH Deployment Management
+      - name: Release Management
+      - name: Stemcell Management
+      - name: Cloud Config Integration
+      - name: Runtime Config Support
+  - name: Configuration Management
+    features:
+      - name: Kit System
+      - name: Feature Flags
+      - name: Parameter Management
+      - name: Secret Management
+      - name: Validation Rules
+  - name: Workflow
+    features:
+      - name: Deployment Pipeline
+      - name: Environment Promotion
+      - name: Rollback Support
+      - name: Diff Generation
+      - name: Dry-run Mode
+  - name: Developer Tools
+    features:
+      - name: CLI Interface
+      - name: Debugging Tools
+      - name: Validation Tools
+      - name: Documentation Generation
+      - name: Testing Framework
+---
+
+Genesis is a sophisticated template framework designed specifically for managing multi-environment BOSH deployments. Built with Perl and leveraging the power of BOSH, it provides a comprehensive solution for organizations that need to deploy and manage complex cloud infrastructure across multiple environments with consistency and reliability.
+
+## Key Features
+
+- **Advanced Template System**:
+
+  - YAML-based templating with inheritance
+  - Environment-specific configuration inheritance
+  - Intelligent configuration merging
+  - Variable substitution and interpolation
+  - Conditional logic and feature flags
+  - Reusable template components
+
+- **Multi-Environment Management**:
+
+  - Environment hierarchy and inheritance
+  - Shared base configurations
+  - Environment-specific overrides and customizations
+  - Environment promotion workflows
+  - Configuration drift detection
+  - Environment comparison tools
+
+- **BOSH Integration**:
+
+  - Native BOSH deployment management
+  - Release and stemcell management
+  - Cloud config integration
+  - Runtime config support
+  - BOSH director management
+  - Deployment lifecycle management
+
+- **Configuration Management**:
+
+  - Kit system for reusable components
+  - Feature flag management
+  - Parameter and variable management
+  - Secret management and encryption
+  - Configuration validation rules
+  - Schema enforcement
+
+- **Deployment Workflow**:
+
+  - Automated deployment pipelines
+  - Environment promotion workflows
+  - Rollback and recovery support
+  - Deployment diff generation
+  - Dry-run and validation modes
+  - Change tracking and auditing
+
+- **Developer Tools & Experience**:
+
+  - Comprehensive CLI interface
+  - Debugging and troubleshooting tools
+  - Configuration validation tools
+  - Automatic documentation generation
+  - Testing framework and utilities
+  - Integration with CI/CD systems
+
+- **Enterprise Features**:
+  - Multi-team collaboration support
+  - Access control and permissions
+  - Audit logging and compliance
+  - Backup and disaster recovery
+  - Performance optimization
+  - Professional support options
+
+## Technical Specifications
+
+- **Language**: Perl
+- **License**: MIT
+- **Deployment**: Source installation, packages
+- **Platforms**: Linux, macOS
+- **Requirements**: Perl, BOSH CLI, Git
+- **Integration**: BOSH, Cloud Foundry
+- **Architecture**: CLI-based, template-driven
+
+## Use Cases
+
+- **Cloud Foundry Deployments**: Managing Cloud Foundry platform deployments
+- **Multi-Environment Infrastructure**: Infrastructure across dev/staging/production
+- **Enterprise Cloud Platforms**: Large-scale cloud platform management
+- **DevOps Automation**: Automated infrastructure deployment workflows
+- **Configuration Management**: Complex configuration management scenarios
+- **Disaster Recovery**: Infrastructure backup and recovery automation
+
+## Unique Advantages
+
+- **BOSH-Native**: Built specifically for BOSH ecosystem
+- **Multi-Environment**: Excellent multi-environment management
+- **Template-Driven**: Powerful templating and inheritance system
+- **Cloud Foundry Ready**: Optimized for Cloud Foundry deployments
+- **Enterprise-Grade**: Designed for enterprise-scale deployments
+- **Open Source**: Transparent, customizable, and community-driven
+
+Based on the [Genesis GitHub repository](https://github.com/starkandwayne/genesis), this tool provides DevOps teams with a powerful framework for managing complex BOSH deployments across multiple environments, making it ideal for organizations using Cloud Foundry or other BOSH-based platforms that need sophisticated configuration management and multi-environment deployment capabilities.

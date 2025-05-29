@@ -1731,6 +1731,7 @@
     "description": "Hoppscotch is a fast and beautiful API request builder and testing tool. Built with Node.js and Vue.js, it provides a modern, lightweight alternative to Postman with real-time collaboration features and comprehensive API testing capabilities.\n",
     "hostingType": "Self-Hosted",
     "pricingModel": "Free",
+    "heroImage": "https://github.com/hoppscotch/hoppscotch/raw/main/packages/hoppscotch-common/public/images/banner-dark.png",
     "category": "api-management",
     "tags": [
       "api-testing",
@@ -5103,6 +5104,5618 @@
       "justification": "Requires Postgres database setup and configuration. Multiple components need to be managed."
     },
     "language": "Rust"
+  },
+  {
+    "filePath": "projects/blogging-platforms/castopod.mdx",
+    "slug": "castopod",
+    "name": "Castopod",
+    "description": "Castopod is a podcast management hosting platform that includes the latest podcast 2.0 standards, an automated Fediverse feed, analytics, an embeddable player, and more. Built with PHP, it provides a comprehensive solution for podcast creators and networks.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "blogging-platforms",
+    "tags": [
+      "podcasting",
+      "php",
+      "podcast-2-0",
+      "fediverse",
+      "analytics"
+    ],
+    "github": "ad-aures/castopod",
+    "urls": {
+      "website": "https://castopod.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "azuracast",
+        "icecast",
+        "podcast-generator"
+      ],
+      "nonSelfHosted": [
+        "anchor",
+        "spotify-for-podcasters",
+        "buzzsprout"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "PHP application with Docker support. Requires web server setup and configuration but provides comprehensive podcast hosting and management capabilities."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Comprehensive podcast management hosting platform with modern standards"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Podcast hosting, management, and distribution with advanced features"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + Docker + Podcast 2.0 + Fediverse + Analytics + Modern podcasting"
+          }
+        ]
+      },
+      {
+        "name": "Podcast Management",
+        "features": [
+          {
+            "name": "Episode Management"
+          },
+          {
+            "name": "Show Management"
+          },
+          {
+            "name": "Media Upload & Storage"
+          },
+          {
+            "name": "Metadata Management"
+          },
+          {
+            "name": "RSS Feed Generation"
+          }
+        ]
+      },
+      {
+        "name": "Podcast 2.0 Features",
+        "features": [
+          {
+            "name": "Podcast 2.0 Standards"
+          },
+          {
+            "name": "Chapters Support"
+          },
+          {
+            "name": "Transcripts"
+          },
+          {
+            "name": "Value for Value"
+          },
+          {
+            "name": "Enhanced Metadata"
+          }
+        ]
+      },
+      {
+        "name": "Fediverse Integration",
+        "features": [
+          {
+            "name": "ActivityPub Support"
+          },
+          {
+            "name": "Automated Fediverse Feed"
+          },
+          {
+            "name": "Social Interaction"
+          },
+          {
+            "name": "Cross-platform Discovery"
+          },
+          {
+            "name": "Decentralized Distribution"
+          }
+        ]
+      },
+      {
+        "name": "Analytics & Insights",
+        "features": [
+          {
+            "name": "Download Analytics"
+          },
+          {
+            "name": "Listener Insights"
+          },
+          {
+            "name": "Geographic Data"
+          },
+          {
+            "name": "Platform Analytics"
+          },
+          {
+            "name": "Performance Metrics"
+          }
+        ]
+      },
+      {
+        "name": "Player & Embedding",
+        "features": [
+          {
+            "name": "Embeddable Player"
+          },
+          {
+            "name": "Responsive Design"
+          },
+          {
+            "name": "Custom Styling"
+          },
+          {
+            "name": "Player Widgets"
+          },
+          {
+            "name": "Website Integration"
+          }
+        ]
+      },
+      {
+        "name": "Distribution & Publishing",
+        "features": [
+          {
+            "name": "Multi-platform Distribution"
+          },
+          {
+            "name": "Podcast Directories"
+          },
+          {
+            "name": "RSS Optimization"
+          },
+          {
+            "name": "SEO Features"
+          },
+          {
+            "name": "Social Media Integration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/blogging-platforms/ghost.mdx",
+    "slug": "ghost",
+    "name": "Ghost",
+    "description": "Ghost is a modern, open-source publishing platform built with Node.js. Designed specifically for blogging and content creation, it provides a clean, intuitive interface with powerful features for writers, publishers, and content creators who want to focus on creating great content.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "blogging-platforms",
+    "tags": [
+      "blogging",
+      "nodejs",
+      "publishing",
+      "content-creation",
+      "modern"
+    ],
+    "github": "TryGhost/Ghost",
+    "urls": {
+      "website": "https://ghost.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "writefreely",
+        "serendipity",
+        "known"
+      ],
+      "nonSelfHosted": [
+        "wordpress-com",
+        "medium",
+        "substack"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Node.js application with Docker support. Simple setup with modern architecture and excellent documentation for self-hosting."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Modern publishing platform designed specifically for blogging and content creation"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Professional blogging, content publishing, and online publications"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + Modern web app + API-first + Mobile-responsive + SEO-optimized"
+          }
+        ]
+      },
+      {
+        "name": "Content Creation",
+        "features": [
+          {
+            "name": "Modern Editor"
+          },
+          {
+            "name": "Markdown Support"
+          },
+          {
+            "name": "Rich Media Embedding"
+          },
+          {
+            "name": "Image Optimization"
+          },
+          {
+            "name": "Content Scheduling"
+          }
+        ]
+      },
+      {
+        "name": "Publishing Features",
+        "features": [
+          {
+            "name": "Multiple Authors"
+          },
+          {
+            "name": "Content Tags"
+          },
+          {
+            "name": "Featured Posts"
+          },
+          {
+            "name": "Post Excerpts"
+          },
+          {
+            "name": "Custom URLs"
+          }
+        ]
+      },
+      {
+        "name": "Design & Themes",
+        "features": [
+          {
+            "name": "Theme System"
+          },
+          {
+            "name": "Responsive Themes"
+          },
+          {
+            "name": "Custom CSS"
+          },
+          {
+            "name": "Theme Marketplace"
+          },
+          {
+            "name": "Mobile Optimization"
+          }
+        ]
+      },
+      {
+        "name": "SEO & Performance",
+        "features": [
+          {
+            "name": "SEO Optimization"
+          },
+          {
+            "name": "Fast Loading"
+          },
+          {
+            "name": "AMP Support"
+          },
+          {
+            "name": "Social Media Integration"
+          },
+          {
+            "name": "Analytics Integration"
+          }
+        ]
+      },
+      {
+        "name": "Membership & Monetization",
+        "features": [
+          {
+            "name": "Member Subscriptions"
+          },
+          {
+            "name": "Paid Content"
+          },
+          {
+            "name": "Newsletter Integration"
+          },
+          {
+            "name": "Stripe Integration"
+          },
+          {
+            "name": "Member Management"
+          }
+        ]
+      },
+      {
+        "name": "API & Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Webhook Support"
+          },
+          {
+            "name": "Third-party Integrations"
+          },
+          {
+            "name": "Custom Development"
+          },
+          {
+            "name": "Headless CMS Mode"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/blogging-platforms/htmly.mdx",
+    "slug": "htmly",
+    "name": "HTMLy",
+    "description": "HTMLy is a databaseless PHP blogging platform that allows you to create a fast, secure, and powerful website or blog in seconds. Built with PHP and using flat files instead of a database, it provides a simple yet feature-rich blogging solution with excellent performance.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "blogging-platforms",
+    "tags": [
+      "blogging",
+      "php",
+      "flat-file",
+      "databaseless",
+      "fast"
+    ],
+    "github": "danpros/htmly",
+    "urls": {
+      "website": "https://www.htmly.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "flatpress",
+        "pluxml",
+        "chyrp-lite"
+      ],
+      "nonSelfHosted": [
+        "wordpress-com",
+        "blogger",
+        "ghost-pro"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "PHP application with no database requirements. Simple setup with flat-file storage and minimal configuration needed."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Databaseless PHP blogging platform with flat-file storage for speed and simplicity"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Fast, secure blogging without database complexity"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + Flat-file storage + No database + Fast + Secure + Simple"
+          }
+        ]
+      },
+      {
+        "name": "Flat-File System",
+        "features": [
+          {
+            "name": "No Database Required"
+          },
+          {
+            "name": "Flat-File Storage"
+          },
+          {
+            "name": "Fast Performance"
+          },
+          {
+            "name": "Easy Backup"
+          },
+          {
+            "name": "Version Control Friendly"
+          }
+        ]
+      },
+      {
+        "name": "Content Management",
+        "features": [
+          {
+            "name": "Post Management"
+          },
+          {
+            "name": "Page Creation"
+          },
+          {
+            "name": "Category System"
+          },
+          {
+            "name": "Tag Support"
+          },
+          {
+            "name": "Media Management"
+          }
+        ]
+      },
+      {
+        "name": "Design & Themes",
+        "features": [
+          {
+            "name": "Responsive Themes"
+          },
+          {
+            "name": "Theme System"
+          },
+          {
+            "name": "Custom CSS"
+          },
+          {
+            "name": "Mobile Optimization"
+          },
+          {
+            "name": "Clean Design"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "Comment System"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "RSS Feeds"
+          },
+          {
+            "name": "SEO Optimization"
+          },
+          {
+            "name": "Social Integration"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "Admin Panel"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Configuration Options"
+          },
+          {
+            "name": "Import/Export"
+          },
+          {
+            "name": "Plugin Support"
+          }
+        ]
+      },
+      {
+        "name": "Performance & Security",
+        "features": [
+          {
+            "name": "Fast Loading"
+          },
+          {
+            "name": "Security Features"
+          },
+          {
+            "name": "Caching Support"
+          },
+          {
+            "name": "Lightweight"
+          },
+          {
+            "name": "Minimal Resources"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/blogging-platforms/known.mdx",
+    "slug": "known",
+    "name": "Known",
+    "description": "Known is a collaborative social publishing platform that combines blogging with social networking features. Built with PHP, it provides a modern publishing platform with IndieWeb support, social features, and collaborative capabilities for individuals and communities.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "blogging-platforms",
+    "tags": [
+      "blogging",
+      "php",
+      "social-publishing",
+      "indieweb",
+      "collaborative"
+    ],
+    "github": "idno/known",
+    "urls": {
+      "website": "https://withknown.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "ghost",
+        "serendipity",
+        "writefreely"
+      ],
+      "nonSelfHosted": [
+        "medium",
+        "linkedin-publishing",
+        "facebook-notes"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "PHP application with social features. Requires web server setup and configuration but provides comprehensive social publishing capabilities."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Collaborative social publishing platform with IndieWeb support"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Social blogging and collaborative content creation with modern web standards"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + Social features + IndieWeb + Collaborative + Modern publishing"
+          }
+        ]
+      },
+      {
+        "name": "Social Publishing",
+        "features": [
+          {
+            "name": "Social Media Integration"
+          },
+          {
+            "name": "Cross-posting"
+          },
+          {
+            "name": "Social Interactions"
+          },
+          {
+            "name": "Activity Streams"
+          },
+          {
+            "name": "Social Login"
+          }
+        ]
+      },
+      {
+        "name": "IndieWeb Support",
+        "features": [
+          {
+            "name": "Microformats"
+          },
+          {
+            "name": "Webmentions"
+          },
+          {
+            "name": "IndieAuth"
+          },
+          {
+            "name": "POSSE (Publish Own Site, Syndicate Elsewhere)"
+          },
+          {
+            "name": "Micropub"
+          }
+        ]
+      },
+      {
+        "name": "Content Types",
+        "features": [
+          {
+            "name": "Blog Posts"
+          },
+          {
+            "name": "Status Updates"
+          },
+          {
+            "name": "Photos"
+          },
+          {
+            "name": "Check-ins"
+          },
+          {
+            "name": "Events"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "features": [
+          {
+            "name": "Multi-user Support"
+          },
+          {
+            "name": "Team Publishing"
+          },
+          {
+            "name": "User Profiles"
+          },
+          {
+            "name": "Following System"
+          },
+          {
+            "name": "Community Features"
+          }
+        ]
+      },
+      {
+        "name": "Customization",
+        "features": [
+          {
+            "name": "Theme System"
+          },
+          {
+            "name": "Plugin Architecture"
+          },
+          {
+            "name": "Custom Templates"
+          },
+          {
+            "name": "Responsive Design"
+          },
+          {
+            "name": "Mobile Apps"
+          }
+        ]
+      },
+      {
+        "name": "Modern Features",
+        "features": [
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Webhook Support"
+          },
+          {
+            "name": "Real-time Updates"
+          },
+          {
+            "name": "Mobile Publishing"
+          },
+          {
+            "name": "Progressive Web App"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/blogging-platforms/mataroa.mdx",
+    "slug": "mataroa",
+    "name": "Mataroa",
+    "description": "Mataroa is a naked blogging platform for minimalists. Built with Python, it provides an ultra-simple, distraction-free blogging experience that focuses purely on writing and reading without any unnecessary features or complexity.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "blogging-platforms",
+    "tags": [
+      "blogging",
+      "python",
+      "minimalist",
+      "simple",
+      "distraction-free"
+    ],
+    "github": "mataroa-blog/mataroa",
+    "urls": {
+      "website": "https://mataroa.blog/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "writefreely",
+        "htmly",
+        "flatpress"
+      ],
+      "nonSelfHosted": [
+        "write-as",
+        "bearblog",
+        "blot"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Python application with simple setup. Minimal dependencies and straightforward deployment for ultra-simple blogging."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Ultra-simple, naked blogging platform focused purely on writing"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Minimalist blogging without distractions or unnecessary features"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Ultra-minimal + Distraction-free + Simple + Fast"
+          }
+        ]
+      },
+      {
+        "name": "Writing Experience",
+        "features": [
+          {
+            "name": "Simple Editor"
+          },
+          {
+            "name": "Markdown Support"
+          },
+          {
+            "name": "Distraction-free Interface"
+          },
+          {
+            "name": "Fast Writing"
+          },
+          {
+            "name": "No Clutter"
+          }
+        ]
+      },
+      {
+        "name": "Minimalist Features",
+        "features": [
+          {
+            "name": "Basic Post Management"
+          },
+          {
+            "name": "Simple Navigation"
+          },
+          {
+            "name": "Clean URLs"
+          },
+          {
+            "name": "RSS Feeds"
+          },
+          {
+            "name": "Essential Functions Only"
+          }
+        ]
+      },
+      {
+        "name": "Design Philosophy",
+        "features": [
+          {
+            "name": "Naked Design"
+          },
+          {
+            "name": "Typography Focus"
+          },
+          {
+            "name": "Fast Loading"
+          },
+          {
+            "name": "Mobile Responsive"
+          },
+          {
+            "name": "Accessibility"
+          }
+        ]
+      },
+      {
+        "name": "Technical Simplicity",
+        "features": [
+          {
+            "name": "Lightweight"
+          },
+          {
+            "name": "Fast Performance"
+          },
+          {
+            "name": "Minimal Dependencies"
+          },
+          {
+            "name": "Easy Maintenance"
+          },
+          {
+            "name": "Simple Deployment"
+          }
+        ]
+      },
+      {
+        "name": "Content Management",
+        "features": [
+          {
+            "name": "Post Creation"
+          },
+          {
+            "name": "Draft Support"
+          },
+          {
+            "name": "Simple Organization"
+          },
+          {
+            "name": "Export Options"
+          },
+          {
+            "name": "Backup Features"
+          }
+        ]
+      },
+      {
+        "name": "Reader Experience",
+        "features": [
+          {
+            "name": "Clean Reading"
+          },
+          {
+            "name": "Fast Page Loads"
+          },
+          {
+            "name": "No Distractions"
+          },
+          {
+            "name": "Focus on Content"
+          },
+          {
+            "name": "Simple Navigation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/blogging-platforms/serendipity.mdx",
+    "slug": "serendipity",
+    "name": "Serendipity",
+    "description": "Serendipity (s9y) is a highly extensible and customizable PHP blog engine using Smarty templating. Built with PHP, it provides a flexible, plugin-rich blogging platform with advanced customization capabilities and a strong focus on extensibility and developer features.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "blogging-platforms",
+    "tags": [
+      "blogging",
+      "php",
+      "extensible",
+      "smarty",
+      "customizable"
+    ],
+    "github": "s9y/serendipity",
+    "urls": {
+      "website": "https://docs.s9y.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "ghost",
+        "known",
+        "chyrp-lite"
+      ],
+      "nonSelfHosted": [
+        "wordpress-com",
+        "blogger",
+        "typepad"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "PHP application with Smarty templating. Requires web server setup and configuration but provides extensive customization and plugin capabilities."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Highly extensible and customizable PHP blog engine with advanced features"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Advanced blogging with extensive customization and plugin capabilities"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + Smarty templating + Plugin system + Extensible + Developer-friendly"
+          }
+        ]
+      },
+      {
+        "name": "Extensibility",
+        "features": [
+          {
+            "name": "Plugin System"
+          },
+          {
+            "name": "Event System"
+          },
+          {
+            "name": "Custom Plugins"
+          },
+          {
+            "name": "Theme System"
+          },
+          {
+            "name": "API Extensions"
+          }
+        ]
+      },
+      {
+        "name": "Templating",
+        "features": [
+          {
+            "name": "Smarty Templates"
+          },
+          {
+            "name": "Custom Themes"
+          },
+          {
+            "name": "Template Inheritance"
+          },
+          {
+            "name": "CSS Customization"
+          },
+          {
+            "name": "Responsive Design"
+          }
+        ]
+      },
+      {
+        "name": "Content Management",
+        "features": [
+          {
+            "name": "Advanced Editor"
+          },
+          {
+            "name": "Multiple Authors"
+          },
+          {
+            "name": "Category System"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Media Management"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "Multi-language Support"
+          },
+          {
+            "name": "Comment System"
+          },
+          {
+            "name": "Spam Protection"
+          },
+          {
+            "name": "SEO Features"
+          },
+          {
+            "name": "RSS/Atom Feeds"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "Admin Interface"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Permission System"
+          },
+          {
+            "name": "Configuration Options"
+          },
+          {
+            "name": "Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Developer Features",
+        "features": [
+          {
+            "name": "Plugin Development"
+          },
+          {
+            "name": "Theme Development"
+          },
+          {
+            "name": "Event Hooks"
+          },
+          {
+            "name": "Database Abstraction"
+          },
+          {
+            "name": "API Access"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/blogging-platforms/writefreely.mdx",
+    "slug": "writefreely",
+    "name": "WriteFreely",
+    "description": "WriteFreely is a clean, minimalist publishing platform made for writers. Built with Go, it focuses on writing and reading without distractions, supports federation via ActivityPub, and provides a simple, elegant blogging experience for individuals and communities.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "blogging-platforms",
+    "tags": [
+      "blogging",
+      "go",
+      "minimalist",
+      "federated",
+      "activitypub"
+    ],
+    "github": "writefreely/writefreely",
+    "urls": {
+      "website": "https://writefreely.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "ghost",
+        "mataroa",
+        "htmly"
+      ],
+      "nonSelfHosted": [
+        "medium",
+        "substack",
+        "write-as"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Go binary with simple configuration. Easy setup with minimal dependencies and straightforward deployment for minimalist blogging."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Clean, minimalist publishing platform focused on writing without distractions"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Distraction-free writing and federated blogging communities"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + Minimalist + Federation + ActivityPub + Community-focused"
+          }
+        ]
+      },
+      {
+        "name": "Writing Experience",
+        "features": [
+          {
+            "name": "Distraction-free Editor"
+          },
+          {
+            "name": "Markdown Support"
+          },
+          {
+            "name": "Clean Typography"
+          },
+          {
+            "name": "Focus Mode"
+          },
+          {
+            "name": "Draft Management"
+          }
+        ]
+      },
+      {
+        "name": "Federation",
+        "features": [
+          {
+            "name": "ActivityPub Support"
+          },
+          {
+            "name": "Fediverse Integration"
+          },
+          {
+            "name": "Cross-platform Following"
+          },
+          {
+            "name": "Federated Timeline"
+          },
+          {
+            "name": "Decentralized Publishing"
+          }
+        ]
+      },
+      {
+        "name": "Community Features",
+        "features": [
+          {
+            "name": "Multi-user Support"
+          },
+          {
+            "name": "Community Blogs"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Public/Private Posts"
+          },
+          {
+            "name": "Reader Discovery"
+          }
+        ]
+      },
+      {
+        "name": "Customization",
+        "features": [
+          {
+            "name": "Custom Themes"
+          },
+          {
+            "name": "CSS Customization"
+          },
+          {
+            "name": "Custom Domains"
+          },
+          {
+            "name": "Branding Options"
+          },
+          {
+            "name": "Layout Control"
+          }
+        ]
+      },
+      {
+        "name": "Privacy & Security",
+        "features": [
+          {
+            "name": "Privacy-focused"
+          },
+          {
+            "name": "No Tracking"
+          },
+          {
+            "name": "Anonymous Publishing"
+          },
+          {
+            "name": "Data Ownership"
+          },
+          {
+            "name": "GDPR Compliant"
+          }
+        ]
+      },
+      {
+        "name": "Technical Features",
+        "features": [
+          {
+            "name": "Lightweight"
+          },
+          {
+            "name": "Fast Performance"
+          },
+          {
+            "name": "RSS Feeds"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Export Options"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/briefkasten.mdx",
+    "slug": "briefkasten",
+    "name": "Briefkasten",
+    "description": "Briefkasten is a modern app for saving and managing your own bookmarks. Built with Node.js, it provides a clean, intuitive interface for bookmark organization with browser extension support for seamless bookmark collection and management.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "nodejs",
+      "browser-extension",
+      "modern",
+      "personal"
+    ],
+    "github": "ndom91/briefkasten",
+    "urls": {
+      "website": "https://briefkastenhq.com/",
+      "demo": "https://briefkastenhq.com/auth/signin"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "linkding",
+        "linkace",
+        "shiori"
+      ],
+      "nonSelfHosted": [
+        "pocket",
+        "raindrop-io",
+        "pinboard"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Node.js application with Docker support. Simple setup with modern architecture and browser extension for easy bookmark collection."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Modern bookmark manager with clean interface and browser integration"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal bookmark management with seamless browser integration"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + Docker + Browser extension + Modern UI + Personal use"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Bookmark Collection"
+          },
+          {
+            "name": "Organization & Tagging"
+          },
+          {
+            "name": "Search & Filtering"
+          },
+          {
+            "name": "Bulk Operations"
+          },
+          {
+            "name": "Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Browser Integration",
+        "features": [
+          {
+            "name": "Browser Extension"
+          },
+          {
+            "name": "One-Click Saving"
+          },
+          {
+            "name": "Context Menu Integration"
+          },
+          {
+            "name": "Automatic Metadata"
+          },
+          {
+            "name": "Cross-Browser Support"
+          }
+        ]
+      },
+      {
+        "name": "User Interface",
+        "features": [
+          {
+            "name": "Modern Design"
+          },
+          {
+            "name": "Clean Interface"
+          },
+          {
+            "name": "Responsive Layout"
+          },
+          {
+            "name": "Dark Mode"
+          },
+          {
+            "name": "Intuitive Navigation"
+          }
+        ]
+      },
+      {
+        "name": "Organization",
+        "features": [
+          {
+            "name": "Folder System"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Categories"
+          },
+          {
+            "name": "Favorites"
+          },
+          {
+            "name": "Recent Bookmarks"
+          }
+        ]
+      },
+      {
+        "name": "Search & Discovery",
+        "features": [
+          {
+            "name": "Full-Text Search"
+          },
+          {
+            "name": "Advanced Filtering"
+          },
+          {
+            "name": "Quick Access"
+          },
+          {
+            "name": "Bookmark Preview"
+          },
+          {
+            "name": "Duplicate Detection"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Data Export"
+          },
+          {
+            "name": "Backup Features"
+          },
+          {
+            "name": "Import from Browsers"
+          },
+          {
+            "name": "Data Portability"
+          },
+          {
+            "name": "Privacy Control"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/buku.mdx",
+    "slug": "buku",
+    "name": "Buku",
+    "description": "Buku is a powerful bookmark manager and a personal textual mini-web. Built with Python, it provides a command-line interface for managing bookmarks with advanced features like encryption, tagging, and full-text search, designed for power users and terminal enthusiasts.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "python",
+      "command-line",
+      "encryption",
+      "power-user"
+    ],
+    "github": "jarun/buku",
+    "urls": {
+      "website": "https://github.com/jarun/buku"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "shiori",
+        "linkding",
+        "shaarli"
+      ],
+      "nonSelfHosted": [
+        "pinboard",
+        "delicious",
+        "diigo"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Python package with simple installation. Command-line tool with minimal dependencies and straightforward setup for terminal-based bookmark management."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Powerful command-line bookmark manager with advanced features for power users"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Terminal-based bookmark management with encryption and advanced organization"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Command-line + Encryption + Database + Power-user focused"
+          }
+        ]
+      },
+      {
+        "name": "Command-Line Interface",
+        "features": [
+          {
+            "name": "Terminal-Based"
+          },
+          {
+            "name": "Keyboard Shortcuts"
+          },
+          {
+            "name": "Batch Operations"
+          },
+          {
+            "name": "Scripting Support"
+          },
+          {
+            "name": "Automation Friendly"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "AES256 Encryption"
+          },
+          {
+            "name": "Full-Text Search"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "URL Validation"
+          },
+          {
+            "name": "Duplicate Detection"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "SQLite Database"
+          },
+          {
+            "name": "Import/Export"
+          },
+          {
+            "name": "Backup & Restore"
+          },
+          {
+            "name": "Data Portability"
+          },
+          {
+            "name": "Browser Integration"
+          }
+        ]
+      },
+      {
+        "name": "Search & Organization",
+        "features": [
+          {
+            "name": "Regex Search"
+          },
+          {
+            "name": "Tag-Based Filtering"
+          },
+          {
+            "name": "Date-Based Queries"
+          },
+          {
+            "name": "Content Search"
+          },
+          {
+            "name": "Advanced Sorting"
+          }
+        ]
+      },
+      {
+        "name": "Web Integration",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Browser Bookmarklet"
+          },
+          {
+            "name": "HTTP Server"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Remote Access"
+          }
+        ]
+      },
+      {
+        "name": "Security & Privacy",
+        "features": [
+          {
+            "name": "Local Storage"
+          },
+          {
+            "name": "Encryption Support"
+          },
+          {
+            "name": "Privacy-Focused"
+          },
+          {
+            "name": "No Cloud Dependency"
+          },
+          {
+            "name": "Secure Access"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/digibunch.mdx",
+    "slug": "digibunch",
+    "name": "Digibunch",
+    "description": "Digibunch is a tool for creating bunches of links to share with your learners or colleagues. Built with Node.js and PHP, it provides an educational-focused platform for organizing and sharing curated link collections for teaching and collaboration purposes.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "education",
+      "link-sharing",
+      "collaboration",
+      "curation"
+    ],
+    "github": "ladigitale/digibunch",
+    "urls": {
+      "website": "https://ladigitale.dev/digibunch/#/",
+      "demo": "https://ladigitale.dev/digibunch/#/b/5f67b12092b60"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "slash",
+        "linkwarden",
+        "grimoire"
+      ],
+      "nonSelfHosted": [
+        "padlet",
+        "wakelet",
+        "pearltrees"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Node.js/PHP application with simple setup. Educational-focused tool with straightforward deployment for link sharing and curation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Educational tool for creating and sharing curated link collections"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Teaching, learning, and collaborative link sharing for educational purposes"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js/PHP + Educational focus + Link curation + Sharing + Collaboration"
+          }
+        ]
+      },
+      {
+        "name": "Link Collection",
+        "features": [
+          {
+            "name": "Link Bunching"
+          },
+          {
+            "name": "Curated Collections"
+          },
+          {
+            "name": "Educational Organization"
+          },
+          {
+            "name": "Topic Grouping"
+          },
+          {
+            "name": "Resource Compilation"
+          }
+        ]
+      },
+      {
+        "name": "Sharing & Collaboration",
+        "features": [
+          {
+            "name": "Easy Sharing"
+          },
+          {
+            "name": "Public Collections"
+          },
+          {
+            "name": "Collaborative Curation"
+          },
+          {
+            "name": "Educational Distribution"
+          },
+          {
+            "name": "Learner Access"
+          }
+        ]
+      },
+      {
+        "name": "Educational Features",
+        "features": [
+          {
+            "name": "Learning Resources"
+          },
+          {
+            "name": "Course Materials"
+          },
+          {
+            "name": "Student Sharing"
+          },
+          {
+            "name": "Teacher Tools"
+          },
+          {
+            "name": "Educational Workflow"
+          }
+        ]
+      },
+      {
+        "name": "Organization",
+        "features": [
+          {
+            "name": "Topic Organization"
+          },
+          {
+            "name": "Category Management"
+          },
+          {
+            "name": "Collection Structure"
+          },
+          {
+            "name": "Resource Grouping"
+          },
+          {
+            "name": "Hierarchical Organization"
+          }
+        ]
+      },
+      {
+        "name": "User Experience",
+        "features": [
+          {
+            "name": "Simple Interface"
+          },
+          {
+            "name": "Easy Creation"
+          },
+          {
+            "name": "Quick Access"
+          },
+          {
+            "name": "Mobile Friendly"
+          },
+          {
+            "name": "Intuitive Design"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Collection Management"
+          },
+          {
+            "name": "Link Validation"
+          },
+          {
+            "name": "Content Curation"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Usage Analytics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/espial.mdx",
+    "slug": "espial",
+    "name": "Espial",
+    "description": "Espial is an open-source, web-based bookmarking server built with Haskell. It provides a clean, functional approach to bookmark management with a focus on simplicity, reliability, and elegant design for personal and small-team bookmark organization.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "haskell",
+      "web-based",
+      "functional",
+      "personal"
+    ],
+    "github": "jonschoning/espial",
+    "urls": {
+      "website": "https://github.com/jonschoning/espial"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "linkding",
+        "shaarli",
+        "linkace"
+      ],
+      "nonSelfHosted": [
+        "pinboard",
+        "pocket",
+        "raindrop-io"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Haskell application requiring compilation and setup. Functional programming approach with specific deployment requirements but provides reliable bookmark management."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Clean, functional web-based bookmarking server with elegant design"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal and small-team bookmark management with reliability focus"
+          },
+          {
+            "name": "Architecture",
+            "value": "Haskell + Functional programming + Web-based + Clean design + Reliable"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Bookmark Organization"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Functional Design",
+        "features": [
+          {
+            "name": "Haskell Implementation"
+          },
+          {
+            "name": "Functional Programming"
+          },
+          {
+            "name": "Type Safety"
+          },
+          {
+            "name": "Reliable Architecture"
+          },
+          {
+            "name": "Clean Codebase"
+          }
+        ]
+      },
+      {
+        "name": "User Interface",
+        "features": [
+          {
+            "name": "Clean Design"
+          },
+          {
+            "name": "Simple Navigation"
+          },
+          {
+            "name": "Responsive Layout"
+          },
+          {
+            "name": "Intuitive Interface"
+          },
+          {
+            "name": "Fast Performance"
+          }
+        ]
+      },
+      {
+        "name": "Organization Features",
+        "features": [
+          {
+            "name": "Tagging System"
+          },
+          {
+            "name": "Category Organization"
+          },
+          {
+            "name": "Bookmark Collections"
+          },
+          {
+            "name": "Hierarchical Structure"
+          },
+          {
+            "name": "Custom Organization"
+          }
+        ]
+      },
+      {
+        "name": "Search & Discovery",
+        "features": [
+          {
+            "name": "Full-Text Search"
+          },
+          {
+            "name": "Tag-Based Search"
+          },
+          {
+            "name": "Advanced Filtering"
+          },
+          {
+            "name": "Quick Access"
+          },
+          {
+            "name": "Search Optimization"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Data Import"
+          },
+          {
+            "name": "Export Capabilities"
+          },
+          {
+            "name": "Backup Features"
+          },
+          {
+            "name": "Data Portability"
+          },
+          {
+            "name": "Migration Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/firefox-account-server.mdx",
+    "slug": "firefox-account-server",
+    "name": "Firefox Account Server",
+    "description": "Host your own Firefox accounts server for managing Firefox Sync and other Mozilla services. It provides complete control over Firefox account management and synchronization services.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "firefox",
+      "sync",
+      "accounts",
+      "mozilla",
+      "self-hosted"
+    ],
+    "github": "mozilla/fxa",
+    "urls": {
+      "website": "https://mozilla-services.readthedocs.io/en/latest/howtos/run-fxa.html"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "nextcloud",
+        "owncloud",
+        "syncthing"
+      ],
+      "nonSelfHosted": [
+        "firefox-sync",
+        "google-sync",
+        "icloud-sync"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex Mozilla infrastructure requiring multiple services and components. Advanced setup with specific requirements for Firefox account and sync services."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Self-hosted Firefox accounts server for complete control over Mozilla services"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Privacy-focused Firefox sync and account management with self-hosting"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js/Java + Mozilla infrastructure + Account management + Sync services"
+          }
+        ]
+      },
+      {
+        "name": "Account Management",
+        "features": [
+          {
+            "name": "Firefox Accounts"
+          },
+          {
+            "name": "User Authentication"
+          },
+          {
+            "name": "Account Creation"
+          },
+          {
+            "name": "Profile Management"
+          },
+          {
+            "name": "Security Features"
+          }
+        ]
+      },
+      {
+        "name": "Sync Services",
+        "features": [
+          {
+            "name": "Firefox Sync"
+          },
+          {
+            "name": "Bookmark Synchronization"
+          },
+          {
+            "name": "Password Sync"
+          },
+          {
+            "name": "History Sync"
+          },
+          {
+            "name": "Tab Sync"
+          }
+        ]
+      },
+      {
+        "name": "Privacy & Security",
+        "features": [
+          {
+            "name": "Self-Hosted Control"
+          },
+          {
+            "name": "Data Privacy"
+          },
+          {
+            "name": "Encryption"
+          },
+          {
+            "name": "Secure Authentication"
+          },
+          {
+            "name": "Privacy Protection"
+          }
+        ]
+      },
+      {
+        "name": "Mozilla Integration",
+        "features": [
+          {
+            "name": "Firefox Integration"
+          },
+          {
+            "name": "Mozilla Services"
+          },
+          {
+            "name": "Official Protocol"
+          },
+          {
+            "name": "Standard Compliance"
+          },
+          {
+            "name": "Native Support"
+          }
+        ]
+      },
+      {
+        "name": "Infrastructure",
+        "features": [
+          {
+            "name": "Scalable Architecture"
+          },
+          {
+            "name": "Multi-Service Setup"
+          },
+          {
+            "name": "Database Management"
+          },
+          {
+            "name": "Service Orchestration"
+          },
+          {
+            "name": "Monitoring & Logging"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "Two-Factor Authentication"
+          },
+          {
+            "name": "Device Management"
+          },
+          {
+            "name": "Session Management"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Administrative Tools"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/grimoire.mdx",
+    "slug": "grimoire",
+    "name": "Grimoire",
+    "description": "Grimoire is a bookmark manager with a modern UI, automatic content & metadata extraction, categorization, filtering, and more. Built with Node.js, it features a fully documented REST API and Docker image for easy deployment with advanced bookmark management capabilities.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "nodejs",
+      "modern-ui",
+      "automation",
+      "api"
+    ],
+    "github": "goniszewski/grimoire",
+    "urls": {
+      "website": "https://grimoire.pro"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "linkace",
+        "linkwarden",
+        "briefkasten"
+      ],
+      "nonSelfHosted": [
+        "pocket",
+        "raindrop-io",
+        "instapaper"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Node.js application with Docker support. Modern architecture with automated features and comprehensive API for easy deployment and integration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Modern bookmark manager with automatic content extraction and advanced features"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Advanced bookmark management with automation and modern user experience"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + Docker + Modern UI + Automation + REST API + Advanced features"
+          }
+        ]
+      },
+      {
+        "name": "Modern Interface",
+        "features": [
+          {
+            "name": "Modern UI Design"
+          },
+          {
+            "name": "Responsive Layout"
+          },
+          {
+            "name": "Intuitive Navigation"
+          },
+          {
+            "name": "Dark Mode Support"
+          },
+          {
+            "name": "Mobile Optimization"
+          }
+        ]
+      },
+      {
+        "name": "Automation Features",
+        "features": [
+          {
+            "name": "Automatic Content Extraction"
+          },
+          {
+            "name": "Metadata Extraction"
+          },
+          {
+            "name": "Auto-Categorization"
+          },
+          {
+            "name": "Content Analysis"
+          },
+          {
+            "name": "Smart Tagging"
+          }
+        ]
+      },
+      {
+        "name": "Organization & Management",
+        "features": [
+          {
+            "name": "Advanced Categorization"
+          },
+          {
+            "name": "Filtering System"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Collection Organization"
+          },
+          {
+            "name": "Bulk Operations"
+          }
+        ]
+      },
+      {
+        "name": "Search & Discovery",
+        "features": [
+          {
+            "name": "Full-Text Search"
+          },
+          {
+            "name": "Advanced Filtering"
+          },
+          {
+            "name": "Content-Based Search"
+          },
+          {
+            "name": "Smart Recommendations"
+          },
+          {
+            "name": "Quick Access"
+          }
+        ]
+      },
+      {
+        "name": "API & Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "API Documentation"
+          },
+          {
+            "name": "Third-Party Integration"
+          },
+          {
+            "name": "Webhook Support"
+          },
+          {
+            "name": "Developer Tools"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Import/Export"
+          },
+          {
+            "name": "Backup Features"
+          },
+          {
+            "name": "Data Portability"
+          },
+          {
+            "name": "Migration Tools"
+          },
+          {
+            "name": "Archive Management"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/karakeep.mdx",
+    "slug": "karakeep",
+    "name": "Karakeep",
+    "description": "Karakeep is a bookmark-everything app with a touch of AI for the data hoarders out there. Built with modern technologies and Docker support, it provides comprehensive bookmark management with AI-powered features for organizing and discovering content.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "ai",
+      "data-hoarding",
+      "comprehensive",
+      "modern"
+    ],
+    "github": "karakeep-app/karakeep",
+    "urls": {
+      "website": "https://karakeep.app/",
+      "demo": "https://try.karakeep.app/signin"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "grimoire",
+        "linkwarden",
+        "linkace"
+      ],
+      "nonSelfHosted": [
+        "notion",
+        "obsidian",
+        "roam-research"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Docker-based deployment with modern architecture. AI-powered features with straightforward setup for comprehensive bookmark and content management."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Comprehensive bookmark-everything app with AI-powered organization for data hoarders"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Extensive content collection and organization with AI assistance"
+          },
+          {
+            "name": "Architecture",
+            "value": "Docker + AI features + Comprehensive bookmarking + Data hoarding + Modern tech"
+          }
+        ]
+      },
+      {
+        "name": "AI-Powered Features",
+        "features": [
+          {
+            "name": "AI Content Analysis"
+          },
+          {
+            "name": "Smart Categorization"
+          },
+          {
+            "name": "Intelligent Tagging"
+          },
+          {
+            "name": "Content Recommendations"
+          },
+          {
+            "name": "Automated Organization"
+          }
+        ]
+      },
+      {
+        "name": "Comprehensive Bookmarking",
+        "features": [
+          {
+            "name": "Everything Bookmarking"
+          },
+          {
+            "name": "Multi-Format Support"
+          },
+          {
+            "name": "Rich Content Capture"
+          },
+          {
+            "name": "Metadata Extraction"
+          },
+          {
+            "name": "Content Archiving"
+          }
+        ]
+      },
+      {
+        "name": "Data Hoarding Features",
+        "features": [
+          {
+            "name": "Extensive Storage"
+          },
+          {
+            "name": "Content Preservation"
+          },
+          {
+            "name": "Archive Management"
+          },
+          {
+            "name": "Bulk Operations"
+          },
+          {
+            "name": "Data Collection"
+          }
+        ]
+      },
+      {
+        "name": "Organization & Discovery",
+        "features": [
+          {
+            "name": "AI-Assisted Organization"
+          },
+          {
+            "name": "Smart Search"
+          },
+          {
+            "name": "Content Discovery"
+          },
+          {
+            "name": "Relationship Mapping"
+          },
+          {
+            "name": "Knowledge Graphs"
+          }
+        ]
+      },
+      {
+        "name": "Modern Interface",
+        "features": [
+          {
+            "name": "Contemporary Design"
+          },
+          {
+            "name": "Responsive Layout"
+          },
+          {
+            "name": "Intuitive Navigation"
+          },
+          {
+            "name": "Advanced Filtering"
+          },
+          {
+            "name": "Visual Organization"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Import/Export"
+          },
+          {
+            "name": "Backup Systems"
+          },
+          {
+            "name": "Data Portability"
+          },
+          {
+            "name": "Archive Features"
+          },
+          {
+            "name": "Content Preservation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/linkace.mdx",
+    "slug": "linkace",
+    "name": "LinkAce",
+    "description": "LinkAce is a bookmark archive with automatic backups to the Internet Archive, link monitoring, and a full REST API. Built with PHP, it provides comprehensive bookmark management with archival features and can be installed via Docker or as a simple PHP application.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "php",
+      "archival",
+      "monitoring",
+      "api"
+    ],
+    "github": "Kovah/LinkAce",
+    "urls": {
+      "website": "https://www.linkace.org/",
+      "demo": "https://demo.linkace.org/guest/links"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "linkwarden",
+        "grimoire",
+        "shiori"
+      ],
+      "nonSelfHosted": [
+        "pocket",
+        "instapaper",
+        "archive-today"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "PHP application with Docker support. Simple installation with comprehensive archival features and link monitoring capabilities."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Bookmark archive with automatic backups and comprehensive link management"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Long-term bookmark preservation with monitoring and archival features"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + Docker + Internet Archive + Link monitoring + REST API + Archival"
+          }
+        ]
+      },
+      {
+        "name": "Archival Features",
+        "features": [
+          {
+            "name": "Internet Archive Backup"
+          },
+          {
+            "name": "Automatic Archiving"
+          },
+          {
+            "name": "Link Preservation"
+          },
+          {
+            "name": "Historical Snapshots"
+          },
+          {
+            "name": "Content Backup"
+          }
+        ]
+      },
+      {
+        "name": "Link Management",
+        "features": [
+          {
+            "name": "Bookmark Organization"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Category System"
+          },
+          {
+            "name": "Bulk Operations"
+          },
+          {
+            "name": "Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Monitoring & Maintenance",
+        "features": [
+          {
+            "name": "Link Monitoring"
+          },
+          {
+            "name": "Broken Link Detection"
+          },
+          {
+            "name": "Status Checking"
+          },
+          {
+            "name": "Health Monitoring"
+          },
+          {
+            "name": "Automated Maintenance"
+          }
+        ]
+      },
+      {
+        "name": "API & Integration",
+        "features": [
+          {
+            "name": "Full REST API"
+          },
+          {
+            "name": "Third-Party Integration"
+          },
+          {
+            "name": "Automation Support"
+          },
+          {
+            "name": "Developer Tools"
+          },
+          {
+            "name": "Custom Applications"
+          }
+        ]
+      },
+      {
+        "name": "User Interface",
+        "features": [
+          {
+            "name": "Clean Design"
+          },
+          {
+            "name": "Responsive Layout"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Advanced Filtering"
+          },
+          {
+            "name": "User-Friendly Navigation"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Data Export"
+          },
+          {
+            "name": "Backup Features"
+          },
+          {
+            "name": "Migration Tools"
+          },
+          {
+            "name": "Data Portability"
+          },
+          {
+            "name": "Archive Management"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/linkding.mdx",
+    "slug": "linkding",
+    "name": "linkding",
+    "description": "linkding is a minimal bookmark management tool with a fast and clean UI. Built with Python and Django, it offers simple installation through Docker and can run on your Raspberry Pi, providing efficient bookmark management with a focus on simplicity and performance.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "python",
+      "minimal",
+      "fast",
+      "raspberry-pi"
+    ],
+    "github": "sissbruecker/linkding",
+    "urls": {
+      "website": "https://linkding.link/",
+      "demo": "https://demo.linkding.link/login/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "shiori",
+        "buku",
+        "shaarli"
+      ],
+      "nonSelfHosted": [
+        "pinboard",
+        "pocket",
+        "raindrop-io"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Python/Django application with Docker support. Minimal design with simple setup and can run on low-resource devices like Raspberry Pi."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Minimal bookmark management with fast, clean UI and efficient performance"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Simple, efficient bookmark management with minimal resource usage"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python/Django + Docker + Minimal design + Fast performance + Raspberry Pi compatible"
+          }
+        ]
+      },
+      {
+        "name": "Minimal Design",
+        "features": [
+          {
+            "name": "Clean Interface"
+          },
+          {
+            "name": "Fast Performance"
+          },
+          {
+            "name": "Minimal Resource Usage"
+          },
+          {
+            "name": "Simple Navigation"
+          },
+          {
+            "name": "Efficient Workflow"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Quick Bookmark Adding"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Bulk Operations"
+          },
+          {
+            "name": "Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Performance & Efficiency",
+        "features": [
+          {
+            "name": "Fast Loading"
+          },
+          {
+            "name": "Low Resource Usage"
+          },
+          {
+            "name": "Raspberry Pi Compatible"
+          },
+          {
+            "name": "Efficient Database"
+          },
+          {
+            "name": "Optimized Performance"
+          }
+        ]
+      },
+      {
+        "name": "User Experience",
+        "features": [
+          {
+            "name": "Intuitive Interface"
+          },
+          {
+            "name": "Keyboard Shortcuts"
+          },
+          {
+            "name": "Quick Access"
+          },
+          {
+            "name": "Mobile Responsive"
+          },
+          {
+            "name": "Dark Mode"
+          }
+        ]
+      },
+      {
+        "name": "Organization",
+        "features": [
+          {
+            "name": "Tagging System"
+          },
+          {
+            "name": "Search & Filter"
+          },
+          {
+            "name": "Bookmark Lists"
+          },
+          {
+            "name": "Organization Tools"
+          },
+          {
+            "name": "Custom Sorting"
+          }
+        ]
+      },
+      {
+        "name": "Technical Features",
+        "features": [
+          {
+            "name": "Docker Deployment"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Browser Extension"
+          },
+          {
+            "name": "Data Export"
+          },
+          {
+            "name": "Backup Features"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/linkwarden.mdx",
+    "slug": "linkwarden",
+    "name": "LinkWarden",
+    "description": "LinkWarden is a bookmark and archive manager designed to store your useful links. Built with Node.js and Docker support, it provides comprehensive bookmark management with archival features, team collaboration, and modern interface for organizing and preserving web content.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "nodejs",
+      "archive",
+      "collaboration",
+      "modern"
+    ],
+    "github": "linkwarden/linkwarden",
+    "urls": {
+      "website": "https://linkwarden.app/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "linkace",
+        "grimoire",
+        "karakeep"
+      ],
+      "nonSelfHosted": [
+        "pocket",
+        "instapaper",
+        "raindrop-io"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Node.js application with Docker support. Modern architecture with comprehensive bookmark and archive management features for easy deployment."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Comprehensive bookmark and archive manager for storing and organizing useful links"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal and team bookmark management with archival and collaboration features"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + Docker + Archive management + Team collaboration + Modern interface"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Link Organization"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Collection System"
+          },
+          {
+            "name": "Bulk Operations"
+          },
+          {
+            "name": "Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Archive Features",
+        "features": [
+          {
+            "name": "Content Archiving"
+          },
+          {
+            "name": "Link Preservation"
+          },
+          {
+            "name": "Snapshot Creation"
+          },
+          {
+            "name": "Archive Management"
+          },
+          {
+            "name": "Historical Versions"
+          }
+        ]
+      },
+      {
+        "name": "Collaboration",
+        "features": [
+          {
+            "name": "Team Sharing"
+          },
+          {
+            "name": "Collaborative Collections"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Permission System"
+          },
+          {
+            "name": "Shared Workspaces"
+          }
+        ]
+      },
+      {
+        "name": "Modern Interface",
+        "features": [
+          {
+            "name": "Contemporary Design"
+          },
+          {
+            "name": "Responsive Layout"
+          },
+          {
+            "name": "Intuitive Navigation"
+          },
+          {
+            "name": "Dark Mode"
+          },
+          {
+            "name": "Mobile Optimization"
+          }
+        ]
+      },
+      {
+        "name": "Search & Discovery",
+        "features": [
+          {
+            "name": "Full-Text Search"
+          },
+          {
+            "name": "Advanced Filtering"
+          },
+          {
+            "name": "Content Search"
+          },
+          {
+            "name": "Tag-Based Discovery"
+          },
+          {
+            "name": "Quick Access"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Data Export"
+          },
+          {
+            "name": "Backup Features"
+          },
+          {
+            "name": "Migration Tools"
+          },
+          {
+            "name": "Data Portability"
+          },
+          {
+            "name": "Archive Storage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/neonlink.mdx",
+    "slug": "neonlink",
+    "name": "NeonLink",
+    "description": "NeonLink is a bookmark service with unique design and simple installation with Docker. It provides a modern, visually distinctive bookmark management solution with easy deployment and a focus on aesthetic appeal and user experience.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "docker",
+      "unique-design",
+      "modern",
+      "visual"
+    ],
+    "github": "AlexSciFier/neonlink",
+    "urls": {
+      "website": "https://github.com/AlexSciFier/neonlink"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "briefkasten",
+        "grimoire",
+        "linkwarden"
+      ],
+      "nonSelfHosted": [
+        "raindrop-io",
+        "pocket",
+        "start-me"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Docker-based deployment with simple setup. Modern bookmark service with unique design and straightforward installation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Bookmark service with unique visual design and modern user experience"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal bookmark management with emphasis on visual appeal and design"
+          },
+          {
+            "name": "Architecture",
+            "value": "Docker + Unique design + Modern UI + Visual appeal + Simple installation"
+          }
+        ]
+      },
+      {
+        "name": "Unique Design",
+        "features": [
+          {
+            "name": "Distinctive Visual Style"
+          },
+          {
+            "name": "Modern Aesthetics"
+          },
+          {
+            "name": "Creative Interface"
+          },
+          {
+            "name": "Visual Appeal"
+          },
+          {
+            "name": "Unique User Experience"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Bookmark Organization"
+          },
+          {
+            "name": "Link Management"
+          },
+          {
+            "name": "Collection System"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Quick Access"
+          }
+        ]
+      },
+      {
+        "name": "Modern Interface",
+        "features": [
+          {
+            "name": "Contemporary Design"
+          },
+          {
+            "name": "Responsive Layout"
+          },
+          {
+            "name": "Intuitive Navigation"
+          },
+          {
+            "name": "Mobile Friendly"
+          },
+          {
+            "name": "Clean Presentation"
+          }
+        ]
+      },
+      {
+        "name": "Docker Deployment",
+        "features": [
+          {
+            "name": "Simple Installation"
+          },
+          {
+            "name": "Container-Based"
+          },
+          {
+            "name": "Easy Setup"
+          },
+          {
+            "name": "Portable Deployment"
+          },
+          {
+            "name": "Minimal Configuration"
+          }
+        ]
+      },
+      {
+        "name": "User Experience",
+        "features": [
+          {
+            "name": "Visual Organization"
+          },
+          {
+            "name": "Easy Navigation"
+          },
+          {
+            "name": "Quick Bookmark Access"
+          },
+          {
+            "name": "Smooth Interactions"
+          },
+          {
+            "name": "Aesthetic Appeal"
+          }
+        ]
+      },
+      {
+        "name": "Technical Features",
+        "features": [
+          {
+            "name": "Modern Architecture"
+          },
+          {
+            "name": "Performance Optimization"
+          },
+          {
+            "name": "Data Management"
+          },
+          {
+            "name": "Backup Support"
+          },
+          {
+            "name": "Customization Options"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/readeck.mdx",
+    "slug": "readeck",
+    "name": "Readeck",
+    "description": "Readeck is a simple web application that lets you save the precious readable content of web pages you like and want to keep forever. Built with Go, it serves as both a bookmark manager and a read later tool with browser extension support for content preservation.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "go",
+      "read-later",
+      "content-preservation",
+      "browser-extension"
+    ],
+    "github": "readeck/readeck",
+    "urls": {
+      "website": "https://readeck.org/en/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "linkace",
+        "wallabag",
+        "shiori"
+      ],
+      "nonSelfHosted": [
+        "pocket",
+        "instapaper",
+        "readwise"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Go application with Docker support. Simple setup for bookmark management and read later functionality with content preservation features."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Bookmark manager and read later tool for preserving readable web content"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Content preservation and read later functionality with bookmark management"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + Docker + Content preservation + Read later + Browser extension"
+          }
+        ]
+      },
+      {
+        "name": "Content Preservation",
+        "features": [
+          {
+            "name": "Readable Content Extraction"
+          },
+          {
+            "name": "Content Archiving"
+          },
+          {
+            "name": "Text Preservation"
+          },
+          {
+            "name": "Article Saving"
+          },
+          {
+            "name": "Content Storage"
+          }
+        ]
+      },
+      {
+        "name": "Read Later Features",
+        "features": [
+          {
+            "name": "Reading Queue"
+          },
+          {
+            "name": "Article Management"
+          },
+          {
+            "name": "Reading Progress"
+          },
+          {
+            "name": "Offline Reading"
+          },
+          {
+            "name": "Content Organization"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Link Organization"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Collection System"
+          },
+          {
+            "name": "Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Browser Integration",
+        "features": [
+          {
+            "name": "Browser Extension"
+          },
+          {
+            "name": "One-Click Saving"
+          },
+          {
+            "name": "Content Capture"
+          },
+          {
+            "name": "Cross-Browser Support"
+          },
+          {
+            "name": "Seamless Integration"
+          }
+        ]
+      },
+      {
+        "name": "User Experience",
+        "features": [
+          {
+            "name": "Clean Reading Interface"
+          },
+          {
+            "name": "Simple Navigation"
+          },
+          {
+            "name": "Responsive Design"
+          },
+          {
+            "name": "Mobile Optimization"
+          },
+          {
+            "name": "Intuitive Workflow"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Content Backup"
+          },
+          {
+            "name": "Data Export"
+          },
+          {
+            "name": "Migration Support"
+          },
+          {
+            "name": "Archive Management"
+          },
+          {
+            "name": "Data Portability"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/servas.mdx",
+    "slug": "servas",
+    "name": "Servas",
+    "description": "Servas is a self-hosted bookmark management tool that allows organization with tags, groups, and a list specifically for later access. Built with multiple technologies, it supports multiple users with 2FA and includes companion browser extensions for Firefox and Chrome.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "multi-user",
+      "2fa",
+      "browser-extension",
+      "self-hosted"
+    ],
+    "github": "beromir/Servas",
+    "urls": {
+      "website": "https://github.com/beromir/Servas"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "linkwarden",
+        "grimoire",
+        "linkace"
+      ],
+      "nonSelfHosted": [
+        "raindrop-io",
+        "pocket",
+        "pinboard"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Multi-technology application with Docker support. Requires setup for multi-user features, 2FA, and browser extension integration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Self-hosted bookmark management with multi-user support and advanced security"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Team and individual bookmark management with security and organization features"
+          },
+          {
+            "name": "Architecture",
+            "value": "Docker/Node.js/PHP + Multi-user + 2FA + Browser extensions + Advanced organization"
+          }
+        ]
+      },
+      {
+        "name": "Multi-User Support",
+        "features": [
+          {
+            "name": "Multiple Users"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Individual Collections"
+          },
+          {
+            "name": "User Permissions"
+          },
+          {
+            "name": "Team Collaboration"
+          }
+        ]
+      },
+      {
+        "name": "Security Features",
+        "features": [
+          {
+            "name": "Two-Factor Authentication"
+          },
+          {
+            "name": "Secure Access"
+          },
+          {
+            "name": "User Authentication"
+          },
+          {
+            "name": "Security Controls"
+          },
+          {
+            "name": "Privacy Protection"
+          }
+        ]
+      },
+      {
+        "name": "Organization System",
+        "features": [
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Group Organization"
+          },
+          {
+            "name": "Read Later Lists"
+          },
+          {
+            "name": "Category System"
+          },
+          {
+            "name": "Advanced Organization"
+          }
+        ]
+      },
+      {
+        "name": "Browser Integration",
+        "features": [
+          {
+            "name": "Firefox Extension"
+          },
+          {
+            "name": "Chrome Extension"
+          },
+          {
+            "name": "Cross-Browser Support"
+          },
+          {
+            "name": "One-Click Saving"
+          },
+          {
+            "name": "Browser Sync"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Bookmark Organization"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Bulk Operations"
+          },
+          {
+            "name": "Import/Export"
+          },
+          {
+            "name": "Collection Management"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "Read Later Functionality"
+          },
+          {
+            "name": "Sharing Options"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Backup Features"
+          },
+          {
+            "name": "Migration Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/shaarli.mdx",
+    "slug": "shaarli",
+    "name": "Shaarli",
+    "description": "Shaarli is a personal, minimalist, super-fast, no-database bookmarking and link sharing platform. Built with PHP, it provides a lightweight, efficient solution for bookmark management and link sharing without requiring a database, focusing on simplicity and speed.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "php",
+      "minimalist",
+      "no-database",
+      "fast"
+    ],
+    "github": "shaarli/Shaarli",
+    "urls": {
+      "website": "https://github.com/shaarli/Shaarli",
+      "demo": "https://demo.shaarli.org"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "linkding",
+        "shiori",
+        "buku"
+      ],
+      "nonSelfHosted": [
+        "pinboard",
+        "delicious",
+        "diigo"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "PHP application with no database requirements. Minimalist design with simple setup using flat files for storage."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Personal minimalist bookmarking and link sharing platform without database requirements"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Fast, simple bookmark management and link sharing with minimal setup"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + No database + Flat files + Minimalist + Super-fast + Link sharing"
+          }
+        ]
+      },
+      {
+        "name": "No-Database Design",
+        "features": [
+          {
+            "name": "Flat File Storage"
+          },
+          {
+            "name": "No Database Required"
+          },
+          {
+            "name": "Simple Setup"
+          },
+          {
+            "name": "Easy Backup"
+          },
+          {
+            "name": "Portable Data"
+          }
+        ]
+      },
+      {
+        "name": "Minimalist Features",
+        "features": [
+          {
+            "name": "Clean Interface"
+          },
+          {
+            "name": "Essential Functions"
+          },
+          {
+            "name": "Fast Performance"
+          },
+          {
+            "name": "Lightweight Design"
+          },
+          {
+            "name": "Simple Navigation"
+          }
+        ]
+      },
+      {
+        "name": "Link Sharing",
+        "features": [
+          {
+            "name": "Public Sharing"
+          },
+          {
+            "name": "RSS Feeds"
+          },
+          {
+            "name": "Social Features"
+          },
+          {
+            "name": "Link Collections"
+          },
+          {
+            "name": "Sharing Options"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Quick Bookmarking"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Organization Tools"
+          },
+          {
+            "name": "Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Super-Fast Loading"
+          },
+          {
+            "name": "Minimal Resources"
+          },
+          {
+            "name": "Efficient Operation"
+          },
+          {
+            "name": "Quick Response"
+          },
+          {
+            "name": "Optimized Performance"
+          }
+        ]
+      },
+      {
+        "name": "Personal Features",
+        "features": [
+          {
+            "name": "Personal Use"
+          },
+          {
+            "name": "Privacy Control"
+          },
+          {
+            "name": "Custom Configuration"
+          },
+          {
+            "name": "Personal Collections"
+          },
+          {
+            "name": "Individual Management"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/shiori.mdx",
+    "slug": "shiori",
+    "name": "Shiori",
+    "description": "Shiori is a simple bookmark manager built with Go. It provides a clean, efficient bookmark management solution with Docker support, featuring a minimalist design and reliable performance for personal bookmark organization and management.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "go",
+      "simple",
+      "minimal",
+      "efficient"
+    ],
+    "github": "go-shiori/shiori",
+    "urls": {
+      "website": "https://github.com/go-shiori/shiori"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "linkding",
+        "buku",
+        "espial"
+      ],
+      "nonSelfHosted": [
+        "pinboard",
+        "pocket",
+        "raindrop-io"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Go application with Docker support. Simple, efficient bookmark manager with minimal dependencies and straightforward deployment."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Simple, efficient bookmark manager with clean design and reliable performance"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal bookmark management with simplicity and efficiency focus"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go + Docker + Simple design + Efficient performance + Minimal dependencies"
+          }
+        ]
+      },
+      {
+        "name": "Simple Design",
+        "features": [
+          {
+            "name": "Clean Interface"
+          },
+          {
+            "name": "Minimalist Approach"
+          },
+          {
+            "name": "Easy Navigation"
+          },
+          {
+            "name": "Intuitive Design"
+          },
+          {
+            "name": "Distraction-Free"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Bookmark Organization"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Import/Export"
+          },
+          {
+            "name": "Bulk Operations"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Fast Performance"
+          },
+          {
+            "name": "Efficient Operation"
+          },
+          {
+            "name": "Low Resource Usage"
+          },
+          {
+            "name": "Quick Response"
+          },
+          {
+            "name": "Reliable Stability"
+          }
+        ]
+      },
+      {
+        "name": "Go Advantages",
+        "features": [
+          {
+            "name": "Single Binary"
+          },
+          {
+            "name": "Cross-Platform"
+          },
+          {
+            "name": "Minimal Dependencies"
+          },
+          {
+            "name": "Easy Deployment"
+          },
+          {
+            "name": "Reliable Performance"
+          }
+        ]
+      },
+      {
+        "name": "User Features",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Mobile Responsive"
+          },
+          {
+            "name": "Dark Mode"
+          },
+          {
+            "name": "Keyboard Shortcuts"
+          },
+          {
+            "name": "Quick Access"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Data Export"
+          },
+          {
+            "name": "Backup Features"
+          },
+          {
+            "name": "Migration Support"
+          },
+          {
+            "name": "Data Portability"
+          },
+          {
+            "name": "Archive Options"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/slash.mdx",
+    "slug": "slash",
+    "name": "Slash",
+    "description": "Slash is an open source, self-hosted bookmarks and link sharing platform. Built with modern technologies and Docker support, it provides a comprehensive solution for bookmark management and link sharing with a focus on simplicity and user experience.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "link-sharing",
+      "self-hosted",
+      "modern",
+      "docker"
+    ],
+    "github": "boojack/slash",
+    "urls": {
+      "website": "https://github.com/boojack/slash"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "shaarli",
+        "linkwarden",
+        "digibunch"
+      ],
+      "nonSelfHosted": [
+        "linktree",
+        "bio-link",
+        "carrd"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Docker-based deployment with modern architecture. Simple setup for bookmark management and link sharing platform."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Self-hosted bookmarks and link sharing platform with modern design"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal and team bookmark management with link sharing capabilities"
+          },
+          {
+            "name": "Architecture",
+            "value": "Docker + Modern tech + Link sharing + Bookmark management + Self-hosted"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Bookmark Organization"
+          },
+          {
+            "name": "Link Collection"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Import/Export"
+          }
+        ]
+      },
+      {
+        "name": "Link Sharing",
+        "features": [
+          {
+            "name": "Public Link Sharing"
+          },
+          {
+            "name": "Shared Collections"
+          },
+          {
+            "name": "Link Pages"
+          },
+          {
+            "name": "Social Sharing"
+          },
+          {
+            "name": "Sharing Controls"
+          }
+        ]
+      },
+      {
+        "name": "Modern Interface",
+        "features": [
+          {
+            "name": "Contemporary Design"
+          },
+          {
+            "name": "Responsive Layout"
+          },
+          {
+            "name": "Intuitive Navigation"
+          },
+          {
+            "name": "Mobile Optimization"
+          },
+          {
+            "name": "Clean UI"
+          }
+        ]
+      },
+      {
+        "name": "Self-Hosted Benefits",
+        "features": [
+          {
+            "name": "Data Ownership"
+          },
+          {
+            "name": "Privacy Control"
+          },
+          {
+            "name": "Custom Configuration"
+          },
+          {
+            "name": "No External Dependencies"
+          },
+          {
+            "name": "Full Control"
+          }
+        ]
+      },
+      {
+        "name": "User Experience",
+        "features": [
+          {
+            "name": "Easy Setup"
+          },
+          {
+            "name": "Simple Management"
+          },
+          {
+            "name": "Quick Access"
+          },
+          {
+            "name": "Efficient Workflow"
+          },
+          {
+            "name": "User-Friendly"
+          }
+        ]
+      },
+      {
+        "name": "Technical Features",
+        "features": [
+          {
+            "name": "Docker Deployment"
+          },
+          {
+            "name": "Modern Architecture"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Backup Features"
+          },
+          {
+            "name": "Migration Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/bookmarks-link-sharing/syncmarks.mdx",
+    "slug": "syncmarks",
+    "name": "SyncMarks",
+    "description": "SyncMarks is a web application to sync and manage your browser bookmarks from Edge, Firefox and Chromium. Built with PHP, it provides cross-browser bookmark synchronization and management with browser extension support for unified bookmark access across different browsers.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "bookmarks-link-sharing",
+    "tags": [
+      "bookmarks",
+      "php",
+      "browser-sync",
+      "cross-browser",
+      "synchronization"
+    ],
+    "github": "Offerel/SyncMarks-Webapp",
+    "urls": {
+      "website": "https://codeberg.org/Offerel/SyncMarks-Webapp"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "firefox-account-server",
+        "servas",
+        "linkwarden"
+      ],
+      "nonSelfHosted": [
+        "xbrowsersync",
+        "floccus",
+        "browser-sync-services"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "PHP application with browser extension integration. Requires setup for cross-browser synchronization and bookmark management across multiple browsers."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Cross-browser bookmark synchronization and management for multiple browsers"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Unified bookmark management across Edge, Firefox, and Chromium browsers"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + Browser extensions + Cross-browser sync + Bookmark management + Multi-browser"
+          }
+        ]
+      },
+      {
+        "name": "Cross-Browser Support",
+        "features": [
+          {
+            "name": "Edge Integration"
+          },
+          {
+            "name": "Firefox Support"
+          },
+          {
+            "name": "Chromium Compatibility"
+          },
+          {
+            "name": "Multi-Browser Sync"
+          },
+          {
+            "name": "Universal Access"
+          }
+        ]
+      },
+      {
+        "name": "Synchronization Features",
+        "features": [
+          {
+            "name": "Bookmark Sync"
+          },
+          {
+            "name": "Cross-Browser Sync"
+          },
+          {
+            "name": "Real-Time Updates"
+          },
+          {
+            "name": "Conflict Resolution"
+          },
+          {
+            "name": "Sync Management"
+          }
+        ]
+      },
+      {
+        "name": "Browser Extensions",
+        "features": [
+          {
+            "name": "Browser Extension Support"
+          },
+          {
+            "name": "Extension Integration"
+          },
+          {
+            "name": "Cross-Platform Extensions"
+          },
+          {
+            "name": "Seamless Integration"
+          },
+          {
+            "name": "Browser Workflow"
+          }
+        ]
+      },
+      {
+        "name": "Bookmark Management",
+        "features": [
+          {
+            "name": "Unified Management"
+          },
+          {
+            "name": "Organization Tools"
+          },
+          {
+            "name": "Search Functionality"
+          },
+          {
+            "name": "Tag Management"
+          },
+          {
+            "name": "Collection System"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Import/Export"
+          },
+          {
+            "name": "Backup Features"
+          },
+          {
+            "name": "Data Portability"
+          },
+          {
+            "name": "Migration Support"
+          },
+          {
+            "name": "Sync History"
+          }
+        ]
+      },
+      {
+        "name": "User Experience",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Responsive Design"
+          },
+          {
+            "name": "Easy Setup"
+          },
+          {
+            "name": "Intuitive Management"
+          },
+          {
+            "name": "Cross-Platform Access"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/calendar-contacts/baikal.mdx",
+    "slug": "baikal",
+    "name": "Baïkal",
+    "description": "Baïkal is a lightweight CalDAV and CardDAV server based on sabre/dav. Built with PHP, it provides a simple, efficient solution for calendar and contact synchronization across devices with minimal setup and administrative overhead.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "calendar-contacts",
+    "tags": [
+      "caldav",
+      "carddav",
+      "php",
+      "lightweight",
+      "synchronization"
+    ],
+    "github": "sabre-io/Baikal",
+    "urls": {
+      "website": "https://sabre.io/baikal/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "radicale",
+        "davical",
+        "sabredav"
+      ],
+      "nonSelfHosted": [
+        "google-calendar",
+        "outlook-calendar",
+        "icloud-calendar"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "PHP application with simple setup. Lightweight CalDAV/CardDAV server with minimal configuration requirements and straightforward installation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Lightweight CalDAV and CardDAV server for calendar and contact synchronization"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Personal and small team calendar/contact management with cross-device sync"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + sabre/dav + CalDAV/CardDAV + Lightweight + Cross-device sync"
+          }
+        ]
+      },
+      {
+        "name": "Protocol Support",
+        "features": [
+          {
+            "name": "CalDAV Protocol"
+          },
+          {
+            "name": "CardDAV Protocol"
+          },
+          {
+            "name": "WebDAV Foundation"
+          },
+          {
+            "name": "Standard Compliance"
+          },
+          {
+            "name": "Cross-Platform Compatibility"
+          }
+        ]
+      },
+      {
+        "name": "Calendar Features",
+        "features": [
+          {
+            "name": "Calendar Management"
+          },
+          {
+            "name": "Event Synchronization"
+          },
+          {
+            "name": "Multi-Calendar Support"
+          },
+          {
+            "name": "Recurring Events"
+          },
+          {
+            "name": "Calendar Sharing"
+          }
+        ]
+      },
+      {
+        "name": "Contact Management",
+        "features": [
+          {
+            "name": "Contact Synchronization"
+          },
+          {
+            "name": "Address Book Management"
+          },
+          {
+            "name": "Contact Groups"
+          },
+          {
+            "name": "vCard Support"
+          },
+          {
+            "name": "Contact Sharing"
+          }
+        ]
+      },
+      {
+        "name": "Device Compatibility",
+        "features": [
+          {
+            "name": "iOS Integration"
+          },
+          {
+            "name": "Android Support"
+          },
+          {
+            "name": "Desktop Clients"
+          },
+          {
+            "name": "Web Browsers"
+          },
+          {
+            "name": "Thunderbird Support"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "Web Admin Interface"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Simple Configuration"
+          },
+          {
+            "name": "Minimal Maintenance"
+          },
+          {
+            "name": "Easy Setup"
+          }
+        ]
+      },
+      {
+        "name": "Technical Features",
+        "features": [
+          {
+            "name": "Lightweight Design"
+          },
+          {
+            "name": "PHP-Based"
+          },
+          {
+            "name": "Database Support"
+          },
+          {
+            "name": "Security Features"
+          },
+          {
+            "name": "Performance Optimization"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/calendar-contacts/davical.mdx",
+    "slug": "davical",
+    "name": "DAViCal",
+    "description": "DAViCal is a server for calendar sharing (CalDAV) that uses a PostgreSQL database as a data store. Built with PHP, it provides a robust, enterprise-ready solution for calendar management and sharing with advanced features and PostgreSQL reliability.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "calendar-contacts",
+    "tags": [
+      "caldav",
+      "php",
+      "postgresql",
+      "enterprise",
+      "calendar-sharing"
+    ],
+    "github": "davical-project/davical",
+    "urls": {
+      "website": "https://www.davical.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "baikal",
+        "radicale",
+        "sabredav"
+      ],
+      "nonSelfHosted": [
+        "google-calendar",
+        "outlook-calendar",
+        "zimbra"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "PHP application with PostgreSQL database requirement. More complex setup than lightweight alternatives but provides enterprise-grade calendar sharing capabilities."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Enterprise-ready CalDAV server with PostgreSQL backend for robust calendar sharing"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Organizations and teams requiring reliable calendar sharing with database reliability"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + PostgreSQL + CalDAV + Enterprise-grade + Calendar sharing + Robust"
+          }
+        ]
+      },
+      {
+        "name": "CalDAV Protocol",
+        "features": [
+          {
+            "name": "Full CalDAV Support"
+          },
+          {
+            "name": "Calendar Synchronization"
+          },
+          {
+            "name": "Standards Compliance"
+          },
+          {
+            "name": "Cross-Platform Compatibility"
+          },
+          {
+            "name": "Protocol Extensions"
+          }
+        ]
+      },
+      {
+        "name": "Database Features",
+        "features": [
+          {
+            "name": "PostgreSQL Backend"
+          },
+          {
+            "name": "Data Reliability"
+          },
+          {
+            "name": "ACID Compliance"
+          },
+          {
+            "name": "Scalable Storage"
+          },
+          {
+            "name": "Advanced Queries"
+          }
+        ]
+      },
+      {
+        "name": "Calendar Management",
+        "features": [
+          {
+            "name": "Multi-Calendar Support"
+          },
+          {
+            "name": "Calendar Sharing"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Event Management"
+          },
+          {
+            "name": "Recurring Events"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Group Permissions"
+          },
+          {
+            "name": "Administrative Interface"
+          },
+          {
+            "name": "Scalability"
+          },
+          {
+            "name": "Performance Optimization"
+          }
+        ]
+      },
+      {
+        "name": "Security & Access",
+        "features": [
+          {
+            "name": "Authentication Systems"
+          },
+          {
+            "name": "Access Controls"
+          },
+          {
+            "name": "Security Features"
+          },
+          {
+            "name": "User Permissions"
+          },
+          {
+            "name": "Data Protection"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Client Compatibility"
+          },
+          {
+            "name": "Desktop Integration"
+          },
+          {
+            "name": "Mobile Support"
+          },
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Third-Party Tools"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/calendar-contacts/davis.mdx",
+    "slug": "davis",
+    "name": "Davis",
+    "description": "Davis is a simple, dockerizable and fully translatable admin interface for sabre/dav based on Symfony 5 and Bootstrap 4, largely inspired by Baïkal. Built with PHP, it provides a modern, user-friendly interface for managing CalDAV and CardDAV servers.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "calendar-contacts",
+    "tags": [
+      "caldav",
+      "carddav",
+      "php",
+      "admin-interface",
+      "symfony",
+      "docker"
+    ],
+    "github": "tchapi/davis",
+    "urls": {
+      "website": "https://github.com/tchapi/davis"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "baikal",
+        "sabredav",
+        "radicale"
+      ],
+      "nonSelfHosted": [
+        "google-calendar",
+        "outlook-calendar",
+        "icloud-calendar"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "PHP application with Docker support. Modern admin interface with simple setup and containerized deployment for CalDAV/CardDAV management."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Modern admin interface for sabre/dav with Docker support and multilingual capabilities"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "User-friendly CalDAV/CardDAV server management with modern interface"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + Symfony 5 + Bootstrap 4 + Docker + sabre/dav + Modern UI"
+          }
+        ]
+      },
+      {
+        "name": "Modern Interface",
+        "features": [
+          {
+            "name": "Symfony 5 Framework"
+          },
+          {
+            "name": "Bootstrap 4 Design"
+          },
+          {
+            "name": "Responsive Layout"
+          },
+          {
+            "name": "Modern UI/UX"
+          },
+          {
+            "name": "Intuitive Navigation"
+          }
+        ]
+      },
+      {
+        "name": "Admin Features",
+        "features": [
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Calendar Administration"
+          },
+          {
+            "name": "Contact Management"
+          },
+          {
+            "name": "Server Configuration"
+          },
+          {
+            "name": "Access Control"
+          }
+        ]
+      },
+      {
+        "name": "Internationalization",
+        "features": [
+          {
+            "name": "Fully Translatable"
+          },
+          {
+            "name": "Multi-Language Support"
+          },
+          {
+            "name": "Localization Ready"
+          },
+          {
+            "name": "International Users"
+          },
+          {
+            "name": "Language Customization"
+          }
+        ]
+      },
+      {
+        "name": "Docker Integration",
+        "features": [
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Containerized Deployment"
+          },
+          {
+            "name": "Easy Setup"
+          },
+          {
+            "name": "Portable Installation"
+          },
+          {
+            "name": "Container Orchestration"
+          }
+        ]
+      },
+      {
+        "name": "sabre/dav Integration",
+        "features": [
+          {
+            "name": "sabre/dav Backend"
+          },
+          {
+            "name": "CalDAV Support"
+          },
+          {
+            "name": "CardDAV Support"
+          },
+          {
+            "name": "WebDAV Foundation"
+          },
+          {
+            "name": "Protocol Compliance"
+          }
+        ]
+      },
+      {
+        "name": "Technical Features",
+        "features": [
+          {
+            "name": "Modern PHP Framework"
+          },
+          {
+            "name": "Security Features"
+          },
+          {
+            "name": "Performance Optimization"
+          },
+          {
+            "name": "Extensible Architecture"
+          },
+          {
+            "name": "Developer-Friendly"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/calendar-contacts/etebase.mdx",
+    "slug": "etebase",
+    "name": "Etebase (EteSync)",
+    "description": "Etebase (EteSync) is an end-to-end encrypted and journaled personal information server supporting calendar and contact data, offering its own clients. Built with Python/Django, it provides secure, private synchronization with zero-knowledge encryption for personal data.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "calendar-contacts",
+    "tags": [
+      "encryption",
+      "python",
+      "django",
+      "privacy",
+      "zero-knowledge",
+      "journaled"
+    ],
+    "github": "etesync/server",
+    "urls": {
+      "website": "https://www.etebase.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "radicale",
+        "baikal",
+        "davical"
+      ],
+      "nonSelfHosted": [
+        "protonmail-calendar",
+        "tutanota-calendar",
+        "encrypted-cloud-services"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Python/Django application with encryption features. Requires setup for end-to-end encryption and journaled data management with specialized client applications."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "End-to-end encrypted personal information server with zero-knowledge privacy"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Privacy-focused calendar and contact synchronization with complete encryption"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python/Django + End-to-end encryption + Journaled data + Zero-knowledge + Privacy-first"
+          }
+        ]
+      },
+      {
+        "name": "Encryption & Privacy",
+        "features": [
+          {
+            "name": "End-to-End Encryption"
+          },
+          {
+            "name": "Zero-Knowledge Architecture"
+          },
+          {
+            "name": "Client-Side Encryption"
+          },
+          {
+            "name": "Privacy Protection"
+          },
+          {
+            "name": "Secure Data Storage"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Journaled Data Storage"
+          },
+          {
+            "name": "Version History"
+          },
+          {
+            "name": "Data Integrity"
+          },
+          {
+            "name": "Conflict Resolution"
+          },
+          {
+            "name": "Incremental Sync"
+          }
+        ]
+      },
+      {
+        "name": "Supported Data Types",
+        "features": [
+          {
+            "name": "Calendar Data"
+          },
+          {
+            "name": "Contact Information"
+          },
+          {
+            "name": "Task Management"
+          },
+          {
+            "name": "Notes & Journals"
+          },
+          {
+            "name": "Custom Data Types"
+          }
+        ]
+      },
+      {
+        "name": "Client Applications",
+        "features": [
+          {
+            "name": "Native Mobile Apps"
+          },
+          {
+            "name": "Desktop Clients"
+          },
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Cross-Platform Sync"
+          },
+          {
+            "name": "Dedicated Clients"
+          }
+        ]
+      },
+      {
+        "name": "Security Features",
+        "features": [
+          {
+            "name": "Strong Encryption"
+          },
+          {
+            "name": "Secure Authentication"
+          },
+          {
+            "name": "Key Management"
+          },
+          {
+            "name": "Security Auditing"
+          },
+          {
+            "name": "Privacy Controls"
+          }
+        ]
+      },
+      {
+        "name": "Technical Features",
+        "features": [
+          {
+            "name": "Django Framework"
+          },
+          {
+            "name": "RESTful API"
+          },
+          {
+            "name": "Scalable Architecture"
+          },
+          {
+            "name": "Performance Optimization"
+          },
+          {
+            "name": "Developer-Friendly"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/calendar-contacts/manage-my-damn-life.mdx",
+    "slug": "manage-my-damn-life",
+    "name": "Manage My Damn Life",
+    "description": "Manage My Damn Life (MMDL) is a self-hosted front end for managing your CalDAV tasks and calendars. Built with Node.js and Docker, it provides a modern, user-friendly interface for task management and calendar organization with CalDAV integration.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "calendar-contacts",
+    "tags": [
+      "caldav",
+      "nodejs",
+      "docker",
+      "task-management",
+      "frontend",
+      "modern"
+    ],
+    "github": "intri-in/manage-my-damn-life-nextjs",
+    "urls": {
+      "website": "https://intri.in/manage-my-damn-life/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "davis",
+        "baikal",
+        "radicale"
+      ],
+      "nonSelfHosted": [
+        "todoist",
+        "any-do",
+        "microsoft-to-do"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Node.js application with Docker support. Modern frontend interface with simple setup for CalDAV task and calendar management."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Modern frontend interface for CalDAV task management and calendar organization"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "User-friendly task and calendar management with CalDAV backend integration"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + Docker + CalDAV integration + Modern UI + Task management + Frontend"
+          }
+        ]
+      },
+      {
+        "name": "Task Management",
+        "features": [
+          {
+            "name": "Task Creation & Editing"
+          },
+          {
+            "name": "Task Organization"
+          },
+          {
+            "name": "Due Date Management"
+          },
+          {
+            "name": "Priority Settings"
+          },
+          {
+            "name": "Task Categories"
+          }
+        ]
+      },
+      {
+        "name": "Calendar Integration",
+        "features": [
+          {
+            "name": "CalDAV Protocol Support"
+          },
+          {
+            "name": "Calendar Synchronization"
+          },
+          {
+            "name": "Event Management"
+          },
+          {
+            "name": "Multi-Calendar Support"
+          },
+          {
+            "name": "Calendar Views"
+          }
+        ]
+      },
+      {
+        "name": "Modern Interface",
+        "features": [
+          {
+            "name": "Contemporary Design"
+          },
+          {
+            "name": "Responsive Layout"
+          },
+          {
+            "name": "Intuitive Navigation"
+          },
+          {
+            "name": "Mobile Optimization"
+          },
+          {
+            "name": "User-Friendly Experience"
+          }
+        ]
+      },
+      {
+        "name": "Frontend Features",
+        "features": [
+          {
+            "name": "Next.js Framework"
+          },
+          {
+            "name": "Modern Web App"
+          },
+          {
+            "name": "Fast Performance"
+          },
+          {
+            "name": "Interactive Interface"
+          },
+          {
+            "name": "Real-Time Updates"
+          }
+        ]
+      },
+      {
+        "name": "Docker Integration",
+        "features": [
+          {
+            "name": "Docker Support"
+          },
+          {
+            "name": "Containerized Deployment"
+          },
+          {
+            "name": "Easy Setup"
+          },
+          {
+            "name": "Portable Installation"
+          },
+          {
+            "name": "Container Orchestration"
+          }
+        ]
+      },
+      {
+        "name": "CalDAV Features",
+        "features": [
+          {
+            "name": "CalDAV Backend"
+          },
+          {
+            "name": "Server Integration"
+          },
+          {
+            "name": "Data Synchronization"
+          },
+          {
+            "name": "Protocol Compliance"
+          },
+          {
+            "name": "Cross-Platform Sync"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/calendar-contacts/radicale.mdx",
+    "slug": "radicale",
+    "name": "Radicale",
+    "description": "Radicale is a simple calendar and contact server with extremely low administrative overhead. Built with Python, it provides a lightweight, easy-to-deploy CalDAV and CardDAV server that focuses on simplicity and minimal configuration requirements.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "calendar-contacts",
+    "tags": [
+      "caldav",
+      "carddav",
+      "python",
+      "simple",
+      "lightweight",
+      "minimal"
+    ],
+    "github": "Kozea/Radicale",
+    "urls": {
+      "website": "https://radicale.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "baikal",
+        "davical",
+        "sabredav"
+      ],
+      "nonSelfHosted": [
+        "google-calendar",
+        "outlook-calendar",
+        "icloud-calendar"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Python application with minimal configuration. Simple CalDAV/CardDAV server with extremely low administrative overhead and straightforward setup."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Simple calendar and contact server with minimal administrative overhead"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Lightweight CalDAV/CardDAV synchronization with minimal setup and maintenance"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Minimal config + CalDAV/CardDAV + Lightweight + Simple + Low overhead"
+          }
+        ]
+      },
+      {
+        "name": "Simplicity",
+        "features": [
+          {
+            "name": "Minimal Configuration"
+          },
+          {
+            "name": "Easy Setup"
+          },
+          {
+            "name": "Low Administrative Overhead"
+          },
+          {
+            "name": "Simple Deployment"
+          },
+          {
+            "name": "Straightforward Management"
+          }
+        ]
+      },
+      {
+        "name": "Protocol Support",
+        "features": [
+          {
+            "name": "CalDAV Protocol"
+          },
+          {
+            "name": "CardDAV Protocol"
+          },
+          {
+            "name": "WebDAV Foundation"
+          },
+          {
+            "name": "Standards Compliance"
+          },
+          {
+            "name": "Cross-Platform Compatibility"
+          }
+        ]
+      },
+      {
+        "name": "Lightweight Design",
+        "features": [
+          {
+            "name": "Minimal Resource Usage"
+          },
+          {
+            "name": "Fast Performance"
+          },
+          {
+            "name": "Efficient Operation"
+          },
+          {
+            "name": "Small Footprint"
+          },
+          {
+            "name": "Quick Response"
+          }
+        ]
+      },
+      {
+        "name": "Calendar Features",
+        "features": [
+          {
+            "name": "Calendar Synchronization"
+          },
+          {
+            "name": "Event Management"
+          },
+          {
+            "name": "Multi-Calendar Support"
+          },
+          {
+            "name": "Recurring Events"
+          },
+          {
+            "name": "Time Zone Support"
+          }
+        ]
+      },
+      {
+        "name": "Contact Management",
+        "features": [
+          {
+            "name": "Contact Synchronization"
+          },
+          {
+            "name": "Address Book Support"
+          },
+          {
+            "name": "vCard Compatibility"
+          },
+          {
+            "name": "Contact Groups"
+          },
+          {
+            "name": "Contact Sharing"
+          }
+        ]
+      },
+      {
+        "name": "Technical Features",
+        "features": [
+          {
+            "name": "Python-Based"
+          },
+          {
+            "name": "File-Based Storage"
+          },
+          {
+            "name": "Authentication Support"
+          },
+          {
+            "name": "Security Features"
+          },
+          {
+            "name": "Cross-Platform"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/calendar-contacts/sabredav.mdx",
+    "slug": "sabredav",
+    "name": "SabreDAV",
+    "description": "SabreDAV is an open source CardDAV, CalDAV, and WebDAV framework and server. Built with PHP, it provides a comprehensive, standards-compliant foundation for building calendar, contact, and file synchronization solutions with extensive protocol support.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "calendar-contacts",
+    "tags": [
+      "caldav",
+      "carddav",
+      "webdav",
+      "php",
+      "framework",
+      "standards-compliant"
+    ],
+    "github": "sabre-io/dav",
+    "urls": {
+      "website": "https://sabre.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "baikal",
+        "davical",
+        "radicale"
+      ],
+      "nonSelfHosted": [
+        "google-calendar",
+        "outlook-calendar",
+        "icloud-calendar"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "PHP framework requiring development knowledge. Comprehensive WebDAV/CalDAV/CardDAV framework with extensive features but requires technical implementation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Comprehensive WebDAV/CalDAV/CardDAV framework and server for building sync solutions"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Developers and organizations building custom calendar/contact/file sync applications"
+          },
+          {
+            "name": "Architecture",
+            "value": "PHP + Framework + WebDAV/CalDAV/CardDAV + Standards-compliant + Extensible"
+          }
+        ]
+      },
+      {
+        "name": "Protocol Support",
+        "features": [
+          {
+            "name": "WebDAV Protocol"
+          },
+          {
+            "name": "CalDAV Protocol"
+          },
+          {
+            "name": "CardDAV Protocol"
+          },
+          {
+            "name": "Standards Compliance"
+          },
+          {
+            "name": "Protocol Extensions"
+          }
+        ]
+      },
+      {
+        "name": "Framework Features",
+        "features": [
+          {
+            "name": "PHP Framework"
+          },
+          {
+            "name": "Modular Architecture"
+          },
+          {
+            "name": "Extensible Design"
+          },
+          {
+            "name": "Plugin System"
+          },
+          {
+            "name": "Developer APIs"
+          }
+        ]
+      },
+      {
+        "name": "Calendar Features",
+        "features": [
+          {
+            "name": "Calendar Management"
+          },
+          {
+            "name": "Event Synchronization"
+          },
+          {
+            "name": "iCalendar Support"
+          },
+          {
+            "name": "Recurring Events"
+          },
+          {
+            "name": "Time Zone Handling"
+          }
+        ]
+      },
+      {
+        "name": "Contact Features",
+        "features": [
+          {
+            "name": "Contact Management"
+          },
+          {
+            "name": "vCard Support"
+          },
+          {
+            "name": "Address Books"
+          },
+          {
+            "name": "Contact Groups"
+          },
+          {
+            "name": "Contact Synchronization"
+          }
+        ]
+      },
+      {
+        "name": "File Management",
+        "features": [
+          {
+            "name": "File Synchronization"
+          },
+          {
+            "name": "WebDAV File Access"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "File Locking"
+          }
+        ]
+      },
+      {
+        "name": "Developer Features",
+        "features": [
+          {
+            "name": "Comprehensive APIs"
+          },
+          {
+            "name": "Plugin Development"
+          },
+          {
+            "name": "Custom Extensions"
+          },
+          {
+            "name": "Documentation"
+          },
+          {
+            "name": "Testing Framework"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/calendar-contacts/xandikos.mdx",
+    "slug": "xandikos",
+    "name": "Xandikos",
+    "description": "Xandikos is an open source CardDAV and CalDAV server with minimal administrative overhead, backed by a Git repository. Built with Python, it provides a unique approach to calendar and contact synchronization using Git for version control and data storage.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "calendar-contacts",
+    "tags": [
+      "caldav",
+      "carddav",
+      "python",
+      "git",
+      "version-control",
+      "minimal"
+    ],
+    "github": "jelmer/xandikos",
+    "urls": {
+      "website": "https://github.com/jelmer/xandikos"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "radicale",
+        "baikal",
+        "davical"
+      ],
+      "nonSelfHosted": [
+        "google-calendar",
+        "outlook-calendar",
+        "icloud-calendar"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Python application with Git backend. Simple CalDAV/CardDAV server with minimal overhead and unique Git-based storage for version control."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "CalDAV/CardDAV server with Git-based storage and minimal administrative overhead"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Version-controlled calendar and contact synchronization with Git integration"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Git repository + CalDAV/CardDAV + Version control + Minimal overhead"
+          }
+        ]
+      },
+      {
+        "name": "Git Integration",
+        "features": [
+          {
+            "name": "Git Repository Backend"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "Change History"
+          },
+          {
+            "name": "Branching Support"
+          },
+          {
+            "name": "Distributed Storage"
+          }
+        ]
+      },
+      {
+        "name": "Protocol Support",
+        "features": [
+          {
+            "name": "CalDAV Protocol"
+          },
+          {
+            "name": "CardDAV Protocol"
+          },
+          {
+            "name": "WebDAV Foundation"
+          },
+          {
+            "name": "Standards Compliance"
+          },
+          {
+            "name": "Cross-Platform Compatibility"
+          }
+        ]
+      },
+      {
+        "name": "Minimal Administration",
+        "features": [
+          {
+            "name": "Low Administrative Overhead"
+          },
+          {
+            "name": "Simple Configuration"
+          },
+          {
+            "name": "Easy Setup"
+          },
+          {
+            "name": "Minimal Maintenance"
+          },
+          {
+            "name": "Straightforward Management"
+          }
+        ]
+      },
+      {
+        "name": "Version Control Features",
+        "features": [
+          {
+            "name": "Change Tracking"
+          },
+          {
+            "name": "History Management"
+          },
+          {
+            "name": "Conflict Resolution"
+          },
+          {
+            "name": "Backup & Recovery"
+          },
+          {
+            "name": "Distributed Sync"
+          }
+        ]
+      },
+      {
+        "name": "Calendar Features",
+        "features": [
+          {
+            "name": "Calendar Synchronization"
+          },
+          {
+            "name": "Event Management"
+          },
+          {
+            "name": "Multi-Calendar Support"
+          },
+          {
+            "name": "Recurring Events"
+          },
+          {
+            "name": "Time Zone Support"
+          }
+        ]
+      },
+      {
+        "name": "Contact Features",
+        "features": [
+          {
+            "name": "Contact Synchronization"
+          },
+          {
+            "name": "Address Book Support"
+          },
+          {
+            "name": "vCard Compatibility"
+          },
+          {
+            "name": "Contact Groups"
+          },
+          {
+            "name": "Contact Management"
+          }
+        ]
+      }
+    ]
   },
   {
     "filePath": "projects/collaboration/wbo.mdx",
@@ -13141,6 +18754,1576 @@
           },
           {
             "name": "Comments & Discussion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/deployment-automation/capistrano.mdx",
+    "slug": "capistrano",
+    "name": "Capistrano",
+    "description": "Capistrano is a remote server automation and deployment tool written in Ruby. It allows you to deploy your application to any number of machines simultaneously, in sequence, or as a rolling set via SSH, providing reliable and repeatable deployment processes.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "deployment-automation",
+    "tags": [
+      "deployment",
+      "ruby",
+      "ssh",
+      "automation",
+      "rake-based"
+    ],
+    "github": "capistrano/capistrano",
+    "urls": {
+      "website": "https://capistranorb.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "fabric",
+        "ansible",
+        "chef"
+      ],
+      "nonSelfHosted": [
+        "aws-codedeploy",
+        "azure-devops",
+        "google-cloud-deploy"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Ruby gem with simple configuration. Easy setup for Ruby developers with straightforward deployment scripts and SSH-based automation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Remote server automation and deployment tool with SSH-based execution"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Application deployment to multiple servers with Ruby-based automation"
+          },
+          {
+            "name": "Architecture",
+            "value": "Ruby + SSH + Rake-based + Multi-server + Sequential/parallel deployment"
+          }
+        ]
+      },
+      {
+        "name": "Deployment Strategies",
+        "features": [
+          {
+            "name": "Simultaneous Deployment"
+          },
+          {
+            "name": "Sequential Deployment"
+          },
+          {
+            "name": "Rolling Deployment"
+          },
+          {
+            "name": "Blue-Green Deployment"
+          },
+          {
+            "name": "Rollback Support"
+          }
+        ]
+      },
+      {
+        "name": "Server Management",
+        "features": [
+          {
+            "name": "Multi-server Support"
+          },
+          {
+            "name": "Server Roles"
+          },
+          {
+            "name": "Environment Management"
+          },
+          {
+            "name": "SSH Key Management"
+          },
+          {
+            "name": "Connection Pooling"
+          }
+        ]
+      },
+      {
+        "name": "Ruby Integration",
+        "features": [
+          {
+            "name": "Rake-based Tasks"
+          },
+          {
+            "name": "Ruby DSL"
+          },
+          {
+            "name": "Gem Ecosystem"
+          },
+          {
+            "name": "Rails Integration"
+          },
+          {
+            "name": "Bundler Support"
+          }
+        ]
+      },
+      {
+        "name": "Automation Features",
+        "features": [
+          {
+            "name": "Custom Tasks"
+          },
+          {
+            "name": "Before/After Hooks"
+          },
+          {
+            "name": "Conditional Execution"
+          },
+          {
+            "name": "Variable Management"
+          },
+          {
+            "name": "Template Processing"
+          }
+        ]
+      },
+      {
+        "name": "Monitoring & Logging",
+        "features": [
+          {
+            "name": "Deployment Logging"
+          },
+          {
+            "name": "Progress Tracking"
+          },
+          {
+            "name": "Error Handling"
+          },
+          {
+            "name": "Status Reporting"
+          },
+          {
+            "name": "Debug Mode"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Git Integration"
+          },
+          {
+            "name": "SCM Support"
+          },
+          {
+            "name": "Database Migrations"
+          },
+          {
+            "name": "Asset Compilation"
+          },
+          {
+            "name": "Service Management"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/deployment-automation/cloudslang.mdx",
+    "slug": "cloudslang",
+    "name": "CloudSlang",
+    "description": "CloudSlang is a flow-based orchestration tool for managing deployed applications with Docker capabilities. Built with Java, it provides a YAML-based language for creating automated workflows and managing complex deployment scenarios with extensive integration capabilities.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "deployment-automation",
+    "tags": [
+      "orchestration"
+    ],
+    "github": "CloudSlang/score",
+    "urls": {
+      "website": "https://www.cloudslang.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "ansible",
+        "terraform",
+        "chef"
+      ],
+      "nonSelfHosted": [
+        "aws-step-functions",
+        "azure-logic-apps",
+        "google-cloud-workflows"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Java application with YAML-based workflows. Requires understanding of flow-based orchestration concepts but provides powerful automation capabilities."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Flow-based orchestration tool for managing deployed applications and workflows"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Complex deployment orchestration and application management with Docker support"
+          },
+          {
+            "name": "Architecture",
+            "value": "Java + YAML-based + Flow orchestration + Docker integration + Workflow engine"
+          }
+        ]
+      },
+      {
+        "name": "Flow Orchestration",
+        "features": [
+          {
+            "name": "YAML-based Flows"
+          },
+          {
+            "name": "Visual Flow Designer"
+          },
+          {
+            "name": "Conditional Logic"
+          },
+          {
+            "name": "Loop Operations"
+          },
+          {
+            "name": "Parallel Execution"
+          }
+        ]
+      },
+      {
+        "name": "Docker Integration",
+        "features": [
+          {
+            "name": "Docker Container Management"
+          },
+          {
+            "name": "Container Orchestration"
+          },
+          {
+            "name": "Image Management"
+          },
+          {
+            "name": "Registry Integration"
+          },
+          {
+            "name": "Container Monitoring"
+          }
+        ]
+      },
+      {
+        "name": "Workflow Engine",
+        "features": [
+          {
+            "name": "Workflow Execution"
+          },
+          {
+            "name": "State Management"
+          },
+          {
+            "name": "Error Handling"
+          },
+          {
+            "name": "Retry Logic"
+          },
+          {
+            "name": "Workflow Scheduling"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "REST API Integration"
+          },
+          {
+            "name": "Database Connectivity"
+          },
+          {
+            "name": "Cloud Platform Integration"
+          },
+          {
+            "name": "Third-party Tools"
+          },
+          {
+            "name": "Custom Operations"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Workflow Monitoring"
+          },
+          {
+            "name": "Execution History"
+          },
+          {
+            "name": "Performance Metrics"
+          },
+          {
+            "name": "Logging & Auditing"
+          },
+          {
+            "name": "Dashboard Interface"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "Security & Authentication"
+          },
+          {
+            "name": "Role-based Access Control"
+          },
+          {
+            "name": "Multi-tenancy"
+          },
+          {
+            "name": "High Availability"
+          },
+          {
+            "name": "Scalability"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/deployment-automation/cloudstack.mdx",
+    "slug": "cloudstack",
+    "name": "CloudStack",
+    "description": "CloudStack is an open-source cloud computing software platform for creating, managing, and deploying infrastructure cloud services. Built with Java and Python, it provides a complete Infrastructure-as-a-Service (IaaS) solution with comprehensive virtualization and cloud management capabilities.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "deployment-automation",
+    "tags": [
+      "cloud-computing",
+      "iaas",
+      "virtualization",
+      "java",
+      "python"
+    ],
+    "github": "apache/cloudstack",
+    "urls": {
+      "website": "https://cloudstack.apache.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "openstack",
+        "opennebula"
+      ],
+      "nonSelfHosted": [
+        "aws",
+        "azure",
+        "google-cloud"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex cloud platform requiring extensive setup and configuration. Involves multiple components, networking, and storage configuration for full IaaS deployment."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Complete Infrastructure-as-a-Service platform for cloud computing"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Building and managing private and hybrid cloud infrastructures"
+          },
+          {
+            "name": "Architecture",
+            "value": "Java + Python + Multi-tier + Virtualization + Cloud management + IaaS"
+          }
+        ]
+      },
+      {
+        "name": "Virtualization",
+        "features": [
+          {
+            "name": "Hypervisor Support"
+          },
+          {
+            "name": "VM Management"
+          },
+          {
+            "name": "Resource Allocation"
+          },
+          {
+            "name": "Live Migration"
+          },
+          {
+            "name": "High Availability"
+          }
+        ]
+      },
+      {
+        "name": "Networking",
+        "features": [
+          {
+            "name": "Virtual Networks"
+          },
+          {
+            "name": "Load Balancing"
+          },
+          {
+            "name": "Firewall Management"
+          },
+          {
+            "name": "VPN Support"
+          },
+          {
+            "name": "Network Isolation"
+          }
+        ]
+      },
+      {
+        "name": "Storage Management",
+        "features": [
+          {
+            "name": "Primary Storage"
+          },
+          {
+            "name": "Secondary Storage"
+          },
+          {
+            "name": "Volume Management"
+          },
+          {
+            "name": "Snapshot Management"
+          },
+          {
+            "name": "Storage Pools"
+          }
+        ]
+      },
+      {
+        "name": "Cloud Management",
+        "features": [
+          {
+            "name": "Multi-tenancy"
+          },
+          {
+            "name": "Resource Quotas"
+          },
+          {
+            "name": "Billing & Metering"
+          },
+          {
+            "name": "Service Offerings"
+          },
+          {
+            "name": "Template Management"
+          }
+        ]
+      },
+      {
+        "name": "API & Integration",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "CloudStack API"
+          },
+          {
+            "name": "AWS API Compatibility"
+          },
+          {
+            "name": "Third-party Integrations"
+          },
+          {
+            "name": "SDK Support"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "Role-based Access Control"
+          },
+          {
+            "name": "LDAP Integration"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "Monitoring & Alerting"
+          },
+          {
+            "name": "Disaster Recovery"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/deployment-automation/cobbler.mdx",
+    "slug": "cobbler",
+    "name": "Cobbler",
+    "description": "Cobbler is a Linux installation server that allows for rapid setup of network installation environments. Built with Python, it provides automated OS deployment, configuration management, and network boot services for bare metal and virtual machine provisioning.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "deployment-automation",
+    "tags": [
+      "linux-installation",
+      "python",
+      "pxe-boot",
+      "provisioning",
+      "network-install"
+    ],
+    "github": "cobbler/cobbler",
+    "urls": {
+      "website": "https://cobbler.github.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "foreman",
+        "maas",
+        "razor"
+      ],
+      "nonSelfHosted": [
+        "aws-systems-manager",
+        "azure-automation",
+        "google-deployment-manager"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Python application requiring network configuration and boot services setup. Involves PXE, DHCP, and TFTP configuration but provides comprehensive provisioning capabilities."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Linux installation server for rapid network installation environment setup"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Automated OS deployment and bare metal provisioning"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + PXE boot + Network services + Configuration management + Provisioning"
+          }
+        ]
+      },
+      {
+        "name": "OS Deployment",
+        "features": [
+          {
+            "name": "Multiple Linux Distributions"
+          },
+          {
+            "name": "Network Boot (PXE)"
+          },
+          {
+            "name": "Automated Installation"
+          },
+          {
+            "name": "Kickstart Support"
+          },
+          {
+            "name": "Preseed Support"
+          }
+        ]
+      },
+      {
+        "name": "Network Services",
+        "features": [
+          {
+            "name": "DHCP Management"
+          },
+          {
+            "name": "TFTP Server"
+          },
+          {
+            "name": "DNS Management"
+          },
+          {
+            "name": "PXE Boot Services"
+          },
+          {
+            "name": "Network Configuration"
+          }
+        ]
+      },
+      {
+        "name": "Configuration Management",
+        "features": [
+          {
+            "name": "System Profiles"
+          },
+          {
+            "name": "Template System"
+          },
+          {
+            "name": "Variable Management"
+          },
+          {
+            "name": "Post-install Scripts"
+          },
+          {
+            "name": "Configuration Templates"
+          }
+        ]
+      },
+      {
+        "name": "Hardware Management",
+        "features": [
+          {
+            "name": "Hardware Discovery"
+          },
+          {
+            "name": "Power Management"
+          },
+          {
+            "name": "Serial Console"
+          },
+          {
+            "name": "IPMI Support"
+          },
+          {
+            "name": "Wake-on-LAN"
+          }
+        ]
+      },
+      {
+        "name": "Web Interface",
+        "features": [
+          {
+            "name": "Web Management Console"
+          },
+          {
+            "name": "System Monitoring"
+          },
+          {
+            "name": "Installation Progress"
+          },
+          {
+            "name": "Log Viewing"
+          },
+          {
+            "name": "Configuration Interface"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Puppet Integration"
+          },
+          {
+            "name": "Chef Integration"
+          },
+          {
+            "name": "Ansible Integration"
+          },
+          {
+            "name": "Koan Client"
+          },
+          {
+            "name": "API Access"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/deployment-automation/fabric.mdx",
+    "slug": "fabric",
+    "name": "Fabric",
+    "description": "Fabric is a Python library and command-line tool for streamlining the use of SSH for application deployment or systems administration tasks. It provides a simple, Pythonic interface for executing shell commands remotely over SSH, making deployment automation accessible and efficient.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "deployment-automation",
+    "tags": [
+      "python",
+      "ssh",
+      "automation",
+      "deployment",
+      "cli-tool"
+    ],
+    "github": "fabric/fabric",
+    "urls": {
+      "website": "https://www.fabfile.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "ansible",
+        "capistrano",
+        "chef"
+      ],
+      "nonSelfHosted": [
+        "aws-systems-manager",
+        "azure-automation",
+        "google-cloud-shell"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Python library with simple installation via pip. Easy to learn and use for Python developers with straightforward SSH-based automation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Python library and CLI tool for SSH-based deployment and system administration"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Application deployment and remote system administration via SSH"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + SSH + CLI tool + Remote execution + Pythonic interface"
+          }
+        ]
+      },
+      {
+        "name": "SSH Automation",
+        "features": [
+          {
+            "name": "Remote Command Execution"
+          },
+          {
+            "name": "SSH Connection Management"
+          },
+          {
+            "name": "Key-based Authentication"
+          },
+          {
+            "name": "Connection Pooling"
+          },
+          {
+            "name": "Parallel Execution"
+          }
+        ]
+      },
+      {
+        "name": "Python Integration",
+        "features": [
+          {
+            "name": "Pythonic API"
+          },
+          {
+            "name": "Python Script Integration"
+          },
+          {
+            "name": "Object-oriented Interface"
+          },
+          {
+            "name": "Exception Handling"
+          },
+          {
+            "name": "Context Managers"
+          }
+        ]
+      },
+      {
+        "name": "File Operations",
+        "features": [
+          {
+            "name": "File Transfer (SCP/SFTP)"
+          },
+          {
+            "name": "Remote File Management"
+          },
+          {
+            "name": "Template Processing"
+          },
+          {
+            "name": "Directory Operations"
+          },
+          {
+            "name": "Permission Management"
+          }
+        ]
+      },
+      {
+        "name": "Task Management",
+        "features": [
+          {
+            "name": "Task Definition"
+          },
+          {
+            "name": "Task Dependencies"
+          },
+          {
+            "name": "Conditional Execution"
+          },
+          {
+            "name": "Error Handling"
+          },
+          {
+            "name": "Rollback Support"
+          }
+        ]
+      },
+      {
+        "name": "Multi-Host Support",
+        "features": [
+          {
+            "name": "Host Groups"
+          },
+          {
+            "name": "Parallel Execution"
+          },
+          {
+            "name": "Host Filtering"
+          },
+          {
+            "name": "Environment Management"
+          },
+          {
+            "name": "Load Balancing"
+          }
+        ]
+      },
+      {
+        "name": "CLI Features",
+        "features": [
+          {
+            "name": "Command-line Interface"
+          },
+          {
+            "name": "Fabfile Support"
+          },
+          {
+            "name": "Task Discovery"
+          },
+          {
+            "name": "Argument Passing"
+          },
+          {
+            "name": "Interactive Mode"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/deployment-automation/genesis.mdx",
+    "slug": "genesis",
+    "name": "Genesis",
+    "description": "Genesis is a template framework for multi-environment BOSH deployments. Written in Perl, it provides a powerful templating system for managing complex BOSH deployments across multiple environments with shared configurations and environment-specific customizations.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "deployment-automation",
+    "tags": [
+      "bosh",
+      "perl",
+      "template-framework",
+      "multi-environment",
+      "cloud-foundry"
+    ],
+    "github": "starkandwayne/genesis",
+    "urls": {
+      "website": "https://github.com/starkandwayne/genesis"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "terraform",
+        "ansible",
+        "helm"
+      ],
+      "nonSelfHosted": [
+        "aws-cloudformation",
+        "azure-resource-manager",
+        "google-deployment-manager"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Perl-based framework requiring BOSH knowledge. Involves understanding of BOSH concepts and templating but provides powerful multi-environment deployment capabilities."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Template framework for multi-environment BOSH deployments"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Managing complex BOSH deployments across multiple environments"
+          },
+          {
+            "name": "Architecture",
+            "value": "Perl + BOSH + Template framework + Multi-environment + Configuration management"
+          }
+        ]
+      },
+      {
+        "name": "Template System",
+        "features": [
+          {
+            "name": "YAML Templating"
+          },
+          {
+            "name": "Environment Inheritance"
+          },
+          {
+            "name": "Configuration Merging"
+          },
+          {
+            "name": "Variable Substitution"
+          },
+          {
+            "name": "Conditional Logic"
+          }
+        ]
+      },
+      {
+        "name": "Multi-Environment",
+        "features": [
+          {
+            "name": "Environment Management"
+          },
+          {
+            "name": "Configuration Inheritance"
+          },
+          {
+            "name": "Environment-specific Overrides"
+          },
+          {
+            "name": "Shared Base Configurations"
+          },
+          {
+            "name": "Environment Promotion"
+          }
+        ]
+      },
+      {
+        "name": "BOSH Integration",
+        "features": [
+          {
+            "name": "BOSH Deployment Management"
+          },
+          {
+            "name": "Release Management"
+          },
+          {
+            "name": "Stemcell Management"
+          },
+          {
+            "name": "Cloud Config Integration"
+          },
+          {
+            "name": "Runtime Config Support"
+          }
+        ]
+      },
+      {
+        "name": "Configuration Management",
+        "features": [
+          {
+            "name": "Kit System"
+          },
+          {
+            "name": "Feature Flags"
+          },
+          {
+            "name": "Parameter Management"
+          },
+          {
+            "name": "Secret Management"
+          },
+          {
+            "name": "Validation Rules"
+          }
+        ]
+      },
+      {
+        "name": "Workflow",
+        "features": [
+          {
+            "name": "Deployment Pipeline"
+          },
+          {
+            "name": "Environment Promotion"
+          },
+          {
+            "name": "Rollback Support"
+          },
+          {
+            "name": "Diff Generation"
+          },
+          {
+            "name": "Dry-run Mode"
+          }
+        ]
+      },
+      {
+        "name": "Developer Tools",
+        "features": [
+          {
+            "name": "CLI Interface"
+          },
+          {
+            "name": "Debugging Tools"
+          },
+          {
+            "name": "Validation Tools"
+          },
+          {
+            "name": "Documentation Generation"
+          },
+          {
+            "name": "Testing Framework"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/deployment-automation/munki.mdx",
+    "slug": "munki",
+    "name": "Munki",
+    "description": "Munki is a webserver-based repository of packages and package metadata that allows macOS administrators to manage software installs. Built with Python, it provides a comprehensive solution for deploying, updating, and removing software on macOS systems in enterprise environments.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "deployment-automation",
+    "tags": [
+      "macos",
+      "python",
+      "package-management",
+      "enterprise",
+      "software-deployment"
+    ],
+    "github": "munki/munki",
+    "urls": {
+      "website": "https://www.munki.org/munki/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "jamf-pro",
+        "autopkg",
+        "simian"
+      ],
+      "nonSelfHosted": [
+        "jamf-cloud",
+        "mosyle",
+        "kandji"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Python application requiring web server setup and macOS client configuration. Involves package repository management and client deployment but provides comprehensive macOS software management."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Webserver-based repository for macOS software package management"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Enterprise macOS software deployment and management"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python + Web server + Package repository + macOS client + Metadata management"
+          }
+        ]
+      },
+      {
+        "name": "Package Management",
+        "features": [
+          {
+            "name": "Software Installation"
+          },
+          {
+            "name": "Software Updates"
+          },
+          {
+            "name": "Software Removal"
+          },
+          {
+            "name": "Package Dependencies"
+          },
+          {
+            "name": "Version Control"
+          }
+        ]
+      },
+      {
+        "name": "Repository Management",
+        "features": [
+          {
+            "name": "Web-based Repository"
+          },
+          {
+            "name": "Package Metadata"
+          },
+          {
+            "name": "Catalog Management"
+          },
+          {
+            "name": "Manifest System"
+          },
+          {
+            "name": "Package Validation"
+          }
+        ]
+      },
+      {
+        "name": "Client Management",
+        "features": [
+          {
+            "name": "macOS Client Agent"
+          },
+          {
+            "name": "Automatic Updates"
+          },
+          {
+            "name": "User Notifications"
+          },
+          {
+            "name": "Self-Service Portal"
+          },
+          {
+            "name": "Scheduled Installations"
+          }
+        ]
+      },
+      {
+        "name": "Administration",
+        "features": [
+          {
+            "name": "Admin Tools"
+          },
+          {
+            "name": "Package Import"
+          },
+          {
+            "name": "Manifest Editor"
+          },
+          {
+            "name": "Reporting Tools"
+          },
+          {
+            "name": "Configuration Management"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "Group Management"
+          },
+          {
+            "name": "Conditional Items"
+          },
+          {
+            "name": "Machine Groups"
+          },
+          {
+            "name": "User Groups"
+          },
+          {
+            "name": "Policy Management"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Active Directory Integration"
+          },
+          {
+            "name": "LDAP Support"
+          },
+          {
+            "name": "Third-party Tools"
+          },
+          {
+            "name": "Scripting Support"
+          },
+          {
+            "name": "API Access"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/deployment-automation/opennebula.mdx",
+    "slug": "opennebula",
+    "name": "OpenNebula",
+    "description": "OpenNebula is a cloud computing platform for managing heterogeneous distributed data center infrastructures. Built with C++ and Ruby, it provides a comprehensive solution for building and managing enterprise clouds with support for multiple hypervisors and cloud architectures.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "deployment-automation",
+    "tags": [
+      "cloud-computing",
+      "virtualization",
+      "cpp",
+      "ruby",
+      "data-center"
+    ],
+    "github": "OpenNebula/one",
+    "urls": {
+      "website": "https://opennebula.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "cloudstack",
+        "openstack",
+        "eucalyptus"
+      ],
+      "nonSelfHosted": [
+        "aws",
+        "azure",
+        "google-cloud"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex cloud platform requiring extensive setup and configuration. Involves multiple components, hypervisor integration, and networking configuration for enterprise cloud deployment."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Cloud computing platform for managing heterogeneous distributed data center infrastructures"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Enterprise cloud infrastructure management and data center virtualization"
+          },
+          {
+            "name": "Architecture",
+            "value": "C++ + Ruby + Multi-hypervisor + Distributed + Enterprise cloud + Data center management"
+          }
+        ]
+      },
+      {
+        "name": "Virtualization",
+        "features": [
+          {
+            "name": "Multi-hypervisor Support"
+          },
+          {
+            "name": "VM Lifecycle Management"
+          },
+          {
+            "name": "Live Migration"
+          },
+          {
+            "name": "High Availability"
+          },
+          {
+            "name": "Resource Scheduling"
+          }
+        ]
+      },
+      {
+        "name": "Cloud Management",
+        "features": [
+          {
+            "name": "Multi-tenancy"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Resource Quotas"
+          },
+          {
+            "name": "Service Catalogs"
+          },
+          {
+            "name": "Cloud Bursting"
+          }
+        ]
+      },
+      {
+        "name": "Networking",
+        "features": [
+          {
+            "name": "Virtual Networks"
+          },
+          {
+            "name": "Network Isolation"
+          },
+          {
+            "name": "Security Groups"
+          },
+          {
+            "name": "Load Balancing"
+          },
+          {
+            "name": "VPN Support"
+          }
+        ]
+      },
+      {
+        "name": "Storage Management",
+        "features": [
+          {
+            "name": "Distributed Storage"
+          },
+          {
+            "name": "Storage Backends"
+          },
+          {
+            "name": "Volume Management"
+          },
+          {
+            "name": "Snapshot Management"
+          },
+          {
+            "name": "Image Management"
+          }
+        ]
+      },
+      {
+        "name": "Hybrid & Edge Cloud",
+        "features": [
+          {
+            "name": "Multi-site Federation"
+          },
+          {
+            "name": "Edge Computing"
+          },
+          {
+            "name": "Hybrid Cloud"
+          },
+          {
+            "name": "Cloud Bursting"
+          },
+          {
+            "name": "Multi-cloud Management"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "LDAP Integration"
+          },
+          {
+            "name": "Role-based Access Control"
+          },
+          {
+            "name": "Audit Logging"
+          },
+          {
+            "name": "Monitoring & Alerting"
+          },
+          {
+            "name": "Backup & Recovery"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/deployment-automation/overcast.mdx",
+    "slug": "overcast",
+    "name": "Overcast",
+    "description": "Overcast is a tool for deploying VMs across different cloud providers and running commands and scripts across any or all of them in parallel via SSH. Built with Node.js, it provides a unified interface for multi-cloud infrastructure management and automation.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "category": "deployment-automation",
+    "tags": [
+      "multi-cloud",
+      "nodejs",
+      "vm-deployment",
+      "ssh",
+      "parallel-execution"
+    ],
+    "github": "andrewchilds/overcast",
+    "urls": {
+      "website": "https://andrewchilds.github.io/overcast/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "terraform",
+        "ansible",
+        "vagrant"
+      ],
+      "nonSelfHosted": [
+        "aws-cli",
+        "azure-cli",
+        "google-cloud-sdk"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Node.js application with simple npm installation. Easy setup for developers familiar with Node.js and straightforward multi-cloud VM management."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Multi-cloud VM deployment and management with parallel SSH execution"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Multi-cloud infrastructure deployment and automation"
+          },
+          {
+            "name": "Architecture",
+            "value": "Node.js + Multi-cloud + SSH + Parallel execution + VM management"
+          }
+        ]
+      },
+      {
+        "name": "Multi-Cloud Support",
+        "features": [
+          {
+            "name": "AWS Integration"
+          },
+          {
+            "name": "DigitalOcean Support"
+          },
+          {
+            "name": "Linode Integration"
+          },
+          {
+            "name": "Rackspace Support"
+          },
+          {
+            "name": "Unified Interface"
+          }
+        ]
+      },
+      {
+        "name": "VM Management",
+        "features": [
+          {
+            "name": "VM Creation"
+          },
+          {
+            "name": "VM Destruction"
+          },
+          {
+            "name": "VM Configuration"
+          },
+          {
+            "name": "Instance Management"
+          },
+          {
+            "name": "Resource Allocation"
+          }
+        ]
+      },
+      {
+        "name": "SSH Automation",
+        "features": [
+          {
+            "name": "Parallel SSH Execution"
+          },
+          {
+            "name": "Command Distribution"
+          },
+          {
+            "name": "Script Execution"
+          },
+          {
+            "name": "File Transfer"
+          },
+          {
+            "name": "Connection Management"
+          }
+        ]
+      },
+      {
+        "name": "Configuration",
+        "features": [
+          {
+            "name": "Cluster Definitions"
+          },
+          {
+            "name": "Instance Templates"
+          },
+          {
+            "name": "Environment Variables"
+          },
+          {
+            "name": "SSH Key Management"
+          },
+          {
+            "name": "Provider Configuration"
+          }
+        ]
+      },
+      {
+        "name": "Automation",
+        "features": [
+          {
+            "name": "Batch Operations"
+          },
+          {
+            "name": "Scripted Deployments"
+          },
+          {
+            "name": "Parallel Processing"
+          },
+          {
+            "name": "Error Handling"
+          },
+          {
+            "name": "Status Monitoring"
+          }
+        ]
+      },
+      {
+        "name": "CLI Interface",
+        "features": [
+          {
+            "name": "Command-line Tool"
+          },
+          {
+            "name": "Interactive Mode"
+          },
+          {
+            "name": "Configuration Management"
+          },
+          {
+            "name": "Status Reporting"
+          },
+          {
+            "name": "Help System"
           }
         ]
       }

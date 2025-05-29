@@ -1,0 +1,167 @@
+---
+slug: capistrano
+name: Capistrano
+description: |
+  Capistrano is a remote server automation and deployment tool written in Ruby. It allows you to deploy your application to any number of machines simultaneously, in sequence, or as a rolling set via SSH, providing reliable and repeatable deployment processes.
+category: deployment-automation
+tags: [deployment, ruby, ssh, automation, rake-based]
+github: capistrano/capistrano
+urls:
+  website: https://capistranorb.com/
+alternatives:
+  selfHosted: [fabric, ansible, chef]
+  nonSelfHosted: [aws-codedeploy, azure-devops, google-cloud-deploy]
+deployment:
+  difficulty: "Easy"
+  justification: "Ruby gem with simple configuration. Easy setup for Ruby developers with straightforward deployment scripts and SSH-based automation."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Remote server automation and deployment tool with SSH-based execution
+      - name: Target Use Case
+        value: Application deployment to multiple servers with Ruby-based automation
+      - name: Architecture
+        value: Ruby + SSH + Rake-based + Multi-server + Sequential/parallel deployment
+  - name: Deployment Strategies
+    features:
+      - name: Simultaneous Deployment
+      - name: Sequential Deployment
+      - name: Rolling Deployment
+      - name: Blue-Green Deployment
+      - name: Rollback Support
+  - name: Server Management
+    features:
+      - name: Multi-server Support
+      - name: Server Roles
+      - name: Environment Management
+      - name: SSH Key Management
+      - name: Connection Pooling
+  - name: Ruby Integration
+    features:
+      - name: Rake-based Tasks
+      - name: Ruby DSL
+      - name: Gem Ecosystem
+      - name: Rails Integration
+      - name: Bundler Support
+  - name: Automation Features
+    features:
+      - name: Custom Tasks
+      - name: Before/After Hooks
+      - name: Conditional Execution
+      - name: Variable Management
+      - name: Template Processing
+  - name: Monitoring & Logging
+    features:
+      - name: Deployment Logging
+      - name: Progress Tracking
+      - name: Error Handling
+      - name: Status Reporting
+      - name: Debug Mode
+  - name: Integration
+    features:
+      - name: Git Integration
+      - name: SCM Support
+      - name: Database Migrations
+      - name: Asset Compilation
+      - name: Service Management
+---
+
+Capistrano is a powerful remote server automation and deployment tool built with Ruby that simplifies the process of deploying applications to multiple servers. With its SSH-based approach and flexible deployment strategies, it provides reliable, repeatable deployments with excellent support for Ruby and Rails applications.
+
+## Key Features
+
+- **Flexible Deployment Strategies**:
+
+  - Simultaneous deployment to multiple servers
+  - Sequential deployment for controlled rollouts
+  - Rolling deployment for zero-downtime updates
+  - Blue-green deployment support
+  - Automatic rollback capabilities
+  - Custom deployment strategies
+
+- **Advanced Server Management**:
+
+  - Multi-server deployment support
+  - Server role-based organization
+  - Environment-specific configurations
+  - SSH key and connection management
+  - Connection pooling for efficiency
+  - Server health checking
+
+- **Ruby-Native Integration**:
+
+  - Rake-based task system
+  - Ruby DSL for configuration
+  - Extensive gem ecosystem
+  - Native Rails application support
+  - Bundler integration
+  - Ruby best practices
+
+- **Comprehensive Automation**:
+
+  - Custom task creation and execution
+  - Before and after deployment hooks
+  - Conditional task execution
+  - Variable and configuration management
+  - Template processing capabilities
+  - Reusable task libraries
+
+- **Monitoring & Observability**:
+
+  - Detailed deployment logging
+  - Real-time progress tracking
+  - Comprehensive error handling
+  - Deployment status reporting
+  - Debug mode for troubleshooting
+  - Audit trail maintenance
+
+- **Integration Capabilities**:
+
+  - Git and other SCM integration
+  - Database migration automation
+  - Asset compilation and optimization
+  - System service management
+  - Third-party tool integration
+  - Custom plugin development
+
+- **Developer Experience**:
+  - Simple configuration files
+  - Intuitive command-line interface
+  - Extensive documentation
+  - Active community support
+  - Plugin ecosystem
+  - Best practice templates
+
+## Technical Specifications
+
+- **Language**: Ruby
+- **License**: MIT
+- **Deployment**: Ruby gem
+- **Platforms**: Cross-platform (Ruby-based)
+- **Requirements**: Ruby, SSH access to target servers
+- **Protocol**: SSH
+- **Architecture**: Client-server, agentless
+
+## Use Cases
+
+- **Ruby/Rails Applications**: Deploying Ruby and Rails applications
+- **Multi-Server Deployments**: Applications running across multiple servers
+- **Web Application Deployment**: Web applications requiring coordinated deployment
+- **Microservices Deployment**: Deploying microservices architectures
+- **Staging and Production**: Managing multiple deployment environments
+- **Legacy System Updates**: Updating and maintaining legacy applications
+
+## Unique Advantages
+
+- **Ruby-Native**: Built specifically for Ruby ecosystem
+- **SSH-Based**: Agentless deployment using standard SSH
+- **Flexible Strategies**: Multiple deployment strategies out of the box
+- **Mature & Stable**: Long-established tool with proven reliability
+- **Rails Integration**: Excellent integration with Rails applications
+- **Open Source**: Transparent, customizable, and community-driven
+
+Based on the [Capistrano GitHub repository](https://github.com/capistrano/capistrano), this tool provides development teams with a reliable, Ruby-native deployment automation solution that excels in multi-server deployments, making it ideal for Ruby and Rails applications that need coordinated, repeatable deployment processes across multiple environments and servers.

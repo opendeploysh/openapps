@@ -1,0 +1,167 @@
+---
+slug: cobbler
+name: Cobbler
+description: |
+  Cobbler is a Linux installation server that allows for rapid setup of network installation environments. Built with Python, it provides automated OS deployment, configuration management, and network boot services for bare metal and virtual machine provisioning.
+category: deployment-automation
+tags: [linux-installation, python, pxe-boot, provisioning, network-install]
+github: cobbler/cobbler
+urls:
+  website: https://cobbler.github.io/
+alternatives:
+  selfHosted: [foreman, maas, razor]
+  nonSelfHosted: [aws-systems-manager, azure-automation, google-deployment-manager]
+deployment:
+  difficulty: "Medium"
+  justification: "Python application requiring network configuration and boot services setup. Involves PXE, DHCP, and TFTP configuration but provides comprehensive provisioning capabilities."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Linux installation server for rapid network installation environment setup
+      - name: Target Use Case
+        value: Automated OS deployment and bare metal provisioning
+      - name: Architecture
+        value: Python + PXE boot + Network services + Configuration management + Provisioning
+  - name: OS Deployment
+    features:
+      - name: Multiple Linux Distributions
+      - name: Network Boot (PXE)
+      - name: Automated Installation
+      - name: Kickstart Support
+      - name: Preseed Support
+  - name: Network Services
+    features:
+      - name: DHCP Management
+      - name: TFTP Server
+      - name: DNS Management
+      - name: PXE Boot Services
+      - name: Network Configuration
+  - name: Configuration Management
+    features:
+      - name: System Profiles
+      - name: Template System
+      - name: Variable Management
+      - name: Post-install Scripts
+      - name: Configuration Templates
+  - name: Hardware Management
+    features:
+      - name: Hardware Discovery
+      - name: Power Management
+      - name: Serial Console
+      - name: IPMI Support
+      - name: Wake-on-LAN
+  - name: Web Interface
+    features:
+      - name: Web Management Console
+      - name: System Monitoring
+      - name: Installation Progress
+      - name: Log Viewing
+      - name: Configuration Interface
+  - name: Integration
+    features:
+      - name: Puppet Integration
+      - name: Chef Integration
+      - name: Ansible Integration
+      - name: Koan Client
+      - name: API Access
+---
+
+Cobbler is a comprehensive Linux installation server designed to simplify and automate the deployment of operating systems across network environments. Built with Python, it provides a complete solution for bare metal provisioning, network boot services, and configuration management, making it ideal for data centers and large-scale deployments.
+
+## Key Features
+
+- **Comprehensive OS Deployment**:
+
+  - Support for multiple Linux distributions
+  - Network boot (PXE) capabilities
+  - Automated installation processes
+  - Kickstart file management (Red Hat/CentOS)
+  - Preseed file support (Debian/Ubuntu)
+  - Custom installation profiles
+
+- **Network Services Management**:
+
+  - DHCP server management and configuration
+  - TFTP server for boot file serving
+  - DNS management and integration
+  - PXE boot service configuration
+  - Network infrastructure automation
+  - VLAN and subnet management
+
+- **Advanced Configuration Management**:
+
+  - System profile creation and management
+  - Template system for configurations
+  - Variable management and substitution
+  - Post-installation script execution
+  - Configuration template processing
+  - Environment-specific settings
+
+- **Hardware Management Capabilities**:
+
+  - Automatic hardware discovery
+  - Power management integration
+  - Serial console access
+  - IPMI support for remote management
+  - Wake-on-LAN functionality
+  - Hardware inventory tracking
+
+- **User-Friendly Web Interface**:
+
+  - Comprehensive web management console
+  - Real-time system monitoring
+  - Installation progress tracking
+  - Log viewing and analysis
+  - Configuration interface
+  - Dashboard and reporting
+
+- **Integration & Extensibility**:
+
+  - Puppet integration for configuration management
+  - Chef cookbook support
+  - Ansible playbook integration
+  - Koan client for system management
+  - REST API for automation
+  - Custom plugin development
+
+- **Enterprise Features**:
+  - Multi-site deployment support
+  - Role-based access control
+  - Audit logging and tracking
+  - Backup and restore capabilities
+  - High availability configuration
+  - Performance optimization
+
+## Technical Specifications
+
+- **Language**: Python
+- **License**: GPL-2.0
+- **Deployment**: RPM/DEB packages, source
+- **Platforms**: Linux (RHEL, CentOS, Ubuntu, SUSE)
+- **Requirements**: Python, Apache/Nginx, DHCP, TFTP
+- **Database**: File-based configuration
+- **Architecture**: Server-client, network-based
+
+## Use Cases
+
+- **Data Center Provisioning**: Large-scale server deployment and provisioning
+- **Cloud Infrastructure**: Bare metal cloud infrastructure deployment
+- **Development Environments**: Automated development environment setup
+- **Disaster Recovery**: Rapid system recovery and rebuilding
+- **Educational Institutions**: Lab and classroom environment management
+- **Enterprise IT**: Corporate server and workstation deployment
+
+## Unique Advantages
+
+- **Network-Centric**: Built specifically for network-based installations
+- **Multi-Distribution**: Support for multiple Linux distributions
+- **Automation-First**: Designed for automated, hands-off deployments
+- **Integration-Ready**: Excellent integration with configuration management tools
+- **Scalable**: Handles large-scale deployments efficiently
+- **Open Source**: Transparent, customizable, and community-driven
+
+Based on the [Cobbler GitHub repository](https://github.com/cobbler/cobbler), this tool provides system administrators with a comprehensive Linux installation and provisioning platform that excels in network-based deployments, making it ideal for organizations that need automated, scalable OS deployment capabilities for bare metal servers and large-scale infrastructure provisioning.
