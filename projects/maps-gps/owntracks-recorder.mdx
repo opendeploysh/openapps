@@ -1,0 +1,105 @@
+---
+slug: owntracks-recorder
+name: OwnTracks Recorder
+heroImage: https://owntracks.org/assets/images/owntracks-logo.png
+logo: https://avatars.githubusercontent.com/u/8654160?s=64&v=4
+description: |
+  OwnTracks Recorder stores and accesses location data published by OwnTracks mobile apps, providing a self-hosted solution for personal location tracking with complete privacy control.
+category: maps-gps
+tags: [location-tracking, mqtt]
+github: owntracks/recorder
+urls:
+  website: https://owntracks.org/
+alternatives:
+  selfHosted: [dawarich, adventurelog, wanderer]
+  nonSelfHosted: [google-timeline, apple-find-my]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires MQTT broker setup and mobile app configuration, but has good documentation."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Personal location data storage
+      - name: Target Use Case
+        value: Privacy-focused location tracking
+      - name: Architecture
+        value: C application with Lua scripting
+  - name: Location Tracking
+    features:
+      - name: Real-time Location
+      - name: Historical Tracking
+      - name: Geofencing
+      - name: Battery Optimization
+      - name: Offline Support
+  - name: Privacy & Security
+    features:
+      - name: Self-hosted Data
+      - name: Encrypted Communication
+      - name: No Third-party Access
+      - name: Local Control
+      - name: Privacy First
+  - name: Data Management
+    features:
+      - name: JSON Storage
+      - name: Data Export
+      - name: Historical Views
+      - name: Location Cards
+      - name: Web Interface
+  - name: Integration
+    features:
+      - name: MQTT Protocol
+      - name: HTTP API
+      - name: Mobile Apps
+      - name: Webhook Support
+      - name: Third-party Tools
+  - name: Deployment
+    features:
+      - name: Docker Support
+      - name: Package Manager
+      - name: Cross-platform
+      - name: Low Resource
+      - name: Easy Maintenance
+---
+
+OwnTracks Recorder is the server component of the OwnTracks ecosystem, designed to store and manage location data from OwnTracks mobile applications. It provides a completely self-hosted solution for personal location tracking with an emphasis on privacy and data ownership.
+
+## Key Features
+
+- **Privacy-Focused Tracking**:
+
+  - Complete data ownership
+  - Self-hosted infrastructure
+  - No third-party data sharing
+  - Encrypted data transmission
+  - Local data storage
+  - Privacy by design
+
+- **Location Data Management**:
+
+  - Real-time location updates
+  - Historical location storage
+  - Geofence support
+  - Location cards and annotations
+  - Data export capabilities
+  - Timeline visualization
+
+- **Mobile Integration**:
+
+  - iOS and Android apps
+  - Battery-optimized tracking
+  - Offline data queuing
+  - Configurable accuracy
+  - Background operation
+  - Push notifications
+
+- **Technical Features**:
+  - MQTT protocol support
+  - HTTP API access
+  - Webhook integration
+  - Lua scripting support
+  - JSON data format
+  - Web-based interface

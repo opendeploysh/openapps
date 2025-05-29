@@ -16,7 +16,6 @@ export const featureGroup = z.object({
   name: z.string(),
   features: z.array(feature),
 })
-
 export const mdxProjectData = z
   .object({
     filePath: z.string(),
@@ -56,7 +55,20 @@ export const mdxProjectData = z
       .object({
         difficulty: z.enum(["Easy", "Medium", "Advanced"]),
         justification: z.string(),
+        docker: z.boolean().optional(), // Whether Docker deployment is supported
+        dockerCompose: z.boolean().optional(), // Whether docker-compose deployment is supported
       })
+      .optional(),
+
+    systemRequirements: z
+      .object({
+        databases: z.array(z.string()).optional(), // e.g. ["postgresql", "mysql"]
+        storage: z.array(z.string()).optional(), // e.g. ["s3", "local"]
+        cache: z.array(z.string()).optional(), // e.g. ["redis", "memcached"]
+        search: z.array(z.string()).optional(), // e.g. ["elasticsearch", "meilisearch"]
+        other: z.array(z.string()).optional(), // e.g. ["ffmpeg", "imagemagick"]
+      })
+      .passthrough()
       .optional(),
 
     popularity: z.number().optional(),

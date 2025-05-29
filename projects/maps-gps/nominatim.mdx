@@ -1,0 +1,104 @@
+---
+slug: nominatim
+name: Nominatim
+description: |
+  Nominatim is a powerful geocoding service that provides address search and reverse geocoding using OpenStreetMap data. It converts addresses to coordinates and coordinates back to addresses.
+category: maps-gps
+tags: [geocoding, openstreetmap]
+github: osm-search/Nominatim
+urls:
+  website: https://nominatim.org/
+  demo: https://nominatim.openstreetmap.org/
+alternatives:
+  selfHosted: [photon, pelias, mapzen-search]
+  nonSelfHosted: [google-geocoding, mapbox-geocoding]
+deployment:
+  difficulty: "Advanced"
+  justification: "Complex setup requiring PostgreSQL, large OpenStreetMap data import, and significant system resources."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Geocoding and reverse geocoding
+      - name: Target Use Case
+        value: Address search and location lookup
+      - name: Architecture
+        value: C application with PostgreSQL
+  - name: Geocoding Features
+    features:
+      - name: Address to Coordinates
+      - name: Coordinates to Address
+      - name: Structured Search
+      - name: Free-form Search
+      - name: Batch Processing
+  - name: Search Capabilities
+    features:
+      - name: Global Coverage
+      - name: Multi-language Support
+      - name: Fuzzy Matching
+      - name: Importance Ranking
+      - name: Detailed Results
+  - name: Data Source
+    features:
+      - name: OpenStreetMap Data
+      - name: Real-time Updates
+      - name: Custom Importance
+      - name: Administrative Boundaries
+      - name: Point of Interest Search
+  - name: API Features
+    features:
+      - name: REST API
+      - name: JSON/XML Output
+      - name: Rate Limiting
+      - name: Custom Formats
+      - name: Detailed Responses
+  - name: Deployment
+    features:
+      - name: High Performance
+      - name: Scalable
+      - name: Custom Instances
+      - name: Full Control
+      - name: Enterprise Ready
+---
+
+Nominatim is the premier open-source geocoding solution powered by OpenStreetMap data. It provides comprehensive address search and reverse geocoding capabilities, making it ideal for applications requiring location-based services without dependency on commercial APIs.
+
+## Key Features
+
+- **Comprehensive Geocoding**:
+
+  - Address to coordinate conversion
+  - Reverse geocoding (coordinates to address)
+  - Structured and free-form search
+  - Global coverage
+  - Multi-language support
+  - Fuzzy matching capabilities
+
+- **Advanced Search**:
+
+  - Point of Interest (POI) search
+  - Administrative boundary lookup
+  - Importance-based ranking
+  - Detailed result information
+  - Custom search parameters
+  - Batch processing support
+
+- **OpenStreetMap Integration**:
+
+  - Full OSM data utilization
+  - Real-time data updates
+  - Community-maintained data
+  - Rich geographic information
+  - Custom data importance
+  - Detailed metadata
+
+- **Production Ready**:
+  - High-performance architecture
+  - Scalable deployment
+  - Rate limiting support
+  - Custom instance configuration
+  - Enterprise-grade reliability
+  - Full data control
