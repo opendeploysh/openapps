@@ -1,10 +1,10 @@
-import { MetadataRoute } from "next";
-import { projects } from "@/lib/projects";
-import _ from "lodash";
+import { MetadataRoute } from "next"
+import { projects } from "@/lib/projects"
+import _ from "lodash"
 
-const baseUrl = "https://openapps.sh";
+const baseUrl = "https://openapps.sh"
 
-export const dynamic = "force-static";
+export const dynamic = "force-static"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages
@@ -57,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.6,
     },
-  ];
+  ]
 
   // Project pages
   const projectPages = projects.map((project) => ({
@@ -65,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.7,
-  }));
+  }))
 
   // Alternative pages
   const alternativePages = projects.map((project) => ({
@@ -73,25 +73,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
-  }));
+  }))
 
   // Category pages
   const tags = _.chain(projects)
     .flatMap((project) => project.tags)
     .uniq()
-    .value();
+    .value()
 
   const categoryPages = tags.map((category) => ({
     url: `${baseUrl}/categories/${category.toLowerCase().replace(/\s+/g, "-")}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
-  }));
+  }))
 
-  return [
-    ...staticPages,
-    ...projectPages,
-    ...alternativePages,
-    ...categoryPages,
-  ];
+  return [...staticPages, ...projectPages, ...alternativePages, ...categoryPages]
 }

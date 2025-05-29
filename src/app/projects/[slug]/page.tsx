@@ -15,13 +15,13 @@ import { Metadata } from "next"
 import { GitHubEditButton, GitHubViewButton } from "@/components/GitHubEditButton"
 
 interface ProjectPageProps {
-  params: Promise<{
-    slug: string
-  }>
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
-  return projects
+  return projects.map((project) => ({
+    slug: project.slug,
+  }))
 }
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {

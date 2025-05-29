@@ -19,9 +19,7 @@ import {
 } from "@/lib/category-utils"
 
 interface CategoryPageProps {
-  params: Promise<{
-    category: string
-  }>
+  params: Promise<{ category: string }>
 }
 
 // Generate metadata for the page
@@ -66,7 +64,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     },
   }
 }
-
+// getStaticProps
 // Generate static params for all categories
 export async function generateStaticParams() {
   const allCategories = getAllCategoriesData()
@@ -83,8 +81,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const category = findCategoryDataBySlug(categorySlug)
   const baseCategoryProjects = getCategoryProjects(categorySlug)
   const allCategories = getAllCategoriesData()
-
-  console.log(baseCategoryProjects)
 
   // Handle case where category doesn't exist
   if (!category) {
