@@ -1,0 +1,166 @@
+---
+slug: loggifly
+name: LoggiFly
+description: |
+  LoggiFly is a lightweight Docker log monitoring tool that monitors container logs for predefined keywords or regex patterns and sends notifications. It provides instant alerts for security breaches, system errors, or custom patterns through multiple notification channels.
+category: status
+tags: [docker-monitoring, log-monitoring, notifications, alerts, lightweight, container-logs]
+github: clemcer/loggifly
+urls:
+  website: https://github.com/clemcer/loggifly
+alternatives:
+  selfHosted: [beszel, uptime-kuma, netdata, dockwatch]
+  nonSelfHosted: [datadog, splunk, logz-io]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple Docker deployment with YAML configuration. Lightweight tool with straightforward setup for monitoring Docker container logs."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Docker container log monitoring with keyword detection and notifications
+      - name: Target Use Case
+        value: Security monitoring, error detection, and automated alerting for containerized applications
+      - name: Architecture
+        value: Docker log monitoring + Pattern matching + Notification system + Container actions
+  - name: Log Detection
+    features:
+      - name: Plain Text Detection
+      - name: Regex Pattern Matching
+      - name: Multi-Line Log Detection
+      - name: Custom Keywords
+      - name: Pattern Filtering
+  - name: Notification Systems
+    features:
+      - name: Ntfy Integration
+      - name: Apprise Support
+      - name: 100+ Services
+      - name: Custom Endpoints
+      - name: Multiple Channels
+  - name: Container Actions
+    features:
+      - name: Container Restart
+      - name: Container Stop
+      - name: Action Keywords
+      - name: Critical Alerts
+      - name: Automated Response
+  - name: Advanced Features
+    features:
+      - name: Log Attachments
+      - name: Context Inclusion
+      - name: Auto-Reload Config
+      - name: Template Customization
+      - name: Log Filtering
+  - name: Remote Monitoring
+    features:
+      - name: Multiple Remote Hosts
+      - name: TLS Support
+      - name: Socket Proxy
+      - name: Docker Swarm
+      - name: Host Labels
+  - name: Configuration
+    features:
+      - name: YAML Configuration
+      - name: Environment Variables
+      - name: Template System
+      - name: Flexible Setup
+      - name: Hot Reload
+---
+
+LoggiFly is a lightweight and efficient Docker log monitoring tool designed to track container logs for specific keywords, regex patterns, or custom behaviors. It provides instant notifications for security breaches, system errors, crashes, and custom application events, making it an essential tool for maintaining awareness of containerized environments.
+
+## Key Features
+
+- **Advanced Log Detection**:
+
+  - Plain text keyword monitoring in real-time
+  - Complex regex pattern matching for sophisticated detection
+  - Multi-line log entry detection and analysis
+  - Custom keyword and pattern configuration
+  - Intelligent log filtering and processing
+  - Context-aware pattern recognition
+
+- **Comprehensive Notification System**:
+
+  - Direct integration with Ntfy for instant notifications
+  - Apprise support for 100+ notification services
+  - Support for Slack, Discord, Telegram, and more
+  - Custom endpoint integration capabilities
+  - Multiple notification channels per alert
+  - Configurable notification templates and formatting
+
+- **Container Action Automation**:
+
+  - Automatic container restart on critical errors
+  - Container stop functionality to prevent restart loops
+  - Action keywords for triggering specific responses
+  - Cooldown periods to prevent excessive actions
+  - Critical alert handling with immediate response
+  - Automated remediation for known issues
+
+- **Enhanced Context and Debugging**:
+
+  - Automatic log file attachments for context
+  - Configurable log context inclusion
+  - Debug information with notification alerts
+  - Historical log data for issue analysis
+  - Detailed error reporting and tracking
+  - Comprehensive audit trail for actions
+
+- **Flexible Configuration Management**:
+
+  - YAML-based configuration with hot reload
+  - Environment variable support for easy deployment
+  - Template system for custom notifications
+  - Per-container keyword and action configuration
+  - Global and specific monitoring rules
+  - Dynamic configuration updates without restart
+
+- **Remote and Distributed Monitoring**:
+
+  - Multiple remote Docker host support
+  - TLS encryption for secure remote connections
+  - Docker Socket Proxy integration for security
+  - Docker Swarm mode support (experimental)
+  - Host labeling for multi-environment management
+  - Scalable architecture for large deployments
+
+- **Self-Hosting Benefits**:
+  - Complete control over log monitoring and alerts
+  - Privacy protection for sensitive application logs
+  - No external dependencies for core functionality
+  - Custom notification channels and integrations
+  - Cost-effective monitoring for Docker environments
+  - Enhanced security for container log analysis
+
+## Technical Specifications
+
+- **License**: MIT
+- **Deployment**: Docker container, Docker Compose
+- **Platforms**: Cross-platform Docker environments
+- **Requirements**: Docker access, minimal system resources
+- **Configuration**: YAML files, environment variables
+- **Architecture**: Lightweight monitoring agent with notification system
+
+## Use Cases
+
+- **Security Monitoring**: Detect failed logins, breaches, and suspicious activities
+- **Error Detection**: Monitor application crashes and system errors
+- **Application Monitoring**: Track custom application events and behaviors
+- **Debugging Support**: Get immediate alerts with log context for issues
+- **Automation**: Trigger container actions based on log patterns
+- **Compliance**: Monitor for compliance-related log events and violations
+
+## Unique Advantages
+
+- **Docker Native**: Specifically designed for Docker container log monitoring
+- **Lightweight**: Minimal resource overhead with maximum monitoring capability
+- **Pattern Flexibility**: Support for simple keywords to complex regex patterns
+- **Action Integration**: Built-in container restart/stop capabilities
+- **Multi-Service Notifications**: Extensive notification service support via Apprise
+- **Open Source**: MIT licensed, transparent and easily customizable
+
+Based on the [LoggiFly GitHub repository](https://github.com/clemcer/loggifly/), this tool provides users with a specialized Docker log monitoring solution that excels in real-time detection and automated response, making it ideal for DevOps teams, system administrators, and developers who need proactive monitoring and alerting for their containerized applications and services.

@@ -1,0 +1,167 @@
+---
+slug: cncjs
+name: CNCjs
+description: |
+  CNCjs is a modern, web-based interface for controlling CNC milling machines and other numerical control devices. It supports popular firmwares like Grbl, Smoothieware, and TinyG, providing real-time control and monitoring capabilities.
+category: manufacturing
+tags: [cnc, milling, grbl, smoothieware, tinyg, manufacturing]
+github: cncjs/cncjs
+urls:
+  website: https://cnc.js.org/
+alternatives:
+  selfHosted: [universal-gcode-sender, candle, grblcontrol]
+  nonSelfHosted: [mach3, linuxcnc, fusion360-cam]
+deployment:
+  difficulty: "Medium"
+  justification: "Node.js application requiring CNC machine connection setup and firmware configuration. Hardware-specific setup needed."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Web-based CNC machine control and monitoring interface
+      - name: Target Use Case
+        value: CNC milling control, G-code execution, and machine monitoring
+      - name: Architecture
+        value: Node.js + Web interface + Serial communication + Real-time control
+  - name: CNC Control
+    features:
+      - name: Real-Time Control
+      - name: G-Code Execution
+      - name: Machine Monitoring
+      - name: Position Tracking
+      - name: Feed Rate Control
+  - name: Firmware Support
+    features:
+      - name: Grbl Support
+      - name: Smoothieware Support
+      - name: TinyG Support
+      - name: Multiple Controllers
+      - name: Firmware Commands
+  - name: Interface
+    features:
+      - name: Web-Based UI
+      - name: Real-Time Updates
+      - name: 3D Visualization
+      - name: Mobile Compatible
+      - name: Multi-Device Access
+  - name: G-Code Features
+    features:
+      - name: G-Code Sender
+      - name: File Management
+      - name: Code Visualization
+      - name: Toolpath Preview
+      - name: Job Progress
+  - name: Technical
+    features:
+      - name: Node.js Backend
+      - name: Serial Communication
+      - name: WebSocket Updates
+      - name: Plugin System
+      - name: API Access
+  - name: Monitoring
+    features:
+      - name: Real-Time Status
+      - name: Machine Position
+      - name: Tool Status
+      - name: Progress Tracking
+      - name: Error Handling
+---
+
+CNCjs is a comprehensive web-based interface for controlling CNC milling machines and other computer numerical control devices. Built with Node.js, it provides real-time control and monitoring capabilities for popular CNC firmwares including Grbl, Smoothieware, and TinyG.
+
+## Key Features
+
+- **Universal CNC Control**:
+
+  - Support for Grbl, Smoothieware, and TinyG firmwares
+  - Real-time machine control and monitoring
+  - G-code execution and management
+  - Position tracking and coordinate systems
+  - Feed rate and spindle speed control
+  - Emergency stop and safety features
+
+- **Modern Web Interface**:
+
+  - Responsive web-based user interface
+  - Real-time status updates via WebSocket
+  - 3D visualization of toolpaths and workpieces
+  - Mobile device compatibility
+  - Multi-device access and control
+  - Customizable workspace layout
+
+- **Advanced G-Code Management**:
+
+  - G-code file upload and management
+  - Real-time code visualization
+  - Toolpath preview and simulation
+  - Job progress monitoring
+  - Pause, resume, and stop functionality
+  - Code editing and modification
+
+- **Real-Time Monitoring**:
+
+  - Live machine status display
+  - Current position and coordinate tracking
+  - Tool and spindle status monitoring
+  - Work coordinate system management
+  - Real-time feed rate and speed display
+  - Error detection and reporting
+
+- **Technical Excellence**:
+
+  - Node.js-based server architecture
+  - Serial communication with CNC controllers
+  - WebSocket for real-time updates
+  - Extensible plugin system
+  - RESTful API for integration
+  - Cross-platform compatibility
+
+- **Professional Features**:
+
+  - Macro and custom command support
+  - Job queue management
+  - Tool change procedures
+  - Workpiece setup assistance
+  - Machine calibration tools
+  - Data logging and reporting
+
+- **Self-Hosting Benefits**:
+  - Complete control over CNC operations
+  - Local network access for security
+  - Custom configuration and macros
+  - Integration with existing workflows
+  - No dependency on external services
+  - Enhanced manufacturing control
+
+## Technical Specifications
+
+- **Language**: Node.js
+- **License**: MIT
+- **Deployment**: npm, Docker, standalone
+- **Platforms**: Cross-platform (Windows, macOS, Linux)
+- **Requirements**: Node.js, serial port access
+- **Database**: SQLite (for settings and logs)
+- **Architecture**: Node.js web server with serial communication
+
+## Use Cases
+
+- **CNC Milling**: Precision milling operations and part production
+- **Prototyping**: Rapid prototyping and small-batch manufacturing
+- **Educational**: CNC training and educational environments
+- **Hobby Manufacturing**: Personal CNC projects and crafting
+- **Small Business**: Professional CNC services and production
+- **Remote Control**: Network-based CNC machine operation
+
+## Unique Advantages
+
+- **Multi-Firmware Support**: Works with Grbl, Smoothieware, and TinyG
+- **Web-Based Interface**: Modern, responsive web UI for any device
+- **Real-Time Control**: Live machine monitoring and control
+- **Cross-Platform**: Runs on Windows, macOS, and Linux
+- **Extensible**: Plugin system for custom functionality
+- **Open Source**: MIT licensed, transparent and customizable
+
+Based on the [CNCjs GitHub repository](https://github.com/cncjs/cncjs), this tool provides users with a modern, web-based CNC control solution that excels in firmware compatibility and real-time operation, making it ideal for manufacturers, makers, and CNC operators who need reliable, feature-rich machine control software.

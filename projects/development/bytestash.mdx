@@ -1,0 +1,293 @@
+---
+slug: bytestash
+name: ByteStash
+description: A self-hosted code snippet storage solution written in React & Node.js
+category: Development
+tags:
+  - code-snippets
+  - development
+  - productivity
+  - react
+  - nodejs
+  - self-hosted
+  - snippet-manager
+  - typescript
+  - sqlite
+github: jordan-dalby/ByteStash
+urls:
+  website: https://bytestash.com
+alternatives:
+  selfHosted: [boostnote]
+  nonSelfHosted: [snippetslab, dash, lepton, gist]
+deploymentDifficulty: Easy
+pricingModel: Free
+hostingType: Self-Hosted
+---
+
+# ByteStash
+
+A self-hosted web application designed to store, organize, and manage your code snippets efficiently. With support for creating, editing, and filtering snippets, ByteStash helps you keep track of your code in one secure place.
+
+## Overview
+
+ByteStash is a comprehensive code snippet management solution that enables developers to efficiently store, organize, and retrieve code snippets. Built with modern web technologies and designed for self-hosting, ByteStash provides a secure, fast, and user-friendly platform for managing your personal code library. Whether you're a solo developer or part of a team, ByteStash helps streamline your development workflow by keeping all your useful code snippets organized and easily accessible.
+
+## Key Features
+
+### Snippet Management
+
+- **Create and Edit Snippets**: Intuitive interface for adding new code snippets or updating existing ones
+- **Multi-Fragment Support**: Store multiple code fragments within a single snippet for different languages or variations
+- **Language Detection**: Automatic language detection with support for syntax highlighting
+- **Rich Metadata**: Add titles, descriptions, tags, and custom fields to organize snippets
+- **Version History**: Track changes to snippets over time
+- **Bulk Operations**: Import, export, and manage multiple snippets at once
+
+### Advanced Organization
+
+- **Powerful Search**: Full-text search across snippet content, titles, and descriptions
+- **Language Filtering**: Filter snippets by programming language
+- **Tag System**: Organize snippets with custom tags for easy categorization
+- **Folder Structure**: Hierarchical organization with folders and subfolders
+- **Custom Collections**: Create curated collections of related snippets
+- **Smart Filters**: Save custom filter combinations for quick access
+
+### Sharing & Collaboration
+
+- **Public/Private Snippets**: Control visibility with public and private snippet options
+- **Shareable Links**: Generate time-limited or permanent links for snippet sharing
+- **Embed Support**: Embed snippets in external websites and documentation
+- **Team Collaboration**: Multi-user support with permission management
+- **API Access**: RESTful API for programmatic access to snippets
+- **Webhook Integration**: Real-time notifications for snippet changes
+
+### Security & Authentication
+
+- **User Accounts**: Secure user registration and authentication system
+- **Single Sign-On**: OIDC integration for enterprise authentication
+- **Permission Control**: Fine-grained access control for snippets and collections
+- **Account Types**: Support for both internal accounts and SSO-only users
+- **Session Management**: Secure session handling with configurable timeouts
+- **Data Encryption**: Secure storage of sensitive snippet content
+
+## Technology Stack
+
+- **Frontend**: React with TypeScript for type-safe development
+- **Backend**: Node.js with Express framework
+- **Database**: SQLite for simple deployments with optional PostgreSQL support
+- **Styling**: Tailwind CSS for modern, responsive design
+- **Authentication**: JWT-based authentication with OIDC support
+- **API**: RESTful API with comprehensive endpoint coverage
+- **Search**: Full-text search capabilities with indexing
+- **Deployment**: Docker containers for easy deployment and scaling
+
+## Use Cases
+
+### Individual Developers
+
+- Store frequently used code patterns and algorithms
+- Save useful stack overflow solutions and GitHub gists
+- Organize personal coding templates and boilerplates
+- Keep track of configuration snippets and settings
+- Build a personal knowledge base of coding solutions
+
+### Development Teams
+
+- Share common code patterns and best practices
+- Maintain team coding standards and guidelines
+- Store project-specific configurations and scripts
+- Collaborate on reusable components and utilities
+- Document team conventions and procedures
+
+### Educational Institutions
+
+- Provide students with curated code examples
+- Create programming course materials and exercises
+- Share teaching resources among faculty
+- Build repositories of assignment solutions
+- Facilitate code review and learning processes
+
+### Content Creators
+
+- Organize code examples for tutorials and blogs
+- Prepare snippets for live coding sessions
+- Share educational content with audiences
+- Create comprehensive programming guides
+- Maintain consistency across multiple content platforms
+
+## Self-Hosting Benefits
+
+### Complete Data Control
+
+- **Data Ownership**: Keep all your code snippets on your own infrastructure
+- **Privacy Protection**: No third-party access to your proprietary code
+- **Custom Retention**: Implement your own backup and archival strategies
+- **Network Isolation**: Deploy on private networks or behind VPNs
+- **Compliance**: Meet specific organizational or regulatory requirements
+
+### Cost Efficiency
+
+- **No Subscription Fees**: One-time setup without recurring costs
+- **Unlimited Storage**: No limits on number of snippets or file sizes
+- **User Scaling**: Add team members without per-seat pricing
+- **Resource Control**: Scale infrastructure based on actual needs
+- **Long-term Savings**: Avoid escalating costs as usage grows
+
+### Customization Freedom
+
+- **Open Source**: Full access to source code for modifications
+- **Custom Features**: Add organization-specific functionality
+- **Integration Capabilities**: Connect with internal tools and workflows
+- **UI Customization**: Modify interface to match corporate branding
+- **Workflow Optimization**: Adapt the platform to specific development practices
+
+## Installation & Deployment
+
+### Docker Deployment
+
+```bash
+# Simple Docker run
+docker run -d \
+  --name bytestash \
+  -p 5000:5000 \
+  -v ./data:/data/snippets \
+  ghcr.io/jordan-dalby/bytestash:latest
+
+# Docker Compose setup
+version: '3.8'
+services:
+  bytestash:
+    image: ghcr.io/jordan-dalby/bytestash:latest
+    container_name: bytestash
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/data/snippets
+    environment:
+      JWT_SECRET: your-secret-key
+      TOKEN_EXPIRY: 24h
+      ALLOW_NEW_ACCOUNTS: "true"
+      DEBUG: "false"
+```
+
+### Environment Configuration
+
+```bash
+# Basic configuration
+BASE_PATH=""                    # Base URL path for reverse proxy setups
+JWT_SECRET=your-secret-key      # Secret for JWT token generation
+TOKEN_EXPIRY=24h               # Session token expiration time
+ALLOW_NEW_ACCOUNTS=true        # Allow user registration
+DEBUG=false                    # Enable debug logging
+DISABLE_ACCOUNTS=false         # Disable authentication entirely
+DISABLE_INTERNAL_ACCOUNTS=false # Disable internal auth, use only OIDC
+
+# OIDC Configuration
+OIDC_ENABLED=false             # Enable OIDC authentication
+OIDC_DISPLAY_NAME=""           # Display name for OIDC provider
+OIDC_ISSUER_URL=""            # OIDC provider issuer URL
+OIDC_CLIENT_ID=""             # OIDC client ID
+OIDC_CLIENT_SECRET=""         # OIDC client secret
+OIDC_SCOPES=""                # Required OIDC scopes
+```
+
+### Unraid Installation
+
+ByteStash is available on the Unraid App Store for one-click installation.
+
+### PikaPods Hosting
+
+Available on PikaPods for managed hosting starting at $1/month.
+
+## Advanced Features
+
+### API Integration
+
+```javascript
+// Create a new snippet via API
+const response = await fetch("/api/snippets", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${token}`,
+  },
+  body: JSON.stringify({
+    title: "Array Sorting Function",
+    description: "Quick sort implementation in JavaScript",
+    language: "javascript",
+    content: "function quickSort(arr) { /* implementation */ }",
+    tags: ["algorithm", "sorting"],
+    isPublic: false,
+  }),
+})
+```
+
+### Snippet Embedding
+
+```html
+<!-- Embed a public snippet -->
+<iframe src="https://your-bytestash.com/embed/snippet-id" width="600" height="400" frameborder="0"> </iframe>
+```
+
+### Import/Export Operations
+
+- **CSV Import**: Bulk import snippets from spreadsheets
+- **JSON Export**: Export snippet collections in structured format
+- **Git Integration**: Sync snippets with Git repositories
+- **Backup Creation**: Automated backup generation with scheduling
+- **Migration Tools**: Import from other snippet management tools
+
+### Markdown Support
+
+- **Rich Descriptions**: Use Markdown formatting in snippet descriptions
+- **Documentation Links**: Embed links and references in snippet metadata
+- **Code Comments**: Enhanced commenting with Markdown support
+- **Preview Mode**: Live preview of Markdown content
+- **Export Documentation**: Generate documentation from snippet collections
+
+## API Endpoints
+
+ByteStash provides a comprehensive REST API for integration:
+
+### Snippet Management
+
+- `GET /api/snippets` - List all snippets with filtering
+- `POST /api/snippets` - Create a new snippet
+- `GET /api/snippets/:id` - Get specific snippet
+- `PUT /api/snippets/:id` - Update snippet
+- `DELETE /api/snippets/:id` - Delete snippet
+
+### User Management
+
+- `POST /api/auth/login` - User authentication
+- `POST /api/auth/register` - User registration
+- `GET /api/user/profile` - Get user profile
+- `PUT /api/user/profile` - Update user profile
+
+### Public API
+
+- `GET /api/public/snippets` - List public snippets
+- `GET /api/embed/:id` - Get embeddable snippet content
+
+## Alternatives Comparison
+
+| Feature             | ByteStash | SnippetsLab | Boostnote | Lepton |
+| ------------------- | --------- | ----------- | --------- | ------ |
+| Self-Hosted         | ✅        | ❌          | ✅        | ❌     |
+| Multi-User          | ✅        | ❌          | ✅        | ❌     |
+| Web Interface       | ✅        | ❌          | ✅        | ❌     |
+| API Access          | ✅        | ❌          | ❌        | ❌     |
+| Sharing Features    | ✅        | ✅          | ❌        | ✅     |
+| Search & Filter     | ✅        | ✅          | ✅        | ✅     |
+| Syntax Highlighting | ✅        | ✅          | ✅        | ✅     |
+| Mobile Support      | ✅        | ✅          | ✅        | ❌     |
+
+## Resources
+
+- [GitHub Repository](https://github.com/jordan-dalby/ByteStash)
+- [Demo Instance](https://demo.bytestash.com) (username: demo, password: demodemo)
+- [Documentation Wiki](https://github.com/jordan-dalby/ByteStash/wiki)
+- [Installation Guide](https://github.com/jordan-dalby/ByteStash#installation)
+- [API Documentation](https://github.com/jordan-dalby/ByteStash/wiki/API)
+- [PikaPods Hosting](https://www.pikapods.com/pods?run=bytestash)

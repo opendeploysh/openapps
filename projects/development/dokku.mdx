@@ -1,0 +1,245 @@
+---
+slug: dokku
+name: Dokku
+description: A docker-powered PaaS that helps you build and manage the lifecycle of applications - the smallest PaaS implementation you've ever seen
+category: development
+tags:
+  - paas
+  - containers
+  - devops
+  - buildpacks
+  - automation
+github: dokku/dokku
+githubUrl: https://github.com/dokku/dokku
+websiteUrl: https://dokku.com
+urls:
+  website: https://dokku.com
+alternatives:
+  selfHosted: [caprover, coolify]
+  nonSelfHosted: [heroku, railway, render]
+deploymentDifficulty: Easy
+pricingModel: Free
+hostingType: Self-Hosted
+---
+
+# Dokku
+
+Docker powered mini-Heroku. The smallest PaaS implementation you've ever seen.
+
+## Overview
+
+Dokku is a lightweight, self-hosted Platform-as-a-Service (PaaS) that brings Heroku-like deployment capabilities to your own infrastructure. Built on Docker, Dokku enables you to deploy applications using simple `git push` commands while handling all the complexity of containerization, routing, SSL certificates, and scaling behind the scenes. It's designed to be simple to install, easy to use, and powerful enough for production workloads.
+
+## Key Features
+
+### Simple Git-Based Deployment
+
+- **Git Push Deploy**: Deploy applications with a simple `git push dokku main`
+- **Automatic Detection**: Automatically detects application type and configures deployment
+- **Zero-Config Deployment**: Many applications deploy without any configuration files
+- **Branch Support**: Deploy different branches to different environments
+- **Rollback Support**: Easy rollback to previous deployments
+- **Deploy Hooks**: Custom scripts that run during deployment process
+
+### Application Management
+
+- **Multiple Applications**: Host multiple applications on a single server
+- **Process Scaling**: Scale application processes up or down
+- **Environment Variables**: Secure environment variable management
+- **Custom Domains**: Easy custom domain configuration with SSL
+- **Health Checks**: Built-in application health monitoring
+- **Log Management**: Centralized logging for all applications
+
+### Buildpack Support
+
+- **Heroku Buildpacks**: Full compatibility with Heroku buildpacks
+- **Multi-Language**: Support for Node.js, Python, Ruby, PHP, Java, Go, and more
+- **Dockerfile Support**: Deploy applications using Dockerfiles
+- **Custom Buildpacks**: Create and use custom buildpacks for specific needs
+- **Cloud Native Buildpacks**: Support for Cloud Native Buildpack specification
+- **Lambda Builder**: Experimental support for serverless deployments
+
+### Infrastructure & Scaling
+
+- **Docker Integration**: Built on Docker for containerization and isolation
+- **Load Balancing**: Built-in load balancing with nginx
+- **SSL/TLS Support**: Automatic SSL certificate management with Let's Encrypt
+- **Storage Management**: Persistent storage with volume mounting
+- **Database Support**: Easy database provisioning with official plugins
+- **Backup & Restore**: Built-in backup and restore capabilities
+
+## Technology Stack
+
+- **Core**: Shell scripts with modular plugin architecture
+- **Containerization**: Docker for application isolation and deployment
+- **Reverse Proxy**: nginx for routing and load balancing
+- **Process Management**: systemd for service management
+- **Storage**: Docker volumes and host filesystem mounting
+- **Networking**: Docker networking with custom configurations
+- **SSL/TLS**: Let's Encrypt integration for automatic certificates
+- **Monitoring**: Built-in health checks and process monitoring
+
+## Use Cases
+
+### Development Teams
+
+- Create staging and testing environments quickly
+- Deploy feature branches for review and testing
+- Prototype new applications without infrastructure setup
+- Learn deployment best practices in a safe environment
+- Test different application configurations and scaling scenarios
+
+### Small to Medium Businesses
+
+- Host multiple applications on a single server cost-effectively
+- Reduce infrastructure complexity compared to enterprise solutions
+- Maintain control over deployment environment and data
+- Scale applications as business grows
+- Implement CI/CD pipelines with simple tooling
+
+### Educational Institutions
+
+- Teach students about deployment and DevOps practices
+- Provide isolated environments for student projects
+- Demonstrate containerization and scaling concepts
+- Run workshops and bootcamps with minimal setup
+- Create reproducible learning environments
+
+### Personal Projects
+
+- Deploy side projects and portfolios
+- Host multiple websites and applications
+- Experiment with new technologies and frameworks
+- Create development environments for open source contributions
+- Build and deploy automation tools and utilities
+
+## Self-Hosting Benefits
+
+### Cost Efficiency
+
+- **Single Server**: Run multiple applications on one server instead of separate hosting
+- **No Vendor Fees**: Avoid monthly platform fees and usage-based pricing
+- **Resource Optimization**: Efficient resource usage with Docker containerization
+- **Long-term Savings**: Significant cost reduction compared to managed PaaS solutions
+- **Predictable Costs**: Control infrastructure costs with your own hardware
+
+### Complete Control
+
+- **Infrastructure Independence**: No vendor lock-in or platform dependencies
+- **Custom Configuration**: Modify and extend functionality to meet specific needs
+- **Security Control**: Implement your own security policies and access controls
+- **Data Sovereignty**: Keep all application code and data on your infrastructure
+- **Network Control**: Configure networking and firewall rules according to requirements
+
+### Learning & Development
+
+- **DevOps Skills**: Learn deployment, scaling, and infrastructure management
+- **Docker Proficiency**: Gain hands-on experience with containerization
+- **System Administration**: Develop skills in Linux server management
+- **Automation Practice**: Create and maintain deployment automation
+- **Problem Solving**: Troubleshoot and optimize deployment processes
+
+## Installation & Setup
+
+### Quick Installation
+
+```bash
+# Download and run the installation script
+wget -NP . https://dokku.com/install/v0.35.19/bootstrap.sh
+sudo DOKKU_TAG=v0.35.19 bash bootstrap.sh
+
+# Configure your server domain
+sudo dokku domains:set-global dokku.me
+
+# Add your SSH key
+cat ~/.ssh/id_rsa.pub | sudo dokku ssh-keys:add admin
+
+# Create your first app
+sudo dokku apps:create my-app
+```
+
+### Application Deployment
+
+```bash
+# On your local machine
+git clone https://github.com/heroku/ruby-getting-started
+cd ruby-getting-started
+git remote add dokku dokku@your-server.com:my-app
+git push dokku main
+```
+
+### Database Setup
+
+```bash
+# Install PostgreSQL plugin
+sudo dokku plugin:install https://github.com/dokku/dokku-postgres.git
+
+# Create and link database
+sudo dokku postgres:create my-database
+sudo dokku postgres:link my-database my-app
+```
+
+## Plugin Ecosystem
+
+### Official Plugins
+
+- **Databases**: PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch
+- **Storage**: Persistent storage management and backup solutions
+- **Networking**: Advanced routing and load balancing options
+- **Security**: Let's Encrypt SSL, HTTP authentication, and access control
+- **Monitoring**: Application metrics, logging, and health checks
+- **Deployment**: Advanced deployment strategies and rollback options
+
+### Community Plugins
+
+- **Additional Databases**: InfluxDB, CouchDB, RethinkDB
+- **Message Queues**: RabbitMQ, Apache Kafka
+- **Caching**: Memcached, Varnish
+- **Monitoring**: Grafana, Prometheus integration
+- **CI/CD**: Jenkins, GitLab CI integration
+- **Backup**: Automated backup solutions
+
+## Advanced Features
+
+### Zero Downtime Deployments
+
+- **Rolling Updates**: Deploy new versions without service interruption
+- **Health Checks**: Verify application health before switching traffic
+- **Rollback Capability**: Quick rollback if deployment issues occur
+- **Load Balancer Integration**: Seamless traffic switching during deployments
+
+### Scaling & Performance
+
+- **Horizontal Scaling**: Add more application instances to handle increased load
+- **Resource Limits**: Set CPU and memory limits for applications
+- **Auto-scaling**: Plugin support for automatic scaling based on metrics
+- **Performance Monitoring**: Track application performance and resource usage
+
+### Security Features
+
+- **Process Isolation**: Each application runs in isolated Docker containers
+- **User Management**: Multi-user support with SSH key management
+- **SSL/TLS**: Automatic HTTPS with Let's Encrypt certificates
+- **Network Security**: Configurable firewall rules and network policies
+
+## Alternatives Comparison
+
+| Feature             | Dokku | Heroku | CapRover | Coolify |
+| ------------------- | ----- | ------ | -------- | ------- |
+| Open Source         | ✅    | ❌     | ✅       | ✅      |
+| Self-Hosting        | ✅    | ❌     | ✅       | ✅      |
+| Git Deploy          | ✅    | ✅     | ✅       | ✅      |
+| Buildpack Support   | ✅    | ✅     | ✅       | ✅      |
+| Web UI              | 🔌    | ✅     | ✅       | ✅      |
+| Database Management | 🔌    | ✅     | ✅       | ✅      |
+| Auto SSL            | ✅    | ✅     | ✅       | ✅      |
+| Cost                | Free  | 💰     | Free     | Free    |
+
+## Resources
+
+- [Official Documentation](https://dokku.com/docs)
+- [GitHub Repository](https://github.com/dokku/dokku)
+- [Community Slack](https://slack.dokku.com)
+- [Plugin Directory](https://dokku.com/docs/community/plugins)
+- [Tutorial Videos](https://dokku.com/docs/getting-started/installation)
+- [Migration Guides](https://dokku.com/docs/deployment/migration)

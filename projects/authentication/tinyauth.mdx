@@ -1,0 +1,314 @@
+---
+slug: tinyauth
+name: TinyAuth
+description: The simplest way to protect your apps with a login screen - authentication middleware for Docker apps
+category: Authentication
+tags:
+  - authentication
+  - security
+  - middleware
+  - oauth
+  - forward-auth
+github: steveiliop56/tinyauth
+urls:
+  website: https://tinyauth.app
+alternatives:
+  selfHosted: [authelia, authentik, keycloak]
+  nonSelfHosted: [auth0, okta]
+deploymentDifficulty: Easy
+pricingModel: Free
+hostingType: Self-Hosted
+---
+
+# TinyAuth
+
+The easiest way to secure your apps with a login screen. Simple authentication middleware that adds username/password login or OAuth to all of your Docker apps.
+
+## Overview
+
+TinyAuth is a lightweight authentication middleware designed specifically for homelab and self-hosted environments. It provides a simple way to add authentication to any Docker application without modifying the application itself. Built with simplicity in mind, TinyAuth integrates seamlessly with reverse proxies like Traefik, Caddy, and Nginx Proxy Manager to protect your services with minimal configuration.
+
+## Key Features
+
+### Simple Authentication
+
+- **Username/Password Login**: Basic authentication with bcrypt password hashing
+- **OAuth Integration**: Support for Google, GitHub, and generic OAuth providers
+- **Two-Factor Authentication**: TOTP support for enhanced security
+- **Session Management**: Secure session handling with configurable timeouts
+- **Password Reset**: Built-in password reset functionality with email notifications
+- **User Whitelisting**: Control access with user and OAuth whitelists
+
+### Forward Authentication
+
+- **Traefik Integration**: Native support for Traefik forward authentication
+- **Nginx Support**: Compatible with Nginx auth_request module
+- **Caddy Integration**: Works with Caddy's forward_auth directive
+- **Header Injection**: Passes user information to protected applications
+- **OIDC Claims Mapping**: Map OIDC claims to HTTP headers
+- **Group-Based Access**: Control access based on OAuth groups
+
+### Modern Web Interface
+
+- **Responsive Design**: Beautiful, mobile-friendly login interface
+- **Dark Mode**: Automatic dark/light theme switching
+- **Customizable**: Modify login screen text and appearance
+- **Multi-language**: Support for multiple languages with crowdin integration
+- **Progressive Web App**: Can be installed as a PWA on mobile devices
+- **Accessibility**: WCAG compliant interface design
+
+### Enterprise Features
+
+- **OIDC Provider**: Act as an OIDC provider for other applications
+- **Auto-Redirect**: Automatically redirect to preferred OAuth provider
+- **Regex Support**: Advanced user matching with regular expressions
+- **Warning Screens**: Security warnings for redirect URI mismatches
+- **Audit Logging**: Comprehensive logging of authentication events
+- **Rate Limiting**: Protection against brute force attacks
+
+## Technology Stack
+
+- **Backend**: Go for high performance and low resource usage
+- **Frontend**: React with TypeScript and modern CSS
+- **Authentication**: JWT tokens with secure session management
+- **Security**: CSRF protection, secure cookies, and rate limiting
+- **Deployment**: Single Docker container with minimal dependencies
+- **Configuration**: Environment variables or YAML configuration
+- **Database**: Built-in user storage with optional external databases
+- **Proxy Integration**: Native support for popular reverse proxies
+
+## Use Cases
+
+### Homelab Security
+
+- Protect all self-hosted applications with a single authentication layer
+- Add login screens to applications that don't have built-in authentication
+- Implement OAuth for services that only support basic authentication
+- Create a unified login experience across all homelab services
+- Secure internal tools and administrative interfaces
+
+### Development Environments
+
+- Protect staging and development environments from unauthorized access
+- Add authentication to demo applications and prototypes
+- Secure CI/CD interfaces and development tools
+- Protect internal documentation and wikis
+- Control access to development databases and admin panels
+
+### Small Business Applications
+
+- Secure employee access to internal tools and systems
+- Implement single sign-on for business applications
+- Control access to customer data and business intelligence tools
+- Protect file sharing and collaboration platforms
+- Secure remote access to business applications
+
+### Educational Institutions
+
+- Control student access to educational resources and tools
+- Protect administrative systems and student information
+- Secure research tools and laboratory management systems
+- Implement class-specific access controls
+- Protect grading systems and academic records
+
+## Self-Hosting Benefits
+
+### Complete Security Control
+
+- **Authentication Ownership**: Keep all authentication data on your infrastructure
+- **Custom Security Policies**: Implement organization-specific security requirements
+- **Privacy Protection**: No third-party access to user authentication data
+- **Audit Capabilities**: Full visibility into authentication events and user activity
+- **Compliance**: Meet specific regulatory and compliance requirements
+
+### Cost Efficiency
+
+- **No Per-User Fees**: Unlimited users without subscription costs
+- **Resource Efficient**: Minimal server resources required for operation
+- **No Vendor Lock-in**: Avoid dependency on commercial authentication services
+- **Predictable Costs**: One-time setup instead of ongoing subscription fees
+- **Scale Freely**: Add as many protected applications as needed
+
+### Customization & Integration
+
+- **Source Code Access**: Modify and extend functionality as needed
+- **Custom Branding**: Implement your organization's visual identity
+- **Integration Freedom**: Connect with any internal systems and tools
+- **Custom Workflows**: Implement specific authentication workflows
+- **API Extensions**: Build custom features and integrations
+
+## Installation & Configuration
+
+### Docker Deployment
+
+```yaml
+# docker-compose.yml
+version: "3.8"
+services:
+  tinyauth:
+    image: ghcr.io/steveiliop56/tinyauth:v3
+    container_name: tinyauth
+    restart: unless-stopped
+    environment:
+      - SECRET=your-random-32-character-string
+      - APP_URL=https://auth.yourdomain.com
+      - USERS=admin:$2a$10$hashed_password_here
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.tinyauth.rule=Host(`auth.yourdomain.com`)"
+      - "traefik.http.middlewares.tinyauth.forwardauth.address=http://tinyauth:3000/api/auth/traefik"
+```
+
+### Traefik Integration
+
+```yaml
+# Protect any service with TinyAuth
+services:
+  whoami:
+    image: traefik/whoami
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`app.yourdomain.com`)"
+      - "traefik.http.routers.whoami.middlewares=tinyauth"
+```
+
+### OAuth Configuration
+
+```yaml
+# Add OAuth providers
+environment:
+  - OAUTH_GOOGLE_CLIENT_ID=your_google_client_id
+  - OAUTH_GOOGLE_CLIENT_SECRET=your_google_client_secret
+  - OAUTH_GITHUB_CLIENT_ID=your_github_client_id
+  - OAUTH_GITHUB_CLIENT_SECRET=your_github_client_secret
+  - OAUTH_WHITELIST=user@domain.com,admin@domain.com
+```
+
+### User Management
+
+```bash
+# Create users with the CLI
+docker run -it --rm ghcr.io/steveiliop56/tinyauth:v3 user create --interactive
+
+# Output format for Docker Compose
+Username: admin
+Password: [hidden]
+TOTP Secret (optional): [blank for none]
+
+Generated user: admin:$2a$10$UdLYoJ5lgPsC0RKqYH/jMua7zIn0g9kPqWmhYayJYLaZQ/FTmH2/u
+```
+
+## Advanced Configuration
+
+### Custom Domain Setup
+
+```yaml
+# Use your own domain for authentication
+environment:
+  - APP_URL=https://login.mycompany.com
+  - DOMAIN=.mycompany.com # Sets cookie domain for all subdomains
+```
+
+### OIDC Provider Setup
+
+```yaml
+# Configure TinyAuth as an OIDC provider
+environment:
+  - OIDC_ENABLED=true
+  - OIDC_CLIENTS=app1:secret1,app2:secret2
+  - OIDC_REDIRECT_URIS=https://app1.domain.com/callback,https://app2.domain.com/callback
+```
+
+### Two-Factor Authentication
+
+```yaml
+# Enable TOTP for enhanced security
+environment:
+  - TOTP_ENABLED=true
+  - TOTP_ISSUER=MyCompany
+  - USERS=admin:$2a$10$hash:JBSWY3DPEHPK3PXP # Include TOTP secret
+```
+
+### Group-Based Access Control
+
+```yaml
+# Control access based on OAuth groups
+labels:
+  - "tinyauth.oauth.groups=admin,developers" # Only these groups can access
+```
+
+## Reverse Proxy Integrations
+
+### Nginx Proxy Manager
+
+```nginx
+# Custom location for auth_request
+location /auth {
+    internal;
+    proxy_pass http://tinyauth:3000/api/auth/nginx;
+    proxy_pass_request_body off;
+    proxy_set_header Content-Length "";
+    proxy_set_header X-Original-URI $request_uri;
+}
+
+# Protect your application
+location / {
+    auth_request /auth;
+    proxy_pass http://your-app:port;
+}
+```
+
+### Caddy Configuration
+
+```caddyfile
+# Caddyfile example
+app.yourdomain.com {
+    forward_auth tinyauth:3000 {
+        uri /api/auth/caddy
+        copy_headers Remote-User Remote-Email Remote-Name
+    }
+    reverse_proxy your-app:port
+}
+```
+
+## Security Features
+
+### Authentication Security
+
+- **Bcrypt Password Hashing**: Industry-standard password protection
+- **CSRF Protection**: Protection against cross-site request forgery
+- **Secure Cookies**: HttpOnly, Secure, and SameSite cookie attributes
+- **Session Timeout**: Configurable session expiration and renewal
+- **Rate Limiting**: Protection against brute force attacks
+- **TOTP Integration**: Time-based one-time password support
+
+### Network Security
+
+- **TLS Termination**: Full HTTPS support with certificate management
+- **Header Security**: Security headers for protection against common attacks
+- **Domain Validation**: Redirect URI validation for OAuth flows
+- **IP Whitelisting**: Optional IP-based access restrictions
+- **Audit Logging**: Comprehensive logging of security events
+
+## Alternatives Comparison
+
+| Feature        | TinyAuth | Authelia | Authentik | Keycloak |
+| -------------- | -------- | -------- | --------- | -------- |
+| Complexity     | Simple   | Medium   | High      | High     |
+| Resource Usage | Low      | Medium   | High      | High     |
+| Setup Time     | Minutes  | Hours    | Hours     | Days     |
+| OAuth Support  | ✅       | ✅       | ✅        | ✅       |
+| LDAP Support   | ❌       | ✅       | ✅        | ✅       |
+| TOTP Support   | ✅       | ✅       | ✅        | ✅       |
+| Web UI         | ✅       | ✅       | ✅        | ✅       |
+| Docker Size    | ~50MB    | ~100MB   | ~500MB    | ~800MB   |
+| Homelab Focus  | ✅       | ✅       | ❌        | ❌       |
+
+## Resources
+
+- [Official Documentation](https://tinyauth.app/docs)
+- [GitHub Repository](https://github.com/steveiliop56/tinyauth)
+- [Demo Instance](https://demo.tinyauth.app)
+- [Community Discord](https://discord.gg/tinyauth)
+- [Configuration Examples](https://tinyauth.app/docs/guides)
+- [Migration Guides](https://tinyauth.app/docs/migration)

@@ -1,0 +1,232 @@
+---
+slug: unleash
+name: Unleash
+description: Open-source feature management platform for feature flags, feature toggles, and A/B testing
+category: Development
+tags:
+  - feature-flags
+  - feature-toggles
+  - open-feature
+  - development
+  - a-b-testing
+  - continuous-deployment
+github: Unleash/unleash
+urls:
+  website: https://getunleash.io
+alternatives:
+  selfHosted: [flipper]
+  nonSelfHosted: [launchdarkly, split, rollout, flagship]
+deploymentDifficulty: Medium
+pricingModel: Open-Core
+hostingType: Self-Hosted
+---
+
+# Unleash
+
+Open-source feature management platform that provides feature flags, feature toggles, and A/B testing capabilities for modern development teams.
+
+## Overview
+
+Unleash is a comprehensive feature management platform that enables teams to safely deploy and test new features through feature flags and toggles. Trusted by thousands of companies worldwide, Unleash provides enterprise-grade feature management capabilities while maintaining the flexibility and transparency of open-source software. The platform supports multiple programming languages and environments, making it suitable for organizations of any size.
+
+## Key Features
+
+### Feature Flag Management
+
+- **Simple Toggle Control**: Enable or disable features instantly without code deployments
+- **Gradual Rollouts**: Progressively roll out features to increasing percentages of users
+- **User Targeting**: Target specific users, user groups, or demographics
+- **Environment Management**: Separate configurations for development, staging, and production
+- **Feature Dependencies**: Manage complex feature relationships and dependencies
+- **Scheduled Toggles**: Automatically enable or disable features at specific times
+
+### Advanced Targeting & Segmentation
+
+- **Custom Constraints**: Create complex targeting rules based on any user attribute
+- **Activation Strategies**: Use predefined or custom strategies for feature activation
+- **Flexible Operators**: Support for various comparison operators and conditions
+- **Context-Aware**: Make decisions based on user context, location, or device
+- **Dynamic Segments**: Create reusable user segments for consistent targeting
+- **A/B Testing**: Built-in support for experiments and variant testing
+
+### Developer Experience
+
+- **Multiple SDKs**: Official SDKs for 15+ programming languages
+- **Real-time Updates**: Instant feature flag updates without application restarts
+- **Local Caching**: Resilient operation even when disconnected from the server
+- **Metrics Integration**: Built-in metrics and custom event tracking
+- **API-First Design**: Complete REST API for all platform functionality
+- **WebSocket Support**: Real-time synchronization for immediate updates
+
+### Enterprise Features
+
+- **Single Sign-On**: Integration with SAML, OAuth, and enterprise identity providers
+- **Role-Based Access Control**: Fine-grained permissions and user management
+- **Audit Logging**: Complete audit trail of all feature flag changes
+- **Project Management**: Organize feature flags across multiple projects
+- **Environment Promotion**: Safely promote configurations between environments
+- **Change Requests**: Approval workflows for sensitive feature changes
+
+## Technology Stack
+
+- **Backend**: Node.js with TypeScript
+- **Database**: PostgreSQL with migration support
+- **Frontend**: React with modern JavaScript
+- **Authentication**: Flexible authentication with enterprise SSO support
+- **API**: RESTful API with OpenAPI documentation
+- **Real-time**: WebSocket connections for instant updates
+- **Deployment**: Docker containers with Kubernetes support
+- **Monitoring**: Built-in metrics and health checks
+
+## Use Cases
+
+### Continuous Deployment
+
+- Deploy code to production while keeping features disabled
+- Reduce deployment risk by separating code deployments from feature releases
+- Enable quick rollbacks without code changes
+- Test features in production with limited user exposure
+- Implement canary deployments and blue-green deployments
+
+### Product Development
+
+- Conduct A/B tests and multivariate experiments
+- Gather user feedback on new features before full release
+- Implement feature gating for premium or beta features
+- Control feature access based on user plans or permissions
+- Manage feature lifecycle from development to deprecation
+
+### Operational Control
+
+- Implement circuit breakers for system protection
+- Control resource-intensive features during high load
+- Manage regional feature availability
+- Enable maintenance mode without code changes
+- Quick response to production issues or security concerns
+
+### Team Collaboration
+
+- Non-technical stakeholders can manage feature rollouts
+- Product managers can control feature availability
+- DevOps teams can implement operational toggles
+- Marketing teams can coordinate feature launches
+- Support teams can troubleshoot with feature insights
+
+## Self-Hosting Benefits
+
+### Complete Control
+
+- **Data Sovereignty**: Keep all feature flag data and configurations on-premises
+- **Custom Integrations**: Build custom integrations with internal tools and systems
+- **Network Security**: Deploy within existing security infrastructure and policies
+- **Compliance**: Meet specific regulatory and compliance requirements
+- **Performance**: Optimize for your specific infrastructure and usage patterns
+
+### Cost Efficiency
+
+- **No Usage Limits**: Unlimited feature flags, environments, and team members
+- **Predictable Costs**: No per-seat or per-flag pricing models
+- **Resource Optimization**: Scale infrastructure based on actual needs
+- **Long-term Savings**: Significant cost reduction for growing teams
+- **Budget Control**: Avoid vendor lock-in and price increases
+
+### Customization & Flexibility
+
+- **Custom Strategies**: Implement organization-specific activation strategies
+- **Extended Functionality**: Add custom features and modifications
+- **Integration Freedom**: Connect with any existing tools and workflows
+- **Deployment Options**: Choose from various deployment methods and architectures
+- **Data Retention**: Implement custom data retention and archival policies
+
+## Installation & Deployment
+
+### Docker Deployment
+
+```bash
+# Run with Docker Compose
+version: '3.8'
+services:
+  unleash:
+    image: unleashorg/unleash-server:latest
+    ports:
+      - "4242:4242"
+    environment:
+      DATABASE_URL: postgres://postgres:password@db:5432/unleash
+      DATABASE_SSL: false
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: unleash
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+```
+
+### Kubernetes Deployment
+
+Helm charts available for production Kubernetes deployments with high availability and scaling.
+
+### Cloud Deployment
+
+One-click deployment options for AWS, Google Cloud, Azure, and DigitalOcean.
+
+## SDK Integration Examples
+
+### JavaScript/Node.js
+
+```javascript
+const unleash = require("unleash-client")
+
+unleash.initialize({
+  url: "http://localhost:4242/api/",
+  appName: "my-app",
+  customHeaders: {
+    Authorization: "your-token",
+  },
+})
+
+if (unleash.isEnabled("new-feature")) {
+  // Feature is enabled
+  console.log("New feature is active!")
+}
+```
+
+### Python
+
+```python
+from UnleashClient import UnleashClient
+
+client = UnleashClient(
+    url="http://localhost:4242/api/",
+    app_name="my-python-app",
+    custom_headers={'Authorization': 'your-token'}
+)
+
+if client.is_enabled("new-feature"):
+    # Feature is enabled
+    print("New feature is active!")
+```
+
+## Alternatives Comparison
+
+| Feature           | Unleash | LaunchDarkly | Split | Flipper |
+| ----------------- | ------- | ------------ | ----- | ------- |
+| Open Source       | ✅      | ❌           | ❌    | ✅      |
+| Self-Hosting      | ✅      | ❌           | ❌    | ✅      |
+| Enterprise SSO    | ✅      | ✅           | ✅    | ❌      |
+| A/B Testing       | ✅      | ✅           | ✅    | ❌      |
+| Multi-Environment | ✅      | ✅           | ✅    | ✅      |
+| Real-time Updates | ✅      | ✅           | ✅    | ❌      |
+| Custom Strategies | ✅      | ✅           | ✅    | ✅      |
+| Team Management   | ✅      | ✅           | ✅    | ❌      |
+
+## Resources
+
+- [Official Documentation](https://docs.getunleash.io)
+- [API Documentation](https://docs.getunleash.io/reference/api)
+- [GitHub Repository](https://github.com/Unleash/unleash)
+- [Community Slack](https://slack.unleash.run)
+- [Tutorial Videos](https://www.youtube.com/c/UnleashHQ)
+- [Migration Guides](https://docs.getunleash.io/how-to/how-to-migrate-from-unleash-v3-to-v4)

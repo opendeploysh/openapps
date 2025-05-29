@@ -1,0 +1,172 @@
+---
+slug: pdf3md
+name: PDF3MD
+description: |
+  PDF3MD is a modern, user-friendly web application that converts PDF documents to clean, formatted Markdown text. Built with React frontend and Python Flask backend, it provides real-time progress updates and supports conversion to both Markdown and Word formats.
+logo: https://avatars.githubusercontent.com/u/188248364?s=64&v=4
+category: document-management
+tags: [pdf-tools, document-conversion, markdown, python, react]
+github: murtaza-nasir/pdf3md
+urls:
+  website: https://github.com/murtaza-nasir/pdf3md
+alternatives:
+  selfHosted: [stirling-pdf, gotenberg, pandoc]
+  nonSelfHosted: [adobe-acrobat, smallpdf, ilovepdf]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple Docker deployment with pre-built images available. Can also be run manually with Node.js and Python setup."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core Features
+    features:
+      - name: Focus
+        value: PDF to Markdown and Word conversion
+      - name: Target Use Case
+        value: Document format conversion and text extraction
+      - name: Architecture
+        value: React + Flask + PyMuPDF4LLM + Pandoc
+  - name: Conversion Features
+    features:
+      - name: PDF to Markdown
+      - name: Markdown to Word (DOCX)
+      - name: Clean Text Extraction
+      - name: Format Preservation
+      - name: Batch Processing
+  - name: User Interface
+    features:
+      - name: Modern React Frontend
+      - name: Drag-and-Drop Upload
+      - name: Real-Time Progress
+      - name: Multi-File Support
+      - name: Download Options
+  - name: Technical
+    features:
+      - name: Python Flask Backend
+      - name: PyMuPDF4LLM Processing
+      - name: Pandoc Integration
+      - name: RESTful API
+      - name: Docker Support
+  - name: Features
+    features:
+      - name: Multiple File Upload
+      - name: Progress Monitoring
+      - name: Text Copy Function
+      - name: File Download
+      - name: Format Selection
+---
+
+PDF3MD is a comprehensive web application designed for efficient conversion of
+PDF documents into clean, formatted Markdown text and Microsoft Word (DOCX)
+formats. Built with a modern React frontend and robust Python Flask backend, it
+provides a seamless user experience with real-time progress updates and batch
+processing capabilities.
+
+## Key Features
+
+- **Advanced PDF Processing**:
+
+  - High-quality PDF to Markdown conversion
+  - Clean text extraction with format preservation
+  - Support for complex document structures
+  - Powered by PyMuPDF4LLM for accurate processing
+  - Handles various PDF types and layouts
+
+- **Modern Web Interface**:
+
+  - Intuitive React-based user interface
+  - Drag-and-drop file upload functionality
+  - Real-time conversion progress tracking
+  - Multi-file processing support
+  - Responsive design for all devices
+
+- **Dual Format Support**:
+
+  - PDF to Markdown conversion
+  - Markdown to Word (DOCX) export
+  - Clean, formatted output
+  - Structure preservation
+  - Copy-to-clipboard functionality
+
+- **Technical Excellence**:
+
+  - Python Flask backend architecture
+  - RESTful API design
+  - Real-time progress updates
+  - Efficient file processing
+  - Memory-optimized operations
+
+- **Deployment Options**:
+
+  - Docker containers with pre-built images
+  - Docker Compose configuration
+  - Manual setup with Node.js and Python
+  - Development and production modes
+  - Health checks and monitoring
+
+## Who Should Use PDF3MD
+
+PDF3MD is ideal for:
+
+- **Content Creators** converting PDFs to editable formats
+- **Developers** extracting text from PDF documentation
+- **Students and Researchers** converting papers to Markdown
+- **Writers** working with PDF manuscripts
+- **Teams** standardizing document formats
+
+## Getting Started
+
+PDF3MD offers multiple deployment options:
+
+### Docker Deployment (Recommended)
+
+```bash
+# Using pre-built images
+docker compose up -d
+
+# Access at http://localhost:3000
+```
+
+### Manual Setup
+
+```bash
+# Backend (Flask)
+cd pdf3md
+pip install -r requirements.txt
+python app.py
+
+# Frontend (React)
+npm install
+npm run dev
+```
+
+The application provides both production-ready Docker images and development environments with hot-reloading support.
+
+## Technical Specifications
+
+- **Frontend**: React with Vite
+- **Backend**: Python Flask
+- **PDF Processing**: PyMuPDF4LLM
+- **Document Conversion**: Pandoc
+- **Deployment**: Docker, Node.js, Python
+- **License**: AGPL-3.0
+- **Ports**: 3000 (frontend), 6201 (backend)
+
+## Use Cases
+
+- **Documentation Conversion**: Transform PDF docs to Markdown for wikis
+- **Content Migration**: Convert PDFs for CMS and blog platforms
+- **Text Extraction**: Extract clean text from PDF documents
+- **Format Standardization**: Unify document formats across teams
+- **Accessibility**: Convert PDFs to more accessible text formats
+
+## Unique Advantages
+
+- **Real-Time Progress**: Live updates during conversion process
+- **Dual Output**: Both Markdown and Word format support
+- **Modern Stack**: React + Flask for optimal user experience
+- **Docker Ready**: Simple deployment with pre-built containers
+- **Open Source**: AGPL-3.0 licensed with commercial options available
+
+PDF3MD combines modern web technologies with powerful document processing capabilities to provide a reliable, user-friendly solution for PDF to text conversion needs.

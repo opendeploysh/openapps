@@ -1,0 +1,319 @@
+---
+slug: glance
+name: Glance
+description: A self-hosted dashboard that puts all your feeds in one place
+category: Dashboards
+tags:
+  - dashboard
+  - feed-aggregator
+  - rss
+  - monitoring
+github: glanceapp/glance
+urls:
+  website: https://glance.app
+alternatives:
+  selfHosted: [homer, heimdall, organizr, dashy, flame]
+  nonSelfHosted: []
+deploymentDifficulty: Easy
+pricingModel: Free
+hostingType: Self-Hosted
+---
+
+# Glance
+
+A self-hosted dashboard that puts all your feeds in one place. Fast, lightweight, and highly customizable with support for multiple pages, themes, and authentication.
+
+## Overview
+
+Glance is a modern, self-hosted dashboard application that aggregates various feeds and services into a single, clean interface. Built with simplicity and performance in mind, Glance provides an efficient way to monitor your digital life, from RSS feeds and server statistics to weather forecasts and financial markets. With its widget-based architecture and minimal resource requirements, Glance serves as an excellent homepage for both personal use and team environments.
+
+## Key Features
+
+### Wide Range of Widgets
+
+- **RSS Feeds**: Follow blogs, news sites, and any RSS/Atom feeds
+- **Weather Forecasts**: Local weather conditions and multi-day forecasts
+- **Server Stats**: Monitor CPU, memory, disk usage, and network statistics
+- **Docker Containers**: View container status and resource usage
+- **Market Prices**: Track stocks, cryptocurrencies, and financial instruments
+- **Calendar Events**: Display upcoming events and appointments
+- **YouTube Channels**: Latest uploads from your favorite creators
+- **Twitch Channels**: Live status of streamers you follow
+- **Hacker News**: Latest tech news and discussions
+- **Reddit Posts**: Subreddit feeds and trending content
+- **GitHub Releases**: Track new releases from repositories
+- **Monitor Uptime**: Website and service availability monitoring
+- **Custom API**: Create custom widgets using external APIs
+- **Extension Widgets**: Fetch HTML content from any URL
+- **To-Do Lists**: Manage tasks with local storage
+- **Clock and Time**: Display current time in different timezones
+
+### Customization & Theming
+
+- **Multiple Themes**: Built-in light and dark themes with custom theme support
+- **Theme Picker**: Switch between themes without configuration changes
+- **Custom CSS**: Add your own styling for complete personalization
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Flexible Layouts**: Configure columns, widget sizes, and positioning
+- **Multiple Pages**: Create different dashboards for different purposes
+- **Head Widgets**: Full-width widgets at the top of pages
+- **Widget Grouping**: Organize related widgets together
+
+### Performance & Reliability
+
+- **Lightweight**: Single ~20MB binary with minimal dependencies
+- **Fast Loading**: Uncached pages typically load within ~1 second
+- **Low Resource Usage**: Efficient memory and CPU utilization
+- **Caching System**: Configurable cache durations for different data sources
+- **Offline Capable**: Some widgets work without internet connectivity
+- **Error Handling**: Graceful fallbacks when services are unavailable
+
+### Authentication & Security
+
+- **User Authentication**: Username/password login with secure session management
+- **Multiple Users**: Support for multiple user accounts
+- **Docker Secrets**: Secure configuration with Docker secrets support
+- **Environment Variables**: Flexible configuration through environment variables
+- **HTTPS Support**: Built-in TLS support for secure connections
+- **CORS Configuration**: Proper cross-origin resource sharing setup
+
+## Technology Stack
+
+- **Backend**: Go for high performance and low resource consumption
+- **Frontend**: Modern JavaScript with minimal framework dependencies
+- **Configuration**: YAML-based configuration with include support
+- **Database**: File-based storage for configuration and cache
+- **Deployment**: Single binary or Docker container
+- **Build System**: Go modules with automated releases
+- **Assets**: Embedded static assets for easy deployment
+
+## Use Cases
+
+### Personal Dashboard
+
+- Monitor your favorite news sources and blogs
+- Track personal finances and investment portfolios
+- Keep an eye on server and home lab infrastructure
+- Stay updated with social media and content creators
+- Manage daily tasks and appointments
+
+### Team Homepage
+
+- Share team-relevant feeds and updates
+- Monitor shared infrastructure and services
+- Display company news and announcements
+- Track project releases and deployments
+- Provide quick access to team resources
+
+### Home Lab Monitoring
+
+- Monitor self-hosted services and containers
+- Track system performance and resource usage
+- Display network status and connectivity
+- Monitor backup and maintenance schedules
+- Keep tabs on home automation systems
+
+### Development Teams
+
+- Track GitHub releases and repository activity
+- Monitor CI/CD pipeline status
+- Display team calendars and milestones
+- Aggregate development blogs and resources
+- Monitor application performance metrics
+
+## Self-Hosting Benefits
+
+### Complete Privacy Control
+
+- **Data Ownership**: All feed data and configurations stay on your infrastructure
+- **No External Dependencies**: Can operate completely offline for local content
+- **Custom Integrations**: Add any data source or API endpoint
+- **Network Control**: Deploy behind VPN or on isolated networks
+- **Audit Capabilities**: Full visibility into all data access and usage
+
+### Cost Efficiency
+
+- **Resource Efficient**: Minimal server requirements for high performance
+- **No Subscription Fees**: One-time setup with no ongoing costs
+- **Unlimited Widgets**: No restrictions on number of feeds or data sources
+- **Multi-User Support**: Share with family or team members at no extra cost
+- **Scalable Architecture**: Grows with your needs without additional licensing
+
+### Customization Freedom
+
+- **Open Source**: Full access to source code for modifications
+- **Custom Widgets**: Create specialized widgets for your specific needs
+- **Theme Development**: Design custom themes and layouts
+- **Integration Freedom**: Connect with any internal or external service
+- **Configuration Control**: Fine-tune every aspect of the dashboard
+
+## Installation & Deployment
+
+### Docker Deployment
+
+```bash
+# Simple Docker run
+docker run -d \
+  --name glance \
+  -p 8080:8080 \
+  -v ./config:/app/config \
+  glanceapp/glance
+
+# Docker Compose
+version: '3.8'
+services:
+  glance:
+    image: glanceapp/glance
+    container_name: glance
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config:/app/config
+```
+
+### Binary Installation
+
+```bash
+# Download and run binary
+wget https://github.com/glanceapp/glance/releases/latest/download/glance-linux-amd64.tar.gz
+tar -xzf glance-linux-amd64.tar.gz
+./glance --config glance.yml
+```
+
+### Configuration Example
+
+```yaml
+# glance.yml
+theme:
+  presets:
+    dark:
+      background-color: 240 10 9
+      primary-color: 217 92 83
+    light:
+      light: true
+      background-color: 220 13 97
+      primary-color: 217 92 83
+
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+          - type: weather
+            location: New York, NY
+            units: metric
+
+      - size: full
+        widgets:
+          - type: rss
+            feeds:
+              - url: https://feeds.feedburner.com/TechCrunch
+                title: TechCrunch
+              - url: https://www.theverge.com/rss/index.xml
+                title: The Verge
+
+          - type: markets
+            markets:
+              - symbol: SPY
+                name: S&P 500
+              - symbol: BTC-USD
+                name: Bitcoin
+```
+
+## Advanced Features
+
+### Custom API Widgets
+
+Create powerful custom widgets using external APIs:
+
+```yaml
+- type: custom-api
+  url: https://api.github.com/repos/glanceapp/glance
+  template: |
+    <div class="repository-info">
+      <h3>{{ .JSON.String "name" }}</h3>
+      <p>{{ .JSON.String "description" }}</p>
+      <p>⭐ {{ .JSON.Int "stargazers_count" }} stars</p>
+      <p>Last updated: {{ .JSON.String "updated_at" | parseTime "rfc3339" | toRelativeTime }}</p>
+    </div>
+```
+
+### Authentication Setup
+
+```yaml
+auth:
+  secret-key: your-generated-secret-key
+  users:
+    admin:
+      password: ${ADMIN_PASSWORD}
+    user:
+      password-hash: $2y$10$...
+```
+
+### Multiple Pages Configuration
+
+```yaml
+pages:
+  - name: Dashboard
+    head-widgets:
+      - type: markets
+        markets:
+          - symbol: SPY
+          - symbol: BTC-USD
+    columns:
+      - widgets:
+          - type: server-stats
+          - type: docker-containers
+
+  - name: News
+    columns:
+      - widgets:
+          - type: rss
+            feeds:
+              - url: https://feeds.reuters.com/reuters/topNews
+```
+
+## Community & Extensions
+
+### Community Widgets
+
+The Glance community has created 40+ additional widgets available through the community widgets repository, including:
+
+- Custom API integrations
+- Service-specific monitoring
+- Entertainment widgets
+- Productivity tools
+- Home automation integrations
+
+### Themes Collection
+
+Multiple community-created themes available:
+
+- Material Design inspired themes
+- High contrast accessibility themes
+- Seasonal and holiday themes
+- Corporate branding themes
+
+## Alternatives Comparison
+
+| Feature          | Glance | Homer | Heimdall | Dashy |
+| ---------------- | ------ | ----- | -------- | ----- |
+| Feed Aggregation | ✅     | ❌    | ❌       | ❌    |
+| Built-in Widgets | ✅     | ❌    | ✅       | ✅    |
+| Authentication   | ✅     | ❌    | ✅       | ✅    |
+| Theme System     | ✅     | ✅    | ✅       | ✅    |
+| Performance      | ✅     | ✅    | ⚠️       | ⚠️    |
+| Mobile Optimized | ✅     | ✅    | ✅       | ✅    |
+| Custom Widgets   | ✅     | ❌    | ❌       | ✅    |
+| Multi-Page       | ✅     | ❌    | ❌       | ✅    |
+
+## Resources
+
+- [Official Documentation](https://glance.app/docs)
+- [GitHub Repository](https://github.com/glanceapp/glance)
+- [Community Widgets](https://github.com/glanceapp/community-widgets)
+- [Configuration Examples](https://github.com/glanceapp/glance/tree/main/docs)
+- [Community Discord](https://discord.gg/glance)
+- [Release Notes](https://github.com/glanceapp/glance/releases)

@@ -1,0 +1,167 @@
+---
+slug: fluidd
+name: Fluidd
+description: |
+  Fluidd is a lightweight, responsive web-based user interface for Klipper, the advanced 3D printer firmware. Built with Vue.js, it provides modern 3D printer control and monitoring with real-time updates and comprehensive management features.
+category: manufacturing
+tags: [3d-printing, klipper, firmware]
+github: fluidd-core/fluidd
+urls:
+  website: https://docs.fluidd.xyz/
+alternatives:
+  selfHosted: [mainsail, octoprint, dwc2-for-klipper]
+  nonSelfHosted: [pronterface, repetier-host, simplify3d]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Klipper firmware setup on 3D printer and proper configuration. Docker deployment available but needs printer integration."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Lightweight web interface for Klipper 3D printer firmware
+      - name: Target Use Case
+        value: 3D printer control, monitoring, and print management
+      - name: Architecture
+        value: Vue.js + Klipper API + Real-time updates + Responsive design
+  - name: Printer Control
+    features:
+      - name: Print Management
+      - name: Real-Time Monitoring
+      - name: Temperature Control
+      - name: Movement Controls
+      - name: Emergency Stop
+  - name: Klipper Integration
+    features:
+      - name: Klipper API
+      - name: Configuration Management
+      - name: Macro Support
+      - name: Firmware Features
+      - name: Advanced Controls
+  - name: Interface
+    features:
+      - name: Responsive Design
+      - name: Mobile Optimized
+      - name: Real-Time Updates
+      - name: Touch-Friendly
+      - name: Dark Mode
+  - name: Print Features
+    features:
+      - name: G-Code Viewer
+      - name: Print Progress
+      - name: File Management
+      - name: Print History
+      - name: Statistics
+  - name: Monitoring
+    features:
+      - name: Temperature Graphs
+      - name: Webcam Integration
+      - name: Print Bed Leveling
+      - name: Sensor Monitoring
+      - name: Status Updates
+  - name: Technical
+    features:
+      - name: Vue.js Frontend
+      - name: WebSocket Communication
+      - name: REST API
+      - name: Plugin Support
+      - name: Lightweight Design
+---
+
+Fluidd is a modern, lightweight web interface designed specifically for Klipper 3D printer firmware. Built with Vue.js and optimized for responsiveness, it provides comprehensive 3D printer control and monitoring capabilities with real-time updates and an intuitive user experience.
+
+## Key Features
+
+- **Advanced Printer Control**:
+
+  - Complete 3D printer management and control
+  - Real-time print monitoring and status updates
+  - Temperature control for hotend and heated bed
+  - Precise movement controls and positioning
+  - Emergency stop and safety features
+  - Print pause, resume, and cancel functionality
+
+- **Klipper Integration**:
+
+  - Deep integration with Klipper firmware features
+  - Advanced configuration management
+  - Custom macro support and execution
+  - Pressure advance and input shaping
+  - Mesh bed leveling and calibration
+  - Multi-extruder and tool support
+
+- **Responsive Interface**:
+
+  - Lightweight, fast-loading web interface
+  - Mobile and tablet optimized design
+  - Touch-friendly controls and navigation
+  - Real-time updates via WebSocket
+  - Dark and light theme options
+  - Customizable dashboard layout
+
+- **Print Management**:
+
+  - G-code file upload and management
+  - 3D G-code visualization and preview
+  - Print progress tracking and statistics
+  - Print history and job management
+  - File organization and folders
+  - Remote print starting and monitoring
+
+- **Advanced Monitoring**:
+
+  - Real-time temperature graphs and charts
+  - Webcam integration for print monitoring
+  - Sensor data visualization
+  - Print bed mesh visualization
+  - Layer progress and time estimation
+  - Comprehensive status information
+
+- **Technical Excellence**:
+
+  - Vue.js-based frontend architecture
+  - WebSocket for real-time communication
+  - RESTful API integration
+  - Plugin and extension support
+  - Efficient resource usage
+  - Cross-platform compatibility
+
+- **Self-Hosting Benefits**:
+  - Complete control over 3D printer interface
+  - Local network access for security
+  - Custom configuration and macros
+  - Integration with print farm setups
+  - No cloud dependencies
+  - Enhanced printing workflow control
+
+## Technical Specifications
+
+- **Language**: Vue.js (JavaScript)
+- **License**: GPL-3.0
+- **Deployment**: Docker, Node.js, static files
+- **Platforms**: Cross-platform web interface
+- **Requirements**: Klipper firmware, Moonraker API
+- **Database**: None (uses Klipper configuration)
+- **Architecture**: Vue.js SPA with Klipper/Moonraker backend
+
+## Use Cases
+
+- **3D Printing**: Professional and hobbyist 3D printing operations
+- **Print Farms**: Multiple printer management and monitoring
+- **Remote Monitoring**: Network-based printer control and observation
+- **Educational**: 3D printing labs and educational environments
+- **Prototyping**: Rapid prototyping and iterative design workflows
+- **Production**: Small-scale manufacturing and custom parts
+
+## Unique Advantages
+
+- **Klipper Optimized**: Specifically designed for Klipper firmware
+- **Lightweight Design**: Fast, responsive interface with minimal overhead
+- **Mobile-First**: Optimized for mobile and tablet control
+- **Real-Time Updates**: Live status and progress monitoring
+- **Modern UI**: Contemporary Vue.js-based interface design
+- **Open Source**: GPL-3.0 licensed, transparent and customizable
+
+Based on the [Fluidd GitHub repository](https://github.com/fluidd-core/fluidd), this tool provides users with a lightweight, responsive 3D printer interface that excels in Klipper integration and mobile usability, making it ideal for 3D printing enthusiasts and professionals who need efficient, modern printer control software.

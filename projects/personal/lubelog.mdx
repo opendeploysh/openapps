@@ -1,0 +1,359 @@
+---
+slug: lubelog
+name: LubeLogger
+description: Self-hosted, open-source, web-based vehicle maintenance and fuel mileage tracker
+category: personal
+tags:
+  - vehicle-maintenance
+  - fuel-tracking
+  - garage-management
+  - self-hosted
+  - automotive
+  - personal-finance
+  - record-keeping
+github: hargata/lubelog
+githubUrl: https://github.com/hargata/lubelog
+websiteUrl: https://lubelogger.com
+urls:
+  website: https://lubelogger.com
+alternatives:
+  selfHosted: [CarCareTracker]
+  nonSelfHosted: [Fuelly, GaragePlug, AutoCareCentral, DriverSide]
+deploymentDifficulty: Easy
+pricingModel: Free
+hostingType: Self-Hosted
+---
+
+# LubeLogger
+
+Self-hosted, open-source, web-based vehicle maintenance and fuel mileage tracker. Because nobody should have to deal with a homemade spreadsheet or a shoebox full of receipts when it comes to vehicle maintenance.
+
+## Overview
+
+LubeLogger is a comprehensive vehicle management platform that helps you track maintenance, repairs, fuel consumption, and expenses for all your vehicles. Built with modern web technologies and designed for self-hosting, LubeLogger provides a clean, intuitive interface for managing your automotive records. Whether you have one car or an entire fleet, LubeLogger helps you stay organized, save money, and maintain your vehicles properly.
+
+## Key Features
+
+### Vehicle Management
+
+- **Unlimited Vehicles**: Track as many vehicles as you have in your garage
+- **Comprehensive Profiles**: Store detailed vehicle information including make, model, year, VIN
+- **Photo Gallery**: Upload and organize photos for each vehicle
+- **Custom Fields**: Add user-customizable fields for specific tracking needs
+- **Vehicle Timeline**: Visual timeline of all maintenance and repairs
+- **Odometer Tracking**: Monitor mileage progression over time
+
+### Maintenance & Service Records
+
+- **Service History**: Complete record of all maintenance, repairs, and upgrades
+- **Recurring Reminders**: Set up reminders for scheduled maintenance
+- **Parts & Supplies Tracking**: Keep track of parts, fluids, and supplies used
+- **Attachment Support**: Attach receipts, invoices, and documentation
+- **Cost Tracking**: Monitor expenses per vehicle and service type
+- **Warranty Management**: Track warranty periods and coverage
+
+### Fuel Economy Tracking
+
+- **Multiple Units**: Support for MPG, UK MPG, and L/100KM
+- **Fuel Station Records**: Track where you fill up and fuel prices
+- **Economy Analysis**: Detailed fuel efficiency reporting and trends
+- **Cost Per Mile**: Calculate true cost of vehicle operation
+- **Fuel Type Tracking**: Support for different fuel types (regular, premium, diesel)
+- **Trip Efficiency**: Monitor fuel economy for specific trips
+
+### Advanced Planning Tools
+
+- **Kanban Planner**: Visual to-do board for planning maintenance tasks
+- **Reminder System**: Email reminders for upcoming maintenance
+- **Dashboard Overview**: Comprehensive view of vehicle expenses and status
+- **Reporting**: Generate detailed reports for tax and insurance purposes
+- **Data Export**: Export records to various formats for external use
+- **CSV Import**: Import existing records from Fuelly and other sources
+
+## Technology Stack
+
+- **Backend**: ASP.NET Core with C# for robust server-side processing
+- **Frontend**: Bootstrap and JavaScript for responsive user interface
+- **Database**: LiteDB for simple deployments, PostgreSQL for production
+- **Authentication**: Basic authentication and OpenID Connect (OIDC) support
+- **Email**: MailKit integration for reminder notifications
+- **Charts**: Chart.js for data visualization and reporting
+- **File Storage**: Support for local and cloud storage of attachments
+- **API**: RESTful API endpoints for integration and automation
+
+## Use Cases
+
+### Personal Vehicle Owners
+
+- Track maintenance schedules for personal cars and motorcycles
+- Monitor fuel economy and driving habits
+- Keep organized records for warranty claims
+- Plan and budget for upcoming repairs and maintenance
+- Maintain detailed service history for resale value
+
+### Fleet Management
+
+- Manage multiple company vehicles from one dashboard
+- Track maintenance costs across the entire fleet
+- Schedule preventive maintenance to minimize downtime
+- Generate reports for tax purposes and budget planning
+- Monitor fuel efficiency and driver behavior
+
+### Auto Enthusiasts
+
+- Document restoration projects and modifications
+- Track performance upgrades and their effects
+- Maintain detailed records for show cars and classics
+- Monitor costs of various automotive projects
+- Share build documentation with other enthusiasts
+
+### Small Business Owners
+
+- Track delivery vehicle maintenance and expenses
+- Monitor operating costs for business vehicles
+- Maintain records for tax deductions and business expenses
+- Schedule maintenance to prevent costly breakdowns
+- Generate reports for accounting and insurance purposes
+
+## Self-Hosting Benefits
+
+### Complete Data Ownership
+
+- **Privacy Control**: Keep all vehicle and financial data on your infrastructure
+- **No Vendor Lock-in**: Avoid dependency on commercial services that may shut down
+- **Custom Retention**: Implement your own data backup and archival policies
+- **Unlimited Storage**: No restrictions on number of vehicles or records
+- **Full History**: Maintain complete vehicle history without service limitations
+
+### Cost Efficiency
+
+- **No Subscription Fees**: One-time setup without ongoing monthly costs
+- **Unlimited Users**: Add family members or employees without per-user charges
+- **No Feature Restrictions**: Access all features without premium upgrade requirements
+- **Predictable Costs**: Control infrastructure costs based on your needs
+- **Long-term Savings**: Significant savings compared to commercial tracking services
+
+### Customization & Integration
+
+- **Open Source**: Full access to source code for modifications
+- **Custom Fields**: Add tracking fields specific to your needs
+- **API Access**: Integrate with other tools and automation systems
+- **Custom Reports**: Create specialized reports for your use cases
+- **Workflow Adaptation**: Modify the system to match your processes
+
+## Installation & Deployment
+
+### Docker Deployment
+
+```bash
+# Simple Docker run
+docker run -d \
+  --name lubelogger \
+  -p 8080:8080 \
+  -v ./data:/App/data \
+  ghcr.io/hargata/lubelogger:latest
+
+# Docker Compose with PostgreSQL
+version: '3.8'
+services:
+  lubelogger:
+    image: ghcr.io/hargata/lubelogger:latest
+    container_name: lubelogger
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - POSTGRES_CONNECTION=Host=postgres;Database=lubelogger;Username=lubelogger;Password=yourpassword
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: lubelogger
+      POSTGRES_USER: lubelogger
+      POSTGRES_PASSWORD: yourpassword
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+```
+
+### Kubernetes Deployment
+
+```yaml
+# Helm chart available for Kubernetes deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lubelogger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lubelogger
+  template:
+    metadata:
+      labels:
+        app: lubelogger
+    spec:
+      containers:
+        - name: lubelogger
+          image: ghcr.io/hargata/lubelogger:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: POSTGRES_CONNECTION
+              value: "Host=postgres;Database=lubelogger;Username=lubelogger;Password=yourpassword"
+```
+
+### Windows Standalone
+
+```powershell
+# Download and run Windows executable
+1. Download latest release from GitHub
+2. Extract to desired directory
+3. Run CarCareTracker.exe
+4. Open browser to http://localhost:8080
+```
+
+## Configuration & Setup
+
+### Environment Variables
+
+```bash
+# Database configuration
+POSTGRES_CONNECTION=Host=localhost;Database=lubelogger;Username=user;Password=pass
+LOGGING_LEVEL=Information
+
+# Authentication settings
+ENABLE_OIDC=false
+OIDC_NAME="Your OIDC Provider"
+OIDC_CLIENT_ID=your_client_id
+OIDC_CLIENT_SECRET=your_client_secret
+OIDC_REDIRECT_URI=https://your-domain.com/signin-oidc
+
+# Email configuration for reminders
+MAIL_CONFIG='{"Host":"smtp.gmail.com","Port":587,"Username":"your-email","Password":"your-password","UseSSL":true}'
+
+# File storage settings
+ENABLE_FILE_UPLOADING=true
+MAX_FILE_SIZE=10485760  # 10MB
+ALLOWED_FILE_EXTENSIONS=.pdf,.jpg,.jpeg,.png,.gif,.txt,.doc,.docx
+```
+
+### Initial Setup
+
+```sql
+-- Database initialization (handled automatically)
+-- Custom fields can be added through the web interface
+-- Import existing data from CSV files
+-- Configure vehicle profiles and maintenance schedules
+```
+
+## Advanced Features
+
+### Reminder System
+
+```csharp
+// Configure email reminders for maintenance
+public class ReminderSettings
+{
+    public int DaysBeforeReminder { get; set; } = 30;
+    public bool EnableEmailNotifications { get; set; } = true;
+    public string EmailTemplate { get; set; } = "default";
+    public List<ReminderType> ActiveReminders { get; set; }
+}
+```
+
+### API Integration
+
+```javascript
+// Example API usage for automation
+const response = await fetch("/api/vehicle/1/service", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: "Bearer " + token,
+  },
+  body: JSON.stringify({
+    date: "2024-01-15",
+    odometer: 75000,
+    cost: 85.5,
+    description: "Oil change",
+    serviceType: "Maintenance",
+  }),
+})
+```
+
+### Data Import/Export
+
+```bash
+# Import from Fuelly CSV
+POST /api/import/fuelly
+Content-Type: multipart/form-data
+File: fuelly-export.csv
+
+# Export vehicle records
+GET /api/vehicle/1/export?format=csv
+GET /api/vehicle/1/export?format=json
+```
+
+## Reporting & Analytics
+
+### Available Reports
+
+- **Consolidated Vehicle Report**: Complete maintenance history and costs
+- **Fuel Economy Analysis**: Detailed MPG trends and statistics
+- **Cost Analysis**: Breakdown of expenses by category and time period
+- **Maintenance Schedule**: Upcoming and overdue maintenance items
+- **Tax Documentation**: Reports formatted for tax deduction purposes
+
+### Custom Dashboard
+
+- **Expense Overview**: Visual representation of vehicle costs
+- **Recent Activity**: Latest services and fuel-ups
+- **Upcoming Reminders**: Scheduled maintenance alerts
+- **Fuel Trends**: Economy tracking over time
+- **Vehicle Status**: Quick health check for all vehicles
+
+## Mobile & Accessibility
+
+### Mobile Support
+
+- **Responsive Design**: Optimized for phones and tablets
+- **Touch-Friendly**: Easy data entry on mobile devices
+- **Offline Capability**: Some features work without internet
+- **Progressive Web App**: Install as app on mobile devices
+- **Quick Entry**: Simplified forms for mobile use
+
+### Accessibility Features
+
+- **Dark Mode**: Reduce eye strain during evening use
+- **Keyboard Navigation**: Full keyboard accessibility
+- **Screen Reader Support**: Compatible with assistive technologies
+- **High Contrast**: Improved visibility for users with visual impairments
+- **Large Text Support**: Scalable interface elements
+
+## Alternatives Comparison
+
+| Feature            | LubeLogger | Fuelly | GaragePlug | DriverSide |
+| ------------------ | ---------- | ------ | ---------- | ---------- |
+| Self-Hosted        | ✅         | ❌     | ❌         | ❌         |
+| Open Source        | ✅         | ❌     | ❌         | ❌         |
+| Unlimited Vehicles | ✅         | 💰     | 💰         | 💰         |
+| Document Storage   | ✅         | ❌     | ✅         | ✅         |
+| Reminder System    | ✅         | ✅     | ✅         | ✅         |
+| Fuel Tracking      | ✅         | ✅     | ✅         | ✅         |
+| API Access         | ✅         | ❌     | ❌         | ❌         |
+| Custom Fields      | ✅         | ❌     | ✅         | ❌         |
+
+## Resources
+
+- [GitHub Repository](https://github.com/hargata/lubelog)
+- [Official Website](https://lubelogger.com)
+- [Documentation](https://docs.lubelogger.com)
+- [Live Demo](https://demo.lubelogger.com) (username: test, password: 1234)
+- [Installation Guide](https://lubelogger.com/docs/getting-started)
+- [Patreon Support](https://www.patreon.com/lubelogger)

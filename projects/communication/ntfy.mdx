@@ -1,0 +1,301 @@
+---
+slug: ntfy
+name: ntfy
+description: Simple HTTP-based pub-sub notification service for sending push notifications to your phone or desktop via PUT/POST
+category: Communication
+tags:
+  - notifications
+  - push-notifications
+  - pubsub
+  - messaging
+  - automation
+  - webhooks
+  - self-hosted
+  - golang
+  - rest-api
+github: binwiederhier/ntfy
+urls:
+  website: https://ntfy.sh
+alternatives:
+  selfHosted: [gotify]
+  nonSelfHosted: [pushover, pushbullet, firebase-cloud-messaging, onesignal]
+deploymentDifficulty: Easy
+pricingModel: Open-Core
+hostingType: Self-Hosted
+---
+
+# ntfy
+
+Simple HTTP-based pub-sub notification service that lets you send notifications to your phone or desktop via scripts from any computer, without having to sign up or pay any fees.
+
+## Overview
+
+ntfy (pronounced "notify") is a lightweight, self-hosted notification service that enables you to send push notifications to your devices through simple HTTP requests. Whether you're monitoring servers, automating home systems, or building applications that need real-time notifications, ntfy provides a simple yet powerful solution. The service supports both a free public instance and self-hosted deployments, giving you flexibility in how you implement notifications.
+
+## Key Features
+
+### Simple HTTP API
+
+- **HTTP PUT/POST**: Send notifications with simple curl commands or HTTP requests
+- **No Authentication Required**: Start sending notifications immediately without signup
+- **Topic-Based**: Organize notifications using custom topics
+- **Multiple Formats**: Support for text, markdown, and rich notifications
+- **Custom Headers**: Add priority, tags, icons, and other metadata
+- **Attachment Support**: Send files and images with notifications
+
+### Multi-Platform Support
+
+- **Android App**: Native Android app with full notification support
+- **iOS App**: Native iOS app for iPhone and iPad
+- **Web App**: Progressive Web App that works on any browser
+- **Desktop Integration**: Works with desktop notification systems
+- **API Access**: Integrate with any programming language or tool
+- **Webhook Support**: Receive notifications from external services
+
+### Advanced Notification Features
+
+- **Priority Levels**: Set notification urgency from low to critical
+- **Custom Icons**: Use emoji or custom icons for visual identification
+- **Rich Formatting**: Support for markdown formatting in messages
+- **Scheduled Delivery**: Schedule notifications for future delivery
+- **Message Persistence**: Messages are stored and can be retrieved later
+- **Read Receipts**: Track when notifications are read
+
+### Self-Hosting Capabilities
+
+- **Complete Control**: Host your own notification service
+- **Privacy Protection**: Keep all notification data on your infrastructure
+- **Custom Domains**: Use your own domain for the notification service
+- **User Authentication**: Implement access control and user management
+- **Rate Limiting**: Control usage and prevent abuse
+- **Database Integration**: Store notifications in your preferred database
+
+## Technology Stack
+
+- **Backend**: Go for high performance and low resource usage
+- **Frontend**: JavaScript with React for the web interface
+- **Database**: SQLite for simple deployments, PostgreSQL for production
+- **Real-time**: WebSocket connections for instant delivery
+- **Mobile**: Native Android and iOS applications
+- **API**: RESTful HTTP API with extensive documentation
+- **Deployment**: Docker containers with minimal resource requirements
+- **Storage**: File attachments with configurable storage backends
+
+## Use Cases
+
+### Server Monitoring & DevOps
+
+- Get notified when servers go down or services fail
+- Monitor deployment status and build results
+- Track system resource usage and performance metrics
+- Receive alerts for security events and intrusions
+- Monitor backup completion and database health
+
+### Home Automation
+
+- Smart home device status updates and alerts
+- Security system notifications and door/window sensors
+- Weather alerts and environmental monitoring
+- Energy usage monitoring and cost tracking
+- Garden irrigation and plant monitoring systems
+
+### Personal Productivity
+
+- Task completion reminders and deadline alerts
+- Calendar event notifications and meeting reminders
+- Health and fitness goal tracking updates
+- Financial transaction alerts and budget notifications
+- Travel updates and transportation status
+
+### Application Development
+
+- User activity notifications for web and mobile apps
+- E-commerce order updates and shipping notifications
+- Social media mentions and engagement alerts
+- Form submissions and customer inquiry notifications
+- System maintenance and scheduled downtime alerts
+
+## Self-Hosting Benefits
+
+### Privacy & Security
+
+- **Complete Data Control**: All notifications stay on your infrastructure
+- **No Third-Party Dependencies**: Eliminate reliance on external services
+- **Custom Security Policies**: Implement your own authentication and authorization
+- **Network Isolation**: Keep notification traffic within your network
+- **Audit Trail**: Complete visibility into all notification activity
+
+### Cost Efficiency
+
+- **No Usage Limits**: Send unlimited notifications without per-message fees
+- **Resource Efficient**: Low CPU and memory requirements for high throughput
+- **Predictable Costs**: One-time setup cost instead of ongoing subscription fees
+- **Scalable Infrastructure**: Scale according to your specific needs
+- **No Vendor Lock-in**: Avoid dependency on commercial notification services
+
+### Customization & Integration
+
+- **Custom Features**: Modify the service to meet specific requirements
+- **Integration Freedom**: Connect with any internal systems and tools
+- **Custom Branding**: White-label the service with your organization's branding
+- **Advanced Automation**: Build complex notification workflows and rules
+- **API Extensions**: Extend functionality with custom endpoints and features
+
+## Installation & Deployment
+
+### Docker Deployment
+
+```bash
+# Simple deployment with Docker
+docker run -d \
+  --name ntfy \
+  -p 80:80 \
+  -v /var/lib/ntfy:/var/lib/ntfy \
+  binwiederhier/ntfy serve
+
+# Or with Docker Compose
+version: '3.8'
+services:
+  ntfy:
+    image: binwiederhier/ntfy
+    container_name: ntfy
+    command: serve
+    ports:
+      - "80:80"
+    volumes:
+      - ./data:/var/lib/ntfy
+    environment:
+      - NTFY_BASE_URL=https://ntfy.yourdomain.com
+```
+
+### Binary Installation
+
+```bash
+# Install on Ubuntu/Debian
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://archive.heckel.io/apt/pubkey.txt | sudo gpg --dearmor -o /etc/apt/keyrings/archive.heckel.io.gpg
+sudo apt install ntfy
+sudo systemctl enable ntfy
+sudo systemctl start ntfy
+```
+
+### Configuration Example
+
+```yaml
+# /etc/ntfy/server.yml
+base-url: "https://ntfy.yourdomain.com"
+listen-http: ":80"
+cache-file: "/var/lib/ntfy/cache.db"
+cache-duration: "12h"
+auth-file: "/var/lib/ntfy/auth.db"
+auth-default-access: "deny-all"
+behind-proxy: true
+```
+
+## Usage Examples
+
+### Basic Notification
+
+```bash
+# Send a simple notification
+curl -d "Server backup completed successfully" https://ntfy.sh/myserver
+
+# Send with priority and tags
+curl -H "Priority: high" \
+     -H "Tags: warning,server" \
+     -d "Disk space is running low on server-01" \
+     https://ntfy.sh/alerts
+```
+
+### Advanced Notifications
+
+```bash
+# Send with custom icon and formatting
+curl -H "Icon: 🚨" \
+     -H "Title: Security Alert" \
+     -H "Priority: urgent" \
+     -d "**Unauthorized access detected** from IP 192.168.1.100" \
+     https://ntfy.sh/security
+
+# Send with attachment
+curl -T /path/to/file.jpg \
+     -H "Filename: screenshot.jpg" \
+     -H "Message: Server error screenshot" \
+     https://ntfy.sh/debug
+```
+
+### Programming Integration
+
+```python
+# Python example
+import requests
+
+requests.post("https://ntfy.sh/mytopic",
+    data="Python script completed",
+    headers={
+        "Title": "Script Notification",
+        "Priority": "default",
+        "Tags": "python,automation"
+    })
+```
+
+```javascript
+// JavaScript example
+fetch("https://ntfy.sh/mytopic", {
+  method: "POST",
+  body: "JavaScript task finished",
+  headers: {
+    Title: "Task Complete",
+    Priority: "low",
+    Tags: "javascript,task",
+  },
+})
+```
+
+## Advanced Features
+
+### Authentication & Access Control
+
+- **User Management**: Create and manage user accounts
+- **Topic-Level Permissions**: Control access to specific topics
+- **Token Authentication**: API tokens for programmatic access
+- **Role-Based Access**: Implement different permission levels
+- **Rate Limiting**: Prevent abuse with configurable rate limits
+
+### Integrations & Webhooks
+
+- **Webhook Endpoints**: Receive notifications from external services
+- **GitHub Integration**: Get notified about repository events
+- **GitLab CI/CD**: Monitor pipeline status and deployment results
+- **Monitoring Tools**: Integrate with Prometheus, Grafana, and other tools
+- **Smart Home**: Connect with Home Assistant and other automation platforms
+
+### Mobile App Features
+
+- **Offline Support**: Messages are queued and delivered when connection is restored
+- **Custom Ringtones**: Set different sounds for different topics
+- **Notification Grouping**: Organize notifications by topic or priority
+- **Dark Mode**: Full dark theme support for better user experience
+- **Backup & Sync**: Synchronize settings across multiple devices
+
+## Alternatives Comparison
+
+| Feature          | ntfy | Pushover | Gotify | Pushbullet |
+| ---------------- | ---- | -------- | ------ | ---------- |
+| Open Source      | ✅   | ❌       | ✅     | ❌         |
+| Self-Hosting     | ✅   | ❌       | ✅     | ❌         |
+| Free Tier        | ✅   | 💰       | ✅     | ✅         |
+| HTTP API         | ✅   | ✅       | ✅     | ✅         |
+| Mobile Apps      | ✅   | ✅       | ✅     | ✅         |
+| File Attachments | ✅   | ✅       | ❌     | ✅         |
+| Topic-Based      | ✅   | ❌       | ✅     | ❌         |
+| No Registration  | ✅   | ❌       | ❌     | ❌         |
+
+## Resources
+
+- [Official Documentation](https://docs.ntfy.sh)
+- [GitHub Repository](https://github.com/binwiederhier/ntfy)
+- [Public Instance](https://ntfy.sh)
+- [Android App](https://play.google.com/store/apps/details?id=io.heckel.ntfy)
+- [iOS App](https://apps.apple.com/us/app/ntfy/id1625396347)
+- [Community Discord](https://discord.gg/cT7ECsZj9w)

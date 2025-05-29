@@ -1,0 +1,259 @@
+---
+slug: chatwoot
+name: Chatwoot
+description: Open-source customer engagement platform with live chat, email support, and omni-channel desk capabilities
+category: Communication
+tags:
+  - customer-support
+  - live-chat
+  - helpdesk
+  - communication
+  - crm
+  - ticketing
+github: chatwoot/chatwoot
+urls:
+  website: https://www.chatwoot.com
+alternatives:
+  selfHosted: []
+  nonSelfHosted: [intercom, zendesk, freshdesk, help-scout, crisp]
+deploymentDifficulty: Medium
+pricingModel: Open-Core
+hostingType: Self-Hosted
+---
+
+# Chatwoot
+
+The modern, open-source, and self-hosted customer engagement platform designed to help businesses deliver exceptional customer support experience.
+
+## Overview
+
+Chatwoot is a comprehensive customer engagement suite that provides businesses with the tools they need to deliver outstanding customer support. Built for scale and flexibility, Chatwoot gives you full control over your customer data while providing powerful tools to manage conversations across multiple channels. The platform supports live chat, email, social media, and messaging platforms, all unified in a single, intuitive interface.
+
+## Key Features
+
+### Captain - AI Agent for Support
+
+- **Automated Responses**: AI agent that handles common queries and reduces agent workload
+- **Smart Suggestions**: Captain Copilot provides intelligent response suggestions to agents
+- **Multilingual Support**: Respond to customers in their native language with automatic translations
+- **Learning Capabilities**: AI learns from your help center, chat history, and FAQs
+- **Instant Resolution**: Customers get immediate, accurate answers for routine questions
+
+### Omnichannel Support Desk
+
+- **Live Chat Widget**: Customizable chat widget for your website with branding options
+- **Email Integration**: Manage email conversations alongside other channels
+- **Social Media**: Support for Facebook, Instagram, Twitter, and LinkedIn messages
+- **Messaging Platforms**: WhatsApp Business, Telegram, Line, and SMS integration
+- **API Channel**: Build custom communication channels using the API
+- **Unified Inbox**: All conversations centralized in one powerful interface
+
+### Help Center Portal
+
+- **Knowledge Base**: Publish help articles, FAQs, and guides
+- **Self-Service**: Enable customers to find answers independently
+- **SEO Optimized**: Built-in SEO features for better discoverability
+- **Multi-Portal Support**: Create separate portals for different brands or products
+- **Rich Content**: Support for images, videos, and formatted content
+- **Search Functionality**: Powerful search capabilities with AI assistance
+
+### Collaboration & Productivity
+
+- **Private Notes**: Internal team discussions with @mentions
+- **Conversation Labels**: Organize and categorize conversations for better workflow
+- **Keyboard Shortcuts**: Quick navigation and actions for improved efficiency
+- **Canned Responses**: Pre-written responses for frequently asked questions
+- **Auto-Assignment**: Intelligent routing based on agent availability and skills
+- **Custom Views**: Create filtered views for better inbox organization
+- **Business Hours**: Set working hours and auto-responders
+- **Team Management**: Organize agents into teams with specific roles
+
+## Technology Stack
+
+- **Backend**: Ruby on Rails with ActionCable for real-time features
+- **Frontend**: Vue.js with modern JavaScript and responsive design
+- **Database**: PostgreSQL for data storage with Redis for caching
+- **Real-time**: WebSocket connections for instant message delivery
+- **File Storage**: Support for local storage and cloud providers (AWS S3, etc.)
+- **Authentication**: JWT-based authentication with SSO support
+- **API**: RESTful API with comprehensive webhook support
+- **Deployment**: Docker containers with Kubernetes support
+
+## Use Cases
+
+### Customer Support Teams
+
+- Manage support tickets from multiple channels in one interface
+- Provide real-time assistance through live chat
+- Track agent performance and customer satisfaction
+- Implement knowledge base for self-service support
+- Automate common responses with AI assistance
+
+### Sales Teams
+
+- Capture leads through live chat and forms
+- Qualify prospects with conversation routing
+- Track customer interactions and history
+- Integrate with CRM systems for lead management
+- Provide pre-sales support and product information
+
+### E-commerce Businesses
+
+- Provide shopping assistance and product recommendations
+- Handle order inquiries and shipping questions
+- Manage returns and refund requests
+- Offer multi-language support for global customers
+- Integrate with e-commerce platforms
+
+### SaaS Companies
+
+- Provide technical support and onboarding assistance
+- Handle billing and subscription inquiries
+- Collect user feedback and feature requests
+- Offer training and best practices guidance
+- Monitor customer health and engagement
+
+## Self-Hosting Benefits
+
+### Complete Data Control
+
+- **Data Ownership**: Keep all customer conversations and data on your infrastructure
+- **Privacy Compliance**: Meet GDPR, CCPA, and other regulatory requirements
+- **Custom Retention**: Implement your own data retention and archival policies
+- **Audit Trail**: Complete visibility into all customer interactions
+- **Backup Control**: Manage your own data backup and recovery procedures
+
+### Cost Efficiency
+
+- **No Per-Agent Pricing**: Unlimited agents and conversations without recurring fees
+- **Predictable Costs**: Scale infrastructure based on actual usage
+- **No Feature Restrictions**: Access to all features without subscription limits
+- **Long-term Savings**: Significant cost reduction compared to SaaS alternatives
+- **Custom Pricing**: No vendor lock-in or price increases
+
+### Customization & Integration
+
+- **Custom Branding**: Full white-label capabilities with your organization's branding
+- **Custom Integrations**: Build integrations with internal tools and systems
+- **Workflow Automation**: Create custom automation rules and triggers
+- **API Access**: Complete API access for custom development
+- **Plugin System**: Extend functionality with custom plugins and apps
+
+## Installation & Deployment
+
+### Docker Deployment
+
+```bash
+# Clone the repository
+git clone https://github.com/chatwoot/chatwoot.git
+cd chatwoot
+
+# Set up environment variables
+cp .env.example .env
+# Configure your database, Redis, and other settings
+
+# Run with Docker Compose
+docker-compose up -d
+```
+
+### Heroku One-Click Deploy
+
+Quick deployment to Heroku with automatic configuration and scaling.
+
+### DigitalOcean Kubernetes
+
+One-click deployment to DigitalOcean as a Kubernetes application.
+
+### Manual Installation
+
+Complete installation guides for Ubuntu, CentOS, and other Linux distributions.
+
+## Integration Examples
+
+### WhatsApp Business API
+
+```ruby
+# Configure WhatsApp Business integration
+inbox = current_account.inboxes.create!(
+  name: 'WhatsApp Business',
+  channel_type: 'Channel::Whatsapp',
+  channel_attributes: {
+    phone_number: '+1234567890',
+    provider: 'whatsapp_cloud',
+    webhook_verify_token: 'your_verify_token'
+  }
+)
+```
+
+### Custom Widget Integration
+
+```javascript
+// Add Chatwoot widget to your website
+window.chatwootSettings = {
+  hideMessageBubble: false,
+  position: "right",
+  locale: "en",
+  type: "standard",
+}
+;(function (d, t) {
+  var BASE_URL = "https://app.chatwoot.com"
+  var g = d.createElement(t),
+    s = d.getElementsByTagName(t)[0]
+  g.src = BASE_URL + "/packs/js/sdk.js"
+  s.parentNode.insertBefore(g, s)
+  g.onload = function () {
+    window.chatwootSDK.run({
+      websiteToken: "your_website_token",
+      baseUrl: BASE_URL,
+    })
+  }
+})(document, "script")
+```
+
+## Advanced Features
+
+### Automation & Workflows
+
+- **Smart Assignment**: Route conversations based on agent skills and availability
+- **Auto-Responses**: Set up automatic responses for common scenarios
+- **Escalation Rules**: Automatically escalate conversations based on criteria
+- **SLA Management**: Set and track service level agreements
+- **Workflow Triggers**: Create custom automation based on conversation events
+
+### Analytics & Reporting
+
+- **Agent Performance**: Track response times, resolution rates, and customer satisfaction
+- **Conversation Analytics**: Detailed insights into conversation patterns and trends
+- **Custom Reports**: Build custom reports with advanced filtering and grouping
+- **Real-time Dashboard**: Monitor team performance and queue status in real-time
+- **Export Capabilities**: Export data for external analysis and reporting
+
+### Enterprise Features
+
+- **Single Sign-On**: Integration with SAML, OAuth, and enterprise identity providers
+- **Advanced Permissions**: Role-based access control with fine-grained permissions
+- **Multi-Account**: Support for multiple accounts and organizations
+- **API Rate Limiting**: Control API usage and prevent abuse
+- **Audit Logging**: Comprehensive logging of all system activities
+
+## Alternatives Comparison
+
+| Feature          | Chatwoot | Intercom | Zendesk | Freshdesk |
+| ---------------- | -------- | -------- | ------- | --------- |
+| Open Source      | ✅       | ❌       | ❌      | ❌        |
+| Self-Hosting     | ✅       | ❌       | ❌      | ❌        |
+| Live Chat        | ✅       | ✅       | ✅      | ✅        |
+| Omnichannel      | ✅       | ✅       | ✅      | ✅        |
+| AI Assistant     | ✅       | ✅       | ✅      | ✅        |
+| Custom Branding  | ✅       | 💰       | 💰      | 💰        |
+| Unlimited Agents | ✅       | ❌       | ❌      | ❌        |
+| API Access       | ✅       | ✅       | ✅      | ✅        |
+
+## Resources
+
+- [Official Documentation](https://www.chatwoot.com/help-center)
+- [Developer Documentation](https://developers.chatwoot.com)
+- [GitHub Repository](https://github.com/chatwoot/chatwoot)
+- [Community Discord](https://discord.gg/cJXdrwS)
+- [Installation Guide](https://www.chatwoot.com/docs/self-hosted)
+- [API Documentation](https://www.chatwoot.com/developers/api)

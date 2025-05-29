@@ -1,0 +1,166 @@
+---
+slug: beszel
+name: Beszel
+description: |
+  Beszel is a lightweight server monitoring hub that provides comprehensive system monitoring with historical data, Docker container stats, and intelligent alerts. It offers an intuitive interface for tracking server health and performance across multiple systems.
+category: status
+tags: [server-monitoring, lightweight, docker-stats, alerts, historical-data, system-metrics]
+github: henrygd/beszel
+urls:
+  website: https://beszel.dev
+alternatives:
+  selfHosted: [uptime-kuma, netdata, prometheus-grafana, zabbix]
+  nonSelfHosted: [datadog, new-relic, uptimerobot]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple deployment with minimal agent installation. Lightweight design with easy setup process for monitoring multiple servers."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Lightweight server monitoring with comprehensive metrics and alerts
+      - name: Target Use Case
+        value: Server health monitoring, performance tracking, and system alerting
+      - name: Architecture
+        value: Hub + Agent architecture + Historical data + Real-time monitoring
+  - name: System Monitoring
+    features:
+      - name: CPU Usage
+      - name: Memory Usage
+      - name: Disk Usage
+      - name: Disk I/O
+      - name: Network Usage
+  - name: Advanced Metrics
+    features:
+      - name: Temperature Monitoring
+      - name: GPU Usage
+      - name: GPU Temperature
+      - name: GPU Power Draw
+      - name: ZFS ARC Support
+  - name: Container Monitoring
+    features:
+      - name: Docker Stats
+      - name: Podman Support
+      - name: Container CPU Usage
+      - name: Container Memory
+      - name: Container Network
+  - name: Data Management
+    features:
+      - name: Historical Data
+      - name: Long-Term Storage
+      - name: Data Retention
+      - name: Performance Trends
+      - name: Usage Analytics
+  - name: Alerting
+    features:
+      - name: Smart Alerts
+      - name: Threshold Monitoring
+      - name: Notification System
+      - name: Alert Configuration
+      - name: Multiple Channels
+  - name: Interface
+    features:
+      - name: Lightweight Design
+      - name: Intuitive Dashboard
+      - name: Real-Time Updates
+      - name: Mobile-Responsive
+      - name: Multi-System View
+---
+
+Beszel is a modern, lightweight server monitoring solution designed to provide comprehensive system monitoring with minimal overhead. It features an intuitive hub-and-agent architecture that enables monitoring multiple servers from a centralized dashboard while maintaining historical data and providing intelligent alerting capabilities.
+
+## Key Features
+
+- **Comprehensive System Metrics**:
+
+  - CPU usage monitoring for host systems and containers
+  - Memory usage tracking including swap and ZFS ARC
+  - Disk usage monitoring with support for multiple partitions and devices
+  - Disk I/O performance tracking across storage devices
+  - Network usage monitoring for both host systems and containers
+  - Real-time performance data collection and analysis
+
+- **Advanced Hardware Monitoring**:
+
+  - Temperature monitoring from system sensors
+  - GPU usage, temperature, and power draw monitoring (Nvidia and AMD)
+  - Support for multiple GPU configurations
+  - Hardware health indicators and alerts
+  - Thermal management and monitoring
+  - Advanced hardware metrics collection
+
+- **Container Intelligence**:
+
+  - Complete Docker container statistics and monitoring
+  - Podman container support and integration
+  - Per-container CPU, memory, and network usage
+  - Container lifecycle monitoring
+  - Resource allocation tracking
+  - Container performance optimization insights
+
+- **Historical Data and Analytics**:
+
+  - Long-term historical data storage and retention
+  - Performance trend analysis and reporting
+  - Usage pattern identification
+  - Capacity planning and forecasting
+  - Data visualization and charting
+  - Historical performance comparisons
+
+- **Smart Alerting System**:
+
+  - Intelligent threshold-based alerting
+  - Customizable alert conditions and triggers
+  - Multiple notification channels and methods
+  - Alert escalation and management
+  - False positive reduction
+  - Alert acknowledgment and tracking
+
+- **Lightweight Architecture**:
+
+  - Minimal resource overhead and footprint
+  - Efficient data collection and transmission
+  - Hub-and-agent architecture for scalability
+  - Easy agent deployment across multiple systems
+  - Low bandwidth usage for remote monitoring
+  - Optimized for performance and reliability
+
+- **Self-Hosting Benefits**:
+  - Complete control over monitoring data
+  - Privacy protection for system metrics
+  - No external dependencies or cloud services
+  - Custom configuration for specific needs
+  - Cost-effective monitoring solution
+  - Enhanced security for infrastructure data
+
+## Technical Specifications
+
+- **License**: MIT
+- **Deployment**: Binary agents, Docker, web interface
+- **Platforms**: Cross-platform (Linux, Windows, macOS)
+- **Requirements**: Minimal system resources, agent installation
+- **Database**: Embedded time-series database
+- **Architecture**: Hub-and-agent with web dashboard
+
+## Use Cases
+
+- **Server Monitoring**: Comprehensive monitoring for web servers and infrastructure
+- **Homelab Management**: Personal server and system monitoring
+- **Small Business**: Cost-effective monitoring for business infrastructure
+- **Development Environments**: Monitoring development and staging servers
+- **Container Orchestration**: Docker and container environment monitoring
+- **Performance Optimization**: System performance analysis and tuning
+
+## Unique Advantages
+
+- **Lightweight Design**: Minimal resource usage with maximum monitoring capability
+- **Simple Deployment**: Easy setup with minimal configuration required
+- **Historical Data**: Long-term data retention for trend analysis
+- **Container Native**: Built-in Docker and container monitoring
+- **GPU Support**: Advanced GPU monitoring for modern workloads
+- **Open Source**: MIT licensed, transparent and customizable
+
+Based on the [Beszel GitHub repository](https://github.com/henrygd/beszel), this tool provides users with a lightweight, comprehensive server monitoring solution that excels in simplicity and effectiveness, making it ideal for system administrators, developers, and IT professionals who need reliable server monitoring without the complexity of enterprise solutions.

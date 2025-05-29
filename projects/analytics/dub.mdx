@@ -1,0 +1,184 @@
+---
+slug: dub
+name: Dub
+description: The modern, open-source link attribution platform for short links, conversion tracking, and affiliate programs
+category: Analytics
+tags:
+  - analytics
+  - link-management
+  - url-shortener
+  - conversion-tracking
+  - affiliate-marketing
+github: dubinc/dub
+urls:
+  website: https://dub.co
+alternatives:
+  selfHosted: [yourls]
+  nonSelfHosted: [short.io, bitly, tinyurl, rebrandly]
+deploymentDifficulty: Medium
+pricingModel: Open-Core
+hostingType: Self-Hosted
+---
+
+# Dub
+
+The modern, open-source link attribution platform for short links, conversion tracking, and affiliate programs.
+
+## Overview
+
+Dub is a comprehensive link management platform that powers 100M+ clicks and 2M+ links monthly. It's trusted by world-class marketing teams from companies like Twilio, Buffer, Framer, Perplexity, Vercel, and Laravel. Dub combines the functionality of a URL shortener with advanced analytics, conversion tracking, and affiliate program management.
+
+## Key Features
+
+### Link Management
+
+- **Custom Short Links**: Create branded short links with custom domains
+- **Bulk Operations**: Upload and manage thousands of links at once
+- **Link Expiration**: Set automatic expiration dates for time-sensitive campaigns
+- **Password Protection**: Secure sensitive links with password requirements
+- **Geographic Targeting**: Redirect users based on their location
+- **Device Targeting**: Show different content based on user's device type
+
+### Analytics & Tracking
+
+- **Real-time Analytics**: Track clicks, conversions, and user behavior in real-time
+- **Conversion Tracking**: Monitor ROI and attribution across marketing channels
+- **UTM Parameter Management**: Automatically append and track UTM parameters
+- **Detailed Reports**: Generate comprehensive reports with custom date ranges
+- **API Access**: Programmatic access to all analytics data
+- **Webhook Integration**: Real-time notifications for click events
+
+### Team Collaboration
+
+- **Workspace Management**: Organize links across different teams and projects
+- **User Permissions**: Fine-grained access control for team members
+- **Shared Domains**: Use custom domains across multiple workspaces
+- **Team Analytics**: Aggregate analytics across team members
+- **Audit Logs**: Track all changes and activities within workspaces
+
+### Developer Features
+
+- **REST API**: Comprehensive API for all platform functionality
+- **SDK Support**: Official SDKs for popular programming languages
+- **Webhook Events**: Real-time event notifications
+- **Custom Integrations**: Build custom integrations with third-party tools
+- **Open Source**: Full source code available for customization
+
+## Technology Stack
+
+- **Framework**: Next.js 14 with TypeScript
+- **Database**: PlanetScale (MySQL)
+- **Analytics**: Tinybird for real-time analytics processing
+- **Authentication**: NextAuth.js with SSO/SAML support via BoxyHQ
+- **Payments**: Stripe integration for premium features
+- **Email**: Resend for transactional emails
+- **Deployment**: Vercel with global edge network
+- **Monitoring**: Comprehensive logging and error tracking
+
+## Use Cases
+
+### Marketing Teams
+
+- Track campaign performance across multiple channels
+- A/B test different landing pages with split testing
+- Manage affiliate and partnership links
+- Create branded links for social media campaigns
+- Monitor conversion rates and attribution
+
+### E-commerce
+
+- Track product link performance
+- Manage affiliate partner links
+- Monitor shopping cart abandonment
+- Optimize product page conversions
+- Create time-limited promotional campaigns
+
+### Content Creators
+
+- Monetize content with affiliate links
+- Track audience engagement across platforms
+- Create branded links for sponsorships
+- Monitor traffic sources and performance
+- Build custom attribution funnels
+
+### SaaS Companies
+
+- Track user acquisition sources
+- Monitor trial conversion rates
+- Manage partner and referral links
+- Optimize onboarding flows
+- Measure marketing campaign effectiveness
+
+## Self-Hosting Benefits
+
+### Complete Control
+
+- **Data Ownership**: Keep all analytics and user data on your infrastructure
+- **Custom Branding**: Full white-label capabilities for your organization
+- **Unlimited Links**: No restrictions on the number of links or clicks
+- **Advanced Customization**: Modify the platform to meet specific requirements
+- **Integration Freedom**: Connect with any internal tools or systems
+
+### Privacy & Security
+
+- **GDPR Compliance**: Full control over data processing and storage
+- **Enhanced Security**: Implement your own security policies and controls
+- **Audit Trail**: Complete visibility into all system activities
+- **Backup Control**: Manage your own data backup and recovery procedures
+- **Network Security**: Deploy within your existing security infrastructure
+
+### Cost Efficiency
+
+- **No Per-Click Charges**: Unlimited usage without recurring fees
+- **Scalable Infrastructure**: Scale according to your specific needs
+- **Reduced Vendor Lock-in**: Maintain independence from third-party services
+- **Custom Pricing**: No limits on users, domains, or features
+- **Long-term Savings**: Significant cost reduction for high-volume usage
+
+## Installation & Deployment
+
+Dub can be deployed using various methods:
+
+### Docker Deployment
+
+```bash
+# Clone the repository
+git clone https://github.com/dubinc/dub.git
+cd dub
+
+# Set up environment variables
+cp .env.example .env.local
+# Configure your database, authentication, and other settings
+
+# Run with Docker Compose
+docker-compose up -d
+```
+
+### Vercel Deployment
+
+One-click deployment to Vercel with automatic scaling and global CDN.
+
+### Self-Hosted Infrastructure
+
+Complete setup guides available for AWS, Google Cloud, and other cloud providers.
+
+## Alternatives Comparison
+
+| Feature             | Dub | Bitly | Short.io | YOURLS |
+| ------------------- | --- | ----- | -------- | ------ |
+| Open Source         | ✅  | ❌    | ❌       | ✅     |
+| Self-Hosting        | ✅  | ❌    | ❌       | ✅     |
+| Advanced Analytics  | ✅  | ✅    | ✅       | ❌     |
+| Team Management     | ✅  | ✅    | ✅       | ❌     |
+| API Access          | ✅  | ✅    | ✅       | ✅     |
+| Custom Domains      | ✅  | 💰    | 💰       | ✅     |
+| Conversion Tracking | ✅  | 💰    | 💰       | ❌     |
+| White-label         | ✅  | ❌    | 💰       | ✅     |
+
+## Resources
+
+- [Official Documentation](https://docs.dub.co)
+- [API Reference](https://docs.dub.co/api-reference)
+- [GitHub Repository](https://github.com/dubinc/dub)
+- [Community Discord](https://dub.co/discord)
+- [Self-Hosting Guide](https://docs.dub.co/self-hosting)
