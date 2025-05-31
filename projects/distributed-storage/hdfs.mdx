@@ -1,0 +1,105 @@
+---
+slug: hdfs
+name: Hadoop Distributed Filesystem (HDFS)
+heroImage: https://hadoop.apache.org/images/hadoop-logo.jpg
+logo: https://avatars.githubusercontent.com/u/47359?s=64&v=4
+description: |
+  HDFS is a distributed file system designed to store large datasets reliably and provide high-throughput access to application data. It's the storage foundation of the Apache Hadoop ecosystem.
+category: distributed-storage
+tags: [hadoop, big-data, distributed-storage, java, analytics]
+github: apache/hadoop
+urls:
+  website: https://hadoop.apache.org/
+alternatives:
+  selfHosted: [glusterfs, ceph, lustre]
+  nonSelfHosted: [aws-s3, google-cloud-storage]
+deployment:
+  difficulty: "Advanced"
+  justification: "Complex Java ecosystem requiring significant cluster configuration and Hadoop knowledge."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Big data distributed file system
+      - name: Target Use Case
+        value: Large-scale data analytics
+      - name: Architecture
+        value: Master-slave Java architecture
+  - name: Storage Features
+    features:
+      - name: Large File Storage
+      - name: Block-based Storage
+      - name: Data Locality
+      - name: Write-once Read-many
+      - name: Namespace Management
+  - name: Reliability
+    features:
+      - name: Data Replication
+      - name: Automatic Failover
+      - name: Rack Awareness
+      - name: Checksums
+      - name: Snapshot Support
+  - name: Performance
+    features:
+      - name: High Throughput
+      - name: Parallel Processing
+      - name: Data Locality Optimization
+      - name: Streaming Access
+      - name: MapReduce Integration
+  - name: Hadoop Ecosystem
+    features:
+      - name: MapReduce Integration
+      - name: YARN Support
+      - name: Spark Compatibility
+      - name: Hive Integration
+      - name: HBase Support
+  - name: Management
+    features:
+      - name: Web UI
+      - name: Command Line Tools
+      - name: REST API
+      - name: Monitoring
+      - name: Administration Tools
+---
+
+HDFS is the backbone of the Apache Hadoop ecosystem, providing reliable, scalable distributed storage designed specifically for big data workloads. It's optimized for large files and high-throughput access patterns common in data analytics.
+
+## Key Features
+
+- **Big Data Optimized**:
+
+  - Designed for large files (GBs to TBs)
+  - High throughput data access
+  - Write-once, read-many model
+  - Batch processing optimization
+  - Streaming data access
+  - MapReduce integration
+
+- **Fault Tolerance**:
+
+  - Automatic data replication
+  - Configurable replication factor
+  - Rack-aware placement
+  - Automatic failure detection
+  - Self-healing capabilities
+  - Checksum verification
+
+- **Scalability**:
+
+  - Petabyte-scale storage
+  - Thousands of nodes
+  - Linear scaling
+  - Distributed metadata
+  - Namespace federation
+  - High availability NameNode
+
+- **Hadoop Integration**:
+  - Native MapReduce support
+  - YARN resource management
+  - Apache Spark compatibility
+  - HBase storage layer
+  - Hive data warehouse
+  - Rich ecosystem integration

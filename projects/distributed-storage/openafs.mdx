@@ -1,0 +1,105 @@
+---
+slug: openafs
+name: OpenAFS
+heroImage: https://www.openafs.org/images/openafs-logo.png
+logo: https://avatars.githubusercontent.com/u/2463529?s=64&v=4
+description: |
+  OpenAFS is a distributed network file system with read-only replicas and multi-OS support, providing secure, scalable file sharing across wide area networks with location transparency.
+category: distributed-storage
+tags: [distributed-filesystem, network-filesystem, kerberos, c, cross-platform]
+github: openafs/openafs
+urls:
+  website: https://www.openafs.org/
+alternatives:
+  selfHosted: [glusterfs, ceph]
+  nonSelfHosted: [aws-fsx, azure-files]
+deployment:
+  difficulty: "Advanced"
+  justification: "Complex setup requiring Kerberos authentication and significant network file system expertise."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Wide-area distributed file system
+      - name: Target Use Case
+        value: Academic and enterprise environments
+      - name: Architecture
+        value: Cell-based distributed architecture
+  - name: Distribution
+    features:
+      - name: Wide Area Network
+      - name: Location Transparency
+      - name: Read-only Replicas
+      - name: Volume Management
+      - name: Global Namespace
+  - name: Security
+    features:
+      - name: Kerberos Authentication
+      - name: Access Control Lists
+      - name: Encryption Support
+      - name: Secure Communication
+      - name: Token-based Access
+  - name: Reliability
+    features:
+      - name: Data Replication
+      - name: Volume Replication
+      - name: Backup Integration
+      - name: Failover Support
+      - name: Data Integrity
+  - name: Cross-platform
+    features:
+      - name: Multi-OS Support
+      - name: Windows Client
+      - name: Linux Support
+      - name: macOS Support
+      - name: Unix Variants
+  - name: Management
+    features:
+      - name: Administrative Tools
+      - name: Volume Management
+      - name: User Management
+      - name: Monitoring
+      - name: Performance Tuning
+---
+
+OpenAFS is a mature distributed file system that provides transparent access to files across wide area networks. Originally developed by IBM and now open source, it's widely used in academic and enterprise environments for its robust security and scalability.
+
+## Key Features
+
+- **Global File System**:
+
+  - Location-independent access
+  - Global namespace
+  - Wide area network support
+  - Cross-platform compatibility
+  - Transparent file access
+  - Cell-based organization
+
+- **Advanced Security**:
+
+  - Kerberos authentication
+  - Mutual authentication
+  - Access control lists (ACLs)
+  - Encrypted communication
+  - Token-based security
+  - Fine-grained permissions
+
+- **High Availability**:
+
+  - Read-only replicas
+  - Automatic failover
+  - Volume replication
+  - Data redundancy
+  - Backup integration
+  - Disaster recovery
+
+- **Enterprise Features**:
+  - Multi-platform support
+  - Centralized administration
+  - Quota management
+  - Performance monitoring
+  - Professional support
+  - Scalable architecture

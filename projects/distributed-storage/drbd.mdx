@@ -1,0 +1,105 @@
+---
+slug: drbd
+name: DRBD
+heroImage: https://linbit.com/images/drbd-logo.png
+logo: https://avatars.githubusercontent.com/u/1072358?s=64&v=4
+description: |
+  DRBD is a distributed replicated storage system implemented as a Linux kernel driver that provides real-time mirroring of block devices over network connections for high availability.
+category: distributed-storage
+tags: [replication, high-availability, linux, kernel, block-storage]
+github: LINBIT/drbd
+urls:
+  website: https://linbit.com/drbd/
+alternatives:
+  selfHosted: [glusterfs, ceph]
+  nonSelfHosted: [aws-ebs, azure-disk]
+deployment:
+  difficulty: "Advanced"
+  justification: "Requires kernel module compilation and complex network/cluster configuration."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Real-time block device replication
+      - name: Target Use Case
+        value: High availability systems
+      - name: Architecture
+        value: Linux kernel driver
+  - name: Replication
+    features:
+      - name: Synchronous Replication
+      - name: Asynchronous Replication
+      - name: Multi-master Support
+      - name: Snapshot Replication
+      - name: Bandwidth Limiting
+  - name: High Availability
+    features:
+      - name: Automatic Failover
+      - name: Split-brain Detection
+      - name: Fencing Support
+      - name: Cluster Integration
+      - name: Resource Agents
+  - name: Performance
+    features:
+      - name: Kernel-level Performance
+      - name: Zero-copy Networking
+      - name: RDMA Support
+      - name: SSD Optimization
+      - name: Compression
+  - name: Management
+    features:
+      - name: Command Line Tools
+      - name: Configuration Management
+      - name: Monitoring
+      - name: Status Reporting
+      - name: Event Handling
+  - name: Integration
+    features:
+      - name: Pacemaker Integration
+      - name: LVM Support
+      - name: File System Agnostic
+      - name: Virtual Machine Support
+      - name: Container Support
+---
+
+DRBD is a battle-tested distributed storage solution that provides real-time, synchronous replication of block devices across network connections. It's the foundation for building highly available systems and clustered storage solutions.
+
+## Key Features
+
+- **Real-time Replication**:
+
+  - Synchronous and asynchronous modes
+  - Block-level replication
+  - Consistency guarantees
+  - Multi-master configurations
+  - Snapshot shipping
+  - Incremental resync
+
+- **High Availability**:
+
+  - Automatic failover
+  - Split-brain prevention
+  - STONITH fencing
+  - Cluster resource management
+  - Service continuity
+  - Zero data loss protection
+
+- **Enterprise Features**:
+
+  - RDMA/InfiniBand support
+  - Compression and encryption
+  - Bandwidth throttling
+  - SSD optimization
+  - Online verification
+  - Performance monitoring
+
+- **System Integration**:
+  - Kernel-level implementation
+  - File system agnostic
+  - LVM integration
+  - Virtualization support
+  - Container compatibility
+  - Cluster software integration

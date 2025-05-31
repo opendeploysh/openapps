@@ -1,0 +1,105 @@
+---
+slug: openstack-swift
+name: OpenStack Swift
+heroImage: https://www.openstack.org/assets/openstack-logo/openstack-logo-full.png
+logo: https://avatars.githubusercontent.com/u/2290395?s=64&v=4
+description: |
+  OpenStack Swift is a highly available, distributed, eventually consistent object/blob store designed for storing unstructured data at massive scale with strong durability guarantees.
+category: object-storage
+tags: [object-storage, openstack, distributed, python, cloud]
+github: openstack/swift
+urls:
+  website: https://docs.openstack.org/developer/swift/
+alternatives:
+  selfHosted: [ceph, minio, leofs]
+  nonSelfHosted: [aws-s3, azure-blob-storage]
+deployment:
+  difficulty: "Advanced"
+  justification: "Complex OpenStack component requiring significant infrastructure and configuration expertise."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Distributed object storage
+      - name: Target Use Case
+        value: Cloud infrastructure object storage
+      - name: Architecture
+        value: Python-based distributed system
+  - name: Storage Features
+    features:
+      - name: Object Storage
+      - name: Container Management
+      - name: Account Management
+      - name: Metadata Support
+      - name: Large Object Support
+  - name: Reliability
+    features:
+      - name: Eventually Consistent
+      - name: Data Replication
+      - name: Fault Tolerance
+      - name: Self-healing
+      - name: High Availability
+  - name: Performance
+    features:
+      - name: Horizontal Scaling
+      - name: High Throughput
+      - name: Concurrent Access
+      - name: Load Distribution
+      - name: Optimized Storage
+  - name: API & Integration
+    features:
+      - name: RESTful API
+      - name: Swift API
+      - name: S3 Compatibility Layer
+      - name: OpenStack Integration
+      - name: Third-party Tools
+  - name: Operations
+    features:
+      - name: Ring Management
+      - name: Monitoring Tools
+      - name: Administrative Tools
+      - name: Performance Metrics
+      - name: Cluster Management
+---
+
+OpenStack Swift is a battle-tested distributed object storage system designed to store petabytes of unstructured data with high durability and availability. As part of the OpenStack ecosystem, it provides enterprise-grade object storage capabilities.
+
+## Key Features
+
+- **Massive Scale Storage**:
+
+  - Petabyte-scale capacity
+  - Horizontal scaling
+  - Eventually consistent design
+  - No single point of failure
+  - Automatic data distribution
+  - Self-healing capabilities
+
+- **High Durability**:
+
+  - Data replication across zones
+  - Configurable replica counts
+  - Erasure coding support
+  - Bit-rot detection
+  - Automatic repair
+  - Cross-datacenter replication
+
+- **Enterprise Integration**:
+
+  - OpenStack ecosystem integration
+  - Keystone authentication
+  - Multi-tenancy support
+  - Role-based access control
+  - Audit logging
+  - Service catalog integration
+
+- **Developer Friendly**:
+  - RESTful HTTP API
+  - S3 compatibility layer
+  - Multiple language SDKs
+  - Comprehensive documentation
+  - Active community
+  - Professional support

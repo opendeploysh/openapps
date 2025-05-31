@@ -1,0 +1,105 @@
+---
+slug: nsd
+name: NSD (Name Server Daemon)
+heroImage: https://www.nlnetlabs.nl/static/logos/NSD/NSD_FC_Shaded_cropped.png
+logo: https://avatars.githubusercontent.com/u/1638766?s=64&v=4
+description: |
+  NSD is an authoritative DNS name server developed for speed, reliability, stability and security, specifically designed to serve authoritative DNS data with minimal resource usage.
+category: dns-servers
+tags: [dns, authoritative, lightweight, security, c, performance]
+github: NLnetLabs/nsd
+urls:
+  website: https://www.nlnetlabs.nl/projects/nsd/about/
+alternatives:
+  selfHosted: [bind, knot, powerdns]
+  nonSelfHosted: [route53, cloudflare-dns]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires DNS zone configuration knowledge but is lightweight and focused on authoritative serving."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Lightweight authoritative DNS server
+      - name: Target Use Case
+        value: Authoritative DNS serving
+      - name: Architecture
+        value: Minimal C implementation
+  - name: Performance
+    features:
+      - name: High Performance
+      - name: Low Memory Usage
+      - name: Fast Startup
+      - name: Efficient Queries
+      - name: Minimal Resource Footprint
+  - name: DNS Features
+    features:
+      - name: Authoritative Only
+      - name: Zone Transfers
+      - name: DNSSEC Support
+      - name: IPv6 Support
+      - name: TSIG Authentication
+  - name: Security
+    features:
+      - name: Security Focused
+      - name: Minimal Attack Surface
+      - name: Secure Coding Practices
+      - name: Access Control
+      - name: Rate Limiting
+  - name: Reliability
+    features:
+      - name: Master-Slave Setup
+      - name: Zone Replication
+      - name: Automatic Reloads
+      - name: Error Handling
+      - name: Stability Focus
+  - name: Management
+    features:
+      - name: Simple Configuration
+      - name: Zone Management
+      - name: Statistics
+      - name: Logging
+      - name: Remote Control
+---
+
+NSD is a lightweight, security-focused authoritative DNS server developed by NLnetLabs. It's designed to do one thing exceptionally well: serve authoritative DNS data with maximum performance and minimal resource consumption.
+
+## Key Features
+
+- **Authoritative Focus**:
+
+  - Authoritative-only DNS server
+  - No recursive resolution
+  - Dedicated zone serving
+  - Optimized for authority
+  - Fast response times
+  - Minimal complexity
+
+- **High Performance**:
+
+  - Lightweight architecture
+  - Low memory footprint
+  - Fast query processing
+  - Efficient data structures
+  - Quick startup times
+  - Optimized for scale
+
+- **Security & Stability**:
+
+  - Security-focused design
+  - Minimal attack surface
+  - Secure coding practices
+  - Stability-first approach
+  - Robust error handling
+  - Production proven
+
+- **DNS Standards**:
+  - Full RFC compliance
+  - DNSSEC support
+  - IPv6 ready
+  - TSIG authentication
+  - Zone transfer support
+  - EDNS(0) implementation

@@ -1,0 +1,105 @@
+---
+slug: bind
+name: BIND
+heroImage: https://www.isc.org/wp-content/uploads/2019/04/ISC-BIND-logo.png
+logo: https://avatars.githubusercontent.com/u/2495866?s=64&v=4
+description: |
+  BIND is the most widely used DNS server software on the Internet, providing versatile, classic, and complete name server functionality with support for all DNS standards and features.
+category: dns-servers
+tags: [dns, name-server, authoritative, recursive, c, networking]
+github: isc-projects/bind9
+urls:
+  website: https://www.isc.org/bind/
+alternatives:
+  selfHosted: [powerdns, knot, unbound]
+  nonSelfHosted: [cloudflare-dns, route53]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires DNS knowledge and configuration but has extensive documentation."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Complete DNS server solution
+      - name: Target Use Case
+        value: Enterprise and service provider DNS
+      - name: Architecture
+        value: C-based DNS implementation
+  - name: DNS Features
+    features:
+      - name: Authoritative DNS
+      - name: Recursive DNS
+      - name: DNS Security Extensions (DNSSEC)
+      - name: Dynamic Updates
+      - name: Zone Transfers
+  - name: Advanced Features
+    features:
+      - name: Response Rate Limiting
+      - name: Geographic Load Balancing
+      - name: Split DNS Views
+      - name: Access Control Lists
+      - name: Query Logging
+  - name: Security
+    features:
+      - name: DNSSEC Support
+      - name: TSIG Authentication
+      - name: Response Rate Limiting
+      - name: Blackhole Lists
+      - name: Secure Zone Transfers
+  - name: Performance
+    features:
+      - name: High Performance
+      - name: Caching
+      - name: Load Balancing
+      - name: Multi-threading
+      - name: Memory Optimization
+  - name: Management
+    features:
+      - name: Zone Management
+      - name: Statistics
+      - name: Remote Control
+      - name: Configuration Validation
+      - name: Monitoring Integration
+---
+
+BIND is the most widely deployed DNS server software in the world, trusted by enterprises, service providers, and organizations globally. It provides a complete, robust, and standards-compliant DNS solution with decades of proven reliability.
+
+## Key Features
+
+- **Complete DNS Solution**:
+
+  - Authoritative name server
+  - Recursive resolver
+  - Caching name server
+  - Forwarding resolver
+  - Split-horizon DNS
+  - Dynamic DNS updates
+
+- **Industry Standards**:
+
+  - Full RFC compliance
+  - DNSSEC implementation
+  - IPv6 support
+  - EDNS(0) support
+  - DNS over TLS (DoT)
+  - Response Rate Limiting (RRL)
+
+- **Enterprise Features**:
+
+  - Geographic load balancing
+  - Split DNS views
+  - Access control lists
+  - Query rate limiting
+  - Comprehensive logging
+  - Statistics collection
+
+- **Security & Reliability**:
+  - DNSSEC signing and validation
+  - TSIG transaction signatures
+  - Response policy zones (RPZ)
+  - Blackhole and whitelist support
+  - Secure zone transfers
+  - DDoS protection

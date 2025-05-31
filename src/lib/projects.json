@@ -21764,6 +21764,2819 @@
     ]
   },
   {
+    "filePath": "projects/distributed-storage/drbd.mdx",
+    "slug": "drbd",
+    "name": "DRBD",
+    "description": "DRBD is a distributed replicated storage system implemented as a Linux kernel driver that provides real-time mirroring of block devices over network connections for high availability.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/1072358?s=64&v=4",
+    "heroImage": "https://linbit.com/images/drbd-logo.png",
+    "category": "distributed-storage",
+    "tags": [
+      "replication",
+      "high-availability",
+      "linux",
+      "kernel",
+      "block-storage"
+    ],
+    "github": "LINBIT/drbd",
+    "urls": {
+      "website": "https://linbit.com/drbd/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "glusterfs",
+        "ceph"
+      ],
+      "nonSelfHosted": [
+        "aws-ebs",
+        "azure-disk"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Requires kernel module compilation and complex network/cluster configuration."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Real-time block device replication"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "High availability systems"
+          },
+          {
+            "name": "Architecture",
+            "value": "Linux kernel driver"
+          }
+        ]
+      },
+      {
+        "name": "Replication",
+        "features": [
+          {
+            "name": "Synchronous Replication"
+          },
+          {
+            "name": "Asynchronous Replication"
+          },
+          {
+            "name": "Multi-master Support"
+          },
+          {
+            "name": "Snapshot Replication"
+          },
+          {
+            "name": "Bandwidth Limiting"
+          }
+        ]
+      },
+      {
+        "name": "High Availability",
+        "features": [
+          {
+            "name": "Automatic Failover"
+          },
+          {
+            "name": "Split-brain Detection"
+          },
+          {
+            "name": "Fencing Support"
+          },
+          {
+            "name": "Cluster Integration"
+          },
+          {
+            "name": "Resource Agents"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Kernel-level Performance"
+          },
+          {
+            "name": "Zero-copy Networking"
+          },
+          {
+            "name": "RDMA Support"
+          },
+          {
+            "name": "SSD Optimization"
+          },
+          {
+            "name": "Compression"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Command Line Tools"
+          },
+          {
+            "name": "Configuration Management"
+          },
+          {
+            "name": "Monitoring"
+          },
+          {
+            "name": "Status Reporting"
+          },
+          {
+            "name": "Event Handling"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "Pacemaker Integration"
+          },
+          {
+            "name": "LVM Support"
+          },
+          {
+            "name": "File System Agnostic"
+          },
+          {
+            "name": "Virtual Machine Support"
+          },
+          {
+            "name": "Container Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/distributed-storage/glusterfs.mdx",
+    "slug": "glusterfs",
+    "name": "GlusterFS",
+    "description": "GlusterFS is a software-defined distributed storage platform that can scale to several petabytes, providing interfaces for object, block and file storage with no single point of failure.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/8114462?s=64&v=4",
+    "heroImage": "https://www.gluster.org/wp-content/uploads/2016/03/gluster-ant.png",
+    "category": "distributed-storage",
+    "tags": [
+      "distributed-storage",
+      "file-system",
+      "clustering",
+      "c",
+      "posix"
+    ],
+    "github": "gluster/glusterfs",
+    "urls": {
+      "website": "https://www.gluster.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "ceph",
+        "moosefs",
+        "lustre"
+      ],
+      "nonSelfHosted": [
+        "aws-efs",
+        "azure-files"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires multiple nodes and network configuration but has good documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Software-defined distributed storage"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Scale-out file and object storage"
+          },
+          {
+            "name": "Architecture",
+            "value": "Userspace distributed file system"
+          }
+        ]
+      },
+      {
+        "name": "Storage Types",
+        "features": [
+          {
+            "name": "POSIX File System"
+          },
+          {
+            "name": "Object Storage"
+          },
+          {
+            "name": "Block Storage"
+          },
+          {
+            "name": "NFS/SMB Support"
+          },
+          {
+            "name": "FUSE Integration"
+          }
+        ]
+      },
+      {
+        "name": "Scalability",
+        "features": [
+          {
+            "name": "Petabyte Scale"
+          },
+          {
+            "name": "Horizontal Scaling"
+          },
+          {
+            "name": "Elastic Scaling"
+          },
+          {
+            "name": "No Single Point of Failure"
+          },
+          {
+            "name": "Linear Performance"
+          }
+        ]
+      },
+      {
+        "name": "Data Protection",
+        "features": [
+          {
+            "name": "Replication"
+          },
+          {
+            "name": "Erasure Coding"
+          },
+          {
+            "name": "Geo-replication"
+          },
+          {
+            "name": "Snapshot Support"
+          },
+          {
+            "name": "Self-healing"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Parallel Access"
+          },
+          {
+            "name": "Read/Write Optimization"
+          },
+          {
+            "name": "Caching"
+          },
+          {
+            "name": "Load Balancing"
+          },
+          {
+            "name": "Network Optimization"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Web Console"
+          },
+          {
+            "name": "CLI Tools"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Monitoring"
+          },
+          {
+            "name": "Volume Management"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/distributed-storage/hdfs.mdx",
+    "slug": "hdfs",
+    "name": "Hadoop Distributed Filesystem (HDFS)",
+    "description": "HDFS is a distributed file system designed to store large datasets reliably and provide high-throughput access to application data. It's the storage foundation of the Apache Hadoop ecosystem.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/47359?s=64&v=4",
+    "heroImage": "https://hadoop.apache.org/images/hadoop-logo.jpg",
+    "category": "distributed-storage",
+    "tags": [
+      "hadoop",
+      "big-data",
+      "distributed-storage",
+      "java",
+      "analytics"
+    ],
+    "github": "apache/hadoop",
+    "urls": {
+      "website": "https://hadoop.apache.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "glusterfs",
+        "ceph",
+        "lustre"
+      ],
+      "nonSelfHosted": [
+        "aws-s3",
+        "google-cloud-storage"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex Java ecosystem requiring significant cluster configuration and Hadoop knowledge."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Big data distributed file system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Large-scale data analytics"
+          },
+          {
+            "name": "Architecture",
+            "value": "Master-slave Java architecture"
+          }
+        ]
+      },
+      {
+        "name": "Storage Features",
+        "features": [
+          {
+            "name": "Large File Storage"
+          },
+          {
+            "name": "Block-based Storage"
+          },
+          {
+            "name": "Data Locality"
+          },
+          {
+            "name": "Write-once Read-many"
+          },
+          {
+            "name": "Namespace Management"
+          }
+        ]
+      },
+      {
+        "name": "Reliability",
+        "features": [
+          {
+            "name": "Data Replication"
+          },
+          {
+            "name": "Automatic Failover"
+          },
+          {
+            "name": "Rack Awareness"
+          },
+          {
+            "name": "Checksums"
+          },
+          {
+            "name": "Snapshot Support"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "High Throughput"
+          },
+          {
+            "name": "Parallel Processing"
+          },
+          {
+            "name": "Data Locality Optimization"
+          },
+          {
+            "name": "Streaming Access"
+          },
+          {
+            "name": "MapReduce Integration"
+          }
+        ]
+      },
+      {
+        "name": "Hadoop Ecosystem",
+        "features": [
+          {
+            "name": "MapReduce Integration"
+          },
+          {
+            "name": "YARN Support"
+          },
+          {
+            "name": "Spark Compatibility"
+          },
+          {
+            "name": "Hive Integration"
+          },
+          {
+            "name": "HBase Support"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Web UI"
+          },
+          {
+            "name": "Command Line Tools"
+          },
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Monitoring"
+          },
+          {
+            "name": "Administration Tools"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/distributed-storage/kubo.mdx",
+    "slug": "kubo",
+    "name": "Kubo",
+    "description": "Kubo is the reference implementation of IPFS (InterPlanetary File System), a global, versioned, peer-to-peer filesystem that seeks to connect all computing devices with the same system of files.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/10536621?s=64&v=4",
+    "heroImage": "https://ipfs.tech/ipfs-logo.svg",
+    "category": "distributed-storage",
+    "tags": [
+      "ipfs",
+      "p2p",
+      "distributed",
+      "go",
+      "decentralized",
+      "blockchain"
+    ],
+    "github": "ipfs/kubo",
+    "urls": {
+      "website": "https://ipfs.tech/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "tahoe-lafs",
+        "perkeep"
+      ],
+      "nonSelfHosted": [
+        "filecoin",
+        "arweave"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single binary with simple configuration, though networking concepts may be complex."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Peer-to-peer distributed file system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Decentralized web and content distribution"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go-based P2P network"
+          }
+        ]
+      },
+      {
+        "name": "IPFS Features",
+        "features": [
+          {
+            "name": "Content Addressing"
+          },
+          {
+            "name": "Versioned File System"
+          },
+          {
+            "name": "Merkle DAG"
+          },
+          {
+            "name": "Deduplication"
+          },
+          {
+            "name": "Immutable Links"
+          }
+        ]
+      },
+      {
+        "name": "Network",
+        "features": [
+          {
+            "name": "Peer-to-Peer"
+          },
+          {
+            "name": "DHT Discovery"
+          },
+          {
+            "name": "Bitswap Protocol"
+          },
+          {
+            "name": "NAT Traversal"
+          },
+          {
+            "name": "Relay Support"
+          }
+        ]
+      },
+      {
+        "name": "APIs",
+        "features": [
+          {
+            "name": "HTTP Gateway"
+          },
+          {
+            "name": "RPC API"
+          },
+          {
+            "name": "Command Line Interface"
+          },
+          {
+            "name": "Web UI"
+          },
+          {
+            "name": "JavaScript Integration"
+          }
+        ]
+      },
+      {
+        "name": "Content Distribution",
+        "features": [
+          {
+            "name": "Content Pinning"
+          },
+          {
+            "name": "Garbage Collection"
+          },
+          {
+            "name": "Bandwidth Management"
+          },
+          {
+            "name": "Caching"
+          },
+          {
+            "name": "Routing"
+          }
+        ]
+      },
+      {
+        "name": "Integration",
+        "features": [
+          {
+            "name": "IPNS (Naming)"
+          },
+          {
+            "name": "DNSLink"
+          },
+          {
+            "name": "Multiformats"
+          },
+          {
+            "name": "LibP2P"
+          },
+          {
+            "name": "Ecosystem Tools"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/distributed-storage/lustre.mdx",
+    "slug": "lustre",
+    "name": "Lustre",
+    "description": "Lustre is a parallel distributed file system designed for high-performance computing (HPC) environments, providing high-bandwidth, low-latency access to large datasets across thousands of nodes.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/5517206?s=64&v=4",
+    "heroImage": "https://www.lustre.org/wp-content/uploads/2019/03/lustre-logo.png",
+    "category": "distributed-storage",
+    "tags": [
+      "hpc",
+      "parallel-filesystem",
+      "high-performance",
+      "c",
+      "scientific-computing"
+    ],
+    "github": "lustre/lustre-release",
+    "urls": {
+      "website": "https://www.lustre.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "glusterfs",
+        "ceph",
+        "hdfs"
+      ],
+      "nonSelfHosted": [
+        "aws-fsx",
+        "google-filestore"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex HPC filesystem requiring specialized knowledge and significant infrastructure setup."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "High-performance parallel file system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Scientific computing and HPC"
+          },
+          {
+            "name": "Architecture",
+            "value": "Distributed client-server architecture"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Parallel I/O"
+          },
+          {
+            "name": "High Bandwidth"
+          },
+          {
+            "name": "Low Latency"
+          },
+          {
+            "name": "Scalable Performance"
+          },
+          {
+            "name": "Striping Support"
+          }
+        ]
+      },
+      {
+        "name": "Scalability",
+        "features": [
+          {
+            "name": "Thousands of Clients"
+          },
+          {
+            "name": "Petabyte Storage"
+          },
+          {
+            "name": "Multiple Servers"
+          },
+          {
+            "name": "Network Scaling"
+          },
+          {
+            "name": "Metadata Scaling"
+          }
+        ]
+      },
+      {
+        "name": "HPC Features",
+        "features": [
+          {
+            "name": "POSIX Compliance"
+          },
+          {
+            "name": "MPI-IO Support"
+          },
+          {
+            "name": "Scientific Workloads"
+          },
+          {
+            "name": "Batch System Integration"
+          },
+          {
+            "name": "Performance Monitoring"
+          }
+        ]
+      },
+      {
+        "name": "Reliability",
+        "features": [
+          {
+            "name": "High Availability"
+          },
+          {
+            "name": "Failover Support"
+          },
+          {
+            "name": "Data Integrity"
+          },
+          {
+            "name": "Backup Integration"
+          },
+          {
+            "name": "Disaster Recovery"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Administrative Tools"
+          },
+          {
+            "name": "Performance Tuning"
+          },
+          {
+            "name": "Monitoring Systems"
+          },
+          {
+            "name": "Quota Management"
+          },
+          {
+            "name": "Access Control"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/distributed-storage/moosefs.mdx",
+    "slug": "moosefs",
+    "name": "MooseFS",
+    "description": "MooseFS is a fault tolerant, highly available and high performance scale-out network distributed file system that spreads data over several physical servers.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/2051158?s=64&v=4",
+    "heroImage": "https://moosefs.com/Content/Images/moosefs-logo.png",
+    "category": "distributed-storage",
+    "tags": [
+      "distributed-filesystem",
+      "fault-tolerant",
+      "posix",
+      "c",
+      "scalable"
+    ],
+    "github": "moosefs/moosefs",
+    "urls": {
+      "website": "https://moosefs.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "glusterfs",
+        "ceph",
+        "lustre"
+      ],
+      "nonSelfHosted": [
+        "aws-efs",
+        "azure-files"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires multiple server setup but has good documentation and management tools."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Fault tolerant distributed file system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "High availability data storage"
+          },
+          {
+            "name": "Architecture",
+            "value": "Master-chunkserver architecture"
+          }
+        ]
+      },
+      {
+        "name": "Reliability",
+        "features": [
+          {
+            "name": "Fault Tolerance"
+          },
+          {
+            "name": "Data Replication"
+          },
+          {
+            "name": "Self-healing"
+          },
+          {
+            "name": "Snapshot Support"
+          },
+          {
+            "name": "Trash Bin Feature"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "High Performance"
+          },
+          {
+            "name": "Parallel Access"
+          },
+          {
+            "name": "Load Balancing"
+          },
+          {
+            "name": "Caching"
+          },
+          {
+            "name": "Network Optimization"
+          }
+        ]
+      },
+      {
+        "name": "Scalability",
+        "features": [
+          {
+            "name": "Horizontal Scaling"
+          },
+          {
+            "name": "Elastic Growth"
+          },
+          {
+            "name": "Multiple Chunkservers"
+          },
+          {
+            "name": "Distributed Metadata"
+          },
+          {
+            "name": "High Capacity"
+          }
+        ]
+      },
+      {
+        "name": "Features",
+        "features": [
+          {
+            "name": "POSIX Compliance"
+          },
+          {
+            "name": "File Versioning"
+          },
+          {
+            "name": "Quota Management"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Statistics"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Command Line Tools"
+          },
+          {
+            "name": "Monitoring"
+          },
+          {
+            "name": "Administration"
+          },
+          {
+            "name": "Performance Metrics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/distributed-storage/openafs.mdx",
+    "slug": "openafs",
+    "name": "OpenAFS",
+    "description": "OpenAFS is a distributed network file system with read-only replicas and multi-OS support, providing secure, scalable file sharing across wide area networks with location transparency.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/2463529?s=64&v=4",
+    "heroImage": "https://www.openafs.org/images/openafs-logo.png",
+    "category": "distributed-storage",
+    "tags": [
+      "distributed-filesystem",
+      "network-filesystem",
+      "kerberos",
+      "c",
+      "cross-platform"
+    ],
+    "github": "openafs/openafs",
+    "urls": {
+      "website": "https://www.openafs.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "glusterfs",
+        "ceph"
+      ],
+      "nonSelfHosted": [
+        "aws-fsx",
+        "azure-files"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex setup requiring Kerberos authentication and significant network file system expertise."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Wide-area distributed file system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Academic and enterprise environments"
+          },
+          {
+            "name": "Architecture",
+            "value": "Cell-based distributed architecture"
+          }
+        ]
+      },
+      {
+        "name": "Distribution",
+        "features": [
+          {
+            "name": "Wide Area Network"
+          },
+          {
+            "name": "Location Transparency"
+          },
+          {
+            "name": "Read-only Replicas"
+          },
+          {
+            "name": "Volume Management"
+          },
+          {
+            "name": "Global Namespace"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Kerberos Authentication"
+          },
+          {
+            "name": "Access Control Lists"
+          },
+          {
+            "name": "Encryption Support"
+          },
+          {
+            "name": "Secure Communication"
+          },
+          {
+            "name": "Token-based Access"
+          }
+        ]
+      },
+      {
+        "name": "Reliability",
+        "features": [
+          {
+            "name": "Data Replication"
+          },
+          {
+            "name": "Volume Replication"
+          },
+          {
+            "name": "Backup Integration"
+          },
+          {
+            "name": "Failover Support"
+          },
+          {
+            "name": "Data Integrity"
+          }
+        ]
+      },
+      {
+        "name": "Cross-platform",
+        "features": [
+          {
+            "name": "Multi-OS Support"
+          },
+          {
+            "name": "Windows Client"
+          },
+          {
+            "name": "Linux Support"
+          },
+          {
+            "name": "macOS Support"
+          },
+          {
+            "name": "Unix Variants"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Administrative Tools"
+          },
+          {
+            "name": "Volume Management"
+          },
+          {
+            "name": "User Management"
+          },
+          {
+            "name": "Monitoring"
+          },
+          {
+            "name": "Performance Tuning"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/distributed-storage/perkeep.mdx",
+    "slug": "perkeep",
+    "name": "Perkeep",
+    "description": "Perkeep is a set of open source formats, protocols, and software for modeling, storing, searching, sharing and synchronizing data with a focus on personal data preservation and long-term archival.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/9071916?s=64&v=4",
+    "heroImage": "https://perkeep.org/doc/pk-logo.png",
+    "category": "distributed-storage",
+    "tags": [
+      "personal-storage",
+      "archival",
+      "content-addressed",
+      "go",
+      "data-preservation"
+    ],
+    "github": "perkeep/perkeep",
+    "urls": {
+      "website": "https://perkeep.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "kubo",
+        "tahoe-lafs"
+      ],
+      "nonSelfHosted": [
+        "google-photos",
+        "dropbox"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Go application with configuration complexity but good documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Personal data preservation"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Long-term data archival"
+          },
+          {
+            "name": "Architecture",
+            "value": "Content-addressed storage"
+          }
+        ]
+      },
+      {
+        "name": "Data Modeling",
+        "features": [
+          {
+            "name": "Schema-free Storage"
+          },
+          {
+            "name": "Immutable Objects"
+          },
+          {
+            "name": "Content Addressing"
+          },
+          {
+            "name": "Metadata Rich"
+          },
+          {
+            "name": "Flexible Schema"
+          }
+        ]
+      },
+      {
+        "name": "Preservation",
+        "features": [
+          {
+            "name": "Long-term Archival"
+          },
+          {
+            "name": "Data Integrity"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "Migration Support"
+          },
+          {
+            "name": "Format Independence"
+          }
+        ]
+      },
+      {
+        "name": "Search & Discovery",
+        "features": [
+          {
+            "name": "Full-text Search"
+          },
+          {
+            "name": "Metadata Search"
+          },
+          {
+            "name": "Tag-based Organization"
+          },
+          {
+            "name": "Time-based Queries"
+          },
+          {
+            "name": "Faceted Search"
+          }
+        ]
+      },
+      {
+        "name": "Synchronization",
+        "features": [
+          {
+            "name": "Multi-device Sync"
+          },
+          {
+            "name": "Conflict Resolution"
+          },
+          {
+            "name": "Partial Sync"
+          },
+          {
+            "name": "Offline Support"
+          },
+          {
+            "name": "Incremental Updates"
+          }
+        ]
+      },
+      {
+        "name": "Privacy",
+        "features": [
+          {
+            "name": "Self-hosted Control"
+          },
+          {
+            "name": "Encryption Support"
+          },
+          {
+            "name": "Private by Default"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Audit Trail"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/distributed-storage/tahoe-lafs.mdx",
+    "slug": "tahoe-lafs",
+    "name": "Tahoe-LAFS",
+    "description": "Tahoe-LAFS is a secure, decentralized, fault-tolerant, peer-to-peer distributed data store and distributed file system with strong security and privacy guarantees.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/444284?s=64&v=4",
+    "heroImage": "https://tahoe-lafs.org/trac/tahoe-lafs/raw-attachment/wiki/WikiStart/tahoe-logo.png",
+    "category": "distributed-storage",
+    "tags": [
+      "secure-storage",
+      "decentralized",
+      "fault-tolerant",
+      "python",
+      "privacy",
+      "cryptography"
+    ],
+    "github": "tahoe-lafs/tahoe-lafs",
+    "urls": {
+      "website": "https://tahoe-lafs.org/trac/tahoe-lafs"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "kubo",
+        "perkeep"
+      ],
+      "nonSelfHosted": [
+        "storj",
+        "sia"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex cryptographic system requiring understanding of decentralized storage concepts."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Secure decentralized storage"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Privacy-focused distributed storage"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python-based P2P system"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "End-to-end Encryption"
+          },
+          {
+            "name": "Zero-knowledge Architecture"
+          },
+          {
+            "name": "Cryptographic Integrity"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Privacy Protection"
+          }
+        ]
+      },
+      {
+        "name": "Decentralization",
+        "features": [
+          {
+            "name": "Peer-to-peer Network"
+          },
+          {
+            "name": "No Central Authority"
+          },
+          {
+            "name": "Distributed Storage"
+          },
+          {
+            "name": "Self-organizing"
+          },
+          {
+            "name": "Censorship Resistance"
+          }
+        ]
+      },
+      {
+        "name": "Fault Tolerance",
+        "features": [
+          {
+            "name": "Reed-Solomon Coding"
+          },
+          {
+            "name": "Erasure Coding"
+          },
+          {
+            "name": "Node Failure Recovery"
+          },
+          {
+            "name": "Data Redundancy"
+          },
+          {
+            "name": "Self-healing"
+          }
+        ]
+      },
+      {
+        "name": "Privacy Features",
+        "features": [
+          {
+            "name": "Zero-knowledge Server"
+          },
+          {
+            "name": "Client-side Encryption"
+          },
+          {
+            "name": "Anonymous Storage"
+          },
+          {
+            "name": "Metadata Protection"
+          },
+          {
+            "name": "Secure Sharing"
+          }
+        ]
+      },
+      {
+        "name": "File System",
+        "features": [
+          {
+            "name": "POSIX-like Interface"
+          },
+          {
+            "name": "Version Control"
+          },
+          {
+            "name": "Directory Structure"
+          },
+          {
+            "name": "File Sharing"
+          },
+          {
+            "name": "Backup Support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/distributed-storage/xtreemfs.mdx",
+    "slug": "xtreemfs",
+    "name": "XtreemFS",
+    "description": "XtreemFS is a distributed, replicated and fault-tolerant file system designed for federated IT infrastructures, providing POSIX compliance and geographic distribution capabilities.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/1284620?s=64&v=4",
+    "heroImage": "https://www.xtreemfs.org/images/xtreemfs-logo.png",
+    "category": "distributed-storage",
+    "tags": [
+      "distributed-filesystem",
+      "fault-tolerant",
+      "posix",
+      "java",
+      "geographic-distribution"
+    ],
+    "github": "xtreemfs/xtreemfs",
+    "urls": {
+      "website": "https://www.xtreemfs.org/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "glusterfs",
+        "ceph",
+        "moosefs"
+      ],
+      "nonSelfHosted": [
+        "aws-efs",
+        "azure-files"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex Java-based system requiring significant configuration and infrastructure knowledge."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Federated distributed file system"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Geographic distribution and federation"
+          },
+          {
+            "name": "Architecture",
+            "value": "Java-based distributed system"
+          }
+        ]
+      },
+      {
+        "name": "Distribution",
+        "features": [
+          {
+            "name": "Geographic Distribution"
+          },
+          {
+            "name": "Wide Area Networks"
+          },
+          {
+            "name": "Federated Infrastructure"
+          },
+          {
+            "name": "Multi-site Support"
+          },
+          {
+            "name": "Global Namespace"
+          }
+        ]
+      },
+      {
+        "name": "Reliability",
+        "features": [
+          {
+            "name": "Fault Tolerance"
+          },
+          {
+            "name": "Data Replication"
+          },
+          {
+            "name": "Automatic Failover"
+          },
+          {
+            "name": "Self-healing"
+          },
+          {
+            "name": "Disaster Recovery"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Parallel Access"
+          },
+          {
+            "name": "Caching Mechanisms"
+          },
+          {
+            "name": "Load Balancing"
+          },
+          {
+            "name": "Network Optimization"
+          },
+          {
+            "name": "Stripe Support"
+          }
+        ]
+      },
+      {
+        "name": "POSIX Features",
+        "features": [
+          {
+            "name": "POSIX Compliance"
+          },
+          {
+            "name": "Standard File Operations"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "File Locking"
+          },
+          {
+            "name": "Metadata Support"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Administrative Tools"
+          },
+          {
+            "name": "Monitoring"
+          },
+          {
+            "name": "Configuration Management"
+          },
+          {
+            "name": "Performance Tuning"
+          },
+          {
+            "name": "Volume Management"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/dns-servers/bind.mdx",
+    "slug": "bind",
+    "name": "BIND",
+    "description": "BIND is the most widely used DNS server software on the Internet, providing versatile, classic, and complete name server functionality with support for all DNS standards and features.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/2495866?s=64&v=4",
+    "heroImage": "https://www.isc.org/wp-content/uploads/2019/04/ISC-BIND-logo.png",
+    "category": "dns-servers",
+    "tags": [
+      "dns",
+      "name-server",
+      "authoritative",
+      "recursive",
+      "c",
+      "networking"
+    ],
+    "github": "isc-projects/bind9",
+    "urls": {
+      "website": "https://www.isc.org/bind/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "powerdns",
+        "knot",
+        "unbound"
+      ],
+      "nonSelfHosted": [
+        "cloudflare-dns",
+        "route53"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires DNS knowledge and configuration but has extensive documentation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Complete DNS server solution"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Enterprise and service provider DNS"
+          },
+          {
+            "name": "Architecture",
+            "value": "C-based DNS implementation"
+          }
+        ]
+      },
+      {
+        "name": "DNS Features",
+        "features": [
+          {
+            "name": "Authoritative DNS"
+          },
+          {
+            "name": "Recursive DNS"
+          },
+          {
+            "name": "DNS Security Extensions (DNSSEC)"
+          },
+          {
+            "name": "Dynamic Updates"
+          },
+          {
+            "name": "Zone Transfers"
+          }
+        ]
+      },
+      {
+        "name": "Advanced Features",
+        "features": [
+          {
+            "name": "Response Rate Limiting"
+          },
+          {
+            "name": "Geographic Load Balancing"
+          },
+          {
+            "name": "Split DNS Views"
+          },
+          {
+            "name": "Access Control Lists"
+          },
+          {
+            "name": "Query Logging"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "DNSSEC Support"
+          },
+          {
+            "name": "TSIG Authentication"
+          },
+          {
+            "name": "Response Rate Limiting"
+          },
+          {
+            "name": "Blackhole Lists"
+          },
+          {
+            "name": "Secure Zone Transfers"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "High Performance"
+          },
+          {
+            "name": "Caching"
+          },
+          {
+            "name": "Load Balancing"
+          },
+          {
+            "name": "Multi-threading"
+          },
+          {
+            "name": "Memory Optimization"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Zone Management"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "Remote Control"
+          },
+          {
+            "name": "Configuration Validation"
+          },
+          {
+            "name": "Monitoring Integration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/dns-servers/coredns.mdx",
+    "slug": "coredns",
+    "name": "CoreDNS",
+    "description": "CoreDNS is a flexible, extensible DNS server written in Go that can serve as a replacement for any DNS server, with a focus on service discovery and cloud-native environments.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/21237862?s=64&v=4",
+    "heroImage": "https://coredns.io/images/CoreDNS_Colour_Horizontal.png",
+    "category": "dns-servers",
+    "tags": [
+      "dns",
+      "service-discovery",
+      "kubernetes",
+      "go",
+      "cloud-native",
+      "microservices"
+    ],
+    "github": "coredns/coredns",
+    "urls": {
+      "website": "https://coredns.io/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "bind",
+        "unbound",
+        "knot"
+      ],
+      "nonSelfHosted": [
+        "cloudflare-dns",
+        "google-dns"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Single binary with simple configuration and excellent documentation for cloud-native deployments."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Flexible and extensible DNS server"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Cloud-native and service discovery"
+          },
+          {
+            "name": "Architecture",
+            "value": "Go-based plugin architecture"
+          }
+        ]
+      },
+      {
+        "name": "Plugin System",
+        "features": [
+          {
+            "name": "Modular Architecture"
+          },
+          {
+            "name": "Plugin Ecosystem"
+          },
+          {
+            "name": "Custom Plugins"
+          },
+          {
+            "name": "Configuration Chains"
+          },
+          {
+            "name": "Hot Reloading"
+          }
+        ]
+      },
+      {
+        "name": "Cloud Native",
+        "features": [
+          {
+            "name": "Kubernetes Integration"
+          },
+          {
+            "name": "Service Discovery"
+          },
+          {
+            "name": "Container Support"
+          },
+          {
+            "name": "Cloud Deployment"
+          },
+          {
+            "name": "Microservices DNS"
+          }
+        ]
+      },
+      {
+        "name": "DNS Features",
+        "features": [
+          {
+            "name": "Authoritative DNS"
+          },
+          {
+            "name": "Recursive Resolution"
+          },
+          {
+            "name": "DNS Forwarding"
+          },
+          {
+            "name": "Load Balancing"
+          },
+          {
+            "name": "Health Checking"
+          }
+        ]
+      },
+      {
+        "name": "Modern Features",
+        "features": [
+          {
+            "name": "DNS over HTTPS (DoH)"
+          },
+          {
+            "name": "DNS over TLS (DoT)"
+          },
+          {
+            "name": "DNSSEC Support"
+          },
+          {
+            "name": "gRPC Integration"
+          },
+          {
+            "name": "Prometheus Metrics"
+          }
+        ]
+      },
+      {
+        "name": "Operations",
+        "features": [
+          {
+            "name": "Zero Downtime Reloads"
+          },
+          {
+            "name": "Health Endpoints"
+          },
+          {
+            "name": "Monitoring Integration"
+          },
+          {
+            "name": "Configuration Validation"
+          },
+          {
+            "name": "Simple Deployment"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/dns-servers/dnsmasq.mdx",
+    "slug": "dnsmasq",
+    "name": "dnsmasq",
+    "description": "dnsmasq provides network infrastructure for small networks including DNS, DHCP, router advertisement and network boot functionality in a lightweight, easy-to-configure package.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/4994891?s=64&v=4",
+    "heroImage": "https://www.thekelleys.org.uk/dnsmasq/dnsmasq-logo.png",
+    "category": "dns-servers",
+    "tags": [
+      "dns",
+      "dhcp",
+      "network-infrastructure",
+      "small-networks",
+      "c",
+      "router"
+    ],
+    "github": "thekelleys/dnsmasq",
+    "urls": {
+      "website": "https://www.thekelleys.org.uk/dnsmasq/doc.html"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "bind",
+        "unbound",
+        "isc-dhcp"
+      ],
+      "nonSelfHosted": [
+        "router-firmware",
+        "managed-dhcp"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple configuration and lightweight design makes it easy to deploy and manage."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Network infrastructure for small networks"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Small office and home networks"
+          },
+          {
+            "name": "Architecture",
+            "value": "Lightweight C implementation"
+          }
+        ]
+      },
+      {
+        "name": "Network Services",
+        "features": [
+          {
+            "name": "DNS Caching"
+          },
+          {
+            "name": "DHCP Server"
+          },
+          {
+            "name": "TFTP Server"
+          },
+          {
+            "name": "Router Advertisement"
+          },
+          {
+            "name": "Network Boot (PXE)"
+          }
+        ]
+      },
+      {
+        "name": "DNS Features",
+        "features": [
+          {
+            "name": "DNS Forwarding"
+          },
+          {
+            "name": "Local DNS Resolution"
+          },
+          {
+            "name": "Hosts File Integration"
+          },
+          {
+            "name": "Wildcard Domains"
+          },
+          {
+            "name": "DNS Filtering"
+          }
+        ]
+      },
+      {
+        "name": "DHCP Features",
+        "features": [
+          {
+            "name": "DHCP Server"
+          },
+          {
+            "name": "Static IP Assignment"
+          },
+          {
+            "name": "DHCP Options"
+          },
+          {
+            "name": "IPv6 Support"
+          },
+          {
+            "name": "Lease Management"
+          }
+        ]
+      },
+      {
+        "name": "Small Network Focus",
+        "features": [
+          {
+            "name": "Low Resource Usage"
+          },
+          {
+            "name": "Simple Configuration"
+          },
+          {
+            "name": "Integrated Services"
+          },
+          {
+            "name": "Home Router Ready"
+          },
+          {
+            "name": "Embedded Systems"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Simple Config File"
+          },
+          {
+            "name": "Signal-based Reloads"
+          },
+          {
+            "name": "DHCP Lease Database"
+          },
+          {
+            "name": "Query Logging"
+          },
+          {
+            "name": "Statistics"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/dns-servers/knot.mdx",
+    "slug": "knot",
+    "name": "Knot DNS",
+    "description": "Knot DNS is a high-performance authoritative-only DNS server designed for speed, reliability, stability and security with advanced DNSSEC capabilities and modern DNS features.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/3342306?s=64&v=4",
+    "heroImage": "https://www.knot-dns.cz/images/knot-logo.png",
+    "category": "dns-servers",
+    "tags": [
+      "dns",
+      "authoritative",
+      "dnssec",
+      "high-performance",
+      "c",
+      "security"
+    ],
+    "github": "knot/knot-dns",
+    "urls": {
+      "website": "https://www.knot-dns.cz/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "bind",
+        "powerdns",
+        "nsd"
+      ],
+      "nonSelfHosted": [
+        "route53",
+        "cloudflare-dns"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires DNS knowledge and configuration but offers excellent performance and security features."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "High-performance authoritative DNS"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Enterprise and service provider DNS"
+          },
+          {
+            "name": "Architecture",
+            "value": "Modern C implementation"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "High Performance"
+          },
+          {
+            "name": "Multi-threading"
+          },
+          {
+            "name": "Memory Efficiency"
+          },
+          {
+            "name": "Fast Zone Loading"
+          },
+          {
+            "name": "Optimized Queries"
+          }
+        ]
+      },
+      {
+        "name": "DNSSEC",
+        "features": [
+          {
+            "name": "Automatic DNSSEC Signing"
+          },
+          {
+            "name": "Key Management"
+          },
+          {
+            "name": "Algorithm Agility"
+          },
+          {
+            "name": "NSEC3 Support"
+          },
+          {
+            "name": "DNSSEC Validation"
+          }
+        ]
+      },
+      {
+        "name": "Modern Features",
+        "features": [
+          {
+            "name": "Zone File Compilation"
+          },
+          {
+            "name": "Dynamic Updates"
+          },
+          {
+            "name": "Catalog Zones"
+          },
+          {
+            "name": "Query Modules"
+          },
+          {
+            "name": "Response Rate Limiting"
+          }
+        ]
+      },
+      {
+        "name": "Automation",
+        "features": [
+          {
+            "name": "Automatic Key Rollover"
+          },
+          {
+            "name": "Zone Management API"
+          },
+          {
+            "name": "Configuration Validation"
+          },
+          {
+            "name": "Event Logging"
+          },
+          {
+            "name": "Statistics Collection"
+          }
+        ]
+      },
+      {
+        "name": "Reliability",
+        "features": [
+          {
+            "name": "Master-Slave Setup"
+          },
+          {
+            "name": "Zone Transfers"
+          },
+          {
+            "name": "Backup and Recovery"
+          },
+          {
+            "name": "High Availability"
+          },
+          {
+            "name": "Monitoring Integration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/dns-servers/nsd.mdx",
+    "slug": "nsd",
+    "name": "NSD (Name Server Daemon)",
+    "description": "NSD is an authoritative DNS name server developed for speed, reliability, stability and security, specifically designed to serve authoritative DNS data with minimal resource usage.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/1638766?s=64&v=4",
+    "heroImage": "https://www.nlnetlabs.nl/static/logos/NSD/NSD_FC_Shaded_cropped.png",
+    "category": "dns-servers",
+    "tags": [
+      "dns",
+      "authoritative",
+      "lightweight",
+      "security",
+      "c",
+      "performance"
+    ],
+    "github": "NLnetLabs/nsd",
+    "urls": {
+      "website": "https://www.nlnetlabs.nl/projects/nsd/about/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "bind",
+        "knot",
+        "powerdns"
+      ],
+      "nonSelfHosted": [
+        "route53",
+        "cloudflare-dns"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires DNS zone configuration knowledge but is lightweight and focused on authoritative serving."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Lightweight authoritative DNS server"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Authoritative DNS serving"
+          },
+          {
+            "name": "Architecture",
+            "value": "Minimal C implementation"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "High Performance"
+          },
+          {
+            "name": "Low Memory Usage"
+          },
+          {
+            "name": "Fast Startup"
+          },
+          {
+            "name": "Efficient Queries"
+          },
+          {
+            "name": "Minimal Resource Footprint"
+          }
+        ]
+      },
+      {
+        "name": "DNS Features",
+        "features": [
+          {
+            "name": "Authoritative Only"
+          },
+          {
+            "name": "Zone Transfers"
+          },
+          {
+            "name": "DNSSEC Support"
+          },
+          {
+            "name": "IPv6 Support"
+          },
+          {
+            "name": "TSIG Authentication"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Security Focused"
+          },
+          {
+            "name": "Minimal Attack Surface"
+          },
+          {
+            "name": "Secure Coding Practices"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Rate Limiting"
+          }
+        ]
+      },
+      {
+        "name": "Reliability",
+        "features": [
+          {
+            "name": "Master-Slave Setup"
+          },
+          {
+            "name": "Zone Replication"
+          },
+          {
+            "name": "Automatic Reloads"
+          },
+          {
+            "name": "Error Handling"
+          },
+          {
+            "name": "Stability Focus"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Simple Configuration"
+          },
+          {
+            "name": "Zone Management"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "Logging"
+          },
+          {
+            "name": "Remote Control"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/dns-servers/powerdns.mdx",
+    "slug": "powerdns",
+    "name": "PowerDNS Authoritative Server",
+    "description": "PowerDNS Authoritative Server is a versatile nameserver that supports a large number of backends including databases, making it ideal for dynamic DNS environments and large-scale deployments.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/288953?s=64&v=4",
+    "heroImage": "https://www.powerdns.com/images/powerdns-logo.png",
+    "category": "dns-servers",
+    "tags": [
+      "dns",
+      "authoritative",
+      "database-backend",
+      "cpp",
+      "dynamic-dns",
+      "api"
+    ],
+    "github": "PowerDNS/pdns",
+    "urls": {
+      "website": "https://doc.powerdns.com/authoritative/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "bind",
+        "knot",
+        "nsd"
+      ],
+      "nonSelfHosted": [
+        "route53",
+        "cloudflare-dns"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires database setup and configuration but offers extensive backend options."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Database-driven authoritative DNS"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Dynamic DNS and large-scale hosting"
+          },
+          {
+            "name": "Architecture",
+            "value": "C++ with pluggable backends"
+          }
+        ]
+      },
+      {
+        "name": "Backend Support",
+        "features": [
+          {
+            "name": "MySQL Backend"
+          },
+          {
+            "name": "PostgreSQL Backend"
+          },
+          {
+            "name": "SQLite Backend"
+          },
+          {
+            "name": "LDAP Backend"
+          },
+          {
+            "name": "File Backends"
+          }
+        ]
+      },
+      {
+        "name": "DNS Features",
+        "features": [
+          {
+            "name": "Authoritative DNS"
+          },
+          {
+            "name": "DNSSEC Support"
+          },
+          {
+            "name": "Dynamic Updates"
+          },
+          {
+            "name": "Zone Transfers"
+          },
+          {
+            "name": "Catalog Zones"
+          }
+        ]
+      },
+      {
+        "name": "API & Automation",
+        "features": [
+          {
+            "name": "REST API"
+          },
+          {
+            "name": "Web Interface"
+          },
+          {
+            "name": "Programmatic Control"
+          },
+          {
+            "name": "Bulk Operations"
+          },
+          {
+            "name": "Zone Management"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise Features",
+        "features": [
+          {
+            "name": "Geographic Load Balancing"
+          },
+          {
+            "name": "Lua Scripting"
+          },
+          {
+            "name": "Performance Monitoring"
+          },
+          {
+            "name": "High Availability"
+          },
+          {
+            "name": "Master-Slave Replication"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "High Performance"
+          },
+          {
+            "name": "Multi-threading"
+          },
+          {
+            "name": "Database Optimization"
+          },
+          {
+            "name": "Caching"
+          },
+          {
+            "name": "Load Balancing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/dns-servers/unbound.mdx",
+    "slug": "unbound",
+    "name": "Unbound",
+    "description": "Unbound is a validating, recursive, and caching DNS resolver designed for security, speed, and reliability with built-in DNSSEC validation and modern DNS features.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/1638766?s=64&v=4",
+    "heroImage": "https://nlnetlabs.nl/static/logos/Unbound/Unbound_FC_Shaded_cropped.png",
+    "category": "dns-servers",
+    "tags": [
+      "dns",
+      "recursive-resolver",
+      "dnssec",
+      "security",
+      "c",
+      "privacy"
+    ],
+    "github": "NLnetLabs/unbound",
+    "urls": {
+      "website": "https://nlnetlabs.nl/projects/unbound/about/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "bind",
+        "coredns",
+        "dnsmasq"
+      ],
+      "nonSelfHosted": [
+        "cloudflare-dns",
+        "quad9"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Easy",
+      "justification": "Simple configuration with sensible defaults and excellent security features out of the box."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Secure recursive DNS resolver"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Secure DNS resolution and privacy"
+          },
+          {
+            "name": "Architecture",
+            "value": "High-performance C implementation"
+          }
+        ]
+      },
+      {
+        "name": "Security Features",
+        "features": [
+          {
+            "name": "DNSSEC Validation"
+          },
+          {
+            "name": "DNS over TLS (DoT)"
+          },
+          {
+            "name": "DNS over HTTPS (DoH)"
+          },
+          {
+            "name": "Query Minimization"
+          },
+          {
+            "name": "Response Policy Zones"
+          }
+        ]
+      },
+      {
+        "name": "DNS Resolution",
+        "features": [
+          {
+            "name": "Recursive Resolution"
+          },
+          {
+            "name": "Caching Resolver"
+          },
+          {
+            "name": "Forwarder Mode"
+          },
+          {
+            "name": "Local Zones"
+          },
+          {
+            "name": "Root Hints"
+          }
+        ]
+      },
+      {
+        "name": "Privacy & Security",
+        "features": [
+          {
+            "name": "Query Privacy"
+          },
+          {
+            "name": "DNS Filtering"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Rate Limiting"
+          },
+          {
+            "name": "Secure by Default"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "High Performance"
+          },
+          {
+            "name": "Multi-threading"
+          },
+          {
+            "name": "Memory Efficient"
+          },
+          {
+            "name": "Prefetching"
+          },
+          {
+            "name": "Aggressive Caching"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Remote Control"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "Configuration Validation"
+          },
+          {
+            "name": "Log Analysis"
+          },
+          {
+            "name": "Performance Monitoring"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/dns-servers/yadifa.mdx",
+    "slug": "yadifa",
+    "name": "Yadifa",
+    "description": "Yadifa is a clean, small, light and RFC-compliant name server implementation developed from scratch by the .eu registry, focusing on performance, security, and standards compliance.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/4326766?s=64&v=4",
+    "heroImage": "https://www.yadifa.eu/sites/default/files/yadifa-logo.png",
+    "category": "dns-servers",
+    "tags": [
+      "dns",
+      "authoritative",
+      "lightweight",
+      "rfc-compliant",
+      "c",
+      "registry"
+    ],
+    "github": "yadifa/yadifa",
+    "urls": {
+      "website": "https://www.yadifa.eu/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "bind",
+        "knot",
+        "nsd"
+      ],
+      "nonSelfHosted": [
+        "route53",
+        "cloudflare-dns"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires DNS configuration knowledge but offers clean, standards-compliant implementation."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Clean RFC-compliant DNS server"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Standards-compliant DNS serving"
+          },
+          {
+            "name": "Architecture",
+            "value": "Clean C implementation"
+          }
+        ]
+      },
+      {
+        "name": "Standards Compliance",
+        "features": [
+          {
+            "name": "RFC Compliant"
+          },
+          {
+            "name": "Clean Implementation"
+          },
+          {
+            "name": "Standards Focus"
+          },
+          {
+            "name": "Protocol Accuracy"
+          },
+          {
+            "name": "Specification Adherence"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Lightweight Design"
+          },
+          {
+            "name": "Fast Processing"
+          },
+          {
+            "name": "Memory Efficient"
+          },
+          {
+            "name": "Optimized Queries"
+          },
+          {
+            "name": "Low Overhead"
+          }
+        ]
+      },
+      {
+        "name": "DNS Features",
+        "features": [
+          {
+            "name": "Authoritative DNS"
+          },
+          {
+            "name": "DNSSEC Support"
+          },
+          {
+            "name": "Zone Transfers"
+          },
+          {
+            "name": "Dynamic Updates"
+          },
+          {
+            "name": "IPv6 Support"
+          }
+        ]
+      },
+      {
+        "name": "Security",
+        "features": [
+          {
+            "name": "Security Focused"
+          },
+          {
+            "name": "Secure Implementation"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "TSIG Support"
+          },
+          {
+            "name": "Rate Limiting"
+          }
+        ]
+      },
+      {
+        "name": "Management",
+        "features": [
+          {
+            "name": "Configuration Management"
+          },
+          {
+            "name": "Zone Management"
+          },
+          {
+            "name": "Monitoring"
+          },
+          {
+            "name": "Statistics"
+          },
+          {
+            "name": "Administrative Tools"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "filePath": "projects/document-management/docking.mdx",
     "slug": "docking",
     "name": "DocKing",
@@ -51803,6 +54616,162 @@
     ]
   },
   {
+    "filePath": "projects/object-storage/leofs.mdx",
+    "slug": "leofs",
+    "name": "LeoFS",
+    "description": "LeoFS is a highly available, distributed, replicated eventually consistent object/blob store designed for large-scale systems with high performance and fault tolerance.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/4023515?s=64&v=4",
+    "heroImage": "https://leo-project.net/leofs/assets/images/leofs-logo.png",
+    "category": "object-storage",
+    "tags": [
+      "object-storage",
+      "distributed",
+      "replication",
+      "erlang",
+      "s3-compatible"
+    ],
+    "github": "leo-project/leofs",
+    "urls": {
+      "website": "https://leo-project.net"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "minio",
+        "ceph",
+        "openstack-swift"
+      ],
+      "nonSelfHosted": [
+        "aws-s3",
+        "google-cloud-storage"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex distributed system requiring careful configuration and multiple nodes."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Distributed object/blob storage"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Large-scale object storage"
+          },
+          {
+            "name": "Architecture",
+            "value": "Erlang-based distributed system"
+          }
+        ]
+      },
+      {
+        "name": "Storage Features",
+        "features": [
+          {
+            "name": "S3 API Compatible"
+          },
+          {
+            "name": "Eventually Consistent"
+          },
+          {
+            "name": "Data Replication"
+          },
+          {
+            "name": "Erasure Coding"
+          },
+          {
+            "name": "Multi-datacenter Support"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "High Availability"
+          },
+          {
+            "name": "Fault Tolerance"
+          },
+          {
+            "name": "Scalable Architecture"
+          },
+          {
+            "name": "High Throughput"
+          },
+          {
+            "name": "Low Latency"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Object Versioning"
+          },
+          {
+            "name": "Bucket Management"
+          },
+          {
+            "name": "Access Control"
+          },
+          {
+            "name": "Metadata Support"
+          },
+          {
+            "name": "Data Compression"
+          }
+        ]
+      },
+      {
+        "name": "Operations",
+        "features": [
+          {
+            "name": "Monitoring Tools"
+          },
+          {
+            "name": "Administrative Console"
+          },
+          {
+            "name": "Cluster Management"
+          },
+          {
+            "name": "Performance Metrics"
+          },
+          {
+            "name": "Health Checking"
+          }
+        ]
+      },
+      {
+        "name": "Deployment",
+        "features": [
+          {
+            "name": "Multi-node Clusters"
+          },
+          {
+            "name": "Cross-datacenter"
+          },
+          {
+            "name": "High Scalability"
+          },
+          {
+            "name": "Production Ready"
+          },
+          {
+            "name": "Enterprise Grade"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "filePath": "projects/object-storage/mino.mdx",
     "slug": "minio",
     "name": "MinIO",
@@ -51915,6 +54884,162 @@
           },
           {
             "name": "Console UI"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/object-storage/openstack-swift.mdx",
+    "slug": "openstack-swift",
+    "name": "OpenStack Swift",
+    "description": "OpenStack Swift is a highly available, distributed, eventually consistent object/blob store designed for storing unstructured data at massive scale with strong durability guarantees.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/2290395?s=64&v=4",
+    "heroImage": "https://www.openstack.org/assets/openstack-logo/openstack-logo-full.png",
+    "category": "object-storage",
+    "tags": [
+      "object-storage",
+      "openstack",
+      "distributed",
+      "python",
+      "cloud"
+    ],
+    "github": "openstack/swift",
+    "urls": {
+      "website": "https://docs.openstack.org/developer/swift/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "ceph",
+        "minio",
+        "leofs"
+      ],
+      "nonSelfHosted": [
+        "aws-s3",
+        "azure-blob-storage"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Advanced",
+      "justification": "Complex OpenStack component requiring significant infrastructure and configuration expertise."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Distributed object storage"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Cloud infrastructure object storage"
+          },
+          {
+            "name": "Architecture",
+            "value": "Python-based distributed system"
+          }
+        ]
+      },
+      {
+        "name": "Storage Features",
+        "features": [
+          {
+            "name": "Object Storage"
+          },
+          {
+            "name": "Container Management"
+          },
+          {
+            "name": "Account Management"
+          },
+          {
+            "name": "Metadata Support"
+          },
+          {
+            "name": "Large Object Support"
+          }
+        ]
+      },
+      {
+        "name": "Reliability",
+        "features": [
+          {
+            "name": "Eventually Consistent"
+          },
+          {
+            "name": "Data Replication"
+          },
+          {
+            "name": "Fault Tolerance"
+          },
+          {
+            "name": "Self-healing"
+          },
+          {
+            "name": "High Availability"
+          }
+        ]
+      },
+      {
+        "name": "Performance",
+        "features": [
+          {
+            "name": "Horizontal Scaling"
+          },
+          {
+            "name": "High Throughput"
+          },
+          {
+            "name": "Concurrent Access"
+          },
+          {
+            "name": "Load Distribution"
+          },
+          {
+            "name": "Optimized Storage"
+          }
+        ]
+      },
+      {
+        "name": "API & Integration",
+        "features": [
+          {
+            "name": "RESTful API"
+          },
+          {
+            "name": "Swift API"
+          },
+          {
+            "name": "S3 Compatibility Layer"
+          },
+          {
+            "name": "OpenStack Integration"
+          },
+          {
+            "name": "Third-party Tools"
+          }
+        ]
+      },
+      {
+        "name": "Operations",
+        "features": [
+          {
+            "name": "Ring Management"
+          },
+          {
+            "name": "Monitoring Tools"
+          },
+          {
+            "name": "Administrative Tools"
+          },
+          {
+            "name": "Performance Metrics"
+          },
+          {
+            "name": "Cluster Management"
           }
         ]
       }

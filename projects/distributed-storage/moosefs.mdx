@@ -1,0 +1,105 @@
+---
+slug: moosefs
+name: MooseFS
+heroImage: https://moosefs.com/Content/Images/moosefs-logo.png
+logo: https://avatars.githubusercontent.com/u/2051158?s=64&v=4
+description: |
+  MooseFS is a fault tolerant, highly available and high performance scale-out network distributed file system that spreads data over several physical servers.
+category: distributed-storage
+tags: [distributed-filesystem, fault-tolerant, posix, c, scalable]
+github: moosefs/moosefs
+urls:
+  website: https://moosefs.com/
+alternatives:
+  selfHosted: [glusterfs, ceph, lustre]
+  nonSelfHosted: [aws-efs, azure-files]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires multiple server setup but has good documentation and management tools."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Fault tolerant distributed file system
+      - name: Target Use Case
+        value: High availability data storage
+      - name: Architecture
+        value: Master-chunkserver architecture
+  - name: Reliability
+    features:
+      - name: Fault Tolerance
+      - name: Data Replication
+      - name: Self-healing
+      - name: Snapshot Support
+      - name: Trash Bin Feature
+  - name: Performance
+    features:
+      - name: High Performance
+      - name: Parallel Access
+      - name: Load Balancing
+      - name: Caching
+      - name: Network Optimization
+  - name: Scalability
+    features:
+      - name: Horizontal Scaling
+      - name: Elastic Growth
+      - name: Multiple Chunkservers
+      - name: Distributed Metadata
+      - name: High Capacity
+  - name: Features
+    features:
+      - name: POSIX Compliance
+      - name: File Versioning
+      - name: Quota Management
+      - name: Access Control
+      - name: Statistics
+  - name: Management
+    features:
+      - name: Web Interface
+      - name: Command Line Tools
+      - name: Monitoring
+      - name: Administration
+      - name: Performance Metrics
+---
+
+MooseFS is a robust distributed file system designed for high availability and fault tolerance. It provides a POSIX-compliant interface while distributing data across multiple servers with built-in redundancy and self-healing capabilities.
+
+## Key Features
+
+- **Fault Tolerance**:
+
+  - Automatic data replication
+  - Configurable redundancy levels
+  - Self-healing mechanisms
+  - Chunkserver failure recovery
+  - Data integrity verification
+  - No single point of failure
+
+- **High Availability**:
+
+  - Continuous operation
+  - Transparent failover
+  - Master server redundancy
+  - Hot standby support
+  - Automatic recovery
+  - 99.9%+ uptime
+
+- **Performance & Scalability**:
+
+  - Parallel data access
+  - Load balancing
+  - Horizontal scaling
+  - High throughput
+  - Low latency access
+  - Elastic capacity growth
+
+- **Data Management**:
+  - POSIX-compliant interface
+  - File versioning and snapshots
+  - Quota management
+  - Access control lists
+  - Trash bin functionality
+  - Performance statistics

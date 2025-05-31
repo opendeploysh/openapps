@@ -1,0 +1,105 @@
+---
+slug: powerdns
+name: PowerDNS Authoritative Server
+heroImage: https://www.powerdns.com/images/powerdns-logo.png
+logo: https://avatars.githubusercontent.com/u/288953?s=64&v=4
+description: |
+  PowerDNS Authoritative Server is a versatile nameserver that supports a large number of backends including databases, making it ideal for dynamic DNS environments and large-scale deployments.
+category: dns-servers
+tags: [dns, authoritative, database-backend, cpp, dynamic-dns, api]
+github: PowerDNS/pdns
+urls:
+  website: https://doc.powerdns.com/authoritative/
+alternatives:
+  selfHosted: [bind, knot, nsd]
+  nonSelfHosted: [route53, cloudflare-dns]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires database setup and configuration but offers extensive backend options."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Database-driven authoritative DNS
+      - name: Target Use Case
+        value: Dynamic DNS and large-scale hosting
+      - name: Architecture
+        value: C++ with pluggable backends
+  - name: Backend Support
+    features:
+      - name: MySQL Backend
+      - name: PostgreSQL Backend
+      - name: SQLite Backend
+      - name: LDAP Backend
+      - name: File Backends
+  - name: DNS Features
+    features:
+      - name: Authoritative DNS
+      - name: DNSSEC Support
+      - name: Dynamic Updates
+      - name: Zone Transfers
+      - name: Catalog Zones
+  - name: API & Automation
+    features:
+      - name: REST API
+      - name: Web Interface
+      - name: Programmatic Control
+      - name: Bulk Operations
+      - name: Zone Management
+  - name: Enterprise Features
+    features:
+      - name: Geographic Load Balancing
+      - name: Lua Scripting
+      - name: Performance Monitoring
+      - name: High Availability
+      - name: Master-Slave Replication
+  - name: Performance
+    features:
+      - name: High Performance
+      - name: Multi-threading
+      - name: Database Optimization
+      - name: Caching
+      - name: Load Balancing
+---
+
+PowerDNS Authoritative Server is a modern, database-driven DNS server that excels in dynamic environments where DNS records need to be managed programmatically. Its flexible backend architecture makes it perfect for hosting providers and large organizations.
+
+## Key Features
+
+- **Flexible Backend Architecture**:
+
+  - Multiple database backends
+  - MySQL, PostgreSQL, SQLite support
+  - LDAP directory integration
+  - File-based backends
+  - Custom backend development
+  - Hot-swappable backends
+
+- **Dynamic DNS Management**:
+
+  - REST API for automation
+  - Web-based management interface
+  - Programmatic zone management
+  - Bulk record operations
+  - Real-time updates
+  - Database-driven records
+
+- **Enterprise DNS Features**:
+
+  - DNSSEC signing and validation
+  - Geographic load balancing
+  - Lua scripting support
+  - Master-slave replication
+  - Zone transfers (AXFR/IXFR)
+  - Catalog zones
+
+- **High Performance**:
+  - Multi-threaded architecture
+  - Database query optimization
+  - High-availability clustering
+  - Performance monitoring
+  - Caching mechanisms
+  - Load balancing support

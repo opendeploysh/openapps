@@ -1,0 +1,105 @@
+---
+slug: glusterfs
+name: GlusterFS
+heroImage: https://www.gluster.org/wp-content/uploads/2016/03/gluster-ant.png
+logo: https://avatars.githubusercontent.com/u/8114462?s=64&v=4
+description: |
+  GlusterFS is a software-defined distributed storage platform that can scale to several petabytes, providing interfaces for object, block and file storage with no single point of failure.
+category: distributed-storage
+tags: [distributed-storage, file-system, clustering, c, posix]
+github: gluster/glusterfs
+urls:
+  website: https://www.gluster.org/
+alternatives:
+  selfHosted: [ceph, moosefs, lustre]
+  nonSelfHosted: [aws-efs, azure-files]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires multiple nodes and network configuration but has good documentation."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Software-defined distributed storage
+      - name: Target Use Case
+        value: Scale-out file and object storage
+      - name: Architecture
+        value: Userspace distributed file system
+  - name: Storage Types
+    features:
+      - name: POSIX File System
+      - name: Object Storage
+      - name: Block Storage
+      - name: NFS/SMB Support
+      - name: FUSE Integration
+  - name: Scalability
+    features:
+      - name: Petabyte Scale
+      - name: Horizontal Scaling
+      - name: Elastic Scaling
+      - name: No Single Point of Failure
+      - name: Linear Performance
+  - name: Data Protection
+    features:
+      - name: Replication
+      - name: Erasure Coding
+      - name: Geo-replication
+      - name: Snapshot Support
+      - name: Self-healing
+  - name: Performance
+    features:
+      - name: Parallel Access
+      - name: Read/Write Optimization
+      - name: Caching
+      - name: Load Balancing
+      - name: Network Optimization
+  - name: Management
+    features:
+      - name: Web Console
+      - name: CLI Tools
+      - name: REST API
+      - name: Monitoring
+      - name: Volume Management
+---
+
+GlusterFS is a powerful software-defined distributed storage platform that eliminates hardware and vendor lock-in while providing massive scalability and high availability. It's designed to handle diverse workloads from small office environments to enterprise data centers.
+
+## Key Features
+
+- **Unified Storage Platform**:
+
+  - POSIX-compliant file system
+  - Object storage interface
+  - Block storage support
+  - NFS and SMB protocols
+  - Standard file system APIs
+  - Cross-platform compatibility
+
+- **Massive Scalability**:
+
+  - Scale to petabytes
+  - Horizontal scaling
+  - Elastic expansion
+  - No metadata servers
+  - Linear performance growth
+  - Thousands of clients
+
+- **High Availability**:
+
+  - No single point of failure
+  - Automatic failover
+  - Self-healing capabilities
+  - Data replication
+  - Geo-replication
+  - Rolling upgrades
+
+- **Enterprise Features**:
+  - Volume snapshots
+  - Quota management
+  - Access control
+  - Monitoring and alerting
+  - Professional support
+  - Backup integration

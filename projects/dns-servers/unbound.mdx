@@ -1,0 +1,105 @@
+---
+slug: unbound
+name: Unbound
+heroImage: https://nlnetlabs.nl/static/logos/Unbound/Unbound_FC_Shaded_cropped.png
+logo: https://avatars.githubusercontent.com/u/1638766?s=64&v=4
+description: |
+  Unbound is a validating, recursive, and caching DNS resolver designed for security, speed, and reliability with built-in DNSSEC validation and modern DNS features.
+category: dns-servers
+tags: [dns, recursive-resolver, dnssec, security, c, privacy]
+github: NLnetLabs/unbound
+urls:
+  website: https://nlnetlabs.nl/projects/unbound/about/
+alternatives:
+  selfHosted: [bind, coredns, dnsmasq]
+  nonSelfHosted: [cloudflare-dns, quad9]
+deployment:
+  difficulty: "Easy"
+  justification: "Simple configuration with sensible defaults and excellent security features out of the box."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Secure recursive DNS resolver
+      - name: Target Use Case
+        value: Secure DNS resolution and privacy
+      - name: Architecture
+        value: High-performance C implementation
+  - name: Security Features
+    features:
+      - name: DNSSEC Validation
+      - name: DNS over TLS (DoT)
+      - name: DNS over HTTPS (DoH)
+      - name: Query Minimization
+      - name: Response Policy Zones
+  - name: DNS Resolution
+    features:
+      - name: Recursive Resolution
+      - name: Caching Resolver
+      - name: Forwarder Mode
+      - name: Local Zones
+      - name: Root Hints
+  - name: Privacy & Security
+    features:
+      - name: Query Privacy
+      - name: DNS Filtering
+      - name: Access Control
+      - name: Rate Limiting
+      - name: Secure by Default
+  - name: Performance
+    features:
+      - name: High Performance
+      - name: Multi-threading
+      - name: Memory Efficient
+      - name: Prefetching
+      - name: Aggressive Caching
+  - name: Management
+    features:
+      - name: Remote Control
+      - name: Statistics
+      - name: Configuration Validation
+      - name: Log Analysis
+      - name: Performance Monitoring
+---
+
+Unbound is a security-focused recursive DNS resolver that prioritizes user privacy and data integrity. Developed by NLnetLabs, it's designed to be fast, lightweight, and secure with modern DNS features built-in from the ground up.
+
+## Key Features
+
+- **Security First**:
+
+  - Built-in DNSSEC validation
+  - DNS over TLS (DoT) support
+  - DNS over HTTPS (DoH) support
+  - Query name minimization
+  - Aggressive NSEC caching
+  - Cryptographic validation
+
+- **Privacy Protection**:
+
+  - Query privacy protection
+  - Minimal data disclosure
+  - No query logging by default
+  - Local root server support
+  - DNS filtering capabilities
+  - Response policy zones (RPZ)
+
+- **High Performance**:
+
+  - Multi-threaded architecture
+  - Efficient caching algorithms
+  - Prefetching popular domains
+  - Memory-optimized design
+  - Fast recursive resolution
+  - Load balancing support
+
+- **Modern DNS Standards**:
+  - Full IPv6 support
+  - EDNS(0) implementation
+  - TCP fallback support
+  - QNAME minimization
+  - Aggressive NSEC caching
+  - DNS cookies support

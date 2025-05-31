@@ -1,0 +1,105 @@
+---
+slug: coredns
+name: CoreDNS
+heroImage: https://coredns.io/images/CoreDNS_Colour_Horizontal.png
+logo: https://avatars.githubusercontent.com/u/21237862?s=64&v=4
+description: |
+  CoreDNS is a flexible, extensible DNS server written in Go that can serve as a replacement for any DNS server, with a focus on service discovery and cloud-native environments.
+category: dns-servers
+tags: [dns, service-discovery, kubernetes, go, cloud-native, microservices]
+github: coredns/coredns
+urls:
+  website: https://coredns.io/
+alternatives:
+  selfHosted: [bind, unbound, knot]
+  nonSelfHosted: [cloudflare-dns, google-dns]
+deployment:
+  difficulty: "Easy"
+  justification: "Single binary with simple configuration and excellent documentation for cloud-native deployments."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Flexible and extensible DNS server
+      - name: Target Use Case
+        value: Cloud-native and service discovery
+      - name: Architecture
+        value: Go-based plugin architecture
+  - name: Plugin System
+    features:
+      - name: Modular Architecture
+      - name: Plugin Ecosystem
+      - name: Custom Plugins
+      - name: Configuration Chains
+      - name: Hot Reloading
+  - name: Cloud Native
+    features:
+      - name: Kubernetes Integration
+      - name: Service Discovery
+      - name: Container Support
+      - name: Cloud Deployment
+      - name: Microservices DNS
+  - name: DNS Features
+    features:
+      - name: Authoritative DNS
+      - name: Recursive Resolution
+      - name: DNS Forwarding
+      - name: Load Balancing
+      - name: Health Checking
+  - name: Modern Features
+    features:
+      - name: DNS over HTTPS (DoH)
+      - name: DNS over TLS (DoT)
+      - name: DNSSEC Support
+      - name: gRPC Integration
+      - name: Prometheus Metrics
+  - name: Operations
+    features:
+      - name: Zero Downtime Reloads
+      - name: Health Endpoints
+      - name: Monitoring Integration
+      - name: Configuration Validation
+      - name: Simple Deployment
+---
+
+CoreDNS is a modern, flexible DNS server designed for cloud-native environments. As the default DNS server for Kubernetes, it provides powerful service discovery capabilities while maintaining simplicity and extensibility through its plugin architecture.
+
+## Key Features
+
+- **Plugin-Driven Architecture**:
+
+  - Modular plugin system
+  - Chain-based configuration
+  - Custom plugin development
+  - Hot configuration reloads
+  - Extensible functionality
+  - Community plugins
+
+- **Cloud-Native Ready**:
+
+  - Kubernetes integration
+  - Service discovery
+  - Container-first design
+  - Cloud platform support
+  - Microservices architecture
+  - Auto-scaling support
+
+- **Modern DNS Standards**:
+
+  - DNS over HTTPS (DoH)
+  - DNS over TLS (DoT)
+  - DNSSEC validation
+  - EDNS(0) support
+  - IPv6 ready
+  - gRPC support
+
+- **Operations Excellence**:
+  - Zero-downtime reloads
+  - Prometheus metrics
+  - Health check endpoints
+  - Simple configuration
+  - Comprehensive logging
+  - Performance monitoring
