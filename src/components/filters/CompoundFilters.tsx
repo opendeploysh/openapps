@@ -255,7 +255,6 @@ interface SortProps {
 
 export const Sort: React.FC<SortProps> = ({ className = "" }) => {
   const { sortOrder, handleSort } = useFilters()
-
   return <SortSelect value={sortOrder} onValueChange={handleSort} className={className} />
 }
 

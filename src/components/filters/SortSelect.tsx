@@ -1,32 +1,26 @@
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {ArrowUpDown} from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { ArrowUpDown } from "lucide-react"
 
 interface SortOption {
-  value: string;
-  label: string;
+  value: string
+  label: string
 }
 
 interface SortSelectProps {
-  value: string;
-  onValueChange: (value: string) => void;
-  options?: SortOption[];
-  className?: string;
+  value: string
+  onValueChange: (value: string) => void
+  options?: SortOption[]
+  className?: string
 }
 
 const defaultSortOptions: SortOption[] = [
-  {value: "relevance", label: "Most Relevant"},
-  {value: "popularity", label: "Most Popular"},
-  {value: "stars", label: "Most Stars"},
-  {value: "name", label: "Name (A-Z)"},
-  {value: "difficulty-asc", label: "Easiest First"},
-  {value: "difficulty-desc", label: "Advanced First"},
-];
+  { value: "popularity", label: "Most Popular" },
+  { value: "relevance", label: "Most Relevant" },
+  { value: "stars", label: "Most Stars" },
+  { value: "name", label: "Name (A-Z)" },
+  { value: "difficulty-asc", label: "Easiest First" },
+  { value: "difficulty-desc", label: "Advanced First" },
+]
 
 export const SortSelect = ({
   value,
@@ -50,5 +44,5 @@ export const SortSelect = ({
         ))}
       </SelectContent>
     </Select>
-  );
-};
+  )
+}

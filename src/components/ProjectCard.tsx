@@ -160,7 +160,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
           {/* Deploy button with dialog */}
           <Dialog>
-            <DialogTrigger asChild>
+            {/* <DialogTrigger asChild>
               <Button
                 variant="outline"
                 size="sm"
@@ -181,7 +181,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   )}
                 </span>
               </Button>
-            </DialogTrigger>
+            </DialogTrigger> */}
             <DialogContent className="sm:max-w-md">
               <DialogHeader>
                 <DialogTitle>Deploy {name}</DialogTitle>

@@ -177,36 +177,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
 
-        {/* Call to action */}
-        <Card className="mt-8">
-          <CardContent className="py-8">
-            <div className="text-center">
-              <h2 className="text-2xl font-bold mb-2">Ready to get started?</h2>
-              <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-                Deploy {project.name} in minutes with our managed hosting solution
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Button size="lg" className="gap-2">
-                  <Play className="w-5 h-5" />
-                  Deploy Now
-                </Button>
-                <Button variant="outline" size="lg" className="gap-2" asChild>
-                  <Link href={`https://github.com/${project.github}`} target="_blank">
-                    <Github className="w-5 h-5" />
-                    View on GitHub
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" className="gap-2" asChild>
-                  <Link href={`/compare?project1=${project.slug}`}>
-                    <GitCompare className="w-5 h-5" />
-                    Compare Projects
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
         {/* Related Projects */}
         <RelatedProjects currentProject={project} allProjects={projects} maxProjects={3} />
 
