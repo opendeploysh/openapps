@@ -19,8 +19,7 @@ import {
 } from "lucide-react"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
-import { projects } from "@/lib/projects"
-import { Filters } from "@/components/filters"
+import { isNotSelfHosted, projects } from "@/lib/projects"
 import { AlternativesPageProjects } from "./_components/AlternativesPageProjects"
 import { HostingType } from "@/lib/hosting-type"
 import { FilterProvider } from "@/components/filters/CompoundFilters"
@@ -74,7 +73,7 @@ export const metadata: Metadata = {
   },
 }
 
-const allProjects = projects.filter((project) => project.hostingType === HostingType.CloudOnly)
+const allProjects = projects.filter(isNotSelfHosted)
 
 export default function AlternativesPage() {
   return (

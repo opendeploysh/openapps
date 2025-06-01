@@ -134,7 +134,6 @@ export const AlternativesPageProjects: React.FC = () => {
           <div className="flex gap-2 mb-3 items-center">
             <Filters.Search placeholder="Search cloud-based alternatives..." />
             <div className="flex gap-2 flex-shrink-0">
-              <Filters.Sort />
               <Filters.Toggle />
             </div>
           </div>

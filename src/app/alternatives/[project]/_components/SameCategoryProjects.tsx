@@ -39,7 +39,7 @@ export function SameCategoryProjects({ projects, categoryName }: SameCategoryPro
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {paginatedProjects.map((categoryProject) => (
-          <ProjectCard key={categoryProject.slug} {...categoryProject} showLicense={true} linkTo="alternatives" />
+          <ProjectCard key={categoryProject.slug} {...categoryProject} showLicense={true} />
         ))}
       </div>
 

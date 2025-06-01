@@ -14,7 +14,13 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-import { getProjectLogo, getProjectPopularity, ProjectMeta, projectsWithGitHubData } from "@/lib/projects"
+import {
+  getProjectLogo,
+  getProjectPopularity,
+  isNotSelfHosted,
+  ProjectMeta,
+  projectsWithGitHubData,
+} from "@/lib/projects"
 
 import Link from "next/link"
 import { PricingModel } from "@/lib/pricing-model"
@@ -28,18 +34,19 @@ interface ProjectCardProps extends ProjectMeta {
   linkTo?: "project" | "alternatives"
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
-  name,
-  description,
-  deployment,
-  tags,
-  slug,
-  license,
-  showLicense = false,
-  pricingModel,
-  hostingType,
-  linkTo,
-}: ProjectCardProps) => {
+export const ProjectCard: React.FC<ProjectCardProps> = (project: ProjectCardProps) => {
+  const {
+    name,
+    description,
+    deployment,
+    tags,
+    slug,
+    license,
+    showLicense = false,
+    pricingModel,
+    hostingType,
+    linkTo,
+  } = project
   const serviceDeployment = {
     available: false,
     cost: "$12",
@@ -56,10 +63,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   const projectLicense = license ?? githubData?.license?.spdx_id ?? "Unknown"
   const projectHostingType = hostingType ?? "Unknown"
   const projectPricingModel = pricingModel ?? "Unknown"
-  const isProprietary =
-    license === "Proprietary" ||
-    [PricingModel.PaidOnly, PricingModel.Freemium].includes(projectPricingModel as PricingModel) ||
-    [HostingType.CloudOnly, HostingType.SelfHostedSaaS].includes(hostingType as HostingType)
+  const isProprietary = isNotSelfHosted(project)
 
   // Determine the link URL based on linkTo prop
   const linkUrl =

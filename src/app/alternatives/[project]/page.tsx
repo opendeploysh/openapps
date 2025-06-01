@@ -317,30 +317,6 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
         {/* Same Category Projects - Paginated */}
         {project.category && <SameCategoryProjects projects={sameCategoryProjects} categoryName={project.category} />}
 
-        {/* Call to Action */}
-        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/20 rounded-xl p-8 mb-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Ready to try {project.name}?</h2>
-            <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-              Deploy {project.name} and take control of your data with this open source alternative.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href={`/projects/${project.slug}`}>
-                <Button size="lg" className="gap-2">
-                  <CheckCircle className="h-4 w-4" />
-                  View Project Details
-                </Button>
-              </Link>
-              <Button size="lg" variant="outline" className="gap-2" asChild>
-                <Link href={`https://github.com/${project.github}`} target="_blank">
-                  <Github className="h-4 w-4" />
-                  View on GitHub
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-
         {/* Categories */}
         <div className="text-center pt-8 border-t border-neutral-200 dark:border-neutral-800">
           <h3 className="text-lg font-semibold mb-4">Explore by Category</h3>

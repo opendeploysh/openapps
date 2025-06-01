@@ -35276,6 +35276,38 @@
     ]
   },
   {
+    "filePath": "projects/low-code/firebase.mdx",
+    "slug": "firebase",
+    "name": "Firebase",
+    "description": "Firebase is a mobile and web application development platform that provides a suite of tools for building and scaling applications. It provides a fully managed service with features like data storage, real-time database, authentication, and hosting.\n",
+    "hostingType": "Cloud-Only",
+    "pricingModel": "Paid Only",
+    "logo": "https://firebase.google.com/static/images/brand-guidelines/logo-logomark.png",
+    "category": "low-code",
+    "tags": [
+      "developer-tools",
+      "low-code",
+      "postgresql",
+      "realtime",
+      "baas"
+    ],
+    "urls": {
+      "website": "https://www.snowflake.com/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "supabase",
+        "appwrite",
+        "pocketbase",
+        "nhost",
+        "parse-server",
+        "trailbase"
+      ],
+      "nonSelfHosted": []
+    },
+    "featureGroups": []
+  },
+  {
     "filePath": "projects/low-code/manifest.mdx",
     "slug": "manifest",
     "name": "Manifest",
@@ -35458,11 +35490,9 @@
     "pricingModel": "Free",
     "category": "low-code",
     "tags": [
+      "low-code",
       "admin-panel",
-      "no-code",
-      "business-intelligence",
-      "ruby",
-      "reports"
+      "business-intelligence"
     ],
     "github": "motor-admin/motor-admin",
     "urls": {
@@ -35980,6 +36010,8 @@
     "heroImage": "https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png",
     "category": "low-code",
     "tags": [
+      "developer-tools",
+      "low-code",
       "postgresql",
       "realtime",
       "baas"
@@ -57337,6 +57369,38 @@
     ]
   },
   {
+    "filePath": "projects/project-management/jira.mdx",
+    "slug": "jira",
+    "name": "Jira",
+    "description": "Jira is a project management tool that helps teams track and manage their work. It provides a fully managed service with features like issue tracking, project management, and collaboration.\n",
+    "hostingType": "Cloud-Only",
+    "pricingModel": "Paid Only",
+    "logo": "https://icon.icepanel.io/Technology/svg/Jira.svg",
+    "category": "project-management",
+    "tags": [
+      "project-management",
+      "issue-tracking",
+      "kanban",
+      "scrum",
+      "agile"
+    ],
+    "urls": {
+      "website": "https://www.atlassian.com/software/jira"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "plane",
+        "taiga",
+        "openproject"
+      ],
+      "nonSelfHosted": [
+        "linear",
+        "height"
+      ]
+    },
+    "featureGroups": []
+  },
+  {
     "filePath": "projects/project-management/klaus.mdx",
     "slug": "klaus",
     "name": "Klaus",
@@ -57685,6 +57749,39 @@
         ]
       }
     ]
+  },
+  {
+    "filePath": "projects/project-management/linear.mdx",
+    "slug": "linear",
+    "name": "Linear",
+    "description": "Linear is a project management tool that helps teams track and manage their work. It provides a fully managed service with features like issue tracking, project management, and collaboration.\n",
+    "license": "Proprietary",
+    "hostingType": "Cloud-Only",
+    "pricingModel": "Paid Only",
+    "logo": "https://linear.app/static/favicon.svg",
+    "category": "project-management",
+    "tags": [
+      "project-management",
+      "issue-tracking",
+      "kanban",
+      "scrum",
+      "agile"
+    ],
+    "urls": {
+      "website": "https://linear.app/"
+    },
+    "alternatives": {
+      "selfHosted": [
+        "plane",
+        "taiga",
+        "openproject"
+      ],
+      "nonSelfHosted": [
+        "jira",
+        "height"
+      ]
+    },
+    "featureGroups": []
   },
   {
     "filePath": "projects/project-management/mergeable.mdx",
@@ -60845,8 +60942,9 @@
     "slug": "zentao",
     "name": "ZenTao",
     "description": "ZenTao is an agile project management system and tool that supports Scrum methodology. Built with PHP, it provides comprehensive project management features including product management, project planning, quality assurance, and document management for agile development teams.\n",
-    "hostingType": "Self-Hosted",
-    "pricingModel": "Free",
+    "license": "AGPL-3.0",
+    "hostingType": "Hybrid",
+    "pricingModel": "Open-Core",
     "category": "project-management",
     "tags": [
       "agile",

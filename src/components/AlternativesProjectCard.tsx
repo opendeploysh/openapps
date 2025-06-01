@@ -11,5 +11,5 @@ interface AlternativesProjectCardProps extends ProjectMeta {
 }
 
 export const AlternativesProjectCard: React.FC<AlternativesProjectCardProps> = (props) => {
-  return <ProjectCard {...props} linkTo="alternatives" />
+  return <ProjectCard {...props} />
 }

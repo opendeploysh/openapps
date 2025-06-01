@@ -16,6 +16,11 @@ export const featureGroup = z.object({
   name: z.string(),
   features: z.array(feature),
 })
+
+export const isNotSelfHosted = (project: ProjectMeta) => {
+  return project.hostingType === HostingType.CloudOnly || project.pricingModel === PricingModel.PaidOnly
+}
+
 export const mdxProjectData = z
   .object({
     filePath: z.string(),
