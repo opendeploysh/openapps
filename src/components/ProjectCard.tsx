@@ -56,7 +56,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   const projectLicense = license ?? githubData?.license?.spdx_id ?? "Unknown"
   const projectHostingType = hostingType ?? "Unknown"
   const projectPricingModel = pricingModel ?? "Unknown"
-  const isProprietary = license === "Proprietary"
+  const isProprietary =
+    license === "Proprietary" ||
+    [PricingModel.PaidOnly, PricingModel.Freemium].includes(projectPricingModel as PricingModel) ||
+    [HostingType.CloudOnly, HostingType.SelfHostedSaaS].includes(hostingType as HostingType)
 
   // Determine the link URL based on linkTo prop
   const linkUrl =
@@ -124,7 +127,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <span className="flex-shrink-0">{getProjectPopularity(slug).toLocaleString()}</span>
             </div>
           )}
-
           {(!githubData || isProprietary) && (
             <div className="flex items-center gap-4 text-xs w-full">
               <div className="flex items-center gap-1">
@@ -135,7 +137,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <span className="flex-shrink-0">{projectHostingType}</span>
             </div>
           )}
-
           {(!githubData || isProprietary) && (
             <div className="flex items-center gap-4 text-xs w-full">
               <div className="flex items-center gap-1">
@@ -146,7 +147,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <span className="flex-shrink-0">{projectPricingModel}</span>
             </div>
           )}
-
           {showLicense && (
             <div className="flex items-center gap-4 text-xs w-full">
               <div className="flex items-center gap-1">
@@ -157,7 +157,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <span className="flex-shrink-0">{projectLicense}</span>
             </div>
           )}
-
           {/* Deploy button with dialog */}
           <Dialog>
             {/* <DialogTrigger asChild>

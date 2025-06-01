@@ -213,7 +213,7 @@ function HomePageContent() {
 
 export default function ClientHomePage() {
   return (
-    <Filters.Provider projects={projects} defaultSort="relevance">
+    <Filters.Provider projects={projects} defaultSort="popularity">
       <HomePageContent />
     </Filters.Provider>
   )

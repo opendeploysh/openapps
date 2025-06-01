@@ -372,7 +372,7 @@ interface ProjectsGridProps {
 
 export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ baseCategoryProjects, categoryName }) => {
   return (
-    <Filters.Provider projects={baseCategoryProjects} defaultSort="stars">
+    <Filters.Provider projects={baseCategoryProjects} defaultSort="popularity">
       <ProjectsGridContent categoryName={categoryName} />
     </Filters.Provider>
   )

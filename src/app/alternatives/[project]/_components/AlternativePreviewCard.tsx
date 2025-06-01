@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { Code, Star, ArrowRight } from "lucide-react"
+import { Code, Star, ArrowRight, Shield } from "lucide-react"
 import { getProjectLogo, ProjectMeta, projectsWithGitHubData } from "@/lib/projects"
 
 interface AlternativePreviewCardProps {
@@ -13,6 +13,7 @@ interface AlternativePreviewCardProps {
 
 export const AlternativePreviewCard: React.FC<AlternativePreviewCardProps> = ({ project, ContentPreview }) => {
   const githubData = projectsWithGitHubData[project.slug]
+  const license = project.license ?? githubData?.license?.spdx_id ?? "Unknown"
   const logo = getProjectLogo(project.slug)
   return (
     <Card className="overflow-hidden p-0">
@@ -34,11 +35,11 @@ export const AlternativePreviewCard: React.FC<AlternativePreviewCardProps> = ({ 
                   <span>{githubData.stargazers_count.toLocaleString()}</span>
                 </div>
               )}
-              {project.license && (
-                <Badge variant="outline" className="text-xs">
-                  {project.license}
-                </Badge>
-              )}
+
+              <div className="flex items-center gap-1">
+                <Shield className="h-3 w-3" />
+                <span>{license}</span>
+              </div>
             </div>
           </div>
         </div>

@@ -103,16 +103,6 @@ export default function AlternativesPage() {
             Replace proprietary services with powerful, self-hosted open source alternatives. Take control of your data
             while enjoying the same features and functionality.
           </p>
-          {/* <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="gap-2">
-              <Shield className="h-4 w-4" />
-              Browse Alternatives
-            </Button>
-            <Button size="lg" variant="outline" className="gap-2">
-              <Code className="h-4 w-4" />
-              Self-Hosting Guide
-            </Button>
-          </div> */}
         </div>
 
         {/* Why Choose Alternatives */}

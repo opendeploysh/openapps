@@ -130,7 +130,7 @@ export default async function AlternativesPage({ params }: AlternativesPageProps
       })
       .filter((p): p is ProjectMeta => Boolean(p))
       .map(async (p) => {
-        const mdxData = await useCompileFromSlug(p.slug).catch(() => null)
+        const mdxData = await useCompileFromSlug(p.filePath).catch(() => null)
         return { ...p, mdxData }
       })
   ).catch(() => [])

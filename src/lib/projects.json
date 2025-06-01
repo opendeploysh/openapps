@@ -874,7 +874,6 @@
     "hostingType": "Cloud-Only",
     "pricingModel": "Paid Only",
     "logo": "https://avatars.githubusercontent.com/u/6453780?s=200&v=4",
-    "heroImage": "https://user-images.githubusercontent.com/61099/242266547-63d98bd9-35f3-4dfe-92f4-a4a8dd75aa5c.png",
     "category": "analytics",
     "tags": [
       "data-warehouse",
@@ -4517,7 +4516,9 @@
     },
     "alternatives": {
       "selfHosted": [
-        "n8n"
+        "n8n",
+        "windmill",
+        "kestra"
       ],
       "nonSelfHosted": [
         "zapier",

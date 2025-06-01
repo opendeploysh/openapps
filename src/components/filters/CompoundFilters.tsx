@@ -80,7 +80,7 @@ export const FilterProvider: React.FC<FilterProviderProps> = ({
   projects,
   onFiltersChange,
   initialFilters = {},
-  defaultSort = "relevance",
+  defaultSort = "popularity",
 }) => {
   const [searchQuery, setSearchQuery] = useState("")
   const [searchResults, setSearchResults] = useState<ProjectMeta[] | null>(null)

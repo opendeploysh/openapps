@@ -114,7 +114,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {currentProjects.map((project) => (
-          <ProjectCard key={project.slug} {...project} linkTo={linkTo} />
+          <ProjectCard key={project.slug} {...project} />
         ))}
       </div>
       {totalPages > 1 && (

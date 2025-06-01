@@ -7,6 +7,7 @@ import { SiDiscord, SiUnraid } from "@icons-pack/react-simple-icons"
 import Link from "next/link"
 import { pricingModelInfo } from "@/lib/pricing-model"
 import { hostingTypeInfo } from "@/lib/hosting-type"
+import { isPresent } from "ts-is-present"
 
 const difficultyIcons = {
   Easy: <CheckCircle className="w-4 h-4" />,
@@ -18,6 +19,24 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
   const githubData = projectsWithGitHubData[project.slug]
 
   const language = project.language ?? githubData?.language
+
+  const nonSelfHostedAlternatives =
+    project.alternatives.nonSelfHosted
+      ?.filter((alternative) => alternative !== project.slug)
+      .map((alternative) => projects.find((p) => p.slug.toLowerCase() === alternative.toLowerCase()))
+      .filter(isPresent) ?? []
+
+  const selfHostedAlternatives =
+    project.alternatives.selfHosted
+      ?.filter((alternative) => alternative !== project.slug)
+      .map((alternative) => projects.find((p) => p.slug.toLowerCase() === alternative.toLowerCase()))
+      .filter(isPresent)
+      .sort((a, b) => {
+        const popularityA = getProjectPopularity(a.slug)
+        const popularityB = getProjectPopularity(b.slug)
+        return popularityB - popularityA
+      })
+      .slice(0, 5) ?? []
 
   return (
     <div className="space-y-8">
@@ -101,27 +120,52 @@ export const ProjectHeader: React.FC<ProjectMeta> = (project) => {
 
       <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">{project.description}</p>
 
-      <div className="grid grid-cols-3 gap-8 text-sm">
-        <div className="space-y-2">
-          <div className="font-semibold">Self-hosted alternative to:</div>
-          <div className="flex flex-wrap gap-2">
-            {project.alternatives.nonSelfHosted?.map((alternative) => {
-              const project = projects.find((p) => p.slug.toLowerCase() === alternative.toLowerCase())
-              if (!project) return null
-              return (
-                <Link
-                  href={`/projects/${project.slug}`}
-                  key={alternative}
-                  className={badgeVariants({
-                    variant: "outline",
-                    className: "text-sm flex items-center gap-2",
-                  })}
-                >
-                  <img src={getProjectLogo(project.slug)} alt={project?.name} className="rounded-full w-4 h-4" />
-                  {project?.name}
-                </Link>
-              )
-            })}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-sm">
+        <div className="space-y-4">
+          {nonSelfHostedAlternatives.length > 0 && (
+            <div className="space-y-2">
+              <div className="font-semibold">Self-hosted alternatives to:</div>
+              <div className="flex flex-wrap gap-2">
+                {nonSelfHostedAlternatives.map((project) => (
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    key={project.slug}
+                    className={badgeVariants({
+                      variant: "outline",
+                      className: "text-sm flex items-center gap-2",
+                    })}
+                  >
+                    <img src={getProjectLogo(project.slug)} alt={project?.name} className="rounded-full w-4 h-4" />
+                    {project?.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="space-y-2">
+            <div className="font-semibold">Similar self-hosted alternatives:</div>
+            <div className="flex flex-wrap gap-2">
+              {selfHostedAlternatives.length > 0 ? (
+                selfHostedAlternatives.map((project) => {
+                  return (
+                    <Link
+                      href={`/projects/${project.slug}`}
+                      key={project.slug}
+                      className={badgeVariants({
+                        variant: "secondary",
+                        className: "text-sm flex items-center gap-2",
+                      })}
+                    >
+                      <img src={getProjectLogo(project.slug)} alt={project?.name} className="rounded-full w-4 h-4" />
+                      {project?.name}
+                    </Link>
+                  )
+                })
+              ) : (
+                <span className="text-neutral-500 dark:text-neutral-400 text-sm">None found</span>
+              )}
+            </div>
           </div>
         </div>
 
