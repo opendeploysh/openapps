@@ -76,7 +76,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     <Link href={linkUrl} className="block">
       <Card
         className={`flex flex-col border overflow-hidden shadow-none ${
-          showLicense ? "h-[330px]" : "h-[300px]"
+          showLicense ? "h-[270px]" : "h-[240px]"
         } gap-0 hover:shadow-md transition-shadow cursor-pointer group relative`}
       >
         <CardHeader>
