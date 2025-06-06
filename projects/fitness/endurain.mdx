@@ -1,0 +1,108 @@
+---
+slug: endurain
+name: Endurain
+heroImage: https://raw.githubusercontent.com/joaovitoriasilva/endurain/main/screenshot_01.png
+description: |
+  Endurain is a self-hosted fitness tracking service designed to give users full control over their data and hosting environment. It's similar to Strava but focused on privacy and customization, with support for Strava and Garmin Connect integration.
+logo: https://avatars.githubusercontent.com/u/12345678?s=64&v=4
+category: fitness
+tags: [fitness, tracking, fitness-tracker]
+github: joaovitoriasilva/endurain
+urls:
+  website: https://docs.endurain.com/
+alternatives:
+  selfHosted: []
+  nonSelfHosted: ["strava", "garmin-connect"]
+deployment:
+  difficulty: "Medium"
+  justification: "Requires Docker setup with database configuration, but has good documentation and example compose file."
+pricingModel: Free
+hostingType: Self-Hosted
+
+featureGroups:
+  - name: Core
+    features:
+      - name: Focus
+        value: Self-hosted fitness tracking
+      - name: Target Use Case
+        value: Privacy-focused fitness enthusiasts
+      - name: Architecture
+        value: Vue.js + Python FastAPI + MariaDB/PostgreSQL
+  - name: Activity Tracking
+    features:
+      - name: Manual Upload
+      - name: GPX File Support
+      - name: FIT File Support
+      - name: Activity Analysis
+      - name: Performance Metrics
+  - name: Integrations
+    features:
+      - name: Strava Sync
+      - name: Garmin Connect
+      - name: Automatic Import
+      - name: Data Migration
+  - name: Data Management
+    features:
+      - name: Full Data Control
+      - name: Privacy Focused
+      - name: Custom Hosting
+      - name: Data Export
+      - name: Activity History
+  - name: Technical Features
+    features:
+      - name: Docker Deployment
+      - name: Multi-language Support
+      - name: Database Flexibility
+      - name: API Access
+      - name: Observability (Jaeger)
+---
+
+Endurain is a self-hosted fitness tracking service designed to give users full control over their data and hosting environment. Unlike cloud-based services like Strava, Endurain focuses on privacy and customization while providing similar functionality for tracking and analyzing fitness activities.
+
+## Key Features
+
+- **Activity Tracking**:
+
+  - Manual activity upload via GPX and FIT files
+  - Comprehensive activity analysis and metrics
+  - Performance tracking over time
+  - Activity history and statistics
+  - Custom activity categorization
+
+- **Platform Integrations**:
+
+  - Strava synchronization and data import
+  - Garmin Connect integration
+  - Automatic activity importing
+  - Data migration from existing platforms
+  - Cross-platform compatibility
+
+- **Privacy & Data Control**:
+
+  - Complete data ownership
+  - Self-hosted deployment
+  - No third-party data sharing
+  - Custom hosting environment
+  - Data export capabilities
+
+- **Technical Architecture**:
+
+  - Vue.js frontend with Bootstrap CSS
+  - Python FastAPI backend
+  - MariaDB or PostgreSQL database support
+  - Docker containerization
+  - Jaeger tracing for observability
+  - RESTful API access
+
+- **User Experience**:
+  - Multi-language support via Crowdin
+  - Responsive web interface
+  - Activity visualization and charts
+  - Custom metrics and goals
+  - Gallery view for activities
+
+## Deployment & Configuration
+
+Endurain is designed for easy deployment using Docker, with configuration managed through environment variables. The project provides a comprehensive `docker-compose.yml.example` file to get started quickly.
+
+The service supports both MariaDB and PostgreSQL databases, giving users flexibility in their infrastructure choices while maintaining high performance for fitness data management.

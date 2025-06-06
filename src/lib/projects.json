@@ -24649,7 +24649,7 @@
     "category": "document-management",
     "tags": [
       "document-management",
-      "pdf",
+      "pdf-tools",
       "collaboration"
     ],
     "github": "documenso/documenso",
@@ -24964,7 +24964,7 @@
     "tags": [
       "document-management",
       "organization",
-      "pdf"
+      "pdf-tools"
     ],
     "github": "jonashellmann/everydocs-core",
     "urls": {
@@ -24997,7 +24997,7 @@
     "category": "document-management",
     "tags": [
       "document-management",
-      "pdf",
+      "pdf-tools",
       "document-conversion"
     ],
     "github": "gotenberg/gotenberg",
@@ -32220,6 +32220,133 @@
           },
           {
             "name": "Checksums"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "filePath": "projects/fitness/endurain.mdx",
+    "slug": "endurain",
+    "name": "Endurain",
+    "description": "Endurain is a self-hosted fitness tracking service designed to give users full control over their data and hosting environment. It's similar to Strava but focused on privacy and customization, with support for Strava and Garmin Connect integration.\n",
+    "hostingType": "Self-Hosted",
+    "pricingModel": "Free",
+    "logo": "https://avatars.githubusercontent.com/u/12345678?s=64&v=4",
+    "heroImage": "https://raw.githubusercontent.com/joaovitoriasilva/endurain/main/screenshot_01.png",
+    "category": "fitness",
+    "tags": [
+      "fitness",
+      "tracking",
+      "fitness-tracker"
+    ],
+    "github": "joaovitoriasilva/endurain",
+    "urls": {
+      "website": "https://docs.endurain.com/"
+    },
+    "alternatives": {
+      "selfHosted": [],
+      "nonSelfHosted": [
+        "strava",
+        "garmin-connect"
+      ]
+    },
+    "deployment": {
+      "difficulty": "Medium",
+      "justification": "Requires Docker setup with database configuration, but has good documentation and example compose file."
+    },
+    "featureGroups": [
+      {
+        "name": "Core",
+        "features": [
+          {
+            "name": "Focus",
+            "value": "Self-hosted fitness tracking"
+          },
+          {
+            "name": "Target Use Case",
+            "value": "Privacy-focused fitness enthusiasts"
+          },
+          {
+            "name": "Architecture",
+            "value": "Vue.js + Python FastAPI + MariaDB/PostgreSQL"
+          }
+        ]
+      },
+      {
+        "name": "Activity Tracking",
+        "features": [
+          {
+            "name": "Manual Upload"
+          },
+          {
+            "name": "GPX File Support"
+          },
+          {
+            "name": "FIT File Support"
+          },
+          {
+            "name": "Activity Analysis"
+          },
+          {
+            "name": "Performance Metrics"
+          }
+        ]
+      },
+      {
+        "name": "Integrations",
+        "features": [
+          {
+            "name": "Strava Sync"
+          },
+          {
+            "name": "Garmin Connect"
+          },
+          {
+            "name": "Automatic Import"
+          },
+          {
+            "name": "Data Migration"
+          }
+        ]
+      },
+      {
+        "name": "Data Management",
+        "features": [
+          {
+            "name": "Full Data Control"
+          },
+          {
+            "name": "Privacy Focused"
+          },
+          {
+            "name": "Custom Hosting"
+          },
+          {
+            "name": "Data Export"
+          },
+          {
+            "name": "Activity History"
+          }
+        ]
+      },
+      {
+        "name": "Technical Features",
+        "features": [
+          {
+            "name": "Docker Deployment"
+          },
+          {
+            "name": "Multi-language Support"
+          },
+          {
+            "name": "Database Flexibility"
+          },
+          {
+            "name": "API Access"
+          },
+          {
+            "name": "Observability (Jaeger)"
           }
         ]
       }
